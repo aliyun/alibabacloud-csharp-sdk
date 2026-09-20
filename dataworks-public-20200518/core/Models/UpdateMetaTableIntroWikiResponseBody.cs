@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaTableIntroWikiResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcde</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instructions on how to use the table are updated.</para>
+        /// <para>The update result of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

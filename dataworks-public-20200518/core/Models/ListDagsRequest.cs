@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDagsRequest : TeaModel {
         /// <summary>
-        /// <para>The sequence number that uniquely identifies the data backfill operation. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to query the sequence number.</para>
+        /// <para>The unique identifier of the data backfill instance. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? OpSeq { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</para>
+        /// <para>The identifier of the scheduling O&amp;M environment. PROD indicates the production environment, and DEV indicates the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodeInputOrOutputResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ancestor or descendant nodes.</para>
+        /// <para>The list of input and output nodes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNodeInputOrOutputResponseBodyData> Data { get; set; }
         public class ListNodeInputOrOutputResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the ancestor or descendant node.</para>
+            /// <para>The name of the input or output node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx.123141254_out</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect. You cannot obtain the parameter settings.</para>
+            /// <para>This parameter is not in use and cannot be queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dwd_xxx_table</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>

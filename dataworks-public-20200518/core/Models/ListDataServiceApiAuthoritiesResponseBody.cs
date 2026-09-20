@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApiAuthoritiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The APIs on which other users are granted the access permissions.</para>
+        /// <para>The list of APIs authorized to other users.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServiceApiAuthoritiesResponseBodyData Data { get; set; }
         public class ListDataServiceApiAuthoritiesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The APIs on which other users are granted the access permissions.</para>
+            /// <para>The response structure.</para>
             /// </summary>
             [NameInMap("ApiAuthorizationList")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the API.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>My API name</para>
+                /// <para>MyAPIName</para>
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ApiPath { get; set; }
 
                 /// <summary>
-                /// <para>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</para>
+                /// <para>The status of the API. Valid values: 0: unpublished. 1: published.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ApiStatus { get; set; }
 
                 /// <summary>
-                /// <para>The authorization records.</para>
+                /// <para>The list of authorization details for APIs authorized to other users.</para>
                 /// </summary>
                 [NameInMap("AuthorizationRecords")]
                 [Validation(Required=false)]
                 public List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords> AuthorizationRecords { get; set; }
                 public class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords : TeaModel {
                     /// <summary>
-                    /// <para>The time when the access permissions on the API were granted to other users.</para>
+                    /// <para>The authorization time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-06-23T00:21:01+0800</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string CreatedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Alibaba Cloud account used by the API owner.</para>
+                    /// <para>The Alibaba Cloud ID of the API owner.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12345</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string CreatorId { get; set; }
 
                     /// <summary>
-                    /// <para>The end time of the validity period of the authorization.</para>
+                    /// <para>The end time of the authorization validity period, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-06-24T00:21:01+0800</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the workspace to which the access permissions on the API are granted.</para>
+                    /// <para>The workspace ID that has been granted the authorization.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10004</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the API was created.</para>
+                /// <para>The time when the API was created, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the API owner.</para>
+                /// <para>The Alibaba Cloud ID of the API owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API was last modified.</para>
+                /// <para>The time when the API was last modified, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</para>
+            /// <para>The page number, which is the same as the PageNumber value in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. A unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -247,10 +247,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Boolean</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

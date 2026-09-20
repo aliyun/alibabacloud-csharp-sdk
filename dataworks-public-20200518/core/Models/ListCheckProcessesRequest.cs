@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListCheckProcessesRequest : TeaModel {
         /// <summary>
-        /// <para>Extension point event encoding.</para>
+        /// <para>The event code of the extension point.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</para>
+        /// <para>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For the message format, refer to <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03400b03-b721-4c34-8727-2****1</para>
@@ -31,17 +32,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The operator ID.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123333232</para>
+        /// <para>123333</para>
         /// </summary>
         [NameInMap("Operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number in a paged query. This parameter is used for paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,9 +74,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The check status of the extension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CHECKING</description></item>
-        /// <item><description>PASSED</description></item>
-        /// <item><description>BLOCKED</description></item>
+        /// <item><description>CHECKING: The check is in progress.</description></item>
+        /// <item><description>PASSED: The check is passed.</description></item>
+        /// <item><description>BLOCKED: The check is not passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

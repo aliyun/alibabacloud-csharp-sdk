@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaColumnLineageResponseBodyData Data { get; set; }
         public class GetMetaColumnLineageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned result.</para>
+            /// <para>The list of instance data.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaColumnLineageResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaColumnLineageResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The EMR cluster ID.</para>
+                /// <para>The ID of the EMR cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number. Used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

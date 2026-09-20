@@ -12,20 +12,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The type of the engine or data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cdh</c></para>
-        /// </description></item>
-        /// <item><description><para><c>analyticdb_for_mysql</c></para>
-        /// </description></item>
-        /// <item><description><para><c>odps</c></para>
-        /// </description></item>
-        /// <item><description><para><c>emr</c></para>
-        /// </description></item>
-        /// <item><description><para><c>hadoop</c></para>
-        /// </description></item>
-        /// <item><description><para><c>holodb</c></para>
-        /// </description></item>
-        /// <item><description><para><c>hybriddb_for_postgresql</c></para>
-        /// </description></item>
+        /// <item><description>cdh</description></item>
+        /// <item><description>analyticdb_for_mysql</description></item>
+        /// <item><description>odps</description></item>
+        /// <item><description>emr</description></item>
+        /// <item><description>hadoop</description></item>
+        /// <item><description>holodb</description></item>
+        /// <item><description>hybriddb_for_postgresql</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MatchExpression { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. To find the workspace ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks Console</a> and go to the Workspace Configurations page.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -57,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the engine or data source. You can find this name on the Data Source Configuration page.</para>
+        /// <para>The name of the engine or data source. You can obtain the name from the datasource config.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to get the table name.</para>
+        /// <para>The name of the partitioned table. You can call <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> to query the partitioned table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineName { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp of the baseline instance.</para>
+            /// <para>The business date timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// <para>The information about the key instance.</para>
+            /// <para>The information about the critical instance.</para>
             /// </summary>
             [NameInMap("BlockInstance")]
             [Validation(Required=false)]
             public GetBaselineStatusResponseBodyDataBlockInstance BlockInstance { get; set; }
             public class GetBaselineStatusResponseBodyDataBlockInstance : TeaModel {
                 /// <summary>
-                /// <para>The timestamp of the predicted time when the instance finished running.</para>
+                /// <para>The estimated completion timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndCast { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the instance finished running.</para>
+                /// <para>The actual completion timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>节点名称</para>
+                /// <para>NodeName</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527952795****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</para>
+                /// <para>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The margin of the baseline instance. Unit: seconds.</para>
+            /// <para>The buffer time of the baseline instance, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public float? Buffer { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the predicted time when the baseline instance finished running.</para>
+            /// <para>The estimated completion timestamp of the baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? EndCast { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the alerting time of the baseline instance.</para>
+            /// <para>The warning timestamp of the baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ExpTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.</para>
+            /// <para>Indicates whether the baseline instance is completed. Valid values: UNFINISH and FINISH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UNFINISH</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string FinishStatus { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</para>
+            /// <para>The completion timestamp of the baseline instance. This parameter is returned only when FinishStatus is FINISH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</para>
+            /// <para>The cycle number of the baseline instance. The value is 1 for daily baselines. The value ranges from [1,24\] for hourly baselines.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? InGroupId { get; set; }
 
             /// <summary>
-            /// <para>The information about the last generated instance.</para>
+            /// <para>The information about the latest instance.</para>
             /// </summary>
             [NameInMap("LastInstance")]
             [Validation(Required=false)]
             public GetBaselineStatusResponseBodyDataLastInstance LastInstance { get; set; }
             public class GetBaselineStatusResponseBodyDataLastInstance : TeaModel {
                 /// <summary>
-                /// <para>The timestamp of the predicted time when the instance finished running.</para>
+                /// <para>The estimated completion timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndCast { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the instance finished running.</para>
+                /// <para>The actual completion timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527952795****</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</para>
+                /// <para>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</para>
+            /// <para>The Alibaba Cloud UID of the baseline owner. Multiple owners are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>9527952795****</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the committed completion time of the baseline instance.</para>
+            /// <para>The committed completion timestamp of the baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? SlaTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.</para>
+            /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS (warning), and OVER (exceeded).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAFE</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1031203110005</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameters are invalid.</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

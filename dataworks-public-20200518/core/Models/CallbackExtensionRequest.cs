@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CallbackExtensionRequest : TeaModel {
         /// <summary>
-        /// <para>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</para>
+        /// <para>The reason for the failure when CheckResult is set to FAIL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The xxx rule is hit. Modify it and try again.</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckMessage { get; set; }
 
         /// <summary>
-        /// <para>The check status of the extension point event. Valid values:</para>
+        /// <para>The check status of the extension program for the extension point event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OK: The event passes the check.</description></item>
-        /// <item><description>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</description></item>
-        /// <item><description>WARN: The event passes the check, but an alert is reported.</description></item>
+        /// <item><description>OK: The extension program check for the extension point event passed.</description></item>
+        /// <item><description>FAIL: The extension program check for the extension point event failed. View and resolve the error promptly to avoid affecting the normal execution of subsequent programs.</description></item>
+        /// <item><description>WARN: The extension program check for the extension point event passed, but warnings exist.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,22 +36,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckResult { get; set; }
 
         /// <summary>
-        /// <para>The unique code of the extension.</para>
+        /// <para>The unique code of the extension program.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>
+        /// <para>8abcb91f-d266-4073-b907-2****</para>
         /// </summary>
         [NameInMap("ExtensionCode")]
         [Validation(Required=false)]
         public string ExtensionCode { get; set; }
 
         /// <summary>
-        /// <para>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</para>
+        /// <para>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about the message format, see <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>03400b03-b721-4c34-8727-2d6884077091</para>
+        /// <para>034********091</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

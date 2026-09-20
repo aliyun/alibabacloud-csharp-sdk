@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaTableIntroWikiRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the instructions on how to use the metatable.</para>
+        /// <para>The details of the table description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</para>
+        /// <para>The globally unique identifier (GUID) of the table, in the format of odps.{projectName}.{tableName}.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

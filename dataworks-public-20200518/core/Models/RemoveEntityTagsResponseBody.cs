@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RemoveEntityTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <para>true\
-        /// false</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>true: Successful.<br>false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>
@@ -63,8 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true\
-        /// false</para>
+        /// <para>true: Successful.<br>false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

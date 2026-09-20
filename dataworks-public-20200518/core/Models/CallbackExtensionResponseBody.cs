@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true</para>
-        /// <para>false</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>true: The call was successful.</para>
+        /// <para>false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

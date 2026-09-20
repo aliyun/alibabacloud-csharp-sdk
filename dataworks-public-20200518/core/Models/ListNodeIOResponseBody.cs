@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodeIOResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node information.</para>
+        /// <para>The upstream and downstream information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNodeIOResponseBodyData> Data { get; set; }
         public class ListNodeIOResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the ancestor or descendant node.</para>
+            /// <para>The name of the input or output.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataworks_a.1234_out</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

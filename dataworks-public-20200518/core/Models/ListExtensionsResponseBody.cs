@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListExtensionsResponseBodyPagingInfoExtensionsBindEventList> BindEventList { get; set; }
                 public class ListExtensionsResponseBodyPagingInfoExtensionsBindEventList : TeaModel {
                     /// <summary>
-                    /// <para>The code of the event.</para>
+                    /// <para>The event code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>commit-file</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string EventCode { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the event.</para>
+                    /// <para>The event name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>File submission pre-event</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The unique code of the extension.</para>
+                /// <para>The unique extension code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Extension Code</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ExtensionName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the RAM user.</para>
+                /// <para>The RAM user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2003****</para>
@@ -93,7 +93,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The state of the extension. Valid values: 0: Testing 1: Publishing 3: Disabled 4: Processing 5: Approved 6: Approve Failed</para>
+                /// <para>The extension status. Valid values:
+                /// 0: testing.
+                /// 1: online.
+                /// 3: disabled.
+                /// 4: pending approval.
+                /// 5: approved.
+                /// 6: rejected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the request, used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -125,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-ABCD-EFG</para>
+        /// <para>0000-ABCD-****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

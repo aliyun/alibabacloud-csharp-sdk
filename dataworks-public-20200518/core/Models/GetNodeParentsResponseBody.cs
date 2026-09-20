@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeParentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ancestor nodes.</para>
+        /// <para>The list of node information returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNodeParentsResponseBodyData Data { get; set; }
         public class GetNodeParentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ancestor nodes.</para>
+            /// <para>The list of nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The CRON expression. CRON expressions are used to run auto triggered nodes.</para>
+                /// <para>The CRON expression. This expression is used for timed scheduling to execute the node task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 * * * *</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_Node</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The DataWorks UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123124561341251321</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The priority. Valid values: 1 to 8. A large value indicates a high priority.</para>
+                /// <para>The priority. Valid values: 1 to 8. A larger value indicates a higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node.</para>
+                /// <para>The node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ODPS_SQL</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the node can be rerun if the node fails to run. Valid values:</para>
+                /// <para>Indicates whether the node can be rerun upon failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: The node can be rerun.</description></item>
+                /// <item><description>false: The node cannot be rerun.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,12 +118,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Repeatability { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling type of the node. Valid values:</para>
+                /// <para>The scheduling type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The node is an auto triggered node.</description></item>
-                /// <item><description>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</description></item>
-                /// <item><description>PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</description></item>
-                /// <item><description>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</description></item>
+                /// <item><description>NORMAL: normal scheduling node.</description></item>
+                /// <item><description>MANUAL: manual node that is not triggered by daily scheduling.</description></item>
+                /// <item><description>PAUSE: paused node that is triggered by daily scheduling but is set to failed when scheduling starts.</description></item>
+                /// <item><description>SKIP: dry-run node that is triggered by daily scheduling but is set to successful when scheduling starts.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SchedulerType { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling dependency type.</para>
+                /// <para>The scheduling dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: same-cycle scheduling dependency</description></item>
-                /// <item><description><b>3</b>: cross-cycle scheduling dependency</description></item>
+                /// <item><description><b>0</b>: same-cycle dependency.</description></item>
+                /// <item><description><b>3</b>: cross-cycle dependency.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asfsdfas-adfasdf-asfas-dfasdf-asdf</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the API.</para>
+        /// <para>The ID of the created API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100003</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. A unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

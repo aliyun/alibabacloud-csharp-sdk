@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunManualDagNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.</para>
+        /// <para>The instance ID of the dagrun for the manual workflow. You can use this DagId with the corresponding API operation to query the details and status of internal node instances for this manual workflow run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>700000123123141</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMetaDBResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the metadatabases.</para>
+        /// <para>The database information.</para>
         /// </summary>
         [NameInMap("DatabaseInfo")]
         [Validation(Required=false)]
         public ListMetaDBResponseBodyDatabaseInfo DatabaseInfo { get; set; }
         public class ListMetaDBResponseBodyDatabaseInfo : TeaModel {
             /// <summary>
-            /// <para>The metadatabases.</para>
+            /// <para>The list of databases.</para>
             /// </summary>
             [NameInMap("DbList")]
             [Validation(Required=false)]
             public List<ListMetaDBResponseBodyDatabaseInfoDbList> DbList { get; set; }
             public class ListMetaDBResponseBodyDatabaseInfoDbList : TeaModel {
                 /// <summary>
-                /// <para>The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.</para>
+                /// <para>The time when the database was created. The value is a timestamp. You can convert the timestamp to a date based on your time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1388776825</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTimeStamp { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the metadatabase.</para>
+                /// <para>The storage address of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hdfs://localhost:777/user/hadoop/test.txt</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp at which the metadatabase was updated.</para>
+                /// <para>The time when the database was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1388776837</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ModifiedTimeStamp { get; set; }
 
                 /// <summary>
-                /// <para>The name of the metadatabase.</para>
+                /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The owner ID.</para>
+                /// <para>The ID of the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1232</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the metadatabase.</para>
+                /// <para>The type of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HIVE</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the metadatabase.</para>
+                /// <para>The unique identifier of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32342</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of the metadatabases returned.</para>
+            /// <para>The total number of databases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

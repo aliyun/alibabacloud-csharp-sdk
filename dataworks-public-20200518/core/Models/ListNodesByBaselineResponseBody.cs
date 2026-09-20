@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The nodes in the baseline.</para>
+        /// <para>The list of nodes in the baseline.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNodesByBaselineResponseBodyData> Data { get; set; }
         public class ListNodesByBaselineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+            /// <para>The Alibaba Cloud UID of the node owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9527952****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

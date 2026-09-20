@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>A collection of whitelists.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DsgWhiteListAddOrUpdate</para>
         /// </summary>
         [NameInMap("WhiteLists")]
         [Validation(Required=false)]

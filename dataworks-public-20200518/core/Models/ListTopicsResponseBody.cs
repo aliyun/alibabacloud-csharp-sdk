@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTopicsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the events returned.</para>
+        /// <para>The returned event list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTopicsResponseBodyData Data { get; set; }
         public class ListTopicsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The events returned.</para>
+            /// <para>The list of events.</para>
             /// </summary>
             [NameInMap("Topics")]
             [Validation(Required=false)]
             public List<ListTopicsResponseBodyDataTopics> Topics { get; set; }
             public class ListTopicsResponseBodyDataTopics : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the event was found.</para>
+                /// <para>The timestamp when the event was discovered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553524393000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? AddTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the event was processed.</para>
+                /// <para>The timestamp when the event was recovered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553508465000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FixTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</para>
+                /// <para>The timestamp when the event occurred. There is a time difference between when the event occurs and when it is discovered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553508465000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? HappenTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node instance that triggers the event.</para>
+                /// <para>The instance ID associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node that triggers the event.</para>
+                /// <para>The ID of the node associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>952795****</para>
@@ -137,14 +137,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the event.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Error 1234</para>
+                /// <para>1234 error</para>
                 /// </summary>
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.</para>
+                /// <para>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being processed), and RECOVER (recovered).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NEW</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TopicStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.</para>
+                /// <para>The type of the event. Valid values: SLOW (slow) and ERROR (error).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ERROR</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of the events returned.</para>
+            /// <para>The total number of events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1031203110005</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameters are invalid.</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

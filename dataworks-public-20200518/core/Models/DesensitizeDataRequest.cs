@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DesensitizeDataRequest : TeaModel {
         /// <summary>
-        /// <para>The data that you want to mask.</para>
+        /// <para>The input data to be masked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.</para>
+        /// <para>The masking scene code. You can view this on the Data Masking Management page of DataWorks Data Protection Umbrella in the DataWorks console.</para>
+        /// <para>You can obtain this value from Data[].SceneCode in the response of DsgSceneQuerySceneListByName.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

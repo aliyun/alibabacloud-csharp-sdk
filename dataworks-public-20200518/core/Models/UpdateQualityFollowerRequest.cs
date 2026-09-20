@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityFollowerRequest : TeaModel {
         /// <summary>
-        /// <para>The notification method. Valid values: 1 (email), 2 (email and SMS), 4 (DingTalk group chatbot), 5 (DingTalk group chatbot with an @all reminder), 6 (Lark), 7 (WeCom), 8 (webhook), and 9 (phone call).</para>
+        /// <para>The notification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: email</description></item>
+        /// <item><description>2: email and SMS</description></item>
+        /// <item><description>4: DingTalk chatbot</description></item>
+        /// <item><description>5: DingTalk chatbot @ALL</description></item>
+        /// <item><description>6: Lark</description></item>
+        /// <item><description>7: WeCom</description></item>
+        /// <item><description>8: WEBHOOK</description></item>
+        /// <item><description>9: phone call alert</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Follower { get; set; }
 
         /// <summary>
-        /// <para>The ID of the subscription.</para>
+        /// <para>The ID of the subscription relationship.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FollowerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

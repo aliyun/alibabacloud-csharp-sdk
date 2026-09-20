@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateProjectMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</para>
+        /// <para>The idempotence string. A UUID is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The code of the role. This parameter is optional. If you configure the RoleCode parameter, the user is assigned the role.</para>
+        /// <para>The role code. This parameter is optional. If this parameter is specified, the user is also added to the specified role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>role_project_guest</para>

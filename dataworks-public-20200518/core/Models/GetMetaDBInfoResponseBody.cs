@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaDBInfoResponseBodyData Data { get; set; }
         public class GetMetaDBInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The compute engine instance ID. Specify the ID in the <c>Engine type.Engine name</c> format.</para>
+            /// <para>The engine ID, in the format of <c>Engine type.Engine name</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps.engine_name</para>
@@ -40,14 +40,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Remarks</para>
+            /// <para>Comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the compute engine instance was created.</para>
+            /// <para>The time when the engine was created.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1541576644000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the service.</para>
+            /// <para>The service endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://service.odpsstg.aliyun-inc.com/">http://service.odpsstg.aliyun-inc.com/</a></para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</para>
+            /// <para>The environment type. A value of 0 indicates a non-production table. A value of 1 indicates a production table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? EnvType { get; set; }
 
             /// <summary>
-            /// <para>The storage path of the metadatabase of the EMR cluster.</para>
+            /// <para>The data storage address of the EMR database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdfs://</para>
@@ -87,7 +88,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>The time when the compute engine instance was modified.</para>
+            /// <para>The time when the engine was modified.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1541576644000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the workspace owner.</para>
+            /// <para>The Alibaba Cloud account ID of the workspace owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userId</para>
@@ -150,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试项目</para>
+            /// <para>Test project</para>
             /// </summary>
             [NameInMap("ProjectNameCn")]
             [Validation(Required=false)]
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The type of the metadatabase.</para>
+            /// <para>The database type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hive</para>

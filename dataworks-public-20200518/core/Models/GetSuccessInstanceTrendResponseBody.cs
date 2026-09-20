@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSuccessInstanceTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The trend of statistics on the instance status in different time periods.</para>
+        /// <para>The statistical trends of instance status by time period.</para>
         /// </summary>
         [NameInMap("InstanceStatusTrend")]
         [Validation(Required=false)]
         public GetSuccessInstanceTrendResponseBodyInstanceStatusTrend InstanceStatusTrend { get; set; }
         public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrend : TeaModel {
             /// <summary>
-            /// <para>The average trend.</para>
+            /// <para>The historical average trends.</para>
             /// </summary>
             [NameInMap("AvgTrend")]
             [Validation(Required=false)]
@@ -34,7 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// <para>The time point, ranging from 00:00 to 23:00.</para>
+                /// <para>The format is <c>HH:mm</c>, for example, <c>01:00</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01:00</para>
@@ -46,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The trend on the current day.</para>
+            /// <para>The trends for today.</para>
             /// </summary>
             [NameInMap("TodayTrend")]
             [Validation(Required=false)]
@@ -63,7 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// <para>The time point, ranging from 00:00 to 23:00.</para>
+                /// <para>The format is <c>HH:mm</c>, for example, <c>01:00</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01:00</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The trend on the previous day.</para>
+            /// <para>The trends for yesterday.</para>
             /// </summary>
             [NameInMap("YesterdayTrend")]
             [Validation(Required=false)]
@@ -92,7 +94,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The point in time. Valid values: 00:00 to 23:00.</para>
+                /// <para>The time point, ranging from 00:00 to 23:00.</para>
+                /// <para>The format is <c>HH:mm</c>, for example, <c>01:00</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01:00</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID generated for each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952795279527ab****</para>

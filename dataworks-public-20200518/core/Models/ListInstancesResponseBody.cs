@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the name of the node.</para>
+            /// <para>The instance information.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataInstances> Instances { get; set; }
             public class ListInstancesResponseBodyDataInstances : TeaModel {
                 /// <summary>
-                /// <para>The type of the workflow. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>DAILY: The workflow is used to run auto triggered nodes.</description></item>
-                /// <item><description>MANUAL: The workflow is used to run manually triggered nodes.</description></item>
-                /// <item><description>SMOKE_TEST: The workflow is used to perform smoke testing.</description></item>
-                /// <item><description>SUPPLY_DATA: The workflow is used to backfill data.</description></item>
-                /// </list>
+                /// <para>The baseline ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123</para>
@@ -40,7 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance started to run.</para>
+                /// <para>The time when the instance started running.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -50,7 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginRunningTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the node stopped running.</para>
+                /// <para>The time when the instance started waiting for resources.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -60,7 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitResTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
+                /// <para>The time when the instance started waiting for scheduling.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -70,8 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitTimeTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
-                /// <para>You cannot specify the sorting method for the instances to be returned by this operation. By default, the instances are sorted in descending order of the time when the instances were created.</para>
+                /// <para>The data timestamp of the scheduled node. This is typically the day before the node runs.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590336000000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590336000000</para>
@@ -81,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Bizdate { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow to which the node belongs.</para>
+                /// <para>The business process ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -91,22 +88,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessId { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</para>
-                /// <list type="bullet">
-                /// <item><description>If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</description></item>
-                /// <item><description>If the value of this parameter is 0, the node cannot be rerun.</description></item>
-                /// <item><description>If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</description></item>
-                /// </list>
+                /// <para>The connection string.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
                 /// <summary>
-                /// <para>The interval at which the node is rerun after the node fails to run. Unit: milliseconds.</para>
+                /// <para>The time when the instance was created.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -116,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</para>
+                /// <para>The user who triggered the instance to run. For example, if user Test triggered a data backfill instance, the CreateUser is Test.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test</para>
@@ -126,7 +119,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The scheduled runtime of the node.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590422400000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590422400000</para>
@@ -136,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CycTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance started to wait for resources.</para>
+                /// <para>The workflow ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33845</para>
@@ -146,7 +140,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DagId { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</para>
+                /// <para>The type of the workflow. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>DAILY(0): daily scheduling workflow.</description></item>
+                /// <item><description>MANUAL(1): manual task workflow.</description></item>
+                /// <item><description>SMOKE_TEST(2): smoke testing workflow.</description></item>
+                /// <item><description>SUPPLY_DATA(3): data backfill workflow.</description></item>
+                /// <item><description>MANUAL_FLOW(4): manually triggered dataflow PAI workflow (such as running a workflow in the IDE).</description></item>
+                /// <item><description>BUSINESS_PROCESS_DAG(5): manual business process workflow.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DAILY</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DagType { get; set; }
 
                 /// <summary>
-                /// <para>The operation that you want to perform.</para>
+                /// <para>The DQC partitioning rule string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</para>
@@ -166,16 +168,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DqcDescription { get; set; }
 
                 /// <summary>
-                /// <para>The status of the node. Valid values:</para>
+                /// <para>The DQC type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NOT_RUN: The node is not run.</description></item>
-                /// <item><description>WAIT_TIME: The node is waiting for the scheduling time to arrive.</description></item>
-                /// <item><description>WAIT_RESOURCE: The node is waiting for resources.</description></item>
-                /// <item><description>RUNNING: The node is running.</description></item>
-                /// <item><description>CHECKING: Data quality is being checked for the node.</description></item>
-                /// <item><description>CHECKING_CONDITION: Branch conditions are being checked for the node.</description></item>
-                /// <item><description>FAILURE: The node fails to run.</description></item>
-                /// <item><description>SUCCESS: The node is successfully run.</description></item>
+                /// <item><description>0: associated with DQC.</description></item>
+                /// <item><description>1: not associated with DQC.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -186,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? DqcType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</para>
+                /// <para><b>[Deprecated]</b> The error message of the instance run. You can call <a href="https://help.aliyun.com/document_detail/173983.html">GetInstanceLog</a> to obtain the error information of the executed task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error message</para>
@@ -196,7 +192,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page of the Account Center console.</para>
+                /// <para>The time when the scheduled node finished running.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -206,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of the page to return. Minimum value:1. Maximum value: 100.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -216,7 +213,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name of the workflow.</para>
+                /// <para>The time when the scheduled node was last modified.</para>
+                /// <para>The value is a 13-digit number, such as <c>1590416703313</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590416703313</para>
@@ -226,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33115</para>
@@ -236,7 +234,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kzh</para>
@@ -246,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The table and partition filter expression in Data Quality that are associated with the node.</para>
+                /// <para>The parameter information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bizdate=$bizdate tbods=$tbods</para>
@@ -256,7 +254,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ParamValues { get; set; }
 
                 /// <summary>
-                /// <para>The total number of instances.</para>
+                /// <para>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</para>
+                /// <para>A larger value indicates a higher priority. Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -266,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</para>
+                /// <para>The ID of the associated business process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -276,24 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RelatedFlowId { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling type of the node. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</para>
-                /// </description></item>
-                /// <item><description><para>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</para>
-                /// </description></item>
-                /// <item><description><para>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</para>
-                /// </description></item>
-                /// <item><description><para>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</para>
-                /// </description></item>
-                /// <item><description><para>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to succeeded when the scheduling system starts to run the node.</para>
-                /// </description></item>
-                /// <item><description><para>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</para>
-                /// </description></item>
-                /// <item><description><para>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</para>
-                /// <para>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The interval at which the node is rescheduled after a failure. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60000</para>
@@ -303,17 +285,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RepeatInterval { get; set; }
 
                 /// <summary>
-                /// <para>The status of the node. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NOT_RUN: The node is not run.</description></item>
-                /// <item><description>WAIT_TIME: The node is waiting for the scheduling time to arrive.</description></item>
-                /// <item><description>WAIT_RESOURCE: The node is waiting for resources.</description></item>
-                /// <item><description>RUNNING: The node is running.</description></item>
-                /// <item><description>CHECKING: Data quality is being checked for the node.</description></item>
-                /// <item><description>CHECKING_CONDITION: Branch conditions are being checked for the node.</description></item>
-                /// <item><description>FAILURE: The node fails to run.</description></item>
-                /// <item><description>SUCCESS: The node is successfully run.</description></item>
-                /// </list>
+                /// <para>Indicates whether the instance task can be rerun.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -323,7 +295,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Repeatability { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp of the instances that you want to query. Specify the timestamp in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The status of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NOT_RUN(1): The node is not run.</description></item>
+                /// <item><description>WAIT_TIME(2): The node is waiting for the scheduled time to arrive.</description></item>
+                /// <item><description>WAIT_RESOURCE(3): The node has been sent to the execution engine and is waiting for resources to be scheduled.</description></item>
+                /// <item><description>RUNNING(4): The node is running.</description></item>
+                /// <item><description>CHECKING(7): The node has finished running and has been sent to Data Quality for data verification.</description></item>
+                /// <item><description>CHECKING_CONDITION(8): The node has finished running and is undergoing branch condition verification.</description></item>
+                /// <item><description>WAIT_TRIGGER(9): The node is waiting to be triggered. A trigger-based node enters this state after the waiting time elapses.</description></item>
+                /// <item><description>FAILURE(5): The node failed to run.</description></item>
+                /// <item><description>SUCCESS(6): The node ran successfully.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NOT_RUN</para>
@@ -333,7 +316,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</para>
+                /// <para>The number of remaining reruns for the instance. The value can be empty or an integer greater than or equal to 0.</para>
+                /// <list type="bullet">
+                /// <item><description>Empty: The node corresponding to this instance does not have automatic rerun configured.</description></item>
+                /// <item><description>0: The instance cannot be rerun.</description></item>
+                /// <item><description>An integer greater than 0 (n): The instance can be rerun n times. For example, if the value is 1, the remaining rerun count is 1. If the value is 2, the remaining rerun count is 2, and so on. The initial value is the automatic rerun count defined for the corresponding node plus 1.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -343,7 +331,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? TaskRerunTime { get; set; }
 
                 /// <summary>
-                /// <para>The information about the instances.</para>
+                /// <para>The scheduling type of the task instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NORMAL(0): The node is a normal scheduled node that is triggered by daily scheduling.</description></item>
+                /// <item><description>MANUAL(1): The node is a manual node that is not triggered by daily scheduling.</description></item>
+                /// <item><description>PAUSE(2): The node is a frozen node that is triggered by daily scheduling but is set to failed when scheduling starts.</description></item>
+                /// <item><description>SKIP(3): The node is a dry-run node that is triggered by daily scheduling but is set to successful when scheduling starts.</description></item>
+                /// <item><description>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. It exists only in temporary workflows and is set to successful when scheduling starts.</description></item>
+                /// <item><description>SKIP_CYCLE(5): The node is a weekly or monthly node whose scheduling cycle has not arrived. It is triggered by daily scheduling but is set to successful when scheduling starts.</description></item>
+                /// <item><description>CONDITION_UNCHOOSE(6): The upstream instance contains a branch (IF) node, but this downstream node is not selected by the branch node and is set to a dry-run node.</description></item>
+                /// <item><description>REALTIME_DEPRECATED(7): The node is an expired periodic instance generated in real time. This type of node is set to successful.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL(0)</para>
@@ -355,7 +353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The time when the node was scheduled to run.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -365,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -375,8 +373,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</para>
-            /// <para>A greater value indicates a higher priority. Default value: 1.</para>
+            /// <para>The total number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66</para>
@@ -388,7 +385,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ProjectNotExists</para>
@@ -398,7 +395,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The project does not exist.</para>
@@ -408,8 +405,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned for the instance.</para>
-        /// <para>This parameter is deprecated. You can call the <a href="https://help.aliyun.com/document_detail/173983.html">GetInstanceLog</a> operation to query the error information related to the node.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -419,7 +415,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the node.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>
@@ -429,7 +425,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

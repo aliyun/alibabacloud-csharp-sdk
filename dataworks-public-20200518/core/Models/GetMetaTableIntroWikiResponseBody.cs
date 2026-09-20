@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableIntroWikiResponseBodyData Data { get; set; }
         public class GetMetaTableIntroWikiResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The description of the metatable.</para>
+            /// <para>The description of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <h1>Business requirements\n\n&lt;a name=&quot;xiw5n&quot;</h1>
@@ -27,7 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the metatable was created.</para>
+            /// <para>The time when the table was created.</para>
+            /// <para>The value is a 13-digit number, such as <c>1584444247000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1584444247000</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator of the metatable.</para>
+            /// <para>The creator of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The name of the user who creates the metatable.</para>
+            /// <para>The name of the table creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -57,7 +58,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The time when the metatable was last modified.</para>
+            /// <para>The time when the table was modified.</para>
+            /// <para>The value is a 13-digit number, such as <c>1584444247000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1584444247000</para>

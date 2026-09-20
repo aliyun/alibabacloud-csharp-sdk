@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DesensitizeDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned after masking.</para>
+        /// <para>The masked result data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;desensData&quot;: &quot;<b>198807120510</b>&quot;   }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DesensitizeData { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. A unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BCA321BA-46C5-40E9-8A08-6******</para>

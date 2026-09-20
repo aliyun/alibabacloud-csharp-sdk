@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApiTestResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of test records.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDataServiceApiTestResponseBodyData> Data { get; set; }
         public class ListDataServiceApiTestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the DataService Studio API on which the test is performed.</para>
+            /// <para>The ID of the API to test.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2343</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>The time that is consumed to complete the test.</para>
+            /// <para>The time consumed by the API request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? CostTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the test was initiated.</para>
+            /// <para>The time when the task was created.</para>
+            /// <para>The value is a 13-digit number, such as <c>1651824913000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651824913000</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The request parameters configured for the test.</para>
+            /// <para>The request parameters of the test API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;name&quot;:&quot;test&quot;}</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ParamMap { get; set; }
 
             /// <summary>
-            /// <para>The status code returned for the test. If the test is not complete, this parameter is not returned.</para>
+            /// <para>The return code of the test API. This field is empty if the test is not completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? RetCode { get; set; }
 
             /// <summary>
-            /// <para>The result returned for the test.</para>
+            /// <para>The returned data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;id&quot;:2}</para>
@@ -77,7 +78,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RetResult { get; set; }
 
             /// <summary>
-            /// <para>The status of the test. Valid values: RUNNING and FINISHED.</para>
+            /// <para>Indicates whether the task is completed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>FINISHED</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>
@@ -87,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the test.</para>
+            /// <para>The test ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ESDAFWEA</para>

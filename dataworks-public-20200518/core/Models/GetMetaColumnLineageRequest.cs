@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaColumnLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only when you query data in an EMR compute engine instance.</para>
+        /// <para>The ID of the EMR cluster. This parameter is required for EMR scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values: odps and emr.</para>
+        /// <para>The data source type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>odps</description></item>
+        /// <item><description>emr</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -60,7 +64,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</para>
+        /// <para>The direction of the field lineage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>up: upstream.</description></item>
+        /// <item><description>down: downstream.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number. Used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -91,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the metatable.</para>
+        /// <para>The name of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The list of objects for which permissions are requested.</para>
+        /// <para>The list of objects to request permissions for.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyObject")]
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Actions { get; set; }
 
                 /// <summary>
-                /// <para>The name of the column for which permissions are requested. To request permissions on the entire table, enter all column names of the table.
-                /// You can request permissions on specific columns only if LabelSecurity is enabled for the MaxCompute project. If LabelSecurity is not enabled, you can request permissions only on the entire table.</para>
+                /// <para>The name of the column for which permissions are requested. If you request permissions on the entire table, enter all column names of the table.
+                /// You can request permissions on specific columns only if LabelSecurity is enabled for the MaxCompute project. If LabelSecurity is not enabled, you can only request permissions on the entire table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aColumnName</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The object for which permissions are requested. Only MaxCompute table permissions are supported. Enter the name of the target table.</para>
+            /// <para>The object for which permissions are requested. Only MaxCompute tables are supported. Enter the name of the target table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aTableName</para>
@@ -83,13 +83,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The type of the request order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MaxComputeTable: MaxCompute table permission request order.</description></item>
-        /// <item><description>MaxComputeFunction: MaxCompute function permission request order.</description></item>
-        /// <item><description>MaxComputeResource: MaxCompute resource permission request order.</description></item>
-        /// <item><description>DLFSchema: Data Lake Formation (DLF) 1.0 schema permission request order.</description></item>
-        /// <item><description>DLFTable: DLF 1.0 table permission request order.</description></item>
-        /// <item><description>DLFColumn: DLF 1.0 column permission request order.</description></item>
-        /// <item><description>DsApiDeploy: Data service publication permission request order.</description></item>
+        /// <item><description>[MaxComputeTable] MaxCompute table permission request order.</description></item>
+        /// <item><description>[MaxComputeFunction] MaxCompute function permission request order.</description></item>
+        /// <item><description>[MaxComputeResource] MaxCompute resource permission request order.</description></item>
+        /// <item><description>[DLFSchema] DLF 1.0 schema permission request order.</description></item>
+        /// <item><description>[DLFTable] DLF 1.0 table permission request order.</description></item>
+        /// <item><description>[DLFColumn] DLF 1.0 column permission request order.</description></item>
+        /// <item><description>[DsApiDeploy] Data service publication permission request order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApplyUserIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the data catalog to query. Go to the <a href="https://dlf.console.aliyun.com/ap-southeast-1/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake Formation console</a> to view the data catalog name.</para>
+        /// <para>The name of the data catalog. Go to the <a href="https://dlf.console.aliyun.com/cn-hangzhou/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake Formation console</a> to view the data catalog name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hive</para>
@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The expiration time of the requested permissions. Specify a UNIX timestamp. If you do not specify this parameter, the default expiration time is January 1, 2065.
-        /// If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can request only permanent permissions.
-        /// Go to the management page of the DataWorks workspace and check the advanced configuration page of the MaxCompute engine to verify whether column-level access control is enabled.
-        /// Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the Member Management page.</para>
+        /// If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can only request permanent permissions.
+        /// Go to the management page of the DataWorks workspace and check whether column-level access control is enabled on the advanced configuration page of the MaxCompute engine.
+        /// Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the member management page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1617115071885</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This field is deprecated. Set it to empty.</para>
+        /// <para>This parameter is deprecated. Leave it empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This field is deprecated. Set it to empty.</para>
+        /// <para>This parameter is deprecated. Leave it empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

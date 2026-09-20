@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaDBInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The compute engine instance ID. Specify the ID in the <c>Engine type.Engine name</c> format.</para>
+        /// <para>The engine ID, in the format of <c>Engine type.Engine name</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.some_engine_name</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AppGuid { get; set; }
 
         /// <summary>
-        /// <para>The E-MapReduce (EMR) cluster ID.</para>
+        /// <para>The cluster ID of the EMR cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values: odps and emr.</para>
+        /// <para>The data type. Valid values: odps and emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the metadatabase of the EMR cluster.</para>
+        /// <para>The database of the EMR cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

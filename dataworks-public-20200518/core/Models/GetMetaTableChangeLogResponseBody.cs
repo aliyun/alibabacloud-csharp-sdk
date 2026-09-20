@@ -44,7 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ChangeType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the metatable was created.</para>
+                /// <para>The time when the table was created.</para>
+                /// <para>The format is a 13-digit number, for example, <c>1590722845000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590722845000</para>
@@ -54,7 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the metatable was modified.</para>
+                /// <para>The time when the table was modified.</para>
+                /// <para>The format is a 13-digit number, for example, <c>1590722845000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590722845000</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The entity on which the change was made. Valid values: TABLE and PARTITION.</para>
+                /// <para>The type of the changed object. Valid values: TABLE and PARTITION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TABLE</para>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number. Used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of metatables.</para>
+            /// <para>The total number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

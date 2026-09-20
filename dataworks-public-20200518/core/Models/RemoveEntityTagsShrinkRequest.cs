@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string QualifiedName { get; set; }
 
         /// <summary>
-        /// <para>The tag keys.</para>
+        /// <para>The list of tag keys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TagKeys")]

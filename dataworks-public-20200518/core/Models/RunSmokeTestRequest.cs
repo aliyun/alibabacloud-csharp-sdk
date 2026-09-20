@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunSmokeTestRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp.</para>
+        /// <para>The business date.</para>
+        /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>. Example: <c>2020-05-26 00:00:00</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</para>
+        /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</para>
+        /// <para>Full retrieval path: first call ListProjects to obtain the ProjectId, then call ListNodes, and obtain the node ID from Data.Nodes[].NodeId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.</para>
+        /// <para>The parameters of the node. This parameter is configured as a JSON string. The key is the node ID, and the value is the actual parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bizdate=$bizdate tbods=$tbods</para>
@@ -53,7 +55,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROD: production environment.</description></item>
+        /// <item><description>DEV: development environment.</description></item>
+        /// </list>
+        /// <para>Workspaces in basic mode do not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Basic mode and standard mode</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

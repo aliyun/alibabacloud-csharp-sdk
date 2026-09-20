@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityFollowerRequest : TeaModel {
         /// <summary>
-        /// <para>The alert method. Valid values: 1 (email), 2 (email and SMS), 4 (DingTalk Group Bot), 5 (DingTalk Group Bot with an @all message), 6 (Lark), 7 (WeCom), 8 (webhook), and 9 (Phone Alert).</para>
+        /// <para>The notification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: email.</description></item>
+        /// <item><description>2: email and text message.</description></item>
+        /// <item><description>4: DingTalk chatbot.</description></item>
+        /// <item><description>5: DingTalk chatbot @ALL.</description></item>
+        /// <item><description>6: Lark.</description></item>
+        /// <item><description>7: WeCom.</description></item>
+        /// <item><description>8: WEBHOOK.</description></item>
+        /// <item><description>9: phone call alert.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the follower.</para>
+        /// <para>The account ID of the subscriber.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Follower { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. To find the workspace ID, log in to the DataWorks console.</para>
+        /// <para>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -53,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source.</para>
+        /// <para>The name of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

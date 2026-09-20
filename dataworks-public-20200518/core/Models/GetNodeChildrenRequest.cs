@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeChildrenRequest : TeaModel {
         /// <summary>
-        /// <para>The node ID. You can go to the Operation Center page in the DataWorks console to query the node ID.</para>
+        /// <para>The node ID. You can view the node ID in the Operation Center of the DataWorks console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</para>
+        /// <para>The environment identifier of the Operation Center. PROD indicates the production environment. DEV indicates the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 100.</para>
+        /// <para>The page number. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the workspace.</para>
+        /// <para>The list of tags bound to the workspace.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

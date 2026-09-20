@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// <para>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The business date in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</para>
+        /// <para>The cycle number of the baseline instance. The value is 1 for daily baselines. The value ranges from [1,24\] for hourly baselines.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

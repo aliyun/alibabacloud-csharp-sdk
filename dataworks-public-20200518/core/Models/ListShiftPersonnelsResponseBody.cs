@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftPersonnelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination result.</para>
         /// </summary>
         [NameInMap("Paging")]
         [Validation(Required=false)]
         public ListShiftPersonnelsResponseBodyPaging Paging { get; set; }
         public class ListShiftPersonnelsResponseBodyPaging : TeaModel {
             /// <summary>
-            /// <para>The page number. Valid values: 1 to 100. Default value: 1.</para>
+            /// <para>The page number. Minimum value: 1. Maximum value: 100. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,14 +37,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The on-duty engineers in the shift schedule.</para>
+            /// <para>The list of on-duty personnel.</para>
             /// </summary>
             [NameInMap("ShiftPersons")]
             [Validation(Required=false)]
             public List<ListShiftPersonnelsResponseBodyPagingShiftPersons> ShiftPersons { get; set; }
             public class ListShiftPersonnelsResponseBodyPagingShiftPersons : TeaModel {
                 /// <summary>
-                /// <para>The time when the on-duty engineer starts the shift.</para>
+                /// <para>The start time of the on-duty cycle.</para>
+                /// <para>The value is a 13-digit timestamp, for example, <c>1593950832000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593950832000</para>
@@ -54,7 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the on-duty engineer ends the shift.</para>
+                /// <para>The end time of the on-duty cycle.</para>
+                /// <para>The value is a 13-digit timestamp, for example, <c>1593950832000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593950832000</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the on-duty engineer.</para>
+                /// <para>The name of the on-duty person.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Zhang San</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ShiftPersonName { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the on-duty engineer.</para>
+                /// <para>The UID of the on-duty person.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3726346****</para>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG</para>

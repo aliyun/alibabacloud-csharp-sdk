@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListProjectMembersResponseBodyData Data { get; set; }
         public class ListProjectMembersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The information about members in the DataWorks workspace.</para>
+            /// <para>The list of workspace members.</para>
             /// </summary>
             [NameInMap("ProjectMemberList")]
             [Validation(Required=false)]
             public List<ListProjectMembersResponseBodyDataProjectMemberList> ProjectMemberList { get; set; }
             public class ListProjectMembersResponseBodyDataProjectMemberList : TeaModel {
                 /// <summary>
-                /// <para>The nickname of the member.</para>
+                /// <para>The nickname of the workspace member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Nick { get; set; }
 
                 /// <summary>
-                /// <para>The member ID.</para>
+                /// <para>The user ID of the member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>121</para>
@@ -76,12 +76,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</para>
-                /// </description></item>
-                /// <item><description><para>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</para>
-                /// </description></item>
-                /// <item><description><para>6: USER_STS_ROLE, which indicates that the member is a RAM role.</para>
-                /// </description></item>
+                /// <item><description>1: Alibaba Cloud account (USER_ALIYUN).</description></item>
+                /// <item><description>5: RAM user (USER_UBACCOUNT).</description></item>
+                /// <item><description>6: RAM role (USER_STS_ROLE).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,14 +89,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProjectMemberType { get; set; }
 
                 /// <summary>
-                /// <para>The roles that are assigned to the member.</para>
+                /// <para>The list of roles assigned to the member.</para>
                 /// </summary>
                 [NameInMap("ProjectRoleList")]
                 [Validation(Required=false)]
                 public List<ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList> ProjectRoleList { get; set; }
                 public class ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList : TeaModel {
                     /// <summary>
-                    /// <para>The code of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
+                    /// <para>The role code. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>role_project_guest</para>
@@ -119,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? ProjectRoleId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
+                    /// <para>The name of the role. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Visitor</para>
@@ -131,9 +128,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The type of the role. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: SYSTEM, which indicates that the role is a built-in role.</para>
+                    /// <item><description><para>SYSTEM (0): system role.</para>
                     /// </description></item>
-                    /// <item><description><para>2: USER_CUSTOM, which indicates that the role is a custom role.</para>
+                    /// <item><description><para>USER_CUSTOM (2): custom role.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -147,14 +144,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the member. Valid values:</para>
+                /// <para>The query status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: NORMAL, which indicates that the member is in a normal state.</para>
-                /// </description></item>
-                /// <item><description><para>1: FORBIDDEN, which indicates that the member is disabled.</para>
-                /// </description></item>
-                /// <item><description><para>2: DELETED, which indicates that the member is deleted.</para>
-                /// </description></item>
+                /// <item><description>0: Normal (NORMAL).</description></item>
+                /// <item><description>1: Disabled (FORBIDDEN).</description></item>
+                /// <item><description>2: Deleted (DELETED).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

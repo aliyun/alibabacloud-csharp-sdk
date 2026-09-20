@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 30. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

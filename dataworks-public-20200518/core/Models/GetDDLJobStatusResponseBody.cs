@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</para>
+            /// <para>The ID of the task that is in progress. If this parameter is empty, all tasks are completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunTriggerNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataWorks workspace to which the manually triggered node belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace to which the trigger node belongs. You can call <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> to query the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? AppId { get; set; }
 
         /// <summary>
-        /// <para>The data timestamp of the instance that is generated for the manually triggered node.</para>
+        /// <para>The timestamp of the business date for the trigger node instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? BizDate { get; set; }
 
         /// <summary>
-        /// <para>The scheduling time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.</para>
+        /// <para>The 13-digit millisecond-level timestamp that specifies the scheduled time of the node task corresponding to the trigger node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the manually triggered node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</para>
+        /// <para>The ID of the trigger node. You can call <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> to obtain the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

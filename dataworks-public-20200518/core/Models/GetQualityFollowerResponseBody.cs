@@ -10,23 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityFollowerResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of follower objects.</para>
+        /// <para>The subscription information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetQualityFollowerResponseBodyData> Data { get; set; }
         public class GetQualityFollowerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The alarm notification method. Valid values:</para>
+            /// <para>The alert mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: by email</para>
-            /// </description></item>
-            /// <item><description><para>2: by email and SMS</para>
-            /// </description></item>
-            /// <item><description><para>4: by DingTalk chatbot or webhook</para>
-            /// </description></item>
-            /// <item><description><para>5: by DingTalk chatbot with the @all keyword</para>
-            /// </description></item>
+            /// <item><description>1: email</description></item>
+            /// <item><description>2: email and text message</description></item>
+            /// <item><description>4: DingTalk chatbot or webhook</description></item>
+            /// <item><description>5: DingTalk chatbot @ALL</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +33,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? AlarmMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription was created. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the data quality rule subscription was created.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1541576644000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>The follower who receives alarm notifications.</para>
+            /// <para>The subscriber who receives alert notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -67,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Follower { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account name of the follower.</para>
+            /// <para>The Alibaba Cloud account name of the subscriber.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string FollowerAccountName { get; set; }
 
             /// <summary>
-            /// <para>The subscription ID.</para>
+            /// <para>The ID of the subscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -87,7 +84,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription was last updated. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the data quality rule subscription was last updated.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1541576644000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -97,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the engine or data source.</para>
+            /// <para>The name of the compute engine or data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest</para>
@@ -159,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetTopicResponseBodyData Data { get; set; }
         public class GetTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the event was found.</para>
+            /// <para>The timestamp when the event was discovered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? AddTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the first alert was reported.</para>
+            /// <para>The timestamp of the first alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? AlertTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the alert recipient.</para>
+            /// <para>The Alibaba Cloud UID of the assigner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952795****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Assigner { get; set; }
 
             /// <summary>
-            /// <para>The margin of the worst baseline instance. Unit: seconds.</para>
+            /// <para>The buffer of the worst baseline instance, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? BaselineBuffer { get; set; }
 
             /// <summary>
-            /// <para>The ID of the baseline to which the worst baseline instance belongs.</para>
+            /// <para>The baseline ID of the worst baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? BaselineId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cycle of the worst baseline instance.</para>
+            /// <para>The cycle number of the worst baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? BaselineInGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the baseline to which the worst baseline instance belongs.</para>
+            /// <para>The baseline name of the worst baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Baseline name</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineName { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</para>
+            /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS (warning), and OVER (exceeded).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAFE</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineStatus { get; set; }
 
             /// <summary>
-            /// <para>The margin of the event. Unit: seconds.</para>
+            /// <para>The buffer of the event, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Buffer { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the event was last processed.</para>
+            /// <para>The timestamp of the last handling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? DealTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the user who last processed the event.</para>
+            /// <para>The Alibaba Cloud UID of the last handler.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952795****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DealUser { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the event was processed.</para>
+            /// <para>The timestamp when the event was resolved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? FixTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</para>
+            /// <para>The timestamp when the event occurred. There may be a time difference between when the event occurred and when it was discovered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? HappenTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance that triggered the event.</para>
+            /// <para>The instance ID associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the system reports the next alert.</para>
+            /// <para>The timestamp of the next alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? NextAlertTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node that triggered the event.</para>
+            /// <para>The ID of the node associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the node that triggered the event.</para>
+            /// <para>The name of the node associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Node name</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the event owner.</para>
+            /// <para>The Alibaba Cloud UID of the event owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952795****</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which the node that triggered the event belongs.</para>
+            /// <para>The ID of the workspace to which the node associated with the event belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The event ID.</para>
+            /// <para>The ID of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER.</para>
+            /// <para>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being handled), and RECOVER (recovered).</para>
             /// 
             /// <b>Example:</b>
             /// <para>FIXING</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TopicStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the duration of the task is significantly longer than the average duration of the task in previous cycles. The value ERROR indicates that the task fails to run.</para>
+            /// <para>The type of the event. Valid values: SLOW and ERROR.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ERROR</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFGH-IJKLMNOPQ</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

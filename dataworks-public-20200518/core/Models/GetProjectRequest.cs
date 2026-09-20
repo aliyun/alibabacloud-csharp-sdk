@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the ID.</para>
+        /// <para>The DataWorks workspace ID.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>466230</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the name.</para>
+        /// <para>The name of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to obtain the workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_project</para>

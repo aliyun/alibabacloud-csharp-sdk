@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation. Valid values:</para>
-        /// <para>true: succeeded</para>
-        /// <para>false: failed</para>
+        /// <para>The operation result. Valid values:</para>
+        /// <para>true: Succeeded.</para>
+        /// <para>false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true</para>
-        /// <para>false</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>true: The call was successful.</para>
+        /// <para>false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

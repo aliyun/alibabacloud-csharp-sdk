@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaCategoryResponseBodyData Data { get; set; }
         public class GetMetaCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the category tree.</para>
+            /// <para>The list of data entities.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaCategoryResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaCategoryResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The category ID.</para>
+                /// <para>The ID of the category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>133</para>
@@ -45,6 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The time when the category was created.</para>
+                /// <para>The value is a 13-digit number, such as <c>1541576644000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1541576644000</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of category levels.</para>
+                /// <para>The depth level of the category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Depth { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user that performed the last operation.</para>
+                /// <para>The ID of the user who last performed an operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -75,6 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The time when the category was last modified.</para>
+                /// <para>The value is a 13-digit number, such as <c>1541576644000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1541576644000</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The category owner ID.</para>
+                /// <para>The ID of the category owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The parent category ID.</para>
+                /// <para>The ID of the parent category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number. Used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of categories returned.</para>
+            /// <para>The total number of categories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

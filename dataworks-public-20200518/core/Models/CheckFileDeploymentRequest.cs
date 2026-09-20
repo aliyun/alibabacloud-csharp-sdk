@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckFileDeploymentRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>Deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://result.aliyun.com/?checkerInstanceId=">https://result.aliyun.com/?checkerInstanceId=</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckDetailUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.</para>
+        /// <para>The instance ID to which the file checker belongs. You can obtain this value from the CheckerInstanceId field in the file publish check event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckerInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The check status of the file that you want to deploy. Valid values:</para>
+        /// <para>The check status of the file pending deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The file passes the check.</para>
-        /// </description></item>
-        /// <item><description><para>WARN: The file passes the check, but an alert is reported.</para>
-        /// </description></item>
-        /// <item><description><para>FAIL: The file fails the check.</para>
-        /// </description></item>
+        /// <item><description>OK: The file passed the check.</description></item>
+        /// <item><description>WARN: The file passed the check but has warnings.</description></item>
+        /// <item><description>FAIL: The file failed the check.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateRemindRequest : TeaModel {
         /// <summary>
-        /// <para>The intervals at which alert notifications are sent. Unit: seconds. Minimum value: 1200. Default value: 1800.</para>
+        /// <para>The alert interval, in seconds. Minimum value: 1200. Default value: 1800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? AlertInterval { get; set; }
 
         /// <summary>
-        /// <para>The notification method. Valid values:</para>
+        /// <para>The alert notification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MAIL: Alert notifications are sent by email.</description></item>
-        /// <item><description>SMS: Alert notifications are sent by text message.</description></item>
-        /// <item><description>PHONE: Alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or more advanced editions.</description></item>
-        /// <item><description>DINGROBOTS: Alert notifications are sent by DingTalk message. You can use this notification method only if the RobotUrls parameter is configured.</description></item>
-        /// <item><description>WEBHOOKS (WeCom or Lark chatbot): Alert notifications are sent by WeCom or Lark message. You can use this notification method only if the Webhooks parameter is configured.</description></item>
+        /// <item><description>MAIL</description></item>
+        /// <item><description>SMS</description></item>
+        /// <item><description>PHONE. Only DataWorks Professional Edition and higher support phone alerts.</description></item>
+        /// <item><description>DINGROBOTS (DingTalk chatbot). This method takes effect only after the RobotUrls parameter is configured.</description></item>
+        /// <item><description>Webhooks (WeCom or Lark chatbot). This method takes effect only after the Webhooks parameter is configured.</description></item>
         /// </list>
-        /// <para>Multiple notification methods are separated by commas (,).</para>
+        /// <para>Separate multiple alert methods with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS,MAIL</para>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertMethods { get; set; }
 
         /// <summary>
-        /// <para>The value format required by this parameter varies based on the value that you specify for the AlertUnit parameter. Take note of the following items:</para>
+        /// <para>The configuration details for different alert recipients:</para>
         /// <list type="bullet">
-        /// <item><description>If the AlertUnit parameter is set to OWNER, leave this parameter empty.</description></item>
-        /// <item><description>If the AlertUnit parameter is set to OTHER, set this parameter to the unique ID (UID) of the specified user. You can specify multiple UIDs. Separate them with commas (,). A maximum of 10 UIDs can be specified for receiving alert notifications.</description></item>
+        /// <item><description>When AlertUnit is set to OWNER (node owner), the configuration is left empty.</description></item>
+        /// <item><description>When AlertUnit is set to OTHER (specified user), set this parameter to the Alibaba Cloud UIDs of the specified users. Separate multiple UIDs with commas (,). You can specify up to 10 users to receive alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertTargets { get; set; }
 
         /// <summary>
-        /// <para>The recipient to whom alert notifications are sent. Valid values: OWNER and OTHER. The value OWNER indicates that alert notifications are sent to the object owner. The value OTHER indicates that alert notifications are sent to a specified user.</para>
+        /// <para>The recipient of the alert. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OWNER: the node owner.</description></item>
+        /// <item><description>OTHER: a specified user.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OWNER</para>
@@ -62,7 +66,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline to which the custom alert rule is applied. A maximum of 5 baselines can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to BASELINE.</para>
+        /// <para>The baseline IDs when the monitored object is a baseline. A rule can monitor up to 5 baselines. Separate multiple baseline IDs with commas (,).
+        /// This parameter takes effect only when RemindUnit is set to BASELINE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -72,7 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BaselineIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to which the custom alert rule is applied. A maximum of 5 workflows can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to BIZPROCESS.</para>
+        /// <para>The business process IDs when the monitored object is a business process. A rule can monitor up to 5 business processes. Separate multiple business process IDs with commas (,).
+        /// This parameter takes effect only when RemindUnit is set to BIZPROCESS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -82,13 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizProcessIds { get; set; }
 
         /// <summary>
-        /// <para>The details of the conditions that trigger an alert.</para>
+        /// <para>The configuration details for different trigger conditions:</para>
         /// <list type="bullet">
-        /// <item><description>If the RemindType parameter is set to FINISHED, leave this parameter empty.</description></item>
-        /// <item><description>If the RemindType parameter is set to UNFINISHED, set this parameter to key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</description></item>
-        /// <item><description>If the RemindType parameter is set to ERROR, leave this parameter empty.</description></item>
-        /// <item><description>If the RemindType parameter is set to CYCLE_UNFINISHED, set this parameter to key-value pairs in the JSON format. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. A key in the JSON string indicates the sequence number of a cycle. Valid values of keys: 1 to 288. A value in the JSON string indicates the time in point when a monitored instance times out in the relevant cycle. Values must be in the format of hh:mm. Valid values of hh: [0,47]. Valid values of mm: [0,59].</description></item>
-        /// <item><description>If the RemindType parameter is set to TIMEOUT, set this parameter to the timeout period. Unit: seconds. Example: 1800. This indicates that an alert notification is sent if the running duration of a monitored instance exceeds 30 minutes.</description></item>
+        /// <item><description>When RemindType (trigger condition) is set to FINISHED, the configuration is left empty.</description></item>
+        /// <item><description>When RemindType (trigger condition) is set to UNFINISHED, the configuration format is {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47\]. Valid values of minu: [0,59\].</description></item>
+        /// <item><description>When RemindType (trigger condition) is set to ERROR, the configuration is left empty.</description></item>
+        /// <item><description>When RemindType (trigger condition) is set to CYCLE_UNFINISHED (cycle unfinished), the configuration format is {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}.
+        /// The key in the JSON string is the cycle number. Valid values: [1,288\]. The value is the unfinished time for the corresponding cycle in the format hh:mm. Valid values of hh: [0,47\]. Valid values of mm: [0,59\].</description></item>
+        /// <item><description>When RemindType (trigger condition) is set to TIMEOUT, the configuration format is 1800, in seconds. This means an alert is triggered if the instance has been running for more than 30 minutes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Detail { get; set; }
 
         /// <summary>
-        /// <para>The end of the period during which no alert notifications are sent. Specify the time in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</para>
+        /// <para>The end time of the do-not-disturb period. Alerts are not sent before this time. Format: hh:mm. Valid values of hh: [0,23\]. Valid values of mm: [0,59\].</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00</para>
@@ -109,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DndEnd { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of alerts. Valid values: 1 to 10. Default value: 3.</para>
+        /// <para>The maximum number of alerts. Valid values: [1,10\]. Default value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -119,7 +126,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? MaxAlertTimes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node to which the custom alert rule is applied. A maximum of 50 nodes can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to NODE.</para>
+        /// <para>The node IDs when the monitored object is a node. A rule can monitor up to 50 nodes. Separate multiple node IDs with commas (,).
+        /// This parameter takes effect only when RemindUnit is set to NODE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -129,7 +137,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the custom alert rule is applied. You can specify only one workspace for a custom alert rule. This parameter takes effect when you set the RemindUnit parameter to PROJECT.</para>
+        /// <para>The workspace ID when the monitored object is a workspace. A rule can monitor only one workspace.
+        /// This parameter takes effect only when RemindUnit is set to PROJECT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -139,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The custom alert rule ID.</para>
+        /// <para>The ID of the custom rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? RemindId { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom alert rule. The name cannot exceed 128 characters in length.</para>
+        /// <para>The name of the custom rule. The name cannot exceed 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>update_remindname</para>
@@ -162,13 +171,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The condition that triggers the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FINISHED: The system monitors an instance when it starts to run and sends an alert notification after the running of the instance is complete.</description></item>
-        /// <item><description>UNFINISHED: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running at the specified point in time.</description></item>
-        /// <item><description>ERROR: The system monitors an instance when it starts to run and sends an alert notification if an error occurs.</description></item>
-        /// <item><description>CYCLE_UNFINISHED: The system sends an alert notification if a monitored instance is still running at the end of the specified cycle. In most cases, you can configure this trigger condition for node instances that are scheduled to run by hour.</description></item>
-        /// <item><description>TIMEOUT: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running after the specified period ends. In most cases, you can configure this trigger condition to monitor the running duration of node instances.</description></item>
+        /// <item><description>FINISHED: The system monitors the instance from the start time and sends an alert when the node runs successfully.</description></item>
+        /// <item><description>UNFINISHED: The system monitors the instance from the start time and sends an alert if the node has not finished running by the specified target time.</description></item>
+        /// <item><description>ERROR: The system monitors the instance from the start time and sends an alert when the node encounters an error.</description></item>
+        /// <item><description>CYCLE_UNFINISHED: The system sends an alert if the instance has not finished running within the specified cycle. This is typically used to monitor instances that run on an hourly cycle.</description></item>
+        /// <item><description>TIMEOUT: The system monitors the instance from the start time and sends an alert if the node has not finished running after the specified duration. This is typically used to monitor the running duration of instances.</description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/138172.html">Manage custom alert rules</a>.</para>
+        /// <para>For more information about alert trigger conditions, see <a href="https://help.aliyun.com/document_detail/138172.html">Custom rules</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISHED</para>
@@ -178,12 +187,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RemindType { get; set; }
 
         /// <summary>
-        /// <para>The type of the object to which the custom alert rule is applied. Valid values:</para>
+        /// <para>The type of the monitored object. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>NODE</description></item>
         /// <item><description>BASELINE</description></item>
-        /// <item><description>PROJECT</description></item>
-        /// <item><description>BIZPROCESS</description></item>
+        /// <item><description>PROJECT (workspace)</description></item>
+        /// <item><description>BIZPROCESS (business process)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,7 +203,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RemindUnit { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,). If this parameter is set to undefined, the specified webhook URLs are cleared.</para>
+        /// <para>The webhook URLs of DingTalk group chatbots. Separate multiple webhook URLs with commas (,).
+        /// When the parameter settings are set to undefined, the system clears the DingTalk chatbot webhook URLs.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>******************************</para>
@@ -206,8 +216,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether to enable the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -218,8 +228,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? UseFlag { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL of the WeCom or Lark chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,). The value of AlertMethods must include WEBHOOKS. If this parameter is set to undefined, the specified webhook URLs are cleared.</para>
-        /// <para>Only DataWorks Enterprise Edition supports this parameter. The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.</para>
+        /// <para>The webhook URLs of WeCom or Lark chatbots. Separate multiple webhook URLs with commas (,). The alertMethods parameter must include the WEBHOOKS alerting method. When the parameter is set to undefined, the system clears the webhook URLs.</para>
+        /// <para>Only DataWorks Enterprise Edition is supported.
+        /// Active regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), Hong Kong (China), Germany (Frankfurt), Asia-Pacific Southeast 1 (Singapore).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://open.feishu.cn/open-apis/bot/v2/hook/">https://open.feishu.cn/open-apis/bot/v2/hook/</a>*******</para>

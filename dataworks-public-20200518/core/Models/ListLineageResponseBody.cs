@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The structure returned.</para>
+        /// <para>The response structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListLineageResponseBodyData Data { get; set; }
         public class ListLineageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The array of the entity structure.</para>
+            /// <para>The array of entity structures.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<ListLineageResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class ListLineageResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The time when the lineage was generated.</para>
+                /// <para>The time when the lineage was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1686215809269</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The information about the entity.</para>
+                /// <para>The entity information.</para>
                 /// </summary>
                 [NameInMap("Entity")]
                 [Validation(Required=false)]
                 public Entity Entity { get; set; }
 
                 /// <summary>
-                /// <para>The array of the relationship structure.</para>
+                /// <para>The array of relation structures.</para>
                 /// </summary>
                 [NameInMap("RelationList")]
                 [Validation(Required=false)]
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data channel. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>FIRST_PARTY: DataWorks platform</b></description></item>
-                    /// <item><description><b>THIRD_PARTY: user registration</b></description></item>
+                    /// <item><description><b>FIRST_PARTY</b>: DataWorks platform data.</description></item>
+                    /// <item><description><b>THIRD_PARTY</b>: User-registered data.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <para>The data source.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>mysql</para>
+                    /// <para>maxcompute,mysql</para>
                     /// </summary>
                     [NameInMap("Datasource")]
                     [Validation(Required=false)]
                     public string Datasource { get; set; }
 
                     /// <summary>
-                    /// <para>The unique relationship ID.</para>
+                    /// <para>The unique ID of the relation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>aaabbccddguid</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Guid { get; set; }
 
                     /// <summary>
-                    /// <para>The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.</para>
+                    /// <para>The task type, which describes the relationship type between entities. For example, computed by SQL, mapped by report fields, or defined by API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sql</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The pagination token that specifies the starting point of the next read operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nextTokenFromRequest-xxxsd-ff</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64B-587A-8CED-969E1973887FXXX-TT</para>
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableAddColumnRequest : TeaModel {
         /// <summary>
-        /// <para>The fields.</para>
+        /// <para>The list of columns.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Column")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<UpdateTableAddColumnRequestColumn> Column { get; set; }
         public class UpdateTableAddColumnRequestColumn : TeaModel {
             /// <summary>
-            /// <para>The name of the field.</para>
+            /// <para>The name of the column.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// <para>The display name of the field.</para>
+            /// <para>The Chinese name of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>中文</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ColumnNameCn { get; set; }
 
             /// <summary>
-            /// <para>The type of the field. For more information, see MaxCompute field types.</para>
+            /// <para>The type of the column. For more information, see the column types supported by MaxCompute.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ColumnType { get; set; }
 
             /// <summary>
-            /// <para>The comment of the field.</para>
+            /// <para>The comment of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Remarks</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</para>
+        /// <para>The unique identifier of the MaxCompute table. Format: odps.projectName.tableName.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

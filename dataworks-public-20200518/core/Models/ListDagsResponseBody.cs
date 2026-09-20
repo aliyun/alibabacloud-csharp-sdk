@@ -10,21 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of DAGs.</para>
+        /// <para>The details of the DAGs.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDagsResponseBodyData Data { get; set; }
         public class ListDagsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The entities returned.</para>
+            /// <para>The returned entities.</para>
             /// </summary>
             [NameInMap("Dags")]
             [Validation(Required=false)]
             public List<ListDagsResponseBodyDataDags> Dags { get; set; }
             public class ListDagsResponseBodyDataDags : TeaModel {
                 /// <summary>
-                /// <para>The data timestamp.</para>
+                /// <para>The business date.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -35,6 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The DAG ID.</para>
+                /// <para>DagId。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>351249682</para>
@@ -65,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The end time.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -74,7 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The actual running time.</para>
+                /// <para>The GMT date.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -85,6 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The modification time.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -104,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The sequence number of the operation.</para>
+                /// <para>The operation sequence code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -125,6 +130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The start time.</para>
+                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -136,14 +142,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>CREATED</para>
-                /// </description></item>
-                /// <item><description><para>RUNNING</para>
-                /// </description></item>
-                /// <item><description><para>FAILURE</para>
-                /// </description></item>
-                /// <item><description><para>SUCCESS</para>
-                /// </description></item>
+                /// <item><description>CREATED: created</description></item>
+                /// <item><description>RUNNING: running</description></item>
+                /// <item><description>FAILURE: failed</description></item>
+                /// <item><description>SUCCESS: succeeded</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -156,14 +158,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>MANUAL: DAG for a manually triggered workflow</para>
-                /// </description></item>
-                /// <item><description><para>SMOKE_TEST: DAG for a smoke testing workflow</para>
-                /// </description></item>
-                /// <item><description><para>SUPPLY_DATA: DAG for a data backfill instance</para>
-                /// </description></item>
-                /// <item><description><para>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</para>
-                /// </description></item>
+                /// <item><description>MANUAL: manual task workflow</description></item>
+                /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
+                /// <item><description>SUPPLY_DATA: data backfill</description></item>
+                /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -208,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7782a299-b291-4fee-8424-cf8058efa8e8</para>
@@ -218,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

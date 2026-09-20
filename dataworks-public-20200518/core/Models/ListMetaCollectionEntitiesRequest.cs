@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionQualifiedName { get; set; }
 
         /// <summary>
-        /// <para>The type of the entities.</para>
-        /// <para>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</para>
+        /// <para>The entity type. Example: maxcompute-table indicates the MaxCompute table type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table</para>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that specifies the starting point of the current read operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12222</para>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

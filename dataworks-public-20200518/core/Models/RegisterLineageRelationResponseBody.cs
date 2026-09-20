@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The lineage.</para>
+        /// <para>The lineage relationship object.</para>
         /// </summary>
         [NameInMap("LineageRelation")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DestEntityQualifiedName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lineage between entities.</para>
+            /// <para>The lineage relationship ID between entities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dfsldfdlsfdsaaaabbbb</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE50E05E-028C-182B-****</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: The request was successful.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: The request failed.</para>
         /// </description></item>
         /// </list>
         /// 

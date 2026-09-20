@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMetaCollectionEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMetaCollectionEntitiesResponseBodyData Data { get; set; }
         public class ListMetaCollectionEntitiesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The entities.</para>
+            /// <para>The entity array.</para>
             /// </summary>
             [NameInMap("EntityList")]
             [Validation(Required=false)]
             public List<Entity> EntityList { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123344</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E25887B7-579C-54A5-9C4F-83A0DE367DD</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true: The request was successful.</para>
-        /// <para>false: The request failed.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>true: The call was successful.</para>
+        /// <para>false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

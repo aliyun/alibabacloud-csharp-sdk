@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The interval at which the node is rerun after the node fails to run.</para>
+        /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

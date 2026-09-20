@@ -20,11 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Administrator { get; set; }
 
         /// <summary>
+        /// <para>The type of collection to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ALBUM: data album</para>
-        /// </description></item>
-        /// <item><description><para>ALBUM_CATEGORY: category in a data album</para>
-        /// </description></item>
+        /// <item><description><b>ALBUM</b>: album collection.</description></item>
+        /// <item><description><b>ALBUM_CATEGORY</b>: subcategory within an album.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collection creator.</para>
+        /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1200759642363000</para>
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that specifies the start point of the current read operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the sorting field.</para>
+        /// <para>The name of the field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sort field</para>

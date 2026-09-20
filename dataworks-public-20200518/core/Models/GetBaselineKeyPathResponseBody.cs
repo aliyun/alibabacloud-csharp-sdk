@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetBaselineKeyPathResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the key path.</para>
+        /// <para>The critical path information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetBaselineKeyPathResponseBodyData> Data { get; set; }
         public class GetBaselineKeyPathResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data timestamp of the instance.</para>
+            /// <para>The timestamp of the business date of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling cycle of the instance. Valid values: 1 to 288.</para>
+            /// <para>The cycle number of the instance. Valid values: [1,288\].</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+            /// <para>The Alibaba Cloud UID of the node owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9527952****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The type of the node. Valid values: 23, 10, 6, and 99. The value 23 indicates that the node is a Data Integration node. The value 10 indicates that the node is a MaxCompute SQL node. The value 6 indicates that the node is a Shell node. The value 99 indicates that the node is a zero load node.</para>
+            /// <para>The node type. Common node types include Data Integration (23), MaxCompute SQL (10), Shell (6), and virtual node (99).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The running records of the instance.</para>
+            /// <para>The run records of the instance.</para>
             /// </summary>
             [NameInMap("Runs")]
             [Validation(Required=false)]
             public List<GetBaselineKeyPathResponseBodyDataRuns> Runs { get; set; }
             public class GetBaselineKeyPathResponseBodyDataRuns : TeaModel {
                 /// <summary>
-                /// <para>The timestamp obtained by adding the predicted time when the instance started to run to the historical average running duration of the instance.</para>
+                /// <para>The timestamp calculated by adding the historical average run duration to the estimated start time of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531402000</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? AbsTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the predicted time when the instance started to run.</para>
+                /// <para>The estimated start time of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531686000</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginCast { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the instance started to run.</para>
+                /// <para>The timestamp when the instance actually started running.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531401000</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginRunningTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the instance started to wait for resources.</para>
+                /// <para>The timestamp when the instance entered the waiting-for-resources state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531401000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitResTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the instance started to wait for the scheduling time.</para>
+                /// <para>The timestamp when the instance entered the waiting-for-time state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitTimeTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the predicted time when the instance finished running.</para>
+                /// <para>The estimated end time of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531687000</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndCast { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the instance finished running.</para>
+                /// <para>The timestamp when the instance actually finished running.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531401000</para>
@@ -174,7 +174,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</para>
+                /// <para>The status of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NOT_RUN: not run.</description></item>
+                /// <item><description>WAIT_TIME: waiting for the scheduled time.</description></item>
+                /// <item><description>WAIT_RESOURCE: waiting for resources.</description></item>
+                /// <item><description>RUNNING: running.</description></item>
+                /// <item><description>CHECKING: checking.</description></item>
+                /// <item><description>CHECKING_CONDITION: checking conditions.</description></item>
+                /// <item><description>FAILURE: failed.</description></item>
+                /// <item><description>SUCCESS: succeeded.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -186,14 +196,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The information about the events that are associated with the instance.</para>
+            /// <para>The event information associated with the instance.</para>
             /// </summary>
             [NameInMap("Topics")]
             [Validation(Required=false)]
             public List<GetBaselineKeyPathResponseBodyDataTopics> Topics { get; set; }
             public class GetBaselineKeyPathResponseBodyDataTopics : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the event was found.</para>
+                /// <para>The timestamp when the event was detected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531401000</para>
@@ -203,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? AddTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The ID of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -213,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The event ID.</para>
+                /// <para>The ID of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -237,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1031203110005</para>
@@ -247,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameters are invalid.</para>
@@ -257,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the event was found.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -267,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the call. After an error occurs, you can troubleshoot the problem based on the ID.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -277,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableFullInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</para>
-        /// <para>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</para>
+        /// <para>The ID of the EMR cluster. This parameter is required only when the data source type is EMR.</para>
+        /// <para>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C-010A704DA760****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Set the value to emr.</para>
+        /// <para>The data source type. Currently, only EMR is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. This parameter is required only if you set the DataSourceType parameter to emr.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to query the database name.</para>
+        /// <para>The name of the database. This parameter is required only when the data source type is EMR.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to obtain the database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The page number requested for pagination.</para>
+        /// <para>The page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page, with a default of 10 and a maximum of 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the table. You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the unique identifier of the table.</para>
+        /// <para>The globally unique identifier (GUID) of the table. You can call <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> to obtain the GUID of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name.table_name</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// <para>The name of the table in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the table name.</para>
+        /// <para>The name of the EMR table. This parameter is required only when the data source type is EMR.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to obtain the table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

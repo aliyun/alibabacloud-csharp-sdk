@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableLineageResponseBodyData Data { get; set; }
         public class GetMetaTableLineageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the table.</para>
+            /// <para>The table information.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaTableLineageResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTableLineageResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The time when the table was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1638720736000</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the next page exists.</para>
+            /// <para>Indicates whether there is a next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</para>
+            /// <para>The pagination key. Set this parameter based on the HasNext and key values returned in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps.tt.2</para>

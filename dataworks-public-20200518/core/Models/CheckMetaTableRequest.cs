@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaTableRequest : TeaModel {
         /// <summary>
-        /// <para>The E-MapReduce (EMR) cluster ID.</para>
+        /// <para>The ID of the EMR cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values: odps and emr.</para>
+        /// <para>The data source type. Valid values: odps and emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the metadatabase of the EMR cluster.</para>
+        /// <para>The name of the EMR database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the metatable.</para>
+        /// <para>The globally unique identifier of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name.table_name</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// <para>The name of the EMR metatable.</para>
+        /// <para>The name of the EMR table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

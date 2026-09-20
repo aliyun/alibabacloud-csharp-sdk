@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetProjectDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the workspace.</para>
+        /// <para>The description of the workspace.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetProjectDetailResponseBodyData Data { get; set; }
         public class GetProjectDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The identifier of the shared resource group for Data Integration on which nodes are run.</para>
+            /// <para>The identifier of the default data integration resource group for nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group_280749521****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DefaultDiResourceGroupIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The development type of the workspace. The value is fixed to 4.</para>
+            /// <para>The project development type. The value is 4.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? DevelopmentType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Develop role is disabled. Valid values:</para>
+            /// <para>Indicates whether the development role is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b> (default)</description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b> (default): The development role is enabled.</description></item>
+            /// <item><description><b>true</b>: The development role is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? DisableDevelopment { get; set; }
 
             /// <summary>
-            /// <para>The environments of workspaces in different modes. Workspaces in basic mode provide only the production environment. Workspaces in standard mode provide both the development environment and the production environment.</para>
+            /// <para>The environments contained in the workspace. A workspace in basic mode contains only the production environment (PROD). A workspace in standard mode contains the development environment (DEV) and the production environment (PROD).</para>
             /// </summary>
             [NameInMap("EnvTypes")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the download operation is allowed.</para>
+            /// <para>Indicates whether downloads are allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? IsAllowDownload { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the workspace is a default workspace. Valid values:</para>
+            /// <para>Indicates whether the workspace is the default workspace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The workspace is a default workspace.</description></item>
-            /// <item><description>0: The workspace is not a default workspace.</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>0: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectDescription { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the workspace.</para>
+            /// <para>The identifier of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The mode of the workspace. The value 2 indicates that the workspace is in basic mode. The value 3 indicates that the workspace is in standard mode.</para>
+            /// <para>The workspace mode. A value of 2 indicates basic mode. A value of 3 indicates standard mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the workspace owner.</para>
+            /// <para>The Alibaba Cloud ID of the workspace owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18229311****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectOwnerBaseId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the workspace protection feature is enabled.</para>
+            /// <para>Indicates whether protected mode is enabled for the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? ProtectedMode { get; set; }
 
             /// <summary>
-            /// <para>The type of the workspace. Valid values: private and swap.</para>
+            /// <para>The type of the workspace. A value of private indicates a private zone. A value of swap indicates a swap zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The default maximum number of automatic reruns that are allowed after an error occurs.</para>
+            /// <para>The default maximum number of automatic reruns upon an error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? SchedulerMaxRetryTimes { get; set; }
 
             /// <summary>
-            /// <para>The interval between automatic reruns after an error occurs.</para>
+            /// <para>The default interval between automatic reruns upon an error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120000</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</para>
+            /// <para>The visibility of MaxCompute tables. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The MaxCompute tables in the workspace are not visible to the users within a tenant.</description></item>
-            /// <item><description>1: The MaxCompute tables in the workspace are visible to the users within a tenant.</description></item>
+            /// <item><description>0: MaxCompute tables are not visible to tenant users.</description></item>
+            /// <item><description>1: MaxCompute tables are visible to tenant users.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a proxy account is used to access the MaxCompute compute engine.</para>
+            /// <para>Indicates whether a proxy account is used to access the MaxCompute engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the workspace information was queried successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

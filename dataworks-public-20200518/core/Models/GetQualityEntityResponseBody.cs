@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetQualityEntityResponseBodyData> Data { get; set; }
         public class GetQualityEntityResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the partition filter expression was created.</para>
+            /// <para>The time when the partition expression was created.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1593964800000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1593964800000</para>
@@ -27,12 +28,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The level of the partition filter expression. Valid values:</para>
+            /// <para>The level of the partition expression. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0 (SQL-level): A data quality check is triggered after each SQL statement is run.</para>
-            /// </description></item>
-            /// <item><description><para>1 (Task-level): A data quality check is triggered after all SQL statements are run.</para>
-            /// </description></item>
+            /// <item><description>0 (SQL level): DQC verification is triggered after each SQL statement is executed.</description></item>
+            /// <item><description>1 (Task level): Verification is performed after all SQL statements are executed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The subscribers who receive alert notifications. The value is the ID of an Alibaba Cloud account.</para>
+            /// <para>The subscribers. The Alibaba Cloud account IDs that receive alert notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -63,12 +62,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Followers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the partition filter expression is associated with a scheduling node. Valid values:</para>
+            /// <para>Indicates whether the partition expression is associated with scheduling. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The partition filter expression is associated with a scheduling node.</para>
-            /// </description></item>
-            /// <item><description><para>false: The partition filter expression is not associated with a scheduling node.</para>
-            /// </description></item>
+            /// <item><description>true: Associated with scheduling.</description></item>
+            /// <item><description>false: Not associated with scheduling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? HasRelativeNode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the partition filter expression.</para>
+            /// <para>The ID of the partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4003918</para>
@@ -89,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The partition filter expression.</para>
+            /// <para>The partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dt=$[yyyymmdd-1]</para>
@@ -99,7 +96,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string MatchExpression { get; set; }
 
             /// <summary>
-            /// <para>The time when the partition filter expression was last updated.</para>
+            /// <para>The time when the partition expression was updated.</para>
+            /// <para>The value is a 13-digit number, for example, <c>1593964800000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1593964800000</para>
@@ -109,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The user who updates the partition filter expression. The value is the ID of an Alibaba Cloud account.</para>
+            /// <para>The account ID of the user who updated the partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// <para>The owner who configures the partition filter expression. The value is the ID of an Alibaba Cloud account.</para>
+            /// <para>The owner. The account ID of the user who configured the partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -129,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string OnDuty { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account of the owner.</para>
+            /// <para>The Alibaba Cloud account name of the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -149,12 +147,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The scheduling node that is associated with the partition filter expression. This parameter includes the following sub-parameters:</para>
+            /// <para>The information about the scheduling node associated with the partition expression, including:</para>
             /// <list type="bullet">
-            /// <item><description><para>ProjectName: The name of the workspace to which the scheduling node belongs.</para>
-            /// </description></item>
-            /// <item><description><para>NodeID: The ID of the scheduling node.</para>
-            /// </description></item>
+            /// <item><description>ProjectName: the name of the project to which the scheduling node belongs.</description></item>
+            /// <item><description>NodeID: the node ID of the scheduling node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RelativeNode { get; set; }
 
             /// <summary>
-            /// <para>The SQL-level partition filter expression.</para>
+            /// <para>The SQL-level partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -237,7 +233,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

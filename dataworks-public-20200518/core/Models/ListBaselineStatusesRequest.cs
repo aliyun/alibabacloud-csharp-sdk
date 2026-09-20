@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineStatusesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the baseline. Valid values: DAILY and HOURLY. The value DAILY indicates that the baseline is scheduled by day. The value HOURLY indicates that the baseline is scheduled by hour. Multiple types are separated by commas (,).</para>
+        /// <para>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY,HOURLY</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BaselineTypes { get; set; }
 
         /// <summary>
-        /// <para>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The business date in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running. Multiple states are separated by commas (,).</para>
+        /// <para>The completion status of the baseline instance. Valid values: UNFINISH and FINISH. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH,UNFINISH</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FinishStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the baseline owner.</para>
+        /// <para>The Alibaba Cloud UID of the baseline owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9527952795****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: 1 to 30. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Multiple priorities are separated by commas (,).</para>
+        /// <para>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,3,5,7,8</para>
@@ -83,17 +83,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the baseline name used to search for the baseline.</para>
+        /// <para>The search keyword. You can search by baseline name or baseline ID. If you enter an hourly baseline ID, all instances of that hourly baseline are returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Keyword</para>
+        /// <para>keyword</para>
         /// </summary>
         [NameInMap("SearchText")]
         [Validation(Required=false)]
         public string SearchText { get; set; }
 
         /// <summary>
-        /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time. Multiple states are separated by commas (,).</para>
+        /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAFE,DANGROUS,OVER</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event.</para>
+        /// <para>The ID of the related event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

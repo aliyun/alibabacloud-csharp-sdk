@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDIAlarmRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task with which the alert rules are associated.</para>
+        /// <para>The task ID. This is the task ID associated with the alert rule.</para>
+        /// <para>You can obtain this value from DIJobPaging.DIJobs[].DIJobId in the ListDIJobs response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The page size. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

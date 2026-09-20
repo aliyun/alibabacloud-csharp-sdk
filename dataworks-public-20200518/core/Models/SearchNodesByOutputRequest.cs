@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SearchNodesByOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The output names of the node. If you specify multiple output names, separate them with commas (,).</para>
+        /// <para>The output strings of the node. You can specify multiple values. Separate multiple values with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Outputs { get; set; }
 
         /// <summary>
-        /// <para>The environment of Operation Center. Valid values: PROD and DEV.</para>
+        /// <para>The environment identifier in Operation Center. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROD: production environment.</description></item>
+        /// <item><description>DEV: development environment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

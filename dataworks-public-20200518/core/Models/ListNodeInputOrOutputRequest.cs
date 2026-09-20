@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodeInputOrOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The type of node that you want to query. Valid values:</para>
+        /// <para>Specifies whether to query upstream or downstream nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>input: ancestor node</description></item>
-        /// <item><description>output: descendant node</description></item>
+        /// <item><description>input: upstream nodes.</description></item>
+        /// <item><description>output: downstream nodes.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string IoType { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</para>
+        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: DEV and PROD.</para>
+        /// <para>The environment in which the node runs. Valid values: DEV (development environment) and PROD (production environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

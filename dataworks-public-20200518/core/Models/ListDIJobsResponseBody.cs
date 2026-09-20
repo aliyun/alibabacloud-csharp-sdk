@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDIJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paginated task results.</para>
         /// </summary>
         [NameInMap("DIJobPaging")]
         [Validation(Required=false)]
         public ListDIJobsResponseBodyDIJobPaging DIJobPaging { get; set; }
         public class ListDIJobsResponseBodyDIJobPaging : TeaModel {
             /// <summary>
-            /// <para>The list of tasks.</para>
+            /// <para>The task list.</para>
             /// </summary>
             [NameInMap("DIJobs")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DIJobId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the destination. The value Hologres is returned.</para>
+                /// <para>The destination data source type. Valid values: Hologres.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hologres</para>
@@ -54,20 +54,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
+                /// <para>The synchronization status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Finished</para>
-                /// </description></item>
-                /// <item><description><para>Initialized</para>
-                /// </description></item>
-                /// <item><description><para>Stopped</para>
-                /// </description></item>
-                /// <item><description><para>Failed</para>
-                /// </description></item>
-                /// <item><description><para>Running</para>
-                /// </description></item>
-                /// <item><description><para>Stopping</para>
-                /// </description></item>
+                /// <item><description>Finished: Completed successfully.</description></item>
+                /// <item><description>Initialized: Initialization completed.</description></item>
+                /// <item><description>Stopped: Stopped.</description></item>
+                /// <item><description>Failed: Failed.</description></item>
+                /// <item><description>Running: Running.</description></item>
+                /// <item><description>Stopping: Stopping.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,12 +74,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The synchronization type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</para>
-                /// </description></item>
-                /// <item><description><para>RealtimeIncremental: real-time incremental synchronization</para>
-                /// </description></item>
-                /// <item><description><para>Full: one-time full synchronization</para>
-                /// </description></item>
+                /// <item><description>FullAndRealtimeIncremental: Full and real-time incremental.</description></item>
+                /// <item><description>RealtimeIncremental: Real-time incremental.</description></item>
+                /// <item><description>Full: Full.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the source. The value MySQL is returned.</para>
+                /// <para>The source data source type. Valid values: MySQL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
@@ -128,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -138,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>

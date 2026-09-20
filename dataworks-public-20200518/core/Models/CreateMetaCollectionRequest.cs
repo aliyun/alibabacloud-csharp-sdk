@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the collection.</para>
+        /// <para>The collection type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionType { get; set; }
 
         /// <summary>
-        /// <para>The comment of the collection. The comment must be 1 to 64 characters in length.</para>
+        /// <para>The comment for the collection.</para>
+        /// <para>Length limit: 1 to 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -31,7 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of the collection. The name must be 1 to 32 characters in length.</para>
+        /// <para>The collection name.</para>
+        /// <para>Length limit: 1 to 32 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

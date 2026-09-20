@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the metatable exists.</para>
+        /// <para>Indicates whether the table exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

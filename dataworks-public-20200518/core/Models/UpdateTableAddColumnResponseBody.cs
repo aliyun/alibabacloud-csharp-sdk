@@ -20,10 +20,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:</para>
+        /// <para>The information about the request task.</para>
+        /// <para>After the request task is submitted, it is divided into multiple subtasks that are executed in sequence. The next subtask is executed only after the current subtask succeeds. The request task ends when all subtasks are completed. The request task terminates in the following situations. You must resolve the issue based on the error code and resubmit the request task:</para>
         /// <list type="bullet">
         /// <item><description>The request task fails to be submitted.</description></item>
-        /// <item><description>After the request task is submitted, a subtask fails to run.</description></item>
+        /// <item><description>After the request task is submitted, any subtask fails.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TaskInfo")]
@@ -31,10 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public UpdateTableAddColumnResponseBodyTaskInfo TaskInfo { get; set; }
         public class UpdateTableAddColumnResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// <para>The details about the status of the current subtask.</para>
+            /// <para>The detailed execution status of the current subtask:</para>
             /// <list type="bullet">
-            /// <item><description>If the current subtask is successful, success is returned.</description></item>
-            /// <item><description>If the current subtask fails, the error details are displayed.</description></item>
+            /// <item><description>If the execution succeeds, &quot;success&quot; is returned.</description></item>
+            /// <item><description>If the execution fails, the corresponding error details are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete.</para>
+            /// <para>The ID of the subtask to be executed next. If this field is empty, all subtasks have been completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc1</para>
@@ -57,9 +58,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the current subtask. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>operating: The subtask is running.</description></item>
-            /// <item><description>success: The subtask succeeds.</description></item>
-            /// <item><description>failure: The subtask fails to run. For more information about the error details, see the Content parameter.</description></item>
+            /// <item><description>operating: The subtask is being executed.</description></item>
+            /// <item><description>success: The subtask is executed.</description></item>
+            /// <item><description>failure: The subtask failed to be executed. For detailed error information, see the Content parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

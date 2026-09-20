@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableModelInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the first-level table folder.</para>
+        /// <para>The first-level topic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FirstLevelThemeId { get; set; }
 
         /// <summary>
-        /// <para>The table level ID.</para>
+        /// <para>The level ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -30,7 +30,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? LevelId { get; set; }
 
         /// <summary>
-        /// <para>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</para>
+        /// <para>The level type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: logical level.</description></item>
+        /// <item><description>2: physical level.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? LevelType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the second-level table folder.</para>
+        /// <para>The second-level topic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? SecondLevelThemeId { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</para>
+        /// <para>The unique identifier of the table, in the format of odps.{projectName}.{tableName}.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

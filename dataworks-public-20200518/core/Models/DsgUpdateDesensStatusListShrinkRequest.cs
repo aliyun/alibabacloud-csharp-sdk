@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The list of switch IDs.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DsgUpdateDesensStatusList</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

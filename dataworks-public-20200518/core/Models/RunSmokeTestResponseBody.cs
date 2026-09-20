@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunSmokeTestResponseBody : TeaModel {
         /// <summary>
-        /// <para>The workflow ID.</para>
+        /// <para>The ID of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3333333</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

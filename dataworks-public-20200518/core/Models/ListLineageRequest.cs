@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The lineage type. Valid values:</para>
+        /// <para>The lineage direction. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>up: ancestor lineage</description></item>
-        /// <item><description>down: descendant lineage</description></item>
+        /// <item><description>up: upstream.</description></item>
+        /// <item><description>down: downstream.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that specifies the starting point of the current read operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-from-previous-request</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The page size. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

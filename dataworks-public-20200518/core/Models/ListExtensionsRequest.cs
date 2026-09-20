@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListExtensionsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the request, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

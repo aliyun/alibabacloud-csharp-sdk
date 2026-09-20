@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableThemeLevelResponseBodyEntity Entity { get; set; }
         public class GetMetaTableThemeLevelResponseBodyEntity : TeaModel {
             /// <summary>
-            /// <para>The information about the levels of the metatable.</para>
+            /// <para>The level information.</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the level.</para>
+                /// <para>The level ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? LevelId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the level.</para>
+                /// <para>The level name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>level1</para>
@@ -54,12 +54,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the level. Valid values:</para>
+                /// <para>The level type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: indicates the logical level.</para>
-                /// </description></item>
-                /// <item><description><para>2: indicates the physical level.</para>
-                /// </description></item>
+                /// <item><description>1: logical level.</description></item>
+                /// <item><description>2: physical level.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,19 +70,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The information about the themes of the metatable.</para>
+            /// <para>The theme information.</para>
             /// </summary>
             [NameInMap("Theme")]
             [Validation(Required=false)]
             public List<GetMetaTableThemeLevelResponseBodyEntityTheme> Theme { get; set; }
             public class GetMetaTableThemeLevelResponseBodyEntityTheme : TeaModel {
                 /// <summary>
-                /// <para>The level of the theme. Valid values:</para>
+                /// <para>The theme type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1</para>
-                /// </description></item>
-                /// <item><description><para>2</para>
-                /// </description></item>
+                /// <item><description>1: primary theme.</description></item>
+                /// <item><description>2: secondary theme.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Level { get; set; }
 
                 /// <summary>
-                /// <para>The name of the theme.</para>
+                /// <para>The theme name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>theme1</para>
@@ -115,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the theme.</para>
+                /// <para>The theme ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -159,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1324afdsfde</para>

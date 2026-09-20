@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApiAuthoritiesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword in the name of the API. The keyword can be used to search for the API whose name contains the keyword.</para>
+        /// <para>The keyword in the API name. This parameter is used to filter APIs whose names contain the specified keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My API name</para>
+        /// <para>MyAPIName</para>
         /// </summary>
         [NameInMap("ApiNameKeyword")]
         [Validation(Required=false)]
         public string ApiNameKeyword { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

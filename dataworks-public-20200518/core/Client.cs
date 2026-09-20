@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
                 {"rus-west-1-pop", "dataworks.aliyuncs.com"},
                 {"us-east-1", "dataworks.us-east-1.aliyuncs.com"},
                 {"us-west-1", "dataworks.us-west-1.aliyuncs.com"},
-                {"me-central-1", "dataworks.me-central-1.aliyuncs.com"},
                 {"ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com"},
+                {"me-central-1", "dataworks.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -447,6 +447,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Adds an entity to a collection.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Before calling this operation, activate DataWorks Professional Edition or a higher edition. The Basic Edition and Standard Edition do not support the metadata collection feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddMetaCollectionEntityRequest
         /// </param>
@@ -496,6 +501,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Adds an entity to a collection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Before calling this operation, activate DataWorks Professional Edition or a higher edition. The Basic Edition and Standard Edition do not support the metadata collection feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddMetaCollectionEntityRequest
@@ -547,6 +557,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Adds an entity to a collection.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Before calling this operation, activate DataWorks Professional Edition or a higher edition. The Basic Edition and Standard Edition do not support the metadata collection feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddMetaCollectionEntityRequest
         /// </param>
@@ -565,6 +580,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Adds an entity to a collection.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Before calling this operation, activate DataWorks Professional Edition or a higher edition. The Basic Edition and Standard Edition do not support the metadata collection feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddMetaCollectionEntityRequest
         /// </param>
@@ -580,14 +600,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</para>
+        /// <para>Adds a DataWorks workspace user to a role. Before calling this operation, you must first add the target account as a member of the DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Add the target account as a member of the DataWorks workspace. For more information, see <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
-        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Mappings between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
+        /// <item><description>To add the target account as a member of the DataWorks workspace, refer to <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
+        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, refer to <a href="https://help.aliyun.com/document_detail/449397.html">Mapping between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -642,14 +662,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</para>
+        /// <para>Adds a DataWorks workspace user to a role. Before calling this operation, you must first add the target account as a member of the DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Add the target account as a member of the DataWorks workspace. For more information, see <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
-        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Mappings between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
+        /// <item><description>To add the target account as a member of the DataWorks workspace, refer to <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
+        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, refer to <a href="https://help.aliyun.com/document_detail/449397.html">Mapping between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -704,14 +724,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</para>
+        /// <para>Adds a DataWorks workspace user to a role. Before calling this operation, you must first add the target account as a member of the DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Add the target account as a member of the DataWorks workspace. For more information, see <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
-        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Mappings between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
+        /// <item><description>To add the target account as a member of the DataWorks workspace, refer to <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
+        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, refer to <a href="https://help.aliyun.com/document_detail/449397.html">Mapping between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -730,14 +750,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</para>
+        /// <para>Adds a DataWorks workspace user to a role. Before calling this operation, you must first add the target account as a member of the DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Add the target account as a member of the DataWorks workspace. For more information, see <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
-        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Mappings between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
+        /// <item><description>To add the target account as a member of the DataWorks workspace, refer to <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</description></item>
+        /// <item><description>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, refer to <a href="https://help.aliyun.com/document_detail/449397.html">Mapping between workspace-level preset roles and MaxCompute engine permissions</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1141,12 +1161,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Approves a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI ApproveProcessInstance as soon as possible.</para>
+        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — ApproveProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a> as soon as possible.**.</para>
+        /// <para><em>Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1197,12 +1217,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Approves a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI ApproveProcessInstance as soon as possible.</para>
+        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — ApproveProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a> as soon as possible.**.</para>
+        /// <para><em>Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1253,12 +1273,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Approves a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI ApproveProcessInstance as soon as possible.</para>
+        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — ApproveProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a> as soon as possible.**.</para>
+        /// <para><em>Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1277,12 +1297,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Approves a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI ApproveProcessInstance as soon as possible.</para>
+        /// Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — ApproveProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition OpenAPI <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a> as soon as possible.**.</para>
+        /// <para><em>Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1300,7 +1320,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends the processing result of an extension point event by an extension to DataWorks.</para>
+        /// <para>Returns the check result of an extension program for an extension point event to the DataWorks platform by calling the CallbackExtension operation when an extension point is triggered during the use of the DataWorks platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1354,7 +1374,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends the processing result of an extension point event by an extension to DataWorks.</para>
+        /// <para>Returns the check result of an extension program for an extension point event to the DataWorks platform by calling the CallbackExtension operation when an extension point is triggered during the use of the DataWorks platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1408,7 +1428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends the processing result of an extension point event by an extension to DataWorks.</para>
+        /// <para>Returns the check result of an extension program for an extension point event to the DataWorks platform by calling the CallbackExtension operation when an extension point is triggered during the use of the DataWorks platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1426,7 +1446,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends the processing result of an extension point event by an extension to DataWorks.</para>
+        /// <para>Returns the check result of an extension program for an extension point event to the DataWorks platform by calling the CallbackExtension operation when an extension point is triggered during the use of the DataWorks platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1580,7 +1600,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the check events for a file that is pending deployment in DataStudio. After a file is committed, DataWorks checks the file and generates events before deployment. Use the returned events to determine whether the file can proceed with deployment validation.</para>
+        /// <para>Returns the check result of a file pending deployment to DataWorks. After a file created on the DataWorks DataStudio page is submitted, the file enters the deployment check state. DataWorks returns a file deployment check event to you, and you need to determine whether the file can proceed with deployment verification based on the event content. You can call this operation to return the check result of the file pending deployment to DataWorks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1630,7 +1650,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the check events for a file that is pending deployment in DataStudio. After a file is committed, DataWorks checks the file and generates events before deployment. Use the returned events to determine whether the file can proceed with deployment validation.</para>
+        /// <para>Returns the check result of a file pending deployment to DataWorks. After a file created on the DataWorks DataStudio page is submitted, the file enters the deployment check state. DataWorks returns a file deployment check event to you, and you need to determine whether the file can proceed with deployment verification based on the event content. You can call this operation to return the check result of the file pending deployment to DataWorks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1680,7 +1700,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the check events for a file that is pending deployment in DataStudio. After a file is committed, DataWorks checks the file and generates events before deployment. Use the returned events to determine whether the file can proceed with deployment validation.</para>
+        /// <para>Returns the check result of a file pending deployment to DataWorks. After a file created on the DataWorks DataStudio page is submitted, the file enters the deployment check state. DataWorks returns a file deployment check event to you, and you need to determine whether the file can proceed with deployment verification based on the event content. You can call this operation to return the check result of the file pending deployment to DataWorks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1718,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the check events for a file that is pending deployment in DataStudio. After a file is committed, DataWorks checks the file and generates events before deployment. Use the returned events to determine whether the file can proceed with deployment validation.</para>
+        /// <para>Returns the check result of a file pending deployment to DataWorks. After a file created on the DataWorks DataStudio page is submitted, the file enters the deployment check state. DataWorks returns a file deployment check event to you, and you need to determine whether the file can proceed with deployment verification based on the event content. You can call this operation to return the check result of the file pending deployment to DataWorks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1876,8 +1896,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a metatable exists.</para>
+        /// <para>Checks whether a table exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckMetaTableRequest
@@ -1934,8 +1959,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a metatable exists.</para>
+        /// <para>Checks whether a table exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckMetaTableRequest
@@ -1992,8 +2022,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a metatable exists.</para>
+        /// <para>Checks whether a table exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckMetaTableRequest
@@ -2010,8 +2045,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a metatable exists.</para>
+        /// <para>Checks whether a table exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckMetaTableRequest
@@ -2204,7 +2244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow in DataStudio.</para>
+        /// <para>Creates a business process in DataStudio for data development.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2266,7 +2306,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow in DataStudio.</para>
+        /// <para>Creates a business process in DataStudio for data development.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2328,7 +2368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow in DataStudio.</para>
+        /// <para>Creates a business process in DataStudio for data development.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2346,7 +2386,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow in DataStudio.</para>
+        /// <para>Creates a business process in DataStudio for data development.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3216,7 +3256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateDagComplement to create a data backfill workflow.</para>
+        /// <para>Creates a data backfill workflow by calling CreateDagComplement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3304,7 +3344,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateDagComplement to create a data backfill workflow.</para>
+        /// <para>Creates a data backfill workflow by calling CreateDagComplement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3392,7 +3432,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateDagComplement to create a data backfill workflow.</para>
+        /// <para>Creates a data backfill workflow by calling CreateDagComplement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3416,7 +3456,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateDagComplement to create a data backfill workflow.</para>
+        /// <para>Creates a data backfill workflow by calling CreateDagComplement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3612,7 +3652,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API.</para>
+        /// <para>Creates a Data Service API by calling CreateDataServiceApi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3726,7 +3766,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API.</para>
+        /// <para>Creates a Data Service API by calling CreateDataServiceApi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3840,7 +3880,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API.</para>
+        /// <para>Creates a Data Service API by calling CreateDataServiceApi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3858,7 +3898,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API.</para>
+        /// <para>Creates a Data Service API by calling CreateDataServiceApi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4500,7 +4540,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an export task. You can use this operation to create an export task but cannot use this operation to start the created export task.</para>
+        /// <para>Creates an export task in DataWorks. This API operation only creates the export task and does not start the export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,7 +4602,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an export task. You can use this operation to create an export task but cannot use this operation to start the created export task.</para>
+        /// <para>Creates an export task in DataWorks. This API operation only creates the export task and does not start the export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4624,7 +4664,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an export task. You can use this operation to create an export task but cannot use this operation to start the created export task.</para>
+        /// <para>Creates an export task in DataWorks. This API operation only creates the export task and does not start the export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4642,7 +4682,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an export task. You can use this operation to create an export task but cannot use this operation to start the created export task.</para>
+        /// <para>Creates an export task in DataWorks. This API operation only creates the export task and does not start the export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5648,7 +5688,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The manual workflow must have already been submitted and deployed in the UI, and the Operation Center must be able to find the corresponding manual workflow. Only then can this API be used.</para>
+        /// <para>Triggers the execution of a manual business process. The manual business process must have been submitted and published in the console, and the O&amp;M center must be able to find the corresponding manual business process before you can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5724,7 +5764,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The manual workflow must have already been submitted and deployed in the UI, and the Operation Center must be able to find the corresponding manual workflow. Only then can this API be used.</para>
+        /// <para>Triggers the execution of a manual business process. The manual business process must have been submitted and published in the console, and the O&amp;M center must be able to find the corresponding manual business process before you can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5800,7 +5840,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The manual workflow must have already been submitted and deployed in the UI, and the Operation Center must be able to find the corresponding manual workflow. Only then can this API be used.</para>
+        /// <para>Triggers the execution of a manual business process. The manual business process must have been submitted and published in the console, and the O&amp;M center must be able to find the corresponding manual business process before you can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5824,7 +5864,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The manual workflow must have already been submitted and deployed in the UI, and the Operation Center must be able to find the corresponding manual workflow. Only then can this API be used.</para>
+        /// <para>Triggers the execution of a manual business process. The manual business process must have been submitted and published in the console, and the O&amp;M center must be able to find the corresponding manual business process before you can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5980,12 +6020,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a collection.</para>
+        /// <para>Creates a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections are classified into various types. The names of collections of the same type must be different.</para>
+        /// <para>Collections have multiple types. The name must be unique within the same collection type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6039,12 +6079,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a collection.</para>
+        /// <para>Creates a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections are classified into various types. The names of collections of the same type must be different.</para>
+        /// <para>Collections have multiple types. The name must be unique within the same collection type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6098,12 +6138,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a collection.</para>
+        /// <para>Creates a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections are classified into various types. The names of collections of the same type must be different.</para>
+        /// <para>Collections have multiple types. The name must be unique within the same collection type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6121,12 +6161,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a collection.</para>
+        /// <para>Creates a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections are classified into various types. The names of collections of the same type must be different.</para>
+        /// <para>Collections have multiple types. The name must be unique within the same collection type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6145,12 +6185,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — ApplyResourceAccessPermission.</para>
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — ApplyResourceAccessPermission as soon as possible.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a> as soon as possible.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6229,12 +6269,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — ApplyResourceAccessPermission.</para>
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — ApplyResourceAccessPermission as soon as possible.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a> as soon as possible.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6313,12 +6353,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — ApplyResourceAccessPermission.</para>
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — ApplyResourceAccessPermission as soon as possible.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a> as soon as possible.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6337,12 +6377,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a permission request order.
-        /// Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — ApplyResourceAccessPermission.</para>
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — ApplyResourceAccessPermission as soon as possible.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 edition of OpenAPI will be deprecated soon. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a> as soon as possible.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6888,7 +6928,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a follower to a partition expression to receive data quality alerts.</para>
+        /// <para>Creates a subscriber for a partition expression by calling CreateQualityFollower.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6952,7 +6992,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a follower to a partition expression to receive data quality alerts.</para>
+        /// <para>Creates a subscriber for a partition expression by calling CreateQualityFollower.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7016,7 +7056,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a follower to a partition expression to receive data quality alerts.</para>
+        /// <para>Creates a subscriber for a partition expression by calling CreateQualityFollower.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7040,7 +7080,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a follower to a partition expression to receive data quality alerts.</para>
+        /// <para>Creates a subscriber for a partition expression by calling CreateQualityFollower.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7556,7 +7596,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom alert rule.</para>
+        /// <para>Creates a custom alert rule by calling CreateRemind.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7658,7 +7698,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom alert rule.</para>
+        /// <para>Creates a custom alert rule by calling CreateRemind.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7760,7 +7800,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom alert rule.</para>
+        /// <para>Creates a custom alert rule by calling CreateRemind.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7778,7 +7818,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom alert rule.</para>
+        /// <para>Creates a custom alert rule by calling CreateRemind.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8784,7 +8824,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file for a function in DataStudio.</para>
+        /// <para>Creates a function type file in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8874,7 +8914,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file for a function in DataStudio.</para>
+        /// <para>Creates a function type file in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8964,7 +9004,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file for a function in DataStudio.</para>
+        /// <para>Creates a function type file in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8982,7 +9022,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file for a function in DataStudio.</para>
+        /// <para>Creates a function type file in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9824,7 +9864,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API in DataService Studio.</para>
+        /// <para>Deletes a DataService API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9874,7 +9914,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API in DataService Studio.</para>
+        /// <para>Deletes a DataService API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9924,7 +9964,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API in DataService Studio.</para>
+        /// <para>Deletes a DataService API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9942,7 +9982,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API in DataService Studio.</para>
+        /// <para>Deletes a DataService API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12972,7 +13012,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Masks data.</para>
+        /// <para>Submits data for masking and returns the masked result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13010,7 +13050,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Masks data.</para>
+        /// <para>Submits data for masking and returns the masked result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13048,7 +13088,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Masks data.</para>
+        /// <para>Submits data for masking and returns the masked result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13066,7 +13106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Masks data.</para>
+        /// <para>Submits data for masking and returns the masked result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17828,7 +17868,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a baseline based on its ID.</para>
+        /// <para>Retrieves the baseline configuration based on a baseline ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17874,7 +17914,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a baseline based on its ID.</para>
+        /// <para>Retrieves the baseline configuration based on a baseline ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17920,7 +17960,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a baseline based on its ID.</para>
+        /// <para>Retrieves the baseline configuration based on a baseline ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17938,7 +17978,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a baseline based on its ID.</para>
+        /// <para>Retrieves the baseline configuration based on a baseline ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17956,7 +17996,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a baseline.</para>
+        /// <para>Retrieves the configuration details of a baseline by calling GetBaselineConfig.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17998,7 +18038,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a baseline.</para>
+        /// <para>Retrieves the configuration details of a baseline by calling GetBaselineConfig.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18040,7 +18080,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a baseline.</para>
+        /// <para>Retrieves the configuration details of a baseline by calling GetBaselineConfig.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18058,7 +18098,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a baseline.</para>
+        /// <para>Retrieves the configuration details of a baseline by calling GetBaselineConfig.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18076,8 +18116,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the events that are associated with the instance.</para>
+        /// <para>Retrieves the critical path of a baseline instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用前需准备有效的 BaselineId：可先通过 ListProjects 获取 ProjectId，再调用 ListBaselines，并从其 Data.Baselines[].BaselineId 获取。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetBaselineKeyPathRequest
@@ -18126,8 +18171,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the events that are associated with the instance.</para>
+        /// <para>Retrieves the critical path of a baseline instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用前需准备有效的 BaselineId：可先通过 ListProjects 获取 ProjectId，再调用 ListBaselines，并从其 Data.Baselines[].BaselineId 获取。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetBaselineKeyPathRequest
@@ -18176,8 +18226,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the events that are associated with the instance.</para>
+        /// <para>Retrieves the critical path of a baseline instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用前需准备有效的 BaselineId：可先通过 ListProjects 获取 ProjectId，再调用 ListBaselines，并从其 Data.Baselines[].BaselineId 获取。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetBaselineKeyPathRequest
@@ -18194,8 +18249,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the events that are associated with the instance.</para>
+        /// <para>Retrieves the critical path of a baseline instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用前需准备有效的 BaselineId：可先通过 ListProjects 获取 ProjectId，再调用 ListBaselines，并从其 Data.Baselines[].BaselineId 获取。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetBaselineKeyPathRequest
@@ -18212,7 +18272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a baseline instance.</para>
+        /// <para>Retrieves the details of a baseline instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18262,7 +18322,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a baseline instance.</para>
+        /// <para>Retrieves the details of a baseline instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18312,7 +18372,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a baseline instance.</para>
+        /// <para>Retrieves the details of a baseline instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18330,7 +18390,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a baseline instance.</para>
+        /// <para>Retrieves the details of a baseline instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18488,7 +18548,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a table creation, update, or deletion task.</para>
+        /// <para>Retrieves the status of tasks for creating, updating, and deleting tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18532,7 +18592,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a table creation, update, or deletion task.</para>
+        /// <para>Retrieves the status of tasks for creating, updating, and deleting tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18576,7 +18636,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a table creation, update, or deletion task.</para>
+        /// <para>Retrieves the status of tasks for creating, updating, and deleting tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18600,7 +18660,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a table creation, update, or deletion task.</para>
+        /// <para>Retrieves the status of tasks for creating, updating, and deleting tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20011,6 +20071,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Retrieves the details of a published DataService Studio API.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：请先开通 DataWorks 企业版或旗舰版，并准备已发布的数据服务 API。ProjectId 可通过 ListProjects 获取，ApiId 可通过 ListDataServicePublishedApis 的 Data.Apis[].ApiId 获取；未开通所需版本时会返回 403 Forbidden.Access。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDataServicePublishedApiRequest
         /// </param>
@@ -20060,6 +20125,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Retrieves the details of a published DataService Studio API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：请先开通 DataWorks 企业版或旗舰版，并准备已发布的数据服务 API。ProjectId 可通过 ListProjects 获取，ApiId 可通过 ListDataServicePublishedApis 的 Data.Apis[].ApiId 获取；未开通所需版本时会返回 403 Forbidden.Access。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataServicePublishedApiRequest
@@ -20111,6 +20181,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Retrieves the details of a published DataService Studio API.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：请先开通 DataWorks 企业版或旗舰版，并准备已发布的数据服务 API。ProjectId 可通过 ListProjects 获取，ApiId 可通过 ListDataServicePublishedApis 的 Data.Apis[].ApiId 获取；未开通所需版本时会返回 403 Forbidden.Access。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDataServicePublishedApiRequest
         /// </param>
@@ -20128,6 +20203,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Retrieves the details of a published DataService Studio API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：请先开通 DataWorks 企业版或旗舰版，并准备已发布的数据服务 API。ProjectId 可通过 ListProjects 获取，ApiId 可通过 ListDataServicePublishedApis 的 Data.Apis[].ApiId 获取；未开通所需版本时会返回 403 Forbidden.Access。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataServicePublishedApiRequest
@@ -21112,8 +21192,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
+        /// <para>Queries the extension point data snapshot at the time an extension point event was triggered, based on the message ID of a DataWorks open message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns a 403 Forbidden.Access error.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIDEEventDetailRequest
@@ -21158,8 +21243,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
+        /// <para>Queries the extension point data snapshot at the time an extension point event was triggered, based on the message ID of a DataWorks open message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns a 403 Forbidden.Access error.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIDEEventDetailRequest
@@ -21204,8 +21294,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
+        /// <para>Queries the extension point data snapshot at the time an extension point event was triggered, based on the message ID of a DataWorks open message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns a 403 Forbidden.Access error.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIDEEventDetailRequest
@@ -21222,8 +21317,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
+        /// <para>Queries the extension point data snapshot at the time an extension point event was triggered, based on the message ID of a DataWorks open message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns a 403 Forbidden.Access error.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIDEEventDetailRequest
@@ -22304,7 +22404,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about instances in a manually triggered workflow.</para>
+        /// <para>Queries information about instances of a manually triggered workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22360,7 +22460,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about instances in a manually triggered workflow.</para>
+        /// <para>Queries information about instances of a manually triggered workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22416,7 +22516,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about instances in a manually triggered workflow.</para>
+        /// <para>Queries information about instances of a manually triggered workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22440,7 +22540,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about instances in a manually triggered workflow.</para>
+        /// <para>Queries information about instances of a manually triggered workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22460,7 +22560,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a category tree.</para>
+        /// <para>Queries the tree categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22510,7 +22610,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a category tree.</para>
+        /// <para>Queries the tree categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22560,7 +22660,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a category tree.</para>
+        /// <para>Queries the tree categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22578,7 +22678,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a category tree.</para>
+        /// <para>Queries the tree categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22596,7 +22696,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a collection.</para>
+        /// <para>Queries the details of a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22638,7 +22738,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a collection.</para>
+        /// <para>Queries the details of a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22680,7 +22780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a collection.</para>
+        /// <para>Queries the details of a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22698,7 +22798,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a collection.</para>
+        /// <para>Queries the details of a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22716,7 +22816,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a field in a metatable.</para>
+        /// <para>Queries the lineage of a field by calling GetMetaColumnLineage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22790,7 +22890,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a field in a metatable.</para>
+        /// <para>Queries the lineage of a field by calling GetMetaColumnLineage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22864,7 +22964,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a field in a metatable.</para>
+        /// <para>Queries the lineage of a field by calling GetMetaColumnLineage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22882,7 +22982,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a field in a metatable.</para>
+        /// <para>Queries the lineage of a field by calling GetMetaColumnLineage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22900,8 +23000,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic metadata information about a compute engine instance.</para>
+        /// <para>Retrieves the basic metadata information of an engine instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaDBInfoRequest
@@ -22938,8 +23043,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic metadata information about a compute engine instance.</para>
+        /// <para>Retrieves the basic metadata information of an engine instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaDBInfoRequest
@@ -22976,8 +23086,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic metadata information about a compute engine instance.</para>
+        /// <para>Retrieves the basic metadata information of an engine instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaDBInfoRequest
@@ -22994,8 +23109,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic metadata information about a compute engine instance.</para>
+        /// <para>Retrieves the basic metadata information of an engine instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaDBInfoRequest
@@ -23175,6 +23295,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Queries the basic information about a metatable.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：调用本接口前，请先开通 DataWorks 企业版或旗舰版；未开通时服务会返回 403 Forbidden.Access。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMetaTableBasicInfoRequest
         /// </param>
@@ -23212,6 +23337,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Queries the basic information about a metatable.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：调用本接口前，请先开通 DataWorks 企业版或旗舰版；未开通时服务会返回 403 Forbidden.Access。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableBasicInfoRequest
@@ -23251,6 +23381,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Queries the basic information about a metatable.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：调用本接口前，请先开通 DataWorks 企业版或旗舰版；未开通时服务会返回 403 Forbidden.Access。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMetaTableBasicInfoRequest
         /// </param>
@@ -23269,6 +23404,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Queries the basic information about a metatable.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>前置条件：调用本接口前，请先开通 DataWorks 企业版或旗舰版；未开通时服务会返回 403 Forbidden.Access。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMetaTableBasicInfoRequest
         /// </param>
@@ -23284,13 +23424,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change logs of a metatable.</para>
+        /// <para>Retrieves the change log of a table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is not recommended. A new API operation that provides the same capability will be released soon.</para>
+        /// <para>We do not recommend that you use this API operation. A new API operation will be released to replace it.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23357,13 +23497,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change logs of a metatable.</para>
+        /// <para>Retrieves the change log of a table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is not recommended. A new API operation that provides the same capability will be released soon.</para>
+        /// <para>We do not recommend that you use this API operation. A new API operation will be released to replace it.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23430,13 +23570,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change logs of a metatable.</para>
+        /// <para>Retrieves the change log of a table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is not recommended. A new API operation that provides the same capability will be released soon.</para>
+        /// <para>We do not recommend that you use this API operation. A new API operation will be released to replace it.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23455,13 +23595,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change logs of a metatable.</para>
+        /// <para>Retrieves the change log of a table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is not recommended. A new API operation that provides the same capability will be released soon.</para>
+        /// <para>We do not recommend that you use this API operation. A new API operation will be released to replace it.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23596,12 +23736,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves complete metadata for a table, including field details.</para>
+        /// <para>Retrieves the complete information about a table, including field information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// <para>Only tables of the EMR engine type are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23645,12 +23785,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves complete metadata for a table, including field details.</para>
+        /// <para>Retrieves the complete information about a table, including field information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// <para>Only tables of the EMR engine type are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23694,12 +23834,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves complete metadata for a table, including field details.</para>
+        /// <para>Retrieves the complete information about a table, including field information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// <para>Only tables of the EMR engine type are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23723,12 +23863,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves complete metadata for a table, including field details.</para>
+        /// <para>Retrieves the complete information about a table, including field information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// <para>Only tables of the EMR engine type are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23748,7 +23888,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instructions on how to use a table.</para>
+        /// <para>Retrieves the usage instructions for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23794,7 +23934,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instructions on how to use a table.</para>
+        /// <para>Retrieves the usage instructions for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23840,7 +23980,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instructions on how to use a table.</para>
+        /// <para>Retrieves the usage instructions for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23858,7 +23998,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instructions on how to use a table.</para>
+        /// <para>Retrieves the usage instructions for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23876,7 +24016,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a metatable.</para>
+        /// <para>Queries the data lineage of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23946,7 +24086,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a metatable.</para>
+        /// <para>Queries the data lineage of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24016,7 +24156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a metatable.</para>
+        /// <para>Queries the data lineage of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24034,7 +24174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lineage of a metatable.</para>
+        /// <para>Queries the data lineage of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24164,7 +24304,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output information of a metatable.</para>
+        /// <para>Retrieves the output information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24226,7 +24366,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output information of a metatable.</para>
+        /// <para>Retrieves the output information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24288,7 +24428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output information of a metatable.</para>
+        /// <para>Retrieves the output information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24306,7 +24446,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output information of a metatable.</para>
+        /// <para>Retrieves the output information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24692,8 +24832,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fetches topics and hierarchy metadata for tables</para>
+        /// <para>Queries the theme and level information of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to activate or upgrade to the required edition.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableThemeLevelRequest
@@ -24730,8 +24875,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fetches topics and hierarchy metadata for tables</para>
+        /// <para>Queries the theme and level information of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to activate or upgrade to the required edition.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableThemeLevelRequest
@@ -24768,8 +24918,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fetches topics and hierarchy metadata for tables</para>
+        /// <para>Queries the theme and level information of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to activate or upgrade to the required edition.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableThemeLevelRequest
@@ -24786,8 +24941,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fetches topics and hierarchy metadata for tables</para>
+        /// <para>Queries the theme and level information of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to activate or upgrade to the required edition.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableThemeLevelRequest
@@ -25060,7 +25220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Retrieves the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25106,7 +25266,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Retrieves the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25152,7 +25312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Retrieves the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25170,7 +25330,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Retrieves the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25188,7 +25348,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Calls GetNodeChildren to retrieve the downstream node list of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25234,7 +25394,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Calls GetNodeChildren to retrieve the downstream node list of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25280,7 +25440,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Calls GetNodeChildren to retrieve the downstream node list of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25298,7 +25458,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Calls GetNodeChildren to retrieve the downstream node list of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25316,7 +25476,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code of a node.</para>
+        /// <para>Retrieves the code of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25362,7 +25522,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code of a node.</para>
+        /// <para>Retrieves the code of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25408,7 +25568,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code of a node.</para>
+        /// <para>Retrieves the code of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25426,7 +25586,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code of a node.</para>
+        /// <para>Retrieves the code of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25588,7 +25748,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ancestor nodes of a node.</para>
+        /// <para>Calls GetNodeParents to retrieve the list of upstream nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25634,7 +25794,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ancestor nodes of a node.</para>
+        /// <para>Calls GetNodeParents to retrieve the list of upstream nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25680,7 +25840,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ancestor nodes of a node.</para>
+        /// <para>Calls GetNodeParents to retrieve the list of upstream nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25698,7 +25858,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ancestor nodes of a node.</para>
+        /// <para>Calls GetNodeParents to retrieve the list of upstream nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26252,13 +26412,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission request order.
-        /// Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — GetApplicationContents/GetProcessInstance.</para>
+        /// <para>Queries the details of a permission application order.
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: GetApplicationContents/GetProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_3.75985eba2pEw9l&scm=20140722.H_3040926._.OR_help-T_cn~zh-V_1">GetApplicationContents</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_4.64e62414k6cKri&scm=20140722.H_3040933._.OR_help-T_cn~zh-V_1">GetProcessInstance</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents">GetApplicationContents</a>/<a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance">GetProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26300,13 +26460,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission request order.
-        /// Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — GetApplicationContents/GetProcessInstance.</para>
+        /// <para>Queries the details of a permission application order.
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: GetApplicationContents/GetProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_3.75985eba2pEw9l&scm=20140722.H_3040926._.OR_help-T_cn~zh-V_1">GetApplicationContents</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_4.64e62414k6cKri&scm=20140722.H_3040933._.OR_help-T_cn~zh-V_1">GetProcessInstance</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents">GetApplicationContents</a>/<a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance">GetProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26348,13 +26508,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission request order.
-        /// Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — GetApplicationContents/GetProcessInstance.</para>
+        /// <para>Queries the details of a permission application order.
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: GetApplicationContents/GetProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_3.75985eba2pEw9l&scm=20140722.H_3040926._.OR_help-T_cn~zh-V_1">GetApplicationContents</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_4.64e62414k6cKri&scm=20140722.H_3040933._.OR_help-T_cn~zh-V_1">GetProcessInstance</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents">GetApplicationContents</a>/<a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance">GetProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26372,13 +26532,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission request order.
-        /// Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — GetApplicationContents/GetProcessInstance.</para>
+        /// <para>Queries the details of a permission application order.
+        /// Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: GetApplicationContents/GetProcessInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Please migrate to the 2024 version of OpenAPI as soon as possible — <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_3.75985eba2pEw9l&scm=20140722.H_3040926._.OR_help-T_cn~zh-V_1">GetApplicationContents</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_4.64e62414k6cKri&scm=20140722.H_3040933._.OR_help-T_cn~zh-V_1">GetProcessInstance</a>.</em>*</para>
+        /// <para><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents">GetApplicationContents</a>/<a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance">GetProcessInstance</a>.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26396,7 +26556,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a DataWorks workspace.</para>
+        /// <para>Queries the details of a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26442,7 +26602,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a DataWorks workspace.</para>
+        /// <para>Queries the details of a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26488,7 +26648,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a DataWorks workspace.</para>
+        /// <para>Queries the details of a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26506,7 +26666,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a DataWorks workspace.</para>
+        /// <para>Queries the details of a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26524,7 +26684,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Deprecated</b></term>
         /// 
-        /// OpenAPI GetProjectDetail is deprecated
+        /// OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
@@ -26541,7 +26701,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.")]
         // Deprecated
         public GetProjectDetailResponse GetProjectDetailWithOptions(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -26572,7 +26732,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Deprecated</b></term>
         /// 
-        /// OpenAPI GetProjectDetail is deprecated
+        /// OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
@@ -26589,7 +26749,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.")]
         // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailWithOptionsAsync(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -26620,7 +26780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Deprecated</b></term>
         /// 
-        /// OpenAPI GetProjectDetail is deprecated
+        /// OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
@@ -26634,7 +26794,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.")]
         // Deprecated
         public GetProjectDetailResponse GetProjectDetail(GetProjectDetailRequest request)
         {
@@ -26644,7 +26804,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Deprecated</b></term>
         /// 
-        /// OpenAPI GetProjectDetail is deprecated
+        /// OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
@@ -26658,7 +26818,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.")]
         // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailAsync(GetProjectDetailRequest request)
         {
@@ -26672,7 +26832,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call <c>GetQualityEntity</c> to retrieve the partition expression.</para>
+        /// <para>Retrieves a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26736,7 +26896,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call <c>GetQualityEntity</c> to retrieve the partition expression.</para>
+        /// <para>Retrieves a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26800,7 +26960,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call <c>GetQualityEntity</c> to retrieve the partition expression.</para>
+        /// <para>Retrieves a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26824,7 +26984,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call <c>GetQualityEntity</c> to retrieve the partition expression.</para>
+        /// <para>Retrieves a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26848,7 +27008,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the followers of a Partition Expression.</para>
+        /// <para>Retrieves the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26904,7 +27064,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the followers of a Partition Expression.</para>
+        /// <para>Retrieves the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26960,7 +27120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the followers of a Partition Expression.</para>
+        /// <para>Retrieves the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26984,7 +27144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the followers of a Partition Expression.</para>
+        /// <para>Retrieves the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27400,7 +27560,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of instances in different periods of a day.</para>
+        /// <para>Retrieves the hourly statistical trends of instances for the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27448,7 +27608,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of instances in different periods of a day.</para>
+        /// <para>Retrieves the hourly statistical trends of instances for the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27496,7 +27656,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of instances in different periods of a day.</para>
+        /// <para>Retrieves the hourly statistical trends of instances for the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27520,7 +27680,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of instances in different periods of a day.</para>
+        /// <para>Retrieves the hourly statistical trends of instances for the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27540,7 +27700,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an event.</para>
+        /// <para>Retrieves the details of an event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27587,7 +27747,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an event.</para>
+        /// <para>Retrieves the details of an event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27634,7 +27794,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an event.</para>
+        /// <para>Retrieves the details of an event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27657,7 +27817,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an event.</para>
+        /// <para>Retrieves the details of an event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28324,7 +28484,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of baseline instances.</para>
+        /// <para>Retrieves a list of baseline instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28402,7 +28562,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of baseline instances.</para>
+        /// <para>Retrieves a list of baseline instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28480,7 +28640,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of baseline instances.</para>
+        /// <para>Retrieves a list of baseline instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28498,7 +28658,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of baseline instances.</para>
+        /// <para>Retrieves a list of baseline instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29004,7 +29164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check results of extension point events.</para>
+        /// <para>Queries the check list of extension events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29070,7 +29230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check results of extension point events.</para>
+        /// <para>Queries the check list of extension events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29136,7 +29296,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check results of extension point events.</para>
+        /// <para>Queries the check list of extension events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29154,7 +29314,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check results of extension point events.</para>
+        /// <para>Queries the check list of extension events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29532,12 +29692,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules configured for a synchronization task.</para>
+        /// <para>Queries the list of alerting rules for data integration new-version nodes. Currently supported node types include the MySQL-to-Hologres full-database real-time Solutions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alert rules can be configured when your task includes real-time synchronization.</para>
+        /// <para>When your task synchronization type includes real-time synchronization, you can configure alert rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29587,12 +29747,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules configured for a synchronization task.</para>
+        /// <para>Queries the list of alerting rules for data integration new-version nodes. Currently supported node types include the MySQL-to-Hologres full-database real-time Solutions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alert rules can be configured when your task includes real-time synchronization.</para>
+        /// <para>When your task synchronization type includes real-time synchronization, you can configure alert rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29642,12 +29802,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules configured for a synchronization task.</para>
+        /// <para>Queries the list of alerting rules for data integration new-version nodes. Currently supported node types include the MySQL-to-Hologres full-database real-time Solutions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alert rules can be configured when your task includes real-time synchronization.</para>
+        /// <para>When your task synchronization type includes real-time synchronization, you can configure alert rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29665,12 +29825,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules configured for a synchronization task.</para>
+        /// <para>Queries the list of alerting rules for data integration new-version nodes. Currently supported node types include the MySQL-to-Hologres full-database real-time Solutions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alert rules can be configured when your task includes real-time synchronization.</para>
+        /// <para>When your task synchronization type includes real-time synchronization, you can configure alert rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29688,12 +29848,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of synchronization tasks.</para>
+        /// <para>Queries the list of new-version data integration tasks. Currently supported task types include MySQL-to-Hologres full-database real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.</para>
+        /// <para>This list operation returns only basic task information. To view detailed task information, call the GetDIJob operation.
+        /// Prerequisites: Activate DataWorks Enterprise Edition or Ultimate Edition first. The required ProjectId can be obtained from PageResult.ProjectList[].ProjectId in the ListProjects response. If the required edition is not activated, this operation returns 403 Forbidden.Access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29755,12 +29916,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of synchronization tasks.</para>
+        /// <para>Queries the list of new-version data integration tasks. Currently supported task types include MySQL-to-Hologres full-database real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.</para>
+        /// <para>This list operation returns only basic task information. To view detailed task information, call the GetDIJob operation.
+        /// Prerequisites: Activate DataWorks Enterprise Edition or Ultimate Edition first. The required ProjectId can be obtained from PageResult.ProjectList[].ProjectId in the ListProjects response. If the required edition is not activated, this operation returns 403 Forbidden.Access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29822,12 +29984,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of synchronization tasks.</para>
+        /// <para>Queries the list of new-version data integration tasks. Currently supported task types include MySQL-to-Hologres full-database real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.</para>
+        /// <para>This list operation returns only basic task information. To view detailed task information, call the GetDIJob operation.
+        /// Prerequisites: Activate DataWorks Enterprise Edition or Ultimate Edition first. The required ProjectId can be obtained from PageResult.ProjectList[].ProjectId in the ListProjects response. If the required edition is not activated, this operation returns 403 Forbidden.Access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29845,12 +30008,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of synchronization tasks.</para>
+        /// <para>Queries the list of new-version data integration tasks. Currently supported task types include MySQL-to-Hologres full-database real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.</para>
+        /// <para>This list operation returns only basic task information. To view detailed task information, call the GetDIJob operation.
+        /// Prerequisites: Activate DataWorks Enterprise Edition or Ultimate Edition first. The required ProjectId can be obtained from PageResult.ProjectList[].ProjectId in the ListProjects response. If the required edition is not activated, this operation returns 403 Forbidden.Access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30024,22 +30188,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of directed acyclic graphs (DAGs) for a data backfill instance by operation sequence number (OpSeq).</para>
+        /// <para>Calls the ListDags operation to retrieve the details of all DAGs for a single data backfill instance based on the OpSeq (unique identifier of the data backfill instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supported DAG types:</para>
+        /// <para>Dag Type values:</para>
         /// <list type="bullet">
-        /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-        /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-        /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-        /// Supported DAG states:</description></item>
-        /// <item><description>CREATED: The DAG is created.</description></item>
-        /// <item><description>RUNNING: The DAG is running.</description></item>
-        /// <item><description>FAILURE: The DAG fails to run.</description></item>
-        /// <item><description>SUCCESS: The DAG is successfully run.</description></item>
+        /// <item><description>MANUAL: manual task workflow</description></item>
+        /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
+        /// <item><description>SUPPLY_DATA: data backfill</description></item>
+        /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow
+        /// Dag Status values:</description></item>
+        /// <item><description>CREATED: created</description></item>
+        /// <item><description>RUNNING: running</description></item>
+        /// <item><description>FAILURE: failed</description></item>
+        /// <item><description>SUCCESS: succeeded</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30086,22 +30250,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of directed acyclic graphs (DAGs) for a data backfill instance by operation sequence number (OpSeq).</para>
+        /// <para>Calls the ListDags operation to retrieve the details of all DAGs for a single data backfill instance based on the OpSeq (unique identifier of the data backfill instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supported DAG types:</para>
+        /// <para>Dag Type values:</para>
         /// <list type="bullet">
-        /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-        /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-        /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-        /// Supported DAG states:</description></item>
-        /// <item><description>CREATED: The DAG is created.</description></item>
-        /// <item><description>RUNNING: The DAG is running.</description></item>
-        /// <item><description>FAILURE: The DAG fails to run.</description></item>
-        /// <item><description>SUCCESS: The DAG is successfully run.</description></item>
+        /// <item><description>MANUAL: manual task workflow</description></item>
+        /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
+        /// <item><description>SUPPLY_DATA: data backfill</description></item>
+        /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow
+        /// Dag Status values:</description></item>
+        /// <item><description>CREATED: created</description></item>
+        /// <item><description>RUNNING: running</description></item>
+        /// <item><description>FAILURE: failed</description></item>
+        /// <item><description>SUCCESS: succeeded</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30148,22 +30312,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of directed acyclic graphs (DAGs) for a data backfill instance by operation sequence number (OpSeq).</para>
+        /// <para>Calls the ListDags operation to retrieve the details of all DAGs for a single data backfill instance based on the OpSeq (unique identifier of the data backfill instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supported DAG types:</para>
+        /// <para>Dag Type values:</para>
         /// <list type="bullet">
-        /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-        /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-        /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-        /// Supported DAG states:</description></item>
-        /// <item><description>CREATED: The DAG is created.</description></item>
-        /// <item><description>RUNNING: The DAG is running.</description></item>
-        /// <item><description>FAILURE: The DAG fails to run.</description></item>
-        /// <item><description>SUCCESS: The DAG is successfully run.</description></item>
+        /// <item><description>MANUAL: manual task workflow</description></item>
+        /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
+        /// <item><description>SUPPLY_DATA: data backfill</description></item>
+        /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow
+        /// Dag Status values:</description></item>
+        /// <item><description>CREATED: created</description></item>
+        /// <item><description>RUNNING: running</description></item>
+        /// <item><description>FAILURE: failed</description></item>
+        /// <item><description>SUCCESS: succeeded</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30182,22 +30346,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of directed acyclic graphs (DAGs) for a data backfill instance by operation sequence number (OpSeq).</para>
+        /// <para>Calls the ListDags operation to retrieve the details of all DAGs for a single data backfill instance based on the OpSeq (unique identifier of the data backfill instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supported DAG types:</para>
+        /// <para>Dag Type values:</para>
         /// <list type="bullet">
-        /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-        /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-        /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-        /// Supported DAG states:</description></item>
-        /// <item><description>CREATED: The DAG is created.</description></item>
-        /// <item><description>RUNNING: The DAG is running.</description></item>
-        /// <item><description>FAILURE: The DAG fails to run.</description></item>
-        /// <item><description>SUCCESS: The DAG is successfully run.</description></item>
+        /// <item><description>MANUAL: manual task workflow</description></item>
+        /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
+        /// <item><description>SUPPLY_DATA: data backfill</description></item>
+        /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow
+        /// Dag Status values:</description></item>
+        /// <item><description>CREATED: created</description></item>
+        /// <item><description>RUNNING: running</description></item>
+        /// <item><description>FAILURE: failed</description></item>
+        /// <item><description>SUCCESS: succeeded</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30216,7 +30380,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs on which other users are granted access permissions.</para>
+        /// <para>Retrieves the list of APIs that have been authorized to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30276,7 +30440,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs on which other users are granted access permissions.</para>
+        /// <para>Retrieves the list of APIs that have been authorized to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30336,7 +30500,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs on which other users are granted access permissions.</para>
+        /// <para>Retrieves the list of APIs that have been authorized to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30354,7 +30518,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs on which other users are granted access permissions.</para>
+        /// <para>Retrieves the list of APIs that have been authorized to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30372,7 +30536,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the test records of a DataService Studio API. This API operation allows you to query only the test records that are generated within the previous month.</para>
+        /// <para>Lists the test records of a DataService API. Only data from the last month can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30410,7 +30574,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the test records of a DataService Studio API. This API operation allows you to query only the test records that are generated within the previous month.</para>
+        /// <para>Lists the test records of a DataService API. Only data from the last month can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30448,7 +30612,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the test records of a DataService Studio API. This API operation allows you to query only the test records that are generated within the previous month.</para>
+        /// <para>Lists the test records of a DataService API. Only data from the last month can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30466,7 +30630,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the test records of a DataService Studio API. This API operation allows you to query only the test records that are generated within the previous month.</para>
+        /// <para>Lists the test records of a DataService API. Only data from the last month can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30796,7 +30960,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs that you are authorized to access.</para>
+        /// <para>Retrieves a list of authorized APIs in DataService.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30856,7 +31020,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs that you are authorized to access.</para>
+        /// <para>Retrieves a list of authorized APIs in DataService.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30916,7 +31080,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs that you are authorized to access.</para>
+        /// <para>Retrieves a list of authorized APIs in DataService.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30934,7 +31098,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of APIs that you are authorized to access.</para>
+        /// <para>Retrieves a list of authorized APIs in DataService.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30952,7 +31116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of folders.</para>
+        /// <para>Queries the list of Data Service folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31014,7 +31178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of folders.</para>
+        /// <para>Queries the list of Data Service folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31076,7 +31240,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of folders.</para>
+        /// <para>Queries the list of Data Service folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31094,7 +31258,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of folders.</para>
+        /// <para>Queries the list of Data Service folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31112,7 +31276,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of business processes.</para>
+        /// <para>Queries the list of Data Service business processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31170,7 +31334,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of business processes.</para>
+        /// <para>Queries the list of Data Service business processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31228,7 +31392,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of business processes.</para>
+        /// <para>Queries the list of Data Service business processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31246,7 +31410,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of business processes.</para>
+        /// <para>Queries the list of Data Service business processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31264,7 +31428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of published APIs.</para>
+        /// <para>Queries the list of published Data Service APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31330,7 +31494,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of published APIs.</para>
+        /// <para>Queries the list of published Data Service APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31396,7 +31560,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of published APIs.</para>
+        /// <para>Queries the list of published Data Service APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31414,7 +31578,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of published APIs.</para>
+        /// <para>Queries the list of published Data Service APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31892,7 +32056,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of entities by tag. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists entities by tag. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31936,7 +32100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of entities by tag. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists entities by tag. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31980,7 +32144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of entities by tag. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists entities by tag. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31998,7 +32162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of entities by tag. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists entities by tag. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32016,7 +32180,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags of an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists the tags of an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32054,7 +32218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags of an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists the tags of an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32092,7 +32256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags of an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists the tags of an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32110,7 +32274,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags of an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Lists the tags of an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32128,7 +32292,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of extensions.</para>
+        /// <para>Retrieves the list of extensions from the open platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32174,7 +32338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of extensions.</para>
+        /// <para>Retrieves the list of extensions from the open platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32220,7 +32384,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of extensions.</para>
+        /// <para>Retrieves the list of extensions from the open platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32238,7 +32402,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of extensions.</para>
+        /// <para>Retrieves the list of extensions from the open platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33256,7 +33420,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the run history of an instance. Each rerun generates a new historical record.</para>
+        /// <para>Retrieves all history records of an instance. A history record is generated each time a node is rerun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33302,7 +33466,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the run history of an instance. Each rerun generates a new historical record.</para>
+        /// <para>Retrieves all history records of an instance. A history record is generated each time a node is rerun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33348,7 +33512,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the run history of an instance. Each rerun generates a new historical record.</para>
+        /// <para>Retrieves all history records of an instance. A history record is generated each time a node is rerun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33366,7 +33530,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the run history of an instance. Each rerun generates a new historical record.</para>
+        /// <para>Retrieves all history records of an instance. A history record is generated each time a node is rerun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33384,7 +33548,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33482,7 +33646,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33580,7 +33744,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33598,7 +33762,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33616,7 +33780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ancestor or descendant lineage of an entity.</para>
+        /// <para>Queries the upstream and downstream lineage relationships of an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33674,7 +33838,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ancestor or descendant lineage of an entity.</para>
+        /// <para>Queries the upstream and downstream lineage relationships of an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33732,7 +33896,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ancestor or descendant lineage of an entity.</para>
+        /// <para>Queries the upstream and downstream lineage relationships of an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33750,7 +33914,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ancestor or descendant lineage of an entity.</para>
+        /// <para>Queries the upstream and downstream lineage relationships of an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34048,7 +34212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entities in a collection.</para>
+        /// <para>Queries entities in a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34106,7 +34270,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entities in a collection.</para>
+        /// <para>Queries entities in a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34164,7 +34328,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entities in a collection.</para>
+        /// <para>Queries entities in a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34182,7 +34346,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entities in a collection.</para>
+        /// <para>Queries entities in a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34200,12 +34364,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of collections. Collections include data albums displayed on the Data Map page and categories created in data albums. You can filter collections by type.</para>
+        /// <para>Queries collection information. Collections include albums and subcategories within albums on the Data Map page. You can call this operation to query collection information by specifying a collection type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections include ALBUM (data album) and ALBUM_CATEGORY (category within a data album).</para>
+        /// <para>Collections include: ALBUM (album collection) and ALBUM_CATEGORY (subcategory within an album).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34279,12 +34443,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of collections. Collections include data albums displayed on the Data Map page and categories created in data albums. You can filter collections by type.</para>
+        /// <para>Queries collection information. Collections include albums and subcategories within albums on the Data Map page. You can call this operation to query collection information by specifying a collection type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections include ALBUM (data album) and ALBUM_CATEGORY (category within a data album).</para>
+        /// <para>Collections include: ALBUM (album collection) and ALBUM_CATEGORY (subcategory within an album).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34358,12 +34522,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of collections. Collections include data albums displayed on the Data Map page and categories created in data albums. You can filter collections by type.</para>
+        /// <para>Queries collection information. Collections include albums and subcategories within albums on the Data Map page. You can call this operation to query collection information by specifying a collection type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections include ALBUM (data album) and ALBUM_CATEGORY (category within a data album).</para>
+        /// <para>Collections include: ALBUM (album collection) and ALBUM_CATEGORY (subcategory within an album).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34381,12 +34545,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of collections. Collections include data albums displayed on the Data Map page and categories created in data albums. You can filter collections by type.</para>
+        /// <para>Queries collection information. Collections include albums and subcategories within albums on the Data Map page. You can call this operation to query collection information by specifying a collection type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Collections include ALBUM (data album) and ALBUM_CATEGORY (category within a data album).</para>
+        /// <para>Collections include: ALBUM (album collection) and ALBUM_CATEGORY (subcategory within an album).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34404,7 +34568,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadatabases.</para>
+        /// <para>Queries a list of databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34442,7 +34606,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadatabases.</para>
+        /// <para>Queries a list of databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34480,7 +34644,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadatabases.</para>
+        /// <para>Queries a list of databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34498,7 +34662,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadatabases.</para>
+        /// <para>Queries a list of databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34672,7 +34836,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one level of ancestor or descendant nodes of a node.</para>
+        /// <para>Queries the information of upstream and downstream nodes. Only one level can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34728,7 +34892,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one level of ancestor or descendant nodes of a node.</para>
+        /// <para>Queries the information of upstream and downstream nodes. Only one level can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34784,7 +34948,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one level of ancestor or descendant nodes of a node.</para>
+        /// <para>Queries the information of upstream and downstream nodes. Only one level can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34808,7 +34972,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one level of ancestor or descendant nodes of a node.</para>
+        /// <para>Queries the information of upstream and downstream nodes. Only one level can be queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34828,7 +34992,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output information about a node. Only the ancestor or descendant nodes at the nearest level can be queried each time.</para>
+        /// <para>Queries the input and output information of the current node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34878,7 +35042,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output information about a node. Only the ancestor or descendant nodes at the nearest level can be queried each time.</para>
+        /// <para>Queries the input and output information of the current node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34928,7 +35092,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output information about a node. Only the ancestor or descendant nodes at the nearest level can be queried each time.</para>
+        /// <para>Queries the input and output information of the current node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34946,7 +35110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output information about a node. Only the ancestor or descendant nodes at the nearest level can be queried each time.</para>
+        /// <para>Queries the input and output information of the current node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35148,7 +35312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries nodes in a baseline.</para>
+        /// <para>Retrieves the nodes in a baseline (excluding the upstream nodes of these nodes).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35190,7 +35354,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries nodes in a baseline.</para>
+        /// <para>Retrieves the nodes in a baseline (excluding the upstream nodes of these nodes).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35232,7 +35396,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries nodes in a baseline.</para>
+        /// <para>Retrieves the nodes in a baseline (excluding the upstream nodes of these nodes).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35250,7 +35414,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries nodes in a baseline.</para>
+        /// <para>Retrieves the nodes in a baseline (excluding the upstream nodes of these nodes).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35928,7 +36092,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing members in a DataWorks workspace.</para>
+        /// <para>Queries the list of existing members in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35978,7 +36142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing members in a DataWorks workspace.</para>
+        /// <para>Queries the list of existing members in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36028,7 +36192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing members in a DataWorks workspace.</para>
+        /// <para>Queries the list of existing members in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36046,7 +36210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing members in a DataWorks workspace.</para>
+        /// <para>Queries the list of existing members in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36064,7 +36228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of roles in a DataWorks workspace.</para>
+        /// <para>Retrieves a list of all roles in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36106,7 +36270,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of roles in a DataWorks workspace.</para>
+        /// <para>Retrieves a list of all roles in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36148,7 +36312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of roles in a DataWorks workspace.</para>
+        /// <para>Retrieves a list of all roles in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36166,7 +36330,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of roles in a DataWorks workspace.</para>
+        /// <para>Retrieves a list of all roles in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36184,7 +36348,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of DataWorks workspaces of the tenant to which a user belongs.</para>
+        /// <para>Queries the list of DataWorks workspaces under the tenant to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36244,7 +36408,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of DataWorks workspaces of the tenant to which a user belongs.</para>
+        /// <para>Queries the list of DataWorks workspaces under the tenant to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36304,7 +36468,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of DataWorks workspaces of the tenant to which a user belongs.</para>
+        /// <para>Queries the list of DataWorks workspaces under the tenant to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36322,7 +36486,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of DataWorks workspaces of the tenant to which a user belongs.</para>
+        /// <para>Queries the list of DataWorks workspaces under the tenant to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37248,7 +37412,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource groups of a specific type.</para>
+        /// <para>Queries the list of resource groups of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37312,7 +37476,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource groups of a specific type.</para>
+        /// <para>Queries the list of resource groups of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37376,7 +37540,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource groups of a specific type.</para>
+        /// <para>Queries the list of resource groups of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37394,7 +37558,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource groups of a specific type.</para>
+        /// <para>Queries the list of resource groups of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37412,7 +37576,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of on-duty engineers in a shift schedule.</para>
+        /// <para>Retrieves the list of on-duty personnel for a shift schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37470,7 +37634,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of on-duty engineers in a shift schedule.</para>
+        /// <para>Retrieves the list of on-duty personnel for a shift schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37528,7 +37692,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of on-duty engineers in a shift schedule.</para>
+        /// <para>Retrieves the list of on-duty personnel for a shift schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37546,7 +37710,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of on-duty engineers in a shift schedule.</para>
+        /// <para>Retrieves the list of on-duty personnel for a shift schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37708,7 +37872,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</para>
+        /// <para>Retrieves the trend of successfully completed instance counts at different hours on the business date for periodic instances generated on that date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37750,7 +37914,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</para>
+        /// <para>Retrieves the trend of successfully completed instance counts at different hours on the business date for periodic instances generated on that date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37792,7 +37956,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</para>
+        /// <para>Retrieves the trend of successfully completed instance counts at different hours on the business date for periodic instances generated on that date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37810,7 +37974,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</para>
+        /// <para>Retrieves the trend of successfully completed instance counts at different hours on the business date for periodic instances generated on that date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38188,8 +38352,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Queries or searches for a list of events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -38262,8 +38431,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Queries or searches for a list of events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -38336,8 +38510,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Queries or searches for a list of events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -38354,8 +38533,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Queries or searches for a list of events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -38796,7 +38980,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default data category and data sensitivity level template defined by Data Security Guard.</para>
+        /// <para>Queries the default data classification template defined by Data Security Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38838,7 +39022,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default data category and data sensitivity level template defined by Data Security Guard.</para>
+        /// <para>Queries the default data classification template defined by Data Security Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38880,7 +39064,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default data category and data sensitivity level template defined by Data Security Guard.</para>
+        /// <para>Queries the default data classification template defined by Data Security Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38898,7 +39082,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default data category and data sensitivity level template defined by Data Security Guard.</para>
+        /// <para>Queries the default data classification template defined by Data Security Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39080,7 +39264,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the type of a sensitive data identification rule.</para>
+        /// <para>Queries the list of sensitive field recognition methods in Data Protection Umbrella by calling the QueryRecognizeDataByRuleType operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39126,7 +39310,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the type of a sensitive data identification rule.</para>
+        /// <para>Queries the list of sensitive field recognition methods in Data Protection Umbrella by calling the QueryRecognizeDataByRuleType operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39172,7 +39356,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the type of a sensitive data identification rule.</para>
+        /// <para>Queries the list of sensitive field recognition methods in Data Protection Umbrella by calling the QueryRecognizeDataByRuleType operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39190,7 +39374,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the type of a sensitive data identification rule.</para>
+        /// <para>Queries the list of sensitive field recognition methods in Data Protection Umbrella by calling the QueryRecognizeDataByRuleType operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39848,12 +40032,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers the lineage between self-managed entities to DataWorks.</para>
+        /// <para>Registers entity relationships. You can register custom entity relationships.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is currently in trial. Users who want to try it out can submit an application. After the administrator adds the user to the trial list, the user can call this operation.</para>
+        /// <para>This operation is currently in trial. To use this operation, submit a request. After an administrator adds you to the trial list, you can call this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39901,12 +40085,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers the lineage between self-managed entities to DataWorks.</para>
+        /// <para>Registers entity relationships. You can register custom entity relationships.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is currently in trial. Users who want to try it out can submit an application. After the administrator adds the user to the trial list, the user can call this operation.</para>
+        /// <para>This operation is currently in trial. To use this operation, submit a request. After an administrator adds you to the trial list, you can call this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39954,12 +40138,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers the lineage between self-managed entities to DataWorks.</para>
+        /// <para>Registers entity relationships. You can register custom entity relationships.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is currently in trial. Users who want to try it out can submit an application. After the administrator adds the user to the trial list, the user can call this operation.</para>
+        /// <para>This operation is currently in trial. To use this operation, submit a request. After an administrator adds you to the trial list, you can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39977,12 +40161,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers the lineage between self-managed entities to DataWorks.</para>
+        /// <para>Registers entity relationships. You can register custom entity relationships.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is currently in trial. Users who want to try it out can submit an application. After the administrator adds the user to the trial list, the user can call this operation.</para>
+        /// <para>This operation is currently in trial. To use this operation, submit a request. After an administrator adds you to the trial list, you can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40000,7 +40184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Removes tags from an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40054,7 +40238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Removes tags from an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40108,7 +40292,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Removes tags from an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40126,7 +40310,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Removes tags from an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40144,7 +40328,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a user in a DataWorks workspace.</para>
+        /// <para>Removes a user from a DataWorks role in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40194,7 +40378,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a user in a DataWorks workspace.</para>
+        /// <para>Removes a user from a DataWorks role in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40244,7 +40428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a user in a DataWorks workspace.</para>
+        /// <para>Removes a user from a DataWorks role in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40262,7 +40446,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a user in a DataWorks workspace.</para>
+        /// <para>Removes a user from a DataWorks role in a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40408,7 +40592,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40454,7 +40638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40500,7 +40684,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40518,7 +40702,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40536,7 +40720,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a table from a user.</para>
+        /// <para>Revokes table permissions from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40598,7 +40782,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a table from a user.</para>
+        /// <para>Revokes table permissions from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40660,7 +40844,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a table from a user.</para>
+        /// <para>Revokes table permissions from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40678,7 +40862,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a table from a user.</para>
+        /// <para>Revokes table permissions from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40696,12 +40880,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to backfill data.</para>
+        /// <para>Creates a data backfill workflow by calling RunCycleDagNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Backfill data</a>.</para>
+        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Data backfill</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40799,12 +40983,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to backfill data.</para>
+        /// <para>Creates a data backfill workflow by calling RunCycleDagNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Backfill data</a>.</para>
+        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Data backfill</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40902,12 +41086,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to backfill data.</para>
+        /// <para>Creates a data backfill workflow by calling RunCycleDagNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Backfill data</a>.</para>
+        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Data backfill</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40925,12 +41109,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to backfill data.</para>
+        /// <para>Creates a data backfill workflow by calling RunCycleDagNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Backfill data</a>.</para>
+        /// <para>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Data backfill</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40948,7 +41132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs nodes in a manually triggered workflow. Before you call this operation, make sure that the manually triggered workflow is committed and deployed. You can find a manually triggered workflow in Operation Center only after the manually triggered workflow is committed and deployed.</para>
+        /// <para>Triggers a manual workflow to run. The manual workflow must have been submitted and published in the environment page before it appears in the Operation Center and can be triggered by this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41030,7 +41214,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs nodes in a manually triggered workflow. Before you call this operation, make sure that the manually triggered workflow is committed and deployed. You can find a manually triggered workflow in Operation Center only after the manually triggered workflow is committed and deployed.</para>
+        /// <para>Triggers a manual workflow to run. The manual workflow must have been submitted and published in the environment page before it appears in the Operation Center and can be triggered by this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41112,7 +41296,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs nodes in a manually triggered workflow. Before you call this operation, make sure that the manually triggered workflow is committed and deployed. You can find a manually triggered workflow in Operation Center only after the manually triggered workflow is committed and deployed.</para>
+        /// <para>Triggers a manual workflow to run. The manual workflow must have been submitted and published in the environment page before it appears in the Operation Center and can be triggered by this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41130,7 +41314,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs nodes in a manually triggered workflow. Before you call this operation, make sure that the manually triggered workflow is committed and deployed. You can find a manually triggered workflow in Operation Center only after the manually triggered workflow is committed and deployed.</para>
+        /// <para>Triggers a manual workflow to run. The manual workflow must have been submitted and published in the environment page before it appears in the Operation Center and can be triggered by this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41148,7 +41332,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to perform smoke testing.</para>
+        /// <para>Creates a smoke test workflow by calling the RunSmokeTest operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41206,7 +41390,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to perform smoke testing.</para>
+        /// <para>Creates a smoke test workflow by calling the RunSmokeTest operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41264,7 +41448,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to perform smoke testing.</para>
+        /// <para>Creates a smoke test workflow by calling the RunSmokeTest operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41282,7 +41466,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow to perform smoke testing.</para>
+        /// <para>Creates a smoke test workflow by calling the RunSmokeTest operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41300,7 +41484,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a manually triggered node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41354,7 +41538,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a manually triggered node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41408,7 +41592,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a manually triggered node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41426,7 +41610,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a manually triggered node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41908,7 +42092,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a node based on the output.</para>
+        /// <para>Queries nodes by exact match based on output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41960,7 +42144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a node based on the output.</para>
+        /// <para>Queries nodes by exact match based on output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42012,7 +42196,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a node based on the output.</para>
+        /// <para>Queries nodes by exact match based on output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42036,7 +42220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a node based on the output.</para>
+        /// <para>Queries nodes by exact match based on output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42232,7 +42416,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures tags for an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Sets labels for an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42286,7 +42470,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures tags for an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Sets labels for an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42340,7 +42524,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures tags for an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Sets labels for an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42358,7 +42542,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures tags for an entity. Only entities of the maxcompute-table type are supported.</para>
+        /// <para>Sets labels for an entity. Currently, only entities of the maxcompute-table type are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43180,7 +43364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an instance.</para>
+        /// <para>Stops an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43226,7 +43410,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an instance.</para>
+        /// <para>Stops an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43272,7 +43456,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an instance.</para>
+        /// <para>Stops an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43290,7 +43474,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an instance.</para>
+        /// <para>Stops an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43616,7 +43800,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends an instance.</para>
+        /// <para>Pauses an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43662,7 +43846,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends an instance.</para>
+        /// <para>Pauses an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43708,7 +43892,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends an instance.</para>
+        /// <para>Pauses an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43726,7 +43910,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends an instance.</para>
+        /// <para>Pauses an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46252,12 +46436,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a file.</para>
+        /// <para>Updates a created file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.</para>
+        /// <para>When you debug or call this operation, the parameter values that you specify must be different from the existing file configurations of the node. For example, if a parameter of the source node is set to A, you must change the value to B before you submit the request. If you still specify A, an invalid exception is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46427,12 +46611,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a file.</para>
+        /// <para>Updates a created file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.</para>
+        /// <para>When you debug or call this operation, the parameter values that you specify must be different from the existing file configurations of the node. For example, if a parameter of the source node is set to A, you must change the value to B before you submit the request. If you still specify A, an invalid exception is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46602,12 +46786,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a file.</para>
+        /// <para>Updates a created file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.</para>
+        /// <para>When you debug or call this operation, the parameter values that you specify must be different from the existing file configurations of the node. For example, if a parameter of the source node is set to A, you must change the value to B before you submit the request. If you still specify A, an invalid exception is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46625,12 +46809,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a file.</para>
+        /// <para>Updates a created file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.</para>
+        /// <para>When you debug or call this operation, the parameter values that you specify must be different from the existing file configurations of the node. For example, if a parameter of the source node is set to A, you must change the value to B before you submit the request. If you still specify A, an invalid exception is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47072,12 +47256,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name and comment of a collection.</para>
+        /// <para>Updates the name and comment of a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Name and Comment fields can be updated.</para>
+        /// <para>Currently, only the name (Name) and comment (Comment) can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47127,12 +47311,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name and comment of a collection.</para>
+        /// <para>Updates the name and comment of a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Name and Comment fields can be updated.</para>
+        /// <para>Currently, only the name (Name) and comment (Comment) can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47182,12 +47366,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name and comment of a collection.</para>
+        /// <para>Updates the name and comment of a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Name and Comment fields can be updated.</para>
+        /// <para>Currently, only the name (Name) and comment (Comment) can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47205,12 +47389,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name and comment of a collection.</para>
+        /// <para>Updates the name and comment of a collection object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Name and Comment fields can be updated.</para>
+        /// <para>Currently, only the name (Name) and comment (Comment) can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47452,7 +47636,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the instructions on how to use a table. If no instruction on how to use the table is available, the instructions that are configured by calling this operation are added.</para>
+        /// <para>Updates the description of a table. If the data does not exist, the description is added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47500,7 +47684,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the instructions on how to use a table. If no instruction on how to use the table is available, the instructions that are configured by calling this operation are added.</para>
+        /// <para>Updates the description of a table. If the data does not exist, the description is added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47548,7 +47732,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the instructions on how to use a table. If no instruction on how to use the table is available, the instructions that are configured by calling this operation are added.</para>
+        /// <para>Updates the description of a table. If the data does not exist, the description is added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47566,7 +47750,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the instructions on how to use a table. If no instruction on how to use the table is available, the instructions that are configured by calling this operation are added.</para>
+        /// <para>Updates the description of a table. If the data does not exist, the description is added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47720,7 +47904,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Freezes or unfreezes a node.</para>
+        /// <para>Freezes or unfreezes a specified node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47770,7 +47954,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Freezes or unfreezes a node.</para>
+        /// <para>Freezes or unfreezes a specified node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47820,7 +48004,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Freezes or unfreezes a node.</para>
+        /// <para>Freezes or unfreezes a specified node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47838,7 +48022,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Freezes or unfreezes a node.</para>
+        /// <para>Freezes or unfreezes a specified node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47860,7 +48044,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a subscription.</para>
+        /// <para>Updates a subscription relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47924,7 +48108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a subscription.</para>
+        /// <para>Updates a subscription relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47988,7 +48172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a subscription.</para>
+        /// <para>Updates a subscription relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48012,7 +48196,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a subscription.</para>
+        /// <para>Updates a subscription relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48036,7 +48220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified quality rule.</para>
+        /// <para>Calls UpdateQualityRule to update the information of a quality check rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48168,7 +48352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified quality rule.</para>
+        /// <para>Calls UpdateQualityRule to update the information of a quality check rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48300,7 +48484,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified quality rule.</para>
+        /// <para>Calls UpdateQualityRule to update the information of a quality check rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48324,7 +48508,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified quality rule.</para>
+        /// <para>Calls UpdateQualityRule to update the information of a quality check rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48344,7 +48528,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom alert rule.</para>
+        /// <para>Updates a custom monitoring rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48454,7 +48638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom alert rule.</para>
+        /// <para>Updates a custom monitoring rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48564,7 +48748,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom alert rule.</para>
+        /// <para>Updates a custom monitoring rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48582,7 +48766,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom alert rule.</para>
+        /// <para>Updates a custom monitoring rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48904,7 +49088,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the fields in a MaxCompute table.</para>
+        /// <para>Updates the column information of a MaxCompute table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48958,7 +49142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the fields in a MaxCompute table.</para>
+        /// <para>Updates the column information of a MaxCompute table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49012,7 +49196,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the fields in a MaxCompute table.</para>
+        /// <para>Updates the column information of a MaxCompute table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49036,7 +49220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the fields in a MaxCompute table.</para>
+        /// <para>Updates the column information of a MaxCompute table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49208,7 +49392,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a table, such as the table folder, level, and category.</para>
+        /// <para>Modifies the topic, level, and physical category information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49266,7 +49450,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a table, such as the table folder, level, and category.</para>
+        /// <para>Modifies the topic, level, and physical category information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49324,7 +49508,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a table, such as the table folder, level, and category.</para>
+        /// <para>Modifies the topic, level, and physical category information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49342,7 +49526,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a table, such as the table folder, level, and category.</para>
+        /// <para>Modifies the topic, level, and physical category information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49496,7 +49680,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the file information about a function.</para>
+        /// <para>Updates the file information of a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49582,7 +49766,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the file information about a function.</para>
+        /// <para>Updates the file information of a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49668,7 +49852,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the file information about a function.</para>
+        /// <para>Updates the file information of a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49686,7 +49870,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the file information about a function.</para>
+        /// <para>Updates the file information of a function.</para>
         /// </summary>
         /// 
         /// <param name="request">

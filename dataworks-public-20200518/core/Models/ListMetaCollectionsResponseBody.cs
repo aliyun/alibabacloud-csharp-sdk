@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMetaCollectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMetaCollectionsResponseBodyData Data { get; set; }
         public class ListMetaCollectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The collections.</para>
+            /// <para>The array object.</para>
             /// </summary>
             [NameInMap("CollectionList")]
             [Validation(Required=false)]
             public List<Collection> CollectionList { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>37ae2053d87d380f28ce0dc0853ca51e</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E25887B7-579C-54A5-9C4F-83A0DE367DDE</para>
@@ -76,12 +76,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

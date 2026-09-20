@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateDagTestRequest : TeaModel {
         /// <summary>
         /// <para>The business date.</para>
+        /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>. Example: <c>2020-05-26 00:00:00</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

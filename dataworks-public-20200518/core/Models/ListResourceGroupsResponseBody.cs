@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListResourceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The resource groups.</para>
+        /// <para>The list of resource groups.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The category of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>default: shared resource group</description></item>
-            /// <item><description>single: exclusive resource group</description></item>
+            /// <item><description>default: public resource group.</description></item>
+            /// <item><description>single: dedicated resource group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BizExtKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.</para>
+            /// <para>The name of the cluster. This parameter is valid only for MaxCompute and PAI resource group types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AY18G</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created. Example: Jul 9, 2018 2:43:37 PM.</para>
+            /// <para>The time when the cluster was created. The format is Jul 9, 2018 2:43:37 PM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Jul 9, 2018 2:43:37 PM</para>
@@ -51,10 +51,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:</para>
+            /// <para>Indicates whether Kp (key person) access is used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.</description></item>
-            /// <item><description>false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access. The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.</description></item>
+            /// <item><description>true: The MaxCompute engine uses the Alibaba Cloud account UID as the display name of the access account.</description></item>
+            /// <item><description>false: The MaxCompute engine uses the Alibaba Cloud account name as the display name of the access account.
+            /// This parameter is meaningless for other types and is valid only for the MaxCompute engine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? EnableKp { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567</para>
@@ -99,11 +100,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The mode of the resource group. Valid values:</para>
+            /// <para>The type of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ISOLATE: exclusive resource group that adopts the subscription billing method</description></item>
-            /// <item><description>SHARE: shared resource group that adopts the pay-as-you-go billing method</description></item>
-            /// <item><description>DEVELOP: resource group for developers</description></item>
+            /// <item><description>ISOLATE: an upfront dedicated resource group.</description></item>
+            /// <item><description>SHARE: a pay-as-you-go public resource group.</description></item>
+            /// <item><description>DEVELOP: a developer edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,9 +130,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <item><description>0: DataWorks</description></item>
             /// <item><description>2: MaxCompute</description></item>
             /// <item><description>3: PAI</description></item>
-            /// <item><description>4: Data Integration</description></item>
+            /// <item><description>4: data integration</description></item>
             /// <item><description>7: scheduling</description></item>
-            /// <item><description>9: DataService Studio</description></item>
+            /// <item><description>9: dataService</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ResourceGroupType { get; set; }
 
             /// <summary>
-            /// <para>The ID of your Alibaba Cloud resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmzbn7pti3zfa</para>
@@ -152,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.</para>
+            /// <para>The sequence field. Used to sort created resource groups in ascending order by creation sequence number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -162,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The details of the resource group. The content enclosed in braces {} is the details of the resource group.</para>
+            /// <para>The detailed information of the resource group. The content displayed in {} is the detailed information of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -174,16 +175,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: NORMAL, which indicates that the resource group is running or in service.</description></item>
-            /// <item><description>1: STOP, which indicates that the resource group has expired and is frozen.</description></item>
-            /// <item><description>2: DELETED, which indicates that the resource group is released or destroyed.</description></item>
-            /// <item><description>3: CREATING, which indicates that the resource group is being created or started.</description></item>
-            /// <item><description>4: CREATE_FAILED, which indicates that the resource group fails to be created or started.</description></item>
-            /// <item><description>5: UPDATING, which indicates that the resource group is being scaled out or upgraded.</description></item>
-            /// <item><description>6: UPDATE_FAILED, which indicates that the resource group fails to be scaled out or upgraded.</description></item>
-            /// <item><description>7: DELETING, which indicates that the resource group is being released or destroyed.</description></item>
-            /// <item><description>8: DELETE_FAILED, which indicates that the resource group fails to be released or destroyed.</description></item>
-            /// <item><description>9: TIMEOUT, which indicates that the operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.</description></item>
+            /// <item><description>NORMAL(0): The resource group is running or in service.</description></item>
+            /// <item><description>STOP(1): The resource group has expired and is frozen.</description></item>
+            /// <item><description>DELETED(2): The resource group has been released or destroyed.</description></item>
+            /// <item><description>CREATING(3): The resource group is being created or started.</description></item>
+            /// <item><description>CREATE_FAILED(4): The resource group failed to be created or started.</description></item>
+            /// <item><description>UPDATING(5): The resource group is being scaled out or upgraded.</description></item>
+            /// <item><description>UPDATE_FAILED(6): The resource group failed to be scaled out or upgraded.</description></item>
+            /// <item><description>DELETING(7): The resource group is being released or destroyed.</description></item>
+            /// <item><description>DELETE_FAILED(8): The resource group failed to be released or destroyed.</description></item>
+            /// <item><description>TIMEOUT(9): The operation performed on the resource group timed out. All change operations may time out. This value is temporarily available only for DataService.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -234,6 +235,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The time when the resource group was last updated.</para>
+            /// <para>The format is <c>MMM d, yyyy h:mm:ss a</c>, for example, <c>Jul 9, 2018 2:43:37 PM</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Jul 9, 2018 2:43:37 PM</para>

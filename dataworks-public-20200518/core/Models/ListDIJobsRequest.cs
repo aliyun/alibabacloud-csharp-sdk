@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDIJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// <para>The destination data source type. If this parameter is not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DestinationDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. Fuzzy match is supported. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// <para>The task name. If this parameter is not specified, no filtering is applied. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql_to_holo_sync_8772</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The page size. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// <para>The source data source type. If this parameter is not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>

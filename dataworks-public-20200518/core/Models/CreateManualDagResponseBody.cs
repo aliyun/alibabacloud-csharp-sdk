@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateManualDagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the DAG generated when the manual workflow runs. You can use this DagId together with the relevant API to query the details and status of the internal node instances of this manual workflow run.</para>
+        /// <para>The instance ID of the dagrun for the manual business process. You can use this DagId with the corresponding operation to query the detailed information and status of the internal node instances of this manual business process execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>700000123123141</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DagId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</para>

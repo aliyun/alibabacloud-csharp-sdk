@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetMetaTableOutputRequest : TeaModel {
         /// <summary>
         /// <para>The end date.</para>
+        /// <para>The format is <c>yyyy-MM-dd</c>, for example, <c>2020-05-27</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 30. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The start date.</para>
+        /// <para>The format is <c>yyyy-MM-dd</c>, for example, <c>2020-06-27</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the metatable.</para>
+        /// <para>The unique identifier of the table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

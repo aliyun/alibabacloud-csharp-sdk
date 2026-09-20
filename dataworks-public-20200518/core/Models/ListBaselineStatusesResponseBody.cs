@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineStatusesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of baseline instances returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListBaselineStatusesResponseBodyDataBaselineStatuses> BaselineStatuses { get; set; }
             public class ListBaselineStatusesResponseBodyDataBaselineStatuses : TeaModel {
                 /// <summary>
-                /// <para>The baseline ID.</para>
+                /// <para>The ID of the baseline.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the baseline.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Baseline name</para>
+                /// <para>BaselineName</para>
                 /// </summary>
                 [NameInMap("BaselineName")]
                 [Validation(Required=false)]
                 public string BaselineName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</para>
+                /// <para>The type of the baseline. Valid values: DAILY and HOURLY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Baseline type</para>
+                /// <para>BaselineType</para>
                 /// </summary>
                 [NameInMap("BaselineType")]
                 [Validation(Required=false)]
                 public string BaselineType { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp.</para>
+                /// <para>The business date timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Bizdate { get; set; }
 
                 /// <summary>
-                /// <para>The margin of the baseline instance. Unit: seconds.</para>
+                /// <para>The buffer time of the baseline instance, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1800</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Buffer { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the predicted time when the baseline instance finished running.</para>
+                /// <para>The estimated completion time of the baseline instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -84,7 +84,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndCast { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the alerting time of the baseline instance.</para>
+                /// <para>The warning time of the baseline instance.</para>
+                /// <para>The format is a 13-digit number, such as <c>1553531400000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ExpTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the baseline instance. Valid values: UNFINISH and FINISH.</para>
+                /// <para>The completion status of the baseline instance. Valid values: UNFINISH and FINISH.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UNFINISH</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FinishStatus { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</para>
+                /// <para>The completion timestamp of the baseline instance. This parameter is returned only when FinishStatus is FINISH.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</para>
+                /// <para>The cycle number of the baseline instance. The value is 1 for daily baselines. The value ranges from 1 to 24 for hourly baselines.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? InGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</para>
+                /// <para>The Alibaba Cloud UID of the baseline owner. Separate multiple owners with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527952795****</para>
@@ -134,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the baseline. Valid values: {1,3,5,7,8}.</para>
+                /// <para>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -144,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace to which the baseline belongs.</para>
+                /// <para>The ID of the workspace where the baseline resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -154,7 +155,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the actual time when the baseline instance finished running.</para>
+                /// <para>The actual completion time of the baseline instance.</para>
+                /// <para>The format is a 13-digit number, such as <c>1553531400000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -164,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? SlaTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</para>
+                /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAFE</para>
@@ -176,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -186,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -208,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -218,7 +220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameters are invalid.</para>
@@ -228,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -238,7 +240,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -248,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.</para>
-        /// <list type="bullet">
-        /// <item><description>PROD</description></item>
-        /// <item><description>DEV</description></item>
-        /// </list>
+        /// <para>The environment in which the node runs. Valid values: DEV (development environment) and PROD (production environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,10 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform on the node. Valid values:</para>
+        /// <para>The operation to perform on the specified node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: indicates that you want to unfreeze the node.</description></item>
-        /// <item><description>2: indicates that you want to freeze the node.</description></item>
+        /// <item><description>0: unfreezes the specified node.</description></item>
+        /// <item><description>2: freezes the specified node.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListCheckProcessesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListCheckProcessesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The check details of the extension.</para>
+            /// <para>The details of the extension check processes.</para>
             /// </summary>
             [NameInMap("CheckProcesses")]
             [Validation(Required=false)]
             public List<ListCheckProcessesResponseBodyPagingInfoCheckProcesses> CheckProcesses { get; set; }
             public class ListCheckProcessesResponseBodyPagingInfoCheckProcesses : TeaModel {
                 /// <summary>
-                /// <para>Extension point event encoding.</para>
+                /// <para>The event code of the extension point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>commit-file</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string EventNameEn { get; set; }
 
                 /// <summary>
-                /// <para>DataWorks the message ID of the open message. After an extended point event is triggered, you can obtain the message ID from the received event message.</para>
+                /// <para>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>b824a5de-4223-4315-af3e-c4449d236db4</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>The operator ID.</para>
+                /// <para>The ID of the operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>297635</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the process instance.</para>
+                /// <para>The process instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rdk_generate_d395da25-b0d3-4114-b2a5-d0247444a661_none_3496903_365203</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the check object, such as the file name or node name.</para>
+                /// <para>The name of the operation object, such as the file name or node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_sql_test</para>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the extender check.</para>
+                /// <para>The check status of the extension. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CHECKING CHECKING</description></item>
-                /// <item><description>PASSED the pass check</description></item>
-                /// <item><description>BLOCKED check failed</description></item>
+                /// <item><description>CHECKING: The check is in progress.</description></item>
+                /// <item><description>PASSED: The check is passed.</description></item>
+                /// <item><description>BLOCKED: The check is not passed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries displayed on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EF****</para>

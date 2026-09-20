@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDagComplementRequest : TeaModel {
         /// <summary>
-        /// <para>An optional parameter. The start time of the task. This parameter is required for hour-level scheduled tasks.</para>
+        /// <para>Optional. The start time of the task. This parameter is required for hourly scheduled tasks.</para>
+        /// <para>Format: <c>HH:mm:ss</c>. Example: <c>00:00:00</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>
@@ -20,7 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizBeginTime { get; set; }
 
         /// <summary>
-        /// <para>An optional parameter. The end time of the task. This parameter is required for hour-level scheduled tasks.</para>
+        /// <para>Optional. The end time of the task. This parameter is required for hourly scheduled tasks.</para>
+        /// <para>Format: <c>HH:mm:ss</c>. Example: <c>23:00:00</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23:00:00</para>
@@ -30,7 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizEndTime { get; set; }
 
         /// <summary>
-        /// <para>The end business date of data backfill.</para>
+        /// <para>The end business date for the data backfill.</para>
+        /// <para>Format: <c>yyyy-MM-dd HH:mm:ss</c>. Example: <c>2020-05-21 00:00:00</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndBizDate { get; set; }
 
         /// <summary>
-        /// <para>An optional parameter. The list of node IDs to exclude from data backfill.</para>
+        /// <para>Optional. The list of node IDs to exclude from the data backfill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExcludeNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The list of node IDs to include. If you backfill data for only one node, that node must be included in includeNodeIds.</para>
+        /// <para>The list of included node IDs. If you want to backfill data for only one node, the node must be included in includeNodeIds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>A JSON string. The key is the node ID, and the value is the actual parameter value.</para>
+        /// <para>A JSON string in which the key is the node ID and the value is the actual parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{74324:&quot;key1=val1 key2=val&quot;}</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the task can be executed concurrently.</para>
+        /// <para>Specifies whether tasks can execute concurrently.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +97,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Parallelism { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace, including PROD and DEV.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROD: production environment.</description></item>
+        /// <item><description>DEV: development environment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The ID of the start node for data backfill.</para>
+        /// <para>The ID of the root node for the data backfill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +123,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? RootNodeId { get; set; }
 
         /// <summary>
-        /// <para>The start business date of data backfill.</para>
+        /// <para>The start business date for the data backfill.</para>
+        /// <para>Format: <c>yyyy-MM-dd HH:mm:ss</c>. Example: <c>2020-05-20 00:00:00</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

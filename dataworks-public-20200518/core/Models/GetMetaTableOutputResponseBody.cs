@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableOutputResponseBodyData Data { get; set; }
         public class GetMetaTableOutputResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The partitions.</para>
+            /// <para>The list of instances.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public class GetMetaTableOutputResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
                 /// <para>The end time.</para>
+                /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>, for example, <c>2020-01-01 00:01:00</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-01-01 00:01:00</para>
@@ -45,6 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The start time.</para>
+                /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>, for example, <c>2020-01-01 00:00:00</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-01-01 00:00:00</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the MaxCompute table.</para>
+                /// <para>The unique identifier of the ODPS table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? TaskInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The waiting time.</para>
+                /// <para>The task wait duration, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>323</para>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number. Valid values: 1 to 30. Default value: 1.</para>
+            /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.</para>
+        /// <para>The ID of the EMR cluster. This parameter is required for EMR scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values: odps and emr.</para>
+        /// <para>The data source type. Valid values: odps and emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</para>
+        /// <para>The direction of the lineage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>up: upstream.</description></item>
+        /// <item><description>down: downstream.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</para>
+        /// <para>The pagination logic.</para>
+        /// <para>If HasNext is set to true and NextPrimaryKey is not empty in the last response, set this parameter to the value of NextPrimaryKey in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next_primary_key</para>
