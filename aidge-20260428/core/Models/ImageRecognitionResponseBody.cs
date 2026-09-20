@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? PdNum { get; set; }
 
             /// <summary>
-            /// <para>The proportion of the product area in the image.</para>
+            /// <para>The proportion of the product in the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74.15%</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<string> RecText { get; set; }
 
             /// <summary>
-            /// <para>The proportion of the text area in the image.</para>
+            /// <para>The proportion of text in the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.52%</para>

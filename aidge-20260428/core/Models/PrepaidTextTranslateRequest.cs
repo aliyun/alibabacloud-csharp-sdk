@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The format of the translation text. html (web page format. This setting processes the source text and translated text in HTML format). text (text format. This setting processes the source text and translated text as plain text without any format processing).</para>
+        /// <para>The format of the translation text. Valid values: html (web page format. This setting processes both the source text and translated text in HTML format) and text (text format. This setting processes both the source text and translated text as plain text without any format processing).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-commerce-title</para>

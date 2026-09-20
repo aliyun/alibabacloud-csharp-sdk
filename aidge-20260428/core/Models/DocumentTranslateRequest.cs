@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The glossary ID. Specify this parameter when you need the glossary feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection.</para>
+        /// <para>The intervention glossary ID. Specify this parameter when you need the intervention feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>

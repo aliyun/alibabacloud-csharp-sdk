@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task submit result.</para>
+        /// <para>The submit status of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

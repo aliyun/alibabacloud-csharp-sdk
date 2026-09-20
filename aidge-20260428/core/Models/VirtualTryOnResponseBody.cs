@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public VirtualTryOnResponseBodyData Data { get; set; }
         public class VirtualTryOnResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Used to query the task result later.</para>
+            /// <para>The asynchronous task ID, which is used to query the task result later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxx-xxxx-xxxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to uniquely identify a single API call.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

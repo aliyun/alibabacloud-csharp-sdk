@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 /// <para>The translated text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>你好世界</para>
+                /// <para>Hello World</para>
                 /// </summary>
                 [NameInMap("TranslatedText")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information, including the number of input characters.</para>
+            /// <para>The usage information, including the input character count.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]

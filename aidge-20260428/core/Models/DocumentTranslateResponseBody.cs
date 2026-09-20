@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public DocumentTranslateResponseBodyData Data { get; set; }
         public class DocumentTranslateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</para>
+            /// <para>The unique identifier of the asynchronous task. Use this ID to query the task status and results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6071a030-5c92-9df1-96d0-44952343439a</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request identity, used for troubleshooting and Tracing Analysis.</para>
+        /// <para>The unique request identity. Use this ID for troubleshooting and Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</para>

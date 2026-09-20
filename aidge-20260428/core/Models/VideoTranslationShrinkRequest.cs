@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string CapabilitiesShrink { get; set; }
 
         /// <summary>
-        /// <para>The source language. This parameter is optional. Default value: auto (automatic detection).</para>
+        /// <para>The source language. This parameter is optional. Default value: auto, which indicates automatic detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

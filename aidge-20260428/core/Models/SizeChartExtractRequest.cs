@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SizeChartExtractRequest : TeaModel {
         /// <summary>
-        /// <para>The list of column names (such as Size, Bust, Length).</para>
+        /// <para>The list of column names (such as Size, Bust, and Length).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;Size&quot;,&quot;Bust&quot;,&quot;Length&quot;]</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The language model for output (such as en, cn). Set this parameter to cn for Chinese or en for English. If not specified, the original language is preserved.</para>
+        /// <para>The language model (such as en and cn).</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
