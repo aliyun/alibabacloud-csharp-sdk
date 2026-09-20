@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>

@@ -7269,13 +7269,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7315,13 +7315,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7361,13 +7361,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7386,13 +7386,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9182,7 +9182,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// <para>Validates the input based on the specified template version and creates an MCP in the workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9249,7 +9249,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// <para>Validates the input based on the specified template version and creates an MCP in the workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9316,7 +9316,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// <para>Validates the input based on the specified template version and creates an MCP in the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9340,7 +9340,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// <para>Validates the input based on the specified template version and creates an MCP in the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11397,6 +11397,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTag))
+            {
+                query["customTag"] = request.CustomTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -11469,6 +11473,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTag))
+            {
+                query["customTag"] = request.CustomTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -16182,7 +16190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16249,7 +16257,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16316,7 +16324,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16340,7 +16348,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="request">

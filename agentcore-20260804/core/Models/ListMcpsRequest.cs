@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMcpsRequest : TeaModel {
         /// <summary>
+        /// <para>Filters results by custom tag. The tag must be an exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>KnowledgeBase</para>
+        /// </summary>
+        [NameInMap("customTag")]
+        [Validation(Required=false)]
+        public string CustomTag { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string SearchType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the service is still bound by the official template usage constraint.</para>
+        /// <para>Specifies whether the service is still bound by the official template usage.</para>
         /// </summary>
         [NameInMap("usageActive")]
         [Validation(Required=false)]

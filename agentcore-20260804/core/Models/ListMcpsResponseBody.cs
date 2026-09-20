@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigAccessControl AccessControl { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigAccessControl : TeaModel {
                     /// <summary>
-                    /// <para>References an AgentCore Credential when mode is set to CREDENTIAL.</para>
+                    /// <para>The AgentCore Credential referenced when mode is set to CREDENTIAL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>credential-id</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>ANONYMOUS indicates anonymous access. CREDENTIAL indicates using an AgentCore access credential.</para>
+                    /// <para>ANONYMOUS indicates anonymous access. CREDENTIAL indicates using AgentCore access credentials.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CodePackageToken { get; set; }
 
                     /// <summary>
-                    /// <para>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</para>
+                    /// <para>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass in supergateway, --stdio, the full subcommand, and the remaining arguments.</para>
                     /// </summary>
                     [NameInMap("command")]
                     [Validation(Required=false)]
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         /// <para>The hook description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Record MCP tool invocations</para>
+                        /// <para>Record MCP tool calling invokes</para>
                         /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? EnableRequestMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>The log splitting begin rule for Function Compute (FC).</para>
+                    /// <para>The log segmentation begin rule for Function Compute (FC).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DefaultRegex</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Logstore { get; set; }
 
                     /// <summary>
-                    /// <para>The Simple Log Service project name.</para>
+                    /// <para>The Log Service project name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>agentcore-mcp-logs</para>
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration McpConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The MCP endpoint path. For example, /mcp or /sse.</para>
+                    /// <para>The MCP endpoint path, such as /mcp or /sse.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/mcp</para>

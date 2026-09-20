@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateMcpRequestBodyAuth Auth { get; set; }
             public class CreateMcpRequestBodyAuth : TeaModel {
                 /// <summary>
-                /// <para>The API key authentication configuration for callers of code-deployed MCP.</para>
+                /// <para>The API key authentication configuration for code-deployed MCP callers.</para>
                 /// </summary>
                 [NameInMap("codePackage")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Custom tags. Multiple tags are supported.</para>
+            /// <para>The custom tags. Multiple tags are supported.</para>
             /// </summary>
             [NameInMap("customTags")]
             [Validation(Required=false)]
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public Dictionary<string, string> Headers { get; set; }
 
                         /// <summary>
-                        /// <para>The hook timeout period. Unit: milliseconds.</para>
+                        /// <para>The timeout period. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3000</para>
@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual private cloud (VPC) ID.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-example</para>
@@ -833,7 +833,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public Dictionary<string, string> EnvironmentVariables { get; set; }
 
                     /// <summary>
-                    /// <para>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</para>
+                    /// <para>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:ram::1234567890123456:role/agentcore-mcp-execution</para>
@@ -941,7 +941,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client token that ensures idempotency of the request.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426614174000</para>

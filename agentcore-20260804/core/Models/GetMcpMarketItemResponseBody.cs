@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetMcpMarketItemResponseBodyData Data { get; set; }
         public class GetMcpMarketItemResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The category of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>knowledge</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The description of the MCP service.</para>
+            /// <para>The MCP service description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>An MCP service for querying knowledge bases</para>
@@ -47,11 +47,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display metadata of the template.</para>
+            /// <para>The template display metadata.</para>
             /// </summary>
             [NameInMap("displayMetadata")]
             [Validation(Required=false)]
             public Dictionary<string, object> DisplayMetadata { get; set; }
+
+            /// <summary>
+            /// <para>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields when the specified language is not matched.</para>
+            /// </summary>
+            [NameInMap("i18n")]
+            [Validation(Required=false)]
+            public Dictionary<string, DataI18nValue> I18n { get; set; }
 
             /// <summary>
             /// <para>The icon URL of the MCP marketplace template.</para>
@@ -94,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string McpType { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Knowledge</para>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TemplateInputSchema { get; set; }
 
             /// <summary>
-            /// <para>The version of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

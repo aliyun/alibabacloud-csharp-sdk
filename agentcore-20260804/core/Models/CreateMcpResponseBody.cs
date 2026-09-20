@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies custom authentication headers for direct proxy connections. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</para>
+            /// <para>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies custom authentication headers for direct-connect proxies. httpToMcp specifies the OpenAPI credential list for HTTP_TO_MCP.</para>
             /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
             public CreateMcpResponseBodyDataAuth Auth { get; set; }
             public class CreateMcpResponseBodyDataAuth : TeaModel {
                 /// <summary>
-                /// <para>The API key authentication configuration for callers of code-deployed MCP.</para>
+                /// <para>The API key authentication configuration for code-deployed MCP callers.</para>
                 /// </summary>
                 [NameInMap("codePackage")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Custom tags. Multiple tags are supported.</para>
+            /// <para>The custom tags. Multiple tags are supported.</para>
             /// </summary>
             [NameInMap("customTags")]
             [Validation(Required=false)]
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         /// <para>The hook description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Record MCP tool calling</para>
+                        /// <para>Record MCP tool invocations</para>
                         /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public Dictionary<string, string> Headers { get; set; }
 
                         /// <summary>
-                        /// <para>The hook timeout period. Unit: milliseconds.</para>
+                        /// <para>The timeout period. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3000</para>
@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual private cloud (VPC) ID.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-example</para>
@@ -833,7 +833,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public Dictionary<string, string> EnvironmentVariables { get; set; }
 
                     /// <summary>
-                    /// <para>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</para>
+                    /// <para>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:ram::1234567890123456:role/agentcore-mcp-execution</para>

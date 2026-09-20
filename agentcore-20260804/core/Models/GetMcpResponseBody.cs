@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The custom tags. Multiple values are supported.</para>
+            /// <para>The custom tags. Multiple tags are supported.</para>
             /// </summary>
             [NameInMap("customTags")]
             [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</para>
+                    /// <para>ANONYMOUS indicates anonymous access. CREDENTIAL indicates that AgentCore access credentials are used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CodePackageToken { get; set; }
 
                     /// <summary>
-                    /// <para>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</para>
+                    /// <para>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</para>
                     /// </summary>
                     [NameInMap("command")]
                     [Validation(Required=false)]
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         /// <para>The hook description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Log MCP tool calling invokes</para>
+                        /// <para>Log MCP tool invocations</para>
                         /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public Dictionary<string, string> Headers { get; set; }
 
                         /// <summary>
-                        /// <para>The timeout period, in milliseconds.</para>
+                        /// <para>The timeout period. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3000</para>
@@ -478,21 +478,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigLogConfiguration LogConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigLogConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether instance metrics are collected.</para>
+                    /// <para>Indicates whether instance metrics collection is enabled.</para>
                     /// </summary>
                     [NameInMap("enableInstanceMetrics")]
                     [Validation(Required=false)]
                     public bool? EnableInstanceMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether request metrics are collected.</para>
+                    /// <para>Indicates whether request metrics collection is enabled.</para>
                     /// </summary>
                     [NameInMap("enableRequestMetrics")]
                     [Validation(Required=false)]
                     public bool? EnableRequestMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>The log splitting begin rule for Function Compute (FC).</para>
+                    /// <para>The log segmentation begin rule for Function Compute (FC).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DefaultRegex</para>
@@ -531,7 +531,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigMcpConfiguration McpConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigMcpConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The MCP endpoint path, such as /mcp or /sse.</para>
+                    /// <para>The MCP endpoint path. For example, /mcp or /sse.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/mcp</para>
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionConcurrencyPerInstance { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout period, in seconds. Default value: 1800.</para>
+                    /// <para>The session idle timeout period. Unit: seconds. Default value: 1800.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1800</para>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionIdleTimeoutSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum session lifetime, in seconds. Default value: 21600.</para>
+                    /// <para>The maximum session lifetime. Unit: seconds. Default value: 21600.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>21600</para>
@@ -818,7 +818,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public double? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary disk size. Unit: MB. Valid values: 512 and 10240.</para>
+                    /// <para>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -835,7 +835,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public Dictionary<string, string> EnvironmentVariables { get; set; }
 
                     /// <summary>
-                    /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
+                    /// <para>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:ram::1234567890123456:role/agentcore-mcp-execution</para>
@@ -845,7 +845,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ExecutionRoleArn { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of concurrent requests per instance. Default value: 200.</para>
+                    /// <para>The number of concurrent requests per instance. Default value: 200.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -919,14 +919,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// <para>The marketplace source template of the MCP.</para>
+            /// <para>The marketplace source template for the MCP.</para>
             /// </summary>
             [NameInMap("marketSource")]
             [Validation(Required=false)]
             public GetMcpResponseBodyDataMarketSource MarketSource { get; set; }
             public class GetMcpResponseBodyDataMarketSource : TeaModel {
                 /// <summary>
-                /// <para>The MCP marketplace template ID.</para>
+                /// <para>The marketplace template ID for the MCP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>market-1</para>
@@ -948,7 +948,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string McpServerConfig { get; set; }
 
             /// <summary>
-            /// <para>The MCP service ID.</para>
+            /// <para>The MCP server ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-1234567890abcdef</para>
@@ -1065,7 +1065,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TemplateInputSchema { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether an updated template version is available.</para>
+                /// <para>Indicates whether a template version update is available.</para>
                 /// </summary>
                 [NameInMap("updateAvailable")]
                 [Validation(Required=false)]
@@ -1084,7 +1084,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The last updated time of the MCP, in ISO 8601 UTC format.</para>
+            /// <para>The last updated time of the MCP in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-23T01:00:00Z</para>
@@ -1126,7 +1126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Request processing succeeded</para>
+        /// <para>Request processed successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
