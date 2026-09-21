@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Only subscription is supported.</para>
+        /// <para>The billing method. Only subscription is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue retrieving results.</para>
+        /// <para>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can include the returned NextToken in the next request to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): generates an order without charging the account.</description></item>
+        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): Only an order is generated. No payment is made.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the CloudPhone console to complete the payment.</para>
+        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the Elastic Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
+        /// <item><description><b>false</b> (default): Auto-renewal is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides. Currently, only cn-hangzhou is supported.</para>
+        /// <para>The region where the instance resides. Currently, only cn-hangzhou is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -156,6 +156,35 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateMobileAgentPackageRequestTag> Tag { get; set; }
+        public class CreateMobileAgentPackageRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. This parameter cannot be empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

@@ -106,6 +106,35 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PeriodStartTime { get; set; }
 
             /// <summary>
+            /// <para>The labels.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeMobileAgentPackageResponseBodyPackageListTags> Tags { get; set; }
+            public class DescribeMobileAgentPackageResponseBodyPackageListTags : TeaModel {
+                /// <summary>
+                /// <para>The label key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The label value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The number of credits that have been used.</para>
             /// 
             /// <b>Example:</b>

@@ -3935,12 +3935,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a resource plan.</para>
+        /// <para>Purchases a resource plan by placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
+        /// <para>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4017,6 +4017,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PromotionId"] = request.PromotionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4038,12 +4042,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a resource plan.</para>
+        /// <para>Purchases a resource plan by placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
+        /// <para>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4120,6 +4124,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PromotionId"] = request.PromotionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4141,12 +4149,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a resource plan.</para>
+        /// <para>Purchases a resource plan by placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
+        /// <para>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4164,12 +4172,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a resource plan.</para>
+        /// <para>Purchases a resource plan by placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
+        /// <para>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5283,7 +5291,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch of backup files.</para>
+        /// <para>Deletes backup files in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,7 +5333,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch of backup files.</para>
+        /// <para>Deletes backup files in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5367,7 +5375,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch of backup files.</para>
+        /// <para>Deletes backup files in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5385,7 +5393,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch of backup files.</para>
+        /// <para>Deletes backup files in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7576,7 +7584,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a cloud phone matrix.
-        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7667,7 +7675,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a cloud phone matrix.
-        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7758,7 +7766,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a cloud phone matrix.
-        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7777,7 +7785,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a cloud phone matrix.
-        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12649,10 +12657,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You can import a custom image to develop custom features or services.</description></item>
-        /// <item><description>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</description></item>
-        /// <item><description>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
-        /// <item><description>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</description></item>
+        /// <item><description>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</description></item>
+        /// <item><description>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</description></item>
+        /// <item><description>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
+        /// <item><description>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12670,6 +12678,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseImageId))
+            {
+                query["BaseImageId"] = request.BaseImageId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageDescription))
             {
                 query["ImageDescription"] = request.ImageDescription;
@@ -12709,10 +12721,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You can import a custom image to develop custom features or services.</description></item>
-        /// <item><description>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</description></item>
-        /// <item><description>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
-        /// <item><description>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</description></item>
+        /// <item><description>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</description></item>
+        /// <item><description>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</description></item>
+        /// <item><description>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
+        /// <item><description>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12730,6 +12742,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseImageId))
+            {
+                query["BaseImageId"] = request.BaseImageId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageDescription))
             {
                 query["ImageDescription"] = request.ImageDescription;
@@ -12769,10 +12785,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You can import a custom image to develop custom features or services.</description></item>
-        /// <item><description>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</description></item>
-        /// <item><description>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
-        /// <item><description>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</description></item>
+        /// <item><description>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</description></item>
+        /// <item><description>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</description></item>
+        /// <item><description>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
+        /// <item><description>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12797,10 +12813,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You can import a custom image to develop custom features or services.</description></item>
-        /// <item><description>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</description></item>
-        /// <item><description>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
-        /// <item><description>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</description></item>
+        /// <item><description>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</description></item>
+        /// <item><description>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</description></item>
+        /// <item><description>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</description></item>
+        /// <item><description>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -20347,6 +20363,154 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the system cloud disk image of a normal matrix node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPhoneNodeSystemImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPhoneNodeSystemImageResponse
+        /// </returns>
+        public UpdateCloudPhoneNodeSystemImageResponse UpdateCloudPhoneNodeSystemImageWithOptions(UpdateCloudPhoneNodeSystemImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIds))
+            {
+                query["NodeIds"] = request.NodeIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCloudPhoneNodeSystemImage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCloudPhoneNodeSystemImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the system cloud disk image of a normal matrix node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPhoneNodeSystemImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPhoneNodeSystemImageResponse
+        /// </returns>
+        public async Task<UpdateCloudPhoneNodeSystemImageResponse> UpdateCloudPhoneNodeSystemImageWithOptionsAsync(UpdateCloudPhoneNodeSystemImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIds))
+            {
+                query["NodeIds"] = request.NodeIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCloudPhoneNodeSystemImage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCloudPhoneNodeSystemImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the system cloud disk image of a normal matrix node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPhoneNodeSystemImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPhoneNodeSystemImageResponse
+        /// </returns>
+        public UpdateCloudPhoneNodeSystemImageResponse UpdateCloudPhoneNodeSystemImage(UpdateCloudPhoneNodeSystemImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCloudPhoneNodeSystemImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the system cloud disk image of a normal matrix node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPhoneNodeSystemImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPhoneNodeSystemImageResponse
+        /// </returns>
+        public async Task<UpdateCloudPhoneNodeSystemImageResponse> UpdateCloudPhoneNodeSystemImageAsync(UpdateCloudPhoneNodeSystemImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCloudPhoneNodeSystemImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -8,26 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class ImportImageResponseBody : TeaModel {
+    public class UpdateCloudPhoneNodeSystemImageRequest : TeaModel {
         /// <summary>
-        /// <para>ImageId</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>imgc-06zyt9m93zwax****</para>
+        /// <para>imgc-075cllfeuazh0****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
+        /// <para>The list of cloud phone normal matrix IDs.</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("NodeIds")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> NodeIds { get; set; }
 
     }
 

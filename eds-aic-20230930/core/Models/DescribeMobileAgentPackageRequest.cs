@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The list of package IDs.</para>
+        /// <para>The list of packages.</para>
         /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]

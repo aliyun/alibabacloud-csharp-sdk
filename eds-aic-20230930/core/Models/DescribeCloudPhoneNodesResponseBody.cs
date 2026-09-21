@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Valid values:</para>
+        /// <para>Indicates whether a next query token exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no more results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> has a value, the value indicates the token from which the next query starts.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeCloudPhoneNodesResponseBodyNodeModel> NodeModel { get; set; }
         public class DescribeCloudPhoneNodesResponseBodyNodeModel : TeaModel {
             /// <summary>
-            /// <para>The bandwidth plan ID.</para>
+            /// <para>The ID of the bandwidth plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbwp-7xvrl7axet2qg6yia******</para>
@@ -51,12 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the bandwidth plan. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: initializing</description></item>
-            /// <item><description>1: normal</description></item>
-            /// <item><description>2: deleted</description></item>
-            /// </list>
+            /// <para>The status of the bandwidth plan. Valid values: 0: initializing. 1: normal. 2: deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +104,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The billing type.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -149,7 +144,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtExpired { get; set; }
 
             /// <summary>
-            /// <para>The time when the matrix was last modified.</para>
+            /// <para>The most recent modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-13 02:03:14</para>
@@ -282,7 +277,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PackageId { get; set; }
 
             /// <summary>
-            /// <para>The number of instances provisioned under the cloud phone matrix.</para>
+            /// <para>The number of instances under the cloud phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
