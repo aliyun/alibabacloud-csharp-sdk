@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgenticDBBranchSpecShrink { get; set; }
 
         /// <summary>
+        /// <para>The AgenticDB cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pagc-xxx</para>
+        /// </summary>
+        [NameInMap("AgenticDBClusterId")]
+        [Validation(Required=false)]
+        public string AgenticDBClusterId { get; set; }
+
+        /// <summary>
         /// <para>The application type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>supabase: Set this value to create a managed Supabase application.</description></item>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthProviderConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</para>
+        /// <para>Specifies whether to automatically create an elastic IP address (EIP) and associate it with the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-max</para>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoAllocatePublicEip { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic creation of a cold storage Polarlakebase instance. Valid values:</para>
+        /// <para>Specifies whether to enable automatic creation of a cold storage Polarlakebase. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false (default): Automatic creation is disabled.</description></item>
         /// <item><description>true: Automatic creation is enabled.</description></item>
@@ -162,7 +172,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DnatEntriesShrink { get; set; }
 
         /// <summary>
-        /// <para>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</para>
+        /// <para>The DNAT-dedicated NAT IP address allocated by the customer, which must be separate from the SNAT IP address. The IP address must belong to the specified gateway and be in an available state. The vSwitch where the gateway resides must be in a primary CIDR block reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: The customer has bound an SNAT entry to the vSwitch where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.64.0.10</para>
@@ -235,7 +245,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>bailian: Alibaba Cloud Model Studio model.</description></item>
+        /// <item><description>bailian: Bailian model.</description></item>
         /// <item><description>custom: Custom model.</description></item>
         /// <item><description>maas: PolarDB model operator.</description></item>
         /// </list>
@@ -350,7 +360,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityIPArrayName { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist. If you do not specify this parameter, the default value is <c>127.0.0.1</c>.</para>
+        /// <para>The IP whitelist. If you do not specify this parameter, the default value <c>127.0.0.1</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1,172.17.0.0/24</para>
@@ -459,7 +469,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</para>
+        /// <para>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in active status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-xxx</para>

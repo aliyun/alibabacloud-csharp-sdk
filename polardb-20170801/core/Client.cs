@@ -7457,7 +7457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application associated with a PolarDB instance.</para>
+        /// <para>Creates an application that is associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7515,6 +7515,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBBranchSpecShrink))
             {
                 query["AgenticDBBranchSpec"] = request.AgenticDBBranchSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBClusterId))
+            {
+                query["AgenticDBClusterId"] = request.AgenticDBClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -7705,7 +7709,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application associated with a PolarDB instance.</para>
+        /// <para>Creates an application that is associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7763,6 +7767,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBBranchSpecShrink))
             {
                 query["AgenticDBBranchSpec"] = request.AgenticDBBranchSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBClusterId))
+            {
+                query["AgenticDBClusterId"] = request.AgenticDBClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -7953,7 +7961,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application associated with a PolarDB instance.</para>
+        /// <para>Creates an application that is associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7971,7 +7979,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application associated with a PolarDB instance.</para>
+        /// <para>Creates an application that is associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
