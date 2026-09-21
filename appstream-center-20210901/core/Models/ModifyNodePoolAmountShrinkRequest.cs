@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAmountShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID.</para>
+        /// <para>The ID of the delivery group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyBrowserInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to send notification emails for authorization and deauthorization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("AuthNotificationEnabled")]
+        [Validation(Required=false)]
+        public bool? AuthNotificationEnabled { get; set; }
+
+        /// <summary>
         /// <para>The browser configuration.</para>
         /// </summary>
         [NameInMap("BrowserConfig")]

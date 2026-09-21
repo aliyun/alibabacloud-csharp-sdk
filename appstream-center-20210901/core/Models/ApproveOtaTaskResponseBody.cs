@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned when <c>Code</c> is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if <c>Code</c> is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The task is running and cannot be sumitted.</para>

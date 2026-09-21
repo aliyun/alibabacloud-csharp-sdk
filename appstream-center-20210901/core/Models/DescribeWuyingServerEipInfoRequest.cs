@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The Internet service operation provider. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>ChinaMobile: Shift.</description></item>
+        /// <item><description>ChinaMobile: China Shift.</description></item>
         /// <item><description>ChinaTelecom: China Telecom.</description></item>
         /// <item><description>ChinaUnicom: China Unicom.</description></item>
         /// </list>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace ID. You can obtain this ID from the WuyingServerIdList returned by CreateWuyingServer after creating a workspace, or query the ID of an existing workspace by calling ListWuyingServer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

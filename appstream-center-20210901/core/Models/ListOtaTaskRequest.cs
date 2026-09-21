@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListOtaTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID.</para>
+        /// <para>The delivery group ID. You can call ListAppInstanceGroup to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

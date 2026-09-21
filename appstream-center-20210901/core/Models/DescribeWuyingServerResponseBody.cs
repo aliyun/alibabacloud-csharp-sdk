@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the development workstation.</para>
+        /// <para>The details of the development host.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeWuyingServerResponseBodyData Data { get; set; }
         public class DescribeWuyingServerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The bandwidth. Unit: Mbit/s.</para>
+            /// <para>The bandwidth size, in Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the workstation was created.</para>
+            /// <para>The creation time, in US English date and time format with a 12-hour clock.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026-01-01T00:00:00Z</para>
+            /// <para>Sep 2, 2026 1:46:41 PM</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of private IP addresses per ENI, including the primary IP address.</para>
+            /// <para>The maximum number of private IP addresses per NIC, including the primary IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? EniPrivateIpAddressQuantity { get; set; }
 
             /// <summary>
-            /// <para>The time when the workstation expires.</para>
+            /// <para>The expiration time, in US English date and time format with a 12-hour clock.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2027-01-01T00:00:00Z</para>
+            /// <para>Oct 3, 2026 12:00:00 AM</para>
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default Workspace.</para>
+            /// <para>Default Workspace</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The status of the development workstation.</para>
+            /// <para>The status of the development host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -188,6 +188,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>Whether ASP streaming connection is supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("SupportASP")]
+            [Validation(Required=false)]
+            public bool? SupportASP { get; set; }
 
             /// <summary>
             /// <para>The type of the system cloud disk.</para>
@@ -200,7 +210,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The size of the system cloud disk. Unit: GB.</para>
+            /// <para>The size of the system cloud disk, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -210,7 +220,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the development workstation.</para>
+            /// <para>The ID of the development host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-bp1234567890abcde</para>
@@ -220,7 +230,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string WuyingServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the development workstation.</para>
+            /// <para>The name of the development host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-dev-server</para>

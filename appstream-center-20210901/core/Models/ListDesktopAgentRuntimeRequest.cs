@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ENTERPRISE</para>
+        /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
         /// </summary>
         [NameInMap("AgentPlatform")]
         [Validation(Required=false)]
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The list of agent platforms. If AgentPlatform is also specified, AgentPlatform takes precedence and this list is ignored.</para>
+        /// <para>The list of agent platforms. If both AgentPlatformList and AgentPlatform are specified, AgentPlatform takes precedence and this list is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The agent provider name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OpenClaw</para>
+        /// <para>AgenticComputer</para>
         /// </summary>
         [NameInMap("AgentProvider")]
         [Validation(Required=false)]
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The list of agent providers. If AgentProvider is also specified, AgentProvider takes precedence and this list is ignored.</para>
+        /// <para>The list of agent providers. If both AgentProviderList and AgentProvider are specified, AgentProvider takes precedence and this list is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenClaw</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopStatuses { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an authorized user exists for authorization.</para>
+        /// <para>Indicates whether authorization is granted to an authorized user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -180,8 +180,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasAuthUser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a risk exists. This parameter is used to filter Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</para>
-        /// <para>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If you do not specify this parameter, no filtering is applied.</para>
+        /// <para>Specifies whether risks exist. This parameter is used to filter Cloud Desktops with or without risks. It takes effect only when IncludeRiskInfo is set to true.</para>
+        /// <para>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If this parameter is not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasRisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</para>
+        /// <para>Specifies whether to query and return risk information. Default value: false. If this parameter is set to true, the RiskInfo field is included in the response, and the HasRisk filter takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Starts from 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

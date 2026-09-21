@@ -41,21 +41,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public List<GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList> LlmInfoList { get; set; }
                 public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The credit consumption multiplier. An empty value indicates the model does not participate in credit-based billing.</para>
+                    /// <para>The credit consumption multiplier. A null value indicates that the model does not participate in credit-based billing.</para>
                     /// </summary>
                     [NameInMap("CreditMultiplier")]
                     [Validation(Required=false)]
                     public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier CreditMultiplier { get; set; }
                     public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier : TeaModel {
                         /// <summary>
-                        /// <para>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</para>
+                        /// <para>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with a null Max is displayed as 1x and above.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3</para>
                         /// </summary>
                         [NameInMap("Max")]
                         [Validation(Required=false)]
                         public float? Max { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</para>
+                        /// <para>The minimum multiplier. When equal to Max, the multiplier is fixed. For example, Min=Max=2 is displayed as 2x.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2</para>
                         /// </summary>
                         [NameInMap("Min")]
                         [Validation(Required=false)]
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <para>The model description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强</para>
+                    /// <para>The Qwen3.6 native vision-language series Plus model demonstrates outstanding performance comparable to current top frontier models, with significant improvements over the 3.5 series. The model features significantly enhanced capabilities in agentic coding, frontend programming, vibe coding, multimodal universal recognition, OCR, and object localization</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The model template association type (returned only when present).</para>
+            /// <para>The model template association type (only when present).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runtime</para>

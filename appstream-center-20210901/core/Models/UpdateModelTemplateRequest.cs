@@ -15,12 +15,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <item><description><para><b>OpenClaw / AgenticComputer scenarios:</b>
         /// Set the default model by using the <c>defaults.model.primary</c> field in the format of <c>provider name/model code</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>HermesAgent scenarios:</b>
+        /// <item><description><para><b>HermesAgent scenario:</b>
         /// Specify the provider name by using <c>model.provider</c> and the model code by using <c>model.default</c>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Note:</para>
+        /// <para>:</para>
         /// <list type="bullet">
         /// <item><description>When you modify the default model, the system verifies whether the specified provider and model code already exist in the model group.</description></item>
         /// </list>
@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The authorization scope. This parameter is optional and can be modified only for Common model groups. Valid values: ALL_USER and USER_MIXED.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALL_USER</para>
         /// </summary>
         [NameInMap("RefScope")]
         [Validation(Required=false)]

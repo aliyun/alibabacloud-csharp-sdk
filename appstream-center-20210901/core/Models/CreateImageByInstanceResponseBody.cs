@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The task ID for creating the image.</para>
+            /// <para>The ID of the image creation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tid-0abxi0lbih******</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary by resource specification. The valid values for each resource specification are as follows:</para>
+            /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected at the same time, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
             /// <list type="bullet">
             /// <item><description>appstreaming.general.2c4g: 1</description></item>
             /// <item><description>appstreaming.general.4c8g: 1 to 2</description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The resource specification name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>WUYING-General-purpose_4vCPU8GB.</para>
+            /// <para>WUYING-General-purpose_4vCPU8GB</para>
             /// </summary>
             [NameInMap("NodeTypeName")]
             [Validation(Required=false)]

@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public class ListDesktopAgentRuntimeResponseBodyDataAgentImInfo : TeaModel {
                 /// <summary>
                 /// <para>The agent IM online status (Online/Offline). Default value: Offline.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Online</para>
                 /// </summary>
                 [NameInMap("AgentImOnlineStatus")]
                 [Validation(Required=false)]
@@ -80,21 +83,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AgentInstanceVersion { get; set; }
 
                 /// <summary>
-                /// <para>The agent platform (enum name, such as ENTERPRISE, JVS, or ENTERPRISE_JVS).</para>
+                /// <para>The agent platform.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
                 /// </summary>
                 [NameInMap("AgentPlatform")]
                 [Validation(Required=false)]
                 public string AgentPlatform { get; set; }
 
                 /// <summary>
-                /// <para>The agent provider (enum name, such as OPEN_CLAW or HERMES_AGENT).</para>
+                /// <para>The agent provider.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AgenticComputer</para>
                 /// </summary>
                 [NameInMap("AgentProvider")]
                 [Validation(Required=false)]
                 public string AgentProvider { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a third-party channel has been configured for the agent instance.</para>
+                /// <para>Indicates whether the agent instance has a third-party channel configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -121,7 +130,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DeploymentSource { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a model has been configured for the agent instance.</para>
+                /// <para>Indicates whether the agent instance has a model configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -150,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<string> AuthUsers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a third-party channel has been configured for the agent runtime.</para>
+            /// <para>Indicates whether a third-party channel is configured for the agent runtime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -207,14 +216,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? HasAuthUser { get; set; }
 
             /// <summary>
-            /// <para>The management status list, parsed from the managementStatus composite value.</para>
+            /// <para>The management status list, parsed from the managementStatus combined value.</para>
             /// </summary>
             [NameInMap("ManagementStatuses")]
             [Validation(Required=false)]
             public List<string> ManagementStatuses { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a model has been configured for the agent runtime.</para>
+            /// <para>Indicates whether a model is configured for the agent runtime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -271,7 +280,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region location (the Chinese mainland or outside China).</para>
+            /// <para>The region location (the Chinese mainland or outside the Chinese mainland).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mainland</para>
@@ -337,7 +346,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? AgentUninstalled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the third-party channel configuration has been modified (inconsistent with the administrator-distributed configuration).</para>
+                /// <para>Indicates whether the third-party channel configuration has been modified (inconsistent with the configuration distributed by the administrator).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -347,7 +356,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? ChannelModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model configuration has been modified (inconsistent with the administrator-distributed configuration).</para>
+                /// <para>Indicates whether the model configuration has been modified (inconsistent with the configuration distributed by the administrator).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

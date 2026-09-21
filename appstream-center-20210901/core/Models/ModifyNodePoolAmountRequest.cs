@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAmountRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID.</para>
+        /// <para>The ID of the delivery group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +30,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class ModifyNodePoolAmountRequestNodePool : TeaModel {
             /// <summary>
             /// <para>The total number of subscription nodes after the upgrade.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>This value must be greater than the current number of purchased nodes (Amount) in the delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</description></item>
+            /// </list>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The subscription node modification mode.</para>
+            /// <para>The modification mode for subscription nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXPAND_FROM_POST_PAID_EXPLICIT</para>

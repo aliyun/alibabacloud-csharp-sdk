@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelProviderTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform.</para>
+        /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The Agent provider name.</para>
+        /// <para>The name of the agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The business type.</para>
+        /// <para>The business type. Not all business types are supported. Only business types within the supported range are valid. Refer to the listed enumeration values.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

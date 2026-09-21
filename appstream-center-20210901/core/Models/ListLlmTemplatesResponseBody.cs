@@ -43,21 +43,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The credit consumption multiplier (rate). A null value indicates that the model does not participate in credit-based billing.</para>
+            /// <para>The credit consumption multiplier (rate). An empty value indicates that the model does not participate in credit-based billing.</para>
             /// </summary>
             [NameInMap("CreditMultiplier")]
             [Validation(Required=false)]
             public ListLlmTemplatesResponseBodyDataCreditMultiplier CreditMultiplier { get; set; }
             public class ListLlmTemplatesResponseBodyDataCreditMultiplier : TeaModel {
                 /// <summary>
-                /// <para>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with Max as null is displayed as 1x and above.</para>
+                /// <para>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
                 public float? Max { get; set; }
 
                 /// <summary>
-                /// <para>The minimum multiplier. When equal to Max, it represents a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</para>
+                /// <para>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Min")]
                 [Validation(Required=false)]
@@ -136,7 +142,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LlmTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The model information, including context window size and maximum input/output tokens.</para>
+            /// <para>The model information, such as context window size and maximum input/output tokens.</para>
             /// </summary>
             [NameInMap("ModelInfo")]
             [Validation(Required=false)]
@@ -153,14 +159,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of price information.</para>
+            /// <para>The list of pricing information.</para>
             /// </summary>
             [NameInMap("Prices")]
             [Validation(Required=false)]
             public List<ListLlmTemplatesResponseBodyDataPrices> Prices { get; set; }
             public class ListLlmTemplatesResponseBodyDataPrices : TeaModel {
                 /// <summary>
-                /// <para>The list of prices within the range.</para>
+                /// <para>The list of prices within this range.</para>
                 /// </summary>
                 [NameInMap("Prices")]
                 [Validation(Required=false)]
@@ -168,6 +174,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public class ListLlmTemplatesResponseBodyDataPricesPrices : TeaModel {
                     /// <summary>
                     /// <para>The price in string format, such as 0.2.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20</para>
                     /// </summary>
                     [NameInMap("Price")]
                     [Validation(Required=false)]
@@ -175,6 +184,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The price name, such as Input, Output, or Image Generation.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Input</para>
                     /// </summary>
                     [NameInMap("PriceName")]
                     [Validation(Required=false)]
@@ -182,6 +194,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The price unit, such as per image or per thousand tokens.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>per million tokens</para>
                     /// </summary>
                     [NameInMap("PriceUnit")]
                     [Validation(Required=false)]
@@ -191,6 +206,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The range name, such as Default or 0-1M tokens.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Default</para>
                 /// </summary>
                 [NameInMap("RangeName")]
                 [Validation(Required=false)]
@@ -210,20 +228,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The publish time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-03-04T06:25:17.000+00:00</para>
             /// </summary>
             [NameInMap("PublishedTime")]
             [Validation(Required=false)]
             public string PublishedTime { get; set; }
 
             /// <summary>
-            /// <para>The authorization scope of the associated model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), RESOURCE_MIXED (specified resources). Returned only when SmartModel is set to true.</para>
+            /// <para>The authorization scope of the model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), and RESOURCE_MIXED (specified resources). Returned only when SmartModel is true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL_USER</para>
             /// </summary>
             [NameInMap("RefScope")]
             [Validation(Required=false)]
             public string RefScope { get; set; }
 
             /// <summary>
-            /// <para>The number of route policies configured under this model tier. Returned only when SmartModel is set to true. Returns 0 for tiers without configured policies.</para>
+            /// <para>The number of routing policies configured under this model tier. Returned only when SmartModel is true. Returns 0 for tiers with no configured policies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RoutePolicyCount")]
             [Validation(Required=false)]
@@ -232,7 +259,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The current page number of the query results.</para>
+        /// <para>The page number of the current query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

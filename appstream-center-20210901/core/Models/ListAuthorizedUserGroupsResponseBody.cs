@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -67,6 +67,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the delivery group set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>set-3jm9d0abc00example</para>
+            /// </summary>
+            [NameInMap("AppInstanceGroupSetId")]
+            [Validation(Required=false)]
+            public string AppInstanceGroupSetId { get; set; }
+
+            /// <summary>
             /// <para>The authorization mode.</para>
             /// 
             /// <b>Example:</b>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用户组001</para>
+            /// <para>UserGroup001</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]

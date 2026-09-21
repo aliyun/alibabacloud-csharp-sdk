@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The name of the delivery group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>办公应用</para>
+        /// <para>OfficeApp</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the delivery group. For information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+        /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodePoolShrink { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the resource when <c>ChargeType</c> is set to <c>PrePaid</c>. This parameter is required. The unit is specified by <c>PeriodUnit</c>.</para>
+        /// <para>The duration for which you want to purchase resources when <c>ChargeType</c> is set to <c>PrePaid</c>. This parameter is required in this case. The unit is specified by <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Week</c>, valid values:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Week</c>, valid values of this parameter:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values of this parameter:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <item><description>6</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values of this parameter:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to 1.</para>
+        /// <para>When <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to the fixed value 1.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -182,11 +182,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The unit of the subscription duration when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
         /// <remarks>
-        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is not.
-        /// If the request parameters do not match the valid combinations, such as <c>2 Week</c>, the API call succeeds but an error occurs during the order placement.</para>
+        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is invalid.
+        /// In addition, if the request parameters do not match the valid combinations, such as <c>2 Week</c>, the API call succeeds but an error occurs during the order placement phase.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>If <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to <c>Month</c>.</para>
+        /// <para>When <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to the fixed value <c>Month</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The pre-opened AppId.</para>
+        /// <para>The pre-opened application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cag-b2ronxxd****</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The application recycling time, in minutes. After an end user disconnects from the cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <c>-1</c> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <c>15</c>.</para>
+        /// <para>The application recycling time, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <c>-1</c> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <c>15</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -288,14 +288,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The user information to be added to the delivery group as assigned users. This field is required if the <c>Users</c> parameter is specified.</para>
+        /// <para>The information about the users to be added as assigned users of the delivery group. This parameter is required if the <c>Users</c> parameter is specified.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public string UserInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames to be added to the delivery group as assigned users.</para>
+        /// <para>The list of usernames to be added as assigned users of the delivery group.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

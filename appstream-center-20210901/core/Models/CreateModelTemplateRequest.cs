@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The description of the model group.</para>
+        /// <para>The template group description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test model group</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the model group.</para>
+        /// <para>The template group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The authorization scope. This parameter is optional and effective only for Common model groups. Valid values: ALL_USER and USER_MIXED (strictly uppercase). If not specified, the default value is USER_MIXED for Common groups. Non-Common groups ignore this parameter and use RESOURCE_MIXED.</para>
+        /// <para>The authorization scope. This parameter is optional and effective only for Common model groups. Valid values: ALL_USER and USER_MIXED (strictly uppercase). If not specified, Common model groups default to USER_MIXED. Non-Common groups ignore this parameter and use RESOURCE_MIXED.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALL_USER</para>
         /// </summary>
         [NameInMap("RefScope")]
         [Validation(Required=false)]

@@ -51,6 +51,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The workstation ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The workstation must have a completed order payment (AutoPay=true during creation or manually paid through the console payment page) before it can be renewed. Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>

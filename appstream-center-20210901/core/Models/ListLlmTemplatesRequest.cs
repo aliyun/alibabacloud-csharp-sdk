@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
     public class ListLlmTemplatesRequest : TeaModel {
         /// <summary>
         /// <para>The business type. This parameter is required when SmartModel is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The model code filter. Fuzzy match is supported.</para>
+        /// <para>The model code used for filtering. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3.6-plus</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number. Pages start from page 1. Both 0 and 1 return the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +77,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProviderTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query smart models. If set to true, only LLMs under system preset smart models are returned, and BizType is required. Default value: false.</para>
+        /// <para>Specifies whether to query smart models. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</description></item>
+        /// <item><description>false: Smart model filtering is not applied.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

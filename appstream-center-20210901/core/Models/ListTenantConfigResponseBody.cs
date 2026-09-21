@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? AppInstanceGroupExpireRemind { get; set; }
 
             /// <summary>
+            /// <para>The support type for creating shared session delivery groups.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -44,6 +46,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string MultiSessionSupportType { get; set; }
 
+            /// <summary>
+            /// <para>The list of region IDs that support creating shared session delivery groups.
+            /// Note: This field has a value only when the support type for creating shared session delivery groups is Specific.</para>
+            /// </summary>
             [NameInMap("MultiSessionSupportedRegions")]
             [Validation(Required=false)]
             public List<string> MultiSessionSupportedRegions { get; set; }

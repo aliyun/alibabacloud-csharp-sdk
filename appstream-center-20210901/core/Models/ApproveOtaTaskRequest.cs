@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ApproveOtaTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</para>
+        /// <para>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</para>
+        /// <para>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
         /// <remarks>
         /// <para>Each successful call to <c>ApproveOtaTask</c> causes the <c>TaskId</c> to change. Therefore, before calling this operation again, call <c>ListAppInstanceGroup</c> again to obtain the latest <c>TaskId</c>.</para>
         /// </remarks>

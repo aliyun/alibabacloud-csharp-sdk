@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The avatar ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("AvatarId")]
         [Validation(Required=false)]
@@ -107,9 +110,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>The credentials for connecting to the cloud application.</para>
+        /// <para>The credential for connecting to the cloud application.</para>
         /// <remarks>
-        /// <para>This parameter is returned only on non-initial calls.</para>
+        /// <para>This parameter is returned only for non-initial calls.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

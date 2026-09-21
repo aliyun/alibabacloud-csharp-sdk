@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</para>
+        /// <para>The application image ID. You can obtain this value from the Image Management page in the WUYING Workspace console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-8z4nztpaqvay4****</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name. Fuzzy matching is used for the query. For example, if you set the delivery group name to <c>OfficeApp</c>, all delivery groups whose names contain <c>OfficeApp</c> are returned, such as <c>MyOfficeApp</c> and <c>OfficeAppA</c>.</para>
+        /// <para>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <c>OfficeApp</c>, all delivery groups whose names contain <c>OfficeApp</c> are returned, such as <c>MyOfficeApp</c> and <c>OfficeAppA</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>办公应用</para>
+        /// <para>OfficeApp</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The list of excluded authorized user group IDs.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -161,6 +163,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The list of authorized user group IDs.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

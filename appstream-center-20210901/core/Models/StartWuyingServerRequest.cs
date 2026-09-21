@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StartWuyingServerRequest : TeaModel {
+        /// <summary>
+        /// <para>The product type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WuyingServer</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

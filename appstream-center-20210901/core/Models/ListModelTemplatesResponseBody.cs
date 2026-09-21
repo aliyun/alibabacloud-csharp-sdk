@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class ListModelTemplatesResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The Agent platform (such as ENTERPRISE or ENTERPRISE_JVS).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
             /// </summary>
             [NameInMap("AgentPlatform")]
             [Validation(Required=false)]
@@ -71,6 +74,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The number of models in the model group, including referenced system provider models.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("ModelCount")]
             [Validation(Required=false)]
@@ -97,25 +103,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The group authorization scope. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALL_USER: all users.</description></item>
-            /// <item><description>USER_MIXED: user mixed (a mix of user groups and users, only for Common groups).</description></item>
-            /// </list>
+            /// <para>The group authorization scope. Valid values: ALL_USER (all users) and USER_MIXED (a mix of user groups and users, only for Common groups).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL_USER</para>
             /// </summary>
             [NameInMap("RefScope")]
             [Validation(Required=false)]
             public string RefScope { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized users in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</para>
+            /// <para>The number of authorized users in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("UserCount")]
             [Validation(Required=false)]
             public int? UserCount { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized user groups in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</para>
+            /// <para>The number of authorized user groups in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("UserGroupCount")]
             [Validation(Required=false)]
@@ -124,7 +135,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The current page number of the query results.</para>
+        /// <para>The page number of the current query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

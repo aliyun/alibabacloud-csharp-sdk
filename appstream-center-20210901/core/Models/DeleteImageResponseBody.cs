@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>200</c>: Success.</description></item>
-        /// <item><description><c>400</c>: Error.</description></item>
+        /// <item><description><c>200</c>: Succeeded.</description></item>
+        /// <item><description><c>400</c>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Deletion succeeded.</description></item>
-        /// <item><description>false: Deletion failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the deletion was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -58,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of application instance IDs. Maximum length: 100.</para>
+        /// <para>The list of application instance IDs. The maximum length is 100.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeDeleted { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query results to display. Default value: <c>1</c>. Specify this parameter.</para>
+        /// <para>The page number of the query results to display. Default value: <c>1</c>. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Maximum value: <c>100</c>. Default value: <c>20</c>. Specify this parameter.</para>
+        /// <para>The number of query results per page. Maximum value: <c>100</c>. Default value: <c>20</c>. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The list of user IDs. Maximum length: 100.</para>
+        /// <para>The list of user IDs. The maximum length is 100.</para>
         /// </summary>
         [NameInMap("UserIdList")]
         [Validation(Required=false)]

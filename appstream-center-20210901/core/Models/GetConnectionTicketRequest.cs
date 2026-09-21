@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The access type. If you do not specify this parameter, both types are displayed.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>INTERNET: Internet access.</description></item>
-        /// <item><description>VPC: Express Connect access.</description></item>
-        /// </list>
+        /// <para>The access type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INTERNET</para>
@@ -44,7 +39,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The list of delivery groups.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify this parameter, application instances are allocated only from the specified authorized delivery groups.</description></item>
+        /// <item><description>If you specify this parameter, application instances are allocated only from the specified and authorized delivery groups.</description></item>
         /// <item><description>If you specify the <c>AppInstanceId</c> or <c>AppInstancePersistentId</c> parameter, this parameter is required.</description></item>
         /// </list>
         /// </remarks>
@@ -52,6 +47,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("AppInstanceGroupIdList")]
         [Validation(Required=false)]
         public List<string> AppInstanceGroupIdList { get; set; }
+
+        /// <summary>
+        /// <para>The delivery group set ID used to obtain the connection credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>set-3jm9d0abc00example</para>
+        /// </summary>
+        [NameInMap("AppInstanceGroupSetId")]
+        [Validation(Required=false)]
+        public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
         /// <para>The application instance ID.</para>
@@ -79,12 +84,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstancePersistentId { get; set; }
 
+        /// <summary>
+        /// <para>The policy ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pg-0clfzcy0adpcf****</para>
+        /// </summary>
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</para>
+        /// <para>The application startup parameter. This parameter is optional. You can refer to the method for specifying startup parameters in the image creation documentation and manually verify the startup parameters during image creation. This field is suitable for startup parameters with variable content, allowing API callers to set them flexibly. For more information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/q /n</para>
@@ -129,6 +140,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The environment configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;userConfigReenter&quot;:&quot;NATIVE&quot;}</para>
         /// </summary>
         [NameInMap("EnvironmentConfig")]
         [Validation(Required=false)]
@@ -146,9 +160,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>This parameter is required for non-initial calls. Use this parameter to query the task status and connection credentials.</para>
+        /// <para>This parameter is required for non-initial calls. Use this parameter query to invoke the node status and connection credential retrieval.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

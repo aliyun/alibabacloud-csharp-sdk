@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyWuyingServerAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable dedicated eRDMA network interfaces. Only true is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("ErdmaEnabled")]
+        [Validation(Required=false)]
+        public bool? ErdmaEnabled { get; set; }
+
+        /// <summary>
         /// <para>The logon password of the workstation.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +29,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>The product type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WuyingServer</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

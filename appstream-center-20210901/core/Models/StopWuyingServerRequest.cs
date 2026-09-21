@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StopWuyingServerRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcibly restart the workstation. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>True: forcibly</description></item>
-        /// <item><description>False: not forcibly</description></item>
-        /// </list>
+        /// <para>Specifies whether to forcibly restart the workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -23,6 +19,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// <para>The product type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WuyingServer</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

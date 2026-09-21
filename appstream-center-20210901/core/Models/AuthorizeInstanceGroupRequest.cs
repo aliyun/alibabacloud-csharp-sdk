@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>交付群組 ID。可呼叫 <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> 介面取得。</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -21,7 +20,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>持續性工作階段 ID。</para>
+        /// <para>The delivery group set ID. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>set-3jm9d0abc00example</para>
+        /// </summary>
+        [NameInMap("AppInstanceGroupSetId")]
+        [Validation(Required=false)]
+        public string AppInstanceGroupSetId { get; set; }
+
+        /// <summary>
+        /// <para>The persistent session ID.</para>
+        /// <remarks>
+        /// <para>Metric description</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required when the authorization mode of the delivery group is Session. You can call the ListPersistentAppInstances operation to obtain a valid ID.</description></item>
+        /// <item><description>This parameter is required when ProductType is set to WuyingServer. You can call the ListPersistentAppInstances operation to obtain a valid ID.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3mw2fg4j****</para>
@@ -31,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
-        /// <para>授權使用者群組 ID 清單。</para>
+        /// <para>The list of authorized user group IDs to grant authorization.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -41,16 +57,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>要新增交付群組授權的使用者名稱清單。可設定 1\~100 個。</para>
+        /// <para>The list of usernames to add to the delivery group authorization. You can specify 1 to 100 usernames.</para>
         /// </summary>
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// <para>使用者分身 ID。</para>
+        /// <para>The user avatar ID.</para>
         /// <remarks>
-        /// <para>此參數未開放使用。</para>
+        /// <para>This parameter is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AvatarId { get; set; }
 
         /// <summary>
-        /// <para>產品類型。</para>
+        /// <para>The product type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +88,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>取消授權使用者群組 ID 清單。</para>
+        /// <para>The list of authorized user group IDs to revoke authorization.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -82,21 +98,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UnAuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>要移除交付群組授權的使用者名稱清單。可設定 1\~100 個。</para>
+        /// <para>The list of usernames to remove from the delivery group authorization. You can specify 1 to 100 usernames.</para>
         /// </summary>
         [NameInMap("UnAuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> UnAuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// <para>使用者資訊。</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("UserMeta")]
         [Validation(Required=false)]
         public AuthorizeInstanceGroupRequestUserMeta UserMeta { get; set; }
         public class AuthorizeInstanceGroupRequestUserMeta : TeaModel {
             /// <summary>
-            /// <para>AD 網域名稱。</para>
+            /// <para>The AD domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -106,7 +122,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AdDomain { get; set; }
 
             /// <summary>
-            /// <para>使用者類型。</para>
+            /// <para>The user type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>simple</para>

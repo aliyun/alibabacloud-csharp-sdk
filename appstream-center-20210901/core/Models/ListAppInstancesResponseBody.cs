@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ListAppInstancesResponseBodyAppInstanceModelsBindInfo BindInfo { get; set; }
             public class ListAppInstancesResponseBodyAppInstanceModelsBindInfo : TeaModel {
                 /// <summary>
-                /// <para>The end user ID bound to the instance.</para>
+                /// <para>The ID of the end user bound to the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app.test</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The billing type of the instance. Valid values:</para>
+            /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PrePaid</b>: subscription (prepaid).</description></item>
-            /// <item><description><b>PostPaid</b>: pay-as-you-go (postpaid).<remarks>
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.<remarks>
             /// <para>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// </description></item>
@@ -112,10 +112,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string MainEthPublicIp { get; set; }
 
+            /// <summary>
+            /// <para>The NIC ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eni-2ze1jetnxkm***qq7i</para>
+            /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
 
+            /// <summary>
+            /// <para>The private IP address of the egress traffic NIC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.12.32</para>
+            /// </summary>
             [NameInMap("NetworkInterfaceIp")]
             [Validation(Required=false)]
             public string NetworkInterfaceIp { get; set; }
@@ -156,7 +168,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query results to display. Specify this parameter.</para>
+        /// <para>The page number of the query results to display. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +178,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Maximum value: <c>100</c>. Specify this parameter.</para>
+        /// <para>The number of query results per page. Maximum value: <c>100</c>. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

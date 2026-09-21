@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
     public class ListAuthorizedUserGroupsRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the delivery group.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -19,6 +18,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the delivery group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>set-3jm9d0abc00example</para>
+        /// </summary>
+        [NameInMap("AppInstanceGroupSetId")]
+        [Validation(Required=false)]
+        public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
         /// <para>The ID of the user group. This parameter is used for exact match.</para>
@@ -34,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The name of the user group. This parameter is used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户组001</para>
+        /// <para>UserGroup001</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

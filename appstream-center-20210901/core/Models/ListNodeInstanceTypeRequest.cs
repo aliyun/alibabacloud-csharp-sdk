@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The billing type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The GPU memory size. This parameter is meaningful for GPU-accelerated cloud desktops. Unit: MB.</para>
+        /// <para>The GPU memory size. This value is meaningful for GPU-accelerated cloud desktops. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -53,6 +59,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
 
+        /// <summary>
+        /// <para>The current specification of the instance for specification change.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eds.proworkstation_flagship_elite_ne.32c64g.48g1x</para>
+        /// </summary>
         [NameInMap("InstanceTypeForModify")]
         [Validation(Required=false)]
         public string InstanceTypeForModify { get; set; }
@@ -107,6 +119,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// <para>The specification change type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UPGRADE</para>
+        /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }

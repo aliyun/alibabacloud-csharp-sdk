@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The delivery group name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>办公应用</para>
+        /// <para>OfficeApp</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyAppInstanceGroupAttributeRequestNodePool NodePool { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestNodePool : TeaModel {
             /// <summary>
-            /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid value range varies depending on the resource specification. You can call the ListNodeInstanceType operation to obtain the valid value range for each resource specification.</para>
+            /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. Too many simultaneous sessions may degrade the application experience. The valid value range varies depending on the resource specification. You can call the ListNodeInstanceType operation to obtain the valid value range for each resource specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether only one application can be opened per session.</para>
+        /// <para>Specifies whether to allow only one application per session.</para>
         /// <list type="bullet">
         /// <item><description>If enabled, opening multiple applications within the delivery group allocates a separate session for each application, consuming more sessions.</description></item>
         /// </list>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? PerSessionPerApp { get; set; }
 
         /// <summary>
-        /// <para>The AppId of the pre-open application. If the <c>PreOpenMode</c> parameter is set to <c>SINGLE_APP</c>, the <c>PreOpenAppId</c> parameter cannot be an empty string.</para>
+        /// <para>The AppId of the pre-open application. If the PreOpenMode parameter is set to <c>SINGLE_APP</c>, PreOpenAppId cannot be an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-b2ronxxd****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? ResetAfterUnbind { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to skip user authorization verification.</para>
+            /// <para>Specifies whether to skip user authorization check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
+        /// <para>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -226,14 +226,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <para>The user data roaming configuration.</para>
+            /// </summary>
             [NameInMap("UserProfileFollow")]
             [Validation(Required=false)]
             public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow UserProfileFollow { get; set; }
             public class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow : TeaModel {
+                /// <summary>
+                /// <para>The file system ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>file-0001</para>
+                /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to enable user data roaming.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("ProfileFollowSwitch")]
                 [Validation(Required=false)]
                 public bool? ProfileFollowSwitch { get; set; }

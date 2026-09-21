@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProviderType { get; set; }
 
             /// <summary>
-            /// <para>The WUYING secure gateway proxy ProviderKey.</para>
+            /// <para>The ProviderKey of the WUYING secure gateway proxy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wuying-key-12345</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The current page number of the query results.</para>
+        /// <para>The page number of the current query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter applies only to Cloud Desktop scenarios. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</para>
+        /// <para>This parameter is currently applicable only to cloud desktop scenarios. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? BizType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to copy user profile data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("CopyProfile")]
         [Validation(Required=false)]
         public bool? CopyProfile { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of disk data included in the image. By default, both the system cloud disk and data cloud disk of the instance are included.</para>
+        /// <para>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The WUYING instance ID. The instance can be a Cloud Desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</para>
+        /// <para>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0buj1s9gm******</para>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The sub-instance ID. This parameter does not apply to Cloud Desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
+        /// <para>The sub-instance ID. This parameter does not apply to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3n1l*****</para>
@@ -103,14 +109,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string SubInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The tag list.</para>
+        /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public List<CreateImageByInstanceRequestTagList> TagList { get; set; }
         public class CreateImageByInstanceRequestTagList : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Group</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
