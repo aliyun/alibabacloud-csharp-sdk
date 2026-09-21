@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public ShoppingAssistantResponseBodyCitation Citation { get; set; }
         public class ShoppingAssistantResponseBodyCitation : TeaModel {
             /// <summary>
-            /// <para>The ID of the <c>item</c>.</para>
+            /// <para>The ID of the item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0005</para>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The returned content.</para>
+        /// <para>The response content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Here are some light-colored long-sleeve shirts I picked for you:\n.</para>
+        /// <para>Here are some light-colored long-sleeve shirts for you:\n</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -57,6 +57,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("ConversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether suggestions are provided.</para>
+        /// </summary>
+        [NameInMap("EnableSuggestion")]
+        [Validation(Required=false)]
+        public bool? EnableSuggestion { get; set; }
 
         /// <summary>
         /// <para>The error message.</para>
@@ -125,10 +132,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>The returned content.</para>
+            /// <para>The response content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Here are some light-colored long-sleeve shirts I picked for you:\\n.</para>
+            /// <para>Here are some light-colored long-sleeve shirts for you:\\n</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]

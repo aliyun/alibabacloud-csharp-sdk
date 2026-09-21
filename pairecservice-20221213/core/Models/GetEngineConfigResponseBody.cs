@@ -98,6 +98,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
+
+        /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Released: published.</para>

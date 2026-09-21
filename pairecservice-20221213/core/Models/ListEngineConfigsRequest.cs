@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListEngineConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The runtime environment.</para>
+        /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: daily environment.</para>
+        /// <item><description><para>Daily: Daily environment.</para>
         /// </description></item>
-        /// <item><description><para>Pre: staging environment.</para>
+        /// <item><description><para>Pre: Pre-release environment.</para>
         /// </description></item>
-        /// <item><description><para>Prod: production environment.</para>
+        /// <item><description><para>Prod: Production environment.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,11 +69,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status filter.</para>
+        /// <para>The scene ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
+
+        /// <summary>
+        /// <para>The status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Released: released.</para>
+        /// <item><description><para>Released: Released.</para>
         /// </description></item>
-        /// <item><description><para>Unreleased: not released.</para>
+        /// <item><description><para>Unreleased: Not released.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version filter.</para>
+        /// <para>The version filter. Valid values:</para>
         /// <para>latest: the most recently updated version.</para>
         /// 
         /// <b>Example:</b>

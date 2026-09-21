@@ -35,8 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment.</para>
-        /// <para>Valid values:</para>
+        /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Daily: daily environment.</para>
         /// </description></item>
@@ -72,6 +71,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The scene.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
 
         /// <summary>
         /// <para>The engine configuration type.</para>

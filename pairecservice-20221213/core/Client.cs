@@ -1079,7 +1079,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an engine configuration.</para>
+        /// <para>Clones a DPI engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1115,6 +1115,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1137,7 +1141,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an engine configuration.</para>
+        /// <para>Clones a DPI engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1173,6 +1177,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1195,7 +1203,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an engine configuration.</para>
+        /// <para>Clones a DPI engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1214,7 +1222,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an engine configuration.</para>
+        /// <para>Clones a DPI engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3313,6 +3321,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["Type"] = request.Type;
@@ -3378,6 +3390,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -17801,7 +17817,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of engine configurations.</para>
+        /// <para>Retrieves a list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17841,6 +17857,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -17871,7 +17891,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of engine configurations.</para>
+        /// <para>Retrieves a list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17911,6 +17931,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -17941,7 +17965,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of engine configurations.</para>
+        /// <para>Retrieves a list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17960,7 +17984,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of engine configurations.</para>
+        /// <para>Retrieves a list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18295,7 +18319,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of feature consistency check task configurations.</para>
+        /// <para>Retrieves the list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18331,6 +18355,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -18357,7 +18385,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of feature consistency check task configurations.</para>
+        /// <para>Retrieves the list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18393,6 +18421,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -18419,7 +18451,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of feature consistency check task configurations.</para>
+        /// <para>Retrieves the list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18438,7 +18470,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of feature consistency check task configurations.</para>
+        /// <para>Retrieves the list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21373,6 +21405,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -21434,6 +21470,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
@@ -25589,16 +25629,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</para>
+        /// <para>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</description></item>
-        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</description></item>
-        /// <item><description>The <c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
+        /// <item><description>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these parameters to get the best response.</description></item>
+        /// <item><description><c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
         /// <item><description>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</description></item>
         /// <item><description>Check the returned <c>StopReason</c> field to understand whether the session has ended and the reason.</description></item>
         /// </list>
@@ -25687,16 +25727,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</para>
+        /// <para>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</description></item>
-        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</description></item>
-        /// <item><description>The <c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
+        /// <item><description>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these parameters to get the best response.</description></item>
+        /// <item><description><c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
         /// <item><description>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</description></item>
         /// <item><description>Check the returned <c>StopReason</c> field to understand whether the session has ended and the reason.</description></item>
         /// </list>
@@ -25785,16 +25825,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</para>
+        /// <para>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</description></item>
-        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</description></item>
-        /// <item><description>The <c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
+        /// <item><description>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these parameters to get the best response.</description></item>
+        /// <item><description><c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
         /// <item><description>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</description></item>
         /// <item><description>Check the returned <c>StopReason</c> field to understand whether the session has ended and the reason.</description></item>
         /// </list>
@@ -25816,16 +25856,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</para>
+        /// <para>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</description></item>
-        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</description></item>
-        /// <item><description>The <c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
+        /// <item><description>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description><c>InstanceId</c>, <c>SessionId</c>, <c>SceneId</c>, <c>ServiceId</c>, <c>Environment</c>, <c>Uid</c>, and <c>Language</c> are required parameters. Ensure the accuracy of these parameters to get the best response.</description></item>
+        /// <item><description><c>InputMessage</c> must contain at least one text-type message that describes the user\&quot;s request or question.</description></item>
         /// <item><description>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</description></item>
         /// <item><description>Check the returned <c>StopReason</c> field to understand whether the session has ended and the reason.</description></item>
         /// </list>
@@ -28281,6 +28321,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["Type"] = request.Type;
@@ -28346,6 +28390,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {

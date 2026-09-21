@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneEngineConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The engine configuration ID.</para>
+        /// <para>The DPI engine configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

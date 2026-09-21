@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
+
+        /// <summary>
         /// <para>The type of the engine configuration.</para>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs> FeatureConsistencyCheckConfigs { get; set; }
         public class ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to enable feature comparison.</para>
+            /// <para>Indicates whether feature comparison is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DefaultRoute { get; set; }
 
             /// <summary>
-            /// <para>The name of the EAS service.</para>
+            /// <para>The service name of EAS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eas_service_1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureConsistencyCheckJobConfigId { get; set; }
 
             /// <summary>
-            /// <para>The features to exclude from the results. Separate multiple features with a comma (,).</para>
+            /// <para>The features to exclude from display. Separate multiple features with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>feature1,feature2</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureDisplayExclude { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source for feature landing.</para>
+            /// <para>The ID of the data landing resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>reso-********</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureLandingResourceId { get; set; }
 
             /// <summary>
-            /// <para>The URI of the data source for feature landing.</para>
+            /// <para>The URI of the data landing resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mc_project_1</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureLandingResourceUri { get; set; }
 
             /// <summary>
-            /// <para>The high-priority features to read from the user table. If a feature is not found, the system retrieves it from the behavior table. Separate multiple features with a comma (,).</para>
+            /// <para>The feature priority. Separate multiple features with commas (,). This parameter specifies which features are preferentially read from the user table. If the user table is empty, the features are queried from the behavior table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feature1,feature2,feature3</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeaturePriority { get; set; }
 
             /// <summary>
-            /// <para>The primary key for the item side in the feature store.</para>
+            /// <para>The primary key on the item side in Feature Store.</para>
             /// 
             /// <b>Example:</b>
             /// <para>item</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreItemId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the model in the feature store.</para>
+            /// <para>feature store model ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreModelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the feature store project.</para>
+            /// <para>The Feature Store project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prj-01</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreProjectId { get; set; }
 
             /// <summary>
-            /// <para>The name of the feature store project.</para>
+            /// <para>The Feature Store project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-1</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreProjectName { get; set; }
 
             /// <summary>
-            /// <para>The name of the feature view that contains item features within the sequence features.</para>
+            /// <para>The name of the feature view that contains the item features in the sequence feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>item-1</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreSeqFeatureView { get; set; }
 
             /// <summary>
-            /// <para>The primary key for the user side in the feature store.</para>
+            /// <para>The primary key on the user side in Feature Store.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureStoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The version of the <c>fg_jar</c> file.</para>
+            /// <para>The version of fg_jar.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FgJarVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the <c>fg_json</c> file.</para>
+            /// <para>The name of the fg_json file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file.json</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FgJsonFileName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to generate a ZIP package.</para>
+            /// <para>Indicates whether a zip package needs to be generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the <c>item_id</c> field.</para>
+            /// <para>The name of the item_id field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>item_id</para>
@@ -271,12 +271,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemTablePartitionField { get; set; }
 
             /// <summary>
-            /// <para>The format of the partition field of the item table. Valid values:</para>
+            /// <para>The format of the item table partition field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>yyyymmdd</c></para>
-            /// </description></item>
-            /// <item><description><para><c>yyyy-mm-dd</c></para>
-            /// </description></item>
+            /// <item><description>yyyymmdd</description></item>
+            /// <item><description>yyyy-mm-dd</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -287,7 +285,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemTablePartitionFieldFormat { get; set; }
 
             /// <summary>
-            /// <para>The end time of the latest job based on this configuration.</para>
+            /// <para>The end time of the most recently created job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -297,7 +295,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LatestJobGmtSamplingEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the latest job based on this configuration.</para>
+            /// <para>The start time of the most recently created job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -307,7 +305,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LatestJobGmtSamplingStartTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the most recent job created from this configuration.</para>
+            /// <para>The ID of the most recently created job based on this configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -363,7 +361,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ResourceConfig { get; set; }
 
             /// <summary>
-            /// <para>The sample rate, a value from 0 to 1.</para>
+            /// <para>The sampling rate. Valid values: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.89</para>
@@ -373,7 +371,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SampleRate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scene.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -407,7 +405,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service1</para>
@@ -417,12 +415,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the configuration. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Editable</c>: The configuration is editable.</para>
-            /// </description></item>
-            /// <item><description><para><c>Uneditable</c>: The configuration is not editable.</para>
-            /// </description></item>
+            /// <item><description>Editable: Editable.</description></item>
+            /// <item><description>Uneditable: Not editable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -437,12 +433,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to use a feature store. Valid values:</para>
+            /// <para>Indicates whether Feature Store is used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: A feature store is used. In this case, the response includes parameters such as <c>FeatureStoreProjectId</c>, <c>FeatureStoreProjectName</c>, <c>FeatureStoreModelId</c>, <c>FeatureStoreUserId</c>, and <c>FeatureStoreItemId</c>.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: A feature store is not used. In this case, the response includes parameters such as <c>UserTable</c>, <c>UserIdField</c>, <c>UserTablePartitionField</c>, <c>UserTablePartitionFieldFormat</c>, <c>ItemTable</c>, <c>ItemIdField</c>, <c>ItemTablePartitionField</c>, and <c>ItemTablePartitionFieldFormat</c>.</para>
-            /// </description></item>
+            /// <item><description>true: Feature Store is used. In this case, FeatureStoreProjectId, FeatureStoreProjectName, FeatureStoreModelId, FeatureStoreUserId, and FeatureStoreItemId are returned.</description></item>
+            /// <item><description>false: Feature Store is not used. In this case, UserTable, UserIdField, UserTablePartitionField, UserTablePartitionFieldFormat, ItemTable, ItemIdField, ItemTablePartitionField, and ItemTablePartitionFieldFormat are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -453,7 +447,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UseFeatureStore { get; set; }
 
             /// <summary>
-            /// <para>The name of the <c>user_id</c> field.</para>
+            /// <para>The name of the user_id field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_id</para>
@@ -483,12 +477,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UserTablePartitionField { get; set; }
 
             /// <summary>
-            /// <para>The format of the partition field of the user table. Valid values:</para>
+            /// <para>The format of the user table partition field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>yyyymmdd</c></para>
-            /// </description></item>
-            /// <item><description><para><c>yyyy-mm-dd</c></para>
-            /// </description></item>
+            /// <item><description>yyyymmdd</description></item>
+            /// <item><description>yyyy-mm-dd</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -529,7 +521,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of configurations.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

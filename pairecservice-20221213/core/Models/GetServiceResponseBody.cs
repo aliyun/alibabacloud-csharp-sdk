@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Container Registry Enterprise instance ID selected by the user when a non-official image is used.</para>
+        /// <para>The instance ID of the Container Registry Enterprise instance selected when a non-official image is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EngineConfigId { get; set; }
 
         /// <summary>
-        /// <para>The time of the most recent production release.</para>
+        /// <para>The time of the most recent production publish.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The most recent production release record.</para>
+        /// <para>The most recent production publish record.</para>
         /// </summary>
         [NameInMap("LatestProdReleaseOrder")]
         [Validation(Required=false)]
         public GetServiceResponseBodyLatestProdReleaseOrder LatestProdReleaseOrder { get; set; }
         public class GetServiceResponseBodyLatestProdReleaseOrder : TeaModel {
             /// <summary>
-            /// <para>The release content.</para>
+            /// <para>The publish content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>update golang version to 1.22</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The release information.</para>
+            /// <para>The publish information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ReleaseInfo { get; set; }
 
             /// <summary>
-            /// <para>The release order ID.</para>
+            /// <para>The publish order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Releaser { get; set; }
 
             /// <summary>
-            /// <para>The release title.</para>
+            /// <para>The publish title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>update version</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The Container Registry Enterprise Edition repository ID selected by the user when a non-official image is used.</para>
+        /// <para>The ID of the Container Registry Enterprise Edition repository selected when a non-official image is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-xxx</para>
@@ -185,7 +185,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration used to publish the service, such as the service configuration in EAS.</para>
+        /// <para>The scenario.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
+
+        /// <summary>
+        /// <para>The configuration used to publish the service, such as the Elastic Algorithm Service (EAS) service configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Port&quot;:8080}</para>
@@ -195,7 +205,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The resource address used to publish the service, such as the resource group name in Elastic Algorithm Service (EAS).</para>
+        /// <para>The resource address used to publish the service, such as the EAS resource group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-resource-xxx</para>

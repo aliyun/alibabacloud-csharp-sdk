@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The contents.</para>
+        /// <para>The content.</para>
         /// </summary>
         [NameInMap("Contents")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</para>
+            /// <para>Recommend some light-colored long-sleeve shirts for spring, budget under 300</para>
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para><b>The environment.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>Prod: productionPre: pre-release.</para>
+        /// <para>Prod: ProductionPre: Pre-release</para>
         /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 /// <para>The message content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</para>
+                /// <para>Recommend some light-colored long-sleeve shirts for spring, budget under 300</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para><b>The service ID.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>ServiceId.</para>
+        /// <para>Service ID</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
