@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SaveCustomizeReportConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the report.</para>
+        /// <para>The report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11472B29-1A1C-5D7F-944B-7CD84319****</para>

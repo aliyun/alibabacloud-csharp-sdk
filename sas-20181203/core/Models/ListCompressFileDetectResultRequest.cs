@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the file. This parameter is required in practice. If this parameter is not specified, the API returns ServerError(400). The value must be the MD5 or SHA-256 hash of the file.</para>
+        /// <para>The unique identifier of the file. This parameter is required in practice. If this parameter is not specified, the API returns ServerError (500). The value must be the MD5 or SHA-256 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>

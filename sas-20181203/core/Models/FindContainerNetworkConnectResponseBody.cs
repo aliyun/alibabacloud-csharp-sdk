@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The destination container information.</para>
             /// <remarks>
-            /// <para>Notice: Not supported.</notice></para>
+            /// <para>Notice: This feature is not supported.</notice></para>
             /// </remarks>
             /// </summary>
             [NameInMap("DstContainer")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DstPort { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the connection first occurred. Unit: milliseconds.</para>
+            /// <para>The timestamp when the connection first occurred, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636077279174</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the connection last occurred. Unit: milliseconds.</para>
+            /// <para>The timestamp when the connection last occurred, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636595679174</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The source container information.</para>
             /// <remarks>
-            /// <para>Notice: Not supported.</notice></para>
+            /// <para>Notice: This feature is not supported.</notice></para>
             /// </remarks>
             /// </summary>
             [NameInMap("SrcContainer")]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information for a paged query.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public FindContainerNetworkConnectResponseBodyPageInfo PageInfo { get; set; }
         public class FindContainerNetworkConnectResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page in a paged query.</para>
+            /// <para>The number of entries returned on the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The current page number in a paged query.</para>
+            /// <para>The current page number when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of container asset entries per page in a paged query. Default value: <b>20</b>, which indicates that 20 network connectivity entries are displayed per page.</para>
+            /// <para>The number of entries per page when paging is used. Default value: <b>20</b>, which indicates that 20 network connectivity entries are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

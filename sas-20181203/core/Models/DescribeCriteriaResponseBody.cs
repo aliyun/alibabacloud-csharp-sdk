@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCriteriaResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of asset query condition information.</para>
+        /// <para>The list of asset query conditions.</para>
         /// </summary>
         [NameInMap("CriteriaList")]
         [Validation(Required=false)]
         public List<DescribeCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class DescribeCriteriaResponseBodyCriteriaList : TeaModel {
             /// <summary>
-            /// <para>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</para>
+            /// <para>The structured property values of the asset that correspond to the fuzzy match value. The value is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>vendor</b>: providers.</description></item>
-            /// <item><description><b>regionIds</b>: IDs of supported regions</description></item>
+            /// <item><description><b>vendor</b>: the provider.</description></item>
+            /// <item><description><b>regionIds</b>: the supported regions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,52 +31,52 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MultiValues { get; set; }
 
             /// <summary>
-            /// <para>The name of the search condition. Valid values:</para>
+            /// <para>The name of the query condition.</para>
             /// <list type="bullet">
-            /// <item><description><b>internetIp</b>: Public IP Address. </description></item>
-            /// <item><description><b>intranetIp</b>: Private IP Address.</description></item>
-            /// <item><description><b>instanceName</b>: Instance Name.</description></item>
-            /// <item><description><b>instanceId</b>: Instance ID. </description></item>
-            /// <item><description><b>machineType</b>: Instance Type. </description></item>
-            /// <item><description><b>clusterIdList</b>: Cluster ID list. </description></item>
-            /// <item><description><b>vpcInstanceId</b>: VPC ID. </description></item>
-            /// <item><description><b>osName</b>: OS. </description></item>
-            /// <item><description><b>osType</b>: OS type. </description></item>
-            /// <item><description><b>hcStatus</b>: Whether Baseline Risk Exists. </description></item>
-            /// <item><description><b>vulStatus</b>: Whether Vulnerability Exists. </description></item>
-            /// <item><description><b>asapVulStatus</b>: Whether there is an urgent vulnerability. </description></item>
-            /// <item><description><b>alarmStatus</b>: Whether Alert Exists. </description></item>
-            /// <item><description><b>riskStatus</b>: Whether there is a risk. </description></item>
-            /// <item><description><b>clientStatus</b>: Whether it is online. </description></item>
-            /// <item><description><b>clientSubStatus</b>: Client sub-status. </description></item>
-            /// <item><description><b>runningStatus</b>: Power-on status. </description></item>
-            /// <item><description><b>tagName</b>: Tag name. </description></item>
-            /// <item><description><b>vendorAuthAlias</b>: Authorized account remarks. </description></item>
-            /// <item><description><b>vendorUid</b>: Authorized account ID. </description></item>
-            /// <item><description><b>vendorUserName</b>: Authorized account name. </description></item>
-            /// <item><description><b>namespace</b>: Namespace. </description></item>
-            /// <item><description><b>appName</b>: Application name. </description></item>
-            /// <item><description><b>groupName</b>: Group name. </description></item>
-            /// <item><description><b>regionId</b>: Region. </description></item>
-            /// <item><description><b>groupId</b>: Group ID. </description></item>
-            /// <item><description><b>newInstance</b>: Whether it is a new asset. </description></item>
-            /// <item><description><b>containerStatus</b>: Whether there is a container. </description></item>
-            /// <item><description><b>importance</b>: Asset importance. </description></item>
-            /// <item><description><b>exposedStatus</b>: Whether it is an exposed server. </description></item>
-            /// <item><description><b>clusterId</b>: Cluster ID. </description></item>
-            /// <item><description><b>authVersion</b>: Authorization version. </description></item>
-            /// <item><description><b>flag</b>: Cloud provider. </description></item>
-            /// <item><description><b>ipList</b>: IP list. </description></item>
-            /// <item><description><b>uuidList</b>: UUID. </description></item>
-            /// <item><description><b>aiStatus</b>: Whether there is an AI component. </description></item>
-            /// <item><description><b>tagKeyValue</b>: ECS tag. </description></item>
-            /// <item><description><b>ecsType</b>: Server type. </description></item>
-            /// <item><description><b>alisecguardStatus</b>: Self-protection status. </description></item>
-            /// <item><description><b>alihipsStatus</b>: AliHips status. </description></item>
-            /// <item><description><b>alinetStatus</b>: AliNet status. </description></item>
-            /// <item><description><b>alidetectStatus</b>: Endpoint engine status. </description></item>
-            /// <item><description><b>yundunMonitorStatus</b>: Information collection component status. </description></item>
-            /// <item><description><b>clusterNodeStatus</b>: Whether it is a cluster node.</description></item>
+            /// <item><description><b>internetIp</b>: public IP address.</description></item>
+            /// <item><description><b>intranetIp</b>: private IP address.</description></item>
+            /// <item><description><b>instanceName</b>: instance name.</description></item>
+            /// <item><description><b>instanceId</b>: instance ID.</description></item>
+            /// <item><description><b>machineType</b>: instance type.</description></item>
+            /// <item><description><b>clusterIdList</b>: cluster ID list.</description></item>
+            /// <item><description><b>vpcInstanceId</b>: VPC ID.</description></item>
+            /// <item><description><b>osName</b>: operating system.</description></item>
+            /// <item><description><b>osType</b>: system type.</description></item>
+            /// <item><description><b>hcStatus</b>: whether baseline issues exist.</description></item>
+            /// <item><description><b>vulStatus</b>: whether vulnerability issues exist.</description></item>
+            /// <item><description><b>asapVulStatus</b>: whether high-priority vulnerabilities exist.</description></item>
+            /// <item><description><b>alarmStatus</b>: whether security alerts exist.</description></item>
+            /// <item><description><b>riskStatus</b>: whether risks exist.</description></item>
+            /// <item><description><b>clientStatus</b>: whether the client is online.</description></item>
+            /// <item><description><b>clientSubStatus</b>: client substatus.</description></item>
+            /// <item><description><b>runningStatus</b>: running status.</description></item>
+            /// <item><description><b>tagName</b>: tag name.</description></item>
+            /// <item><description><b>vendorAuthAlias</b>: authorized account alias.</description></item>
+            /// <item><description><b>vendorUid</b>: authorized account ID.</description></item>
+            /// <item><description><b>vendorUserName</b>: authorized account name.</description></item>
+            /// <item><description><b>namespace</b>: namespace.</description></item>
+            /// <item><description><b>appName</b>: application name.</description></item>
+            /// <item><description><b>groupName</b>: group name.</description></item>
+            /// <item><description><b>regionId</b>: region.</description></item>
+            /// <item><description><b>groupId</b>: group ID.</description></item>
+            /// <item><description><b>newInstance</b>: whether the asset is newly added.</description></item>
+            /// <item><description><b>containerStatus</b>: whether containers exist.</description></item>
+            /// <item><description><b>importance</b>: asset importance.</description></item>
+            /// <item><description><b>exposedStatus</b>: whether the server is exposed.</description></item>
+            /// <item><description><b>clusterId</b>: cluster ID.</description></item>
+            /// <item><description><b>authVersion</b>: authorization version.</description></item>
+            /// <item><description><b>flag</b>: cloud provider.</description></item>
+            /// <item><description><b>ipList</b>: IP list.</description></item>
+            /// <item><description><b>uuidList</b>: UUID.</description></item>
+            /// <item><description><b>aiStatus</b>: whether AI components exist.</description></item>
+            /// <item><description><b>tagKeyValue</b>: ECS tag.</description></item>
+            /// <item><description><b>ecsType</b>: server type.</description></item>
+            /// <item><description><b>alisecguardStatus</b>: self-protection status.</description></item>
+            /// <item><description><b>alihipsStatus</b>: AliHips status.</description></item>
+            /// <item><description><b>alinetStatus</b>: AliNet status.</description></item>
+            /// <item><description><b>alidetectStatus</b>: endpoint engine status.</description></item>
+            /// <item><description><b>yundunMonitorStatus</b>: information collection component status.</description></item>
+            /// <item><description><b>clusterNodeStatus</b>: whether the asset is a cluster node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the search condition. Valid values:</para>
+            /// <para>The type of the query condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>input</b>: The search condition needs to be specified.</description></item>
-            /// <item><description><b>select</b>: The search condition is an option that can be selected from the drop-down list.</description></item>
+            /// <item><description><b>input</b>: You must manually enter the query field.</description></item>
+            /// <item><description><b>select</b>: You must select a subtype of the query condition from the drop-down list.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,199 +101,199 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The attribute values of the assets that match the keyword.</para>
+            /// <para>The specific asset property values that correspond to the fuzzy match value.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>When <b>Name</b> is <b>machineType</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>machineType</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>38</b>: Elastic Container Instance. </description></item>
-            /// <item><description><b>51</b>: RunD Container Instance. </description></item>
-            /// <item><description><b>52</b>: RunC Container Instance.</description></item>
+            /// <item><description><b>38</b>: Elastic Container Instance.</description></item>
+            /// <item><description><b>51</b>: RunD container instance.</description></item>
+            /// <item><description><b>52</b>: RunC container instance.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>osType</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>osType</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>linux</b>: Linux. </description></item>
+            /// <item><description><b>linux</b>: Linux.</description></item>
             /// <item><description><b>windows</b>: Windows.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>hcStatus</b>, the enum values are: <remarks>
-            /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
-            /// <item><description><b>YES</b>: Yes.</description></item>
-            /// </list>
-            /// </remarks>
-            /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>vulStatus</b>, the enum values are: <remarks>
-            /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
-            /// <item><description><b>YES</b>: Yes.</description></item>
-            /// </list>
-            /// </remarks>
-            /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>asapVulStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>hcStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
             /// <item><description><b>NO</b>: No.</description></item>
             /// <item><description><b>YES</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>alarmStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>vulStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
+            /// <item><description><b>NO</b>: No.</description></item>
             /// <item><description><b>YES</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>riskStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>asapVulStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
-            /// <item><description><b>YES</b>: Yes. </description></item>
+            /// <item><description><b>NO</b>: No.</description></item>
+            /// <item><description><b>YES</b>: Yes.</description></item>
+            /// </list>
+            /// </remarks>
+            /// </description></item>
+            /// <item><description>When <b>Name</b> is <b>alarmStatus</b>, the valid values are:<remarks>
+            /// <list type="bullet">
+            /// <item><description><b>NO</b>: No.</description></item>
+            /// <item><description><b>YES</b>: Yes.</description></item>
+            /// </list>
+            /// </remarks>
+            /// </description></item>
+            /// <item><description>When <b>Name</b> is <b>riskStatus</b>, the valid values are:<remarks>
+            /// <list type="bullet">
+            /// <item><description><b>NO</b>: No.</description></item>
+            /// <item><description><b>YES</b>: Yes.</description></item>
             /// <item><description><b>UNKNOWN</b>: Unknown.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>clientStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>clientStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: Online. </description></item>
-            /// <item><description><b>offline</b>: Offline. </description></item>
-            /// <item><description><b>pause</b>: Protection Suspended.</description></item>
+            /// <item><description><b>online</b>: Online.</description></item>
+            /// <item><description><b>offline</b>: Offline.</description></item>
+            /// <item><description><b>pause</b>: Protection paused.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>clientSubStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>clientSubStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: Online. </description></item>
-            /// <item><description><b>offline</b>: Offline. </description></item>
-            /// <item><description><b>pause</b>: Protection Suspended. </description></item>
-            /// <item><description><b>stopped</b>: Server Shutdown. </description></item>
-            /// <item><description><b>uninstalled</b>: Not Installed.</description></item>
+            /// <item><description><b>online</b>: Online.</description></item>
+            /// <item><description><b>offline</b>: Offline.</description></item>
+            /// <item><description><b>pause</b>: Protection paused.</description></item>
+            /// <item><description><b>stopped</b>: Shut down.</description></item>
+            /// <item><description><b>uninstalled</b>: Not installed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>runningStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>runningStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>Running</b>: On. </description></item>
-            /// <item><description><b>notRunning</b>: Off. </description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>notRunning</b>: Shut down.</description></item>
             /// <item><description><b>UNKNOWN</b>: Unknown.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>importance</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>importance</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>important</b>: Important. </description></item>
-            /// <item><description><b>general</b>: Normal. </description></item>
+            /// <item><description><b>important</b>: Important.</description></item>
+            /// <item><description><b>general</b>: General.</description></item>
             /// <item><description><b>test</b>: Test.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>containerStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>containerStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
+            /// <item><description><b>NO</b>: No.</description></item>
             /// <item><description><b>YES</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>exposedStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>exposedStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
+            /// <item><description><b>NO</b>: No.</description></item>
             /// <item><description><b>YES</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>authVersion</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>authVersion</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic. </description></item>
-            /// <item><description><b>3</b>: Enterprise. </description></item>
-            /// <item><description><b>5</b>: Advanced.</description></item>
-            /// <item><description><b>6</b>: Anti-virus. </description></item>
-            /// <item><description><b>7</b>: Ultimate.</description></item>
+            /// <item><description><b>1</b>: Free Edition.</description></item>
+            /// <item><description><b>3</b>: Enterprise Edition.</description></item>
+            /// <item><description><b>5</b>: Premium Edition.</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition.</description></item>
+            /// <item><description><b>7</b>: Ultimate Edition.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>flag</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>flag</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0|8|15</b>: Alibaba Cloud. </description></item>
-            /// <item><description><b>1</b>: External Host. </description></item>
-            /// <item><description><b>2</b>: IDC. </description></item>
-            /// <item><description><b>3</b>: Tencent Cloud. </description></item>
-            /// <item><description><b>4</b>: Huawei Cloud. </description></item>
-            /// <item><description><b>5</b>: Azure. </description></item>
-            /// <item><description><b>7</b>: AWS. </description></item>
-            /// <item><description><b>9</b>: SAE. </description></item>
-            /// <item><description><b>10</b>: PAI. </description></item>
-            /// <item><description><b>13</b>: ACS. </description></item>
-            /// <item><description><b>14</b>: Volcano Cloud. </description></item>
+            /// <item><description><b>0|8|15</b>: Alibaba Cloud.</description></item>
+            /// <item><description><b>1</b>: Non-cloud server.</description></item>
+            /// <item><description><b>2</b>: IDC.</description></item>
+            /// <item><description><b>3</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>4</b>: Huawei Cloud.</description></item>
+            /// <item><description><b>5</b>: Azure.</description></item>
+            /// <item><description><b>7</b>: AWS.</description></item>
+            /// <item><description><b>9</b>: SAE.</description></item>
+            /// <item><description><b>10</b>: PAI.</description></item>
+            /// <item><description><b>13</b>: ACS.</description></item>
+            /// <item><description><b>14</b>: Volcengine.</description></item>
             /// <item><description><b>16</b>: Google Cloud.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>aiStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>aiStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>NO</b>: No. </description></item>
+            /// <item><description><b>NO</b>: No.</description></item>
             /// <item><description><b>YES</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>ecsType</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>ecsType</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>8</b>: Simple Application Server. </description></item>
-            /// <item><description><b>11</b>: LINGJUN GPU-accelerated Bare Metal Instance. </description></item>
-            /// <item><description><b>15</b>: RDS Custom. </description></item>
-            /// <item><description><b>!8</b>: Host.</description></item>
+            /// <item><description><b>8</b>: Simple application server.</description></item>
+            /// <item><description><b>11</b>: Lingjun.</description></item>
+            /// <item><description><b>15</b>: RDS Custom.</description></item>
+            /// <item><description><b>!8</b>: Host server.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>alisecguardStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>alisecguardStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Plug-in Online. </description></item>
-            /// <item><description><b>1</b>: Plug-in Disabled. </description></item>
-            /// <item><description><b>2</b>: Plug-in Offline. </description></item>
-            /// <item><description><b>-99</b>: The installation failed.</description></item>
+            /// <item><description><b>0</b>: Plugin online.</description></item>
+            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>2</b>: Plugin offline.</description></item>
+            /// <item><description><b>-99</b>: Installation failed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>alihipsStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>alihipsStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Plug-in Online. </description></item>
-            /// <item><description><b>1</b>: Plug-in Disabled. </description></item>
-            /// <item><description><b>2</b>: Plug-in Offline. </description></item>
-            /// <item><description><b>-99</b>: The installation failed.</description></item>
+            /// <item><description><b>0</b>: Plugin online.</description></item>
+            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>2</b>: Plugin offline.</description></item>
+            /// <item><description><b>-99</b>: Installation failed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>alinetStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>alinetStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Plug-in Online. </description></item>
-            /// <item><description><b>1</b>: Plug-in Disabled. </description></item>
-            /// <item><description><b>2</b>: Plug-in Offline. </description></item>
-            /// <item><description><b>-99</b>: The installation failed.</description></item>
+            /// <item><description><b>0</b>: Plugin online.</description></item>
+            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>2</b>: Plugin offline.</description></item>
+            /// <item><description><b>-99</b>: Installation failed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>alidetectStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>alidetectStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Plug-in Online. </description></item>
-            /// <item><description><b>1</b>: Plug-in Disabled. </description></item>
-            /// <item><description><b>2</b>: Plug-in Offline. </description></item>
-            /// <item><description><b>-99</b>: The installation failed.</description></item>
+            /// <item><description><b>0</b>: Plugin online.</description></item>
+            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>2</b>: Plugin offline.</description></item>
+            /// <item><description><b>-99</b>: Installation failed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>yundunMonitorStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>yundunMonitorStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Plug-in Online. </description></item>
-            /// <item><description><b>1</b>: Plug-in Disabled. </description></item>
-            /// <item><description><b>2</b>: Plug-in Offline. </description></item>
-            /// <item><description><b>-99</b>: The installation failed.</description></item>
+            /// <item><description><b>0</b>: Plugin online.</description></item>
+            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>2</b>: Plugin offline.</description></item>
+            /// <item><description><b>-99</b>: Installation failed.</description></item>
             /// </list>
             /// </remarks>
             /// </description></item>
-            /// <item><description>When <b>Name</b> is <b>clusterNodeStatus</b>, the enum values are: <remarks>
+            /// <item><description>When <b>Name</b> is <b>clusterNodeStatus</b>, the valid values are:<remarks>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: No. </description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// <item><description><b>true</b>: Yes.</description></item>
             /// </list>
             /// </remarks>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8E6DDACF-99AF-5939-AFFD-FCCD3B01E724</para>

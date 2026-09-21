@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The time consumed by the task, in seconds.</para>
+        /// <para>The time consumed by the task. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

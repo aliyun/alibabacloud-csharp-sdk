@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddPublishBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the release batch.</para>
+        /// <para>The release batch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

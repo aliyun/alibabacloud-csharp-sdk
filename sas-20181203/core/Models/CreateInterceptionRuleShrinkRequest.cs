@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateInterceptionRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// <para>This parameter must be from an ACK cluster. You can call the DescribeClustersV1 operation of Container Service for Kubernetes (ACK) to query existing clusters, or call the CreateCluster operation to create a cluster, and then call the DescribeGroupedContainerInstances operation of Security Center to obtain the ID of a managed cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The information about the destination network object. The value of this parameter contains the following fields:</para>
+        /// <para>The list of destination objects. The metric descriptions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>targetId: the ID of the destination network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
-        /// <item><description>ports: the destination port ranges.</description></item>
+        /// <item><description>targetId: The ID of the destination object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</description></item>
+        /// <item><description>ports: The list of destination port ranges.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,11 +57,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DstTargetListShrink { get; set; }
 
         /// <summary>
-        /// <para>The action on traffic. Valid values:</para>
+        /// <para>The interception mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: blocks traffic.</description></item>
-        /// <item><description><b>2</b>: allows traffic and generates alerts.</description></item>
-        /// <item><description><b>3</b>: allows traffic and does not generate alerts.</description></item>
+        /// <item><description><b>1</b>: Block Mode.</description></item>
+        /// <item><description><b>2</b>: Alert mode.</description></item>
+        /// <item><description><b>3</b>: Allow mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? InterceptType { get; set; }
 
         /// <summary>
-        /// <para>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? OrderIndex { get; set; }
 
         /// <summary>
-        /// <para>The name of the defense rule.</para>
+        /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,10 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the status of the defense rule. Valid values:</para>
+        /// <para>Specifies whether to enable the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disables the rule.</description></item>
-        /// <item><description><b>1</b>: enables the rule.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -109,9 +110,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>The type of the defense rule. Valid values:</para>
+        /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>customize: custom rule</description></item>
+        /// <item><description>customize: user-defined rule</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,9 +123,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The source network object. The value of this parameter contains the following field:</para>
+        /// <para>The source object. The metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>targetId: the ID of the source network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// <item><description>targetId: The ID of the source object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

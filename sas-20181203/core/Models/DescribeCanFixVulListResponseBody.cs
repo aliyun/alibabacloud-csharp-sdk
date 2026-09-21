@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The vulnerability information returned.</para>
+        /// <para>The vulnerability information returned by the query.</para>
         /// </summary>
         [NameInMap("VulRecords")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the vulnerability can be fixed in the console. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b>: Fixable.</description></item>
-            /// <item><description><b>no</b>: Not fixable.</description></item>
+            /// <item><description><b>yes</b>: The vulnerability can be fixed.</description></item>
+            /// <item><description><b>no</b>: The vulnerability cannot be fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CanFix { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</para>
+            /// <para>Indicates whether the software package that causes the vulnerability can be upgraded by using Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Supported.</description></item>
-            /// <item><description><b>false</b>: Not supported.</description></item>
+            /// <item><description><b>true</b>: The upgrade is supported.</description></item>
+            /// <item><description><b>false</b>: The upgrade is not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Layer { get; set; }
 
                     /// <summary>
-                    /// <para>The detailed information about the vulnerability match.</para>
+                    /// <para>The details of the vulnerability match.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python-perf version less than 0:3.10.0-693.21.1.el7</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The command used to fix the vulnerability.</para>
+                    /// <para>The command to fix the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was first detected, in milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620752053000</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was last detected, in milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousSource { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability status was modified, in milliseconds.</para>
+            /// <para>The timestamp when the vulnerability status was modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -335,12 +335,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The priority level of the vulnerability fix. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>asap</b>: High.</description></item>
-            /// <item><description><b>later</b>: Medium.</description></item>
-            /// <item><description><b>nntf</b>: Low.</description></item>
+            /// <item><description><b>asap</b>: high</description></item>
+            /// <item><description><b>later</b>: medium</description></item>
+            /// <item><description><b>nntf</b>: low</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Fix vulnerabilities with the <b>High</b> priority level as soon as possible.</para>
+            /// <para>Fix vulnerabilities with the <b>high</b> priority level as soon as possible.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the scan, in milliseconds.</para>
+            /// <para>The timestamp of the scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The vulnerability type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cve</b>: system vulnerability</description></item>
-            /// <item><description><b>sca</b>: application vulnerability.</description></item>
+            /// <item><description><b>sca</b>: application vulnerability</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

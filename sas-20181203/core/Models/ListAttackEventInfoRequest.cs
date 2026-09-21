@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>211: ASP WebShell upload</description></item>
         /// <item><description>215: Special extension WebShell upload</description></item>
         /// <item><description>ai_webshell: WebShell upload intelligent defense</description></item>
-        /// <item><description>java_common_rce: Java common remote code execution (RCE) vulnerability blocked</description></item>
+        /// <item><description>java_common_rce: Java common RCE vulnerability blocked</description></item>
         /// <item><description>alinet_webrce: Adaptive web attack defense</description></item>
         /// </list>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttackType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return in a paged query.</para>
+        /// <para>The number of the page to return in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,6 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The timestamp of the end time.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1753152532550</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -92,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The timestamp of the start time.</para>
-        /// <para>This field is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1752547732549</para>

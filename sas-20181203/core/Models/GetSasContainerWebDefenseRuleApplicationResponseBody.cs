@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the container cluster.</para>
             /// <remarks>
-            /// <para>Call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
+            /// <para>You can call <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>

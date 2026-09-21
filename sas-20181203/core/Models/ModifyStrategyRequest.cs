@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the baseline check policy. Valid values:</para>
+        /// <para>The policy type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>custom</b>: a custom baseline check policy</description></item>
-        /// <item><description><b>common</b>: a standard baseline check policy</description></item>
+        /// <item><description><b>custom</b>: custom policy.</description></item>
+        /// <item><description><b>common</b>: standard policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,12 +25,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CustomType { get; set; }
 
         /// <summary>
-        /// <para>The new interval of the baseline check. Valid values:</para>
+        /// <para>The cycle of the baseline check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: every 2 days</description></item>
-        /// <item><description><b>3</b>: every 4 days</description></item>
-        /// <item><description><b>7</b>: every 8 days</description></item>
-        /// <item><description><b>30</b>: every 31 days</description></item>
+        /// <item><description><b>1</b>: Every 1 day.</description></item>
+        /// <item><description><b>3</b>: Every 3 days.</description></item>
+        /// <item><description><b>7</b>: Every 7 days.</description></item>
+        /// <item><description><b>30</b>: Every 30 days.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,16 +42,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CycleDays { get; set; }
 
         /// <summary>
-        /// <para>The new time range during which the baseline check starts. Valid values:</para>
+        /// <para>The start time of the baseline check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The baseline check starts within the time range from 00:00 to 06:00.</description></item>
-        /// <item><description><b>6</b>: The baseline check starts within the time range from 06:00 to 12:00.</description></item>
-        /// <item><description><b>12</b>: The baseline check starts within the time range from 12:00 to 18:00.</description></item>
-        /// <item><description><b>18</b>: The baseline check starts within the time range from 18:00 to 24:00.</description></item>
+        /// <item><description><b>0</b>: The baseline check starts between 00:00 and 06:00.</description></item>
+        /// <item><description><b>6</b>: The baseline check starts between 06:00 and 12:00.</description></item>
+        /// <item><description><b>12</b>: The baseline check starts between 12:00 and 18:00.</description></item>
+        /// <item><description><b>18</b>: The baseline check starts between 18:00 and 24:00.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
+        /// <para>The value indicates the start hour of the daily check period, in hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -61,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CycleStartTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.</para>
+        /// <para>The end time of the policy execution. Format: hh:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The new name of the baseline check policy.</para>
+        /// <para>The name of the baseline check policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,22 +94,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations of the baseline. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The custom configuration of baseline check items. The value is in JSON format and contains the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>typeName</b>: the name of the baseline.</para>
+        /// <item><description><para><b>typeName</b>: The baseline name.</para>
         /// </description></item>
-        /// <item><description><para><b>checkDetails</b>: the details of the baseline. The value is in the JSON format.</para>
+        /// <item><description><para><b>checkDetails</b>: The check details. The value is in JSON format.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>checkId</b>: the ID of the check item.</para>
+        /// <item><description><para><b>checkId</b>: The ID of the check item.</para>
         /// </description></item>
-        /// <item><description><para><b>rules</b>: the rule configurations. The value is in the JSON format.</para>
+        /// <item><description><para><b>rules</b>: The policy configuration. The value is in JSON format.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ruleId</b>: the ID of the rule.</para>
+        /// <item><description><para><b>ruleId</b>: The ID of the policy configuration.</para>
         /// </description></item>
-        /// <item><description><para><b>paramList</b>: the list of parameters in the rule. The value is in the JSON format.</para>
+        /// <item><description><para><b>paramList</b>: The collection of policy parameter settings. The value is in JSON format.</para>
         /// <list type="bullet">
-        /// <item><description><b>paramName</b>: the name of the parameter.</description></item>
-        /// <item><description><b>value</b>: the value of the parameter.</description></item>
+        /// <item><description><b>paramName</b>: The parameter name.</description></item>
+        /// <item><description><b>value</b>: The parameter settings value.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -125,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskCustomParams { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the baselines. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</para>
+        /// <para>The subtype of the check item. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the subtype.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.</para>
+        /// <para>The start time of the policy execution. Format: hh:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -157,10 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to apply the baseline check policy. Valid values:</para>
+        /// <para>The scan method of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>groupId</b>: asset groups</description></item>
-        /// <item><description><b>uuid</b>: assets</description></item>
+        /// <item><description><b>groupId</b>: group-based scan.</description></item>
+        /// <item><description><b>uuid</b>: asset-based scan.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

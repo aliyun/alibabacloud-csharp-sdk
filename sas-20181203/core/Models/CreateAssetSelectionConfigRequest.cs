@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -67,12 +67,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The target asset type. Valid values:</para>
+        /// <para>The Asset Type of the target. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>all_instance</b>: all servers.</description></item>
-        /// <item><description><b>instance</b>: select by server.</description></item>
-        /// <item><description><b>group</b>: select by group.</description></item>
-        /// <item><description><b>vpc</b>: select by VPC.</description></item>
+        /// <item><description><b>instance</b>: selected by server.</description></item>
+        /// <item><description><b>group</b>: selected by group.</description></item>
+        /// <item><description><b>vpc</b>: selected by VPC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

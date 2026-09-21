@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListInterceptionRulePageResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of information about the defense rules.</para>
+        /// <para>The list of queried rules.</para>
         /// </summary>
         [NameInMap("InterceptionRuleList")]
         [Validation(Required=false)]
         public List<ListInterceptionRulePageResponseBodyInterceptionRuleList> InterceptionRuleList { get; set; }
         public class ListInterceptionRulePageResponseBodyInterceptionRuleList : TeaModel {
             /// <summary>
-            /// <para>The destination network object.</para>
+            /// <para>The destination object.</para>
             /// </summary>
             [NameInMap("DstTarget")]
             [Validation(Required=false)]
             public ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget DstTarget { get; set; }
             public class ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget : TeaModel {
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>console</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of the affected images.</para>
+                /// <para>The list of affected images.</para>
                 /// </summary>
                 [NameInMap("ImageList")]
                 [Validation(Required=false)]
@@ -51,18 +51,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of information about the ports used by the destination server.</para>
+                /// <para>The port information of the destination server.</para>
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public List<string> Ports { get; set; }
 
                 /// <summary>
-                /// <para>The type of the defense rule. Valid values:</para>
+                /// <para>The rule type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>suggest</b>: intelligently recommended rule</description></item>
-                /// <item><description><b>customize</b>: custom rule</description></item>
-                /// <item><description><b>system</b>: system rule</description></item>
+                /// <item><description><b>suggest</b>: intelligent recommendation</description></item>
+                /// <item><description><b>customize</b>: user-defined</description></item>
+                /// <item><description><b>system</b>: system</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of tags added to the destination network object.</para>
+                /// <para>The list of destination tags for the network object.</para>
                 /// </summary>
                 [NameInMap("TagList")]
                 [Validation(Required=false)]
@@ -114,10 +114,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The interception mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: monitor</description></item>
-            /// <item><description><b>1</b>: block</description></item>
-            /// <item><description><b>2</b>: alert</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><b>0</b>: monitor mode</description></item>
+            /// <item><description><b>1</b>: Block Mode</description></item>
+            /// <item><description><b>2</b>: alert mode</description></item>
+            /// <item><description><b>3</b>: allow mode</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? InterceptType { get; set; }
 
             /// <summary>
-            /// <para>The order in which the entries are sorted.</para>
+            /// <para>The sort order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? OrderIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of the defense rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30****</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the defense rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The status of the defense rule. Valid values:</para>
+            /// <para>The switch status of the scheduling rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RuleSwitch { get; set; }
 
             /// <summary>
-            /// <para>The type of the defense rule.</para>
+            /// <para>The rule type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customize</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>The source network object.</para>
+            /// <para>The source object.</para>
             /// </summary>
             [NameInMap("SrcTarget")]
             [Validation(Required=false)]
             public ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget SrcTarget { get; set; }
             public class ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget : TeaModel {
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack-jenkins-lawr****</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of the images of the network object.</para>
+                /// <para>The list of associated images.</para>
                 /// </summary>
                 [NameInMap("ImageList")]
                 [Validation(Required=false)]
@@ -216,11 +216,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The type of the defense rule. Valid values:</para>
+                /// <para>The rule type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>suggest</b>: intelligently recommended rule</description></item>
-                /// <item><description><b>customize</b>: custom rule</description></item>
-                /// <item><description><b>system</b>: system rule</description></item>
+                /// <item><description><b>suggest</b>: intelligent recommendation</description></item>
+                /// <item><description><b>customize</b>: user-defined</description></item>
+                /// <item><description><b>system</b>: system</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of tags added to the source network object.</para>
+                /// <para>The list of source tags for the network object.</para>
                 /// </summary>
                 [NameInMap("TagList")]
                 [Validation(Required=false)]
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TargetName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the affected assets.</para>
+                /// <para>The type of the affected asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>containerId</para>
@@ -272,14 +272,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListInterceptionRulePageResponseBodyPageInfo PageInfo { get; set; }
         public class ListInterceptionRulePageResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records in the query result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACF97412-FD09-4D1F-994F-34DF12BR****</para>

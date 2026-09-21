@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// <para>You must specify at least one of TaskId and InstanceUuid. If neither is specified, the API returns HTTP 400 with error code -106.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ebc895506c6911ed800000163e0e****</para>
@@ -27,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// <para>You must specify at least one of TaskId and InstanceUuid. If neither is specified, the API returns HTTP 400 with error code -106.</para>
+        /// <para>Call DescribeUniBackupDatabase to obtain the InstanceUuid, and then pass it to StartPreCheckDatabase. The CreateMark returned by StartPreCheckDatabase is the TaskId required by this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-000bc9nqwxsbyvod****</para>

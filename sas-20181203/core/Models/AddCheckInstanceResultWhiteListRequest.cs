@@ -40,7 +40,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: performs the actual operation.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The remarks. Maximum length: 65535 bytes.</para>
+        /// <para>The remarks. Maximum length: 65,535 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

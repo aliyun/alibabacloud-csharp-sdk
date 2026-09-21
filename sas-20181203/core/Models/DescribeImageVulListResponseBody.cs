@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The page number of the current page when paging is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities displayed per page in a paging query. Default value: <b>10</b>, which indicates that 10 vulnerabilities are displayed per page.</para>
+        /// <para>The number of vulnerabilities displayed per page when paging is used. Default value: <b>10</b>, which indicates that 10 vulnerabilities are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vulnerability can be fixed in the console. Valid values:</para>
+            /// <para>Indicates whether the vulnerability can be fixed from the console. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>yes</b>: Can be fixed.</description></item>
             /// <item><description><b>no</b>: Cannot be fixed.</description></item>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CanFix { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the software package that caused the vulnerability can be upgraded through Security Center. Valid values:</para>
+            /// <para>Indicates whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Upgrade is supported.</description></item>
             /// <item><description><b>false</b>: Upgrade is not supported.</description></item>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>docker-law</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container.</para>
+            /// <para>The container ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OsRelease { get; set; }
 
                 /// <summary>
-                /// <para>The list of software packages that caused the vulnerability.</para>
+                /// <para>The list of software packages that cause the vulnerability.</para>
                 /// </summary>
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
@@ -372,11 +372,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The priority level for fixing the vulnerability. Valid values:</para>
+            /// <para>The priority of vulnerability fixing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>asap</b>: High-priority vulnerability that must be fixed as soon as possible.</description></item>
-            /// <item><description><b>later</b>: Medium-priority vulnerability that can be fixed later.</description></item>
-            /// <item><description><b>nntf</b>: Low-priority vulnerability that does not need to be fixed for now.</description></item>
+            /// <item><description><b>asap</b>: high-priority vulnerability</description></item>
+            /// <item><description><b>later</b>: medium-priority vulnerability</description></item>
+            /// <item><description><b>nntf</b>: low-priority vulnerability</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PrimaryId { get; set; }
 
             /// <summary>
-            /// <para>The details of the related vulnerability.</para>
+            /// <para>The details of the associated vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2019-9893</para>

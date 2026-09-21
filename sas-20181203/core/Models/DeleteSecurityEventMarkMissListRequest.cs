@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSecurityEventMarkMissListRequest : TeaModel {
         /// <summary>
-        /// <para>The list of alert whitelisting rule IDs.</para>
+        /// <para>The list of alert whitelist rule IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The edition to automatically bind when new assets are added. Valid values:</para>
+        /// <para>The edition that is automatically bound when new assets are added. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
@@ -95,21 +95,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The abbreviated name of the cloud service. Valid values:</para>
+        /// <para>The abbreviation of the cloud service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sas</b>: Security Center</description></item>
         /// </list>

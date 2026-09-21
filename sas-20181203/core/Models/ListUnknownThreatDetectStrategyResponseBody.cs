@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectStrategyResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectStrategyResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries displayed on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paging query.</para>
+            /// <para>The page number of the current page in a paged query. This is used for paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries displayed on each page in a paging query.</para>
+            /// <para>The maximum number of entries per page in a paged query. This is used for paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidsByVulNamesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
+        /// <para>Specifies whether the vulnerability has been handled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>y</b>: Handled.</description></item>
         /// <item><description><b>n</b>: Not handled.</description></item>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The vulnerability level. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The vulnerability severity level. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>high</b>: High.</description></item>
         /// <item><description><b>medium</b>: Medium.</description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The priority level of the vulnerability fix. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The priority level of vulnerability fixing to query. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asap</b>: High.</description></item>
         /// <item><description><b>later</b>: Medium.</description></item>
@@ -112,6 +112,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

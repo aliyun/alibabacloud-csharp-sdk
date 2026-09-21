@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UploadedHoneyPotFileRequest : TeaModel {
         /// <summary>
-        /// <para>The FileKey used to upload the file.</para>
+        /// <para>The FileKey used for the uploaded file.</para>
         /// <remarks>
         /// <para>Format: HONEYPOT_FILE/{timestamp}_{custom_file_name}</para>
         /// </remarks>
+        /// <para>You must obtain this value by calling GetHoneyPotUploadPolicyInfo and use the returned Data.Key. Do not construct this value manually based on the format. First obtain the upload policy, then upload the file by using the policy, and finally call this operation to register the upload result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The name of the honeypot image.</para>
+        /// <para>The honeypot image name.</para>
+        /// <para>Obtain valid values by calling ListAvailableHoneypot and using the HoneypotImageName field value from the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotImageName { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -73,8 +75,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the honeypot management node.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.
-        /// Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam (400). Call ListHoneypotNode to obtain a valid NodeId.</para>
+        /// <para>Call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to obtain this value.
+        /// Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam(400). Call ListHoneypotNode to obtain a valid NodeId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

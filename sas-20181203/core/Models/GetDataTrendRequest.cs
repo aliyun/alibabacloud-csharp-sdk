@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>VUL_NEW</b>: number of new vulnerability risks</description></item>
         /// <item><description><b>VUL_OPERATE</b>: number of handled vulnerability risks</description></item>
         /// <item><description><b>SUSP_NEW</b>: number of new alert risks</description></item>
-        /// <item><description><b>SUSP_OPERATE</b>: number of handled alert risks.</description></item>
+        /// <item><description><b>SUSP_OPERATE</b>: number of handled alert risks</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,6 +53,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

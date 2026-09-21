@@ -160,18 +160,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>Hacktool</b>: Hacking tool.</description></item>
             /// <item><description><b>Engtest</b>: DPI engine test program.</description></item>
             /// <item><description><b>Downloader</b>: Downloader trojan.</description></item>
-            /// <item><description><b>Virus</b>: File infector virus.</description></item>
+            /// <item><description><b>Virus</b>: File-infecting virus.</description></item>
             /// <item><description><b>Miner</b>: Mining programs.</description></item>
             /// <item><description><b>Worm</b>: Worms.</description></item>
-            /// <item><description><b>DDoS</b>: DDoS trojan.</description></item>
-            /// <item><description><b>Malware</b>: Malware.</description></item>
+            /// <item><description><b>DDoS</b>: DDoS Trojan.</description></item>
+            /// <item><description><b>Malware</b>: Malicious program.</description></item>
             /// <item><description><b>Backdoor</b>: Reverse shell backdoor.</description></item>
-            /// <item><description><b>RiskWare</b>: Riskware.</description></item>
+            /// <item><description><b>RiskWare</b>: Risky software.</description></item>
             /// <item><description><b>Proxytool</b>: Proxy tool.</description></item>
             /// <item><description><b>Suspicious</b>: Suspicious program.</description></item>
             /// <item><description><b>MalScript</b>: Malicious script.</description></item>
             /// <item><description><b>Rootkit</b>: Rootkit.</description></item>
-            /// <item><description><b>Exploit</b>: Vulnerability exploits program.</description></item>
+            /// <item><description><b>Exploit</b>: Vulnerability exploits.</description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is invalid when Result is 0 or 3.</para>

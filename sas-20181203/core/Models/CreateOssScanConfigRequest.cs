@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of decompression layers when multiple levels of nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of decompression layers when nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> DecryptionList { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enabled.</description></item>
-        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enable.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> KeySuffixList { get; set; }
 
         /// <summary>
-        /// <para>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</para>
+        /// <para>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1724301769834</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</para>
+        /// <para>Specifies whether to enable real-time incremental scanning. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RealTimeIncr { get; set; }
 
         /// <summary>
-        /// <para>The scan schedule. The number represents the day of the week.</para>
+        /// <para>The scan schedule. The number indicates the day of the week.</para>
         /// </summary>
         [NameInMap("ScanDayList")]
         [Validation(Required=false)]

@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpgradeBackupPolicyVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware protection policy.</para>
+        /// <para>The ID of the anti-ransomware mitigation policies.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> to obtain this parameter.</para>
         /// </remarks>
+        /// <para>Only policy IDs with PolicyVersion set to 1.0.0 and UpgradeStatus set to NotUpgraded are supported. Otherwise, the API returns an InvalidParam fault.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

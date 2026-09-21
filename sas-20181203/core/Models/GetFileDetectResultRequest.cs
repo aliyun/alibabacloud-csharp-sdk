@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileDetectResultRequest : TeaModel {
         /// <summary>
-        /// <para>The list of file identifiers. A maximum of 100 elements can be specified.</para>
+        /// <para>The list of file identifiers. A maximum of 200 elements can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HashKeyList")]

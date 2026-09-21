@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SubmitCheckRequest : TeaModel {
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The scan range. Valid values:</para>
+        /// <para>The check scope. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>FULL</b>: scans all check items</description></item>
         /// <item><description><b>POLICY</b>: scans custom-configured check items</description></item>

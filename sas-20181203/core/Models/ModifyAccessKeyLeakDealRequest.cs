@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAccessKeyLeakDealRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AccessKey pair leak record.</para>
+        /// <para>The ID of the AccessKey leak record.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and the <b>IdList</b> parameter cannot both be empty.</para>
+        /// <para>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and <b>IdList</b> cannot both be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the AccessKey pair leak records.</para>
+        /// <para>The collection of AccessKey leak record IDs.</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
 
         /// <summary>
-        /// <para>The remarks for handling the AccessKey pair leak record.</para>
+        /// <para>The remarks for handling the AccessKey leak record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disabled.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The method to handle the AccessKey pair leak information. Valid values:</para>
+        /// <para>The method used to handle the AccessKey leak information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>manual</b>: Manual handling.</description></item>
         /// <item><description><b>disable</b>: Disable.</description></item>

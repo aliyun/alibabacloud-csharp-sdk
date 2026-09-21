@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportConfigDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of report chart configurations. Multiple IDs are separated by commas (,).</para>
+        /// <para>The IDs of the report chart configurations. Multiple IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether newly added accounts are included by default. Valid values:</para>
+        /// <para>Indicates whether newly added accounts are connected by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.<remarks>

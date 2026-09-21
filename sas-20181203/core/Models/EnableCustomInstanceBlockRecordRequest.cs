@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class EnableCustomInstanceBlockRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address that you want to block.</para>
+        /// <para>The IP address for brute-force attacks prevention that you want to enable on the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BlockIp { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction from the IP address that you want to block. Valid value:</para>
+        /// <para>The direction in which the brute-force attacks blocking policy blocks the IP address on the server.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b></description></item>
-        /// <item><description><b>out</b></description></item>
+        /// <item><description><b>in</b>: inbound</description></item>
+        /// <item><description><b>out</b>: outbound</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

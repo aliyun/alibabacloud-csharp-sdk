@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert events are handled. Valid values:</para>
+        /// <para>Indicates whether the alert event is handled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Handled.</description></item>
-        /// <item><description><b>false</b>: Not handled.</description></item>
+        /// <item><description><b>false</b>: Failed to handle.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

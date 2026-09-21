@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset. Valid values:</para>
+        /// <para>The Asset Type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to <b>ecs</b>, which specifies to query all Elastic Compute Service (ECS) instances.</description></item>
+        /// <item><description><b>ecs</b>: queries all ECS servers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -22,15 +22,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether the fuzzy query field supports automatic matching. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? SupportAutoTag { get; set; }
 
         /// <summary>
-        /// <para>The keyword that you specify for fuzzy search when you query the asset.</para>
+        /// <para>The fuzzy match value entered when querying assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.96</para>

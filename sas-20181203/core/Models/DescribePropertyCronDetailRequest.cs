@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCronDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the results to return. Default value: <b>1</b>, which indicates that the results start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that marks the position from which you want to start reading. Leave this parameter empty to read from the beginning.</para>
+        /// <para>The token that marks the current position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
         /// <remarks>
         /// <para>You do not need to specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response includes the NextToken value for the next call.</para>
         /// </remarks>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Settings the number of scheduled task asset fingerprint information entries displayed per page in a paging query. Default value: <b>10</b>, which indicates that 10 entries of scheduled task asset fingerprint information are displayed per page.</para>
+        /// <para>Settings the number of entries per page in a paging query. Default value: <b>10</b>, which indicates that 10 fingerprint entries of scheduled task assets are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name or IP address of the server that you want to query.</para>
+        /// <para>The name or IP address of the server to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -67,13 +67,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The task path that you want to query.</para>
+        /// <para>The path of the scheduled task to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/etc/cron.d/root</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UseNextToken { get; set; }
 
         /// <summary>
-        /// <para>The account name of the scheduled task that you want to query.</para>
+        /// <para>The account name of the scheduled task to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server that you want to query.</para>
+        /// <para>The UUID of the server to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50d213b4-3a35-427a-b8a5-04b0c7e1****</para>

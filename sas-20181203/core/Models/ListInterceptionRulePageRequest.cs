@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListInterceptionRulePageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
+        /// <para>This parameter must be the ID of an ACK cluster that has the container firewall feature enabled. Call DescribeClusterInfoList with Type set to interceptionSwitch, or call ListClusterInterceptionConfig to query available clusters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +32,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The type of the search condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ID</b></description></item>
+        /// <item><description><b>ID</b> </description></item>
         /// <item><description><b>RULE_NAME</b></description></item>
         /// <item><description><b>SRC_TARGET</b></description></item>
         /// <item><description><b>DST_TARGET</b></description></item>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page when using paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page when using paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

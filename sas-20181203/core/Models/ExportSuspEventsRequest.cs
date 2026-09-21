@@ -174,12 +174,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Alarm Metric of the alerting events to query. Valid values:</para>
+        /// <para>The alert type of the alert events to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Abnormal process behavior</b></description></item>
         /// <item><description><b>Web shell</b></description></item>
         /// <item><description><b>Unusual logon</b></description></item>
-        /// <item><description><b>Anomaly event</b></description></item>
+        /// <item><description><b>Abnormal event</b></description></item>
         /// <item><description><b>Sensitive file tampering</b></description></item>
         /// <item><description><b>Malicious process (cloud scan)</b></description></item>
         /// <item><description><b>Suspicious network connection</b></description></item>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>Web application threat detection</b></description></item>
         /// <item><description><b>Malicious script</b></description></item>
         /// <item><description><b>Threat intelligence</b></description></item>
-        /// <item><description><b>Malicious network connectivity behavior</b></description></item>
+        /// <item><description><b>Malicious network behavior</b></description></item>
         /// <item><description><b>Container cluster exception</b></description></item>
         /// <item><description><b>Web shell (local scan)</b></description></item>
         /// <item><description><b>Vulnerability exploits</b></description></item>
@@ -219,10 +219,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource folder.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

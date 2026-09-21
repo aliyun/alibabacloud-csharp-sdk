@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnfinishedOnceTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task details.</para>
+        /// <para>The list of task details.</para>
         /// </summary>
         [NameInMap("OnceTasks")]
         [Validation(Required=false)]
         public List<ListUnfinishedOnceTaskResponseBodyOnceTasks> OnceTasks { get; set; }
         public class ListUnfinishedOnceTaskResponseBodyOnceTasks : TeaModel {
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670307567000</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is completed. Valid values:</para>
+            /// <para>Indicates whether the task is completed.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not completed</description></item>
-            /// <item><description><b>1</b>: completed.</description></item>
+            /// <item><description><b>0</b>: Not completed.</description></item>
+            /// <item><description><b>1</b>: Completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Progress { get; set; }
 
             /// <summary>
-            /// <para>The task execution time.</para>
+            /// <para>The task execution time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670307567000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task execution.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640102400000</para>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The running status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: pending</description></item>
-            /// <item><description><b>START</b>: started</description></item>
-            /// <item><description><b>SUCCESS</b>: completed</description></item>
-            /// <item><description><b>TIMEOUT</b>: timed out.</description></item>
+            /// <item><description><b>INIT</b>: Pending.</description></item>
+            /// <item><description><b>START</b>: Started.</description></item>
+            /// <item><description><b>SUCCESS</b>: Completed.</description></item>
+            /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,8 +129,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The scan object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IMAGE_REPO</b>: image repository.</description></item>
-            /// <item><description><b>IMAGE</b>: image.</description></item>
+            /// <item><description><b>IMAGE_REPO</b>: Image repository.</description></item>
+            /// <item><description><b>IMAGE</b>: Image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The cluster name used to query the instance list of a specific cluster under the service.</para>
+                /// <para>The cluster name. This parameter is required to query the instance list of a specific cluster under the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACK-test-****</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172.18.XXX.XXX</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries. This parameter takes effect for paged query and paging.</para>
+            /// <para>The total count. This parameter takes effect during paged query with paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>

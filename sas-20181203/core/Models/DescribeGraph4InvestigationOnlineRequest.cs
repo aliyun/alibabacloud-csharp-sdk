@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeGraph4InvestigationOnlineRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID. The value is in the data.SuspEvents[index].UniqueInfo path.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>786fc80896b25422b5324cb6e57bxxxx</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The UUID of the asset associated with the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID. The value is in the data.SuspEvents[index].Uuid path.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3502e4b0-f362-4059-84a2-f47fa2b5exxx</para>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnomalyUuid { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

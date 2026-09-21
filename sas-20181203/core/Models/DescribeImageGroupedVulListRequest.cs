@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageGroupedVulListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter by agentless fix capability. true: queries only vulnerabilities that support agentless fix. false: queries vulnerabilities that are not marked as supporting agentless fix. If this parameter is not specified, no filtering is applied based on this condition.</para>
+        /// <para>Specifies whether to filter by agentless fix capability. If set to true, only vulnerabilities that support agentless fix are returned. If set to false, only vulnerabilities that are not marked as supporting agentless fix are returned. If not specified, no filtering is applied based on this condition.</para>
         /// </summary>
         [NameInMap("AgentlessCanFix")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not set, vulnerabilities for all images are queried. Valid values:</para>
+        /// <para>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not specified, vulnerabilities for all images are queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The priority level for fixing the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: High-priority vulnerability that must be fixed as soon as possible.</description></item>
+        /// <item><description><b>asap</b>: High-priority vulnerability that requires immediate fixing.</description></item>
         /// <item><description><b>later</b>: Medium-priority vulnerability that can be fixed later.</description></item>
         /// <item><description><b>nntf</b>: Low-priority vulnerability that does not need to be fixed for now.</description></item>
         /// </list>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of image vulnerabilities to display on each page in a paging query. Default value: <b>20</b>, which indicates 20 image vulnerabilities per page.</para>
+        /// <para>Settings for the number of image vulnerabilities to display on each page in a paging query. Default value: <b>20</b>, which indicates that 20 image vulnerabilities are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -227,6 +227,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

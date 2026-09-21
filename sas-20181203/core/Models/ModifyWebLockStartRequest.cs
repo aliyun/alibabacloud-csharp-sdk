@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The defense mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>block</b>: block</description></item>
-        /// <item><description><b>audit</b>: alert.</description></item>
+        /// <item><description><b>block</b>: Block.</description></item>
+        /// <item><description><b>audit</b>: Alert.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The protection directories. Separate multiple directories with commas (,).</para>
+        /// <para>The server automatically appends a forward slash (/) to the end of the directory path during storage. Use paths with a trailing slash to avoid matching inconsistencies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,9 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dir { get; set; }
 
         /// <summary>
-        /// <para>The folder that does not require web tamper proofing protection (excluded folder).</para>
+        /// <para>The directories that do not require web tamper-proofing protection (excluded directories).</para>
         /// <remarks>
-        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
+        /// <para>This parameter is required when the protection mode <b>Mode</b> is set to <b>blacklist</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveDir { get; set; }
 
         /// <summary>
-        /// <para>The files that do not require web tamper proofing protection (excluded files).</para>
+        /// <para>The files that do not require web tamper-proofing protection (excluded files).</para>
         /// <remarks>
-        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
+        /// <para>This parameter is required when the protection mode <b>Mode</b> is set to <b>blacklist</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveFile { get; set; }
 
         /// <summary>
-        /// <para>The file types that do not require web tamper proofing protection (excluded file types). Separate multiple file types with commas (,). Valid values:</para>
+        /// <para>The file types that do not require web tamper-proofing protection (excluded file types). Separate multiple file types with semicolons (;). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>php</description></item>
         /// <item><description>jsp</description></item>
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>png</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
+        /// <para>This parameter is required when the protection mode <b>Mode</b> is set to <b>blacklist</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveFileType { get; set; }
 
         /// <summary>
-        /// <para>The file types that require web tamper proofing protection. Separate multiple file types with commas (,). Valid values:</para>
+        /// <para>The file types that require web tamper-proofing protection. Separate multiple file types with semicolons (;). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>php</description></item>
         /// <item><description>jsp</description></item>
@@ -109,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>png</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>whitelist</b> pattern.</para>
+        /// <para>This parameter is required when the protection mode <b>Mode</b> is set to <b>whitelist</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,10 +121,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InclusiveFileType { get; set; }
 
         /// <summary>
-        /// <para>The local backup path used to back up the protection directories. The format of the protection directory path may differ between Linux servers and Windows servers. Make sure that you enter the path in the correct format. The following examples show the directory formats:</para>
+        /// <para>The local backup path used to securely back up the protection directories.<br>The format of the protection directory path may differ between Linux servers and Windows servers. Make sure that you enter the correct format. The following directory formats are provided for reference:</para>
         /// <list type="bullet">
         /// <item><description>Linux server: /usr/local/aegis/bak</description></item>
-        /// <item><description>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak.</description></item>
+        /// <item><description>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -137,8 +138,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The protection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>whitelist</b>: whitelist mode. Protects the specified protection directories and file types.</description></item>
-        /// <item><description><b>blacklist</b>: blacklist mode. Protects all subdirectories, file types, and specified files in the protection directories that are not excluded.</description></item>
+        /// <item><description><b>whitelist</b>: Whitelist mode. Protects the specified protection directories and file types.</description></item>
+        /// <item><description><b>blacklist</b>: Blacklist mode. Protects all subdirectories, file types, and specified files under the protection directories that are not excluded.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

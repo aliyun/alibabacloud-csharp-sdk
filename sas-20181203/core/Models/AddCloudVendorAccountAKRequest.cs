@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>primary</b>: Primary account.</description></item>
         /// <item><description><b>sub</b>: Sub-account.</description></item>
         /// <item><description><b>ctdr</b>: Agentic SOC.<remarks>
-        /// <para>Warning: When the vendor is <b>CHAITIN</b>, <b>FORTINET</b>, <b>THREATBOOK</b>, or <b>WIZ</b>, set this parameter to ctdr.</warning></para>
+        /// <para>Warning: If the vendor is <b>CHAITIN</b>, <b>FORTINET</b>, <b>THREATBOOK</b>, or <b>WIZ</b>, set this parameter to ctdr.</warning></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The list of AK-associated modules.</para>
+        /// <para>If AkType is set to ctdr, this parameter is required. Specify at least one module, such as SIEM, HOST, or CSPM. If this parameter is not specified, the API returns HTTP 400 with error code -101.</para>
         /// </summary>
         [NameInMap("AuthModules")]
         [Validation(Required=false)]
@@ -49,14 +50,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CtdrCloudUserId { get; set; }
 
         /// <summary>
-        /// <para>The account domain for access. Valid values:</para>
+        /// <para>The account domain for connection. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>china</b>: China</description></item>
         /// <item><description><b>global</b>: Global</description></item>
         /// <item><description><b>europe</b>: Huawei Cloud Europe</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only when <b>Vendor</b> is set to <b>HUAWEICLOUD</b>, <b>Azure</b>, <b>AWS</b>, <b>VOLCENGINE</b>, <b>KingsoftCloud</b>, <b>UCloud</b>, or <b>BaiduCloud</b>, and is required. Set this parameter to <b>china</b> for KingsoftCloud and BaiduCloud, and to <b>global</b> for UCloud.</para>
+        /// <para>This parameter is valid only when <b>Vendor</b> is set to <b>HUAWEICLOUD</b>, <b>Azure</b>, <b>AWS</b>, <b>VOLCENGINE</b>, <b>KingsoftCloud</b>, <b>UCloud</b>, or <b>BaiduCloud</b>, and is required. For KingsoftCloud and BaiduCloud, set this parameter to <b>china</b>. For UCloud, set this parameter to <b>global</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,8 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The extended information.</para>
         /// <remarks>
-        /// <para>Used to record extended information for different vendors.
-        /// Google Cloud is accessed through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and private_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain.</para>
+        /// <para>Used to store extended information for different vendors.
+        /// Google Cloud is connected through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and private_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The AK parameter ID. Valid values:</para>
         /// <ol>
-        /// <item><description>When AkType is set to primary:</description></item>
+        /// <item><description>If AkType is set to primary:</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: AccessKeyId of the primary account</description></item>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>VOLCENGINE</b>: AccessKeyId of the primary account</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>When AkType is set to sub:</description></item>
+        /// <item><description>If AkType is set to sub:</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: AccessKeyId of the sub-account</description></item>
@@ -128,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>google</b>: private_key_id</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If AkType is set to <b>primary</b>, this value is the SecretID of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Access Key ID of the sub-account on the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>appId</b> in the authentication information. Google Cloud is accessed through a service account. AkType defaults to sub, and this value is the private_key_id property value from the JSON-formatted service key file.</para>
+        /// <para>If AkType is set to <b>primary</b>, this value is the SecretID of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Access Key ID of the sub-account on the third-party cloud. For <b>Azure</b>, no distinction is made. This value is the <b>appId</b> in the authentication information. Google Cloud is connected through a service account. AkType defaults to sub, and this value is the private_key_id property value from the JSON-formatted service key file.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -142,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The AK parameter secret. Valid values:</para>
         /// <ol>
-        /// <item><description>When AkType is set to primary:</description></item>
+        /// <item><description>If AkType is set to primary:</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: SecretAccessKey of the primary account</description></item>
@@ -151,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>AWS</b>: SecretAccessKey of the primary account</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>When AkType is set to sub:</description></item>
+        /// <item><description>If AkType is set to sub:</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: SecretAccessKey of the sub-account</description></item>
@@ -159,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>Azure</b>: ClientSecret</description></item>
         /// <item><description><b>AWS</b>: SecretAccessKey of the sub-account</description></item>
         /// <item><description><b>google</b>: private_key<remarks>
-        /// <para>If AkType is set to <b>primary</b>, this value is the Secret Access Key of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Secret Access Key of the sub-account on the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>password</b> in the authentication information. Google Cloud is accessed through a service account. AkType defaults to sub, and this value is the private_key property value from the JSON-formatted service key file.</para>
+        /// <para>If AkType is set to <b>primary</b>, this value is the Secret Access Key of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Secret Access Key of the sub-account on the third-party cloud. For <b>Azure</b>, no distinction is made. This value is the <b>password</b> in the authentication information. Google Cloud is connected through a service account. AkType defaults to sub, and this value is the private_key property value from the JSON-formatted service key file.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

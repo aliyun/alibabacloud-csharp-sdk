@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier that Alibaba Cloud generated for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADE57832-9666-511C-9A80-B87DE2E8****</para>

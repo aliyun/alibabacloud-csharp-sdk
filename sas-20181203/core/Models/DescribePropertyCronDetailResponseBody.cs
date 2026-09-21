@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyCronDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyCronDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of fingerprint information entries for scheduled task assets on the current page.</para>
+            /// <para>The number of fingerprint entries of scheduled task assets displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of scheduled task asset fingerprint information entries displayed per page in a paging query. Default value: <b>10</b>, which indicates that 10 entries of scheduled task asset fingerprint information are displayed per page.</para>
+            /// <para>The number of fingerprint entries of scheduled task assets displayed per page in a paging query. Default value: <b>10</b>, which indicates that 10 fingerprint entries of scheduled task assets are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of fingerprint information entries for scheduled task assets.</para>
+            /// <para>The total number of fingerprint entries of scheduled task assets returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of the fingerprint information for scheduled task assets.</para>
+        /// <para>The details of the fingerprint entries of scheduled task assets returned.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyCronDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyCronDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>The execution command of the scheduled task.</para>
+            /// <para>The command executed by the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/lib64/sa/sa1 1 1</para>

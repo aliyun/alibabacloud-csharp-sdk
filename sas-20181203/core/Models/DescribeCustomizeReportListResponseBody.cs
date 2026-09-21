@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reports.</para>
+        /// <para>The list of security report information.</para>
         /// </summary>
         [NameInMap("ReportList")]
         [Validation(Required=false)]
         public List<DescribeCustomizeReportListResponseBodyReportList> ReportList { get; set; }
         public class DescribeCustomizeReportListResponseBodyReportList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the report is the default report. Valid values:</para>
+            /// <para>Indicates whether the report is a default report. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><b>0</b>: Not a default report.</description></item>
+            /// <item><description><b>1</b>: Default report.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the report is pinned. Unit: milliseconds.</para>
+            /// <para>The timestamp when the report is pinned to the top. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721836800000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PinnedTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent days for report statistics.</para>
+            /// <para>The number of recent days covered by the report statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ReportDays { get; set; }
 
             /// <summary>
-            /// <para>The end date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp when the report sending ends. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721923199999</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ReportEndDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the report.</para>
+            /// <para>The security report ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ReportId { get; set; }
 
             /// <summary>
-            /// <para>The start date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp when the report sending starts. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721836800000</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ReportStartDate { get; set; }
 
             /// <summary>
-            /// <para>The state of the report. Valid values:</para>
+            /// <para>The report status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,12 +95,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ReportStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the report. Valid values:</para>
+            /// <para>The report type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: daily report</description></item>
-            /// <item><description><b>1</b>: weekly report</description></item>
-            /// <item><description><b>2</b>: monthly report</description></item>
-            /// <item><description><b>3</b>: report whose statistics are collected in a custom time range</description></item>
+            /// <item><description><b>0</b>: Daily report.</description></item>
+            /// <item><description><b>1</b>: Weekly report.</description></item>
+            /// <item><description><b>2</b>: Monthly report.</description></item>
+            /// <item><description><b>3</b>: Custom period.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ReportType { get; set; }
 
             /// <summary>
-            /// <para>The report version.</para>
+            /// <para>The security report version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ReportVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the report.</para>
+            /// <para>The report name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9FBC6E47-7508-58C9-9E76-528E118CB1CC</para>

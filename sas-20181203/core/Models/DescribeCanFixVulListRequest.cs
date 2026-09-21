@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The container image instance ID.</para>
+        /// <para>The ID of the container image instance.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry to obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>asap</b>: high</description></item>
         /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low.</description></item>
+        /// <item><description><b>nntf</b>: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the image repository.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the value of the <b>RepoId</b> response parameter.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the image repository ID from the <b>RepoId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,9 +203,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The container image instance ID.</para>
+        /// <para>The ID of the container image instance.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry to obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,6 +265,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account of a member account in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -309,7 +318,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The vulnerability type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: system vulnerability</description></item>
-        /// <item><description><b>sca</b>: application vulnerability.</description></item>
+        /// <item><description><b>sca</b>: application vulnerability</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

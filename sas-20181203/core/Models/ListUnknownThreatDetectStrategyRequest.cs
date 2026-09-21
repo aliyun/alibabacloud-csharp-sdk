@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The page number of the current page when using paged query. This is used for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to display on each page in a paging query.</para>
+        /// <para>The number of entries to display on each page when using paged query. This is used for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

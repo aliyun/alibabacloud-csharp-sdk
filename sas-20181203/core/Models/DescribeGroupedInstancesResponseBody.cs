@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The server group type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Default group.</description></item>
-            /// <item><description><b>1</b>: Other group.</description></item>
+            /// <item><description><b>0</b>: default group</description></item>
+            /// <item><description><b>1</b>: other group</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupFlag { get; set; }
 
             /// <summary>
-            /// <para>The total number of compute cores of all assets of the specified asset type.</para>
+            /// <para>The total number of compute cores for all assets of the specified asset type.</para>
             /// <remarks>
-            /// <para>If the request parameter <b>MachineTypes</b> is not set, this parameter returns the total number of compute cores of assets of all types.</para>
+            /// <para>If the <b>MachineTypes</b> request parameter is not set, this parameter returns the total number of compute cores for assets of all types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The total number of assets of the specified asset type.</para>
             /// <remarks>
-            /// <para>If the request parameter <b>MachineTypes</b> is not set, this parameter returns the total number of assets of all types.</para>
+            /// <para>If the <b>MachineTypes</b> request parameter is not set, this parameter returns the total number of assets of all types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

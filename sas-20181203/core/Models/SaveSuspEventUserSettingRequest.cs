@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SaveSuspEventUserSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The data source of the exception. Set the value to sas.</para>
+        /// <para>The source of the exception event data. Set the value to sas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The severities of alert notifications. Valid values:</para>
+        /// <para>The alert level for alert notifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>remind</b></description></item>
-        /// <item><description><b>suspicious</b></description></item>
-        /// <item><description><b>serious</b></description></item>
+        /// <item><description><b>remind</b>: Reminder.</description></item>
+        /// <item><description><b>suspicious</b>: Suspicious.</description></item>
+        /// <item><description><b>serious</b>: Urgent.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,6 +34,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string LevelsOn { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

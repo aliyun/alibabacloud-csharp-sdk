@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of cloud product. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: server</description></item>
+        /// <item><description><b>0</b>: cloud server</description></item>
         /// <item><description><b>1</b>: load balancing</description></item>
         /// <item><description><b>3</b>: ApsaraDB RDS database</description></item>
         /// <item><description><b>4</b>: ApsaraDB for MongoDB database</description></item>
@@ -54,12 +54,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>14</b>: Apsara Devops</description></item>
         /// <item><description><b>15</b>: access control</description></item>
         /// <item><description><b>16</b>: Anti-DDoS</description></item>
-        /// <item><description><b>17</b>: Web Application Firewall</description></item>
+        /// <item><description><b>17</b>: Web application firewall</description></item>
         /// <item><description><b>18</b>: OSS</description></item>
         /// <item><description><b>19</b>: cloud-native relational database PolarDB</description></item>
         /// <item><description><b>20</b>: ApsaraDB RDS for PostgreSQL database</description></item>
-        /// <item><description><b>21</b>: Microservices Engine</description></item>
-        /// <item><description><b>22</b>: File Storage NAS</description></item>
+        /// <item><description><b>21</b>: microservices engine</description></item>
+        /// <item><description><b>22</b>: file storage NAS</description></item>
         /// <item><description><b>23</b>: Data Security Center</description></item>
         /// <item><description><b>24</b>: EIP</description></item>
         /// </list>
@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -85,10 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The server vendor. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-        /// <item><description><b>1</b>: asset outside the cloud</description></item>
+        /// <item><description><b>1</b>: Non-cloud asset</description></item>
         /// <item><description><b>2</b>: IDC asset</description></item>
-        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: third-party cloud asset</description></item>
-        /// <item><description><b>8</b>: lightweight asset</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: Third-party cloud asset</description></item>
+        /// <item><description><b>8</b>: Lightweight asset</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

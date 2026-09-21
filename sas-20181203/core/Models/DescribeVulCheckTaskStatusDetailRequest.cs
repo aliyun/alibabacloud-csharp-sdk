@@ -14,6 +14,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -35,6 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The UUID of the server to query.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns HTTP 503 with the error code ServiceUnavailable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</para>

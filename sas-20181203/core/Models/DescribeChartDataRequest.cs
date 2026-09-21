@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>CID_ASSET_RISK_TREND</para>
+        /// <para>BIZ_STAT_QUERY_SECURITY_SCORE</para>
         /// </summary>
         [NameInMap("CharId")]
         [Validation(Required=false)]
@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>CID_VUL_SUMMARY</para>
+        /// <para>BIZ_STAT_QUERY_SECURITY_SCORE</para>
         /// </summary>
         [NameInMap("ChartId")]
         [Validation(Required=false)]
         public string ChartId { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,6 +62,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ReportId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

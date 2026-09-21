@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetSelectionType { get; set; }
 
         /// <summary>
-        /// <para>The number of days after the model is initially created before learning ends.</para>
+        /// <para>The number of days after the model is initially created before the learning phase ends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterInit { get; set; }
 
         /// <summary>
-        /// <para>The number of days after no new processes are added to the model before learning ends.</para>
+        /// <para>The number of days after which the model ends when no new processes are added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

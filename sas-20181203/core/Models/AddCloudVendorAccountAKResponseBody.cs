@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCloudVendorAccountAKResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the added AK.</para>
+        /// <para>The AK information that is added.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The module status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: In use.</description></item>
-                /// <item><description><b>1</b>: Usage exception.</description></item>
+                /// <item><description><b>1</b>: Abnormal.</description></item>
                 /// <item><description><b>2</b>: Validity verification in progress.</description></item>
                 /// <item><description><b>3</b>: Validity verification timed out.</description></item>
                 /// </list>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? ModuleServiceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The description of permissions associated with the module.</para>
+                /// <para>The associate permission description for the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read permission of the cloud server or virtual machine</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The AK usage status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: In use.</description></item>
-            /// <item><description><b>1</b>: Usage exception.</description></item>
+            /// <item><description><b>1</b>: Abnormal.</description></item>
             /// <item><description><b>2</b>: Validity verification in progress.</description></item>
             /// <item><description><b>3</b>: Validity verification timed out.</description></item>
             /// </list>

@@ -12,8 +12,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The query type of the element to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EDGE</b>: connection information</description></item>
+        /// <item><description><b>EDGE</b>: connection information.</description></item>
         /// </list>
+        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EDGE</para>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,6 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The destination node information, which is used to filter destination nodes.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
         /// </summary>
         [NameInMap("DstNode")]
         [Validation(Required=false)]
@@ -41,6 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649260799999</para>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries per page when paging is used. Default value: 20. If this parameter is left empty, 20 entries are returned.</para>
         /// <remarks>
         /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
@@ -64,6 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The source node information, which is used to filter source nodes.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
         /// </summary>
         [NameInMap("SrcNode")]
         [Validation(Required=false)]
@@ -71,6 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1666886400000</para>

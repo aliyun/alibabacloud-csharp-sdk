@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectEventRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the event.</para>
+        /// <para>The event ID.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101. You can call ListFileProtectEvent to obtain valid event IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

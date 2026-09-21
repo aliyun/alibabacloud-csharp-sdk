@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the rule was modified. Unit: milliseconds.</para>
+            /// <para>The timestamp when the rule was last modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671607025000</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>docker-law</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container.</para>
+        /// <para>The container ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c08d5fc1a329a4b88950a253d082f****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? GroupByAsset { get; set; }
 
         /// <summary>
-        /// <para>The name of the container image.</para>
+        /// <para>The container image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</para>
@@ -145,11 +145,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The priority level for fixing the vulnerability. Valid values:</para>
+        /// <para>The priority of vulnerability fixing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: High-priority vulnerability that must be fixed as soon as possible.</description></item>
-        /// <item><description><b>later</b>: Medium-priority vulnerability that can be fixed later.</description></item>
-        /// <item><description><b>nntf</b>: Low-priority vulnerability that does not need to be fixed for now.</description></item>
+        /// <item><description><b>asap</b>: high-priority vulnerability</description></item>
+        /// <item><description><b>later</b>: medium-priority vulnerability</description></item>
+        /// <item><description><b>nntf</b>: low-priority vulnerability</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates 10 vulnerability entries per page.</para>
+        /// <para>Settings for paged query. The number of vulnerabilities to display on each page during paging. Default value: <b>10</b>, which indicates that 10 vulnerabilities are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -240,10 +240,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <para>The ID of the Alibaba Cloud account that is added as one of the member accounts in a resource folder.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -295,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The type of vulnerability to query. Set the value to <b>cve</b>, which indicates container image vulnerabilities.</para>
+        /// <para>The type of the vulnerability to query. Set the value to <b>cve</b>, which indicates container image vulnerabilities.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -306,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of asset instances. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0004a32a0305a7f6ab5ff9600d47****</para>

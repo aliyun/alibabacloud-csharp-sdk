@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8EFA2BD9-00CD-5D69-B6B0-4EE83EAF072E</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result returned.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ModifyStrategyResponseBodyResult Result { get; set; }
         public class ModifyStrategyResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the baseline check policy.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8164239</para>

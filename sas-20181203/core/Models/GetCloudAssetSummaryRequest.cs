@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<GetCloudAssetSummaryRequestCloudAssetTypes> CloudAssetTypes { get; set; }
         public class GetCloudAssetSummaryRequestCloudAssetTypes : TeaModel {
             /// <summary>
-            /// <para>The subtype of the cloud service. The asset type-subtype. Valid values:</para>
+            /// <para>The subtype of the cloud service. Asset type-subtype. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Elastic Compute Service (ECS) server<list type="bullet">
             /// <item><description><b>1</b>: Cloud disk (storage)</description></item>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>100</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>1</b>: Load balancing<list type="bullet">
+            /// <item><description><b>1</b>: load balancing<list type="bullet">
             /// <item><description><b>0</b>: Classic Load Balancer (CLB)</description></item>
             /// <item><description><b>1</b>: Application Load Balancer (ALB)</description></item>
             /// </list>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>0</b>: Bucket</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>19</b>: Cloud-native relational database PolarDB<list type="bullet">
+            /// <item><description><b>19</b>: cloud-native relational database PolarDB<list type="bullet">
             /// <item><description><b>0</b>: Cluster</description></item>
             /// </list>
             /// </description></item>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Elastic Compute Service (ECS) server</description></item>
-            /// <item><description><b>1</b>: Load balancing</description></item>
+            /// <item><description><b>1</b>: load balancing</description></item>
             /// <item><description><b>3</b>: ApsaraDB RDS database</description></item>
             /// <item><description><b>4</b>: ApsaraDB for MongoDB database</description></item>
             /// <item><description><b>5</b>: Tair (Redis® OSS-Compatible) database</description></item>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>16</b>: Anti-DDoS</description></item>
             /// <item><description><b>17</b>: Web Application Firewall (WAF)</description></item>
             /// <item><description><b>18</b>: Object Storage Service (OSS)</description></item>
-            /// <item><description><b>19</b>: Cloud-native relational database PolarDB</description></item>
+            /// <item><description><b>19</b>: cloud-native relational database PolarDB</description></item>
             /// <item><description><b>20</b>: ApsaraDB RDS for PostgreSQL database</description></item>
             /// <item><description><b>21</b>: Microservices Engine (MSE)</description></item>
             /// <item><description><b>22</b>: Apsara File Storage NAS</description></item>
@@ -201,10 +201,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsSaleData { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource folder.</para>
+        /// <para>The ID of the Alibaba Cloud account of the resource directory member accounts.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

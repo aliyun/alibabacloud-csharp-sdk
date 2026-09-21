@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The completion status of the check. Valid values:</para>
+                /// <para>The check completion status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: Unprocessed.</description></item>
                 /// <item><description><b>1</b>: Collecting.</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
                 /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
                 /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-                /// <item><description><b>sca</b>: sca vulnerability</description></item>
+                /// <item><description><b>sca</b>: SCA vulnerability</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

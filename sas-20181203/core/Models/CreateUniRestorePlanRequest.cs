@@ -33,10 +33,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the anti-ransomware backup policy for the database.</para>
+        /// <para>The ID of the database anti-ransomware backup policy.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// <para>Before calling this operation, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Install the Security Center agent on the ECS instance and deploy a MySQL, Oracle, or MSSQL database.</description></item>
+        /// <item><description>Call the StartDiscoverDatabaseTask operation to discover databases.</description></item>
+        /// <item><description>Call the CreateUniBackupPolicy operation to create a backup policy and obtain the PolicyId.</description></item>
+        /// <item><description>Wait for the policy to complete at least one successful backup.</description></item>
+        /// </ol>
+        /// <para>Dependency order: Database and agent preparation → Database discovery → Create backup policy → Successful backup → Create restoration task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

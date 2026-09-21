@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified (such as 0.0.0.0/0). If this parameter is not specified, the API returns InvalidParam (400).</para>
+        /// <para>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified, such as 0.0.0.0/0. If this parameter is not specified, the API returns InvalidParam (400).</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

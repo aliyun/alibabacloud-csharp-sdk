@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
+        /// <para>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
+        /// <para>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -533,7 +533,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
+        /// <para>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
+        /// <para>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2873,8 +2873,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the Security Center agent in batches.</para>
+        /// <para>Creates a release batch for Security Center upgrades.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call GetCurrentVersionPublish to check the account eligibility. You can call this operation only when the returned BigCustomer parameter is true, which indicates that the account is a premium customer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPublishBatchRequest
@@ -2927,8 +2932,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the Security Center agent in batches.</para>
+        /// <para>Creates a release batch for Security Center upgrades.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call GetCurrentVersionPublish to check the account eligibility. You can call this operation only when the returned BigCustomer parameter is true, which indicates that the account is a premium customer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPublishBatchRequest
@@ -2981,8 +2991,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the Security Center agent in batches.</para>
+        /// <para>Creates a release batch for Security Center upgrades.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call GetCurrentVersionPublish to check the account eligibility. You can call this operation only when the returned BigCustomer parameter is true, which indicates that the account is a premium customer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPublishBatchRequest
@@ -2999,8 +3014,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the Security Center agent in batches.</para>
+        /// <para>Creates a release batch for Security Center upgrades.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call GetCurrentVersionPublish to check the account eligibility. You can call this operation only when the returned BigCustomer parameter is true, which indicates that the account is a premium customer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPublishBatchRequest
@@ -8676,6 +8696,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates a container runtime scan task in the appNames dimension.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that your current Security Center edition supports container runtime scanning. Call <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> and verify that the response parameter IsNewContainerVersion is true, which indicates that container runtime scanning is available. If the value is false, upgrade your Security Center edition before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateContainerScanTaskByAppNameRequest
         /// </param>
@@ -8725,6 +8750,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates a container runtime scan task in the appNames dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that your current Security Center edition supports container runtime scanning. Call <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> and verify that the response parameter IsNewContainerVersion is true, which indicates that container runtime scanning is available. If the value is false, upgrade your Security Center edition before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateContainerScanTaskByAppNameRequest
@@ -8776,6 +8806,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates a container runtime scan task in the appNames dimension.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that your current Security Center edition supports container runtime scanning. Call <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> and verify that the response parameter IsNewContainerVersion is true, which indicates that container runtime scanning is available. If the value is false, upgrade your Security Center edition before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateContainerScanTaskByAppNameRequest
         /// </param>
@@ -8793,6 +8828,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates a container runtime scan task in the appNames dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that your current Security Center edition supports container runtime scanning. Call <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> and verify that the response parameter IsNewContainerVersion is true, which indicates that container runtime scanning is available. If the value is false, upgrade your Security Center edition before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateContainerScanTaskByAppNameRequest
@@ -10580,6 +10620,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates a honeypot management node.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateHoneypotNodeRequest
         /// </param>
@@ -10633,6 +10678,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates a honeypot management node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHoneypotNodeRequest
@@ -10688,6 +10738,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates a honeypot management node.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateHoneypotNodeRequest
         /// </param>
@@ -10705,6 +10760,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates a honeypot management node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHoneypotNodeRequest
@@ -11381,7 +11441,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a defense rule in the container firewall module.</para>
+        /// <para>Creates a container firewall blocking rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11465,7 +11525,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a defense rule in the container firewall module.</para>
+        /// <para>Creates a container firewall blocking rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11549,7 +11609,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a defense rule in the container firewall module.</para>
+        /// <para>Creates a container firewall blocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11567,7 +11627,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a defense rule in the container firewall module.</para>
+        /// <para>Creates a container firewall blocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13762,7 +13822,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// <para>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13877,7 +13937,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// <para>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13992,7 +14052,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// <para>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14015,7 +14075,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// <para>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14033,12 +14093,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
+        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitored account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center. Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14080,12 +14140,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
+        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitored account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center. Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14127,12 +14187,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
+        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitored account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center. Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14150,12 +14210,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
+        /// <para>Creates an automatic control policy for new accounts in the multi-account security management feature of Security Center. Member accounts under the automatic control policy folder are automatically added to the monitored account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center. Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14349,7 +14409,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial of Security Center.</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14423,7 +14483,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial of Security Center.</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14497,7 +14557,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial of Security Center.</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14515,7 +14575,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial of Security Center.</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14533,7 +14593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role and grants Security Center access to cloud resources.</para>
+        /// <para>Creates a service-linked role and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14588,7 +14648,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role and grants Security Center access to cloud resources.</para>
+        /// <para>Creates a service-linked role and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14643,7 +14703,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role and grants Security Center access to cloud resources.</para>
+        /// <para>Creates a service-linked role and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14666,7 +14726,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role and grants Security Center access to cloud resources.</para>
+        /// <para>Creates a service-linked role and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15009,7 +15069,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in Task Center.</para>
+        /// <para>Creates a task under My Policies in the task center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15072,7 +15132,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in Task Center.</para>
+        /// <para>Creates a task under My Policies in the task center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15135,7 +15195,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in Task Center.</para>
+        /// <para>Creates a task under My Policies in the task center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15158,7 +15218,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in Task Center.</para>
+        /// <para>Creates a task under My Policies in the task center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15317,8 +15377,17 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for a database.</para>
+        /// <para>Creates a database anti-ransomware policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, choose one of the following paths:</para>
+        /// <list type="bullet">
+        /// <item><description>If DatabaseAddByUser is not set to true, install the Security Center agent on the ECS instance first, call StartDiscoverDatabaseTask to initiate database discovery, and then call DescribeUniBackupDatabase to confirm that the target database has been discovered.</description></item>
+        /// <item><description>If DatabaseAddByUser is set to true, you can manually register the database.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUniBackupPolicyRequest
@@ -15413,8 +15482,17 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for a database.</para>
+        /// <para>Creates a database anti-ransomware policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, choose one of the following paths:</para>
+        /// <list type="bullet">
+        /// <item><description>If DatabaseAddByUser is not set to true, install the Security Center agent on the ECS instance first, call StartDiscoverDatabaseTask to initiate database discovery, and then call DescribeUniBackupDatabase to confirm that the target database has been discovered.</description></item>
+        /// <item><description>If DatabaseAddByUser is set to true, you can manually register the database.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUniBackupPolicyRequest
@@ -15509,8 +15587,17 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for a database.</para>
+        /// <para>Creates a database anti-ransomware policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, choose one of the following paths:</para>
+        /// <list type="bullet">
+        /// <item><description>If DatabaseAddByUser is not set to true, install the Security Center agent on the ECS instance first, call StartDiscoverDatabaseTask to initiate database discovery, and then call DescribeUniBackupDatabase to confirm that the target database has been discovered.</description></item>
+        /// <item><description>If DatabaseAddByUser is set to true, you can manually register the database.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUniBackupPolicyRequest
@@ -15527,8 +15614,17 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for a database.</para>
+        /// <para>Creates a database anti-ransomware policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, choose one of the following paths:</para>
+        /// <list type="bullet">
+        /// <item><description>If DatabaseAddByUser is not set to true, install the Security Center agent on the ECS instance first, call StartDiscoverDatabaseTask to initiate database discovery, and then call DescribeUniBackupDatabase to confirm that the target database has been discovered.</description></item>
+        /// <item><description>If DatabaseAddByUser is set to true, you can manually register the database.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUniBackupPolicyRequest
@@ -15545,7 +15641,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task for anti-ransomware database protection.</para>
+        /// <para>Creates a recovery task for database anti-ransomware.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15611,7 +15707,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task for anti-ransomware database protection.</para>
+        /// <para>Creates a recovery task for database anti-ransomware.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15677,7 +15773,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task for anti-ransomware database protection.</para>
+        /// <para>Creates a recovery task for database anti-ransomware.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15695,7 +15791,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task for anti-ransomware database protection.</para>
+        /// <para>Creates a recovery task for database anti-ransomware.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22301,7 +22397,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes alert whitelisting configurations in batches.</para>
+        /// <para>Deletes alert whitelist configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22357,7 +22453,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes alert whitelisting configurations in batches.</para>
+        /// <para>Deletes alert whitelist configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22413,7 +22509,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes alert whitelisting configurations in batches.</para>
+        /// <para>Deletes alert whitelist configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22437,7 +22533,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes alert whitelisting configurations in batches.</para>
+        /// <para>Deletes alert whitelist configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29072,6 +29168,16 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Queries the statistics of charts configured in a security report.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying chart data for a custom report, perform the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId and confirm the report version.</description></item>
+        /// <item><description>Call <a href="~~DescribeChartList~~">DescribeChartList</a>, set ProjectCode to customize_report, and pass in the ReportId to obtain the chart ID.</description></item>
+        /// <item><description>Call this operation to query chart data. If the report version is 1.0.0, the CharId parameter is required. If the report version is 2.0.0, the ChartId parameter is required. Use the IDs returned by the corresponding report and chart.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChartDataRequest
         /// </param>
@@ -29137,6 +29243,16 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Queries the statistics of charts configured in a security report.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying chart data for a custom report, perform the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId and confirm the report version.</description></item>
+        /// <item><description>Call <a href="~~DescribeChartList~~">DescribeChartList</a>, set ProjectCode to customize_report, and pass in the ReportId to obtain the chart ID.</description></item>
+        /// <item><description>Call this operation to query chart data. If the report version is 1.0.0, the CharId parameter is required. If the report version is 2.0.0, the ChartId parameter is required. Use the IDs returned by the corresponding report and chart.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChartDataRequest
@@ -29204,6 +29320,16 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Queries the statistics of charts configured in a security report.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying chart data for a custom report, perform the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId and confirm the report version.</description></item>
+        /// <item><description>Call <a href="~~DescribeChartList~~">DescribeChartList</a>, set ProjectCode to customize_report, and pass in the ReportId to obtain the chart ID.</description></item>
+        /// <item><description>Call this operation to query chart data. If the report version is 1.0.0, the CharId parameter is required. If the report version is 2.0.0, the ChartId parameter is required. Use the IDs returned by the corresponding report and chart.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChartDataRequest
         /// </param>
@@ -29221,6 +29347,16 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Queries the statistics of charts configured in a security report.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying chart data for a custom report, perform the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId and confirm the report version.</description></item>
+        /// <item><description>Call <a href="~~DescribeChartList~~">DescribeChartList</a>, set ProjectCode to customize_report, and pass in the ReportId to obtain the chart ID.</description></item>
+        /// <item><description>Call this operation to query chart data. If the report version is 1.0.0, the CharId parameter is required. If the report version is 2.0.0, the ChartId parameter is required. Use the IDs returned by the corresponding report and chart.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChartDataRequest
@@ -32537,7 +32673,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
+        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32587,7 +32723,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
+        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32637,7 +32773,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
+        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32655,7 +32791,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
+        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35081,7 +35217,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the filter conditions that are used to search for assets in fuzzy match mode.</para>
+        /// <para>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35135,7 +35271,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the filter conditions that are used to search for assets in fuzzy match mode.</para>
+        /// <para>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35189,7 +35325,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the filter conditions that are used to search for assets in fuzzy match mode.</para>
+        /// <para>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35207,7 +35343,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the filter conditions that are used to search for assets in fuzzy match mode.</para>
+        /// <para>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35681,7 +35817,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security reports.</para>
+        /// <para>Queries the list of security reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35747,7 +35883,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security reports.</para>
+        /// <para>Queries the list of security reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35813,7 +35949,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security reports.</para>
+        /// <para>Queries the list of security reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35831,7 +35967,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security reports.</para>
+        /// <para>Queries the list of security reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40441,7 +40577,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the investigation and tracing graph of Cloud Workload Protection Platform (CWPP) alert events to visually investigate and reconstruct cyberattack processes.</para>
+        /// <para>Queries the investigation and tracing graph of a Cloud Workload Protection Platform (CWPP) alert event to visually investigate and reconstruct the cyberattack process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40499,7 +40635,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the investigation and tracing graph of Cloud Workload Protection Platform (CWPP) alert events to visually investigate and reconstruct cyberattack processes.</para>
+        /// <para>Queries the investigation and tracing graph of a Cloud Workload Protection Platform (CWPP) alert event to visually investigate and reconstruct the cyberattack process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40557,7 +40693,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the investigation and tracing graph of Cloud Workload Protection Platform (CWPP) alert events to visually investigate and reconstruct cyberattack processes.</para>
+        /// <para>Queries the investigation and tracing graph of a Cloud Workload Protection Platform (CWPP) alert event to visually investigate and reconstruct the cyberattack process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40575,7 +40711,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the investigation and tracing graph of Cloud Workload Protection Platform (CWPP) alert events to visually investigate and reconstruct cyberattack processes.</para>
+        /// <para>Queries the investigation and tracing graph of a Cloud Workload Protection Platform (CWPP) alert event to visually investigate and reconstruct the cyberattack process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45009,7 +45145,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image vulnerabilities.</para>
+        /// <para>Queries the list of image vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45147,7 +45283,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image vulnerabilities.</para>
+        /// <para>Queries the list of image vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45285,7 +45421,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image vulnerabilities.</para>
+        /// <para>Queries the list of image vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45303,7 +45439,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image vulnerabilities.</para>
+        /// <para>Queries the list of image vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47666,7 +47802,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
+        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first. Wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47833,7 +47969,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
+        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first. Wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48000,7 +48136,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
+        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first. Wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48023,7 +48159,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
+        /// <para>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first. Wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50133,8 +50269,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of accounts that are added to the multi-account management feature as members.</para>
+        /// <para>Queries the list of monitored accounts for multi-account management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -50163,8 +50304,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of accounts that are added to the multi-account management feature as members.</para>
+        /// <para>Queries the list of monitored accounts for multi-account management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -50193,8 +50339,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of accounts that are added to the multi-account management feature as members.</para>
+        /// <para>Queries the list of monitored accounts for multi-account management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeMonitorAccountsResponse
@@ -50207,8 +50358,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of accounts that are added to the multi-account management feature as members.</para>
+        /// <para>Queries the list of monitored accounts for multi-account management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeMonitorAccountsResponse
@@ -51453,7 +51609,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the scheduled task list in host assets.</para>
+        /// <para>Queries the details of scheduled tasks in the host asset fingerprint list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51531,7 +51687,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the scheduled task list in host assets.</para>
+        /// <para>Queries the details of scheduled tasks in the host asset fingerprint list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51609,7 +51765,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the scheduled task list in host assets.</para>
+        /// <para>Queries the details of scheduled tasks in the host asset fingerprint list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51627,7 +51783,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the scheduled task list in host assets.</para>
+        /// <para>Queries the details of scheduled tasks in the host asset fingerprint list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64153,7 +64309,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of servers that support vulnerability fix based on vulnerability names.</para>
+        /// <para>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64255,7 +64411,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of servers that support vulnerability fix based on vulnerability names.</para>
+        /// <para>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64357,7 +64513,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of servers that support vulnerability fix based on vulnerability names.</para>
+        /// <para>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64375,7 +64531,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of servers that support vulnerability fix based on vulnerability names.</para>
+        /// <para>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66809,7 +66965,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries vulnerability whitelists by paging.</para>
+        /// <para>Queries vulnerability whitelist entries by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66863,7 +67019,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries vulnerability whitelists by paging.</para>
+        /// <para>Queries vulnerability whitelist entries by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66917,7 +67073,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries vulnerability whitelists by paging.</para>
+        /// <para>Queries vulnerability whitelist entries by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66935,7 +67091,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries vulnerability whitelists by paging.</para>
+        /// <para>Queries vulnerability whitelist entries by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70725,8 +70881,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom rule for an instance.</para>
+        /// <para>Enables the status of a specific instance in a custom rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableCustomInstanceBlockRecordRequest
@@ -70779,8 +70940,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom rule for an instance.</para>
+        /// <para>Enables the status of a specific instance in a custom rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableCustomInstanceBlockRecordRequest
@@ -70833,8 +70999,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom rule for an instance.</para>
+        /// <para>Enables the status of a specific instance in a custom rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableCustomInstanceBlockRecordRequest
@@ -70851,8 +71022,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom rule for an instance.</para>
+        /// <para>Enables the status of a specific instance in a custom rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableCustomInstanceBlockRecordRequest
@@ -73921,6 +74097,158 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgentlessTaskCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentlessTaskCountBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentlessTaskCountBatchResponse
+        /// </returns>
+        public GetAgentlessTaskCountBatchResponse GetAgentlessTaskCountBatchWithOptions(GetAgentlessTaskCountBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
+            {
+                body["UuidList"] = request.UuidList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentlessTaskCountBatch",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentlessTaskCountBatchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentlessTaskCountBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentlessTaskCountBatchResponse
+        /// </returns>
+        public async Task<GetAgentlessTaskCountBatchResponse> GetAgentlessTaskCountBatchWithOptionsAsync(GetAgentlessTaskCountBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
+            {
+                body["UuidList"] = request.UuidList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentlessTaskCountBatch",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentlessTaskCountBatchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentlessTaskCountBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentlessTaskCountBatchResponse
+        /// </returns>
+        public GetAgentlessTaskCountBatchResponse GetAgentlessTaskCountBatch(GetAgentlessTaskCountBatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentlessTaskCountBatchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentlessTaskCountBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentlessTaskCountBatchResponse
+        /// </returns>
+        public async Task<GetAgentlessTaskCountBatchResponse> GetAgentlessTaskCountBatchAsync(GetAgentlessTaskCountBatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentlessTaskCountBatchWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -80306,11 +80634,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. To submit files for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
         /// <h3>File unique identifier</h3>
-        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
+        /// <para>All file detection-related operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
+        /// <para>You can filter file properties by using the FileLabel field in the Ext extension field. For example, you can combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can use the Highlight field in the Ext extension field to locate malicious code segments in web shell files. The Highlight field is a list type. Each element in the list corresponds to a code range, and the numbers represent the offset in characters from the beginning of the file.
+        /// Before querying file detection results, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> to obtain OSS upload parameters.</description></item>
+        /// <item><description>Use the returned signature information to upload the file to OSS by using a form. For more information about the upload method, see <a href="https://www.alibabacloud.com/help/zh/oss/developer-reference/postobject">OSS PostObject form upload documentation</a>.</description></item>
+        /// <item><description>Call <a href="~~CreateFileDetect~~">CreateFileDetect</a> to submit a file detection task.</description></item>
+        /// <item><description>Call <a href="~~GetFileDetectResult~~">GetFileDetectResult</a> to query the detection result.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -80365,11 +80700,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. To submit files for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
         /// <h3>File unique identifier</h3>
-        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
+        /// <para>All file detection-related operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
+        /// <para>You can filter file properties by using the FileLabel field in the Ext extension field. For example, you can combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can use the Highlight field in the Ext extension field to locate malicious code segments in web shell files. The Highlight field is a list type. Each element in the list corresponds to a code range, and the numbers represent the offset in characters from the beginning of the file.
+        /// Before querying file detection results, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> to obtain OSS upload parameters.</description></item>
+        /// <item><description>Use the returned signature information to upload the file to OSS by using a form. For more information about the upload method, see <a href="https://www.alibabacloud.com/help/zh/oss/developer-reference/postobject">OSS PostObject form upload documentation</a>.</description></item>
+        /// <item><description>Call <a href="~~CreateFileDetect~~">CreateFileDetect</a> to submit a file detection task.</description></item>
+        /// <item><description>Call <a href="~~GetFileDetectResult~~">GetFileDetectResult</a> to query the detection result.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -80424,11 +80766,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. To submit files for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
         /// <h3>File unique identifier</h3>
-        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
+        /// <para>All file detection-related operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
+        /// <para>You can filter file properties by using the FileLabel field in the Ext extension field. For example, you can combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can use the Highlight field in the Ext extension field to locate malicious code segments in web shell files. The Highlight field is a list type. Each element in the list corresponds to a code range, and the numbers represent the offset in characters from the beginning of the file.
+        /// Before querying file detection results, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> to obtain OSS upload parameters.</description></item>
+        /// <item><description>Use the returned signature information to upload the file to OSS by using a form. For more information about the upload method, see <a href="https://www.alibabacloud.com/help/zh/oss/developer-reference/postobject">OSS PostObject form upload documentation</a>.</description></item>
+        /// <item><description>Call <a href="~~CreateFileDetect~~">CreateFileDetect</a> to submit a file detection task.</description></item>
+        /// <item><description>Call <a href="~~GetFileDetectResult~~">GetFileDetectResult</a> to query the detection result.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -80451,11 +80800,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. To submit files for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
         /// <h3>File unique identifier</h3>
-        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
+        /// <para>All file detection-related operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
+        /// <para>You can filter file properties by using the FileLabel field in the Ext extension field. For example, you can combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can use the Highlight field in the Ext extension field to locate malicious code segments in web shell files. The Highlight field is a list type. Each element in the list corresponds to a code range, and the numbers represent the offset in characters from the beginning of the file.
+        /// Before querying file detection results, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> to obtain OSS upload parameters.</description></item>
+        /// <item><description>Use the returned signature information to upload the file to OSS by using a form. For more information about the upload method, see <a href="https://www.alibabacloud.com/help/zh/oss/developer-reference/postobject">OSS PostObject form upload documentation</a>.</description></item>
+        /// <item><description>Call <a href="~~CreateFileDetect~~">CreateFileDetect</a> to submit a file detection task.</description></item>
+        /// <item><description>Call <a href="~~GetFileDetectResult~~">GetFileDetectResult</a> to query the detection result.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -81041,7 +81397,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about core file monitoring events.</para>
+        /// <para>Retrieves the details of a core file monitoring event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81083,7 +81439,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about core file monitoring events.</para>
+        /// <para>Retrieves the details of a core file monitoring event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81125,7 +81481,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about core file monitoring events.</para>
+        /// <para>Retrieves the details of a core file monitoring event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81143,7 +81499,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about core file monitoring events.</para>
+        /// <para>Retrieves the details of a core file monitoring event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83105,7 +83461,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Count the number of security events for a single instance</para>
+        /// <para>Retrieves the alerting statistics information for a server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83155,7 +83511,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Count the number of security events for a single instance</para>
+        /// <para>Retrieves the alerting statistics information for a server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83205,7 +83561,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Count the number of security events for a single instance</para>
+        /// <para>Retrieves the alerting statistics information for a server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83223,7 +83579,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Count the number of security events for a single instance</para>
+        /// <para>Retrieves the alerting statistics information for a server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86585,7 +86941,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list of container file defense configurations.</para>
+        /// <para>Retrieves the application list for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86627,7 +86983,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list of container file defense configurations.</para>
+        /// <para>Retrieves the application list for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86669,7 +87025,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list of container file defense configurations.</para>
+        /// <para>Retrieves the application list for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86687,7 +87043,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list of container file defense configurations.</para>
+        /// <para>Retrieves the application list for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87089,7 +87445,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the authorization details of a Serverless application.</para>
+        /// <para>Retrieves the authorization details of a serverless application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87143,7 +87499,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the authorization details of a Serverless application.</para>
+        /// <para>Retrieves the authorization details of a serverless application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87197,7 +87553,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the authorization details of a Serverless application.</para>
+        /// <para>Retrieves the authorization details of a serverless application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87215,7 +87571,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the authorization details of a Serverless application.</para>
+        /// <para>Retrieves the authorization details of a serverless application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89680,6 +90036,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Batch processes alert events based on the same IP rule or type.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before processing, call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to check the CanBeDealOnLine and EventStatus fields of the events. An event can be processed only when CanBeDealOnLine is true. If CanBeDealOnLine is false or EventStatus is 64, the event has expired and cannot be processed by this operation. <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> returns an empty array for expired events.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleSimilarSecurityEventsRequest
         /// </param>
@@ -89749,6 +90110,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Batch processes alert events based on the same IP rule or type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before processing, call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to check the CanBeDealOnLine and EventStatus fields of the events. An event can be processed only when CanBeDealOnLine is true. If CanBeDealOnLine is false or EventStatus is 64, the event has expired and cannot be processed by this operation. <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> returns an empty array for expired events.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// HandleSimilarSecurityEventsRequest
@@ -89820,6 +90186,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Batch processes alert events based on the same IP rule or type.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before processing, call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to check the CanBeDealOnLine and EventStatus fields of the events. An event can be processed only when CanBeDealOnLine is true. If CanBeDealOnLine is false or EventStatus is 64, the event has expired and cannot be processed by this operation. <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> returns an empty array for expired events.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleSimilarSecurityEventsRequest
         /// </param>
@@ -89837,6 +90208,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Batch processes alert events based on the same IP rule or type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before processing, call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to check the CanBeDealOnLine and EventStatus fields of the events. An event can be processed only when CanBeDealOnLine is true. If CanBeDealOnLine is false or EventStatus is 64, the event has expired and cannot be processed by this operation. <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> returns an empty array for expired events.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// HandleSimilarSecurityEventsRequest
@@ -91213,7 +91589,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs the anti-ransomware agent for databases.</para>
+        /// <para>Installs the anti-ransomware client for databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -91255,7 +91631,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs the anti-ransomware agent for databases.</para>
+        /// <para>Installs the anti-ransomware client for databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -91297,7 +91673,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs the anti-ransomware agent for databases.</para>
+        /// <para>Installs the anti-ransomware client for databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -91315,7 +91691,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs the anti-ransomware agent for databases.</para>
+        /// <para>Installs the anti-ransomware client for databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -99121,7 +99497,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of file protection rules.</para>
+        /// <para>Retrieves the list of file protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -99183,7 +99559,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of file protection rules.</para>
+        /// <para>Retrieves the list of file protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -99245,7 +99621,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of file protection rules.</para>
+        /// <para>Retrieves the list of file protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -99263,7 +99639,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of file protection rules.</para>
+        /// <para>Retrieves the list of file protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -102633,7 +103009,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries defense rules that are configured for the container firewall feature.</para>
+        /// <para>Queries micro-segmentation defense rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -102691,7 +103067,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries defense rules that are configured for the container firewall feature.</para>
+        /// <para>Queries micro-segmentation defense rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -102749,7 +103125,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries defense rules that are configured for the container firewall feature.</para>
+        /// <para>Queries micro-segmentation defense rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -102767,7 +103143,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries defense rules that are configured for the container firewall feature.</para>
+        /// <para>Queries micro-segmentation defense rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106081,12 +106457,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the automatic management policies of members that are added to Security Center for multi-account management. The members in the automatic control management directory are automatically added to the member list of Security Center.</para>
+        /// <para>Queries the automatic control policy for new accounts in Security Center under the multi-account security management feature. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
+        /// Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -106116,12 +106493,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the automatic management policies of members that are added to Security Center for multi-account management. The members in the automatic control management directory are automatically added to the member list of Security Center.</para>
+        /// <para>Queries the automatic control policy for new accounts in Security Center under the multi-account security management feature. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
+        /// Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -106151,12 +106529,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the automatic management policies of members that are added to Security Center for multi-account management. The members in the automatic control management directory are automatically added to the member list of Security Center.</para>
+        /// <para>Queries the automatic control policy for new accounts in Security Center under the multi-account security management feature. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
+        /// Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</para>
         /// </description>
         /// 
         /// <returns>
@@ -106170,12 +106549,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the automatic management policies of members that are added to Security Center for multi-account management. The members in the automatic control management directory are automatically added to the member list of Security Center.</para>
+        /// <para>Queries the automatic control policy for new accounts in Security Center under the multi-account security management feature. Member accounts under the automatic control policy folder are automatically added to the monitoring account list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</para>
+        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
+        /// Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</para>
         /// </description>
         /// 
         /// <returns>
@@ -108357,7 +108737,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of intelligent behavior analysis policies.</para>
+        /// <para>Queries the list of intelligent behavior analytics policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -108415,7 +108795,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of intelligent behavior analysis policies.</para>
+        /// <para>Queries the list of intelligent behavior analytics policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -108473,7 +108853,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of intelligent behavior analysis policies.</para>
+        /// <para>Queries the list of intelligent behavior analytics policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -108491,7 +108871,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of intelligent behavior analysis policies.</para>
+        /// <para>Queries the list of intelligent behavior analytics policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109845,8 +110225,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an AccessKey pair leak record.</para>
+        /// <para>Handles AccessKey leak records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An HTTP 200 status code only indicates that the request was accepted, not that the record was actually modified. Call <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> to query and verify the operation result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAccessKeyLeakDealRequest
@@ -109899,8 +110284,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an AccessKey pair leak record.</para>
+        /// <para>Handles AccessKey leak records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An HTTP 200 status code only indicates that the request was accepted, not that the record was actually modified. Call <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> to query and verify the operation result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAccessKeyLeakDealRequest
@@ -109953,8 +110343,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an AccessKey pair leak record.</para>
+        /// <para>Handles AccessKey leak records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An HTTP 200 status code only indicates that the request was accepted, not that the record was actually modified. Call <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> to query and verify the operation result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAccessKeyLeakDealRequest
@@ -109971,8 +110366,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an AccessKey pair leak record.</para>
+        /// <para>Handles AccessKey leak records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An HTTP 200 status code only indicates that the request was accepted, not that the record was actually modified. Call <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> to query and verify the operation result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAccessKeyLeakDealRequest
@@ -120893,8 +121293,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates web tamper proofing protection for a specified server and enables the protection.</para>
+        /// <para>Creates web tamper-proofing protection for a specified server and enables the protection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, purchase and allocate the web tamper-proofing value-added service authorization for the specified server. You can query the number of active authorizations by using the WhiteCount field of <a href="~~DescribeWebLockStatus~~">DescribeWebLockStatus</a>, and allocate authorizations through the console or by invoking <a href="~~BindAuthToMachine~~">BindAuthToMachine</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyWebLockStartRequest
@@ -120967,8 +121372,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates web tamper proofing protection for a specified server and enables the protection.</para>
+        /// <para>Creates web tamper-proofing protection for a specified server and enables the protection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, purchase and allocate the web tamper-proofing value-added service authorization for the specified server. You can query the number of active authorizations by using the WhiteCount field of <a href="~~DescribeWebLockStatus~~">DescribeWebLockStatus</a>, and allocate authorizations through the console or by invoking <a href="~~BindAuthToMachine~~">BindAuthToMachine</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyWebLockStartRequest
@@ -121041,8 +121451,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates web tamper proofing protection for a specified server and enables the protection.</para>
+        /// <para>Creates web tamper-proofing protection for a specified server and enables the protection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, purchase and allocate the web tamper-proofing value-added service authorization for the specified server. You can query the number of active authorizations by using the WhiteCount field of <a href="~~DescribeWebLockStatus~~">DescribeWebLockStatus</a>, and allocate authorizations through the console or by invoking <a href="~~BindAuthToMachine~~">BindAuthToMachine</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyWebLockStartRequest
@@ -121059,8 +121474,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates web tamper proofing protection for a specified server and enables the protection.</para>
+        /// <para>Creates web tamper-proofing protection for a specified server and enables the protection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, purchase and allocate the web tamper-proofing value-added service authorization for the specified server. You can query the number of active authorizations by using the WhiteCount field of <a href="~~DescribeWebLockStatus~~">DescribeWebLockStatus</a>, and allocate authorizations through the console or by invoking <a href="~~BindAuthToMachine~~">BindAuthToMachine</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyWebLockStartRequest
@@ -124109,7 +124529,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmarks ignored anomaly alert events.</para>
+        /// <para>Settings the specified anomaly alerting events to unignored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -124159,7 +124579,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmarks ignored anomaly alert events.</para>
+        /// <para>Settings the specified anomaly alerting events to unignored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -124209,7 +124629,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmarks ignored anomaly alert events.</para>
+        /// <para>Settings the specified anomaly alerting events to unignored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -124227,7 +124647,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmarks ignored anomaly alert events.</para>
+        /// <para>Settings the specified anomaly alerting events to unignored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -125521,7 +125941,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of security alert events that occurred in each attack phase.</para>
+        /// <para>Queries the number of security alert events that occurred in each attack stage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -125581,7 +126001,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of security alert events that occurred in each attack phase.</para>
+        /// <para>Queries the number of security alert events that occurred in each attack stage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -125641,7 +126061,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of security alert events that occurred in each attack phase.</para>
+        /// <para>Queries the number of security alert events that occurred in each attack stage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -125659,7 +126079,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of security alert events that occurred in each attack phase.</para>
+        /// <para>Queries the number of security alert events that occurred in each attack stage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -126341,7 +126761,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the node result of a database dry run.</para>
+        /// <para>Queries the result of a database pre-check node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -126391,7 +126811,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the node result of a database dry run.</para>
+        /// <para>Queries the result of a database pre-check node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -126441,7 +126861,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the node result of a database dry run.</para>
+        /// <para>Queries the result of a database pre-check node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -126459,7 +126879,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the node result of a database dry run.</para>
+        /// <para>Queries the result of a database pre-check node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128149,7 +128569,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a quarantined file.</para>
+        /// <para>Restores a quarantined file from the quarantine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128203,7 +128623,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a quarantined file.</para>
+        /// <para>Restores a quarantined file from the quarantine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128257,7 +128677,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a quarantined file.</para>
+        /// <para>Restores a quarantined file from the quarantine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128275,7 +128695,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a quarantined file.</para>
+        /// <para>Restores a quarantined file from the quarantine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128413,7 +128833,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the configurations of a custom security report.</para>
+        /// <para>Saves the configuration of a custom security report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128535,7 +128955,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the configurations of a custom security report.</para>
+        /// <para>Saves the configuration of a custom security report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128657,7 +129077,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the configurations of a custom security report.</para>
+        /// <para>Saves the configuration of a custom security report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128675,7 +129095,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the configurations of a custom security report.</para>
+        /// <para>Saves the configuration of a custom security report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128853,7 +129273,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves alert settings.</para>
+        /// <para>Saves user security alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128903,7 +129323,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves alert settings.</para>
+        /// <para>Saves user security alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128953,7 +129373,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves alert settings.</para>
+        /// <para>Saves user security alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -128971,7 +129391,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves alert settings.</para>
+        /// <para>Saves user security alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129313,7 +129733,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a security daily report to a specified email address. Only security reports with a custom time period as the report cycle are supported.</para>
+        /// <para>Sends a security daily report to a specified email address. Only security reports whose report period is set to a custom time range are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129359,7 +129779,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a security daily report to a specified email address. Only security reports with a custom time period as the report cycle are supported.</para>
+        /// <para>Sends a security daily report to a specified email address. Only security reports whose report period is set to a custom time range are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129405,7 +129825,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a security daily report to a specified email address. Only security reports with a custom time period as the report cycle are supported.</para>
+        /// <para>Sends a security daily report to a specified email address. Only security reports whose report period is set to a custom time range are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129423,7 +129843,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a security daily report to a specified email address. Only security reports with a custom time period as the report cycle are supported.</para>
+        /// <para>Sends a security daily report to a specified email address. Only security reports whose report period is set to a custom time range are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131148,6 +131568,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Stops a honeypot.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopHoneypotRequest
         /// </param>
@@ -131193,6 +131618,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Stops a honeypot.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopHoneypotRequest
@@ -131240,6 +131670,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Stops a honeypot.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopHoneypotRequest
         /// </param>
@@ -131257,6 +131692,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Stops a honeypot.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopHoneypotRequest
@@ -131569,7 +132009,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</para>
+        /// <para>Submits a free one-click scan. The scan scope includes free vulnerability scanning categories and free Cloud Security Posture Management (CSPM) check items.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -131599,7 +132039,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</para>
+        /// <para>Submits a free one-click scan. The scan scope includes free vulnerability scanning categories and free Cloud Security Posture Management (CSPM) check items.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -131629,7 +132069,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</para>
+        /// <para>Submits a free one-click scan. The scan scope includes free vulnerability scanning categories and free Cloud Security Posture Management (CSPM) check items.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -131643,7 +132083,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</para>
+        /// <para>Submits a free one-click scan. The scan scope includes free vulnerability scanning categories and free Cloud Security Posture Management (CSPM) check items.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -132417,7 +132857,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the honeypot installation time.</para>
+        /// <para>Modifies the processing status of a honeypot alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -132473,7 +132913,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the honeypot installation time.</para>
+        /// <para>Modifies the processing status of a honeypot alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -132529,7 +132969,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the honeypot installation time.</para>
+        /// <para>Modifies the processing status of a honeypot alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -132547,7 +132987,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the honeypot installation time.</para>
+        /// <para>Modifies the processing status of a honeypot alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137629,7 +138069,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137695,7 +138135,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137761,7 +138201,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137779,7 +138219,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139320,6 +139760,36 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Upgrades the version of an anti-ransomware backup policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation upgrades a v1.0.0 backup policy to v2.0.0. Before you call this operation, make sure that the ECS instance is running, Cloud Assistant is installed, the Security Center agent is online, and a v1.0.0 policy exists. You can call <a href="~~CreateBackupPolicy~~">CreateBackupPolicy</a> with PolicyVersion set to 1.0.0 to create a policy, and then call DescribeBackupPolicies to obtain the policy ID.
+        /// Before you call this operation, you can check or complete the following prerequisites:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Prerequisite</th>
+        /// <th>Related API</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>The ECS instance is running.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/StartInstance">Ecs/StartInstance</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Cloud Assistant is installed on the ECS instance.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/InstallCloudAssistant">Ecs/InstallCloudAssistant</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>The Security Center agent is installed.</td>
+        /// <td><a href="~~OperateAgentClientInstall~~">OperateAgentClientInstall</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Check the agent installation status.</td>
+        /// <td><a href="~~DescribeAgentInstallStatus~~">DescribeAgentInstallStatus</a></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpgradeBackupPolicyVersionRequest
         /// </param>
@@ -139361,6 +139831,36 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Upgrades the version of an anti-ransomware backup policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation upgrades a v1.0.0 backup policy to v2.0.0. Before you call this operation, make sure that the ECS instance is running, Cloud Assistant is installed, the Security Center agent is online, and a v1.0.0 policy exists. You can call <a href="~~CreateBackupPolicy~~">CreateBackupPolicy</a> with PolicyVersion set to 1.0.0 to create a policy, and then call DescribeBackupPolicies to obtain the policy ID.
+        /// Before you call this operation, you can check or complete the following prerequisites:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Prerequisite</th>
+        /// <th>Related API</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>The ECS instance is running.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/StartInstance">Ecs/StartInstance</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Cloud Assistant is installed on the ECS instance.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/InstallCloudAssistant">Ecs/InstallCloudAssistant</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>The Security Center agent is installed.</td>
+        /// <td><a href="~~OperateAgentClientInstall~~">OperateAgentClientInstall</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Check the agent installation status.</td>
+        /// <td><a href="~~DescribeAgentInstallStatus~~">DescribeAgentInstallStatus</a></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeBackupPolicyVersionRequest
@@ -139404,6 +139904,36 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Upgrades the version of an anti-ransomware backup policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation upgrades a v1.0.0 backup policy to v2.0.0. Before you call this operation, make sure that the ECS instance is running, Cloud Assistant is installed, the Security Center agent is online, and a v1.0.0 policy exists. You can call <a href="~~CreateBackupPolicy~~">CreateBackupPolicy</a> with PolicyVersion set to 1.0.0 to create a policy, and then call DescribeBackupPolicies to obtain the policy ID.
+        /// Before you call this operation, you can check or complete the following prerequisites:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Prerequisite</th>
+        /// <th>Related API</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>The ECS instance is running.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/StartInstance">Ecs/StartInstance</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Cloud Assistant is installed on the ECS instance.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/InstallCloudAssistant">Ecs/InstallCloudAssistant</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>The Security Center agent is installed.</td>
+        /// <td><a href="~~OperateAgentClientInstall~~">OperateAgentClientInstall</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Check the agent installation status.</td>
+        /// <td><a href="~~DescribeAgentInstallStatus~~">DescribeAgentInstallStatus</a></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpgradeBackupPolicyVersionRequest
         /// </param>
@@ -139421,6 +139951,36 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Upgrades the version of an anti-ransomware backup policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation upgrades a v1.0.0 backup policy to v2.0.0. Before you call this operation, make sure that the ECS instance is running, Cloud Assistant is installed, the Security Center agent is online, and a v1.0.0 policy exists. You can call <a href="~~CreateBackupPolicy~~">CreateBackupPolicy</a> with PolicyVersion set to 1.0.0 to create a policy, and then call DescribeBackupPolicies to obtain the policy ID.
+        /// Before you call this operation, you can check or complete the following prerequisites:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Prerequisite</th>
+        /// <th>Related API</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>The ECS instance is running.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/StartInstance">Ecs/StartInstance</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Cloud Assistant is installed on the ECS instance.</td>
+        /// <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/InstallCloudAssistant">Ecs/InstallCloudAssistant</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>The Security Center agent is installed.</td>
+        /// <td><a href="~~OperateAgentClientInstall~~">OperateAgentClientInstall</a></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Check the agent installation status.</td>
+        /// <td><a href="~~DescribeAgentInstallStatus~~">DescribeAgentInstallStatus</a></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeBackupPolicyVersionRequest
@@ -139744,6 +140304,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates and confirms a record after a honeypot file is uploaded.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</description></item>
+        /// <item><description>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</description></item>
+        /// <item><description>Use the returned STS credentials to upload the file to the specified bucket by using the OSS PostObject protocol.</description></item>
+        /// <item><description>After the file is uploaded, call this operation to register the upload result.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadedHoneyPotFileRequest
         /// </param>
@@ -139809,6 +140380,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates and confirms a record after a honeypot file is uploaded.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</description></item>
+        /// <item><description>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</description></item>
+        /// <item><description>Use the returned STS credentials to upload the file to the specified bucket by using the OSS PostObject protocol.</description></item>
+        /// <item><description>After the file is uploaded, call this operation to register the upload result.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadedHoneyPotFileRequest
@@ -139876,6 +140458,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Creates and confirms a record after a honeypot file is uploaded.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</description></item>
+        /// <item><description>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</description></item>
+        /// <item><description>Use the returned STS credentials to upload the file to the specified bucket by using the OSS PostObject protocol.</description></item>
+        /// <item><description>After the file is uploaded, call this operation to register the upload result.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadedHoneyPotFileRequest
         /// </param>
@@ -139893,6 +140486,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <summary>
         /// <para>Creates and confirms a record after a honeypot file is uploaded.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</description></item>
+        /// <item><description>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</description></item>
+        /// <item><description>Use the returned STS credentials to upload the file to the specified bucket by using the OSS PostObject protocol.</description></item>
+        /// <item><description>After the file is uploaded, call this operation to register the upload result.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadedHoneyPotFileRequest

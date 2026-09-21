@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public CreateContainerScanTaskByAppNameResponseBodyData Data { get; set; }
         public class CreateContainerScanTaskByAppNameResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether more scan tasks can be created. Valid values:</para>
+            /// <para>Indicates whether you can continue to create scan tasks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: More scan tasks can be created.</description></item>
-            /// <item><description><b>false</b>: No more scan tasks can be created.</description></item>
+            /// <item><description><b>true</b>: You can continue to create scan tasks.</description></item>
+            /// <item><description><b>false</b>: You cannot continue to create scan tasks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanCreate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when image information was collected, in milliseconds.</para>
+            /// <para>The timestamp when image information was collected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644286364150</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CollectTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the scan task started running, in milliseconds.</para>
+            /// <para>The timestamp when the scan task started running. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644286364150</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>TASK_NOT_SUPPORT_REGION</b>: The image is in a region that does not support scanning.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For the regions that support image security scanning, refer to the table of supported regions after the response parameters table in this document.</para>
+            /// <para>For the regions that support image security scanning, see the table of supported regions after the response parameters table in this topic.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>INIT</b>: Initializing.</description></item>
             /// <item><description><b>PRE_ANALYZER</b>: Pre-analyzing.</description></item>
-            /// <item><description><b>SUCCESS</b>: Execution succeeded.</description></item>
-            /// <item><description><b>FAIL</b>: Execution failed.</description></item>
+            /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
+            /// <item><description><b>FAIL</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -41,10 +41,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

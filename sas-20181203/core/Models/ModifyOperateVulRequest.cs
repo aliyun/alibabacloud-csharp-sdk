@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>name</b>: The name of the vulnerability.</description></item>
         /// <item><description><b>uuid</b>: The UUID of the server on which the vulnerability is detected.</description></item>
         /// <item><description><b>tag</b>: The tag of the vulnerability. Valid values:<list type="bullet">
-        /// <item><description><b>oval</b>: Linux software vulnerability.</description></item>
-        /// <item><description><b>system</b>: Windows system vulnerability.</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+        /// <item><description><b>oval</b>: Linux software vulnerability</description></item>
+        /// <item><description><b>system</b>: Windows system vulnerability</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. This field is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<list type="bullet">
+        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The reason for ignoring the vulnerability.</para>
         /// <remarks>
-        /// <para>This parameter is required only when the operation type is <b>ignore</b> (OperateType is set to <b>vul_ignore</b>).</para>
+        /// <para>This parameter is required only when the operation type is <b>ignore</b> (that is, <b>OperateType</b> is set to <b>vul_ignore</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,15 +111,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the vulnerability to handle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
-        /// <item><description><b>emg</b>: emergency vulnerability.</description></item>
-        /// <item><description><b>app</b>: application vulnerability.</description></item>
-        /// <item><description><b>sca</b>: software constituency parsing vulnerability.</description></item>
+        /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
+        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
+        /// <item><description><b>app</b>: application vulnerability</description></item>
+        /// <item><description><b>sca</b>: software constituency parsing vulnerability</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Emergency vulnerabilities (emg), application vulnerabilities (app), and software constituency parsing vulnerabilities (sca) do not support the execute vulnerability fix operation.</para>
+        /// <para>Emergency vulnerabilities (emg), application vulnerabilities (app), and software constituency parsing vulnerabilities (sca) do not support the vulnerability fix operation. You cannot execute the fix operation for these types.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

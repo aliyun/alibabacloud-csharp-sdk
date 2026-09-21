@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<GetFileDetectResultResponseBodyResultList> ResultList { get; set; }
         public class GetFileDetectResultResponseBodyResultList : TeaModel {
             /// <summary>
-            /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of failure.</para>
+            /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HashKey { get; set; }
 
             /// <summary>
-            /// <para>The detailed information of the error code.</para>
+            /// <para>The detailed information about the error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>successful</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>0</b>: Safe file.</description></item>
             /// <item><description><b>1</b>: Suspicious file.</description></item>
-            /// <item><description><b>3</b>: Detection in progress. Wait for the result.</description></item>
+            /// <item><description><b>3</b>: Detection in progress. Wait for the detection to complete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,14 +118,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The file detection score. The mapping between score ranges and risk levels is as follows:</para>
             /// <list type="bullet">
-            /// <item><description>0-60: Safe.</description></item>
-            /// <item><description>61-70: Risky.</description></item>
-            /// <item><description>71-80: Suspicious.</description></item>
-            /// <item><description>81-100: Malicious.</description></item>
+            /// <item><description>0–60: Safe.</description></item>
+            /// <item><description>61–70: Risky.</description></item>
+            /// <item><description>71–80: Suspicious.</description></item>
+            /// <item><description>81–100: Malicious.</description></item>
             /// </list>
             /// <remarks>
             /// <para>Notice: A higher score indicates a more suspicious file.</para>
             /// </remarks>
+            /// <para>This field is returned only when Result is 1 (suspicious file). This field is not returned when Result is 0 or 3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -137,31 +138,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The virus type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Trojan</b>: trojan</description></item>
-            /// <item><description><b>WebShell</b>: web shell</description></item>
-            /// <item><description><b>Backdoor</b>: backdoor</description></item>
-            /// <item><description><b>RansomWare</b>: ransomware</description></item>
-            /// <item><description><b>Scanner</b>: scanner</description></item>
-            /// <item><description><b>Stealer</b>: credential stealer</description></item>
-            /// <item><description><b>Malbaseware</b>: contaminated base software</description></item>
-            /// <item><description><b>Hacktool</b>: hacking tool</description></item>
-            /// <item><description><b>Engtest</b>: DPI engine test program</description></item>
-            /// <item><description><b>Downloader</b>: downloader trojan</description></item>
-            /// <item><description><b>Virus</b>: file infector virus</description></item>
-            /// <item><description><b>Miner</b>: mining programs</description></item>
-            /// <item><description><b>Worm</b>: worms</description></item>
-            /// <item><description><b>DDoS</b>: DDoS Trojan</description></item>
-            /// <item><description><b>Malware</b>: malware</description></item>
-            /// <item><description><b>RiskWare</b>: riskware</description></item>
-            /// <item><description><b>Proxytool</b>: proxy tool</description></item>
-            /// <item><description><b>Suspicious</b>: suspicious program</description></item>
-            /// <item><description><b>MalScript</b>: malicious script</description></item>
-            /// <item><description><b>Rootkit</b>: rootkit</description></item>
-            /// <item><description><b>Exploit</b>: vulnerability exploits</description></item>
+            /// <item><description><b>Trojan</b>: Trojan.</description></item>
+            /// <item><description><b>WebShell</b>: Web shell.</description></item>
+            /// <item><description><b>Backdoor</b>: Backdoor.</description></item>
+            /// <item><description><b>RansomWare</b>: Ransomware.</description></item>
+            /// <item><description><b>Scanner</b>: Scanner.</description></item>
+            /// <item><description><b>Stealer</b>: Credential stealer.</description></item>
+            /// <item><description><b>Malbaseware</b>: Contaminated base software.</description></item>
+            /// <item><description><b>Hacktool</b>: Hacking tool.</description></item>
+            /// <item><description><b>Engtest</b>: DPI engine test program.</description></item>
+            /// <item><description><b>Downloader</b>: Downloader Trojan.</description></item>
+            /// <item><description><b>Virus</b>: File infector virus.</description></item>
+            /// <item><description><b>Miner</b>: Mining programs.</description></item>
+            /// <item><description><b>Worm</b>: Worms.</description></item>
+            /// <item><description><b>DDoS</b>: DDoS Trojan.</description></item>
+            /// <item><description><b>Malware</b>: Malware.</description></item>
+            /// <item><description><b>RiskWare</b>: Riskware.</description></item>
+            /// <item><description><b>Proxytool</b>: Proxy tool.</description></item>
+            /// <item><description><b>Suspicious</b>: Suspicious program.</description></item>
+            /// <item><description><b>MalScript</b>: Malicious script.</description></item>
+            /// <item><description><b>Rootkit</b>: Rootkit.</description></item>
+            /// <item><description><b>Exploit</b>: Vulnerability exploits.</description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is not supported when Result is 0 or 3.</para>
             /// </remarks>
+            /// <para>This field is returned only when Result is 1 (suspicious file). This field is not returned when Result is 0 or 3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebShell</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to pin the report. Valid values:</para>
+        /// <para>Specifies whether the report is pinned to the top. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Pinned { get; set; }
 
         /// <summary>
-        /// <para>The state of the report. Valid values:</para>
+        /// <para>The report status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled</description></item>
-        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,12 +52,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ReportStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the report. Valid values:</para>
+        /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: daily report</description></item>
-        /// <item><description><b>1</b>: weekly report</description></item>
-        /// <item><description><b>2</b>: monthly report</description></item>
-        /// <item><description><b>3</b>: report whose statistics are collected in a custom time range</description></item>
+        /// <item><description><b>0</b>: Daily report.</description></item>
+        /// <item><description><b>1</b>: Weekly report.</description></item>
+        /// <item><description><b>2</b>: Monthly report.</description></item>
+        /// <item><description><b>3</b>: Custom period.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ReportType { get; set; }
 
         /// <summary>
-        /// <para>The report version. Valid values:</para>
+        /// <para>The security report version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1.0.0</b></description></item>
         /// <item><description><b>2.0.0</b></description></item>
@@ -81,12 +81,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ReportVersion { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the report.</para>
+        /// <para>The report name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

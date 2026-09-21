@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The operation to perform on the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>deal</b>: handles the alert (quarantine).</description></item>
-        /// <item><description><b>ignore</b>: ignores the alert.</description></item>
-        /// <item><description><b>mark_mis_info</b>: marks the alert as a false positive (adds it to the whitelist).</description></item>
-        /// <item><description><b>rm_mark_mis_info</b>: unmarks the alert as a false positive (removes it from the whitelist).</description></item>
-        /// <item><description><b>offline_handled</b>: marks the alert as handled.</description></item>
+        /// <item><description><b>deal</b>: Handle the alert (quarantine).</description></item>
+        /// <item><description><b>ignore</b>: Ignore the alert.</description></item>
+        /// <item><description><b>mark_mis_info</b>: Mark as false positive (add to whitelist).</description></item>
+        /// <item><description><b>rm_mark_mis_info</b>: Unmark as false positive (remove from whitelist).</description></item>
+        /// <item><description><b>offline_handled</b>: Mark as handled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,6 +38,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Operation { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of a member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -55,9 +64,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The sub-operation type to perform when quarantining the alert event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>killAndQuaraFileByPidAndMd5andPath</b>: terminates the process by PID and quarantines the source file of the process.</description></item>
-        /// <item><description><b>quaraFileByMd5andPath</b>: quarantines the source file of the process.</description></item>
-        /// <item><description><b>killAndQuaraFileByMd5andPath</b>: terminates the process and quarantines the source file of the process.</description></item>
+        /// <item><description><b>killAndQuaraFileByPidAndMd5andPath</b>: Terminate the process by PID and quarantine the source file of the process.</description></item>
+        /// <item><description><b>quaraFileByMd5andPath</b>: Quarantine the source file of the process.</description></item>
+        /// <item><description><b>killAndQuaraFileByMd5andPath</b>: Terminate the process and quarantine the source file of the process.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,8 +93,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the exception event to handle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>alarm</b>: alert.</description></item>
-        /// <item><description><b>Empty</b>: exception.</description></item>
+        /// <item><description><b>alarm</b>: alert</description></item>
+        /// <item><description><b>Empty</b>: exception</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -34,10 +34,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ResetSecurityScoreRule { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the resource directory.</para>
+        /// <para>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The deduction threshold for the security score rule category.</para>
             /// <remarks>
-            /// <para>The valid range is 0 to 100. The sum of all security score rule category deduction thresholds must equal 100.</para>
+            /// <para>The valid range is 0 to 100. The sum of deduction thresholds for all security score rule categories must equal 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,9 +96,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description><b>SS_SAS_APP_VUL</b>: Pending application vulnerabilities to fix.</description></item>
                 /// <item><description><b>SS_SAS_SYS_VUL</b>: Pending system vulnerabilities to fix.</description></item>
                 /// <item><description><b>SS_SAS_CLOUD_HC</b>: Pending Cloud Security Posture Management (CSPM) risks.</description></item>
-                /// <item><description><b>SS_SDDP_DATA_RISK</b>: Pending data security risks to address.</description></item>
+                /// <item><description><b>SS_SDDP_DATA_RISK</b>: Pending data security risks to remediate.</description></item>
                 /// <item><description><b>SS_WAF_API_RISK</b>: Pending API security risks.</description></item>
-                /// <item><description><b>SS_DDOS_BH_ASSET</b>: Assets in DDoS blackhole filtering status.</description></item>
+                /// <item><description><b>SS_DDOS_BH_ASSET</b>: Assets under DDoS blackhole filtering.</description></item>
                 /// <item><description><b>SS_SAS_AK_LEAK</b>: Unhandled AccessKey/SecretKey leak events.</description></item>
                 /// <item><description><b>SS_PRODUCT_CONNECT</b>: Security products not properly connected.</description></item>
                 /// <item><description><b>SS_KEY_CONFIG</b>: Key feature configuration.</description></item>
@@ -197,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The deduction value of the security score rule.</para>
             /// <remarks>
-            /// <para>The valid range is 0 to 100. The sum of all security score rule deduction thresholds must equal 100.</para>
+            /// <para>The valid range is 0 to 100. The sum of deduction thresholds for all security score rules must equal 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -238,7 +241,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? ScoreThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The sub-rule type of the individual deduction item. The mapping between security score types and sub-rule types is as follows:</para>
+                /// <para>The sub-rule type of the individual deduction item. The relationship between security score types and sub-rule types is as follows:</para>
                 /// <list type="bullet">
                 /// <item><description><para>SS_REINFORCE: Key feature configuration.</para>
                 /// <list type="bullet">
@@ -269,7 +272,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// </description></item>
                 /// <item><description><para>SS_HC: Baseline issues.</para>
                 /// <list type="bullet">
-                /// <item><description>WEAK_EXPLOIT: A weak password risk exposed to the Internet exists.</description></item>
+                /// <item><description>WEAK_EXPLOIT: A weak password risk with Internet Exposure exists.</description></item>
                 /// <item><description>WEAK_PASSWORD: A weak password risk exists.</description></item>
                 /// <item><description>HC_EXPLOIT: A high-risk intrusion vulnerability exists.</description></item>
                 /// <item><description>HC_OTHER_WARNING: A security configuration risk exists.</description></item>
@@ -282,7 +285,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>CSPM_COMPLIANCE_NOT_PASS: One failed compliance check item exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_AK: AccessKey pair leak risk. Categorization not applicable.</para>
+                /// <item><description><para>SS_AK: AccessKey pair leak risk.</para>
                 /// </description></item>
                 /// </list>
                 /// 

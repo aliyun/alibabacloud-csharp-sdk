@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The policy name. Fixed value: Automated Batch Vulnerability Fix Policy.</para>
+        /// <para>The policy name. Set the value to: Automated Batch Vulnerability Fix Policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Automated Batch Vulnerability Fixing Policy for Multiple Servers</para>
+        /// <para>漏洞自动化批量修复策略</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
@@ -46,24 +46,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTaskName { get; set; }
 
         /// <summary>
-        /// <para>The parameter information of the policy. A string in JSONArray format with the following items:</para>
+        /// <para>The parameter information of the policy. The value is a string in JSONArray format. The following items are included:</para>
         /// <para>Vulnerability configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: vluList</description></item>
         /// <item><description>associationProperty: sasAllVul</description></item>
-        /// <item><description>value: basic information about the vulnerability</description></item>
+        /// <item><description>value: the basic information of the vulnerability.</description></item>
         /// </list>
         /// <para>Snapshot configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: snapshotConfig</description></item>
         /// <item><description>associationProperty: snapshotConfig</description></item>
-        /// <item><description>value: storage time information</description></item>
+        /// <item><description>value: the storage time information.</description></item>
         /// </list>
         /// <para>Notification configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: notifyConfig</description></item>
         /// <item><description>associationProperty: notifyConfig</description></item>
-        /// <item><description>value: email or DingTalk configuration information.</description></item>
+        /// <item><description>value: the configuration information of email or DingTalk notifications.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

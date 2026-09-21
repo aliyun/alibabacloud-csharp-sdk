@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the first page to return. Default value: <b>1</b>, which indicates that the query results are returned starting from page 1.</para>
+        /// <para>The page number of the first page to return. Default value: <b>1</b>, which indicates that results are returned starting from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Settings for whether to enable paged query. Default value: <b>true</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Paged query is enabled.</description></item>
-        /// <item><description><b>false</b>: Paged query is disabled. Paging is not performed.</description></item>
+        /// <item><description><b>true</b>: Paging is enabled.</description></item>
+        /// <item><description><b>false</b>: Paging is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,10 +94,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is added as a member of a resource folder for member accounts.</para>
+        /// <para>The ID of the Alibaba Cloud account that is associated with member accounts in a resource folder.</para>
         /// <remarks>
         /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

@@ -1,3 +1,7 @@
+2026-09-21 Version: 10.2.0
+- Support API GetAgentlessTaskCountBatch.
+
+
 2026-09-15 Version: 10.1.5
 - Update API AddAssetSelectionCriteria: add request parameters DryRun.
 - Update API AddCheckInstanceResultWhiteList: add request parameters DryRun.

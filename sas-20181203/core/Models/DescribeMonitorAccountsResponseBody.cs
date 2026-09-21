@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMonitorAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of member account information.</para>
+        /// <para>The list of member account information.</para>
         /// </summary>
         [NameInMap("AccountIdInfos")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when it was added to the control list, in timestamp format with second precision.</para>
+            /// <para>The time when the account was added to the management list. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760520684000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AddTime { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the operator.</para>
+            /// <para>The Alibaba Cloud account ID of the administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>106635707417****</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperatorUid { get; set; }
 
             /// <summary>
-            /// <para>Basic service switch. Values: </para>
+            /// <para>The basic service switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Off </description></item>
-            /// <item><description><b>1</b>: On</description></item>
+            /// <item><description><b>0</b>: off</description></item>
+            /// <item><description><b>1</b>: on</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,13 +61,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PostBasicService { get; set; }
 
             /// <summary>
-            /// <para>The purchased version of Cloud Security Center. Values:</para>
+            /// <para>The purchased edition of Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> or <b>1</b>: Free Edition </description></item>
-            /// <item><description><b>2</b> or <b>3</b>: Enterprise Edition</description></item>
-            /// <item><description><b>5</b>: Advanced Edition </description></item>
-            /// <item><description><b>6</b>: Anti-Virus Edition </description></item>
-            /// <item><description><b>7</b>: Flagship Edition</description></item>
+            /// <item><description><b>0</b> or <b>1</b>: Free Edition</description></item>
+            /// <item><description><b>2</b> or <b>3</b>: Enterprise Edition  </description></item>
+            /// <item><description><b>5</b>: Advanced Edition  </description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition </description></item>
+            /// <item><description><b>7</b>: Ultimate Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The IDs of the members.</para>
+        /// <para>The list of member account IDs.</para>
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>028CF634-5268-5660-9575-48C9ED6BF880</para>

@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCheckScopeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic scan configuration as a JSON string. The following fields are included:</para>
+        /// <para>The JSON string of the automatic scan configuration. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>autoInclude</b>: specifies whether to enable automatic scan. Valid values: <b>true</b>: enabled. <b>false</b>: disabled.</description></item>
-        /// <item><description><b>autoRule</b>: the enablement configuration.</description></item>
-        /// <item><description><b>ruleOperator</b>: the enablement configuration rule. Set the value to <b>include</b>.</description></item>
+        /// <item><description><b>autoInclude</b>: specifies whether to enable automatic scanning. Valid values: <b>true</b>: enabled. <b>false</b>: disabled.</description></item>
+        /// <item><description><b>autoRule</b>: the configuration for enabling automatic scanning.</description></item>
+        /// <item><description><b>ruleOperator</b>: the rule operator for the configuration. Set the value to <b>include</b>.</description></item>
         /// <item><description><b>operator</b>: the logical operator. Set the value to <b>or</b>.</description></item>
         /// <item><description><b>rule</b>: the rule.</description></item>
-        /// <item><description><b>condition</b>: the rule condition. Valid values: <b>vendor</b>: vendor. <b>assetType</b>: level-1 asset type. <b>assetSubType</b>: level-2 asset type.<remarks>
-        /// <para>For more information, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
+        /// <item><description><b>condition</b>: the rule condition. Valid values: <b>vendor</b>: vendor, <b>assetType</b>: primary asset type, <b>assetSubType</b>: secondary asset type.<remarks>
+        /// <para>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
+        /// <para>This parameter is required when AutoType is set to 1 (automatic scan enabled). Provide a valid JSON configuration string. This parameter is not required when AutoType is set to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;autoInclude\&quot;:true,\&quot;autoRule\&quot;:{\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;operator\&quot;:\&quot;or\&quot;,\&quot;rule\&quot;:[{\&quot;condition\&quot;:\&quot;assetSubType\&quot;,\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;value\&quot;:[{\&quot;vendor\&quot;:\&quot;0\&quot;,\&quot;assetType\&quot;:\&quot;0\&quot;,\&quot;assetSubType\&quot;:\&quot;100\&quot;}]}]}}&quot;</para>
@@ -31,10 +32,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AutoConfig { get; set; }
 
         /// <summary>
-        /// <para>The automatic scan configuration type. Valid values:</para>
+        /// <para>The type of the automatic scan configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disable automatic scan</description></item>
-        /// <item><description><b>1</b>: automatically scan newly added cloud assets</description></item>
+        /// <item><description><b>0</b>: Automatic scan is disabled.</description></item>
+        /// <item><description><b>1</b>: Automatically scan newly added cloud assets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,12 +58,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account that corresponds to the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The scan scope configuration type. Valid values:</para>
+        /// <para>The type of the scan scope configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: scan by instance</description></item>
         /// <item><description><b>3</b>: scan all</description></item>

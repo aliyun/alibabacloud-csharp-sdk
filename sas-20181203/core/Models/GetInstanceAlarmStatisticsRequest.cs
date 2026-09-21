@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetInstanceAlarmStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The data source for statistics on instance alarms, with a default value of aqs:</para>
+        /// <para>The data source from which instance alert statistics are collected. Default value: aqs.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><em>sas</em>: Situation Awareness data source</description></item>
-        /// <item><description><em>aqs</em>: Alarm event data</description></item>
-        /// <item><description><em>honeypot</em>: Honeypot</description></item>
+        /// <item><description><b>sas</b>: Threat Detection Service data source.</description></item>
+        /// <item><description><b>aqs</b>: alert event data.</description></item>
+        /// <item><description><b>honeypot</b>: cloud honeypot.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +25,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server to be queried.</para>
+        /// <para>The UUID of the server to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

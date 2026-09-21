@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The container IDs.</para>
+        /// <para>The container ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</para>
@@ -95,6 +95,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

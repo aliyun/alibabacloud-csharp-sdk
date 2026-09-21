@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RollbackSuspEventQuaraFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to sas.</para>
+        /// <para>The source of the request. Set the value to sas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -20,10 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quarantined file.   </para>
-        /// <remarks>
-        /// <para>If you do not configure this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</para>
-        /// </remarks>
+        /// <para>The ID of the quarantined file. You can call <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> to obtain this value from the Id field in the response. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101.</para>
+        /// <para>Before you call this operation, make sure that the Security Center agent is installed on the ECS instance, and that file-related security events and corresponding quarantined files exist. After a file is quarantined, call DescribeSuspEventQuaraFiles to query the quarantined file ID, and then call this operation to restore the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3921797</para>
@@ -32,6 +30,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? QuaraFileId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.2.3.4</para>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

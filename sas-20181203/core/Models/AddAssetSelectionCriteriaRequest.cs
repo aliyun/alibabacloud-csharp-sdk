@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddAssetSelectionCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The operation type for criteria. Valid values:</para>
+        /// <para>The operation type for the criteria. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>add</b>: adds assets.</description></item>
         /// <item><description><b>del</b>: deletes assets.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaOperation { get; set; }
 
         /// <summary>
-        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// <para>Specifies whether to perform only a dry run. true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>add</b>: adds the asset.</description></item>
-            /// <item><description><b>del</b>: deletes the asset.</description></item>
+            /// <item><description><b>add</b>: Add.</description></item>
+            /// <item><description><b>del</b>: Delete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The asset ID. If you select assets by machine, the value is the UUID of the machine. If you select assets by group, the value is the group ID. If you select assets by VPC, the value is the VPC ID.</para>
+            /// <para>The asset ID. If you select assets by server, set this parameter to the UUID of the server. If you select assets by group, set this parameter to the group ID. If you select assets by VPC, set this parameter to the VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1188****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateRdDefaultSyncListRequest : TeaModel {
         /// <summary>
-        /// <para>The list of folder IDs in the resource directory.</para>
+        /// <para>The IDs of folders in the resource directory.</para>
         /// <remarks>
         /// <para>You can call <a href="~~GetRdTree~~">GetRdTree</a> to obtain folder IDs. Separate multiple folder IDs with commas (,). If you do not specify this parameter, the existing configuration list is cleared.</para>
         /// </remarks>

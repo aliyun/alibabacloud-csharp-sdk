@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryAttackCountRequest : TeaModel {
         /// <summary>
-        /// <para>The source identifier of the request. Set this parameter to sas.</para>
+        /// <para>The source of the request. Set this parameter to sas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,6 +33,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127608589417****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -48,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
         /// <para>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para>2: suspicious</para>
         /// </description></item>
-        /// <item><description><para>3: high-risk.</para>
+        /// <item><description><para>3: high-risk</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>windows</b>: Windows</description></item>
-        /// <item><description><b>linux</b>: Linux.</description></item>
+        /// <item><description><b>linux</b>: Linux</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>block</b>: blocks the request.</para>
+        /// <item><description><para><b>block</b>: Block.</para>
         /// </description></item>
-        /// <item><description><para><b>monitor</b>: monitors the request.</para>
+        /// <item><description><para><b>monitor</b>: Monitor.</para>
         /// </description></item>
-        /// <item><description><para><b>pass</b>: allows the request.</para>
+        /// <item><description><para><b>pass</b>: Allow.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The category of the security score rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SS_SAS_HANDLE</b>: Security governance</description></item>
-            /// <item><description><b>SS_SAS_RESPOND</b>: Security response</description></item>
+            /// <item><description><b>SS_SAS_HANDLE</b>: Security governance.</description></item>
+            /// <item><description><b>SS_SAS_RESPOND</b>: Security response.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,22 +119,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? ScoreThreshold { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the security score rule subkey. Valid values:</para>
+                    /// <para>The type of the security score rule sub-item.</para>
                     /// <list type="bullet">
-                    /// <item><description><b>SS_SAS_WEAK_PW</b>: Pending weak passwords to fix</description></item>
-                    /// <item><description><b>SS_SAS_ALARM</b>: Pending Security Center alerting to handle</description></item>
-                    /// <item><description><b>SS_SAS_EMG_VUL</b>: Pending emergency vulnerabilities to fix</description></item>
-                    /// <item><description><b>SS_SAS_APP_VUL</b>: Pending application vulnerabilities to fix</description></item>
-                    /// <item><description><b>SS_SAS_SYS_VUL</b>: Pending system vulnerability to fix</description></item>
-                    /// <item><description><b>SS_SAS_CLOUD_HC</b>: Pending Cloud Security Posture Management (CSPM) risks to handle</description></item>
-                    /// <item><description><b>SS_SDDP_DATA_RISK</b>: Pending data security risks to remediate</description></item>
-                    /// <item><description><b>SS_WAF_API_RISK</b>: Pending API security risks to handle</description></item>
-                    /// <item><description><b>SS_DDOS_BH_ASSET</b>: Assets in Black Hole Activated status</description></item>
-                    /// <item><description><b>SS_SAS_AK_LEAK</b>: Unhandled AccessKey/SecretKey leak events</description></item>
-                    /// <item><description><b>SS_PRODUCT_CONNECT</b>: Security products not Normal connected</description></item>
-                    /// <item><description><b>SS_KEY_CONFIG</b>: Key feature configuration</description></item>
-                    /// <item><description><b>SS_PRODUCT_EXPIRE</b>: Products about to expire</description></item>
-                    /// <item><description><b>SS_AI_RISK</b>: AI application risks</description></item>
+                    /// <item><description><b>SS_SAS_WEAK_PW</b>: Pending weak passwords to fix.</description></item>
+                    /// <item><description><b>SS_SAS_ALARM</b>: Pending Security Center alerts to handle.</description></item>
+                    /// <item><description><b>SS_SAS_EMG_VUL</b>: Pending emergency vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_APP_VUL</b>: Pending application vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_SYS_VUL</b>: Pending system vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_CLOUD_HC</b>: Pending Cloud Security Posture Management (CSPM) risks to handle.</description></item>
+                    /// <item><description><b>SS_SDDP_DATA_RISK</b>: Pending data security risks to remediate.</description></item>
+                    /// <item><description><b>SS_WAF_API_RISK</b>: Pending API security risks to handle.</description></item>
+                    /// <item><description><b>SS_DDOS_BH_ASSET</b>: Assets in Black Hole Activated status.</description></item>
+                    /// <item><description><b>SS_SAS_AK_LEAK</b>: Unhandled AccessKey/SecretKey leak events.</description></item>
+                    /// <item><description><b>SS_PRODUCT_CONNECT</b>: Security products not in Normal connection status.</description></item>
+                    /// <item><description><b>SS_KEY_CONFIG</b>: Key feature configuration.</description></item>
+                    /// <item><description><b>SS_PRODUCT_EXPIRE</b>: Products about to expire.</description></item>
+                    /// <item><description><b>SS_AI_RISK</b>: AI application risks.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -256,13 +256,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>XPRESS_INSTALL: Security Center service authorization is not enabled.</description></item>
                 /// <item><description>REINFORCE_SUSPICIOUS: The anti-virus feature is not enabled.</description></item>
                 /// <item><description>RANSOMWARE: The anti-ransomware policy is not enabled.</description></item>
-                /// <item><description>WEB_LOCK: The web tamper-proofing feature is not enabled.</description></item>
-                /// <item><description>VIRUS_SCHEDULE_SCAN: The epoch virus scan policy is not enabled.</description></item>
+                /// <item><description>WEB_LOCK: The tamper-proofing feature is not enabled.</description></item>
+                /// <item><description>VIRUS_SCHEDULE_SCAN: The periodic virus scan policy is not enabled.</description></item>
                 /// <item><description>IMAGE_REPO_SCAN: The container image scan scope is not configured.</description></item>
                 /// <item><description>IMAGE_SCAN_TASK: The one-click container image security risk scan has not been executed.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_ALARM: Pending alerting.</para>
+                /// <item><description><para>SS_ALARM: Pending alerts.</para>
                 /// <list type="bullet">
                 /// <item><description>ALARM_SERIOUS: One unhandled high-risk alert event exists.</description></item>
                 /// <item><description>ALARM_SUSPICIOUS: One unhandled medium-risk alert event exists.</description></item>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// </description></item>
                 /// <item><description><para>SS_HC: Baseline issues.</para>
                 /// <list type="bullet">
-                /// <item><description>WEAK_EXPLOIT: A weak password risk that is exposed to the Internet exists.</description></item>
+                /// <item><description>WEAK_EXPLOIT: A weak password risk expose to the Internet exists.</description></item>
                 /// <item><description>WEAK_PASSWORD: A weak password risk exists.</description></item>
                 /// <item><description>HC_EXPLOIT: A high-risk intrusion vulnerability exists.</description></item>
                 /// <item><description>HC_OTHER_WARNING: A security configuration risk exists.</description></item>

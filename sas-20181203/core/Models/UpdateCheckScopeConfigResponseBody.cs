@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCheckScopeConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public UpdateCheckScopeConfigResponseBodyData Data { get; set; }
         public class UpdateCheckScopeConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The automatic scan configuration as a JSON string. The following fields are included:</para>
+            /// <para>The JSON string of the automatic scan configuration. The following fields are included:</para>
             /// <list type="bullet">
-            /// <item><description><b>autoInclude</b>: specifies whether to enable automatic scan. Valid values: <b>true</b>: enabled. <b>false</b>: disabled.</description></item>
-            /// <item><description><b>autoRule</b>: the enablement configuration.</description></item>
-            /// <item><description><b>ruleOperator</b>: the enablement configuration rule. Set the value to <b>include</b>.</description></item>
+            /// <item><description><b>autoInclude</b>: specifies whether to enable automatic scanning. Valid values: <b>true</b>: enabled. <b>false</b>: disabled.</description></item>
+            /// <item><description><b>autoRule</b>: the configuration for enabling automatic scanning.</description></item>
+            /// <item><description><b>ruleOperator</b>: the rule operator for the configuration. Set the value to <b>include</b>.</description></item>
             /// <item><description><b>operator</b>: the logical operator. Set the value to <b>or</b>.</description></item>
             /// <item><description><b>rule</b>: the rule.</description></item>
-            /// <item><description><b>condition</b>: the rule condition. Valid values: <b>vendor</b>: vendor. <b>assetType</b>: level-1 asset type. <b>assetSubType</b>: level-2 asset type.<remarks>
-            /// <para>For more information, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
+            /// <item><description><b>condition</b>: the rule condition. Valid values: <b>vendor</b>: vendor, <b>assetType</b>: primary asset type, <b>assetSubType</b>: secondary asset type.<remarks>
+            /// <para>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AutoConfig { get; set; }
 
             /// <summary>
-            /// <para>The automatic scan configuration type. Valid values:</para>
+            /// <para>The type of the automatic scan configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disable automatic scan</description></item>
-            /// <item><description><b>1</b>: automatically scan newly added cloud assets</description></item>
+            /// <item><description><b>0</b>: Automatic scan is disabled.</description></item>
+            /// <item><description><b>1</b>: Automatically scan newly added cloud assets.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The scan scope configuration type. Valid values:</para>
+            /// <para>The type of the scan scope configuration. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: scan by instance</description></item>
             /// <item><description><b>3</b>: scan all</description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message of the request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
