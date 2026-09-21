@@ -17,6 +17,90 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public InvokeAssistantResponseBodyMessagesContent Content { get; set; }
             public class InvokeAssistantResponseBodyMessagesContent : TeaModel {
+                [NameInMap("a2uiMessages")]
+                [Validation(Required=false)]
+                public List<InvokeAssistantResponseBodyMessagesContentA2uiMessages> A2uiMessages { get; set; }
+                public class InvokeAssistantResponseBodyMessagesContentA2uiMessages : TeaModel {
+                    [NameInMap("appendDataModel")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel AppendDataModel { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel : TeaModel {
+                        [NameInMap("path")]
+                        [Validation(Required=false)]
+                        public string Path { get; set; }
+
+                        [NameInMap("surfaceId")]
+                        [Validation(Required=false)]
+                        public string SurfaceId { get; set; }
+
+                        [NameInMap("value")]
+                        [Validation(Required=false)]
+                        public object Value { get; set; }
+
+                    }
+
+                    [NameInMap("createSurface")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface CreateSurface { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface : TeaModel {
+                        [NameInMap("surfaceId")]
+                        [Validation(Required=false)]
+                        public string SurfaceId { get; set; }
+
+                    }
+
+                    [NameInMap("deleteSurface")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface DeleteSurface { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface : TeaModel {
+                        [NameInMap("surfaceId")]
+                        [Validation(Required=false)]
+                        public string SurfaceId { get; set; }
+
+                    }
+
+                    [NameInMap("profile")]
+                    [Validation(Required=false)]
+                    public string Profile { get; set; }
+
+                    [NameInMap("updateComponents")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents UpdateComponents { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents : TeaModel {
+                        [NameInMap("components")]
+                        [Validation(Required=false)]
+                        public List<object> Components { get; set; }
+
+                        [NameInMap("surfaceId")]
+                        [Validation(Required=false)]
+                        public string SurfaceId { get; set; }
+
+                    }
+
+                    [NameInMap("updateDataModel")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel UpdateDataModel { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel : TeaModel {
+                        [NameInMap("path")]
+                        [Validation(Required=false)]
+                        public string Path { get; set; }
+
+                        [NameInMap("surfaceId")]
+                        [Validation(Required=false)]
+                        public string SurfaceId { get; set; }
+
+                        [NameInMap("value")]
+                        [Validation(Required=false)]
+                        public object Value { get; set; }
+
+                    }
+
+                    [NameInMap("version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
+
+                }
+
                 [NameInMap("aguiContent")]
                 [Validation(Required=false)]
                 public InvokeAssistantResponseBodyMessagesContentAguiContent AguiContent { get; set; }
