@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for session creation.</para>
+        /// <para>The end time of the session creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770912000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for session creation.</para>
+        /// <para>The start time of the session creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770825600000</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public long? CreateStartTime { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the session creator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2096******</para>
+        /// </summary>
         [NameInMap("CreatorId")]
         [Validation(Required=false)]
         public string CreatorId { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,6 +75,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <item><description>Analysis</description></item>
         /// <item><description>Coding</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Analysis</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -108,7 +117,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The Data Agent title. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Analyze this data for me</para>
+        /// <para>Help me analyze this data</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentId { get; set; }
 
                 /// <summary>
-                /// <para>The usage stage of the custom agent. Valid values:</para>
+                /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>debug</b>: Debug stage.</description></item>
-                /// <item><description><b>prod</b>: Production environment stage.</description></item>
+                /// <item><description><b>prod</b>: Production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -148,9 +148,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
                 /// <summary>
                 /// <para>The name of the user OSS bucket.</para>
-                /// <list type="bullet">
-                /// <item><description>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</description></item>
-                /// </list>
+                /// <para>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-oss-bucket</para>
@@ -204,7 +202,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request is abnormal.</para>
+        /// <para>The error code returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

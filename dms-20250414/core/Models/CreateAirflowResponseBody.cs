@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateAirflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_FOUND</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The log information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateAirflowResponseBodyRoot Root { get; set; }
         public class CreateAirflowResponseBodyRoot : TeaModel {
             /// <summary>
-            /// <para>The ID of the Airflow instance.</para>
+            /// <para>The instance ID of the Airflow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>af-****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AppSpec { get; set; }
 
             /// <summary>
-            /// <para>The application type. This value is always airflow.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>airflow</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>Custom Airflow configurations.</para>
+            /// <para>The custom Airflow configuration.</para>
             /// </summary>
             [NameInMap("CustomAirflowCfg")]
             [Validation(Required=false)]
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DagsDir { get; set; }
 
             /// <summary>
-            /// <para>A list of data mount configurations.</para>
+            /// <para>The list of data mount information.</para>
             /// </summary>
             [NameInMap("DataMountInfoList")]
             [Validation(Required=false)]
             public List<DataMountInfo> DataMountInfoList { get; set; }
 
             /// <summary>
-            /// <para>The deployment error message.</para>
+            /// <para>The error log information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc not found</para>
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable serverless workers.</para>
+            /// <para>Specifies whether to enable Worker elasticity.</para>
             /// </summary>
             [NameInMap("EnableServerless")]
             [Validation(Required=false)]
             public bool? EnableServerless { get; set; }
 
             /// <summary>
-            /// <para>The time the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-12T05:46:01.000+0000</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a graceful shutdown, in seconds.</para>
+            /// <para>The timeout period for the Worker to gracefully shut down.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The plugin directory that Airflow scans.</para>
+            /// <para>The directory that Airflow scans for plugins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/plugins</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string PluginsDir { get; set; }
 
             /// <summary>
-            /// <para>The path to the requirements file.</para>
+            /// <para>The path of the installable package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/requirements.txt</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RequirementFile { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2ze1nak7h0alg1xxx</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The file that is loaded when the Airflow instance starts. You can use this file to set environment variables.</para>
+            /// <para>The file loaded when the Airflow instance starts. You can use this file to set environment variables and other configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/startup.sh</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string StartupFile { get; set; }
 
             /// <summary>
-            /// <para>The status of the Airflow instance.</para>
+            /// <para>The instance status of the Airflow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEPLOYING</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The VSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-8vbaf073jawozfpbg****</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>VPC ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf63r6coyiw9o5gf****</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The number of scaled-out worker nodes.</para>
+            /// <para>The number of worker scale-out nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -310,12 +310,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

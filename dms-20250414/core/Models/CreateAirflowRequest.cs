@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
-        /// <para>The Airflow version. Supported versions: 2.10 and 3.1.</para>
+        /// <para>The Airflow version. Valid values: &quot;3.2.2&quot;, &quot;3.1.0&quot;, &quot;2.10.4&quot;, and &quot;3.0.6&quot;.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3.1</para>
+        /// <para>3.2.2</para>
         /// </summary>
         [NameInMap("AirflowVersion")]
         [Validation(Required=false)]
         public string AirflowVersion { get; set; }
 
         /// <summary>
-        /// <para>The compute specifications for the Airflow instance. Valid values: <b>SMALL</b>, <b>MEDIUM</b>, <b>LARGE</b>, <b>XLARGE</b>, or <b>X2LARGE</b>.</para>
+        /// <para>The specification of the Airflow instance. Valid values: <b>SMALL</b>, <b>MEDIUM</b>, <b>LARGE</b>, <b>XLARGE</b>, and <b>X2LARGE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AppSpec { get; set; }
 
         /// <summary>
-        /// <para>A client token to ensure request idempotence.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The path to the DAG directory for Airflow to scan.</para>
+        /// <para>The DAG directory scanned by Airflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/dags</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DagsDir { get; set; }
 
         /// <summary>
-        /// <para>A list of data mount configurations.</para>
+        /// <para>The list of data mount information.</para>
         /// </summary>
         [NameInMap("DataMountInfoList")]
         [Validation(Required=false)]
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable worker elasticity.</para>
+        /// <para>Specifies whether to enable Worker elasticity.</para>
         /// </summary>
         [NameInMap("EnableServerless")]
         [Validation(Required=false)]
         public bool? EnableServerless { get; set; }
 
         /// <summary>
-        /// <para>The graceful shutdown timeout for workers, in seconds.</para>
+        /// <para>The timeout period for the Worker to gracefully shut down.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The OSS path for log storage.</para>
+        /// <para>The OSS path for storing logs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssPath { get; set; }
 
         /// <summary>
-        /// <para>The path to the plugin directory for the Airflow instance to scan.</para>
+        /// <para>The plugin directory scanned by the Airflow instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/plugins</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PluginsDir { get; set; }
 
         /// <summary>
-        /// <para>The path to the Python requirements file.</para>
+        /// <para>The path of the package installation file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/requirements.txt</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequirementFile { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The path to the startup script in the Airflow container.</para>
+        /// <para>The startup script of the Airflow container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string StartupFile { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>VPC ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The number of elastic worker nodes.</para>
+        /// <para>The number of extended Worker node replicas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? WorkerServerlessReplicas { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DMS workspace.</para>
+        /// <para>The ID of the Data Management workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the instance will be created.</para>
+        /// <para>The zone ID within the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class DeleteDataLakePartitionResponse : TeaModel {
+    public class ResetAgenticApiKeyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteDataLakePartitionResponseBody Body { get; set; }
+        public ResetAgenticApiKeyResponseBody Body { get; set; }
 
     }
 

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend completed the artifact task. The value is a UNIX timestamp accurate to seconds.</para>
+                /// <para>The time when the backend completed the artifact task. This is a UNIX timestamp accurate to the second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The artifact name, which is typically a string concatenated by the system. This name is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
+                /// <para>The artifact name, which is typically a string concatenated by the system. This value is aligned with the name field of the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>report_****_2026****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend received the artifact request. The value is a UNIX timestamp accurate to seconds.</para>
+                /// <para>The time when the backend received the artifact request. This is a UNIX timestamp accurate to the second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReceiveTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend actually started running the artifact task. The value is a UNIX timestamp accurate to seconds.</para>
+                /// <para>The time when the backend actually started running the artifact task. This is a UNIX timestamp accurate to the second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -124,10 +124,47 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The artifact type. Valid values: TextReport, WebReport.</para>
+                /// <para>The artifact type. Valid values: [TextReport, WebReport].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WebReport</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The capabilities (knowledge bases, skills, and others) mounted to the session.</para>
+            /// </summary>
+            [NameInMap("Capabilities")]
+            [Validation(Required=false)]
+            public List<DescribeDataAgentSessionResponseBodyDataCapabilities> Capabilities { get; set; }
+            public class DescribeDataAgentSessionResponseBodyDataCapabilities : TeaModel {
+                /// <summary>
+                /// <para>The ID of the mounted capability.</para>
+                /// <list type="bullet">
+                /// <item><description>If Type is set to skill, this value indicates the skill ID.</description></item>
+                /// <item><description>If Type is set to dms_kb, this value indicates the knowledge base ID.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kb-HZ-s3df*******ld08d</para>
+                /// </summary>
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                /// <summary>
+                /// <para>The type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>skill: skill.</description></item>
+                /// <item><description>dms_kb: knowledge base.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dms_kb</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -182,11 +219,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<DescribeDataAgentSessionResponseBodyDataDataSources> DataSources { get; set; }
             public class DescribeDataAgentSessionResponseBodyDataDataSources : TeaModel {
                 /// <summary>
-                /// <para>The data source category. Valid values:</para>
+                /// <para>The source of the data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>CHAT</b>: Specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</para>
+                /// <item><description><para><b>CHAT</b>: Specified during a conversation by calling the CreateDataAgentSession or SendChatMessage operation.</para>
                 /// </description></item>
-                /// <item><description><para><b>CUSTOM_AGENT</b>: From the preset analysis data scope in a custom agent.</para>
+                /// <item><description><para><b>CUSTOM_AGENT</b>: Derived from the preset analysis data scope in a custom agent.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -211,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</para>
+            /// <para>Indicates whether the session is favorited by the current user in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -231,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string File { get; set; }
 
             /// <summary>
-            /// <para>The recall results from the knowledge base and memory for the current session.</para>
+            /// <para>The recall results from knowledge bases and memory in this session.</para>
             /// </summary>
             [NameInMap("RecallResults")]
             [Validation(Required=false)]
@@ -258,7 +295,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public double? Score { get; set; }
 
                 /// <summary>
-                /// <para>The type of the recalled knowledge.</para>
+                /// <para>The category of the recalled knowledge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>memory</para>
@@ -270,7 +307,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the session is saved as a favorite by the current logged-in user.</para>
+            /// <para>Indicates whether the session is favorited by the current user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -280,7 +317,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public bool? Saved { get; set; }
 
             /// <summary>
-            /// <para>The session configuration item.</para>
+            /// <para>The session configuration items.</para>
             /// </summary>
             [NameInMap("SessionConfig")]
             [Validation(Required=false)]
@@ -299,8 +336,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>debug</b>: The debug stage.</description></item>
-                /// <item><description><b>prod</b>: The production stage.</description></item>
+                /// <item><description><b>debug</b>: Test stage.</description></item>
+                /// <item><description><b>prod</b>: Production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -311,7 +348,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentStage { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable web search.</para>
+                /// <para>Specifies whether web search is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -321,7 +358,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? EnableSearch { get; set; }
 
                 /// <summary>
-                /// <para>The encryption key for storing artifacts in OSS (both built-in and user-specified). This is typically specified in CreateDataAgentSession.</para>
+                /// <para>The encryption key used to store artifacts in OSS (including built-in and user-specified OSS). This is typically specified in CreateDataAgentSession.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ay***1Te</para>
@@ -331,7 +368,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The encryption type for storing artifacts in OSS (both built-in and user-specified).</para>
+                /// <para>The encryption type used to store artifacts in OSS (including built-in and user-specified OSS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -341,7 +378,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string EncryptType { get; set; }
 
                 /// <summary>
-                /// <para>The list of knowledge base IDs for the current session.</para>
+                /// <para>The list of knowledge base IDs for this session.</para>
                 /// </summary>
                 [NameInMap("KbUuidList")]
                 [Validation(Required=false)]
@@ -371,9 +408,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ASK_DATA</b>: The ask-data mode.</description></item>
-                /// <item><description><b>ANALYSIS</b>: The analysis mode.</description></item>
-                /// <item><description><b>INSIGHT</b>: The insight mode.</description></item>
+                /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -404,7 +441,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportWaterMark { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</para>
+                /// <para>The name of the user OSS bucket.</para>
+                /// <list type="bullet">
+                /// <item><description>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-oss-bucket</para>
@@ -488,9 +528,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return value. Valid values:</para>
+        /// <para>The return value description. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>true</b>: Succeeded.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
