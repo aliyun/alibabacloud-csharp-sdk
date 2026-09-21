@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The file system ID.</para>
         /// <list type="bullet">
         /// <item><description>General-purpose NAS: 31a8e4****.</description></item>
-        /// <item><description>Extreme NAS: must start with extreme-, such as extreme-0015****.</description></item>
-        /// <item><description>CPFS (locally redundant): must start with cpfs-, such as cpfs-125487****.</description></item>
-        /// <item><description>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
+        /// <item><description>Extreme NAS: Must start with extreme-, such as extreme-0015****.</description></item>
+        /// <item><description>Cloud Parallel File Storage (CPFS) (locally redundant version): Must start with cpfs-, such as cpfs-125487****.</description></item>
+        /// <item><description>CPFS SE (zone-redundant version): Must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The type of the file system.</para>
+        /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>all (default): queries all types.</description></item>
         /// <item><description>standard: General-purpose NAS.</description></item>
         /// <item><description>extreme: Extreme NAS.</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) with locally redundant storage.</description></item>
-        /// <item><description>cpfsse: CPFS SE with zone-redundant storage.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant version).</description></item>
+        /// <item><description>cpfsse: CPFS SE (zone-redundant version).</description></item>
         /// </list>
         /// <remarks>
         /// <para>To query multiple types, separate them with commas (,).</para>
@@ -48,6 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The page number of the file system list.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +58,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems on each page in a paging query.</para>
+        /// <para>The number of file systems on each page during a paged query.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +81,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Currently, only CPFS for Lingjun specifications are supported for a filtered query. Other FileSystemType values are not supported. The following specifications are supported:</para>
+        /// <para>The storage type. Currently, only CPFS for Lingjun specifications are supported for filtered query. Other file system types (FileSystemType) are not supported. The following specifications are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>bm_advance_400</description></item>
+        /// <item><description>bm_advance_400_large</description></item>
+        /// <item><description>bm_advance_new</description></item>
+        /// <item><description>bm_advance_100</description></item>
+        /// <item><description>cpfslight_100</description></item>
+        /// <item><description>bm_p100_stepsize_300</description></item>
+        /// <item><description>bm_p400_stepsize_1</description></item>
+        /// <item><description>bm_p400_stepsize_300</description></item>
+        /// </list>
+        /// <para>You can specify multiple specifications separated by commas (,). For example: bm_advance_400,bm_advance_new.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bm_advance_400</para>
@@ -115,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>N can be an integer from 1 to 20.</description></item>
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
             /// <item><description>The tag value can be up to 128 characters in length.</description></item>
             /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
             /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
@@ -131,7 +145,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1sevsgtqvk5gxbl****</para>

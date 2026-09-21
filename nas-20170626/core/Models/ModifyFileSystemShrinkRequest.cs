@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyFileSystemShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The file system description.</para>
+        /// <para>The auto-scaling configuration.</para>
+        /// </summary>
+        [NameInMap("AutoUpgradeConfig")]
+        [Validation(Required=false)]
+        public string AutoUpgradeConfigShrink { get; set; }
+
+        /// <summary>
+        /// <para>The description of the file system.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
@@ -30,9 +37,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description><para>General-purpose NAS: <c>31a8e4****</c>.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</para>
+        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
+        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

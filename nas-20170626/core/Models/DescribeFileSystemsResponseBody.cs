@@ -25,6 +25,40 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
 
+                [NameInMap("AutoUpgradeConfig")]
+                [Validation(Required=false)]
+                public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig AutoUpgradeConfig { get; set; }
+                public class DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>80</para>
+                    /// </summary>
+                    [NameInMap("capacityUsedRatio")]
+                    [Validation(Required=false)]
+                    public int? CapacityUsedRatio { get; set; }
+
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
+                    [NameInMap("step")]
+                    [Validation(Required=false)]
+                    public int? Step { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
+                    [NameInMap("time")]
+                    [Validation(Required=false)]
+                    public int? Time { get; set; }
+
+                }
+
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public long? Bandwidth { get; set; }
@@ -346,7 +380,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems per page.</para>
+        /// <para>The number of file systems on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

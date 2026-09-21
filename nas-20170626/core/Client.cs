@@ -21244,11 +21244,19 @@ namespace AlibabaCloud.SDK.NAS20170626
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyFileSystemShrinkRequest request = new ModifyFileSystemShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoUpgradeConfig))
+            {
+                request.AutoUpgradeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoUpgradeConfig, "AutoUpgradeConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
             {
                 request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUpgradeConfigShrink))
+            {
+                query["AutoUpgradeConfig"] = request.AutoUpgradeConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -21300,11 +21308,19 @@ namespace AlibabaCloud.SDK.NAS20170626
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyFileSystemShrinkRequest request = new ModifyFileSystemShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoUpgradeConfig))
+            {
+                request.AutoUpgradeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoUpgradeConfig, "AutoUpgradeConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
             {
                 request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUpgradeConfigShrink))
+            {
+                query["AutoUpgradeConfig"] = request.AutoUpgradeConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
