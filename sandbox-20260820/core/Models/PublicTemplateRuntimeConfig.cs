@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateRuntimeConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("cpu")]
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10240</para>
+        /// </summary>
         [NameInMap("diskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public PublicTemplateLogConfig LogConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("memorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }

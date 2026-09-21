@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>沙箱生产环境入口域名</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

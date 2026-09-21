@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public List<string> DenyOut { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sandbox.example.com</para>
+        /// </summary>
         [NameInMap("maskRequestHost")]
         [Validation(Required=false)]
         public string MaskRequestHost { get; set; }

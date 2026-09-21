@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public List<string> Args { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RUN</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public CreateTemplateBuildConfig BuildConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>python-data-analysis</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public CreateTemplateRuntimeConfig RuntimeConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5f4a2c18-****</para>
+        /// </summary>
         [NameInMap("teamID")]
         [Validation(Required=false)]
         public string TeamID { get; set; }

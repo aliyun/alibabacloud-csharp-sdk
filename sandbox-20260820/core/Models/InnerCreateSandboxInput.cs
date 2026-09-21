@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class InnerCreateSandboxInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("allowInternetAccess")]
         [Validation(Required=false)]
         public bool? AllowInternetAccess { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("autoPause")]
         [Validation(Required=false)]
         public bool? AutoPause { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("autoResume")]
         [Validation(Required=false)]
         public bool? AutoResume { get; set; }
@@ -37,18 +49,34 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public InnerSandboxRuntimeConfig Runtime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("secure")]
         [Validation(Required=false)]
         public bool? Secure { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>76eeecaa-****</para>
+        /// </summary>
         [NameInMap("teamID")]
         [Validation(Required=false)]
         public string TeamID { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v9vjyzw64bsu83vw0dgs</para>
+        /// </summary>
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>180</para>
+        /// </summary>
         [NameInMap("timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }

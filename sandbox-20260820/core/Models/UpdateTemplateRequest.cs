@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public PublicUpdateTemplateInput Body { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>team-a1b2c3d4e5f6</para>
+        /// </summary>
         [NameInMap("teamID")]
         [Validation(Required=false)]
         public string TeamID { get; set; }

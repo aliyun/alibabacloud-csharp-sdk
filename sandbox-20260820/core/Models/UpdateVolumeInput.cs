@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public UpdateVolumeInputAgenticFSVolumeConfig AgenticFSVolumeConfig { get; set; }
         public class UpdateVolumeInputAgenticFSVolumeConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("groupID")]
             [Validation(Required=false)]
             public int? GroupID { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ap-xxx.xxx-jnk89.cn-hangzhou.nas.aliyuncs.com:/</para>
+            /// </summary>
             [NameInMap("serverAddr")]
             [Validation(Required=false)]
             public string ServerAddr { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("userID")]
             [Validation(Required=false)]
             public int? UserID { get; set; }
@@ -39,6 +51,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public UpdateVolumeInputMountConfig MountConfig { get; set; }
         public class UpdateVolumeInputMountConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acs:ram::1338904783509062:role/aliyunfcdefaultrole</para>
+            /// </summary>
             [NameInMap("role")]
             [Validation(Required=false)]
             public string Role { get; set; }
@@ -47,6 +63,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
             [Validation(Required=false)]
             public UpdateVolumeInputMountConfigVpcConfig VpcConfig { get; set; }
             public class UpdateVolumeInputMountConfigVpcConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sg-xxxx</para>
+                /// </summary>
                 [NameInMap("securityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
@@ -55,6 +75,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vpc-xxxx</para>
+                /// </summary>
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

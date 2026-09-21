@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateVPCConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890123456:role/aliyunfcdefaultrole</para>
+        /// </summary>
         [NameInMap("role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sg-****</para>
+        /// </summary>
         [NameInMap("securityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
@@ -21,6 +29,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc-****</para>
+        /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

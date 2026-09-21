@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5f4a2c18-****</para>
+        /// </summary>
         [NameInMap("teamID")]
         [Validation(Required=false)]
         public string TeamID { get; set; }
