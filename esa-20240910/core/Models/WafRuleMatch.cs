@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafRuleMatch : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the value is case-insensitive.</para>
+        /// <para>The case-insensitive value setting.</para>
         /// </summary>
         [NameInMap("ConvertToLower")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<WafRuleMatch> Criteria { get; set; }
 
         /// <summary>
-        /// <para>The logic relationship.</para>
+        /// <para>The logical relationship.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -64,11 +64,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object MatchValue { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to negate the match result.</para>
+        /// <para>The negation of the match result.</para>
         /// </summary>
         [NameInMap("Negate")]
         [Validation(Required=false)]
         public bool? Negate { get; set; }
+
+        /// <summary>
+        /// <para>The primary row key of the parent group. This is used for two-level drop-down positioning of enumeration subkey fields. For example, the Parent of ali.websdk.umid is ali.websdk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ali.websdk</para>
+        /// </summary>
+        [NameInMap("Parent")]
+        [Validation(Required=false)]
+        public string Parent { get; set; }
 
     }
 

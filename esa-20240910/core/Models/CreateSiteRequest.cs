@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The access type of the site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NS</b>: access by using managed NS.</description></item>
+        /// <item><description><b>NS</b>: access by using managed NS records.</description></item>
         /// <item><description><b>CNAME</b>: access by configuring a CNAME record.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: the Chinese mainland only.</description></item>
+        /// <item><description><b>domestic</b>: Chinese mainland only.</description></item>
         /// <item><description><b>global</b>: global.</description></item>
         /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation to obtain the instance ID. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</para>
+        /// <para>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify at least one of InstanceId and SiteId. If both are specified, InstanceId takes precedence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

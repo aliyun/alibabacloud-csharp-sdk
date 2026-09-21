@@ -4606,13 +4606,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SaaS domain name for a site.</para>
+        /// <para>Creates a SaaS domain name under a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -4688,13 +4688,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SaaS domain name for a site.</para>
+        /// <para>Creates a SaaS domain name under a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -4770,13 +4770,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SaaS domain name for a site.</para>
+        /// <para>Creates a SaaS domain name under a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -4796,13 +4796,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SaaS domain name for a site.</para>
+        /// <para>Creates a SaaS domain name under a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -11093,7 +11093,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <description>
         /// <list type="bullet">
         /// <item><description>Before creating a site, you must have an active plan instance.</description></item>
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -11164,7 +11164,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <description>
         /// <list type="bullet">
         /// <item><description>Before creating a site, you must have an active plan instance.</description></item>
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -11235,7 +11235,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <description>
         /// <list type="bullet">
         /// <item><description>Before creating a site, you must have an active plan instance.</description></item>
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -11262,7 +11262,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <description>
         /// <list type="bullet">
         /// <item><description>Before creating a site, you must have an active plan instance.</description></item>
-        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</description></item>
         /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
@@ -26010,13 +26010,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -26063,13 +26063,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -26116,13 +26116,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -26141,13 +26141,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Retrieves the details of a diagnostic report. 1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client-side diagnostics. 3. Call ListTraceTasks to obtain the TaskId or TraceId. 4. Call this operation to retrieve the report.</para>
+        /// <para>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27330,7 +27330,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a diagnosis link.</para>
+        /// <para>Generates a diagnostic link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27376,7 +27376,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a diagnosis link.</para>
+        /// <para>Generates a diagnostic link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27422,7 +27422,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a diagnosis link.</para>
+        /// <para>Generates a diagnostic link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27440,7 +27440,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a diagnosis link.</para>
+        /// <para>Generates a diagnostic link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39038,7 +39038,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</para>
+        /// <para>Retrieves the match engine information for a specified site at a specific WAF phase. This information defines how WAF detects and processes different types of network requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39092,7 +39092,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</para>
+        /// <para>Retrieves the match engine information for a specified site at a specific WAF phase. This information defines how WAF detects and processes different types of network requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39146,7 +39146,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</para>
+        /// <para>Retrieves the match engine information for a specified site at a specific WAF phase. This information defines how WAF detects and processes different types of network requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39164,7 +39164,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</para>
+        /// <para>Retrieves the match engine information for a specified site at a specific WAF phase. This information defines how WAF detects and processes different types of network requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51610,7 +51610,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache content.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51670,7 +51670,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache content.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51730,7 +51730,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache content.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51748,7 +51748,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache content.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53854,7 +53854,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the status of a site that has been disabled.</para>
+        /// <para>Restores the status of a site that has been deactivated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53896,7 +53896,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the status of a site that has been disabled.</para>
+        /// <para>Restores the status of a site that has been deactivated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53938,7 +53938,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the status of a site that has been disabled.</para>
+        /// <para>Restores the status of a site that has been deactivated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53956,7 +53956,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the status of a site that has been disabled.</para>
+        /// <para>Restores the status of a site that has been deactivated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58514,7 +58514,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CNAME flattening configuration of a website.</para>
+        /// <para>Modifies the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58560,7 +58560,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CNAME flattening configuration of a website.</para>
+        /// <para>Modifies the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58606,7 +58606,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CNAME flattening configuration of a website.</para>
+        /// <para>Modifies the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58624,7 +58624,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CNAME flattening configuration of a website.</para>
+        /// <para>Modifies the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59656,11 +59656,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
-        /// <item><description>Use <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
+        /// <item><description>Call <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
+        /// <item><description>Call <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
         /// <item><description>Specification changes are not allowed within 31 days of purchase.</description></item>
         /// <item><description>You can change specifications once per calendar month (from the 1st to the 31st of each month).</description></item>
-        /// <item><description>After a successful specification change, billing is based on the new specifications starting from the same day.</description></item>
+        /// <item><description>After a successful specification change, billing starts immediately on the same day based on the new instance specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -59721,11 +59721,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
-        /// <item><description>Use <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
+        /// <item><description>Call <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
+        /// <item><description>Call <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
         /// <item><description>Specification changes are not allowed within 31 days of purchase.</description></item>
         /// <item><description>You can change specifications once per calendar month (from the 1st to the 31st of each month).</description></item>
-        /// <item><description>After a successful specification change, billing is based on the new specifications starting from the same day.</description></item>
+        /// <item><description>After a successful specification change, billing starts immediately on the same day based on the new instance specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -59786,11 +59786,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
-        /// <item><description>Use <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
+        /// <item><description>Call <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
+        /// <item><description>Call <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
         /// <item><description>Specification changes are not allowed within 31 days of purchase.</description></item>
         /// <item><description>You can change specifications once per calendar month (from the 1st to the 31st of each month).</description></item>
-        /// <item><description>After a successful specification change, billing is based on the new specifications starting from the same day.</description></item>
+        /// <item><description>After a successful specification change, billing starts immediately on the same day based on the new instance specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -59815,11 +59815,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
-        /// <item><description>Use <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
+        /// <item><description>Call <c>PurchaseDDoSInstance</c> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</description></item>
+        /// <item><description>Call <c>ListDDoSInstances</c> to query the list of DDoS instances.</description></item>
         /// <item><description>Specification changes are not allowed within 31 days of purchase.</description></item>
         /// <item><description>You can change specifications once per calendar month (from the 1st to the 31st of each month).</description></item>
-        /// <item><description>After a successful specification change, billing is based on the new specifications starting from the same day.</description></item>
+        /// <item><description>After a successful specification change, billing starts immediately on the same day based on the new instance specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -65738,7 +65738,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to traffic distribution changes or improve the access experience for users in specific regions.</para>
+        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to changes in traffic distribution or improve the access experience for users in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65784,7 +65784,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to traffic distribution changes or improve the access experience for users in specific regions.</para>
+        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to changes in traffic distribution or improve the access experience for users in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65830,7 +65830,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to traffic distribution changes or improve the access experience for users in specific regions.</para>
+        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to changes in traffic distribution or improve the access experience for users in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65848,7 +65848,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to traffic distribution changes or improve the access experience for users in specific regions.</para>
+        /// <para>Modifies the acceleration region of a site. Updates the acceleration configuration of a site to adapt to changes in traffic distribution or improve the access experience for users in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70502,14 +70502,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
+        /// <para>Verifies site ownership. A site that passes the verification is automatically activated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
-        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// <item><description>For sites connected through NS, verifies whether the current NS servers of the site are the NS servers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For sites connected through CNAME, verifies whether the site has a TXT record with the name _esaauth.[site name] and the content set to the site verification code (see the VerifyCode field in the site information).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -70552,14 +70552,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
+        /// <para>Verifies site ownership. A site that passes the verification is automatically activated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
-        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// <item><description>For sites connected through NS, verifies whether the current NS servers of the site are the NS servers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For sites connected through CNAME, verifies whether the site has a TXT record with the name _esaauth.[site name] and the content set to the site verification code (see the VerifyCode field in the site information).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -70602,14 +70602,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
+        /// <para>Verifies site ownership. A site that passes the verification is automatically activated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
-        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// <item><description>For sites connected through NS, verifies whether the current NS servers of the site are the NS servers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For sites connected through CNAME, verifies whether the site has a TXT record with the name _esaauth.[site name] and the content set to the site verification code (see the VerifyCode field in the site information).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -70628,14 +70628,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
+        /// <para>Verifies site ownership. A site that passes the verification is automatically activated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
-        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// <item><description>For sites connected through NS, verifies whether the current NS servers of the site are the NS servers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For sites connected through CNAME, verifies whether the site has a TXT record with the name _esaauth.[site name] and the content set to the site verification code (see the VerifyCode field in the site information).</description></item>
         /// </ol>
         /// </description>
         /// 

@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The creation time. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-06-24 07:48:51</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The DCV type. Valid values: DNS and HTTP.</para>
+                /// <para>The DCV type. Valid values: DNS, HTTP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</para>
+            /// <para>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-31 02:08:00</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</para>
+            /// <para>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-31 02:08:00</para>
@@ -291,10 +291,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <item><description>OK: Normal.</description></item>
             /// <item><description>Expired: The certificate has expired.</description></item>
             /// <item><description>Expiring: The certificate is about to expire (within 30 days).</description></item>
-            /// <item><description>Issued: Free certificate - issued.</description></item>
-            /// <item><description>Applying: Free certificate - applying.</description></item>
-            /// <item><description>ApplyFailed: Free certificate - application failed.</description></item>
-            /// <item><description>Canceled: Free certificate - canceled.</description></item>
+            /// <item><description>Issued: Free certificate - Issued.</description></item>
+            /// <item><description>Applying: Free certificate - Applying.</description></item>
+            /// <item><description>ApplyFailed: Free certificate - Application failed.</description></item>
+            /// <item><description>Canceled: Free certificate - Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The certificate type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cas: SSL Certificates Service certificate.</description></item>
+            /// <item><description>cas: Alibaba Cloud SSL certificate.</description></item>
             /// <item><description>upload: Custom uploaded certificate.</description></item>
             /// <item><description>free: Free certificate.</description></item>
             /// <item><description>keyless: Keyless certificate.</description></item>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The update time. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</para>
+            /// <para>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-20 06:18:42</para>

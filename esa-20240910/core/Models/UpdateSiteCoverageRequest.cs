@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSiteCoverageRequest : TeaModel {
         /// <summary>
-        /// <para>The target acceleration region to change to. Valid values:</para>
+        /// <para>The target acceleration region. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>domestic</b>: the Chinese mainland only.</description></item>
         /// <item><description><b>global</b>: global.</description></item>
         /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;If the value is set to domestic or global, the site corresponding to SiteId must have a valid ICP filing..</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the value is domestic or global, the site corresponding to SiteId must have a valid Chinese Internet Content Provider (ICP) filing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

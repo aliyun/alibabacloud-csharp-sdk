@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DiagnoseId { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic URL.</para>
+            /// <para>The diagnose URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DiagnoseUrl { get; set; }
 
             /// <summary>
-            /// <para>The domain name to diagnose.</para>
+            /// <para>The domain name to be diagnosed.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">http://www.example.com</a></para>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The status of the diagnostic URL. Valid values:</para>
+            /// <para>The status of the diagnose URL. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: active</description></item>
-            /// <item><description>0: expired.</description></item>
+            /// <item><description>1: Active.</description></item>
+            /// <item><description>0: Expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? TimeConsuming { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic trace ID.</para>
+            /// <para>The trace ID of the diagnostic task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>000000xxxxxxxxxxxxxxxxxxxxxx25941e</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values: any integer from 1 to 1000.</para>
+        /// <para>The number of entries per page. Valid values: any integer from 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

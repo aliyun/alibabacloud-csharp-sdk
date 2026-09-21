@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Indicates whether the verification passed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The verification passed.</description></item>
+        /// <item><description><b>false</b>: The verification failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

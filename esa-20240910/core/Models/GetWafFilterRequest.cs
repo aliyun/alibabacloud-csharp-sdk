@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafFilterRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the WAF phase from which to retrieve the matching engine information.</para>
+        /// <para>The WAF phase. Specifies the WAF phase for which to query the match engine information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Specifies the ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the application target of the matching engine.</para>
+        /// <para>The target. Defines the application target of the match engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>characteristics</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>Specifies the rule type.</para>
+        /// <para>The rule type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_custom_cc</para>

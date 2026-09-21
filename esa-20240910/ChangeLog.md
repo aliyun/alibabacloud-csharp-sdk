@@ -1,3 +1,7 @@
+2026-09-21 Version: 3.13.2
+- Update API GetWafFilter: add response parameters Body.Filter.Fields.$.Subs.
+
+
 2026-09-02 Version: 3.13.1
 - Update API ApplyCertificate: add request parameters AlgType.
 - Update API ListCertificates: add request parameters Type.

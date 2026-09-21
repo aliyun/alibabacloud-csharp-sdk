@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBillingMode { get; set; }
 
         /// <summary>
-        /// <para>The instance specification for the Chinese mainland.</para>
+        /// <para>The instance specification for Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBurstableDomesticProtection { get; set; }
 
         /// <summary>
-        /// <para>The instance specification for outside the Chinese mainland.</para>
+        /// <para>The instance specification for regions outside Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBurstableOverseasProtection { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID. You can call the ListDDoSInstances operation to query the list of DDoS instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

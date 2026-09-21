@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The expiration time. Unit: seconds. The value is a UNIX timestamp.</para>
+        /// <para>The expiration time. The value is a UNIX timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678701915</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The report generation status. Valid values:</para>
+        /// <para>The report generation status.</para>
         /// <para>0: succeeded.
         /// 1: failed.
         /// 2: timed out.
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The status of the diagnostic link. Valid values:</para>
+        /// <para>The status of the diagnostic link.</para>
         /// <para>1: active.
         /// 0: expired.</para>
         /// 

@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The CNAME suffix of the site. For sites accessed through CNAME, this is the suffix that needs to be configured for the CNAME record.</para>
+        /// <para>The CNAME suffix of the site. For sites that are accessed through CNAME, this field indicates the CNAME suffix that needs to be configured for records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gf-test.hkrt.cn</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of name servers assigned to the site, separated by commas (,). When the site is accessed through NS, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify site ownership and activate the site.</para>
+        /// <para>The list of name servers assigned to the site, separated by commas (,). When the site uses NS access, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify the site ownership and activate the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1.example.com,ns2.example.com</para>
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NameServerList { get; set; }
 
         /// <summary>
-        /// <para>The reason why the site was disabled. Valid values:</para>
+        /// <para>The reason why the site was deactivated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>expiration_ arrears</b>: the subscription plan expired or the account has an overdue payment.</description></item>
-        /// <item><description><b>internally_disabled</b>: disabled by the system internally.</description></item>
-        /// <item><description><b>missing_icp</b>: the domain name lacks an ICP filing.</description></item>
-        /// <item><description><b>content_violation</b>: content violation.</description></item>
-        /// <item><description><b>proactively_disabled</b>: you proactively disabled the site or the site was disabled due to the usage cap you configured.</description></item>
+        /// <item><description><b>expiration_arrears</b>: The subscription plan expired or the account has an overdue payment.</description></item>
+        /// <item><description><b>internally_disabled</b>: The site was disabled by the system.</description></item>
+        /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
+        /// <item><description><b>content_violation</b>: Content violation.</description></item>
+        /// <item><description><b>proactively_disabled</b>: You proactively disabled the site or the site was disabled because the usage cap you configured was reached.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The site status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pending</b>: the site is pending configuration.</description></item>
-        /// <item><description><b>active</b>: the site is activated.</description></item>
-        /// <item><description><b>offline</b>: the site is offline.</description></item>
-        /// <item><description><b>moved</b>: the site has been superseded.</description></item>
+        /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
+        /// <item><description><b>active</b>: The site is activated.</description></item>
+        /// <item><description><b>offline</b>: The site is offline.</description></item>
+        /// <item><description><b>moved</b>: The site has been replaced.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

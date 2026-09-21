@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</para>
         /// <list type="bullet">
         /// <item><description>For Chinese site accounts, set this parameter to cn-hangzhou.</description></item>
-        /// <item><description>For International site accounts, set this parameter to ap-southeast-1.</description></item>
+        /// <item><description>For international site accounts, set this parameter to ap-southeast-1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>The certificate private key. This parameter is required when CertType is set to upload.</para>
+        /// <para>The private key of the certificate. This parameter is required when CertType is set to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the record to bind. You can call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to obtain the record ID.</para>
+        /// <para>The ID of the record to bind. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
