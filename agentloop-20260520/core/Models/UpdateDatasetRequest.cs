@@ -20,6 +20,35 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The field renames for the dataset.</para>
+        /// </summary>
+        [NameInMap("renames")]
+        [Validation(Required=false)]
+        public List<UpdateDatasetRequestRenames> Renames { get; set; }
+        public class UpdateDatasetRequestRenames : TeaModel {
+            /// <summary>
+            /// <para>The new field name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>t2</para>
+            /// </summary>
+            [NameInMap("newName")]
+            [Validation(Required=false)]
+            public string NewName { get; set; }
+
+            /// <summary>
+            /// <para>The original field name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>t1</para>
+            /// </summary>
+            [NameInMap("oldName")]
+            [Validation(Required=false)]
+            public string OldName { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The table schema of the dataset.</para>
         /// </summary>
         [NameInMap("schema")]

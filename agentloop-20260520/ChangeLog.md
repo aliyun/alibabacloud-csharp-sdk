@@ -1,3 +1,7 @@
+2026-09-21 Version: 2.3.7
+- Update API UpdateDataset: add request parameters body.renames.
+
+
 2026-09-17 Version: 2.3.6
 - Generated csharp 2026-05-20 for AgentLoop.
 
