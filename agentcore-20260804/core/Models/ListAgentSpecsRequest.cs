@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpec name used as a search keyword. Use this parameter together with the search parameter.</para>
+        /// <para>The AgentSpec name used as a search keyword. This parameter is used together with the search parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-worker</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BizTag { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort results. Set this parameter to download_count to sort by download count. By default, results are sorted by update time.</para>
+        /// <para>The field by which to sort the results. Set the value to download_count to sort by download count. By default, results are sorted by update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The owner used to filter results.</para>
+        /// <para>The owner used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope used to filter results. Valid values:</para>
+        /// <para>The visibility scope used to filter the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PUBLIC</description></item>
         /// <item><description>PRIVATE</description></item>

@@ -4462,7 +4462,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
         /// </description>
         /// 
@@ -4508,7 +4508,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
         /// </description>
         /// 
@@ -4554,7 +4554,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
         /// </description>
         /// 
@@ -4579,7 +4579,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
         /// </description>
         /// 
@@ -5735,13 +5735,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5793,13 +5793,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5851,13 +5851,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5876,13 +5876,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9039,6 +9039,172 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+        /// </returns>
+        public GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse GetWorkspaceAgenticFsMountRamAuthorizeUrlWithOptions(string workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointId))
+            {
+                query["accessPointId"] = request.AccessPointId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["fileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                query["server"] = request.Server;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceAgenticFsMountRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agentic-fs/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse> GetWorkspaceAgenticFsMountRamAuthorizeUrlWithOptionsAsync(string workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointId))
+            {
+                query["accessPointId"] = request.AccessPointId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["fileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                query["server"] = request.Server;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceAgenticFsMountRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agentic-fs/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+        /// </returns>
+        public GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse GetWorkspaceAgenticFsMountRamAuthorizeUrl(string workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWorkspaceAgenticFsMountRamAuthorizeUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse> GetWorkspaceAgenticFsMountRamAuthorizeUrlAsync(string workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWorkspaceAgenticFsMountRamAuthorizeUrlWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the plug-in status of a specified workspace.</para>
         /// </summary>
         /// 
@@ -9707,13 +9873,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9791,13 +9957,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9875,13 +10041,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9900,13 +10066,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12699,6 +12865,160 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the reference relationships of a skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSkillReferencesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillReferencesResponse
+        /// </returns>
+        public ListSkillReferencesResponse ListSkillReferencesWithOptions(string workspaceId, string skillName, ListSkillReferencesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorType))
+            {
+                query["selectorType"] = request.SelectorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorValue))
+            {
+                query["selectorValue"] = request.SelectorValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSkillReferences",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/references",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSkillReferencesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the reference relationships of a skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSkillReferencesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillReferencesResponse
+        /// </returns>
+        public async Task<ListSkillReferencesResponse> ListSkillReferencesWithOptionsAsync(string workspaceId, string skillName, ListSkillReferencesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorType))
+            {
+                query["selectorType"] = request.SelectorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorValue))
+            {
+                query["selectorValue"] = request.SelectorValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSkillReferences",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/references",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSkillReferencesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the reference relationships of a skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSkillReferencesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillReferencesResponse
+        /// </returns>
+        public ListSkillReferencesResponse ListSkillReferences(string workspaceId, string skillName, ListSkillReferencesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSkillReferencesWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the reference relationships of a skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSkillReferencesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillReferencesResponse
+        /// </returns>
+        public async Task<ListSkillReferencesResponse> ListSkillReferencesAsync(string workspaceId, string skillName, ListSkillReferencesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSkillReferencesWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
         /// </summary>
         /// 
@@ -13388,7 +13708,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
         /// </description>
         /// 
@@ -13446,7 +13766,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
         /// </description>
         /// 
@@ -13504,7 +13824,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
         /// </description>
         /// 
@@ -13529,7 +13849,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
         /// </description>
         /// 
@@ -13720,7 +14040,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
         /// </description>
         /// 
@@ -13778,7 +14098,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
         /// </description>
         /// 
@@ -13836,7 +14156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
         /// </description>
         /// 
@@ -13861,7 +14181,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
         /// </description>
         /// 
@@ -13881,13 +14201,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13939,13 +14259,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13997,13 +14317,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14022,13 +14342,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// <para>Publishes a specified Skill version to transition it to the published state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16874,7 +17194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Updates the version labels and their mappings for a specified Skill.</para>
         /// </description>
         /// 
@@ -16932,7 +17252,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Updates the version labels and their mappings for a specified Skill.</para>
         /// </description>
         /// 
@@ -16990,7 +17310,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Updates the version labels and their mappings for a specified Skill.</para>
         /// </description>
         /// 
@@ -17015,7 +17335,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Updates the version labels and their mappings for a specified Skill.</para>
         /// </description>
         /// 
@@ -18339,6 +18659,156 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await VerifyWorkspaceAcrRamAuthorizationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization status of AgenticFS mounting for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceAgenticFsMountRamAuthorizationResponse VerifyWorkspaceAgenticFsMountRamAuthorizationWithOptions(string workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                query["server"] = request.Server;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceAgenticFsMountRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agentic-fs/authorize/verify",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceAgenticFsMountRamAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization status of AgenticFS mounting for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceAgenticFsMountRamAuthorizationResponse> VerifyWorkspaceAgenticFsMountRamAuthorizationWithOptionsAsync(string workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                query["server"] = request.Server;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceAgenticFsMountRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agentic-fs/authorize/verify",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceAgenticFsMountRamAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization status of AgenticFS mounting for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceAgenticFsMountRamAuthorizationResponse VerifyWorkspaceAgenticFsMountRamAuthorization(string workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyWorkspaceAgenticFsMountRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the RAM authorization status of AgenticFS mounting for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceAgenticFsMountRamAuthorizationResponse> VerifyWorkspaceAgenticFsMountRamAuthorizationAsync(string workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyWorkspaceAgenticFsMountRamAuthorizationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

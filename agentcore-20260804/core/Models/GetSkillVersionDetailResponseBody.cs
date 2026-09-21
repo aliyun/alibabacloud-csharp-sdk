@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The resource mapping (key is the resource name).</para>
+            /// <para>The resource mapping in which the key is the resource name.</para>
             /// </summary>
             [NameInMap("resource")]
             [Validation(Required=false)]

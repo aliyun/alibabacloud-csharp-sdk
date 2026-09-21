@@ -54,6 +54,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>HEAD</para>
+                /// </summary>
+                [NameInMap("draftMode")]
+                [Validation(Required=false)]
+                public string DraftMode { get; set; }
+
+                /// <summary>
                 /// <para>The version that is being edited.</para>
                 /// 
                 /// <b>Example:</b>

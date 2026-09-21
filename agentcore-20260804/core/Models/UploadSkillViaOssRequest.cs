@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Overwrite { get; set; }
 
             /// <summary>
-            /// <para>The upload version number. This parameter is optional and used as a fallback when the ZIP package contains no version information.</para>
+            /// <para>The target upload version number. This parameter is optional and serves as a fallback when the ZIP package does not contain version information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

@@ -10,12 +10,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class PrecheckSkillUploadViaOssResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<PrecheckSkillUploadViaOssResponseBodyData> Data { get; set; }
         public class PrecheckSkillUploadViaOssResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The draft mode: HEAD or VERSIONED, determined by the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HEAD</para>
+            /// </summary>
+            [NameInMap("draftMode")]
+            [Validation(Required=false)]
+            public string DraftMode { get; set; }
+
             /// <summary>
             /// <para>The version currently being edited.</para>
             /// 
@@ -42,6 +52,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("exists")]
             [Validation(Required=false)]
             public bool? Exists { get; set; }
+
+            /// <summary>
+            /// <para>The content revision identifier of the persistent draft, used to determine whether the local cache has expired. Returned only in HEAD draft mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rev-1a2b3c4d</para>
+            /// </summary>
+            [NameInMap("headRevision")]
+            [Validation(Required=false)]
+            public string HeadRevision { get; set; }
+
+            /// <summary>
+            /// <para>The status of the persistent draft: draft, reviewing, or reviewed. Returned only in HEAD draft mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>draft</para>
+            /// </summary>
+            [NameInMap("headStatus")]
+            [Validation(Required=false)]
+            public string HeadStatus { get; set; }
 
             /// <summary>
             /// <para>The highest published version.</para>
@@ -74,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ParsedVersion { get; set; }
 
             /// <summary>
-            /// <para>The pre-check result code.</para>
+            /// <para>The dry run result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VALIDATION_FAILED</para>

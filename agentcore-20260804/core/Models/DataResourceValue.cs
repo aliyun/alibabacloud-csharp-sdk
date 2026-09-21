@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DataResourceValue : TeaModel {
         /// <summary>
+        /// <para>The content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample content</para>
+        /// </summary>
+        [NameInMap("content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        /// <summary>
+        /// <para>The metadata.</para>
+        /// </summary>
+        [NameInMap("metadata")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Metadata { get; set; }
+
+        /// <summary>
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
@@ -28,23 +45,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        /// <summary>
-        /// <para>The content.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Sample content</para>
-        /// </summary>
-        [NameInMap("content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
-        /// <summary>
-        /// <para>The metadata.</para>
-        /// </summary>
-        [NameInMap("metadata")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Metadata { get; set; }
 
     }
 

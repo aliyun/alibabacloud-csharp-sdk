@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetSkillDetailResponseBodyData Data { get; set; }
         public class GetSkillDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The business tag JSON array string.</para>
+            /// <para>The business label JSON array string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample property value</para>
@@ -47,7 +47,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>The version currently being edited.</para>
+            /// <para>The draft pattern. HEAD indicates that the Skill has a persistent draft. VERSIONED indicates that each edit creates a draft with a version number. The server determines the pattern, and the invoker uses it for routing what to do next.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HEAD</para>
+            /// </summary>
+            [NameInMap("draftMode")]
+            [Validation(Required=false)]
+            public string DraftMode { get; set; }
+
+            /// <summary>
+            /// <para>The version being edited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -111,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The version currently under review.</para>
+            /// <para>The version under review.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -168,6 +178,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CommitMsg { get; set; }
 
                 /// <summary>
+                /// <para>The MD5 checksum of the Skill content package for this version, used to verify content consistency.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9e107d9d372bb6826bd81d3542a419d6</para>
+                /// </summary>
+                [NameInMap("contentMd5")]
+                [Validation(Required=false)]
+                public string ContentMd5 { get; set; }
+
+                /// <summary>
                 /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
@@ -188,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The download count.</para>
+                /// <para>The number of downloads.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>

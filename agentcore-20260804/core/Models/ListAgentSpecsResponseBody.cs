@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
-                /// <para>The version currently being edited.</para>
+                /// <para>The version that is currently being edited.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public int? OnlineCnt { get; set; }
 
                 /// <summary>
-                /// <para>The version currently under review.</para>
+                /// <para>The version that is currently under review.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -162,6 +162,53 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    /// <summary>
+                    /// <para>The Skill source type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>REFERENCE: references the AI Registry.</description></item>
+                    /// <item><description>STATIC: statically bundled with the package.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>REFERENCE</para>
+                    /// </summary>
+                    [NameInMap("sourceType")]
+                    [Validation(Required=false)]
+                    public string SourceType { get; set; }
+
+                    /// <summary>
+                    /// <para>The referenced version selector. If omitted, the default value is LABEL/latest.</para>
+                    /// </summary>
+                    [NameInMap("versionSelector")]
+                    [Validation(Required=false)]
+                    public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector VersionSelector { get; set; }
+                    public class ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector : TeaModel {
+                        /// <summary>
+                        /// <para>The version selector type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>LABEL: selects by label.</description></item>
+                        /// <item><description>VERSION: selects by specific version.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>LABEL</para>
+                        /// </summary>
+                        [NameInMap("type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        /// <summary>
+                        /// <para>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>latest</para>
+                        /// </summary>
+                        [NameInMap("value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
 
                 }
 
