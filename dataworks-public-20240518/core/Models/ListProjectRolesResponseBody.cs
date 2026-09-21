@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListProjectRolesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListProjectRolesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The returned page number.</para>
+            /// <para>The page number. Used for paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageSize { get; set; }
 
             /// <summary>
-            /// <para>A list of workspace roles.</para>
+            /// <para>The list of workspace roles.</para>
             /// </summary>
             [NameInMap("ProjectRoles")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The ID of the DataWorks workspace.</para>
-                /// <para>Note: For system-defined roles, this parameter returns -1.</para>
+                /// <para>Note: For default system workspace roles, the ProjectId returns a fixed value of -1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21229</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of matching entries.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61649187-0BCF-5E75-8D4B-64FDBEBBB447</para>

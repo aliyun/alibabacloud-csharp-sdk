@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListProjectRolesRequest : TeaModel {
         /// <summary>
-        /// <para>An array of workspace role codes.</para>
+        /// <para>The list of workspace role codes.</para>
         /// </summary>
         [NameInMap("Codes")]
         [Validation(Required=false)]
         public List<string> Codes { get; set; }
 
         /// <summary>
-        /// <para>An array of workspace role names.</para>
+        /// <para>The list of workspace role names.</para>
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]
         public List<string> Names { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number. Used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can find the ID on the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
-        /// <para>This parameter specifies the DataWorks workspace for which you want to list roles.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API invoke operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,12 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the workspace role.</para>
+        /// <para>The type of the workspace role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>UserCustom</c>: Custom Role</para>
-        /// </description></item>
-        /// <item><description><para><c>System</c>: System Role</para>
-        /// </description></item>
+        /// <item><description>UserCustom: user-defined role.</description></item>
+        /// <item><description>System: system role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
