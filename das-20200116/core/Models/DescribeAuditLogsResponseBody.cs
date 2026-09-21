@@ -107,7 +107,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? EffectRow { get; set; }
 
             /// <summary>
-            /// <para>The execution status. Valid values: 0: failed. 1: succeeded.</para>
+            /// <para>The execution status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: failed.</description></item>
+            /// <item><description>1: succeeded.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -147,7 +151,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? InWhiteList { get; set; }
 
             /// <summary>
-            /// <para>The instance audit status.</para>
+            /// <para>The audit status of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -288,7 +292,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RuleCategory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the audit policy.</para>
+            /// <para>The audit policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9953411</para>
@@ -350,9 +354,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: low-risk.</description></item>
-            /// <item><description><b>2</b>: medium-risk.</description></item>
-            /// <item><description><b>3</b>: high-risk.</description></item>
+            /// <item><description><b>1</b>: low.</description></item>
+            /// <item><description><b>2</b>: medium.</description></item>
+            /// <item><description><b>3</b>: high.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -363,11 +367,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string WarnLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the risk level. Valid values:</para>
+            /// <para>The risk level name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Low-risk.</description></item>
-            /// <item><description>Medium-risk.</description></item>
-            /// <item><description>High-risk.</description></item>
+            /// <item><description>Low.</description></item>
+            /// <item><description>Medium.</description></item>
+            /// <item><description>High.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -380,7 +384,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The page size for the paged query. This parameter indicates the number of entries per page for paging.</para>
+        /// <para>The page size for the paged query. This value indicates the number of records per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

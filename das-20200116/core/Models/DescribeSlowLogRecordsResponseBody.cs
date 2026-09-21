@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of items in the query log list on the current page.</para>
+            /// <para>The number of items in the log list on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -122,10 +122,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public double? CPUTimeSeconds { get; set; }
 
+                /// <summary>
+                /// <para>The client IP address connected to the Redis proxy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.15.204</para>
+                /// </summary>
                 [NameInMap("ClientIp")]
                 [Validation(Required=false)]
                 public string ClientIp { get; set; }
 
+                /// <summary>
+                /// <para>The command executed at the Redis proxy layer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>GET</para>
+                /// </summary>
                 [NameInMap("Cmd")]
                 [Validation(Required=false)]
                 public string Cmd { get; set; }
@@ -133,11 +145,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The slow query statement.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB for Tair (Redis® OSS-Compatible) database instances are supported.</para>
+                /// <para>Only ApsaraDB Tair (Redis® OSS-Compatible) database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>SELECT</para>
+                /// <para>GET async_c4d163675f44fe83f6214cf9ba5exxxx</para>
                 /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
@@ -153,6 +165,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
+                /// <summary>
+                /// <para>Redis Proxy DbId</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-uf6cfc5e1bcb1xxx-db-5</para>
+                /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
                 public string DbId { get; set; }
@@ -177,18 +195,33 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string DocsExamined { get; set; }
 
+                /// <summary>
+                /// <para>The extension field that contains additional information about the SQL execution.</para>
+                /// <remarks>
+                /// <para>Only PolarDB for MySQL instances are supported.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("ExtText")]
                 [Validation(Required=false)]
                 public string ExtText { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the SQL execution was successful. 0 indicates success. A non-zero value indicates failure.</para>
+                /// <remarks>
+                /// <para>Only ApsaraDB for Lindorm instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Fail")]
                 [Validation(Required=false)]
                 public string Fail { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows fetched by the compute node (CN) of the ApsaraDB PolarDB-X 2.0 database instance.</para>
+                /// <para>The number of rows fetched by the compute node (CN) of the PolarDB-X 2.0 database.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB PolarDB-X 2.0 instances are supported.</para>
+                /// <para>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -199,7 +232,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Frows { get; set; }
 
                 /// <summary>
-                /// <para>The source host address.</para>
+                /// <para>The source address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1</para>
@@ -294,24 +327,51 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>pro-test</para>
+                /// <para>app.event</para>
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// <para>The node ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-uf6cfc5e1xxx-proxy-11</para>
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
+                /// <summary>
+                /// <para>The operation type.</para>
+                /// <remarks>
+                /// <para>Only ApsaraDB for MongoDB instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>getMore</para>
+                /// </summary>
                 [NameInMap("OpType")]
                 [Validation(Required=false)]
                 public string OpType { get; set; }
 
+                /// <summary>
+                /// <para>The execution time at the Redis proxy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2026-09-18 10:54:55.311</para>
+                /// </summary>
                 [NameInMap("OriginTime")]
                 [Validation(Required=false)]
                 public string OriginTime { get; set; }
 
+                /// <summary>
+                /// <para>The parameter values attached to the SQL statement in parameter query scenarios. Multiple parameters are separated by commas (,).</para>
+                /// <remarks>
+                /// <para>Only ApsaraDB for Lindorm database instances are supported.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Params")]
                 [Validation(Required=false)]
                 public string Params { get; set; }
@@ -346,7 +406,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sq-1pzcdMwRb</para>
+                /// <para>d236d0c4ae8485f6ffe5fdbe5e1bdxxx</para>
                 /// </summary>
                 [NameInMap("QueryId")]
                 [Validation(Required=false)]
@@ -382,18 +442,48 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public double? QueryTimeSeconds { get; set; }
 
+                /// <summary>
+                /// <para>The error message when the slow query execution fails.</para>
+                /// <remarks>
+                /// <para>Only ApsaraDB for Lindorm instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>create-by-mse-can-not-delete</para>
+                /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
+                /// <summary>
+                /// <para>The unique identifier of the slow query log record.</para>
+                /// <remarks>
+                /// <para>Only ApsaraDB for Lindorm instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hotspot-request-001</para>
+                /// </summary>
                 [NameInMap("ReqId")]
                 [Validation(Required=false)]
                 public string ReqId { get; set; }
 
+                /// <summary>
+                /// <para>The request packet size at the Redis proxy layer, in bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>58</para>
+                /// </summary>
                 [NameInMap("RequestSize")]
                 [Validation(Required=false)]
                 public long? RequestSize { get; set; }
 
+                /// <summary>
+                /// <para>The response packet size at the Redis proxy layer, in bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1535916</para>
+                /// </summary>
                 [NameInMap("ResponseSize")]
                 [Validation(Required=false)]
                 public long? ResponseSize { get; set; }
@@ -422,9 +512,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ReturnNum { get; set; }
 
                 /// <summary>
-                /// <para>The total number of rows updated or returned by the compute nodes of the ApsaraDB PolarDB-X 2.0 database instance.</para>
+                /// <para>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 database instance.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB PolarDB-X 2.0 instances are supported.</para>
+                /// <para>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -467,6 +557,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? RowsSent { get; set; }
 
+                /// <summary>
+                /// <para>The total response time at the Redis proxy layer, in microseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2055</para>
+                /// </summary>
                 [NameInMap("Rt")]
                 [Validation(Required=false)]
                 public long? Rt { get; set; }
@@ -492,9 +588,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Scheme { get; set; }
 
                 /// <summary>
-                /// <para>The number of DN requests from the compute node (CN) of the ApsaraDB PolarDB-X 2.0 database instance.</para>
+                /// <para>The number of data node (DN) requests from the compute node (CN) of the PolarDB-X 2.0 database.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB PolarDB-X 2.0 instances are supported.</para>
+                /// <para>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -554,7 +650,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The SQL statement type. Valid values:</para>
+                /// <para>The type of the SQL statement. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>SELECT</b></description></item>
                 /// <item><description><b>UPDATE</b></description></item>
@@ -569,7 +665,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SqlType { get; set; }
 
                 /// <summary>
-                /// <para>The child instance ID.</para>
+                /// <para>The sub-instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-8vb219d10038****</para>
@@ -589,9 +685,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The template ID of the ApsaraDB PolarDB-X 2.0 database instance.</para>
+                /// <para>The template ID of the PolarDB-X 2.0 database.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB PolarDB-X 2.0 instances are supported.</para>
+                /// <para>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -622,9 +718,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Timestamp { get; set; }
 
                 /// <summary>
-                /// <para>The trace ID of PolarDB-X 2.0, which is the execute ID of the SQL statement on the ApsaraDB PolarDB-X 2.0 database node.</para>
+                /// <para>The trace ID of PolarDB-X 2.0, which is the execute ID of the SQL statement on the database data node.</para>
                 /// <remarks>
-                /// <para>Only ApsaraDB PolarDB-X 2.0 instances are supported.</para>
+                /// <para>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -657,7 +753,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The page number for the paged query. Pages start from page 1. Default value: 1.</para>
+            /// <para>The page number for the paged query. The value starts from 1. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -712,11 +808,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: successful.</para>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: failed.</para>
+        /// <item><description><para><b>false</b>: The request failed.</para>
         /// </description></item>
         /// </list>
         /// 

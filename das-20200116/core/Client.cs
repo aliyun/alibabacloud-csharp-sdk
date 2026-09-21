@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-shanghai", "das.cn-shanghai.aliyuncs.com"},
-                {"cn-north-2-gov-1", "das.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("das", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -44,15 +43,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a database instance to Database Autonomy Service (DAS).</para>
+        /// <para>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -143,15 +142,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a database instance to Database Autonomy Service (DAS).</para>
+        /// <para>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -242,15 +241,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a database instance to Database Autonomy Service (DAS).</para>
+        /// <para>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -269,15 +268,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a database instance to Database Autonomy Service (DAS).</para>
+        /// <para>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -296,7 +295,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</para>
+        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -306,7 +305,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
         /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</description></item>
+        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -331,6 +330,10 @@ namespace AlibabaCloud.SDK.DAS20200116
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                query["Resume"] = request.Resume;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -361,7 +364,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</para>
+        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -371,7 +374,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
         /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</description></item>
+        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -396,6 +399,10 @@ namespace AlibabaCloud.SDK.DAS20200116
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                query["Resume"] = request.Resume;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -426,7 +433,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</para>
+        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -436,7 +443,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
         /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</description></item>
+        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -455,7 +462,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</para>
+        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -465,7 +472,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
         /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</description></item>
+        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1776,18 +1783,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a SQL template.</para>
+        /// <para>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>This operation supports the following database engines:<list type="bullet">
-        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>RDS MySQL</description></item>
         /// <item><description>PolarDB for MySQL</description></item>
-        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>RDS PostgreSQL</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1852,18 +1859,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a SQL template.</para>
+        /// <para>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>This operation supports the following database engines:<list type="bullet">
-        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>RDS MySQL</description></item>
         /// <item><description>PolarDB for MySQL</description></item>
-        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>RDS PostgreSQL</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1928,18 +1935,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a SQL template.</para>
+        /// <para>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>This operation supports the following database engines:<list type="bullet">
-        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>RDS MySQL</description></item>
         /// <item><description>PolarDB for MySQL</description></item>
-        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>RDS PostgreSQL</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1960,18 +1967,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a SQL template.</para>
+        /// <para>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</description></item>
-        /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// <item><description>This operation supports the following database engines:<list type="bullet">
-        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>RDS MySQL</description></item>
         /// <item><description>PolarDB for MySQL</description></item>
-        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>RDS PostgreSQL</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -3280,7 +3287,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit alert logs for alert search and alert handling.</para>
+        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3288,7 +3295,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3390,10 +3397,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             {
                 query["RuleCategory"] = request.RuleCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
-            {
-                query["RuleID"] = request.RuleID;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -3435,7 +3438,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit alert logs for alert search and alert handling.</para>
+        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3443,7 +3446,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3545,10 +3548,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             {
                 query["RuleCategory"] = request.RuleCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
-            {
-                query["RuleID"] = request.RuleID;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -3590,7 +3589,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit alert logs for alert search and alert handling.</para>
+        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3598,7 +3597,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3617,7 +3616,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit alert logs for alert search and alert handling.</para>
+        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3625,7 +3624,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5153,12 +5152,12 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the error log details of an instance within a specified time range.
-        /// Before you begin:</para>
+        /// <para>Queries the error log details of an instance within a specified time range.
+        /// Before you begin, make sure the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
-        /// <item><description>If you use the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you call DAS operations by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
+        /// <item><description>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5234,12 +5233,12 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the error log details of an instance within a specified time range.
-        /// Before you begin:</para>
+        /// <para>Queries the error log details of an instance within a specified time range.
+        /// Before you begin, make sure the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
-        /// <item><description>If you use the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you call DAS operations by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
+        /// <item><description>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5315,12 +5314,12 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the error log details of an instance within a specified time range.
-        /// Before you begin:</para>
+        /// <para>Queries the error log details of an instance within a specified time range.
+        /// Before you begin, make sure the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
-        /// <item><description>If you use the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you call DAS operations by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
+        /// <item><description>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5344,12 +5343,12 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the error log details of an instance within a specified time range.
-        /// Before you begin:</para>
+        /// <para>Queries the error log details of an instance within a specified time range.
+        /// Before you begin, make sure the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
-        /// <item><description>If you use the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you call DAS operations by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</description></item>
+        /// <item><description>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</description></item>
+        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6648,18 +6647,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</para>
+        /// <para>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>InstanceId</c> specifies the instance ID. This parameter is required.</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the time range for the query. These parameters are required.</description></item>
-        /// <item><description>Set <c>PageNumber</c> and <c>PageSize</c> to retrieve results by paging.</description></item>
-        /// <item><description>Use the <c>OrderBy</c> parameter to sort results. For sortable fields, refer to the References.</description></item>
-        /// <item><description>Use the <c>Filters</c> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-        /// <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></description></item>
+        /// <item><description>InstanceId is the instance ID. This parameter is required.</description></item>
+        /// <item><description>StartTime and EndTime specify the time range for the query. These parameters are required.</description></item>
+        /// <item><description>Settings PageNumber and PageSize to retrieve results by paging.</description></item>
+        /// <item><description>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</description></item>
+        /// <item><description>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+        /// <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></description></item>
         /// </list>
         /// </description>
         /// 
@@ -6736,18 +6735,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</para>
+        /// <para>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>InstanceId</c> specifies the instance ID. This parameter is required.</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the time range for the query. These parameters are required.</description></item>
-        /// <item><description>Set <c>PageNumber</c> and <c>PageSize</c> to retrieve results by paging.</description></item>
-        /// <item><description>Use the <c>OrderBy</c> parameter to sort results. For sortable fields, refer to the References.</description></item>
-        /// <item><description>Use the <c>Filters</c> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-        /// <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></description></item>
+        /// <item><description>InstanceId is the instance ID. This parameter is required.</description></item>
+        /// <item><description>StartTime and EndTime specify the time range for the query. These parameters are required.</description></item>
+        /// <item><description>Settings PageNumber and PageSize to retrieve results by paging.</description></item>
+        /// <item><description>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</description></item>
+        /// <item><description>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+        /// <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></description></item>
         /// </list>
         /// </description>
         /// 
@@ -6824,18 +6823,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</para>
+        /// <para>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>InstanceId</c> specifies the instance ID. This parameter is required.</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the time range for the query. These parameters are required.</description></item>
-        /// <item><description>Set <c>PageNumber</c> and <c>PageSize</c> to retrieve results by paging.</description></item>
-        /// <item><description>Use the <c>OrderBy</c> parameter to sort results. For sortable fields, refer to the References.</description></item>
-        /// <item><description>Use the <c>Filters</c> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-        /// <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></description></item>
+        /// <item><description>InstanceId is the instance ID. This parameter is required.</description></item>
+        /// <item><description>StartTime and EndTime specify the time range for the query. These parameters are required.</description></item>
+        /// <item><description>Settings PageNumber and PageSize to retrieve results by paging.</description></item>
+        /// <item><description>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</description></item>
+        /// <item><description>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+        /// <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></description></item>
         /// </list>
         /// </description>
         /// 
@@ -6854,18 +6853,18 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</para>
+        /// <para>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>InstanceId</c> specifies the instance ID. This parameter is required.</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the time range for the query. These parameters are required.</description></item>
-        /// <item><description>Set <c>PageNumber</c> and <c>PageSize</c> to retrieve results by paging.</description></item>
-        /// <item><description>Use the <c>OrderBy</c> parameter to sort results. For sortable fields, refer to the References.</description></item>
-        /// <item><description>Use the <c>Filters</c> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-        /// <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></description></item>
+        /// <item><description>InstanceId is the instance ID. This parameter is required.</description></item>
+        /// <item><description>StartTime and EndTime specify the time range for the query. These parameters are required.</description></item>
+        /// <item><description>Settings PageNumber and PageSize to retrieve results by paging.</description></item>
+        /// <item><description>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</description></item>
+        /// <item><description>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+        /// <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7128,6 +7127,350 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+        /// Usage notes:</description></item>
+        /// <item><description><b>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</b></description></item>
+        /// <item><description>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</description></item>
+        /// <item><description>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</description></item>
+        /// <item><description>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+        /// Response description:</description></item>
+        /// <item><description>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</description></item>
+        /// <item><description>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</description></item>
+        /// <item><description>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</description></item>
+        /// <item><description>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</description></item>
+        /// <item><description>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlInsightStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlInsightStatisticResponse
+        /// </returns>
+        public DescribeSqlInsightStatisticResponse DescribeSqlInsightStatisticWithOptions(DescribeSqlInsightStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleContext))
+            {
+                query["ConsoleContext"] = request.ConsoleContext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Asc))
+            {
+                body["Asc"] = request.Asc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DoFillTrend))
+            {
+                body["DoFillTrend"] = request.DoFillTrend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                body["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                body["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlInsightStatistic",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlInsightStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+        /// Usage notes:</description></item>
+        /// <item><description><b>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</b></description></item>
+        /// <item><description>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</description></item>
+        /// <item><description>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</description></item>
+        /// <item><description>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+        /// Response description:</description></item>
+        /// <item><description>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</description></item>
+        /// <item><description>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</description></item>
+        /// <item><description>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</description></item>
+        /// <item><description>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</description></item>
+        /// <item><description>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlInsightStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlInsightStatisticResponse
+        /// </returns>
+        public async Task<DescribeSqlInsightStatisticResponse> DescribeSqlInsightStatisticWithOptionsAsync(DescribeSqlInsightStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleContext))
+            {
+                query["ConsoleContext"] = request.ConsoleContext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Asc))
+            {
+                body["Asc"] = request.Asc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DoFillTrend))
+            {
+                body["DoFillTrend"] = request.DoFillTrend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                body["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                body["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlInsightStatistic",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlInsightStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+        /// Usage notes:</description></item>
+        /// <item><description><b>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</b></description></item>
+        /// <item><description>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</description></item>
+        /// <item><description>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</description></item>
+        /// <item><description>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+        /// Response description:</description></item>
+        /// <item><description>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</description></item>
+        /// <item><description>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</description></item>
+        /// <item><description>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</description></item>
+        /// <item><description>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</description></item>
+        /// <item><description>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlInsightStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlInsightStatisticResponse
+        /// </returns>
+        public DescribeSqlInsightStatisticResponse DescribeSqlInsightStatistic(DescribeSqlInsightStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSqlInsightStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+        /// Usage notes:</description></item>
+        /// <item><description><b>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</b></description></item>
+        /// <item><description>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</description></item>
+        /// <item><description>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</description></item>
+        /// <item><description>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+        /// Response description:</description></item>
+        /// <item><description>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</description></item>
+        /// <item><description>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</description></item>
+        /// <item><description>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</description></item>
+        /// <item><description>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</description></item>
+        /// <item><description>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlInsightStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlInsightStatisticResponse
+        /// </returns>
+        public async Task<DescribeSqlInsightStatisticResponse> DescribeSqlInsightStatisticAsync(DescribeSqlInsightStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSqlInsightStatisticWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13908,15 +14251,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</para>
+        /// <para>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
+        /// <para>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
-        /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13955,10 +14298,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             {
                 body["Start"] = request.Start;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13981,15 +14320,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</para>
+        /// <para>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
+        /// <para>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
-        /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14028,10 +14367,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             {
                 body["Start"] = request.Start;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14054,15 +14389,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</para>
+        /// <para>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
+        /// <para>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
-        /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14081,15 +14416,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</para>
+        /// <para>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
+        /// <para>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
-        /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
+        /// <item><description>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 

@@ -12,24 +12,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SQLServer</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBMySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBPostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Redis</b></para>
-        /// </description></item>
-        /// <item><description><para><b>MongoDB</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBOracle</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBX</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><b>PolarDBMySQL</b></description></item>
+        /// <item><description><b>PolarDBPostgreSQL</b></description></item>
+        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><b>MongoDB</b></description></item>
+        /// <item><description><b>PolarDBOracle</b></description></item>
+        /// <item><description><b>PolarDBX</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string FlushAccount { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yuecq--test****</para>
@@ -60,17 +51,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance on which the database is deployed. Valid values:</para>
+        /// <para>The database product to which the instance belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RDS</b>: an Alibaba Cloud database instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECS</b>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</para>
-        /// </description></item>
-        /// <item><description><para><b>IDC</b>: a self-managed database instance that is not deployed on Alibaba Cloud.</para>
-        /// </description></item>
+        /// <item><description><b>RDS</b>: cloud instance.</description></item>
+        /// <item><description><b>ECS</b>: self-managed instance on ECS.</description></item>
+        /// <item><description><b>IDC</b>: self-managed instance not on a public cloud.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>IDC refers to your data center.</para>
+        /// <para>IDC stands for Internet Data Center.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +80,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint that is used to access the instance over internal networks.</para>
+        /// <para>The internal endpoint of the instance to be connected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1jdv45i7l6****.mysql.rds.aliyuncs.com</para>
@@ -112,7 +100,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The password for the username.</para>
+        /// <para>The password of the username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122****</para>
@@ -122,7 +110,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port that is used to access the instance over internal networks.</para>
+        /// <para>The internal network connection port of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -132,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -142,7 +130,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to log on to the database.</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test****</para>
@@ -152,7 +140,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>VPC ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-m5e666n89m2bx8jar****</para>

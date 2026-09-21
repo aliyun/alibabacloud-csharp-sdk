@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class AddHDMInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
+        /// <para>The details, including the total number of entries and error codes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CallerUid { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code returned.</para>
+            /// <para>The status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? Code { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the request failed.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidRequestURL</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the instance.</para>
+            /// <para>The IP endpoint of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-de21209****.mysql.rds.aliyuncs.com</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance owner.</para>
+            /// <para>The owner ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>325352345</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The port number of the instance that you want to access.</para>
+            /// <para>The port of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The role of the current API caller.</para>
+            /// <para>The role information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>master</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The client token that is used to ensure the idempotence of the request.</para>
+            /// <para>The client token, which is a custom unique random string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tokenID</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>VPC ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-m5e666n89m2bx8jar****</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned, such as an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,12 +172,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

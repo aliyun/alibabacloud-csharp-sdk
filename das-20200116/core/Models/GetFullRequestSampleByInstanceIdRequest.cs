@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetFullRequestSampleByInstanceIdRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range to query. Specify a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</para>
+        /// <para>The end time must be later than the start time, and the interval between the start time and end time cannot be less than 1 hour.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,12 +35,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The role of the PolarDB-X 2.0 node. Valid values:</para>
+        /// <para>The node information of a PolarDB-X 2.0 database instance.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>polarx_cn</b>: compute node.</para>
-        /// </description></item>
-        /// <item><description><para><b>polarx_en</b>: data node.</para>
-        /// </description></item>
+        /// <item><description><b>polarx_cn</b>: compute node.</description></item>
+        /// <item><description><b>polarx_en</b>: data node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement ID.</para>
+        /// <para>SQL ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,9 +60,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The beginning of the time range to query. Specify a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</para>
+        /// <para>The start time must be within the storage duration of SQL Explorer for the database instance and cannot be earlier than 90 days before the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,19 +72,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("Start")]
         [Validation(Required=false)]
         public long? Start { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to create the database instance.</para>
-        /// <remarks>
-        /// <para>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>196278346919****</para>
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
     }
 

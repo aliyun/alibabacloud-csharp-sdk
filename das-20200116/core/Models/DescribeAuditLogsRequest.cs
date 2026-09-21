@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The range of execution time.</para>
+        /// <para>The range of the execution time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in[1000 2000]</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string IpType { get; set; }
 
         /// <summary>
-        /// <para>The language type for sending and receiving messages. Default value: zh_cn. Valid values:</para>
+        /// <para>The language of the request and response. Default value: zh_cn. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh_cn: Chinese.</description></item>
         /// <item><description>en_us: English.</description></item>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform an aggregate query.</para>
+        /// <para>Specifies whether to use aggregate query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -231,16 +231,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("RuleCategory")]
         [Validation(Required=false)]
         public string RuleCategory { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the audit policy.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>9953411</para>
-        /// </summary>
-        [NameInMap("RuleID")]
-        [Validation(Required=false)]
-        public string RuleID { get; set; }
 
         /// <summary>
         /// <para>The rule ID.</para>

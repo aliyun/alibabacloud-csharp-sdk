@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string ActivityType { get; set; }
 
+        /// <summary>
+        /// <para>The agent ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agent-7f9c2a81</para>
+        /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public string AgentId { get; set; }
@@ -43,10 +49,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string Delta { get; set; }
 
+        /// <summary>
+        /// <para>The step type of STEP_STARTED, such as task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>task</para>
+        /// </summary>
         [NameInMap("Kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }
 
+        /// <summary>
+        /// <para>The display name of the sub-agent for STEP_STARTED.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SQL Performance Diagnostics</para>
+        /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
@@ -71,10 +89,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The original ID of the tool call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ag-xxxx</para>
+        /// </summary>
         [NameInMap("OriginatingToolCallId")]
         [Validation(Required=false)]
         public string OriginatingToolCallId { get; set; }
 
+        /// <summary>
+        /// <para>The parent agent ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agent-3a6f1c92</para>
+        /// </summary>
         [NameInMap("ParentAgentId")]
         [Validation(Required=false)]
         public string ParentAgentId { get; set; }
@@ -119,12 +149,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string StepName { get; set; }
 
+        /// <summary>
+        /// <para>The step status of STEP_FINISHED, such as completed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>completed</para>
+        /// </summary>
         [NameInMap("StepStatus")]
         [Validation(Required=false)]
         public string StepStatus { get; set; }
 
         /// <summary>
-        /// <para>The callback tool class.</para>
+        /// <para>The callback utility class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
@@ -143,16 +179,28 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string ThreadId { get; set; }
 
+        /// <summary>
+        /// <para>The event timestamp.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1767225600000</para>
+        /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]
         public long? Timestamp { get; set; }
 
+        /// <summary>
+        /// <para>The error that occurred during tool invocation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>error</para>
+        /// </summary>
         [NameInMap("ToolCallError")]
         [Validation(Required=false)]
         public string ToolCallError { get; set; }
 
         /// <summary>
-        /// <para>The tool calling invoke ID.</para>
+        /// <para>The tool invocation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>call_edf9cdb69e0e4c9796a6a5a6</para>

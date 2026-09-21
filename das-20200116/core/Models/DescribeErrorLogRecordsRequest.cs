@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeErrorLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</para>
+        /// <para>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The filter conditions.</para>
         /// <remarks>
-        /// <para>Filtering is supported only for error logs of ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle).</para>
+        /// <para>Only error log filtering for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) is supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Filters")]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <item><description>mongos</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
+        /// <para>Only ApsaraDB for MongoDB instances are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</para>
+        /// <para>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

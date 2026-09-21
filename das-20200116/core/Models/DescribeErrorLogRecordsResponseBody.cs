@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of log entries returned on the current page.</para>
+            /// <para>The total number of log entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <list type="bullet">
                 /// <item><description><b>NETWORK</b>: network connectivity log.</description></item>
                 /// <item><description><b>ACCESS</b>: access control log.</description></item>
-                /// <item><description><b>-</b>: common log.</description></item>
+                /// <item><description><b>-</b>: general log.</description></item>
                 /// <item><description><b>COMMAND</b>: slow log.</description></item>
                 /// <item><description><b>SHARDING</b>: cluster log.</description></item>
                 /// <item><description><b>STORAGE</b>: storage engine log.</description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <item><description><b>WRITE</b>: slow update log.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
+                /// <para>Only ApsaraDB for MongoDB instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The log connection information.</para>
                 /// <remarks>
-                /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
+                /// <para>Only ApsaraDB for MongoDB instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The node ID.</para>
                 /// <remarks>
-                /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
+                /// <para>Only ApsaraDB for MongoDB instances are supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -126,10 +126,49 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string DBInstanceName { get; set; }
 
+                /// <summary>
+                /// <para>The database name.</para>
+                /// <remarks>
+                /// <para>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>db_name</para>
+                /// </summary>
+                [NameInMap("Db")]
+                [Validation(Required=false)]
+                public string Db { get; set; }
+
+                /// <summary>
+                /// <para>The database account.</para>
+                /// <remarks>
+                /// <para>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>db_user</para>
+                /// </summary>
+                [NameInMap("User")]
+                [Validation(Required=false)]
+                public string User { get; set; }
+
+                /// <summary>
+                /// <para>The client IP address.</para>
+                /// <remarks>
+                /// <para>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>x.x.x.x</para>
+                /// </summary>
+                [NameInMap("UserIp")]
+                [Validation(Required=false)]
+                public string UserIp { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The maximum number of entries per page.</para>
+            /// <para>The maximum number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -139,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MaxRecordsPerPage { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number of the current query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -159,7 +198,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of log entries within the specified time range.</para>
+            /// <para>The total number of log entries within the query time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -173,7 +212,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,8 +235,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

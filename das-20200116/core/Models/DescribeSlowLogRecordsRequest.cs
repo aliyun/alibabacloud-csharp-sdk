@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort results in ascending order. Default value: <b>true</b>.</para>
+        /// <para>Specifies whether to sort the results in ascending order. Default value: <b>true</b>.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: ascending order.</description></item>
-        /// <item><description><b>false</b>: descending order.</description></item>
+        /// <item><description><b>true</b>: Sort in ascending order.</description></item>
+        /// <item><description><b>false</b>: Sort in descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,28 +89,44 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b> <list type="bullet">
-        /// <item><description>QueryTimeSeconds: query duration in seconds.</description></item>
-        /// <item><description>LockTimeSeconds: lock time in seconds.</description></item>
-        /// <item><description>RowsSent: rows sent.</description></item>
+        /// <item><description><para><b>Common to all engines</b> </para>
+        /// <list type="bullet">
+        /// <item><description>QueryTimeSeconds: query duration (seconds).</description></item>
+        /// <item><description>Timestamp: timestamp.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>SQL-based engines (MySQL / PolarDB for MySQL / PostgreSQL / PolarDB for PostgreSQL / PolarDB for Oracle / PolarDB-X DN)</b></para>
+        /// <list type="bullet">
+        /// <item><description>LockTimeSeconds: lock time (seconds).</description></item>
         /// <item><description>RowsExamined: rows examined.</description></item>
+        /// <item><description>RowsSent: rows returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Redis</b><list type="bullet">
-        /// <item><description>QueryTime: query duration.</description></item>
-        /// <item><description>Timestamp: execution end time.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>MongoDB</b><list type="bullet">
-        /// <item><description>QueryTime: query duration.</description></item>
-        /// <item><description>Timestamp: execution end time.</description></item>
-        /// <item><description>KeysExamined: keys examined.</description></item>
-        /// <item><description>DocExamined: documents examined.</description></item>
+        /// <item><description><para><b>MongoDB</b></para>
+        /// <list type="bullet">
+        /// <item><description>KeysExamined: number of indexes scanned.</description></item>
+        /// <item><description>DocExamined: number of documents scanned.</description></item>
         /// <item><description>ReturnNum: rows returned.</description></item>
         /// </list>
         /// </description></item>
+        /// <item><description><para><b>SQL Server</b></para>
+        /// <list type="bullet">
+        /// <item><description>CPUTimeSeconds: CPU time.</description></item>
+        /// <item><description>IOWrites: number of I/O writes.</description></item>
+        /// <item><description>LastRowsCountAffected: last rows affected.</description></item>
+        /// <item><description>LogicalIOReads: logical I/O reads.</description></item>
+        /// <item><description>PhysicalIOReads: physical I/O reads.</description></item>
+        /// <item><description>RowsCountAffected: rows affected.</description></item>
         /// </list>
-        /// <para><notice>RDS PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</notice></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDB-X CN</b></para>
+        /// <list type="bullet">
+        /// <item><description>RowsSent: rows returned or updated.</description></item>
+        /// <item><description>Frows: rows fetched.</description></item>
+        /// <item><description>Scnt: number of physical SQL statements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>QueryTimeSeconds</para>
