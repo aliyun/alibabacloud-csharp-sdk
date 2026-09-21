@@ -75,7 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The effective SPL.</para>
+        /// <para>The aggregated diagnostics.</para>
+        /// </summary>
+        [NameInMap("diagnostics")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Diagnostics { get; set; }
+
+        /// <summary>
+        /// <para>The effective SPL script.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

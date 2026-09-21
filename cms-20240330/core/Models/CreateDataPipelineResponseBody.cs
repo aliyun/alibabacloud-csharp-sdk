@@ -82,11 +82,40 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfig Config { get; set; }
                     public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfig : TeaModel {
                         /// <summary>
-                        /// <para>The application list.</para>
+                        /// <para>The list of applications.</para>
                         /// </summary>
                         [NameInMap("applications")]
                         [Validation(Required=false)]
                         public List<string> Applications { get; set; }
+
+                        /// <summary>
+                        /// <para>The list of field assignments.</para>
+                        /// </summary>
+                        [NameInMap("assignments")]
+                        [Validation(Required=false)]
+                        public List<CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments> Assignments { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments : TeaModel {
+                            /// <summary>
+                            /// <para>The assignment expression.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>duration / 1000000.0</para>
+                            /// </summary>
+                            [NameInMap("expression")]
+                            [Validation(Required=false)]
+                            public string Expression { get; set; }
+
+                            /// <summary>
+                            /// <para>The output field.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>latency_ms</para>
+                            /// </summary>
+                            [NameInMap("field")]
+                            [Validation(Required=false)]
+                            public string Field { get; set; }
+
+                        }
 
                         /// <summary>
                         /// <para>The filter expression.</para>
@@ -99,14 +128,50 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>The field list.</para>
+                        /// <para>The list of fields.</para>
                         /// </summary>
                         [NameInMap("fields")]
                         [Validation(Required=false)]
                         public List<string> Fields { get; set; }
 
                         /// <summary>
-                        /// <para>The masking rule list.</para>
+                        /// <para>The extended parameters.</para>
+                        /// </summary>
+                        [NameInMap("parameters")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> Parameters { get; set; }
+
+                        /// <summary>
+                        /// <para>The list of field projections.</para>
+                        /// </summary>
+                        [NameInMap("projections")]
+                        [Validation(Required=false)]
+                        public List<CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections> Projections { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections : TeaModel {
+                            /// <summary>
+                            /// <para>The source field.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>serviceName</para>
+                            /// </summary>
+                            [NameInMap("source")]
+                            [Validation(Required=false)]
+                            public string Source { get; set; }
+
+                            /// <summary>
+                            /// <para>The target field.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>service</para>
+                            /// </summary>
+                            [NameInMap("target")]
+                            [Validation(Required=false)]
+                            public string Target { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The list of masking rules.</para>
                         /// </summary>
                         [NameInMap("rules")]
                         [Validation(Required=false)]
@@ -171,6 +236,142 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         }
 
                         /// <summary>
+                        /// <para>The scope in which the pipeline processing processor takes effect.</para>
+                        /// </summary>
+                        [NameInMap("scope")]
+                        [Validation(Required=false)]
+                        public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope Scope { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope : TeaModel {
+                            /// <summary>
+                            /// <para>The additional field conditions.</para>
+                            /// </summary>
+                            [NameInMap("conditions")]
+                            [Validation(Required=false)]
+                            public List<CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions> Conditions { get; set; }
+                            public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions : TeaModel {
+                                /// <summary>
+                                /// <para>The field reference.</para>
+                                /// </summary>
+                                [NameInMap("field")]
+                                [Validation(Required=false)]
+                                public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField Field { get; set; }
+                                public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField : TeaModel {
+                                    /// <summary>
+                                    /// <para>The JSON object container.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>attributes</para>
+                                    /// </summary>
+                                    [NameInMap("container")]
+                                    [Validation(Required=false)]
+                                    public string Container { get; set; }
+
+                                    /// <summary>
+                                    /// <para>The reference data type.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>field</para>
+                                    /// </summary>
+                                    [NameInMap("kind")]
+                                    [Validation(Required=false)]
+                                    public string Kind { get; set; }
+
+                                    /// <summary>
+                                    /// <para>The field or dimension name.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>serviceName</para>
+                                    /// </summary>
+                                    [NameInMap("name")]
+                                    [Validation(Required=false)]
+                                    public string Name { get; set; }
+
+                                    /// <summary>
+                                    /// <para>The JSON literal key path.</para>
+                                    /// </summary>
+                                    [NameInMap("path")]
+                                    [Validation(Required=false)]
+                                    public List<string> Path { get; set; }
+
+                                }
+
+                                /// <summary>
+                                /// <para>The matching method.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>EXACT</para>
+                                /// </summary>
+                                [NameInMap("matchType")]
+                                [Validation(Required=false)]
+                                public string MatchType { get; set; }
+
+                                /// <summary>
+                                /// <para>The match values.</para>
+                                /// </summary>
+                                [NameInMap("values")]
+                                [Validation(Required=false)]
+                                public List<string> Values { get; set; }
+
+                            }
+
+                            /// <summary>
+                            /// <para>The metric name scope.</para>
+                            /// </summary>
+                            [NameInMap("metricName")]
+                            [Validation(Required=false)]
+                            public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName MetricName { get; set; }
+                            public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName : TeaModel {
+                                /// <summary>
+                                /// <para>The matching method.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>EXACT</para>
+                                /// </summary>
+                                [NameInMap("matchType")]
+                                [Validation(Required=false)]
+                                public string MatchType { get; set; }
+
+                                /// <summary>
+                                /// <para>The metric names.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>[&quot;http_requests_total&quot;]</para>
+                                /// </summary>
+                                [NameInMap("values")]
+                                [Validation(Required=false)]
+                                public List<string> Values { get; set; }
+
+                            }
+
+                            /// <summary>
+                            /// <para>The service name scope.</para>
+                            /// </summary>
+                            [NameInMap("serviceName")]
+                            [Validation(Required=false)]
+                            public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName ServiceName { get; set; }
+                            public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName : TeaModel {
+                                /// <summary>
+                                /// <para>The matching method.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>EXACT</para>
+                                /// </summary>
+                                [NameInMap("matchType")]
+                                [Validation(Required=false)]
+                                public string MatchType { get; set; }
+
+                                /// <summary>
+                                /// <para>The match values.</para>
+                                /// </summary>
+                                [NameInMap("values")]
+                                [Validation(Required=false)]
+                                public List<string> Values { get; set; }
+
+                            }
+
+                        }
+
+                        /// <summary>
                         /// <para>The SPL script.</para>
                         /// 
                         /// <b>Example:</b>
@@ -190,7 +391,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector Selector { get; set; }
                         public class CreateDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector : TeaModel {
                             /// <summary>
-                            /// <para>The service name list.</para>
+                            /// <para>The list of service names.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -273,11 +474,40 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public CreateDataPipelineResponseBodyPipelineProcessorsConfig Config { get; set; }
                 public class CreateDataPipelineResponseBodyPipelineProcessorsConfig : TeaModel {
                     /// <summary>
-                    /// <para>The application list.</para>
+                    /// <para>The list of applications.</para>
                     /// </summary>
                     [NameInMap("applications")]
                     [Validation(Required=false)]
                     public List<string> Applications { get; set; }
+
+                    /// <summary>
+                    /// <para>The list of field assignments.</para>
+                    /// </summary>
+                    [NameInMap("assignments")]
+                    [Validation(Required=false)]
+                    public List<CreateDataPipelineResponseBodyPipelineProcessorsConfigAssignments> Assignments { get; set; }
+                    public class CreateDataPipelineResponseBodyPipelineProcessorsConfigAssignments : TeaModel {
+                        /// <summary>
+                        /// <para>The assignment expression.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>duration / 1000000.0</para>
+                        /// </summary>
+                        [NameInMap("expression")]
+                        [Validation(Required=false)]
+                        public string Expression { get; set; }
+
+                        /// <summary>
+                        /// <para>The output field.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>latency_ms</para>
+                        /// </summary>
+                        [NameInMap("field")]
+                        [Validation(Required=false)]
+                        public string Field { get; set; }
+
+                    }
 
                     /// <summary>
                     /// <para>The filter expression.</para>
@@ -290,14 +520,50 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Expression { get; set; }
 
                     /// <summary>
-                    /// <para>The field list.</para>
+                    /// <para>The list of fields.</para>
                     /// </summary>
                     [NameInMap("fields")]
                     [Validation(Required=false)]
                     public List<string> Fields { get; set; }
 
                     /// <summary>
-                    /// <para>The masking rule list.</para>
+                    /// <para>The extended parameters.</para>
+                    /// </summary>
+                    [NameInMap("parameters")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> Parameters { get; set; }
+
+                    /// <summary>
+                    /// <para>The list of field projections.</para>
+                    /// </summary>
+                    [NameInMap("projections")]
+                    [Validation(Required=false)]
+                    public List<CreateDataPipelineResponseBodyPipelineProcessorsConfigProjections> Projections { get; set; }
+                    public class CreateDataPipelineResponseBodyPipelineProcessorsConfigProjections : TeaModel {
+                        /// <summary>
+                        /// <para>The source field.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>serviceName</para>
+                        /// </summary>
+                        [NameInMap("source")]
+                        [Validation(Required=false)]
+                        public string Source { get; set; }
+
+                        /// <summary>
+                        /// <para>The target field.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>service</para>
+                        /// </summary>
+                        [NameInMap("target")]
+                        [Validation(Required=false)]
+                        public string Target { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The list of masking rules.</para>
                     /// </summary>
                     [NameInMap("rules")]
                     [Validation(Required=false)]
@@ -362,6 +628,142 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
+                    /// <para>The scope in which the pipeline processing processor takes effect.</para>
+                    /// </summary>
+                    [NameInMap("scope")]
+                    [Validation(Required=false)]
+                    public CreateDataPipelineResponseBodyPipelineProcessorsConfigScope Scope { get; set; }
+                    public class CreateDataPipelineResponseBodyPipelineProcessorsConfigScope : TeaModel {
+                        /// <summary>
+                        /// <para>The additional field conditions.</para>
+                        /// </summary>
+                        [NameInMap("conditions")]
+                        [Validation(Required=false)]
+                        public List<CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions> Conditions { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions : TeaModel {
+                            /// <summary>
+                            /// <para>The field reference.</para>
+                            /// </summary>
+                            [NameInMap("field")]
+                            [Validation(Required=false)]
+                            public CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField Field { get; set; }
+                            public class CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField : TeaModel {
+                                /// <summary>
+                                /// <para>The JSON object container.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>attributes</para>
+                                /// </summary>
+                                [NameInMap("container")]
+                                [Validation(Required=false)]
+                                public string Container { get; set; }
+
+                                /// <summary>
+                                /// <para>The reference data type.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>field</para>
+                                /// </summary>
+                                [NameInMap("kind")]
+                                [Validation(Required=false)]
+                                public string Kind { get; set; }
+
+                                /// <summary>
+                                /// <para>The field or dimension name.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>service.name</para>
+                                /// </summary>
+                                [NameInMap("name")]
+                                [Validation(Required=false)]
+                                public string Name { get; set; }
+
+                                /// <summary>
+                                /// <para>The JSON literal key path.</para>
+                                /// </summary>
+                                [NameInMap("path")]
+                                [Validation(Required=false)]
+                                public List<string> Path { get; set; }
+
+                            }
+
+                            /// <summary>
+                            /// <para>The matching method.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>EXACT</para>
+                            /// </summary>
+                            [NameInMap("matchType")]
+                            [Validation(Required=false)]
+                            public string MatchType { get; set; }
+
+                            /// <summary>
+                            /// <para>The match values.</para>
+                            /// </summary>
+                            [NameInMap("values")]
+                            [Validation(Required=false)]
+                            public List<string> Values { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The metric name scope.</para>
+                        /// </summary>
+                        [NameInMap("metricName")]
+                        [Validation(Required=false)]
+                        public CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName MetricName { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName : TeaModel {
+                            /// <summary>
+                            /// <para>The matching method.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>EXACT</para>
+                            /// </summary>
+                            [NameInMap("matchType")]
+                            [Validation(Required=false)]
+                            public string MatchType { get; set; }
+
+                            /// <summary>
+                            /// <para>The metric names.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>[&quot;http_requests_total&quot;]</para>
+                            /// </summary>
+                            [NameInMap("values")]
+                            [Validation(Required=false)]
+                            public List<string> Values { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The service name scope.</para>
+                        /// </summary>
+                        [NameInMap("serviceName")]
+                        [Validation(Required=false)]
+                        public CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName ServiceName { get; set; }
+                        public class CreateDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName : TeaModel {
+                            /// <summary>
+                            /// <para>The matching method.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>GLOB</para>
+                            /// </summary>
+                            [NameInMap("matchType")]
+                            [Validation(Required=false)]
+                            public string MatchType { get; set; }
+
+                            /// <summary>
+                            /// <para>The match values.</para>
+                            /// </summary>
+                            [NameInMap("values")]
+                            [Validation(Required=false)]
+                            public List<string> Values { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
                     /// <para>The SPL script.</para>
                     /// 
                     /// <b>Example:</b>
@@ -381,7 +783,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public CreateDataPipelineResponseBodyPipelineProcessorsConfigSelector Selector { get; set; }
                     public class CreateDataPipelineResponseBodyPipelineProcessorsConfigSelector : TeaModel {
                         /// <summary>
-                        /// <para>The service name list.</para>
+                        /// <para>The list of service names.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -570,7 +972,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The data source type.</para>
+                /// <para>The type of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>traces-default</para>

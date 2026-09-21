@@ -9,8 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusViewRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Not in use.</para>
+        /// <para>Not yet enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -26,16 +28,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("authFreeReadPolicy")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AuthFreeReadPolicy { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Specifies whether anonymous read is supported.</para>
+        /// <para>Specifies whether authentication-free read is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("enableAuthFreeRead")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Not in use.</para>
+        /// <para>Not yet enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The operation to perform.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -151,8 +157,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>V1: legacy version</description></item>
-        /// <item><description>V2: new version.</description></item>
+        /// <item><description>V1: Legacy version.</description></item>
+        /// <item><description>V2: New version.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

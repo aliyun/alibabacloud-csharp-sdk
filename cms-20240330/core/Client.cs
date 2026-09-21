@@ -17194,12 +17194,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DataPipelines.</para>
+        /// <para>Queries a list of DataPipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17249,12 +17249,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DataPipelines.</para>
+        /// <para>Queries a list of DataPipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17304,12 +17304,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DataPipelines.</para>
+        /// <para>Queries a list of DataPipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17328,12 +17328,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DataPipelines.</para>
+        /// <para>Queries a list of DataPipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26330,12 +26330,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26405,12 +26405,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26480,12 +26480,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26504,12 +26504,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information about a Prometheus view instance.</para>
+        /// <para>Updates the information of a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">

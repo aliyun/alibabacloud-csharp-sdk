@@ -9,8 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePrometheusViewRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The policy for password-free read access. IP address segments and VPC IDs are supported.</para>
+        /// <para>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -26,20 +28,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("authFreeReadPolicy")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AuthFreeReadPolicy { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read access.</para>
+        /// <para>Specifies whether authentication-free read is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("enableAuthFreeRead")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication tokens.</para>
+        /// <para>Specifies whether authToken is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -49,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>A list of Prometheus instances.</para>
+        /// <para>The list of Prometheus instances.</para>
         /// </summary>
         [NameInMap("prometheusInstances")]
         [Validation(Required=false)]
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-north-2-gov-1</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewName { get; set; }
 
         /// <summary>
-        /// <para>The status of the Prometheus view.</para>
+        /// <para>The running status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The workspace to which the view belongs.</para>
+        /// <para>The workspace to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-108490012345-cn-heyuan</para>
