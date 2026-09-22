@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>level</b>: export by risk level.</description></item>
-        /// <item><description><b>label</b>: export by label.</description></item>
+        /// <item><description><b>level</b>: Export by risk level.</description></item>
+        /// <item><description><b>label</b>: Export by label.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
+
+        /// <summary>
+        /// <para>The query condition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Classify&quot;:&quot;guard-scene&quot;}</para>
+        /// </summary>
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -110,11 +120,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cip</b>: Content Moderation invocation volume statistics.</description></item>
-        /// <item><description><b>risk_level</b>: Content Moderation risk level statistics.</description></item>
-        /// <item><description><b>content_moderation</b>: AI safety guardrail content compliance risk level and tag statistics.</description></item>
-        /// <item><description><b>sensitive_data</b>: AI safety guardrail sensitive data risk level and tag statistics.</description></item>
-        /// <item><description><b>prompt_attack</b>: AI safety guardrail prompt risk level and tag statistics.</description></item>
+        /// <item><description><b>cip</b>: Content Moderation invoke volume statistics.</description></item>
+        /// <item><description><b>risk_level</b>: Content Moderation security risk level statistics.</description></item>
+        /// <item><description><b>content_moderation</b>: AI Safety Guardrail content compliance risk level and tag statistics.</description></item>
+        /// <item><description><b>sensitive_data</b>: AI Safety Guardrail sensitive data risk level and tag statistics.</description></item>
+        /// <item><description><b>prompt_attack</b>: AI Safety Guardrail prompt risk level and tag statistics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

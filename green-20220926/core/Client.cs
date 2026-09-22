@@ -4937,7 +4937,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call usage statistics.</para>
+        /// <para>Exports call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4974,6 +4974,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
             {
                 body["Label"] = request.Label;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -5017,7 +5021,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call usage statistics.</para>
+        /// <para>Exports call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5054,6 +5058,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
             {
                 body["Label"] = request.Label;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -5097,7 +5105,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call usage statistics.</para>
+        /// <para>Exports call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5115,7 +5123,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call usage statistics.</para>
+        /// <para>Exports call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
