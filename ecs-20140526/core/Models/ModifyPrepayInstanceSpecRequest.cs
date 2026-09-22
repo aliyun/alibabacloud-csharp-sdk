@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>cloud_efficiency: ultra disk.</description></item>
             /// <item><description>cloud_ssd: standard SSD.<remarks>
-            /// <para>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</para>
+            /// <para>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">in-stock instance family</a> and change a non-I/O optimized instance to an I/O optimized instance. For more information about how to change instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Increase Quota</a>.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type for the Upgrade/Downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</para>
+        /// <para>The target instance type for the upgrade or downgrade. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to support cross-cluster Upgrade/Downgrade of instance types. Valid values:</para>
+        /// <para>Specifies whether to support cross-cluster upgrade or downgrade of instance types. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Cross-cluster instance type changes are supported.</description></item>
         /// <item><description>false: Cross-cluster instance type changes are not supported.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>When the <c>MigrateAcrossZone</c> parameter is set to <c>true</c>, take note of the following items after you upgrade the Elastic Compute Service instance based on the response:</para>
-        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</para>
+        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

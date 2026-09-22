@@ -3034,29 +3034,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When attaching a data disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
-        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>When you attach a data disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
+        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When attaching a system disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
-        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must configure the instance logon credentials.</description></item>
+        /// <item><description>When you attach a system disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
+        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the logon credentials for the instance.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
+        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3148,29 +3148,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When attaching a data disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
-        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>When you attach a data disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
+        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When attaching a system disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
-        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must configure the instance logon credentials.</description></item>
+        /// <item><description>When you attach a system disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
+        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the logon credentials for the instance.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
+        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3262,29 +3262,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When attaching a data disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
-        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>When you attach a data disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
+        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When attaching a system disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
-        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must configure the instance logon credentials.</description></item>
+        /// <item><description>When you attach a system disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
+        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the logon credentials for the instance.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
+        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3308,29 +3308,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When attaching a data disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
-        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>When you attach a data disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
+        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When attaching a system disk:<list type="bullet">
-        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
-        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must configure the instance logon credentials.</description></item>
+        /// <item><description>When you attach a system disk:<list type="bullet">
+        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
+        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the logon credentials for the instance.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
+        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7037,20 +7037,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another region. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace system disks of instances (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
+        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace the system disk of an instance (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Remaining tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7153,20 +7153,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another region. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace system disks of instances (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
+        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace the system disk of an instance (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Remaining tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7269,20 +7269,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another region. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace system disks of instances (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
+        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace the system disk of an instance (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Remaining tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7301,20 +7301,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another region. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace system disks of instances (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
+        /// <para>You can use the copied image in the destination region to create ECS instances (<a href="https://help.aliyun.com/document_detail/25499.html">RunInstances</a>) or replace the system disk of an instance (<a href="https://help.aliyun.com/document_detail/25521.html">ReplaceSystemDisk</a>). 
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Remaining tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7615,8 +7615,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps.
-        /// The non-Alibaba Cloud server must run one of the following operating system versions and have Internet access to be registered as an Alibaba Cloud managed instance:</para>
+        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, operations management, and Alibaba Cloud DevOps.
+        /// The operating system of the non-Elastic Compute Service server must meet the following version requirements, and the server must have Internet access before it can be registered as an Alibaba Cloud managed instance.</para>
         /// <list type="bullet">
         /// <item><description>Alibaba Cloud Linux 2/3 and later</description></item>
         /// <item><description>CentOS 6/7/8 and later</description></item>
@@ -7626,9 +7626,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>OpenSUSE</description></item>
         /// <item><description>RedHat 5/6/7 and later</description></item>
         /// <item><description>SUSE Linux Enterprise Server 11/12/15 and later</description></item>
-        /// <item><description>Windows Server 2012/2016/2019 and later
-        /// In each Alibaba Cloud region, you can have up to 10 activation codes for managed instances. Each activation code can be used to register up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
-        /// <para>On the <b>Elastic Compute Service (ECS) Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
+        /// <item><description>Window Server 2012/2016/2019 and later
+        /// In a single Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
+        /// <para>On the <b>ECS Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7731,8 +7731,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps.
-        /// The non-Alibaba Cloud server must run one of the following operating system versions and have Internet access to be registered as an Alibaba Cloud managed instance:</para>
+        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, operations management, and Alibaba Cloud DevOps.
+        /// The operating system of the non-Elastic Compute Service server must meet the following version requirements, and the server must have Internet access before it can be registered as an Alibaba Cloud managed instance.</para>
         /// <list type="bullet">
         /// <item><description>Alibaba Cloud Linux 2/3 and later</description></item>
         /// <item><description>CentOS 6/7/8 and later</description></item>
@@ -7742,9 +7742,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>OpenSUSE</description></item>
         /// <item><description>RedHat 5/6/7 and later</description></item>
         /// <item><description>SUSE Linux Enterprise Server 11/12/15 and later</description></item>
-        /// <item><description>Windows Server 2012/2016/2019 and later
-        /// In each Alibaba Cloud region, you can have up to 10 activation codes for managed instances. Each activation code can be used to register up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
-        /// <para>On the <b>Elastic Compute Service (ECS) Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
+        /// <item><description>Window Server 2012/2016/2019 and later
+        /// In a single Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
+        /// <para>On the <b>ECS Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7847,8 +7847,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps.
-        /// The non-Alibaba Cloud server must run one of the following operating system versions and have Internet access to be registered as an Alibaba Cloud managed instance:</para>
+        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, operations management, and Alibaba Cloud DevOps.
+        /// The operating system of the non-Elastic Compute Service server must meet the following version requirements, and the server must have Internet access before it can be registered as an Alibaba Cloud managed instance.</para>
         /// <list type="bullet">
         /// <item><description>Alibaba Cloud Linux 2/3 and later</description></item>
         /// <item><description>CentOS 6/7/8 and later</description></item>
@@ -7858,9 +7858,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>OpenSUSE</description></item>
         /// <item><description>RedHat 5/6/7 and later</description></item>
         /// <item><description>SUSE Linux Enterprise Server 11/12/15 and later</description></item>
-        /// <item><description>Windows Server 2012/2016/2019 and later
-        /// In each Alibaba Cloud region, you can have up to 10 activation codes for managed instances. Each activation code can be used to register up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
-        /// <para>On the <b>Elastic Compute Service (ECS) Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
+        /// <item><description>Window Server 2012/2016/2019 and later
+        /// In a single Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
+        /// <para>On the <b>ECS Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7887,8 +7887,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps.
-        /// The non-Alibaba Cloud server must run one of the following operating system versions and have Internet access to be registered as an Alibaba Cloud managed instance:</para>
+        /// <para>After you use an activation code to register a non-Alibaba Cloud server as an Alibaba Cloud managed instance, you can use various online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, operations management, and Alibaba Cloud DevOps.
+        /// The operating system of the non-Elastic Compute Service server must meet the following version requirements, and the server must have Internet access before it can be registered as an Alibaba Cloud managed instance.</para>
         /// <list type="bullet">
         /// <item><description>Alibaba Cloud Linux 2/3 and later</description></item>
         /// <item><description>CentOS 6/7/8 and later</description></item>
@@ -7898,9 +7898,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>OpenSUSE</description></item>
         /// <item><description>RedHat 5/6/7 and later</description></item>
         /// <item><description>SUSE Linux Enterprise Server 11/12/15 and later</description></item>
-        /// <item><description>Windows Server 2012/2016/2019 and later
-        /// In each Alibaba Cloud region, you can have up to 10 activation codes for managed instances. Each activation code can be used to register up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
-        /// <para>On the <b>Elastic Compute Service (ECS) Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
+        /// <item><description>Window Server 2012/2016/2019 and later
+        /// In a single Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<remarks>
+        /// <para>On the <b>ECS Cloud Assistant</b> page, click the <b>Managed Instances</b> tab, and then click <b>Register New Instance</b> to view the usage data of activation codes.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -8389,10 +8389,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for each Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disk. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8507,10 +8507,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for each Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disk. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8625,10 +8625,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for each Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disk. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8655,10 +8655,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for each Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disk. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9015,18 +9015,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>You can specify the Timeout parameter to set the maximum timeout period for command execution on ECS instances. If the command times out, <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> forcefully terminates the command process by canceling the PID of the command.<list type="bullet">
-        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance becomes Failed.  </description></item>
+        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance changes to Failed.  </description></item>
         /// <item><description>For a scheduled execution: <list type="bullet">
         /// <item><description>The timeout period takes effect for each execution record. </description></item>
-        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record becomes Failed.  </description></item>
+        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record changes to Failed.  </description></item>
         /// <item><description>The timeout of a previous execution does not affect the next execution.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>In a region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// <item><description>You can specify the WorkingDir parameter to set the execution path of the command. For Linux instances, the default path is the home directory of the root user, which is <c>/root</c>. For Windows instances, the default path is the directory where the Cloud Assistant Agent process is located, such as <c>C:\\Windows\\System32</c>.</description></item>
-        /// <item><description>You can enable the custom parameter feature by specifying EnableParameter=true. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command (<a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>). For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> through the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
+        /// <item><description>You can specify EnableParameter=true to enable the custom parameter feature. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>. For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> by using the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9151,18 +9151,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>You can specify the Timeout parameter to set the maximum timeout period for command execution on ECS instances. If the command times out, <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> forcefully terminates the command process by canceling the PID of the command.<list type="bullet">
-        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance becomes Failed.  </description></item>
+        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance changes to Failed.  </description></item>
         /// <item><description>For a scheduled execution: <list type="bullet">
         /// <item><description>The timeout period takes effect for each execution record. </description></item>
-        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record becomes Failed.  </description></item>
+        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record changes to Failed.  </description></item>
         /// <item><description>The timeout of a previous execution does not affect the next execution.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>In a region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// <item><description>You can specify the WorkingDir parameter to set the execution path of the command. For Linux instances, the default path is the home directory of the root user, which is <c>/root</c>. For Windows instances, the default path is the directory where the Cloud Assistant Agent process is located, such as <c>C:\\Windows\\System32</c>.</description></item>
-        /// <item><description>You can enable the custom parameter feature by specifying EnableParameter=true. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command (<a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>). For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> through the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
+        /// <item><description>You can specify EnableParameter=true to enable the custom parameter feature. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>. For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> by using the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9287,18 +9287,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>You can specify the Timeout parameter to set the maximum timeout period for command execution on ECS instances. If the command times out, <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> forcefully terminates the command process by canceling the PID of the command.<list type="bullet">
-        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance becomes Failed.  </description></item>
+        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance changes to Failed.  </description></item>
         /// <item><description>For a scheduled execution: <list type="bullet">
         /// <item><description>The timeout period takes effect for each execution record. </description></item>
-        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record becomes Failed.  </description></item>
+        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record changes to Failed.  </description></item>
         /// <item><description>The timeout of a previous execution does not affect the next execution.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>In a region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// <item><description>You can specify the WorkingDir parameter to set the execution path of the command. For Linux instances, the default path is the home directory of the root user, which is <c>/root</c>. For Windows instances, the default path is the directory where the Cloud Assistant Agent process is located, such as <c>C:\\Windows\\System32</c>.</description></item>
-        /// <item><description>You can enable the custom parameter feature by specifying EnableParameter=true. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command (<a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>). For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> through the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
+        /// <item><description>You can specify EnableParameter=true to enable the custom parameter feature. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>. For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> by using the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9331,18 +9331,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>You can specify the Timeout parameter to set the maximum timeout period for command execution on ECS instances. If the command times out, <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> forcefully terminates the command process by canceling the PID of the command.<list type="bullet">
-        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance becomes Failed.  </description></item>
+        /// <item><description>For a one-time execution, after the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command on the specified ECS instance changes to Failed.  </description></item>
         /// <item><description>For a scheduled execution: <list type="bullet">
         /// <item><description>The timeout period takes effect for each execution record. </description></item>
-        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record becomes Failed.  </description></item>
+        /// <item><description>After a specific execution times out, the status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the execution record changes to Failed.  </description></item>
         /// <item><description>The timeout of a previous execution does not affect the next execution.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>In a region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// <item><description>You can specify the WorkingDir parameter to set the execution path of the command. For Linux instances, the default path is the home directory of the root user, which is <c>/root</c>. For Windows instances, the default path is the directory where the Cloud Assistant Agent process is located, such as <c>C:\\Windows\\System32</c>.</description></item>
-        /// <item><description>You can enable the custom parameter feature by specifying EnableParameter=true. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command (<a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>). For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> through the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
+        /// <item><description>You can specify EnableParameter=true to enable the custom parameter feature. When you set CommandContent, you can define custom parameters in the {{parameter}} format and pass in custom parameter key-value pairs when you run the command by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>. For example, if you create the command <c>echo {{name}}</c> and pass in the key-value pair <c>&lt;name, Jack&gt;</c> by using the Parameters parameter when you call InvokeCommand, the custom parameter is automatically replaced. A new command <c>echo Jack</c> is generated and run on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10123,14 +10123,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
-        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
-        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
-        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
-        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - Standard Edition, and elastic ephemeral disk - Premium Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you create a disk. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> on the Member Information page.</description></item>
+        /// <item><description>Creating a disk incurs resource fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>Default settings when you create a disk:<list type="bullet">
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. This means that <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
+        /// <item><description>When you create an enterprise SSD, if you do not specify a performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10285,14 +10285,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
-        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
-        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
-        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
-        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - Standard Edition, and elastic ephemeral disk - Premium Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you create a disk. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> on the Member Information page.</description></item>
+        /// <item><description>Creating a disk incurs resource fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>Default settings when you create a disk:<list type="bullet">
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. This means that <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
+        /// <item><description>When you create an enterprise SSD, if you do not specify a performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10447,14 +10447,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
-        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
-        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
-        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
-        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - Standard Edition, and elastic ephemeral disk - Premium Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you create a disk. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> on the Member Information page.</description></item>
+        /// <item><description>Creating a disk incurs resource fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>Default settings when you create a disk:<list type="bullet">
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. This means that <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
+        /// <item><description>When you create an enterprise SSD, if you do not specify a performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10481,14 +10481,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
-        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
-        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
-        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
-        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - Standard Edition, and elastic ephemeral disk - Premium Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you create a disk. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> on the Member Information page.</description></item>
+        /// <item><description>Creating a disk incurs resource fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>Default settings when you create a disk:<list type="bullet">
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. This means that <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
+        /// <item><description>When you create an enterprise SSD, if you do not specify a performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -11452,10 +11452,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
         /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
-        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to help the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
-        /// The following describes three methods to create a custom image by using this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
+        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
+        /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority by default.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
@@ -11609,10 +11609,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
         /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
-        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to help the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
-        /// The following describes three methods to create a custom image by using this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
+        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
+        /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority by default.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
@@ -11766,10 +11766,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
         /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
-        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to help the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
-        /// The following describes three methods to create a custom image by using this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
+        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
+        /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority by default.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
@@ -11815,10 +11815,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
         /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
-        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to help the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
-        /// The following describes three methods to create a custom image by using this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
+        /// <item><description>Configure the image detection parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
+        /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority by default.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
@@ -12571,7 +12571,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. We recommend that you use <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a>.
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.
         /// &lt;props=&quot;china&quot;&gt;
         /// <b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
@@ -12587,24 +12587,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description><para>Make sure that the total number of instances or the total number of vCPUs across all instance types does not exceed the quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</para>
         /// </description></item>
-        /// <item><description><para>Before you create a Virtual Private Cloud (VPC)-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
+        /// <item><description><para>Before you create a VPC-connected instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
         /// </description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>When you invoke this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your active coupon is used by default during payment.</description></item>
+        /// <item><description>When you call this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
+        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), active coupon are used by default during payment.</description></item>
         /// <item><description>If the instance memory is 512 MiB, you cannot use Windows Server images except through the half-year channel. If the instance memory is 4 GiB or more, you cannot use 32-bit operating system images.</description></item>
-        /// <item><description>Instances created by invoking this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, invoke <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
+        /// <item><description>Instances created by calling this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, call <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
         /// <para>In a single region, the total peak pay-by-bandwidth Internet bandwidth for a single Alibaba Cloud account is limited. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Recommendations</h3>
+        /// <h3>Suggestions</h3>
         /// <list type="bullet">
-        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
-        /// <item><description><b>Check active resources</b>: Invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
-        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not send confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and use Base64 encoding before you pass it in. Then, decrypt the data inside the instance.</description></item>
+        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
+        /// <item><description><b>Check active resources</b>: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
+        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and encode it in Base64 before you pass it in. Then, decrypt it inside the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12897,7 +12897,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. We recommend that you use <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a>.
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.
         /// &lt;props=&quot;china&quot;&gt;
         /// <b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
@@ -12913,24 +12913,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description><para>Make sure that the total number of instances or the total number of vCPUs across all instance types does not exceed the quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</para>
         /// </description></item>
-        /// <item><description><para>Before you create a Virtual Private Cloud (VPC)-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
+        /// <item><description><para>Before you create a VPC-connected instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
         /// </description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>When you invoke this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your active coupon is used by default during payment.</description></item>
+        /// <item><description>When you call this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
+        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), active coupon are used by default during payment.</description></item>
         /// <item><description>If the instance memory is 512 MiB, you cannot use Windows Server images except through the half-year channel. If the instance memory is 4 GiB or more, you cannot use 32-bit operating system images.</description></item>
-        /// <item><description>Instances created by invoking this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, invoke <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
+        /// <item><description>Instances created by calling this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, call <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
         /// <para>In a single region, the total peak pay-by-bandwidth Internet bandwidth for a single Alibaba Cloud account is limited. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Recommendations</h3>
+        /// <h3>Suggestions</h3>
         /// <list type="bullet">
-        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
-        /// <item><description><b>Check active resources</b>: Invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
-        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not send confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and use Base64 encoding before you pass it in. Then, decrypt the data inside the instance.</description></item>
+        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
+        /// <item><description><b>Check active resources</b>: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
+        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and encode it in Base64 before you pass it in. Then, decrypt it inside the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13223,7 +13223,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. We recommend that you use <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a>.
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.
         /// &lt;props=&quot;china&quot;&gt;
         /// <b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
@@ -13239,24 +13239,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description><para>Make sure that the total number of instances or the total number of vCPUs across all instance types does not exceed the quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</para>
         /// </description></item>
-        /// <item><description><para>Before you create a Virtual Private Cloud (VPC)-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
+        /// <item><description><para>Before you create a VPC-connected instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
         /// </description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>When you invoke this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your active coupon is used by default during payment.</description></item>
+        /// <item><description>When you call this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
+        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), active coupon are used by default during payment.</description></item>
         /// <item><description>If the instance memory is 512 MiB, you cannot use Windows Server images except through the half-year channel. If the instance memory is 4 GiB or more, you cannot use 32-bit operating system images.</description></item>
-        /// <item><description>Instances created by invoking this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, invoke <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
+        /// <item><description>Instances created by calling this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, call <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
         /// <para>In a single region, the total peak pay-by-bandwidth Internet bandwidth for a single Alibaba Cloud account is limited. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Recommendations</h3>
+        /// <h3>Suggestions</h3>
         /// <list type="bullet">
-        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
-        /// <item><description><b>Check active resources</b>: Invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
-        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not send confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and use Base64 encoding before you pass it in. Then, decrypt the data inside the instance.</description></item>
+        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
+        /// <item><description><b>Check active resources</b>: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
+        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and encode it in Base64 before you pass it in. Then, decrypt it inside the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13281,7 +13281,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. We recommend that you use <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a>.
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.
         /// &lt;props=&quot;china&quot;&gt;
         /// <b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
@@ -13297,24 +13297,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description><para>Make sure that the total number of instances or the total number of vCPUs across all instance types does not exceed the quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</para>
         /// </description></item>
-        /// <item><description><para>Before you create a Virtual Private Cloud (VPC)-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
+        /// <item><description><para>Before you create a VPC-connected instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</para>
         /// </description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>When you invoke this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your active coupon is used by default during payment.</description></item>
+        /// <item><description>When you call this operation, the system does not send notifications (including text messages, emails, and internal messages) about instance creation.</description></item>
+        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), active coupon are used by default during payment.</description></item>
         /// <item><description>If the instance memory is 512 MiB, you cannot use Windows Server images except through the half-year channel. If the instance memory is 4 GiB or more, you cannot use 32-bit operating system images.</description></item>
-        /// <item><description>Instances created by invoking this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, invoke <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then invoke <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
+        /// <item><description>Instances created by calling this operation are not assigned Internet IP addresses. If the public bandwidth is greater than 0, you can call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address. If the public bandwidth is 0, call <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> to adjust the bandwidth and then call <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> to assign an Internet IP address.<remarks>
         /// <para>In a single region, the total peak pay-by-bandwidth Internet bandwidth for a single Alibaba Cloud account is limited. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Recommendations</h3>
+        /// <h3>Suggestions</h3>
         /// <list type="bullet">
-        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
-        /// <item><description><b>Check active resources</b>: Invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
-        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not send confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and use Base64 encoding before you pass it in. Then, decrypt the data inside the instance.</description></item>
+        /// <item><description><b>Instance type selection</b>: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
+        /// <item><description><b>Check active resources</b>: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query active resources in a specific region or zone.</description></item>
+        /// <item><description><b>User data</b>: If the instance meets the requirements for <a href="https://help.aliyun.com/document_detail/49121.html">instance user data</a>, you can pass in UserData. The <c>UserData</c> data is not encrypted when the API request is sent. Do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in such information, encrypt it and encode it in Base64 before you pass it in. Then, decrypt it inside the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13530,13 +13530,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template by calling <c>CreateLaunchTemplateVersion</c>, with version numbers incrementing sequentially from 1. If you do not specify a template version number when creating an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
-        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when you create the instance.
-        /// Before you begin:</para>
+        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template (<c>CreateLaunchTemplateVersion</c>), with version numbers incrementing sequentially from 1. If you do not specify a template version when creating instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
+        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when creating instances.
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Each account can create up to 30 launch templates per region, and each template can have up to 30 versions.</description></item>
-        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of parameter values. Parameter values are validated only when you actually create an instance.</description></item>
-        /// <item><description>If a configuration is set in the launch template, it cannot be filtered out when you create an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value in <c>RunInstances</c> is left empty, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
+        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of the parameter values. The validity of parameter values is verified only when you actually create instances.</description></item>
+        /// <item><description>If a specific configuration is set in the launch template, it cannot be filtered out when you create instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value is left empty in <c>RunInstances</c>, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13804,13 +13804,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template by calling <c>CreateLaunchTemplateVersion</c>, with version numbers incrementing sequentially from 1. If you do not specify a template version number when creating an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
-        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when you create the instance.
-        /// Before you begin:</para>
+        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template (<c>CreateLaunchTemplateVersion</c>), with version numbers incrementing sequentially from 1. If you do not specify a template version when creating instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
+        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when creating instances.
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Each account can create up to 30 launch templates per region, and each template can have up to 30 versions.</description></item>
-        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of parameter values. Parameter values are validated only when you actually create an instance.</description></item>
-        /// <item><description>If a configuration is set in the launch template, it cannot be filtered out when you create an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value in <c>RunInstances</c> is left empty, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
+        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of the parameter values. The validity of parameter values is verified only when you actually create instances.</description></item>
+        /// <item><description>If a specific configuration is set in the launch template, it cannot be filtered out when you create instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value is left empty in <c>RunInstances</c>, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14078,13 +14078,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template by calling <c>CreateLaunchTemplateVersion</c>, with version numbers incrementing sequentially from 1. If you do not specify a template version number when creating an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
-        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when you create the instance.
-        /// Before you begin:</para>
+        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template (<c>CreateLaunchTemplateVersion</c>), with version numbers incrementing sequentially from 1. If you do not specify a template version when creating instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
+        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when creating instances.
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Each account can create up to 30 launch templates per region, and each template can have up to 30 versions.</description></item>
-        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of parameter values. Parameter values are validated only when you actually create an instance.</description></item>
-        /// <item><description>If a configuration is set in the launch template, it cannot be filtered out when you create an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value in <c>RunInstances</c> is left empty, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
+        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of the parameter values. The validity of parameter values is verified only when you actually create instances.</description></item>
+        /// <item><description>If a specific configuration is set in the launch template, it cannot be filtered out when you create instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value is left empty in <c>RunInstances</c>, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14108,13 +14108,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template by calling <c>CreateLaunchTemplateVersion</c>, with version numbers incrementing sequentially from 1. If you do not specify a template version number when creating an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
-        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when you create the instance.
-        /// Before you begin:</para>
+        /// <para>After you call CreateLaunchTemplate to create a template, a default version with version number 1 is automatically generated. You can then create multiple versions based on this template (<c>CreateLaunchTemplateVersion</c>), with version numbers incrementing sequentially from 1. If you do not specify a template version when creating instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), the default version is used.
+        /// A launch template version contains the configurations used to create instances, such as the region, image ID, instance type, security group ID, and public bandwidth. If a specific instance configuration is not specified in the version, you must specify it when creating instances.
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Each account can create up to 30 launch templates per region, and each template can have up to 30 versions.</description></item>
-        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of parameter values. Parameter values are validated only when you actually create an instance.</description></item>
-        /// <item><description>If a configuration is set in the launch template, it cannot be filtered out when you create an instance (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value in <c>RunInstances</c> is left empty, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
+        /// <item><description>Most parameters in a launch template are optional. When you create a template, Alibaba Cloud does not verify the existence or validity of the parameter values. The validity of parameter values is verified only when you actually create instances.</description></item>
+        /// <item><description>If a specific configuration is set in the launch template, it cannot be filtered out when you create instances (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>). For example, if the template sets <c>HostName=LocalHost</c> and the <c>HostName</c> value is left empty in <c>RunInstances</c>, the hostname of the instance is still <c>LocalHost</c>. To override the <c>HostName=LocalHost</c> configuration, set <c>HostName=MyHost</c> or another value in <c>RunInstances</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17647,20 +17647,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system events in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
-        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
-        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
-        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatic switchover to the Scheduled state.</description></item>
+        /// <item><description>Executed: Without manual intervention, the simulated system event automatically enters the Executed state at the specified time (NotBefore).</description></item>
+        /// <item><description>Canceled: After you invoke <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event enters the Canceled state.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time to change the event to the Avoided state.
+        /// Take note of the following items when you set TriggerRealOps to true:</description></item>
         /// <item><description><remarks>
-        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// <para>Warning: The system will actually stop or release the instance, which may cause data loss. Test with caution or use instances that do not run workloads.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
-        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The execution time of the event is automatically generated by the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17745,20 +17745,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system events in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
-        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
-        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
-        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatic switchover to the Scheduled state.</description></item>
+        /// <item><description>Executed: Without manual intervention, the simulated system event automatically enters the Executed state at the specified time (NotBefore).</description></item>
+        /// <item><description>Canceled: After you invoke <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event enters the Canceled state.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time to change the event to the Avoided state.
+        /// Take note of the following items when you set TriggerRealOps to true:</description></item>
         /// <item><description><remarks>
-        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// <para>Warning: The system will actually stop or release the instance, which may cause data loss. Test with caution or use instances that do not run workloads.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
-        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The execution time of the event is automatically generated by the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17843,20 +17843,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system events in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
-        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
-        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
-        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatic switchover to the Scheduled state.</description></item>
+        /// <item><description>Executed: Without manual intervention, the simulated system event automatically enters the Executed state at the specified time (NotBefore).</description></item>
+        /// <item><description>Canceled: After you invoke <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event enters the Canceled state.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time to change the event to the Avoided state.
+        /// Take note of the following items when you set TriggerRealOps to true:</description></item>
         /// <item><description><remarks>
-        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// <para>Warning: The system will actually stop or release the instance, which may cause data loss. Test with caution or use instances that do not run workloads.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
-        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The execution time of the event is automatically generated by the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17881,20 +17881,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system events in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
-        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
-        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
-        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatic switchover to the Scheduled state.</description></item>
+        /// <item><description>Executed: Without manual intervention, the simulated system event automatically enters the Executed state at the specified time (NotBefore).</description></item>
+        /// <item><description>Canceled: After you invoke <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event enters the Canceled state.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time to change the event to the Avoided state.
+        /// Take note of the following items when you set TriggerRealOps to true:</description></item>
         /// <item><description><remarks>
-        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// <para>Warning: The system will actually stop or release the instance, which may cause data loss. Test with caution or use instances that do not run workloads.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
-        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The execution time of the event is automatically generated by the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17918,30 +17918,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
+        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation. Both manual snapshots and automatic snapshots are supported. The three instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When creating a snapshot, note the following:</description></item>
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
-        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
-        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be briefly degraded.</description></item>
+        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
+        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18047,30 +18047,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
+        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation. Both manual snapshots and automatic snapshots are supported. The three instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When creating a snapshot, note the following:</description></item>
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
-        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
-        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be briefly degraded.</description></item>
+        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
+        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18176,30 +18176,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
+        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation. Both manual snapshots and automatic snapshots are supported. The three instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When creating a snapshot, note the following:</description></item>
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
-        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
-        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be briefly degraded.</description></item>
+        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
+        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18225,30 +18225,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
+        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation. Both manual snapshots and automatic snapshots are supported. The three instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When creating a snapshot, note the following:</description></item>
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
-        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
-        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be briefly degraded.</description></item>
+        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
+        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18269,27 +18269,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
-        /// When creating a snapshot consistency group, note the following:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
-        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
-        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
+        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total snapshot size of up to 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has disks with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude those disks.
+        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18392,27 +18392,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
-        /// When creating a snapshot consistency group, note the following:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
-        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
-        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
+        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total snapshot size of up to 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has disks with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude those disks.
+        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18515,27 +18515,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
-        /// When creating a snapshot consistency group, note the following:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
-        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
-        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
+        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total snapshot size of up to 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has disks with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude those disks.
+        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18554,27 +18554,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
-        /// When creating a snapshot consistency group, note the following:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
-        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
-        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
+        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total snapshot size of up to 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has disks with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude those disks.
+        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20609,7 +20609,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Assistant command. You cannot delete a command that is being executed.</para>
+        /// <para>Deletes a Cloud Assistant command by specifying the RegionId and CommandId parameters. A command that is being executed cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20675,7 +20675,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Assistant command. You cannot delete a command that is being executed.</para>
+        /// <para>Deletes a Cloud Assistant command by specifying the RegionId and CommandId parameters. A command that is being executed cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20741,7 +20741,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Assistant command. You cannot delete a command that is being executed.</para>
+        /// <para>Deletes a Cloud Assistant command by specifying the RegionId and CommandId parameters. A command that is being executed cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20759,7 +20759,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Assistant command. You cannot delete a command that is being executed.</para>
+        /// <para>Deletes a Cloud Assistant command by specifying the RegionId and CommandId parameters. A command that is being executed cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27141,7 +27141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeregisterManagedInstance to unregister a managed instance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
+        /// <para>Unregisters a managed instance by calling DeregisterManagedInstance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27211,7 +27211,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeregisterManagedInstance to unregister a managed instance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
+        /// <para>Unregisters a managed instance by calling DeregisterManagedInstance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27281,7 +27281,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeregisterManagedInstance to unregister a managed instance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
+        /// <para>Unregisters a managed instance by calling DeregisterManagedInstance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27299,7 +27299,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeregisterManagedInstance to unregister a managed instance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
+        /// <para>Unregisters a managed instance by calling DeregisterManagedInstance. After the instance is unregistered, you can no longer use Cloud Assistant to send commands or files to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27705,13 +27705,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the activation codes that you have created and the usage of the activation codes.</para>
+        /// <para>Queries the activation codes that have been created and their usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use one of the following methods to view the returned data:</para>
+        /// <para>You can use one of the following methods to view the response:</para>
         /// <list type="bullet">
         /// <item><description>Method 1: When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response can be used to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Method 2: Use <c>PageSize</c> to specify the number of entries per page and <c>PageNumber</c> to specify the page number. You can use only one of the two methods. If you set <c>MaxResults</c> or <c>NextToken</c>, the <c>PageSize</c> and <c>PageNumber</c> request parameters do not take effect, and <c>TotalCount</c> in the response is invalid.</description></item>
@@ -27809,13 +27809,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the activation codes that you have created and the usage of the activation codes.</para>
+        /// <para>Queries the activation codes that have been created and their usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use one of the following methods to view the returned data:</para>
+        /// <para>You can use one of the following methods to view the response:</para>
         /// <list type="bullet">
         /// <item><description>Method 1: When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response can be used to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Method 2: Use <c>PageSize</c> to specify the number of entries per page and <c>PageNumber</c> to specify the page number. You can use only one of the two methods. If you set <c>MaxResults</c> or <c>NextToken</c>, the <c>PageSize</c> and <c>PageNumber</c> request parameters do not take effect, and <c>TotalCount</c> in the response is invalid.</description></item>
@@ -27913,13 +27913,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the activation codes that you have created and the usage of the activation codes.</para>
+        /// <para>Queries the activation codes that have been created and their usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use one of the following methods to view the returned data:</para>
+        /// <para>You can use one of the following methods to view the response:</para>
         /// <list type="bullet">
         /// <item><description>Method 1: When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response can be used to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Method 2: Use <c>PageSize</c> to specify the number of entries per page and <c>PageNumber</c> to specify the page number. You can use only one of the two methods. If you set <c>MaxResults</c> or <c>NextToken</c>, the <c>PageSize</c> and <c>PageNumber</c> request parameters do not take effect, and <c>TotalCount</c> in the response is invalid.</description></item>
@@ -27941,13 +27941,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the activation codes that you have created and the usage of the activation codes.</para>
+        /// <para>Queries the activation codes that have been created and their usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can use one of the following methods to view the returned data:</para>
+        /// <para>You can use one of the following methods to view the response:</para>
         /// <list type="bullet">
         /// <item><description>Method 1: When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response can be used to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Method 2: Use <c>PageSize</c> to specify the number of entries per page and <c>PageNumber</c> to specify the page number. You can use only one of the two methods. If you set <c>MaxResults</c> or <c>NextToken</c>, the <c>PageSize</c> and <c>PageNumber</c> request parameters do not take effect, and <c>TotalCount</c> in the response is invalid.</description></item>
@@ -27969,7 +27969,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeAutoProvisioningGroupHistory to query the scheduling node information of an auto provisioning group.</para>
+        /// <para>Invokes the DescribeAutoProvisioningGroupHistory operation to query the scheduling node information of an auto provisioning group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28047,7 +28047,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeAutoProvisioningGroupHistory to query the scheduling node information of an auto provisioning group.</para>
+        /// <para>Invokes the DescribeAutoProvisioningGroupHistory operation to query the scheduling node information of an auto provisioning group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28125,7 +28125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeAutoProvisioningGroupHistory to query the scheduling node information of an auto provisioning group.</para>
+        /// <para>Invokes the DescribeAutoProvisioningGroupHistory operation to query the scheduling node information of an auto provisioning group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28143,7 +28143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeAutoProvisioningGroupHistory to query the scheduling node information of an auto provisioning group.</para>
+        /// <para>Invokes the DescribeAutoProvisioningGroupHistory operation to query the scheduling node information of an auto provisioning group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29977,7 +29977,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of used instances.</para>
+        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of consumed instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30075,7 +30075,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of used instances.</para>
+        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of consumed instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30173,7 +30173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of used instances.</para>
+        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of consumed instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30191,7 +30191,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of used instances.</para>
+        /// <para>Queries the details of one or more capacity reservations, such as the status, effective and expiration time, private pool mode, and number of consumed instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30585,15 +30585,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the response also includes the total number of command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
+        /// <para>Calls DescribeCloudAssistantStatus to query whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the operation also returns the total number of Cloud Assistant command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation paged query the Cloud Assistant status of an instance. Run commands or send files only when CloudAssistantStatus is true, especially for newly created instances.</description></item>
-        /// <item><description>When you call this operation paged query the first page of results, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the response can be used paged query subsequent pages. When you query subsequent pages, set <c>NextToken</c> to the value returned in the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>Call this operation to query the Cloud Assistant status of an instance. When CloudAssistantStatus is true, run commands or send files. This is especially important for newly created instances.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30680,15 +30680,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the response also includes the total number of command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
+        /// <para>Calls DescribeCloudAssistantStatus to query whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the operation also returns the total number of Cloud Assistant command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation paged query the Cloud Assistant status of an instance. Run commands or send files only when CloudAssistantStatus is true, especially for newly created instances.</description></item>
-        /// <item><description>When you call this operation paged query the first page of results, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the response can be used paged query subsequent pages. When you query subsequent pages, set <c>NextToken</c> to the value returned in the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>Call this operation to query the Cloud Assistant status of an instance. When CloudAssistantStatus is true, run commands or send files. This is especially important for newly created instances.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30775,15 +30775,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the response also includes the total number of command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
+        /// <para>Calls DescribeCloudAssistantStatus to query whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the operation also returns the total number of Cloud Assistant command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation paged query the Cloud Assistant status of an instance. Run commands or send files only when CloudAssistantStatus is true, especially for newly created instances.</description></item>
-        /// <item><description>When you call this operation paged query the first page of results, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the response can be used paged query subsequent pages. When you query subsequent pages, set <c>NextToken</c> to the value returned in the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>Call this operation to query the Cloud Assistant status of an instance. When CloudAssistantStatus is true, run commands or send files. This is especially important for newly created instances.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30802,15 +30802,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the response also includes the total number of command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
+        /// <para>Calls DescribeCloudAssistantStatus to query whether Cloud Assistant Agent is installed on one or more instances. If Cloud Assistant is installed, the operation also returns the total number of Cloud Assistant command executions, the number of ongoing executions, and the time of the most recent command execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation paged query the Cloud Assistant status of an instance. Run commands or send files only when CloudAssistantStatus is true, especially for newly created instances.</description></item>
-        /// <item><description>When you call this operation paged query the first page of results, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the response can be used paged query subsequent pages. When you query subsequent pages, set <c>NextToken</c> to the value returned in the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>Call this operation to query the Cloud Assistant status of an instance. When CloudAssistantStatus is true, run commands or send files. This is especially important for newly created instances.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31012,9 +31012,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>If you specify only the <c>Action</c> and <c>RegionId</c> parameters without specifying other request parameters, all active commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
-        /// <item><description>When querying the first page of results with a paged query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.
-        /// Settings: When performing paging, use <c>NextToken</c> and <c>MaxResults</c> for optimal results.</description></item>
+        /// <item><description>If you specify only the Action and RegionId parameters without other request parameters, all available commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31136,9 +31135,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>If you specify only the <c>Action</c> and <c>RegionId</c> parameters without specifying other request parameters, all active commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
-        /// <item><description>When querying the first page of results with a paged query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.
-        /// Settings: When performing paging, use <c>NextToken</c> and <c>MaxResults</c> for optimal results.</description></item>
+        /// <item><description>If you specify only the Action and RegionId parameters without other request parameters, all available commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31260,9 +31258,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>If you specify only the <c>Action</c> and <c>RegionId</c> parameters without specifying other request parameters, all active commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
-        /// <item><description>When querying the first page of results with a paged query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.
-        /// Settings: When performing paging, use <c>NextToken</c> and <c>MaxResults</c> for optimal results.</description></item>
+        /// <item><description>If you specify only the Action and RegionId parameters without other request parameters, all available commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31288,9 +31285,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>If you specify only the <c>Action</c> and <c>RegionId</c> parameters without specifying other request parameters, all active commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
-        /// <item><description>When querying the first page of results with a paged query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.
-        /// Settings: When performing paging, use <c>NextToken</c> and <c>MaxResults</c> for optimal results.</description></item>
+        /// <item><description>If you specify only the Action and RegionId parameters without other request parameters, all available commands (<c>CommandId</c>) that you manually created are queried by default.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32925,7 +32921,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a resource diagnostic report.</para>
+        /// <para>Queries the details of a resource diagnostic report by calling DescribeDiagnosticReportAttributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32971,7 +32967,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a resource diagnostic report.</para>
+        /// <para>Queries the details of a resource diagnostic report by calling DescribeDiagnosticReportAttributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33017,7 +33013,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a resource diagnostic report.</para>
+        /// <para>Queries the details of a resource diagnostic report by calling DescribeDiagnosticReportAttributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33035,7 +33031,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a resource diagnostic report.</para>
+        /// <para>Queries the details of a resource diagnostic report by calling DescribeDiagnosticReportAttributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33759,10 +33755,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. The parameters have AND relationships.</description></item>
-        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. If DiskIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
-        /// <item><description>Token-based paged query is supported. Set NextToken to the pagination token. The value is the NextToken value returned in the previous invoke of DescribeDisks. Then, use MaxResults to settings the maximum number of entries per page.</description></item>
-        /// <item><description>A disk with the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
+        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. These parameters have a logical AND relationship.</description></item>
+        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. However, if DiskIds is set to an empty array, the filter is considered valid and an empty result is returned.</description></item>
+        /// <item><description>Token-based paged query is supported. Set the NextToken parameter to the NextToken value returned in the previous call of DescribeDisks, and use MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
         /// When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</description></item>
         /// </list>
         /// </description>
@@ -33944,10 +33940,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. The parameters have AND relationships.</description></item>
-        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. If DiskIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
-        /// <item><description>Token-based paged query is supported. Set NextToken to the pagination token. The value is the NextToken value returned in the previous invoke of DescribeDisks. Then, use MaxResults to settings the maximum number of entries per page.</description></item>
-        /// <item><description>A disk with the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
+        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. These parameters have a logical AND relationship.</description></item>
+        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. However, if DiskIds is set to an empty array, the filter is considered valid and an empty result is returned.</description></item>
+        /// <item><description>Token-based paged query is supported. Set the NextToken parameter to the NextToken value returned in the previous call of DescribeDisks, and use MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
         /// When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</description></item>
         /// </list>
         /// </description>
@@ -34129,10 +34125,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. The parameters have AND relationships.</description></item>
-        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. If DiskIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
-        /// <item><description>Token-based paged query is supported. Set NextToken to the pagination token. The value is the NextToken value returned in the previous invoke of DescribeDisks. Then, use MaxResults to settings the maximum number of entries per page.</description></item>
-        /// <item><description>A disk with the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
+        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. These parameters have a logical AND relationship.</description></item>
+        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. However, if DiskIds is set to an empty array, the filter is considered valid and an empty result is returned.</description></item>
+        /// <item><description>Token-based paged query is supported. Set the NextToken parameter to the NextToken value returned in the previous call of DescribeDisks, and use MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
         /// When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</description></item>
         /// </list>
         /// </description>
@@ -34158,10 +34154,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. The parameters have AND relationships.</description></item>
-        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. If DiskIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
-        /// <item><description>Token-based paged query is supported. Set NextToken to the pagination token. The value is the NextToken value returned in the previous invoke of DescribeDisks. Then, use MaxResults to settings the maximum number of entries per page.</description></item>
-        /// <item><description>A disk with the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
+        /// <item><description>The request parameters RegionId, ZoneId, DiskIds, and InstanceId are filters. These parameters have a logical AND relationship.</description></item>
+        /// <item><description>The DiskIds request parameter is a JSON format array. If DiskIds is not specified, the filter does not take effect. However, if DiskIds is set to an empty array, the filter is considered valid and an empty result is returned.</description></item>
+        /// <item><description>Token-based paged query is supported. Set the NextToken parameter to the NextToken value returned in the previous call of DescribeDisks, and use MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can check the Attachment list in the response to view all attachment information of the disk.
         /// When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</description></item>
         /// </list>
         /// </description>
@@ -35281,7 +35277,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an elasticity assurance service, such as the status, matching mode, effective method, expiration time, and number of used instances.</para>
+        /// <para>Queries the details of an elasticity assurance. For example, you can query the status, match mode, effective mode, expiration time, and number of used instances of an elasticity assurance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35383,7 +35379,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an elasticity assurance service, such as the status, matching mode, effective method, expiration time, and number of used instances.</para>
+        /// <para>Queries the details of an elasticity assurance. For example, you can query the status, match mode, effective mode, expiration time, and number of used instances of an elasticity assurance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35485,7 +35481,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an elasticity assurance service, such as the status, matching mode, effective method, expiration time, and number of used instances.</para>
+        /// <para>Queries the details of an elasticity assurance. For example, you can query the status, match mode, effective mode, expiration time, and number of used instances of an elasticity assurance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35503,7 +35499,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an elasticity assurance service, such as the status, matching mode, effective method, expiration time, and number of used instances.</para>
+        /// <para>Queries the details of an elasticity assurance. For example, you can query the status, match mode, effective mode, expiration time, and number of used instances of an elasticity assurance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35521,16 +35517,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic information of a secondary ENI within a specified time period.</para>
+        /// <para>Queries the traffic information of a secondary ENI within a specified time range by calling DescribeEniMonitorData.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the internal network inbound and outbound traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, the information cannot be obtained when the instance is in the Stopped state or when the secondary ENI is not attached to an instance and is in the Available state. Take note of the following items when you call this operation: </para>
+        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the inbound and outbound internal network traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, if the instance is in the Stopped state or the secondary ENI is not attached to an instance and is in the Available state, the corresponding information cannot be obtained. When you call this operation, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400, which means the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only within the last 30 days. The value of <c>StartTime</c> cannot be more than 30 days before the current time.</description></item>
+        /// <item><description>A maximum of 400 data entries are returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring information only within the last 30 days. The <c>StartTime</c> parameter that you specify cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35609,16 +35605,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic information of a secondary ENI within a specified time period.</para>
+        /// <para>Queries the traffic information of a secondary ENI within a specified time range by calling DescribeEniMonitorData.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the internal network inbound and outbound traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, the information cannot be obtained when the instance is in the Stopped state or when the secondary ENI is not attached to an instance and is in the Available state. Take note of the following items when you call this operation: </para>
+        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the inbound and outbound internal network traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, if the instance is in the Stopped state or the secondary ENI is not attached to an instance and is in the Available state, the corresponding information cannot be obtained. When you call this operation, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400, which means the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only within the last 30 days. The value of <c>StartTime</c> cannot be more than 30 days before the current time.</description></item>
+        /// <item><description>A maximum of 400 data entries are returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring information only within the last 30 days. The <c>StartTime</c> parameter that you specify cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35697,16 +35693,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic information of a secondary ENI within a specified time period.</para>
+        /// <para>Queries the traffic information of a secondary ENI within a specified time range by calling DescribeEniMonitorData.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the internal network inbound and outbound traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, the information cannot be obtained when the instance is in the Stopped state or when the secondary ENI is not attached to an instance and is in the Available state. Take note of the following items when you call this operation: </para>
+        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the inbound and outbound internal network traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, if the instance is in the Stopped state or the secondary ENI is not attached to an instance and is in the Available state, the corresponding information cannot be obtained. When you call this operation, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400, which means the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only within the last 30 days. The value of <c>StartTime</c> cannot be more than 30 days before the current time.</description></item>
+        /// <item><description>A maximum of 400 data entries are returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring information only within the last 30 days. The <c>StartTime</c> parameter that you specify cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35725,16 +35721,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic information of a secondary ENI within a specified time period.</para>
+        /// <para>Queries the traffic information of a secondary ENI within a specified time range by calling DescribeEniMonitorData.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the internal network inbound and outbound traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, the information cannot be obtained when the instance is in the Stopped state or when the secondary ENI is not attached to an instance and is in the Available state. Take note of the following items when you call this operation: </para>
+        /// <para>The traffic information that you can query about a secondary ENI includes the number of packets sent and received by the secondary ENI, the inbound and outbound internal network traffic, and the number of packets dropped by the secondary ENI. If some information is missing from the response, the system may have failed to obtain the corresponding information. For example, if the instance is in the Stopped state or the secondary ENI is not attached to an instance and is in the Available state, the corresponding information cannot be obtained. When you call this operation, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400, which means the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only within the last 30 days. The value of <c>StartTime</c> cannot be more than 30 days before the current time.</description></item>
+        /// <item><description>A maximum of 400 data entries are returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the value of the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring information only within the last 30 days. The <c>StartTime</c> parameter that you specify cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36358,7 +36354,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page for a paged query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36469,7 +36465,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page for a paged query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36580,7 +36576,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page for a paged query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36603,7 +36599,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned in the previous call to DescribeImageComponents, and set <c>MaxResults</c> to specify the maximum number of entries per page for a paged query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36621,13 +36617,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest available custom image in a specified image family.</para>
+        /// <para>Queries the latest available image in a specified image family.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If no available images exist in the specified image family, the response is empty.</para>
+        /// <para>If no available image exists in the specified image family, the response is empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36689,13 +36685,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest available custom image in a specified image family.</para>
+        /// <para>Queries the latest available image in a specified image family.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If no available images exist in the specified image family, the response is empty.</para>
+        /// <para>If no available image exists in the specified image family, the response is empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36757,13 +36753,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest available custom image in a specified image family.</para>
+        /// <para>Queries the latest available image in a specified image family.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If no available images exist in the specified image family, the response is empty.</para>
+        /// <para>If no available image exists in the specified image family, the response is empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36781,13 +36777,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest available custom image in a specified image family.</para>
+        /// <para>Queries the latest available image in a specified image family.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If no available images exist in the specified image family, the response is empty.</para>
+        /// <para>If no available image exists in the specified image family, the response is empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36812,9 +36808,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The specified image template ID (ImagePipelineId) cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
-        /// <item><description>The image template ID (ImagePipelineId) and the build task ID (ExecutionId) cannot both be empty.</description></item>
-        /// <item><description>You can set NextToken to the value of NextToken returned in the previous call to DescribeImagePipelineExecutions, and set MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>The specified image template ID ImagePipelineId cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
+        /// <item><description>The image template ID ImagePipelineId and the build task ID ExecutionId cannot both be empty.</description></item>
+        /// <item><description>You can set the NextToken query token, whose value is the NextToken parameter value returned by the previous call to <c>DescribeImagePipelineExecutions</c>. Then, set MaxResults to specify the maximum number of entries per page for the query.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36908,9 +36904,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The specified image template ID (ImagePipelineId) cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
-        /// <item><description>The image template ID (ImagePipelineId) and the build task ID (ExecutionId) cannot both be empty.</description></item>
-        /// <item><description>You can set NextToken to the value of NextToken returned in the previous call to DescribeImagePipelineExecutions, and set MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>The specified image template ID ImagePipelineId cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
+        /// <item><description>The image template ID ImagePipelineId and the build task ID ExecutionId cannot both be empty.</description></item>
+        /// <item><description>You can set the NextToken query token, whose value is the NextToken parameter value returned by the previous call to <c>DescribeImagePipelineExecutions</c>. Then, set MaxResults to specify the maximum number of entries per page for the query.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37004,9 +37000,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The specified image template ID (ImagePipelineId) cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
-        /// <item><description>The image template ID (ImagePipelineId) and the build task ID (ExecutionId) cannot both be empty.</description></item>
-        /// <item><description>You can set NextToken to the value of NextToken returned in the previous call to DescribeImagePipelineExecutions, and set MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>The specified image template ID ImagePipelineId cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
+        /// <item><description>The image template ID ImagePipelineId and the build task ID ExecutionId cannot both be empty.</description></item>
+        /// <item><description>You can set the NextToken query token, whose value is the NextToken parameter value returned by the previous call to <c>DescribeImagePipelineExecutions</c>. Then, set MaxResults to specify the maximum number of entries per page for the query.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37032,9 +37028,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The specified image template ID (ImagePipelineId) cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
-        /// <item><description>The image template ID (ImagePipelineId) and the build task ID (ExecutionId) cannot both be empty.</description></item>
-        /// <item><description>You can set NextToken to the value of NextToken returned in the previous call to DescribeImagePipelineExecutions, and set MaxResults to specify the maximum number of entries per page.</description></item>
+        /// <item><description>The specified image template ID ImagePipelineId cannot be a deleted image template. Deleted image templates also delete the corresponding build tasks.</description></item>
+        /// <item><description>The image template ID ImagePipelineId and the build task ID ExecutionId cannot both be empty.</description></item>
+        /// <item><description>You can set the NextToken query token, whose value is the NextToken parameter value returned by the previous call to <c>DescribeImagePipelineExecutions</c>. Then, set MaxResults to specify the maximum number of entries per page for the query.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37058,7 +37054,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned by the previous call to <c>DescribeImagePipelines</c>, and use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to a pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to <c>DescribeImagePipelines</c>. Then, use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37153,7 +37149,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned by the previous call to <c>DescribeImagePipelines</c>, and use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to a pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to <c>DescribeImagePipelines</c>. Then, use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37248,7 +37244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned by the previous call to <c>DescribeImagePipelines</c>, and use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to a pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to <c>DescribeImagePipelines</c>. Then, use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37271,7 +37267,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>NextToken</c> to the value of <c>NextToken</c> returned by the previous call to <c>DescribeImagePipelines</c>, and use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
+        /// <para>You can set <c>NextToken</c> to a pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to <c>DescribeImagePipelines</c>. Then, use <c>MaxResults</c> to specify the maximum number of entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37642,7 +37638,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
         /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
         /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authorization rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
+        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authentication rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37802,7 +37798,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
         /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
         /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authorization rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
+        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authentication rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37962,7 +37958,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
         /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
         /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authorization rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
+        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authentication rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37990,7 +37986,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
         /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
         /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authorization rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
+        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the RAM authentication rules can be ignored for this request. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39393,18 +39389,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information of an ECS instance. Queryable metrics include vCPU usage, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth.</para>
+        /// <para>Queries the monitoring data of an ECS instance. The metrics that you can query include the vCPU utilization, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth of the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400, which means the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only for the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
-        /// <item><description>When some content is missing from the returned information, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
-        /// <item><description>This operation cannot retrieve basic CPU monitoring information for ECS Bare Metal instances. Install the CloudMonitor agent to obtain CPU monitoring information. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime – StartTime)/Period</c> is less than or equal to 400. In other words, the value of the <c>TotalCount</c> response parameter cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring data from the last 30 days. The <c>StartTime</c> parameter value cannot be more than 30 days before the current date.</description></item>
+        /// <item><description>If some content is missing from the response, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
+        /// <item><description>This operation cannot retrieve the basic CPU monitoring data of ECS Bare Metal instances. You can install the CloudMonitor agent to obtain CPU monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39475,18 +39471,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information of an ECS instance. Queryable metrics include vCPU usage, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth.</para>
+        /// <para>Queries the monitoring data of an ECS instance. The metrics that you can query include the vCPU utilization, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth of the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400, which means the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only for the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
-        /// <item><description>When some content is missing from the returned information, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
-        /// <item><description>This operation cannot retrieve basic CPU monitoring information for ECS Bare Metal instances. Install the CloudMonitor agent to obtain CPU monitoring information. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime – StartTime)/Period</c> is less than or equal to 400. In other words, the value of the <c>TotalCount</c> response parameter cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring data from the last 30 days. The <c>StartTime</c> parameter value cannot be more than 30 days before the current date.</description></item>
+        /// <item><description>If some content is missing from the response, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
+        /// <item><description>This operation cannot retrieve the basic CPU monitoring data of ECS Bare Metal instances. You can install the CloudMonitor agent to obtain CPU monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39557,18 +39553,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information of an ECS instance. Queryable metrics include vCPU usage, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth.</para>
+        /// <para>Queries the monitoring data of an ECS instance. The metrics that you can query include the vCPU utilization, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth of the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400, which means the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only for the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
-        /// <item><description>When some content is missing from the returned information, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
-        /// <item><description>This operation cannot retrieve basic CPU monitoring information for ECS Bare Metal instances. Install the CloudMonitor agent to obtain CPU monitoring information. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime – StartTime)/Period</c> is less than or equal to 400. In other words, the value of the <c>TotalCount</c> response parameter cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring data from the last 30 days. The <c>StartTime</c> parameter value cannot be more than 30 days before the current date.</description></item>
+        /// <item><description>If some content is missing from the response, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
+        /// <item><description>This operation cannot retrieve the basic CPU monitoring data of ECS Bare Metal instances. You can install the CloudMonitor agent to obtain CPU monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39587,18 +39583,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information of an ECS instance. Queryable metrics include vCPU usage, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth.</para>
+        /// <para>Queries the monitoring data of an ECS instance. The metrics that you can query include the vCPU utilization, burstable instance credits, inbound data traffic, outbound data traffic, and average bandwidth of the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400, which means the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
-        /// <item><description>You can query monitoring information only for the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
-        /// <item><description>When some content is missing from the returned information, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
-        /// <item><description>This operation cannot retrieve basic CPU monitoring information for ECS Bare Metal instances. Install the CloudMonitor agent to obtain CPU monitoring information. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime – StartTime)/Period</c> is less than or equal to 400. In other words, the value of the <c>TotalCount</c> response parameter cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>You can query monitoring data from the last 30 days. The <c>StartTime</c> parameter value cannot be more than 30 days before the current date.</description></item>
+        /// <item><description>If some content is missing from the response, the system may not have obtained the corresponding information. For example, the instance was in the Stopped state at that time.</description></item>
+        /// <item><description>This operation cannot retrieve the basic CPU monitoring data of ECS Bare Metal instances. You can install the CloudMonitor agent to obtain CPU monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Install the CloudMonitor agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40413,24 +40409,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and retrieves detailed information about instance types. You can also query specific instance types based on specific conditions to understand the configurations and performance of different instance types and select instances that meet your business requirements.</para>
+        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and associates to retrieve the detailed information of instance types. You can also perform a conditional query for specific instance types to understand the configurations and performance of different instance types and select the instance types that best suit your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you do not specify the NextToken parameter for paginated queries when calling this API operation, only the first page of data (up to 100 entries) is returned by default. To obtain more data, specify the NextToken parameter for paginated queries or specify filter conditions to limit the range of returned data.<remarks>
-        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this API operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description><b>Paged query</b>: Set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page of data (up to 100 entries) is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to narrow down the returned data.<remarks>
+        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query the instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40661,24 +40657,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and retrieves detailed information about instance types. You can also query specific instance types based on specific conditions to understand the configurations and performance of different instance types and select instances that meet your business requirements.</para>
+        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and associates to retrieve the detailed information of instance types. You can also perform a conditional query for specific instance types to understand the configurations and performance of different instance types and select the instance types that best suit your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you do not specify the NextToken parameter for paginated queries when calling this API operation, only the first page of data (up to 100 entries) is returned by default. To obtain more data, specify the NextToken parameter for paginated queries or specify filter conditions to limit the range of returned data.<remarks>
-        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this API operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description><b>Paged query</b>: Set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page of data (up to 100 entries) is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to narrow down the returned data.<remarks>
+        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query the instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40909,24 +40905,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and retrieves detailed information about instance types. You can also query specific instance types based on specific conditions to understand the configurations and performance of different instance types and select instances that meet your business requirements.</para>
+        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and associates to retrieve the detailed information of instance types. You can also perform a conditional query for specific instance types to understand the configurations and performance of different instance types and select the instance types that best suit your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you do not specify the NextToken parameter for paginated queries when calling this API operation, only the first page of data (up to 100 entries) is returned by default. To obtain more data, specify the NextToken parameter for paginated queries or specify filter conditions to limit the range of returned data.<remarks>
-        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this API operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description><b>Paged query</b>: Set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page of data (up to 100 entries) is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to narrow down the returned data.<remarks>
+        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query the instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40945,24 +40941,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and retrieves detailed information about instance types. You can also query specific instance types based on specific conditions to understand the configurations and performance of different instance types and select instances that meet your business requirements.</para>
+        /// <para>Queries the information list of all instance types provided by Elastic Compute Service (ECS) and associates to retrieve the detailed information of instance types. You can also perform a conditional query for specific instance types to understand the configurations and performance of different instance types and select the instance types that best suit your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you do not specify the NextToken parameter for paginated queries when calling this API operation, only the first page of data (up to 100 entries) is returned by default. To obtain more data, specify the NextToken parameter for paginated queries or specify filter conditions to limit the range of returned data.<remarks>
-        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this API operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description><b>Paged query</b>: Set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is returned in synchronization. Invoke this operation again with the NextToken parameter value returned from the previous call and the MaxResults parameter to implement paging for instance type information.</description></item>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page of data (up to 100 entries) is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to narrow down the returned data.<remarks>
+        /// <para> The maximum value of the MaxResults (maximum number of entries per page) parameter is 100. For users who called this operation in 2022, the maximum value of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum value of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query the instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you need to use instance types that are not publicly available or have special specification requirements, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
+        /// <item><description>To use instance types that are not publicly available or if you have special requirements for instance types, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41993,17 +41989,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</para>
+        /// <para>Queries the execution results of one or more Cloud Assistant commands, which are the actual execution results on ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not necessarily executed successfully or produces the expected results. You must call this operation to check the actual execution results based on the actual output.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results based on the actual output.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</description></item>
         /// <item><description>You can use <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event subscription</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
-        /// <item><description>When paged query the first page of results, you need only to set <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential for querying subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
         /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregated status across multiple instances.</description></item>
@@ -42128,17 +42124,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</para>
+        /// <para>Queries the execution results of one or more Cloud Assistant commands, which are the actual execution results on ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not necessarily executed successfully or produces the expected results. You must call this operation to check the actual execution results based on the actual output.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results based on the actual output.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</description></item>
         /// <item><description>You can use <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event subscription</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
-        /// <item><description>When paged query the first page of results, you need only to set <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential for querying subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
         /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregated status across multiple instances.</description></item>
@@ -42263,17 +42259,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</para>
+        /// <para>Queries the execution results of one or more Cloud Assistant commands, which are the actual execution results on ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not necessarily executed successfully or produces the expected results. You must call this operation to check the actual execution results based on the actual output.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results based on the actual output.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</description></item>
         /// <item><description>You can use <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event subscription</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
-        /// <item><description>When paged query the first page of results, you need only to set <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential for querying subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
         /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregated status across multiple instances.</description></item>
@@ -42306,17 +42302,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</para>
+        /// <para>Queries the execution results of one or more Cloud Assistant commands, which are the actual execution results on ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not necessarily executed successfully or produces the expected results. You must call this operation to check the actual execution results based on the actual output.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results based on the actual output.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</description></item>
         /// <item><description>You can use <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event subscription</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
-        /// <item><description>When paged query the first page of results, you need only to set <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential for querying subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When paged query the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value in the response is used as the credential to query subsequent pages. When paged query subsequent pages, set <c>NextToken</c> to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
         /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregated status across multiple instances.</description></item>
@@ -42355,22 +42351,22 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. You need to check the actual execution results by viewing the return values of this operation. The actual output takes precedence.</description></item>
+        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. Check the actual execution results based on the return values of this operation. The actual output takes precedence.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</description></item>
-        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
+        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</description></item>
         /// <item><description>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
-        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across multiple instances.</description></item>
+        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across all instances.</description></item>
         /// <item><description><c>DescribeInvocationResults</c> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies one instance:<list type="bullet">
-        /// <item><description>There is little difference between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>, and they can replace each other.</description></item>
+        /// <item><description><c>DescribeInvocations</c> and <c>DescribeInvocationResults</c> are largely interchangeable and can replace each other.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you need to view the execution details of each run for scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can return the historical execution records (you must specify <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
-        /// <item><description>When you need to view the command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
+        /// <item><description>To view the execution history of scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can retrieve past execution records (by specifying <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
+        /// <item><description>To view command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -42505,22 +42501,22 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. You need to check the actual execution results by viewing the return values of this operation. The actual output takes precedence.</description></item>
+        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. Check the actual execution results based on the return values of this operation. The actual output takes precedence.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</description></item>
-        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
+        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</description></item>
         /// <item><description>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
-        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across multiple instances.</description></item>
+        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across all instances.</description></item>
         /// <item><description><c>DescribeInvocationResults</c> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies one instance:<list type="bullet">
-        /// <item><description>There is little difference between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>, and they can replace each other.</description></item>
+        /// <item><description><c>DescribeInvocations</c> and <c>DescribeInvocationResults</c> are largely interchangeable and can replace each other.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you need to view the execution details of each run for scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can return the historical execution records (you must specify <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
-        /// <item><description>When you need to view the command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
+        /// <item><description>To view the execution history of scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can retrieve past execution records (by specifying <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
+        /// <item><description>To view command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -42655,22 +42651,22 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. You need to check the actual execution results by viewing the return values of this operation. The actual output takes precedence.</description></item>
+        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. Check the actual execution results based on the return values of this operation. The actual output takes precedence.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</description></item>
-        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
+        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</description></item>
         /// <item><description>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
-        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across multiple instances.</description></item>
+        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across all instances.</description></item>
         /// <item><description><c>DescribeInvocationResults</c> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies one instance:<list type="bullet">
-        /// <item><description>There is little difference between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>, and they can replace each other.</description></item>
+        /// <item><description><c>DescribeInvocations</c> and <c>DescribeInvocationResults</c> are largely interchangeable and can replace each other.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you need to view the execution details of each run for scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can return the historical execution records (you must specify <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
-        /// <item><description>When you need to view the command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
+        /// <item><description>To view the execution history of scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can retrieve past execution records (by specifying <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
+        /// <item><description>To view command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -42697,22 +42693,22 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. You need to check the actual execution results by viewing the return values of this operation. The actual output takes precedence.</description></item>
+        /// <item><description>After you run a command, it does not necessarily run successfully or produce the expected results. Check the actual execution results based on the return values of this operation. The actual output takes precedence.</description></item>
         /// <item><description>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</description></item>
-        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</description></item>
+        /// <item><description>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</description></item>
         /// <item><description>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned.</description></item>
         /// <item><description>Differences between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>:<list type="bullet">
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies multiple instances:<list type="bullet">
-        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across multiple instances.</description></item>
+        /// <item><description><c>DescribeInvocations</c> returns the execution status on each instance and the aggregation status across all instances.</description></item>
         /// <item><description><c>DescribeInvocationResults</c> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>When a single <c>RunCommand</c>/<c>InvokeCommand</c> call specifies one instance:<list type="bullet">
-        /// <item><description>There is little difference between <c>DescribeInvocations</c> and <c>DescribeInvocationResults</c>, and they can replace each other.</description></item>
+        /// <item><description><c>DescribeInvocations</c> and <c>DescribeInvocationResults</c> are largely interchangeable and can replace each other.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you need to view the execution details of each run for scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can return the historical execution records (you must specify <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
-        /// <item><description>When you need to view the command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
+        /// <item><description>To view the execution history of scheduled (periodic) tasks or tasks that execute automatically on instance startup (<c>RepeatMode=Period, EveryReboot</c>), only <c>DescribeInvocationResults</c> can retrieve past execution records (by specifying <c>IncludeHistory=true</c>). <c>DescribeInvocations</c> returns only the latest task status.</description></item>
+        /// <item><description>To view command content and parameters, only <c>DescribeInvocations</c> returns <c>CommandContent</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -42933,7 +42929,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about launch template versions of ECS instances, such as the total number of instance launch templates, template names, and template version numbers.</para>
+        /// <para>Queries information about ECS instance launch template versions, such as the total number of instance launch templates, template names, and template version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43027,7 +43023,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about launch template versions of ECS instances, such as the total number of instance launch templates, template names, and template version numbers.</para>
+        /// <para>Queries information about ECS instance launch template versions, such as the total number of instance launch templates, template names, and template version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43121,7 +43117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about launch template versions of ECS instances, such as the total number of instance launch templates, template names, and template version numbers.</para>
+        /// <para>Queries information about ECS instance launch template versions, such as the total number of instance launch templates, template names, and template version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43139,7 +43135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about launch template versions of ECS instances, such as the total number of instance launch templates, template names, and template version numbers.</para>
+        /// <para>Queries information about ECS instance launch template versions, such as the total number of instance launch templates, template names, and template version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43725,12 +43721,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of managed instances.</para>
+        /// <para>Queries a list of managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When performing a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query credential, and set <c>MaxResults</c> to limit the number of entries returned.</para>
+        /// <para>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43844,12 +43840,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of managed instances.</para>
+        /// <para>Queries a list of managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When performing a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query credential, and set <c>MaxResults</c> to limit the number of entries returned.</para>
+        /// <para>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43963,12 +43959,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of managed instances.</para>
+        /// <para>Queries a list of managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When performing a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query credential, and set <c>MaxResults</c> to limit the number of entries returned.</para>
+        /// <para>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43986,12 +43982,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of managed instances.</para>
+        /// <para>Queries a list of managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When performing a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query credential, and set <c>MaxResults</c> to limit the number of entries returned.</para>
+        /// <para>When querying the first page of a paging query, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response as the query token, and set <c>MaxResults</c> to limit the number of entries returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44217,7 +44213,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Elastic Network Interface (ENI) by specifying the ENI ID.</para>
+        /// <para>Queries the details of an Elastic Network Interface (ENI) by ENI ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44291,7 +44287,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Elastic Network Interface (ENI) by specifying the ENI ID.</para>
+        /// <para>Queries the details of an Elastic Network Interface (ENI) by ENI ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44365,7 +44361,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Elastic Network Interface (ENI) by specifying the ENI ID.</para>
+        /// <para>Queries the details of an Elastic Network Interface (ENI) by ENI ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44383,7 +44379,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Elastic Network Interface (ENI) by specifying the ENI ID.</para>
+        /// <para>Queries the details of an Elastic Network Interface (ENI) by ENI ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45374,10 +45370,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries configured maintenance policies. Each policy contains two maintenance attributes:</para>
+        /// <para>Queries the configured maintenance policies. Each policy contains two maintenance attributes:</para>
         /// <list type="bullet">
         /// <item><description>Maintenance time window: A time period you specify during which O&amp;M operations are performed.</description></item>
-        /// <item><description>Maintenance action: The instance downtime handling policy you specify.</description></item>
+        /// <item><description>Maintenance action: The instance down handling policy you specify.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -45459,10 +45455,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries configured maintenance policies. Each policy contains two maintenance attributes:</para>
+        /// <para>Queries the configured maintenance policies. Each policy contains two maintenance attributes:</para>
         /// <list type="bullet">
         /// <item><description>Maintenance time window: A time period you specify during which O&amp;M operations are performed.</description></item>
-        /// <item><description>Maintenance action: The instance downtime handling policy you specify.</description></item>
+        /// <item><description>Maintenance action: The instance down handling policy you specify.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -45544,10 +45540,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries configured maintenance policies. Each policy contains two maintenance attributes:</para>
+        /// <para>Queries the configured maintenance policies. Each policy contains two maintenance attributes:</para>
         /// <list type="bullet">
         /// <item><description>Maintenance time window: A time period you specify during which O&amp;M operations are performed.</description></item>
-        /// <item><description>Maintenance action: The instance downtime handling policy you specify.</description></item>
+        /// <item><description>Maintenance action: The instance down handling policy you specify.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -45571,10 +45567,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries configured maintenance policies. Each policy contains two maintenance attributes:</para>
+        /// <para>Queries the configured maintenance policies. Each policy contains two maintenance attributes:</para>
         /// <list type="bullet">
         /// <item><description>Maintenance time window: A time period you specify during which O&amp;M operations are performed.</description></item>
-        /// <item><description>Maintenance action: The instance downtime handling policy you specify.</description></item>
+        /// <item><description>Maintenance action: The instance down handling policy you specify.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46505,7 +46501,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more prefix lists.</para>
+        /// <para>Queries information about one or more prefix lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46600,7 +46596,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more prefix lists.</para>
+        /// <para>Queries information about one or more prefix lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46695,7 +46691,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more prefix lists.</para>
+        /// <para>Queries information about one or more prefix lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46718,7 +46714,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more prefix lists.</para>
+        /// <para>Queries information about one or more prefix lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -50536,9 +50532,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description:</h2>
         /// <list type="bullet">
-        /// <item><description>After you send a file, the file is not necessarily sent successfully. You must check the actual sending result based on the return value of this operation.</description></item>
-        /// <item><description>You can query execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
-        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
+        /// <item><description>After you send a file, the file is not necessarily sent. You must check the actual sending result based on the return value of this operation. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the NextToken value obtained from the previous response as the query token, and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50648,9 +50644,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description:</h2>
         /// <list type="bullet">
-        /// <item><description>After you send a file, the file is not necessarily sent successfully. You must check the actual sending result based on the return value of this operation.</description></item>
-        /// <item><description>You can query execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
-        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
+        /// <item><description>After you send a file, the file is not necessarily sent. You must check the actual sending result based on the return value of this operation. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the NextToken value obtained from the previous response as the query token, and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50760,9 +50756,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description:</h2>
         /// <list type="bullet">
-        /// <item><description>After you send a file, the file is not necessarily sent successfully. You must check the actual sending result based on the return value of this operation.</description></item>
-        /// <item><description>You can query execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
-        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
+        /// <item><description>After you send a file, the file is not necessarily sent. You must check the actual sending result based on the return value of this operation. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the NextToken value obtained from the previous response as the query token, and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50788,9 +50784,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <h2>Operation description:</h2>
         /// <list type="bullet">
-        /// <item><description>After you send a file, the file is not necessarily sent successfully. You must check the actual sending result based on the return value of this operation.</description></item>
-        /// <item><description>You can query execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
-        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the value obtained from the previous response and set MaxResults to limit the number of entries to return.</description></item>
+        /// <item><description>After you send a file, the file is not necessarily sent. You must check the actual sending result based on the return value of this operation. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information from the last day. A maximum of 1,000 entries of execution information can be retained.</description></item>
+        /// <item><description>When paged query the first page of results, set only MaxResults to limit the number of entries to return. The NextToken value returned in the result serves as the token for querying subsequent pages. When paged query subsequent pages, set NextToken to the NextToken value obtained from the previous response as the query token, and set MaxResults to limit the number of entries to return.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51301,7 +51297,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of snapshot size changes within the last 30 days in a region.</para>
+        /// <para>Queries the snapshot size change monitoring data within the last 30 days in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51309,7 +51305,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
         /// <item><description>You can query monitoring data only within the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
@@ -51385,7 +51381,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of snapshot size changes within the last 30 days in a region.</para>
+        /// <para>Queries the snapshot size change monitoring data within the last 30 days in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51393,7 +51389,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
         /// <item><description>You can query monitoring data only within the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
@@ -51469,7 +51465,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of snapshot size changes within the last 30 days in a region.</para>
+        /// <para>Queries the snapshot size change monitoring data within the last 30 days in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51477,7 +51473,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
         /// <item><description>You can query monitoring data only within the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
@@ -51497,7 +51493,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of snapshot size changes within the last 30 days in a region.</para>
+        /// <para>Queries the snapshot size change monitoring data within the last 30 days in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51505,7 +51501,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 400 data entries can be returned at a time. Make sure that the value of <c>(EndTime–StartTime)/Period</c> is less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
+        /// <item><description>A maximum of 400 data entries can be returned at a time. The condition <c>(EndTime – StartTime) / Period</c> must be less than or equal to 400. In other words, the response parameter <c>TotalCount</c> cannot exceed 400. Otherwise, the <c>InvalidParameter.TooManyDataQueried</c> error is returned.  </description></item>
         /// <item><description>You can query monitoring data only within the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</description></item>
         /// </list>
         /// </description>
@@ -52877,7 +52873,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information list of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
+        /// <para>Queries the details of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52967,7 +52963,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information list of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
+        /// <para>Queries the details of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53057,7 +53053,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information list of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
+        /// <para>Queries the details of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53075,7 +53071,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information list of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
+        /// <para>Queries the details of storage capacity units (SCUs). You can filter results by name, status, and capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53737,7 +53733,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task. Currently, you can query the following asynchronous tasks: ImportImage, ExportImage, and ModifyDiskSpec.</para>
+        /// <para>Queries the details of an asynchronous task. Currently, the asynchronous tasks that can be queried include ImportImage, ExportImage, and ModifyDiskSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53795,7 +53791,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task. Currently, you can query the following asynchronous tasks: ImportImage, ExportImage, and ModifyDiskSpec.</para>
+        /// <para>Queries the details of an asynchronous task. Currently, the asynchronous tasks that can be queried include ImportImage, ExportImage, and ModifyDiskSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53853,7 +53849,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task. Currently, you can query the following asynchronous tasks: ImportImage, ExportImage, and ModifyDiskSpec.</para>
+        /// <para>Queries the details of an asynchronous task. Currently, the asynchronous tasks that can be queried include ImportImage, ExportImage, and ModifyDiskSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53871,7 +53867,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task. Currently, you can query the following asynchronous tasks: ImportImage, ExportImage, and ModifyDiskSpec.</para>
+        /// <para>Queries the details of an asynchronous task. Currently, the asynchronous tasks that can be queried include ImportImage, ExportImage, and ModifyDiskSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56274,11 +56270,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>This is an asynchronous operation. After a successful call, wait approximately one minute for the detachment to complete.</description></item>
         /// <item><description>The instance to which the disk is attached must not be locked with <c>&quot;LockReason&quot; : &quot;security&quot;</c> in <c>OperationLocks</c>.</description></item>
-        /// <item><description>After an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>After an elastic ephemeral disk is detached, it can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56350,11 +56346,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>This is an asynchronous operation. After a successful call, wait approximately one minute for the detachment to complete.</description></item>
         /// <item><description>The instance to which the disk is attached must not be locked with <c>&quot;LockReason&quot; : &quot;security&quot;</c> in <c>OperationLocks</c>.</description></item>
-        /// <item><description>After an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>After an elastic ephemeral disk is detached, it can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56426,11 +56422,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>This is an asynchronous operation. After a successful call, wait approximately one minute for the detachment to complete.</description></item>
         /// <item><description>The instance to which the disk is attached must not be locked with <c>&quot;LockReason&quot; : &quot;security&quot;</c> in <c>OperationLocks</c>.</description></item>
-        /// <item><description>After an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>After an elastic ephemeral disk is detached, it can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56454,11 +56450,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>This is an asynchronous operation. After a successful call, wait approximately one minute for the detachment to complete.</description></item>
         /// <item><description>The instance to which the disk is attached must not be locked with <c>&quot;LockReason&quot; : &quot;security&quot;</c> in <c>OperationLocks</c>.</description></item>
-        /// <item><description>After an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
+        /// <item><description>After an elastic ephemeral disk is detached, it can only be re-attached to its original instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -57095,7 +57091,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If you are concerned that a created activation code may be leaked, call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances, but existing managed instances that were already registered are not affected.</para>
+        /// <para>If you are concerned that a created activation code may be leaked, you can call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances. However, managed instances that are already registered are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57167,7 +57163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If you are concerned that a created activation code may be leaked, call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances, but existing managed instances that were already registered are not affected.</para>
+        /// <para>If you are concerned that a created activation code may be leaked, you can call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances. However, managed instances that are already registered are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57239,7 +57235,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If you are concerned that a created activation code may be leaked, call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances, but existing managed instances that were already registered are not affected.</para>
+        /// <para>If you are concerned that a created activation code may be leaked, you can call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances. However, managed instances that are already registered are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57263,7 +57259,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>If you are concerned that a created activation code may be leaked, call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances, but existing managed instances that were already registered are not affected.</para>
+        /// <para>If you are concerned that a created activation code may be leaked, you can call this operation to disable the activation code. After the activation code is disabled, it can no longer be used to register new managed instances. However, managed instances that are already registered are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60429,7 +60425,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation.</para>
+        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation of Cloud Assistant Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -60501,7 +60497,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation.</para>
+        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation of Cloud Assistant Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -60573,7 +60569,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation.</para>
+        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation of Cloud Assistant Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -60597,7 +60593,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation.</para>
+        /// <para>Installs Cloud Assistant Agent on one or more ECS instances. You must restart the instances to complete the installation of Cloud Assistant Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -60631,41 +60627,41 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <list type="bullet">
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -60820,41 +60816,41 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <list type="bullet">
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -61009,41 +61005,41 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <list type="bullet">
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -61072,41 +61068,41 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <list type="bullet">
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>The following limits apply to the target ECS instances. If you select multiple ECS instances and one of them does not meet the execution conditions, you must call the operation again.<list type="bullet">
         /// <item><description>Target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query target instance status.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on target instance. </description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on target instance in advance. </description></item>
         /// <item><description>To run a PowerShell command, target instance must have the PowerShell module configured.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>One-time execution: The command is executed only once.</description></item>
         /// <item><description>Scheduled execution:<list type="bullet">
         /// <item><description>The command is executed at the frequency specified by the Frequency parameter. The result of the previous execution does not affect the next execution.</description></item>
-        /// <item><description>When you run a scheduled task based on a Cron expression and specify a time zone, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of target instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
-        ///    Cloud Assistant Agent must be at or later than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
+        /// <item><description>If you specify a time zone when you run a scheduled task based on a Cron expression, the scheduled execution time is based on the specified time zone. If you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance. Make sure that the time or time zone of the ECS instance is consistent with your expected time. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92704.html">Manage time synchronization services</a>.
+        ///    The Cloud Assistant Agent version must be at least the following versions to support the new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron expression-based scheduled execution). If the ClientNeedUpgrade error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.</description></item>
         /// <item><description>Linux: 2.2.3.282</description></item>
         /// <item><description>Windows: 2.1.3.282</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>A command may fail to be executed due to abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
-        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you run the command.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Run the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
+        /// <item><description>A command may fail to be executed because of abnormal instance status, network exceptions, or Cloud Assistant Agent exceptions. No execution information is generated when a command fails to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>. </description></item>
+        /// <item><description>If you enabled the custom parameter feature when you created the command, you must pass in custom parameters (<c>Parameters</c>) when you execute the command.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to query the Cloud Assistant status of target instance first. Execute the command only when CloudAssistantStatus is true, especially for newly purchased instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -61796,11 +61792,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>The Cloud Assistant Agent version on the instance must be at least the following version for the Cloud Assistant plugin status to be queried:<list type="bullet">
-        /// <item><description>Linux: 2.2.3.344.</description></item>
-        /// <item><description>Windows: 2.1.3.344.</description></item>
+        /// <item><description>Linux: 2.2.3.344</description></item>
+        /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you perform a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the result is used as the credential to query subsequent pages. When you perform a paging query for subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When performing a paged query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned. Settings for paging are handled through these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -61894,11 +61890,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>The Cloud Assistant Agent version on the instance must be at least the following version for the Cloud Assistant plugin status to be queried:<list type="bullet">
-        /// <item><description>Linux: 2.2.3.344.</description></item>
-        /// <item><description>Windows: 2.1.3.344.</description></item>
+        /// <item><description>Linux: 2.2.3.344</description></item>
+        /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you perform a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the result is used as the credential to query subsequent pages. When you perform a paging query for subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When performing a paged query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned. Settings for paging are handled through these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -61992,11 +61988,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>The Cloud Assistant Agent version on the instance must be at least the following version for the Cloud Assistant plugin status to be queried:<list type="bullet">
-        /// <item><description>Linux: 2.2.3.344.</description></item>
-        /// <item><description>Windows: 2.1.3.344.</description></item>
+        /// <item><description>Linux: 2.2.3.344</description></item>
+        /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you perform a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the result is used as the credential to query subsequent pages. When you perform a paging query for subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When performing a paged query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned. Settings for paging are handled through these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62022,11 +62018,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>The Cloud Assistant Agent version on the instance must be at least the following version for the Cloud Assistant plugin status to be queried:<list type="bullet">
-        /// <item><description>Linux: 2.2.3.344.</description></item>
-        /// <item><description>Windows: 2.1.3.344.</description></item>
+        /// <item><description>Linux: 2.2.3.344</description></item>
+        /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you perform a paging query for the first page, set only <c>MaxResults</c> to limit the number of entries to return. The <c>NextToken</c> value returned in the result is used as the credential to query subsequent pages. When you perform a paging query for subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response and set <c>MaxResults</c> to limit the number of entries to return.</description></item>
+        /// <item><description>When performing a paged query for the first page, set only <c>MaxResults</c> to limit the number of entries returned. The <c>NextToken</c> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <c>NextToken</c> parameter to the <c>NextToken</c> value obtained from the previous response, and set <c>MaxResults</c> to limit the number of entries returned. Settings for paging are handled through these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62817,16 +62813,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62921,16 +62917,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63025,16 +63021,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63053,16 +63049,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Note the following when calling this operation:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63481,7 +63477,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Cloud Assistant service configurations.</para>
+        /// <para>Modifies Cloud Assistant service configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -63585,7 +63581,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Cloud Assistant service configurations.</para>
+        /// <para>Modifies Cloud Assistant service configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -63689,7 +63685,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Cloud Assistant service configurations.</para>
+        /// <para>Modifies Cloud Assistant service configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63707,7 +63703,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Cloud Assistant service configurations.</para>
+        /// <para>Modifies Cloud Assistant service configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65839,9 +65835,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For information about how to perform authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The block storage account-level default encryption feature must be enabled in the specified region.</description></item>
-        /// <item><description>Before using a master key for the first time, grant ECS the <c>AliyunECSDiskEncryptDefaultRole</c> role to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Block storage account-level default encryption feature must be enabled in the specified region.</description></item>
+        /// <item><description>If you use a master key for the first time, grant the <c>AliyunECSDiskEncryptDefaultRole</c> role to ECS to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -65902,9 +65898,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For information about how to perform authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The block storage account-level default encryption feature must be enabled in the specified region.</description></item>
-        /// <item><description>Before using a master key for the first time, grant ECS the <c>AliyunECSDiskEncryptDefaultRole</c> role to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Block storage account-level default encryption feature must be enabled in the specified region.</description></item>
+        /// <item><description>If you use a master key for the first time, grant the <c>AliyunECSDiskEncryptDefaultRole</c> role to ECS to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -65965,9 +65961,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For information about how to perform authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The block storage account-level default encryption feature must be enabled in the specified region.</description></item>
-        /// <item><description>Before using a master key for the first time, grant ECS the <c>AliyunECSDiskEncryptDefaultRole</c> role to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Block storage account-level default encryption feature must be enabled in the specified region.</description></item>
+        /// <item><description>If you use a master key for the first time, grant the <c>AliyunECSDiskEncryptDefaultRole</c> role to ECS to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -65992,9 +65988,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For information about how to perform authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The block storage account-level default encryption feature must be enabled in the specified region.</description></item>
-        /// <item><description>Before using a master key for the first time, grant ECS the <c>AliyunECSDiskEncryptDefaultRole</c> role to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Block storage account-level default encryption feature must be enabled in the specified region.</description></item>
+        /// <item><description>If you use a master key for the first time, grant the <c>AliyunECSDiskEncryptDefaultRole</c> role to ECS to allow ECS to access KMS resources. For details, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant permissions to access KMS keys by using a RAM role</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -66019,20 +66015,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
-        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// When you invoke this operation, take note of the following items:</para>
+        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
+        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and the account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// Take note of the following items when you invoke this operation:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
-        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
-        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
-        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
-        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must match the disk type supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Available</b> (Available) state.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
+        /// <item><description>Because the enterprise SSD (ESSD) performance level is limited by its capacity, if you cannot upgrade the performance level (PL), you can expand the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>A maximum of five disk migration tasks can run concurrently within the same region for a single account.</description></item>
+        /// <item><description>During the migration, operations such as canceling migration, creating snapshots, upgrade/downgrade, expanding, attaching, detaching, or reinitializing the disk are not allowed.<remarks>
+        /// <para>After disk migration, the billing method, disk type, and capabilities of the destination cluster take effect immediately after the operation is invoked. Alibaba Cloud charges you based on the new disk type and performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66115,20 +66111,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
-        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// When you invoke this operation, take note of the following items:</para>
+        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
+        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and the account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// Take note of the following items when you invoke this operation:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
-        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
-        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
-        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
-        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must match the disk type supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Available</b> (Available) state.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
+        /// <item><description>Because the enterprise SSD (ESSD) performance level is limited by its capacity, if you cannot upgrade the performance level (PL), you can expand the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>A maximum of five disk migration tasks can run concurrently within the same region for a single account.</description></item>
+        /// <item><description>During the migration, operations such as canceling migration, creating snapshots, upgrade/downgrade, expanding, attaching, detaching, or reinitializing the disk are not allowed.<remarks>
+        /// <para>After disk migration, the billing method, disk type, and capabilities of the destination cluster take effect immediately after the operation is invoked. Alibaba Cloud charges you based on the new disk type and performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66211,20 +66207,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
-        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// When you invoke this operation, take note of the following items:</para>
+        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
+        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and the account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// Take note of the following items when you invoke this operation:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
-        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
-        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
-        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
-        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must match the disk type supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Available</b> (Available) state.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
+        /// <item><description>Because the enterprise SSD (ESSD) performance level is limited by its capacity, if you cannot upgrade the performance level (PL), you can expand the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>A maximum of five disk migration tasks can run concurrently within the same region for a single account.</description></item>
+        /// <item><description>During the migration, operations such as canceling migration, creating snapshots, upgrade/downgrade, expanding, attaching, detaching, or reinitializing the disk are not allowed.<remarks>
+        /// <para>After disk migration, the billing method, disk type, and capabilities of the destination cluster take effect immediately after the operation is invoked. Alibaba Cloud charges you based on the new disk type and performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66251,20 +66247,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
-        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// When you invoke this operation, take note of the following items:</para>
+        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
+        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and the account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// Take note of the following items when you invoke this operation:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
-        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
-        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
-        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
-        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must match the disk type supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Available</b> (Available) state.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
+        /// <item><description>Because the enterprise SSD (ESSD) performance level is limited by its capacity, if you cannot upgrade the performance level (PL), you can expand the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>A maximum of five disk migration tasks can run concurrently within the same region for a single account.</description></item>
+        /// <item><description>During the migration, operations such as canceling migration, creating snapshots, upgrade/downgrade, expanding, attaching, detaching, or reinitializing the disk are not allowed.<remarks>
+        /// <para>After disk migration, the billing method, disk type, and capabilities of the destination cluster take effect immediately after the operation is invoked. Alibaba Cloud charges you based on the new disk type and performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -68001,7 +67997,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an image share group.</para>
+        /// <para>Modifies the permissions of an image sharing group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68077,7 +68073,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an image share group.</para>
+        /// <para>Modifies the permissions of an image sharing group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68153,7 +68149,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an image share group.</para>
+        /// <para>Modifies the permissions of an image sharing group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68177,7 +68173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an image share group.</para>
+        /// <para>Modifies the permissions of an image sharing group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68202,20 +68198,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts per request.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
-        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to change the encryption key to a CMK through image replication.
-        /// To publish or delist a community image, take note of the following:</para>
+        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner cancels the image sharing or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot reinitialize its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use the copy image operation (CopyImage) to change the encryption key to a CMK.
+        /// To publish or unpublish community images, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: Community image owners are responsible for the quality and iterative updates of their images. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
-        /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
-        /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
+        /// <item><description><b>Public access</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copy.</description></item>
+        /// <item><description><b>Impact of unpublishing</b>: After a community image is unpublished, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68303,20 +68299,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts per request.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
-        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to change the encryption key to a CMK through image replication.
-        /// To publish or delist a community image, take note of the following:</para>
+        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner cancels the image sharing or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot reinitialize its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use the copy image operation (CopyImage) to change the encryption key to a CMK.
+        /// To publish or unpublish community images, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: Community image owners are responsible for the quality and iterative updates of their images. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
-        /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
-        /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
+        /// <item><description><b>Public access</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copy.</description></item>
+        /// <item><description><b>Impact of unpublishing</b>: After a community image is unpublished, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68404,20 +68400,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts per request.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
-        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to change the encryption key to a CMK through image replication.
-        /// To publish or delist a community image, take note of the following:</para>
+        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner cancels the image sharing or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot reinitialize its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use the copy image operation (CopyImage) to change the encryption key to a CMK.
+        /// To publish or unpublish community images, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: Community image owners are responsible for the quality and iterative updates of their images. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
-        /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
-        /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
+        /// <item><description><b>Public access</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copy.</description></item>
+        /// <item><description><b>Impact of unpublishing</b>: After a community image is unpublished, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68441,20 +68437,20 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts per request.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
-        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to change the encryption key to a CMK through image replication.
-        /// To publish or delist a community image, take note of the following:</para>
+        /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner cancels the image sharing or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot reinitialize its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use the copy image operation (CopyImage) to change the encryption key to a CMK.
+        /// To publish or unpublish community images, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: Community image owners are responsible for the quality and iterative updates of their images. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
-        /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
-        /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
+        /// <item><description><b>Public access</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copy.</description></item>
+        /// <item><description><b>Impact of unpublishing</b>: After a community image is unpublished, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72187,27 +72183,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can modify tasks with the following execution methods (see the <c>RepeatMode</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks with the following execution modes (see the RepeatMode value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Period: periodic execution.</description></item>
         /// <item><description>NextRebootOnly: automatically executes the command the next time the instance starts.</description></item>
-        /// <item><description>EveryReboot: automatically executes the command every time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically executes the command each time the instance starts.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can modify tasks in the following states (see the <c>InvocationStatus</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks in the following states (see the InvocationStatus value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Pending: The system is verifying or sending the command. If the command execution state on at least one instance is Pending, the overall execution state is Pending.</description></item>
         /// <item><description>Running: The command is running on the instance. If the command execution state on at least one instance is Running, the overall execution state is Running.</description></item>
         /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. If the command execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</description></item>
-        /// <item><description>Stopping: The task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
+        /// <item><description>Stopping: The scheduled task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the task must be later than the following versions:<list type="bullet">
+        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the scheduled task must be later than the following versions:<list type="bullet">
         /// <item><description>Linux: 2.2.3.541</description></item>
         /// <item><description>Windows: 2.1.3.541</description></item>
         /// <item><description>If the call result returns the <c>InvalidOperation.CloudAssistantVersionUnsupported</c> error code, update the Cloud Assistant Agent to the latest version.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content <c>CommandContent</c>.</description></item>
-        /// <item><description>When you modify the command content <c>CommandContent</c>, and the task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with <c>KeepCommand</c> set to <c>true</c>, a new command is created for long-term retention, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content CommandContent.</description></item>
+        /// <item><description>When you modify the command content CommandContent, and the scheduled task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with KeepCommand set to true, a new command is created and retained permanently, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands per region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72314,27 +72310,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can modify tasks with the following execution methods (see the <c>RepeatMode</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks with the following execution modes (see the RepeatMode value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Period: periodic execution.</description></item>
         /// <item><description>NextRebootOnly: automatically executes the command the next time the instance starts.</description></item>
-        /// <item><description>EveryReboot: automatically executes the command every time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically executes the command each time the instance starts.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can modify tasks in the following states (see the <c>InvocationStatus</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks in the following states (see the InvocationStatus value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Pending: The system is verifying or sending the command. If the command execution state on at least one instance is Pending, the overall execution state is Pending.</description></item>
         /// <item><description>Running: The command is running on the instance. If the command execution state on at least one instance is Running, the overall execution state is Running.</description></item>
         /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. If the command execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</description></item>
-        /// <item><description>Stopping: The task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
+        /// <item><description>Stopping: The scheduled task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the task must be later than the following versions:<list type="bullet">
+        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the scheduled task must be later than the following versions:<list type="bullet">
         /// <item><description>Linux: 2.2.3.541</description></item>
         /// <item><description>Windows: 2.1.3.541</description></item>
         /// <item><description>If the call result returns the <c>InvalidOperation.CloudAssistantVersionUnsupported</c> error code, update the Cloud Assistant Agent to the latest version.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content <c>CommandContent</c>.</description></item>
-        /// <item><description>When you modify the command content <c>CommandContent</c>, and the task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with <c>KeepCommand</c> set to <c>true</c>, a new command is created for long-term retention, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content CommandContent.</description></item>
+        /// <item><description>When you modify the command content CommandContent, and the scheduled task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with KeepCommand set to true, a new command is created and retained permanently, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands per region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72441,27 +72437,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can modify tasks with the following execution methods (see the <c>RepeatMode</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks with the following execution modes (see the RepeatMode value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Period: periodic execution.</description></item>
         /// <item><description>NextRebootOnly: automatically executes the command the next time the instance starts.</description></item>
-        /// <item><description>EveryReboot: automatically executes the command every time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically executes the command each time the instance starts.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can modify tasks in the following states (see the <c>InvocationStatus</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks in the following states (see the InvocationStatus value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Pending: The system is verifying or sending the command. If the command execution state on at least one instance is Pending, the overall execution state is Pending.</description></item>
         /// <item><description>Running: The command is running on the instance. If the command execution state on at least one instance is Running, the overall execution state is Running.</description></item>
         /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. If the command execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</description></item>
-        /// <item><description>Stopping: The task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
+        /// <item><description>Stopping: The scheduled task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the task must be later than the following versions:<list type="bullet">
+        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the scheduled task must be later than the following versions:<list type="bullet">
         /// <item><description>Linux: 2.2.3.541</description></item>
         /// <item><description>Windows: 2.1.3.541</description></item>
         /// <item><description>If the call result returns the <c>InvalidOperation.CloudAssistantVersionUnsupported</c> error code, update the Cloud Assistant Agent to the latest version.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content <c>CommandContent</c>.</description></item>
-        /// <item><description>When you modify the command content <c>CommandContent</c>, and the task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with <c>KeepCommand</c> set to <c>true</c>, a new command is created for long-term retention, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content CommandContent.</description></item>
+        /// <item><description>When you modify the command content CommandContent, and the scheduled task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with KeepCommand set to true, a new command is created and retained permanently, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands per region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72486,27 +72482,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can modify tasks with the following execution methods (see the <c>RepeatMode</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks with the following execution modes (see the RepeatMode value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Period: periodic execution.</description></item>
         /// <item><description>NextRebootOnly: automatically executes the command the next time the instance starts.</description></item>
-        /// <item><description>EveryReboot: automatically executes the command every time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically executes the command each time the instance starts.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can modify tasks in the following states (see the <c>InvocationStatus</c> value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
+        /// <item><description>You can modify scheduled tasks in the following states (see the InvocationStatus value returned by <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a>):<list type="bullet">
         /// <item><description>Pending: The system is verifying or sending the command. If the command execution state on at least one instance is Pending, the overall execution state is Pending.</description></item>
         /// <item><description>Running: The command is running on the instance. If the command execution state on at least one instance is Running, the overall execution state is Running.</description></item>
         /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. If the command execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</description></item>
-        /// <item><description>Stopping: The task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
+        /// <item><description>Stopping: The scheduled task is being stopped. If the command execution state on at least one instance is Stopping, the overall execution state is Stopping.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the task must be later than the following versions:<list type="bullet">
+        /// <item><description>Before modifying scheduled task execution information (including command content, custom parameters, and execution frequency), the Cloud Assistant Agent version on the ECS instances or managed instances that have already executed the scheduled task must be later than the following versions:<list type="bullet">
         /// <item><description>Linux: 2.2.3.541</description></item>
         /// <item><description>Windows: 2.1.3.541</description></item>
         /// <item><description>If the call result returns the <c>InvalidOperation.CloudAssistantVersionUnsupported</c> error code, update the Cloud Assistant Agent to the latest version.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content <c>CommandContent</c>.</description></item>
-        /// <item><description>When you modify the command content <c>CommandContent</c>, and the task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with <c>KeepCommand</c> set to <c>true</c>, a new command is created for long-term retention, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands in a region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
+        /// <item><description>When you execute a Cloud Assistant common command, you cannot modify the command content CommandContent.</description></item>
+        /// <item><description>When you modify the command content CommandContent, and the scheduled task was created by calling <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with KeepCommand set to true, a new command is created and retained permanently, which counts toward your Cloud Assistant command quota. You can retain up to 500 to 50,000 Cloud Assistant commands per region. You can also request a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72707,7 +72703,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Currently, the ModifyManagedInstance operation only supports modifying the name of a managed instance.</para>
+        /// <para>Currently, you can call the ModifyManagedInstance operation only to modify the name of a managed instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -72783,7 +72779,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Currently, the ModifyManagedInstance operation only supports modifying the name of a managed instance.</para>
+        /// <para>Currently, you can call the ModifyManagedInstance operation only to modify the name of a managed instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -72859,7 +72855,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Currently, the ModifyManagedInstance operation only supports modifying the name of a managed instance.</para>
+        /// <para>Currently, you can call the ModifyManagedInstance operation only to modify the name of a managed instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -72883,7 +72879,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Currently, the ModifyManagedInstance operation only supports modifying the name of a managed instance.</para>
+        /// <para>Currently, you can call the ModifyManagedInstance operation only to modify the name of a managed instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74121,7 +74117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
+        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74133,12 +74129,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the <a href="~~2978777#7de04a1c9fo50~~">preventive measures</a> before you perform the upgrade or downgrade.</description></item>
+        /// <item><description>Expired instances cannot be changed. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
-        /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
+        /// <item><description>The price difference between the original and new instance types is refunded to your original billing method. Used vouchers are not refundable. The payer receives the refund.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the upgrade or downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74252,7 +74248,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
+        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74264,12 +74260,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the <a href="~~2978777#7de04a1c9fo50~~">preventive measures</a> before you perform the upgrade or downgrade.</description></item>
+        /// <item><description>Expired instances cannot be changed. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
-        /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
+        /// <item><description>The price difference between the original and new instance types is refunded to your original billing method. Used vouchers are not refundable. The payer receives the refund.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the upgrade or downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74383,7 +74379,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
+        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74395,12 +74391,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the <a href="~~2978777#7de04a1c9fo50~~">preventive measures</a> before you perform the upgrade or downgrade.</description></item>
+        /// <item><description>Expired instances cannot be changed. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
-        /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
+        /// <item><description>The price difference between the original and new instance types is refunded to your original billing method. Used vouchers are not refundable. The payer receives the refund.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the upgrade or downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74426,7 +74422,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
+        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74438,12 +74434,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the <a href="~~2978777#7de04a1c9fo50~~">preventive measures</a> before you perform the upgrade or downgrade.</description></item>
+        /// <item><description>Expired instances cannot be changed. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
-        /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
+        /// <item><description>The price difference between the original and new instance types is refunded to your original billing method. Used vouchers are not refundable. The payer receives the refund.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the upgrade or downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -78289,7 +78285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyVSwitchAttribute.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78365,7 +78361,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyVSwitchAttribute.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78441,7 +78437,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyVSwitchAttribute.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78465,7 +78461,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyVSwitchAttribute.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78745,7 +78741,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies VPC attributes, such as its name and cidr block.</para>
+        /// <para>Modifies the attributes of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78829,7 +78825,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies VPC attributes, such as its name and cidr block.</para>
+        /// <para>Modifies the attributes of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78913,7 +78909,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies VPC attributes, such as its name and cidr block.</para>
+        /// <para>Modifies the attributes of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78937,7 +78933,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies VPC attributes, such as its name and cidr block.</para>
+        /// <para>Modifies the attributes of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80257,7 +80253,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be restarted by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -80333,7 +80329,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be restarted by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -80409,7 +80405,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be restarted by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -80437,7 +80433,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be restarted by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -80881,12 +80877,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs fault migration for a dedicated host.</para>
+        /// <para>Performs failover migration for a dedicated host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a dedicated host is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault, call this operation to perform fault migration for the dedicated host to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
+        /// <para>When a DDH is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault period, call this operation to perform failover migration for the DDH to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80952,12 +80948,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs fault migration for a dedicated host.</para>
+        /// <para>Performs failover migration for a dedicated host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a dedicated host is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault, call this operation to perform fault migration for the dedicated host to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
+        /// <para>When a DDH is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault period, call this operation to perform failover migration for the DDH to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -81023,12 +81019,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs fault migration for a dedicated host.</para>
+        /// <para>Performs failover migration for a dedicated host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a dedicated host is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault, call this operation to perform fault migration for the dedicated host to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
+        /// <para>When a DDH is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault period, call this operation to perform failover migration for the DDH to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -81046,12 +81042,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs fault migration for a dedicated host.</para>
+        /// <para>Performs failover migration for a dedicated host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a dedicated host is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault, call this operation to perform fault migration for the dedicated host to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
+        /// <para>When a DDH is in the alert state (<c>UnderAssessment</c>), which indicates a latent fault period, call this operation to perform failover migration for the DDH to prevent permanent failures. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the status of a dedicated host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -84061,18 +84057,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a cloud disk to a previous state by using a cloud disk snapshot.</para>
+        /// <para>Rolls back a disk to a previous state by using a disk snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using a snapshot</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using snapshots</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The cloud disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
-        /// <item><description>The instance to which the cloud disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
-        /// <item><description>The specified <c>SnapshotId</c> parameter must be a historical snapshot created from the cloud disk specified by <c>DiskId</c>.  </description></item>
-        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>The disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the disk specified by DiskId.  </description></item>
+        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84139,18 +84135,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a cloud disk to a previous state by using a cloud disk snapshot.</para>
+        /// <para>Rolls back a disk to a previous state by using a disk snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using a snapshot</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using snapshots</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The cloud disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
-        /// <item><description>The instance to which the cloud disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
-        /// <item><description>The specified <c>SnapshotId</c> parameter must be a historical snapshot created from the cloud disk specified by <c>DiskId</c>.  </description></item>
-        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>The disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the disk specified by DiskId.  </description></item>
+        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84217,18 +84213,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a cloud disk to a previous state by using a cloud disk snapshot.</para>
+        /// <para>Rolls back a disk to a previous state by using a disk snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using a snapshot</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using snapshots</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The cloud disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
-        /// <item><description>The instance to which the cloud disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
-        /// <item><description>The specified <c>SnapshotId</c> parameter must be a historical snapshot created from the cloud disk specified by <c>DiskId</c>.  </description></item>
-        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>The disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the disk specified by DiskId.  </description></item>
+        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84247,18 +84243,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a cloud disk to a previous state by using a cloud disk snapshot.</para>
+        /// <para>Rolls back a disk to a previous state by using a disk snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using a snapshot</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using snapshots</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The cloud disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
-        /// <item><description>The instance to which the cloud disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
-        /// <item><description>The specified <c>SnapshotId</c> parameter must be a historical snapshot created from the cloud disk specified by <c>DiskId</c>.  </description></item>
-        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>The disk must be in the In Use (<c>In_use</c>) or Available (<c>Available</c>) state.  </description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (<c>Stopped</c>) state. You can call <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> to stop an instance.  </description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the disk specified by DiskId.  </description></item>
+        /// <item><description>When you call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84277,14 +84273,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84335,14 +84331,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84393,14 +84389,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84419,14 +84415,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84643,7 +84639,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>Supported disk types include basic disks (<c>cloud</c>), ultra disks (<c>cloud_efficiency</c>), standard SSDs (<c>cloud_ssd</c>), enterprise SSDs (<c>cloud_essd</c>)&lt;props=&quot;china&quot;&gt;<ph>, ESSD Entry disks (cloud_essd_entry)</ph>, ESSD AutoPL disks (cloud_auto), elastic ephemeral disks - Standard (elastic_ephemeral_disk_standard), elastic ephemeral disks - Premium (elastic_ephemeral_disk_premium), and regional ESSDs (cloud_regional_disk_auto).</description></item>
-        /// <item><description>You cannot expand a disk while a snapshot is being created for the disk. Wait until the snapshot is created before you expand the disk.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be expanded. Wait until the snapshot is created before you expand the disk.</description></item>
         /// <item><description>This operation does not expand partitions or file systems. After you expand the disk capacity, you must allocate partitions and file systems. For more information, see <a href="~~2949817#bb3b1f02e51pj~~">Expand partitions and file systems (Linux)</a> and <a href="~~2932233#a9f9b78f3fujb~~">Expand partitions and file systems (Windows)</a>.</description></item>
         /// <item><description>Disks that have the multi-attach feature enabled support both online and offline expansion. Make sure that the instances to which the disk is attached meet the following requirements:<list type="bullet">
         /// <item><description>For online scale-out, the instance status must be <b>Running</b> (<c>Running</c>).</description></item>
@@ -84652,7 +84648,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description>Make sure that the disk meets the following requirements:<list type="bullet">
         /// <item><description>The disk is in the In Use (<c>In Use</c>) or Available (<c>Available</c>) state.</description></item>
-        /// <item><description>(Strongly recommended) You have created a snapshot of the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
+        /// <item><description>(Strongly recommended) A snapshot has been created for the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
         /// <item><description>If the data disk is newly purchased, initialize the data disk before you expand it. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Initialization overview</a>.</description></item>
         /// </list>
         /// </description></item>
@@ -84736,7 +84732,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>Supported disk types include basic disks (<c>cloud</c>), ultra disks (<c>cloud_efficiency</c>), standard SSDs (<c>cloud_ssd</c>), enterprise SSDs (<c>cloud_essd</c>)&lt;props=&quot;china&quot;&gt;<ph>, ESSD Entry disks (cloud_essd_entry)</ph>, ESSD AutoPL disks (cloud_auto), elastic ephemeral disks - Standard (elastic_ephemeral_disk_standard), elastic ephemeral disks - Premium (elastic_ephemeral_disk_premium), and regional ESSDs (cloud_regional_disk_auto).</description></item>
-        /// <item><description>You cannot expand a disk while a snapshot is being created for the disk. Wait until the snapshot is created before you expand the disk.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be expanded. Wait until the snapshot is created before you expand the disk.</description></item>
         /// <item><description>This operation does not expand partitions or file systems. After you expand the disk capacity, you must allocate partitions and file systems. For more information, see <a href="~~2949817#bb3b1f02e51pj~~">Expand partitions and file systems (Linux)</a> and <a href="~~2932233#a9f9b78f3fujb~~">Expand partitions and file systems (Windows)</a>.</description></item>
         /// <item><description>Disks that have the multi-attach feature enabled support both online and offline expansion. Make sure that the instances to which the disk is attached meet the following requirements:<list type="bullet">
         /// <item><description>For online scale-out, the instance status must be <b>Running</b> (<c>Running</c>).</description></item>
@@ -84745,7 +84741,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description>Make sure that the disk meets the following requirements:<list type="bullet">
         /// <item><description>The disk is in the In Use (<c>In Use</c>) or Available (<c>Available</c>) state.</description></item>
-        /// <item><description>(Strongly recommended) You have created a snapshot of the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
+        /// <item><description>(Strongly recommended) A snapshot has been created for the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
         /// <item><description>If the data disk is newly purchased, initialize the data disk before you expand it. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Initialization overview</a>.</description></item>
         /// </list>
         /// </description></item>
@@ -84829,7 +84825,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>Supported disk types include basic disks (<c>cloud</c>), ultra disks (<c>cloud_efficiency</c>), standard SSDs (<c>cloud_ssd</c>), enterprise SSDs (<c>cloud_essd</c>)&lt;props=&quot;china&quot;&gt;<ph>, ESSD Entry disks (cloud_essd_entry)</ph>, ESSD AutoPL disks (cloud_auto), elastic ephemeral disks - Standard (elastic_ephemeral_disk_standard), elastic ephemeral disks - Premium (elastic_ephemeral_disk_premium), and regional ESSDs (cloud_regional_disk_auto).</description></item>
-        /// <item><description>You cannot expand a disk while a snapshot is being created for the disk. Wait until the snapshot is created before you expand the disk.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be expanded. Wait until the snapshot is created before you expand the disk.</description></item>
         /// <item><description>This operation does not expand partitions or file systems. After you expand the disk capacity, you must allocate partitions and file systems. For more information, see <a href="~~2949817#bb3b1f02e51pj~~">Expand partitions and file systems (Linux)</a> and <a href="~~2932233#a9f9b78f3fujb~~">Expand partitions and file systems (Windows)</a>.</description></item>
         /// <item><description>Disks that have the multi-attach feature enabled support both online and offline expansion. Make sure that the instances to which the disk is attached meet the following requirements:<list type="bullet">
         /// <item><description>For online scale-out, the instance status must be <b>Running</b> (<c>Running</c>).</description></item>
@@ -84838,7 +84834,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description>Make sure that the disk meets the following requirements:<list type="bullet">
         /// <item><description>The disk is in the In Use (<c>In Use</c>) or Available (<c>Available</c>) state.</description></item>
-        /// <item><description>(Strongly recommended) You have created a snapshot of the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
+        /// <item><description>(Strongly recommended) A snapshot has been created for the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
         /// <item><description>If the data disk is newly purchased, initialize the data disk before you expand it. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Initialization overview</a>.</description></item>
         /// </list>
         /// </description></item>
@@ -84870,7 +84866,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>Supported disk types include basic disks (<c>cloud</c>), ultra disks (<c>cloud_efficiency</c>), standard SSDs (<c>cloud_ssd</c>), enterprise SSDs (<c>cloud_essd</c>)&lt;props=&quot;china&quot;&gt;<ph>, ESSD Entry disks (cloud_essd_entry)</ph>, ESSD AutoPL disks (cloud_auto), elastic ephemeral disks - Standard (elastic_ephemeral_disk_standard), elastic ephemeral disks - Premium (elastic_ephemeral_disk_premium), and regional ESSDs (cloud_regional_disk_auto).</description></item>
-        /// <item><description>You cannot expand a disk while a snapshot is being created for the disk. Wait until the snapshot is created before you expand the disk.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be expanded. Wait until the snapshot is created before you expand the disk.</description></item>
         /// <item><description>This operation does not expand partitions or file systems. After you expand the disk capacity, you must allocate partitions and file systems. For more information, see <a href="~~2949817#bb3b1f02e51pj~~">Expand partitions and file systems (Linux)</a> and <a href="~~2932233#a9f9b78f3fujb~~">Expand partitions and file systems (Windows)</a>.</description></item>
         /// <item><description>Disks that have the multi-attach feature enabled support both online and offline expansion. Make sure that the instances to which the disk is attached meet the following requirements:<list type="bullet">
         /// <item><description>For online scale-out, the instance status must be <b>Running</b> (<c>Running</c>).</description></item>
@@ -84879,7 +84875,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </description></item>
         /// <item><description>Make sure that the disk meets the following requirements:<list type="bullet">
         /// <item><description>The disk is in the In Use (<c>In Use</c>) or Available (<c>Available</c>) state.</description></item>
-        /// <item><description>(Strongly recommended) You have created a snapshot of the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
+        /// <item><description>(Strongly recommended) A snapshot has been created for the disk to back up data. For more information, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</description></item>
         /// <item><description>If the data disk is newly purchased, initialize the data disk before you expand it. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Initialization overview</a>.</description></item>
         /// </list>
         /// </description></item>
@@ -86157,38 +86153,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and runs a Cloud Assistant command on one or more ECS instances. Supports Shell, PowerShell, or Bat script types, and provides features such as scheduled execution, custom parameters, and execution within containers on instances.</para>
+        /// <para>Creates and executes a Cloud Assistant command on one or more ECS instances. This operation supports Shell, PowerShell, and Bat scripts, and provides features such as scheduled execution, custom parameters, and command execution in containers on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is sent successfully, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> to query the execution results by using the returned command ID or invocation ID.</para>
+        /// <para>This is an asynchronous operation. After the request is sent, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> with the returned command ID or invocation ID to query the execution results.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
+        /// <item><description>The target instance must be in the running state (<c>Running</c>). You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
         /// <item><description>The target instance must have <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> installed. You can install it by calling <a href="https://help.aliyun.com/document_detail/2679925.html">InstallCloudAssistant</a> and query the installation status by calling <a href="https://help.aliyun.com/document_detail/2679924.html">DescribeCloudAssistantStatus</a>.<remarks>
         /// <para>ECS instances created from public images after December 1, 2017 have Cloud Assistant Agent pre-installed by default.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>To run PowerShell commands, ensure that the Windows operating system on the target ECS instance has the PowerShell module configured.</description></item>
+        /// <item><description>To run PowerShell commands, make sure the PowerShell module is configured on the Windows operating system of the target ECS instance.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description>In a single region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be no earlier than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and Cron-based scheduled execution with year or time zone specified). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
+        /// <item><description>Cloud Assistant Agent must be at or above the following versions to support new features for scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron-based scheduled execution). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
         /// - Linux: 2.2.3.282
         /// - Windows: 2.1.3.282</description></item>
-        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Ensure that the time or time zone of the ECS instance is consistent with your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
-        /// </list>
-        /// <h3>Recommendations</h3>
-        /// <list type="bullet">
-        /// <item><description><b>Timeout settings</b>: You can specify the <c>Timeout</c> parameter to set the maximum timeout period for command execution on an ECS instance. When a command times out, Cloud Assistant Agent forcefully stops the process.<list type="bullet">
-        /// <item><description>After a one-time execution times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// <item><description>For scheduled executions, the timeout period applies to each execution record. A timeout in the previous execution does not affect the next execution. After a timeout occurs, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>Execution failures</b>: A command may fail to execute due to abnormal target instance status, network exceptions, or Cloud Assistant Agent exceptions. When a command fails to execute, no execution information is generated. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>.</description></item>
-        /// <item><description><b>Custom parameters</b>: When <c>EnableParameter=true</c>, the custom parameter feature is enabled. When setting <c>CommandContent</c>, you can define custom parameters in the <c>{{parameter}}</c> format and pass in custom parameter key-value pairs when running the command.</description></item>
+        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Make sure the time or time zone of the ECS instance matches your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -86357,38 +86343,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and runs a Cloud Assistant command on one or more ECS instances. Supports Shell, PowerShell, or Bat script types, and provides features such as scheduled execution, custom parameters, and execution within containers on instances.</para>
+        /// <para>Creates and executes a Cloud Assistant command on one or more ECS instances. This operation supports Shell, PowerShell, and Bat scripts, and provides features such as scheduled execution, custom parameters, and command execution in containers on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is sent successfully, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> to query the execution results by using the returned command ID or invocation ID.</para>
+        /// <para>This is an asynchronous operation. After the request is sent, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> with the returned command ID or invocation ID to query the execution results.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
+        /// <item><description>The target instance must be in the running state (<c>Running</c>). You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
         /// <item><description>The target instance must have <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> installed. You can install it by calling <a href="https://help.aliyun.com/document_detail/2679925.html">InstallCloudAssistant</a> and query the installation status by calling <a href="https://help.aliyun.com/document_detail/2679924.html">DescribeCloudAssistantStatus</a>.<remarks>
         /// <para>ECS instances created from public images after December 1, 2017 have Cloud Assistant Agent pre-installed by default.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>To run PowerShell commands, ensure that the Windows operating system on the target ECS instance has the PowerShell module configured.</description></item>
+        /// <item><description>To run PowerShell commands, make sure the PowerShell module is configured on the Windows operating system of the target ECS instance.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description>In a single region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be no earlier than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and Cron-based scheduled execution with year or time zone specified). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
+        /// <item><description>Cloud Assistant Agent must be at or above the following versions to support new features for scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron-based scheduled execution). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
         /// - Linux: 2.2.3.282
         /// - Windows: 2.1.3.282</description></item>
-        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Ensure that the time or time zone of the ECS instance is consistent with your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
-        /// </list>
-        /// <h3>Recommendations</h3>
-        /// <list type="bullet">
-        /// <item><description><b>Timeout settings</b>: You can specify the <c>Timeout</c> parameter to set the maximum timeout period for command execution on an ECS instance. When a command times out, Cloud Assistant Agent forcefully stops the process.<list type="bullet">
-        /// <item><description>After a one-time execution times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// <item><description>For scheduled executions, the timeout period applies to each execution record. A timeout in the previous execution does not affect the next execution. After a timeout occurs, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>Execution failures</b>: A command may fail to execute due to abnormal target instance status, network exceptions, or Cloud Assistant Agent exceptions. When a command fails to execute, no execution information is generated. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>.</description></item>
-        /// <item><description><b>Custom parameters</b>: When <c>EnableParameter=true</c>, the custom parameter feature is enabled. When setting <c>CommandContent</c>, you can define custom parameters in the <c>{{parameter}}</c> format and pass in custom parameter key-value pairs when running the command.</description></item>
+        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Make sure the time or time zone of the ECS instance matches your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -86557,38 +86533,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and runs a Cloud Assistant command on one or more ECS instances. Supports Shell, PowerShell, or Bat script types, and provides features such as scheduled execution, custom parameters, and execution within containers on instances.</para>
+        /// <para>Creates and executes a Cloud Assistant command on one or more ECS instances. This operation supports Shell, PowerShell, and Bat scripts, and provides features such as scheduled execution, custom parameters, and command execution in containers on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is sent successfully, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> to query the execution results by using the returned command ID or invocation ID.</para>
+        /// <para>This is an asynchronous operation. After the request is sent, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> with the returned command ID or invocation ID to query the execution results.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
+        /// <item><description>The target instance must be in the running state (<c>Running</c>). You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
         /// <item><description>The target instance must have <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> installed. You can install it by calling <a href="https://help.aliyun.com/document_detail/2679925.html">InstallCloudAssistant</a> and query the installation status by calling <a href="https://help.aliyun.com/document_detail/2679924.html">DescribeCloudAssistantStatus</a>.<remarks>
         /// <para>ECS instances created from public images after December 1, 2017 have Cloud Assistant Agent pre-installed by default.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>To run PowerShell commands, ensure that the Windows operating system on the target ECS instance has the PowerShell module configured.</description></item>
+        /// <item><description>To run PowerShell commands, make sure the PowerShell module is configured on the Windows operating system of the target ECS instance.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description>In a single region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be no earlier than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and Cron-based scheduled execution with year or time zone specified). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
+        /// <item><description>Cloud Assistant Agent must be at or above the following versions to support new features for scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron-based scheduled execution). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
         /// - Linux: 2.2.3.282
         /// - Windows: 2.1.3.282</description></item>
-        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Ensure that the time or time zone of the ECS instance is consistent with your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
-        /// </list>
-        /// <h3>Recommendations</h3>
-        /// <list type="bullet">
-        /// <item><description><b>Timeout settings</b>: You can specify the <c>Timeout</c> parameter to set the maximum timeout period for command execution on an ECS instance. When a command times out, Cloud Assistant Agent forcefully stops the process.<list type="bullet">
-        /// <item><description>After a one-time execution times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// <item><description>For scheduled executions, the timeout period applies to each execution record. A timeout in the previous execution does not affect the next execution. After a timeout occurs, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>Execution failures</b>: A command may fail to execute due to abnormal target instance status, network exceptions, or Cloud Assistant Agent exceptions. When a command fails to execute, no execution information is generated. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>.</description></item>
-        /// <item><description><b>Custom parameters</b>: When <c>EnableParameter=true</c>, the custom parameter feature is enabled. When setting <c>CommandContent</c>, you can define custom parameters in the <c>{{parameter}}</c> format and pass in custom parameter key-value pairs when running the command.</description></item>
+        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Make sure the time or time zone of the ECS instance matches your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -86607,38 +86573,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and runs a Cloud Assistant command on one or more ECS instances. Supports Shell, PowerShell, or Bat script types, and provides features such as scheduled execution, custom parameters, and execution within containers on instances.</para>
+        /// <para>Creates and executes a Cloud Assistant command on one or more ECS instances. This operation supports Shell, PowerShell, and Bat scripts, and provides features such as scheduled execution, custom parameters, and command execution in containers on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is sent successfully, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> to query the execution results by using the returned command ID or invocation ID.</para>
+        /// <para>This is an asynchronous operation. After the request is sent, you can call <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> with the returned command ID or invocation ID to query the execution results.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The target instance must be in the Running state. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
+        /// <item><description>The target instance must be in the running state (<c>Running</c>). You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status.</description></item>
         /// <item><description>The target instance must have <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> installed. You can install it by calling <a href="https://help.aliyun.com/document_detail/2679925.html">InstallCloudAssistant</a> and query the installation status by calling <a href="https://help.aliyun.com/document_detail/2679924.html">DescribeCloudAssistantStatus</a>.<remarks>
         /// <para>ECS instances created from public images after December 1, 2017 have Cloud Assistant Agent pre-installed by default.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>To run PowerShell commands, ensure that the Windows operating system on the target ECS instance has the PowerShell module configured.</description></item>
+        /// <item><description>To run PowerShell commands, make sure the PowerShell module is configured on the Windows operating system of the target ECS instance.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description>In a single region, you can retain 500 to 50,000 Cloud Assistant commands. You can also request a quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/184116.html">Quota management</a>.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be no earlier than the following versions to support new features of scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and Cron-based scheduled execution with year or time zone specified). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
+        /// <item><description>Cloud Assistant Agent must be at or above the following versions to support new features for scheduled tasks (execution at fixed intervals, one-time execution at a specified time, and specifying a year or time zone for Cron-based scheduled execution). If the <c>ClientNeedUpgrade</c> error code is returned, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a> to update the agent to the latest version.
         /// - Linux: 2.2.3.282
         /// - Windows: 2.1.3.282</description></item>
-        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Ensure that the time or time zone of the ECS instance is consistent with your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
-        /// </list>
-        /// <h3>Recommendations</h3>
-        /// <list type="bullet">
-        /// <item><description><b>Timeout settings</b>: You can specify the <c>Timeout</c> parameter to set the maximum timeout period for command execution on an ECS instance. When a command times out, Cloud Assistant Agent forcefully stops the process.<list type="bullet">
-        /// <item><description>After a one-time execution times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// <item><description>For scheduled executions, the timeout period applies to each execution record. A timeout in the previous execution does not affect the next execution. After a timeout occurs, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) changes to execution fault (Failed).</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>Execution failures</b>: A command may fail to execute due to abnormal target instance status, network exceptions, or Cloud Assistant Agent exceptions. When a command fails to execute, no execution information is generated. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a>.</description></item>
-        /// <item><description><b>Custom parameters</b>: When <c>EnableParameter=true</c>, the custom parameter feature is enabled. When setting <c>CommandContent</c>, you can define custom parameters in the <c>{{parameter}}</c> format and pass in custom parameter key-value pairs when running the command.</description></item>
+        /// <item><description>When you run a Cron-based scheduled task with a specified time zone, the scheduled execution time is based on the specified time zone. When you do not specify a time zone, the scheduled execution time is based on the system time zone of the ECS instance, and the execution time is determined by the system time of the instance. Make sure the time or time zone of the ECS instance matches your expectations. For more information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the time zone and NTP service for a Linux instance</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for a Windows instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -88037,21 +87993,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a remote file to one or more ECS instances.</para>
+        /// <para>Sends remote files to one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The target ECS instances must be in the running state.</description></item>
-        /// <item><description>Cloud Assistant Agent must be installed on the target ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The target ECS instances must be in the running (<c>Running</c>) state.</description></item>
+        /// <item><description>The <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on the target ECS instances in advance.</description></item>
         /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support file sending. If the <c>ClientNeedUpgrade</c> error code is returned, update the agent to the latest version.<list type="bullet">
         /// <item><description>Linux: 1.0.2.569</description></item>
         /// <item><description>Windows: 1.0.0.149</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The file content cannot exceed 32 KB after Base64 encoding.</description></item>
+        /// <item><description>After Base64 encoding, the file content cannot exceed 32 KB in size.</description></item>
         /// <item><description>File sending may fail due to exceptions in the target ECS instance status, network issues, or Cloud Assistant Agent exceptions. Call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> or refer to <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a> to troubleshoot issues.</description></item>
         /// </list>
         /// </description>
@@ -88171,21 +88127,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a remote file to one or more ECS instances.</para>
+        /// <para>Sends remote files to one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The target ECS instances must be in the running state.</description></item>
-        /// <item><description>Cloud Assistant Agent must be installed on the target ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The target ECS instances must be in the running (<c>Running</c>) state.</description></item>
+        /// <item><description>The <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on the target ECS instances in advance.</description></item>
         /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support file sending. If the <c>ClientNeedUpgrade</c> error code is returned, update the agent to the latest version.<list type="bullet">
         /// <item><description>Linux: 1.0.2.569</description></item>
         /// <item><description>Windows: 1.0.0.149</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The file content cannot exceed 32 KB after Base64 encoding.</description></item>
+        /// <item><description>After Base64 encoding, the file content cannot exceed 32 KB in size.</description></item>
         /// <item><description>File sending may fail due to exceptions in the target ECS instance status, network issues, or Cloud Assistant Agent exceptions. Call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> or refer to <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a> to troubleshoot issues.</description></item>
         /// </list>
         /// </description>
@@ -88305,21 +88261,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a remote file to one or more ECS instances.</para>
+        /// <para>Sends remote files to one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The target ECS instances must be in the running state.</description></item>
-        /// <item><description>Cloud Assistant Agent must be installed on the target ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The target ECS instances must be in the running (<c>Running</c>) state.</description></item>
+        /// <item><description>The <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on the target ECS instances in advance.</description></item>
         /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support file sending. If the <c>ClientNeedUpgrade</c> error code is returned, update the agent to the latest version.<list type="bullet">
         /// <item><description>Linux: 1.0.2.569</description></item>
         /// <item><description>Windows: 1.0.0.149</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The file content cannot exceed 32 KB after Base64 encoding.</description></item>
+        /// <item><description>After Base64 encoding, the file content cannot exceed 32 KB in size.</description></item>
         /// <item><description>File sending may fail due to exceptions in the target ECS instance status, network issues, or Cloud Assistant Agent exceptions. Call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> or refer to <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a> to troubleshoot issues.</description></item>
         /// </list>
         /// </description>
@@ -88339,21 +88295,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a remote file to one or more ECS instances.</para>
+        /// <para>Sends remote files to one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>The target ECS instances must be in the running state.</description></item>
-        /// <item><description>Cloud Assistant Agent must be installed on the target ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The target ECS instances must be in the running (<c>Running</c>) state.</description></item>
+        /// <item><description>The <a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on the target ECS instances in advance.</description></item>
         /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support file sending. If the <c>ClientNeedUpgrade</c> error code is returned, update the agent to the latest version.<list type="bullet">
         /// <item><description>Linux: 1.0.2.569</description></item>
         /// <item><description>Windows: 1.0.0.149</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The file content cannot exceed 32 KB after Base64 encoding.</description></item>
+        /// <item><description>After Base64 encoding, the file content cannot exceed 32 KB in size.</description></item>
         /// <item><description>File sending may fail due to exceptions in the target ECS instance status, network issues, or Cloud Assistant Agent exceptions. Call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> or refer to <a href="https://help.aliyun.com/document_detail/87029.html">Common errors and solutions for execution failures</a> to troubleshoot issues.</description></item>
         /// </list>
         /// </description>
@@ -88606,10 +88562,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">China site (Impacts of resource security locks on API calls)</a>.</description></item>
         /// <item><description>The ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>Instances in economical mode may fail to start due to insufficient inventory.</description></item>
         /// </list>
@@ -88683,10 +88639,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">China site (Impacts of resource security locks on API calls)</a>.</description></item>
         /// <item><description>The ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>Instances in economical mode may fail to start due to insufficient inventory.</description></item>
         /// </list>
@@ -88760,10 +88716,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">China site (Impacts of resource security locks on API calls)</a>.</description></item>
         /// <item><description>The ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>Instances in economical mode may fail to start due to insufficient inventory.</description></item>
         /// </list>
@@ -88789,10 +88745,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">China site (Impacts of resource security locks on API calls)</a>.</description></item>
         /// <item><description>The ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>Instances in economical mode may fail to start due to insufficient inventory.</description></item>
         /// </list>
@@ -89033,29 +88989,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by the operation can be used to establish a remote connection to the ECS instance.</para>
+        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for remotely connecting to an ECS instance. Take note of the following items:</para>
+        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The specified ECS instance must be in the running state.</description></item>
-        /// <item><description>The Cloud Assistant Agent must be installed on the specified ECS instance. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and query the version number of the Cloud Assistant Agent.<list type="bullet">
-        /// <item><description>If the Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support the session management feature. To upgrade the Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for the Cloud Assistant Agent</a>.<list type="bullet">
+        /// <item><description>The specified ECS instance must be in the Running state.</description></item>
+        /// <item><description>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<list type="bullet">
+        /// <item><description>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
+        /// <item><description>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<list type="bullet">
         /// <item><description>Linux operating system: 2.2.3.256</description></item>
         /// <item><description>Windows operating system: 2.1.3.256</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, the WebSocketUrl is valid for 10 minutes.</description></item>
-        /// <item><description>After a session is established, if no data is transmitted for 3 minutes, Cloud Assistant closes the connection.</description></item>
+        /// <item><description>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</description></item>
+        /// <item><description>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</description></item>
         /// <item><description>In a single region, a maximum of 100 sessions can be created and active. A maximum of 20 sessions can be in the connected state for a single ECS instance. The bandwidth limit for a single session connection is 200 KB/s.</description></item>
         /// <item><description>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</description></item>
-        /// <item><description>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
+        /// <item><description>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89160,29 +89116,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by the operation can be used to establish a remote connection to the ECS instance.</para>
+        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for remotely connecting to an ECS instance. Take note of the following items:</para>
+        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The specified ECS instance must be in the running state.</description></item>
-        /// <item><description>The Cloud Assistant Agent must be installed on the specified ECS instance. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and query the version number of the Cloud Assistant Agent.<list type="bullet">
-        /// <item><description>If the Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support the session management feature. To upgrade the Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for the Cloud Assistant Agent</a>.<list type="bullet">
+        /// <item><description>The specified ECS instance must be in the Running state.</description></item>
+        /// <item><description>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<list type="bullet">
+        /// <item><description>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
+        /// <item><description>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<list type="bullet">
         /// <item><description>Linux operating system: 2.2.3.256</description></item>
         /// <item><description>Windows operating system: 2.1.3.256</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, the WebSocketUrl is valid for 10 minutes.</description></item>
-        /// <item><description>After a session is established, if no data is transmitted for 3 minutes, Cloud Assistant closes the connection.</description></item>
+        /// <item><description>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</description></item>
+        /// <item><description>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</description></item>
         /// <item><description>In a single region, a maximum of 100 sessions can be created and active. A maximum of 20 sessions can be in the connected state for a single ECS instance. The bandwidth limit for a single session connection is 200 KB/s.</description></item>
         /// <item><description>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</description></item>
-        /// <item><description>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
+        /// <item><description>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89287,29 +89243,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by the operation can be used to establish a remote connection to the ECS instance.</para>
+        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for remotely connecting to an ECS instance. Take note of the following items:</para>
+        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The specified ECS instance must be in the running state.</description></item>
-        /// <item><description>The Cloud Assistant Agent must be installed on the specified ECS instance. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and query the version number of the Cloud Assistant Agent.<list type="bullet">
-        /// <item><description>If the Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support the session management feature. To upgrade the Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for the Cloud Assistant Agent</a>.<list type="bullet">
+        /// <item><description>The specified ECS instance must be in the Running state.</description></item>
+        /// <item><description>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<list type="bullet">
+        /// <item><description>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
+        /// <item><description>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<list type="bullet">
         /// <item><description>Linux operating system: 2.2.3.256</description></item>
         /// <item><description>Windows operating system: 2.1.3.256</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, the WebSocketUrl is valid for 10 minutes.</description></item>
-        /// <item><description>After a session is established, if no data is transmitted for 3 minutes, Cloud Assistant closes the connection.</description></item>
+        /// <item><description>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</description></item>
+        /// <item><description>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</description></item>
         /// <item><description>In a single region, a maximum of 100 sessions can be created and active. A maximum of 20 sessions can be in the connected state for a single ECS instance. The bandwidth limit for a single session connection is 200 KB/s.</description></item>
         /// <item><description>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</description></item>
-        /// <item><description>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
+        /// <item><description>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89328,29 +89284,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by the operation can be used to establish a remote connection to the ECS instance.</para>
+        /// <para>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for remotely connecting to an ECS instance. Take note of the following items:</para>
+        /// <para>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The specified ECS instance must be in the running state.</description></item>
-        /// <item><description>The Cloud Assistant Agent must be installed on the specified ECS instance. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and query the version number of the Cloud Assistant Agent.<list type="bullet">
-        /// <item><description>If the Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
-        /// <item><description>The Cloud Assistant Agent version must be later than the following versions to support the session management feature. To upgrade the Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for the Cloud Assistant Agent</a>.<list type="bullet">
+        /// <item><description>The specified ECS instance must be in the Running state.</description></item>
+        /// <item><description>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<list type="bullet">
+        /// <item><description>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</description></item>
+        /// <item><description>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<list type="bullet">
         /// <item><description>Linux operating system: 2.2.3.256</description></item>
         /// <item><description>Windows operating system: 2.1.3.256</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, the WebSocketUrl is valid for 10 minutes.</description></item>
-        /// <item><description>After a session is established, if no data is transmitted for 3 minutes, Cloud Assistant closes the connection.</description></item>
+        /// <item><description>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</description></item>
+        /// <item><description>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</description></item>
         /// <item><description>In a single region, a maximum of 100 sessions can be created and active. A maximum of 20 sessions can be in the connected state for a single ECS instance. The bandwidth limit for a single session connection is 200 KB/s.</description></item>
         /// <item><description>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</description></item>
-        /// <item><description>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
+        /// <item><description>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89606,11 +89562,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
+        /// <item><description>After an instance is stopped, the instance becomes unavailable. Make sure that stopping the instance does not affect your business. You can call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89694,11 +89650,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
+        /// <item><description>After an instance is stopped, the instance becomes unavailable. Make sure that stopping the instance does not affect your business. You can call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89782,11 +89738,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
+        /// <item><description>After an instance is stopped, the instance becomes unavailable. Make sure that stopping the instance does not affect your business. You can call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89810,11 +89766,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
+        /// <item><description>After an instance is stopped, the instance becomes unavailable. Make sure that stopping the instance does not affect your business. You can call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89833,15 +89789,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Cloud Assistant command process on one or more ECS instances.</para>
+        /// <para>Stops a Cloud Assistant command that is in the Running state on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you stop a one-time command process, instances that have started the execution continue to run, and instances that have not started the execution will not run.</description></item>
-        /// <item><description>After you stop a periodic command process, commands that have started the execution continue to run, but subsequent executions will not be triggered.</description></item>
+        /// <item><description>After you stop a one-time command, instances that have started to run the command continue to run the command, and instances that have not started to run the command do not run the command.</description></item>
+        /// <item><description>After you stop a periodic command, instances that have started to run the command continue to run the command, but the command is not run in the next cycle.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89912,15 +89868,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Cloud Assistant command process on one or more ECS instances.</para>
+        /// <para>Stops a Cloud Assistant command that is in the Running state on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you stop a one-time command process, instances that have started the execution continue to run, and instances that have not started the execution will not run.</description></item>
-        /// <item><description>After you stop a periodic command process, commands that have started the execution continue to run, but subsequent executions will not be triggered.</description></item>
+        /// <item><description>After you stop a one-time command, instances that have started to run the command continue to run the command, and instances that have not started to run the command do not run the command.</description></item>
+        /// <item><description>After you stop a periodic command, instances that have started to run the command continue to run the command, but the command is not run in the next cycle.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89991,15 +89947,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Cloud Assistant command process on one or more ECS instances.</para>
+        /// <para>Stops a Cloud Assistant command that is in the Running state on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you stop a one-time command process, instances that have started the execution continue to run, and instances that have not started the execution will not run.</description></item>
-        /// <item><description>After you stop a periodic command process, commands that have started the execution continue to run, but subsequent executions will not be triggered.</description></item>
+        /// <item><description>After you stop a one-time command, instances that have started to run the command continue to run the command, and instances that have not started to run the command do not run the command.</description></item>
+        /// <item><description>After you stop a periodic command, instances that have started to run the command continue to run the command, but the command is not run in the next cycle.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -90018,15 +89974,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Cloud Assistant command process on one or more ECS instances.</para>
+        /// <para>Stops a Cloud Assistant command that is in the Running state on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>After you stop a one-time command process, instances that have started the execution continue to run, and instances that have not started the execution will not run.</description></item>
-        /// <item><description>After you stop a periodic command process, commands that have started the execution continue to run, but subsequent executions will not be triggered.</description></item>
+        /// <item><description>After you stop a one-time command, instances that have started to run the command continue to run the command, and instances that have not started to run the command do not run the command.</description></item>
+        /// <item><description>After you stop a periodic command, instances that have started to run the command continue to run the command, but the command is not run in the next cycle.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -90051,7 +90007,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resource. If the maximum number of tags is exceeded, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resources. If the number exceeds the limit, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -90127,7 +90083,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resource. If the maximum number of tags is exceeded, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resources. If the number exceeds the limit, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -90203,7 +90159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resource. If the maximum number of tags is exceeded, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resources. If the number exceeds the limit, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -90227,7 +90183,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resource. If the maximum number of tags is exceeded, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <para>Before you attach tags, Alibaba Cloud checks the number of existing tags on the resources. If the number exceeds the limit, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

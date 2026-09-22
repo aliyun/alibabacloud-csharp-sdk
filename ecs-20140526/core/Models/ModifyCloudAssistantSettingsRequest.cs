@@ -19,20 +19,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The list of time windows during which upgrades are allowed. The time can be specified down to the minute. The default time zone is UTC.</para>
             /// <para>The interval between time windows cannot be less than 1 hour.</para>
-            /// <para>Format: Start time (HH:mm)-End time (HH:mm).</para>
-            /// <para>Example: [
+            /// <para>Format: start time (HH:mm)-end time (HH:mm).</para>
+            /// <para>For example, [
             /// &quot;02:00-03:00&quot;,
             /// &quot;05:00-06:00&quot;
             /// ]
-            /// This indicates that upgrades are allowed daily from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</para>
+            /// indicates that upgrades are allowed daily from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</para>
             /// </summary>
             [NameInMap("AllowedUpgradeWindow")]
             [Validation(Required=false)]
             public List<string> AllowedUpgradeWindow { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the Cloud Assistant Agent checks for updates and performs an upgrade immediately upon startup. Default value: true.</para>
-            /// <para>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
+            /// <para>Specifies whether the Cloud Assistant Agent checks for version updates and performs upgrades immediately upon startup. Default value: true.</para>
+            /// <para>This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</para>
             /// <list type="bullet">
             /// <item><description><para>Windows: 2.1.4.1065</para>
             /// </description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>Specifies whether to prevent the Cloud Assistant Agent from checking for and performing updates. Default value: false.</para>
-            /// <para>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
+            /// <para>This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</para>
             /// <list type="bullet">
             /// <item><description><para>Windows: 2.1.4.1065</para>
             /// </description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? DisableUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the custom Agent upgrade configuration. If this parameter is set to false, the system attempts to upgrade the Agent every 30 minutes by default.</para>
+            /// <para>Specifies whether to enable custom Agent upgrade configuration. If set to false, the default behavior of attempting an upgrade every 30 minutes is retained.</para>
             /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The time zone for the allowed upgrade time windows. Default value: UTC.
-            /// The time zone can be specified in the following formats:</para>
+            /// <para>The time zone for the allowed upgrade time windows. The default time zone is UTC.
+            /// The time zone can be specified in the following two formats:</para>
             /// <list type="bullet">
-            /// <item><description>Full time zone name, such as Asia/Shanghai or America/Los_Angeles.</description></item>
-            /// <item><description>GMT offset from Greenwich Mean Time, such as GMT+8:00 or GMT-7:00. Leading zeros are not supported for the hour value.</description></item>
+            /// <item><description>Full time zone name: such as Asia/Shanghai or America/Los_Angeles.</description></item>
+            /// <item><description>GMT offset from Greenwich Mean Time: such as GMT+8:00 or GMT-7:00. Leading zeros are not supported for the hour value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string EncryptionAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The ID of the customer master key (CMK) when the encryption method is set to KMS.</para>
+            /// <para>The customer master key (CMK) ID when the encryption method is set to KMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a807****7a70e</para>
@@ -146,9 +146,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The OSS encryption method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Inherit: inherits the encryption method of the bucket.</description></item>
-            /// <item><description>OssManaged: OSS-managed encryption.</description></item>
-            /// <item><description>KMS: Key Management Service (KMS) encryption.</description></item>
+            /// <item><description>Inherit: Inherits the encryption method of the bucket.</description></item>
+            /// <item><description>OssManaged: Uses OSS-managed encryption.</description></item>
+            /// <item><description>KMS: Uses KMS-based encryption.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,13 +159,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string EncryptionType { get; set; }
 
             /// <summary>
-            /// <para>The directory prefix of the OSS bucket. The following limits apply:</para>
+            /// <para>The directory prefix of the OSS bucket. Constraints:</para>
             /// <list type="bullet">
             /// <item><description>The prefix cannot exceed 254 characters in length.</description></item>
             /// <item><description>The prefix cannot start with a forward slash (/) or a backslash (\).</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Note: Set this parameter to an empty string (&quot;&quot;) if no directory prefix is required. If a prefix was previously configured and is no longer needed, set this parameter to an empty string (&quot;&quot;) to clear it.</para>
+            /// <para>Note: Pass an empty string (&quot;&quot;) to indicate that no directory prefix is required. If a prefix was previously set and is no longer needed, pass an empty string (&quot;&quot;) to clear it.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
+        /// <para>The Cloud Assistant resource usage configuration. This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description><para>Windows: 2.1.4.1065</para>
         /// </description></item>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? LogFileCountLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of a single Cloud Assistant log file. You must specify the unit (B|KB|MB).</para>
+            /// <para>The size limit of a single Cloud Assistant log file. You must specify the unit (B|KB|MB).</para>
             /// <list type="bullet">
             /// <item><description>Default value: 100MB.</description></item>
             /// <item><description>Minimum value: 10MB.</description></item>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MemoryLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit before the Cloud Assistant Agent automatically stops running.</para>
+            /// <para>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. When this limit is reached, the Cloud Assistant Agent automatically stops running.</para>
             /// <list type="bullet">
             /// <item><description>Default value: 3.</description></item>
             /// <item><description>Minimum value: 3.</description></item>
@@ -320,9 +320,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
             /// </list>
-            /// <para>Note:</para>
+            /// <para>Precautions:</para>
             /// <list type="bullet">
-            /// <item><description>Enabling or disabling the session feature takes effect across all regions.</description></item>
+            /// <item><description>Enabling or disabling the session feature takes effect in all regions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

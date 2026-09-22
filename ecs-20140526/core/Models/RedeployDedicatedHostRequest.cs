@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Reboot: stops ECS instance before migration.</para>
         /// </description></item>
-        /// <item><description><para>LiveMigrationFirst: migrates ECS instance without stopping it. You must specify the DedicatedHostId parameter. This value does not support changing ECS instance type during migration. If live migration fails, cold migration is performed by default.</para>
+        /// <item><description><para>LiveMigrationFirst: migrates ECS instance without stopping it. You must specify the DedicatedHostId parameter. This value does not support changing ECS instance type during migration. If live migration fails, the system performs stop-and-migrate by default.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Reboot.</para>

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned by the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to this operation. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>

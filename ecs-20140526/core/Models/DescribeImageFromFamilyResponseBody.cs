@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Architecture { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The time when the image was created. The time follows the ISO 8601 standard in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-01-10T01:01:10Z</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>system: public image.</description></item>
             /// <item><description>self: your custom image.</description></item>
-            /// <item><description>others: shared image from other users.</description></item>
+            /// <item><description>others: public image of another user.</description></item>
             /// <item><description>marketplace: Alibaba Cloud Marketplace image.</description></item>
             /// </list>
             /// 
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSupportCloudinit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image can run on an I/O optimized instance.</para>
+            /// <para>Indicates whether the image can be used on I/O optimized instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -297,10 +297,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The type of resource that references the image. Valid values:</para>
+            /// <para>The type of resource to which the image is associated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>instance: One or more ECS instances have been created from the image.</description></item>
-            /// <item><description>none: No ECS instances have been created from the image.</description></item>
+            /// <item><description>instance: one or more ECS instances have been created from the image.</description></item>
+            /// <item><description>none: no ECS instances have been created from the image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

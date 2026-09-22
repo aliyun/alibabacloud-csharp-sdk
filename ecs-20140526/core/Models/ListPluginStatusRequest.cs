@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The plugin name. The full character set is supported. The name can be up to 255 characters in length.</para>
+        /// <para>The plugin name. Full character set is supported. The name can be up to 255 characters in length.</para>
         /// <list type="bullet">
         /// <item><description><para>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</para>
         /// <remarks>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

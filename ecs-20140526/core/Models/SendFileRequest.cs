@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The content of the file. The file content cannot exceed 32 KB after Base64 encoding.</para>
+        /// <para>The content of the file. After Base64 encoding, the content cannot exceed 32 KB in size.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>ContentType</c> is set to <c>PlainText</c>, this parameter specifies the plain text content.</description></item>
+        /// <item><description>If <c>ContentType</c> is set to <c>PlainText</c>, this parameter specifies the content in plaintext.</description></item>
         /// <item><description>If <c>ContentType</c> is set to <c>Base64</c>, this parameter specifies the Base64-encoded content.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The content type of the file. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PlainText: plain text.</description></item>
-        /// <item><description>Base64: Base64-encoded.</description></item>
+        /// <item><description>Base64: Base64 encoding.</description></item>
         /// </list>
         /// <para>Default value: PlainText.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The description of the file. The full character set is supported. The description cannot exceed 512 characters in length.</para>
+        /// <para>The description. The full character set is supported. The description cannot exceed 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test file.</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</para>
+        /// <para>The user group of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you specify a different user group, make sure that the user group exists on the instance.</para>
+        /// <para>If you specify another user group, make sure that the user group exists on the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you specify a different user, make sure that the user exists on the instance.</para>
+        /// <para>If you specify another user, make sure that the user exists on the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group for file sending. If you specify this parameter:</para>
         /// <list type="bullet">
-        /// <item><description><para>The ECS instances specified by InstanceId must belong to this resource group.</para>
+        /// <item><description><para>The ECS instance specified by InstanceId must belong to this resource group.</para>
         /// </description></item>
         /// <item><description><para>You can filter file sending results by specifying this parameter when you call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a>.</para>
         /// </description></item>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class SendFileRequestTag : TeaModel {
             /// <summary>
             /// <para>The key of the tag for file sending. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query the resources.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The destination directory on the target ECS instances where the file is sent. If the directory does not exist, it is automatically created. The directory path cannot exceed 255 characters in length.</para>
+        /// <para>The destination folder on the target ECS instances for the file to be sent. If the folder does not exist, automatic creation is performed. The value cannot exceed 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

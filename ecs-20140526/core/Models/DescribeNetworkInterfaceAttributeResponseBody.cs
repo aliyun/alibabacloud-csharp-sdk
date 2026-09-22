@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The collection of network connectivity tracking configuration information.</para>
         /// <para>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the <c>Attribute</c> input parameter is set to <c>connectionTrackingConfiguration</c>.</para>
+        /// <para>This parameter is returned only when the Attribute input parameter is set to connectionTrackingConfiguration.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for TCP connections in the established state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
+            /// <para>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The time when the network interface controller (NIC) was created.</para>
+        /// <para>The time when the network interface controller (NIC) was created. The time is in ISO 8601 format and displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-12-25T12:31:31Z</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the instance to which the network interface controller (NIC) is attached.</para>
         /// <remarks>
-        /// <para>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return an instance ID.</para>
+        /// <para>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig : TeaModel {
             /// <summary>
-            /// <para>The communication pattern of the network interface controller (NIC).</para>
+            /// <para>The communication mode of the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
@@ -419,10 +419,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The communication pattern of the network interface controller (NIC). Valid values:</para>
+        /// <para>The communication mode of the network interface controller (NIC). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: uses the TCP communication pattern.</description></item>
-        /// <item><description>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</description></item>
+        /// <item><description>Standard: TCP communication mode is used.</description></item>
+        /// <item><description>HighPerformance: Elastic RDMA Interface (ERI) is enabled and RDMA communication mode is used.</description></item>
         /// </list>
         /// <remarks>
         /// <para>The HighPerformance parameter value is supported only by the c7re RDMA enhanced instance family.</para>
@@ -567,18 +567,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of queues for the Elastic Network Interface (ENI).</para>
         /// <list type="bullet">
-        /// <item><description><para>If the Elastic Network Interface (ENI) is a primary network interface controller (NIC): the default number of queues for the primary network interface controller (NIC) based on the instance type is returned.</para>
+        /// <item><description><para>If the ENI is a primary network interface controller (NIC): the default number of queues for the primary NIC that the instance type allows is returned.</para>
         /// </description></item>
-        /// <item><description><para>If the Elastic Network Interface (ENI) is a secondary ENI:</para>
+        /// <item><description><para>If the ENI is a secondary ENI:</para>
         /// <list type="bullet">
         /// <item><description>If the secondary ENI is in the InUse state:<list type="bullet">
-        /// <item><description>If the number of queues has not been modified, the default number of queues for the secondary ENI based on the instance type is returned.</description></item>
-        /// <item><description>If the number of queues has been modified, the modified number of queues is returned.</description></item>
+        /// <item><description>If the number of queues for the secondary ENI has not been modified, the default number of queues for the secondary ENI that the instance type allows is returned.</description></item>
+        /// <item><description>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If the secondary ENI is in the active (Available) state:<list type="bullet">
-        /// <item><description>If the number of queues has not been modified, an empty value is returned.</description></item>
-        /// <item><description>If the number of queues has been modified, the modified number of queues is returned.</description></item>
+        /// <item><description>If the number of queues for the secondary ENI has not been modified, an empty value is returned.</description></item>
+        /// <item><description>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -723,7 +723,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Detaching: being detached.</description></item>
         /// <item><description>Deleting: being deleted.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that network interface controllers (NICs) in all statuses are queried.</para>
+        /// <para>Default value: empty, which indicates that network interface controllers (NICs) in all states are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

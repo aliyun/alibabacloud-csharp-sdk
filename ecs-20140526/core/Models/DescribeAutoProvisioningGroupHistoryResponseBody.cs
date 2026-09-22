@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of scheduling tasks queried.</para>
+        /// <para>The total number of queried scheduling tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

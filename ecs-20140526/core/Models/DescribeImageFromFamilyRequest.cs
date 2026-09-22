@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeImageFromFamilyRequest : TeaModel {
         /// <summary>
         /// <para>The name of the image family.</para>
-        /// <para>Image families are supported for custom images, public images, community images, and shared images. For more information, see <a href="https://help.aliyun.com/document_detail/174241.html">Image family overview</a>.</para>
+        /// <para>Custom images, public images, community images, and shared images all support image families. For more information, see <a href="https://help.aliyun.com/document_detail/174241.html">Image family overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandLine { get; set; }
 
         /// <summary>
-        /// <para>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</para>
+        /// <para>The network type of the WebSocket URL required for establishing a remote connection to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Internet: public network. This is the default value.</description></item>
+        /// <item><description>Internet: Internet. This is the default value.</description></item>
         /// <item><description>Intranet: internal network.</description></item>
         /// </list>
         /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PasswordName { get; set; }
 
         /// <summary>
-        /// <para>The port number of the ECS instance for data forwarding. After this parameter is set, the Cloud Assistant Agent forwards data to the specified port number for port forwarding. For example, SSH uses port 22.</para>
+        /// <para>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</para>
         /// <para>Default value: empty, which indicates that no port number is set for data forwarding.</para>
         /// 
         /// <b>Example:</b>

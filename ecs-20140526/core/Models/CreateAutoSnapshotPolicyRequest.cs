@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The association type between the automatic snapshot policy and the target resource. Valid values:</para>
+        /// <para>The association type between the automatic snapshot policy and target resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AssociatedWithDisk: associated with a disk.</description></item>
-        /// <item><description>AssociatedWithInstanceTag: associated with an instance tag.</description></item>
+        /// <item><description>AssociatedWithDisk: associate with a disk.</description></item>
+        /// <item><description>AssociatedWithInstanceTag: associate with an instance tag.</description></item>
         /// </list>
         /// <para>Default value: AssociatedWithDisk.</para>
         /// <remarks>
-        /// <para>Currently, association with instance tags is supported only in the Malaysia (Kuala Lumpur), Malaysia (Johor), Philippines (Manila), UK (London), France (Paris), Saudi Arabia (Riyadh) - Partner, UAE (Dubai), China North 5 (Hohhot), China Northwest 2 (Zhongwei), and China Southwest 1 (Chengdu) regions.</para>
+        /// <para>Currently, only the following regions support association with instance tags: Malaysia (Kuala Lumpur), Malaysia (Johor), Philippines (Manila), UK (London), France (Paris), Saudi Arabia (Riyadh) - Partner, UAE (Dubai), China North 5 (Hohhot), China Northwest 2 (Zhongwei), China Southwest 1 (Chengdu), Brazil (São Paulo), Thailand (Bangkok), China South 3 (Guangzhou), China South 2 (Heyuan), Hong Kong (China), Germany (Frankfurt), Mexico, US (Virginia), China East 1 (Hangzhou), China North 1 (Qingdao), China North 2 (Beijing), China East 2 (Shanghai), Singapore, Japan (Tokyo), South Korea (Seoul), China South 1 (Shenzhen), China North 6 (Ulanqab), and China North 3 (Zhangjiakou).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssociationType { get; set; }
 
         /// <summary>
-        /// <para>The retention period of cross-region snapshot copies. Unit: days. Valid values:</para>
+        /// <para>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: Snapshot copies are permanently retained.</description></item>
-        /// <item><description>1 to 65535: Snapshot copies are retained for the specified number of days.</description></item>
+        /// <item><description>-1: Snapshot replicas are permanently retained.</description></item>
+        /// <item><description>1 to 65535: Snapshot replicas are retained for the specified number of days.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The key ID of the KMS key used for encrypted cross-region snapshot backup.</para>
+            /// <para>The KMS key ID used for encrypted cross-region snapshot backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to allow automatic cross-region replication.</para>
+        /// <para>Specifies whether to allow automatic cross-region replication. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Allowed.</description></item>
         /// <item><description>false: Not allowed.</description></item>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The destination region to which to copy snapshots. You can specify only one destination region.</para>
+        /// <para>The destination region to which snapshots are replicated across regions. You can set only one destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;]</para>
@@ -222,6 +222,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The tag key.</para>
             /// <para>Valid values of N: 1 to 5.</para>
             /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -234,6 +237,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <remarks>
             /// <para>If you pass in an empty value or an empty string, it indicates any value.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -253,7 +259,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region to which the automatic snapshot policy belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -264,10 +270,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The days of the week on which automatic snapshots are created. Unit: day. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</para>
+        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</para>
         /// <list type="bullet">
         /// <item><description>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created every Monday.</description></item>
-        /// <item><description>To create multiple automatic snapshots within a week, specify multiple days and separate them with commas (,). You can specify a maximum of 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</description></item>
+        /// <item><description>To create multiple automatic snapshots within a week, specify multiple days separated by commas (,). You can specify up to 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -295,13 +301,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</para>
+        /// <para>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent 00:00 to 23:00 (a total of 24 points in time). For example, 1 indicates 01:00. Format description:</para>
         /// <list type="bullet">
         /// <item><description>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</description></item>
-        /// <item><description>To create multiple automatic snapshots within a day, specify multiple points in time and separate them with commas (,). You can specify a maximum of 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</description></item>
+        /// <item><description>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. The snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</para>
+        /// <para>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. Because the disk contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Performs only a dry run without restarting the instance. The system checks the required parameters, request syntax, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: Performs a dry run and sends the request. If the check succeeds, the instance is restarted.</description></item>
+        /// <item><description>true: performs only a dry run. The instance is not restarted. The system checks whether required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. The instance is restarted after the check succeeds.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to forcefully stop ECS instance before restarting it. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Forcefully stops ECS instance. This is equivalent to a power-off operation. Cached data that has not been written to storage devices is lost.</para>
+        /// <item><description><para>true: Forcefully stops ECS instance. This is equivalent to a typical power-off operation. All cached data that has not been written to storage devices is lost.</para>
         /// </description></item>
         /// <item><description><para>false: Normally stops ECS instance.</para>
         /// </description></item>

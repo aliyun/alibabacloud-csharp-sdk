@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query detailed template configuration information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration information is returned, such as the image ID and system disk size.</para>
+        /// <item><description><para>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration information such as image ID and system disk size is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: Queries only basic template information, such as the template ID, template name, and default version.</para>
+        /// <item><description><para>false: Queries only basic template information, such as template ID, template name, and default version.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<long?> LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum version number used to filter query results. Use this parameter together with MinVersion to query version information within the range between the minimum and maximum version numbers.</para>
+        /// <para>The maximum version number used to filter query results. Used together with MinVersion to query version information within the range between the minimum and maximum version numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? MaxVersion { get; set; }
 
         /// <summary>
-        /// <para>The minimum version number used to filter query results. Use this parameter together with MaxVersion to query version information within the range between the minimum and maximum version numbers.</para>
+        /// <para>The minimum version number used to filter query results. Used together with MaxVersion to query version information within the range between the minimum and maximum version numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when paging is used. </para>
+        /// <para>The number of entries per page in a paged query. Settings the number of rows per page for paged queries. </para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>

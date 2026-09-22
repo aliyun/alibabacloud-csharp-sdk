@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. If <b>InstanceId</b> is specified, this parameter is ignored.</para>
+        /// <para>The maximum number of entries per page for a paged query. If <b>InstanceId</b> is set, this parameter is ignored.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The command ID.</para>
         /// <list type="bullet">
-        /// <item><description>A new command is created and the new <c>CommandId</c> is returned only when <c>CommandContent</c> is changed.</description></item>
-        /// <item><description>When <c>CommandContent</c> is not changed, no new command is created, and the <c>CommandId</c> of the currently executing command is returned.</description></item>
-        /// <item><description>If you called <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a>, or called <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> with <c>KeepCommand</c> set to <c>true</c>, the new command is retained. Otherwise, when the execution is completed or the task is manually stopped, all commands associated with the task are deleted.</description></item>
+        /// <item><description>A new command is created and a new CommandId is returned only when CommandContent is changed.</description></item>
+        /// <item><description>When CommandContent is not changed, no new command is created, and the CommandId of the currently executing command is returned.</description></item>
+        /// <item><description>If <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> was called, or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> was called with KeepCommand set to true, the new command is retained. Otherwise, when the execution is completed or the task is manually stopped, all commands associated with the task are deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

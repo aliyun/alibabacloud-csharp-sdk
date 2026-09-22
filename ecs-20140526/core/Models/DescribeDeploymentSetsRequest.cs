@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for the paged query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability: high availability.</description></item>
-        /// <item><description>AvailabilityGroup: high availability for deployment set groups.</description></item>
-        /// <item><description>LowLatency: low network latency.</description></item>
+        /// <item><description>Availability: high availability strategy.</description></item>
+        /// <item><description>AvailabilityGroup: high availability group strategy.</description></item>
+        /// <item><description>LowLatency: low network latency strategy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>host: physical server</description></item>
+        /// <item><description>host: physical machine</description></item>
         /// <item><description>sw: vSwitch</description></item>
         /// <item><description>rack: rack</description></item>
         /// </list>

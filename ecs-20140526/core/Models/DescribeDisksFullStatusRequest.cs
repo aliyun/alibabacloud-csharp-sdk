@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle status of the block storage device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status table</a>. Valid values: </para>
+        /// <para>The lifecycle status of the block storage device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>In_use: in use.</description></item>
         /// <item><description>Available: to be attached.</description></item>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeDisksFullStatusRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key attached to the block storage resource. N specifies that you can set one or more tag keys. The value of N in this parameter corresponds to the value of N in the <c>Tag.N.Value</c> parameter to form a key-value pair. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the number of resources with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached to all specified tags cannot exceed 1,000.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with that tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>

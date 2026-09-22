@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IncludePublicKey { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
+        /// <para>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, refer to <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABC1234567</para>

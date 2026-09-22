@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The generated order ID.</para>
+        /// <para>The order ID.</para>
         /// <remarks>
-        /// <para>An order ID is returned only when a subscription disk is created.</para>
+        /// <para>The order ID is returned only when you create a subscription disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

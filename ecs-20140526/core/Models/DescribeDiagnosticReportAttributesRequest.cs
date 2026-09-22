@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic report ID.</para>
+        /// <para>The ID of the diagnostic report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -16,11 +16,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</description></item>
         /// </list>
         /// <para>Default value: true</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>Note:</para>
         /// <list type="bullet">
         /// <item><description>Disks with the multi-attach feature enabled do not support this parameter.</description></item>
-        /// <item><description>If the disk to be detached is a data disk, the default value is <c>false</c>.</description></item>
-        /// <item><description>If the disk to be detached is an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</description></item>
+        /// <item><description>If you detach a data disk, the default value is <c>false</c>.</description></item>
+        /// <item><description>If the disk that you want to detach is an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the ECS instance from which you want to uninstall the disk that is attached to it.</para>
+        /// <para>The ID of the ECS instance to which the disk is attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

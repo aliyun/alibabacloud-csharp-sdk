@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token returned in this call. If this value is empty, no more data is available.</para>
+        /// <para>The pagination token returned in this call. If the return value is empty, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? AssociationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the port range list was created.</para>
+            /// <para>The time when the port range list was created. The time is in ISO 8601 format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-04T07:11Z</para>

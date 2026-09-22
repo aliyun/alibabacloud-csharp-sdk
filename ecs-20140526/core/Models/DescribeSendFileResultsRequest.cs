@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSendFileResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. If you specify this parameter, all file sending records of the specified instance are queried.</para>
+        /// <para>The instance ID. After you specify this parameter, all file sending records of the instance are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-hz0jdfwd9f****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The overall sending status of the file. The overall status depends on the combined execution status of all instances in the sending task. Valid values:</para>
+        /// <para>The overall sending status of the file. The overall status depends on the common execution status of all target instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</description></item>
         /// <item><description>Running: The file is being sent on instances. The overall status is Running if the file sending status of at least one instance is Running.</description></item>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The file name. If you specify this parameter, all sending records of the file with the specified name are queried.</para>
+        /// <para>The name of the file. After you specify this parameter, all sending records of the file are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.txt</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending a file. This parameter allows you to filter file sending results by resource group.</para>
+        /// <para>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending files. This way, you can filter the file sending results of the specified resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeSendFileResultsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>If you use one tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached with all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>

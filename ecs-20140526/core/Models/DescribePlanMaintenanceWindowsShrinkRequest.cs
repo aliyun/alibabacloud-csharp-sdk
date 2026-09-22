@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. This parameter is required by the Alibaba Cloud SDK for routing purposes. However, setting any region ID for this operation makes no difference. The response returns all O&amp;M windows that meet the specified conditions across all regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

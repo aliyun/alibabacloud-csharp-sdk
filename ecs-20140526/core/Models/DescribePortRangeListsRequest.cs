@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>727d41872117f2816343eeb432fbc5bfd21dc824589d2a4be0b5e8707e68181f</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000. You can invoke <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> to query the list of resource groups.</para>
+        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000. You can invoke <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> to query the list of resource groups.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribePortRangeListsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the instance. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key for PortRangeList</para>

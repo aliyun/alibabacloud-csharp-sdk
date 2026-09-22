@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot consistency group.</para>
+        /// <para>The ID of the snapshot-consistent group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssg-j6ciyh3k52qp7ovm****</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The address family of the prefix list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
+        /// <item><description>IPv4.</description></item>
+        /// <item><description>IPv6.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AddressFamily { get; set; }
 
         /// <summary>
-        /// <para>The time when the prefix list was created.</para>
+        /// <para>The time when the prefix list was created. The time is displayed in ISO 8601 format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-02-20T07:11Z</para>

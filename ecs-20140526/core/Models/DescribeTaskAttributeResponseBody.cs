@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTaskAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the task was created.</para>
+        /// <para>The time when the task was created. The time is displayed in ISO 8601 format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-23T02:13Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was completed.</para>
+        /// <para>The time when the task was completed. The time is displayed in ISO 8601 format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-23T02:19Z</para>

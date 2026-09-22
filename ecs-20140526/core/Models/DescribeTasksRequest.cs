@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results.</para>
+        /// <para>The page number of the query results.</para>
         /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>ImportImage: import an image.</description></item>
         /// <item><description>ExportImage: export an image.</description></item>
         /// <item><description>RedeployInstance: redeploy an ECS instance.</description></item>
-        /// <item><description>ModifyDiskSpec: change the cloud disk type.</description></item>
+        /// <item><description>ModifyDiskSpec: change the type of a cloud disk.</description></item>
         /// <item><description>ArchiveSnapshot: archive a snapshot.</description></item>
         /// </list>
         /// 

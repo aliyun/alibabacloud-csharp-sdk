@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeElasticityAssurancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeElasticityAssurancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The list of elasticity assurance service IDs. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</para>
+            /// <para>The list of elasticity assurance IDs. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;eap-bp67acfmxazb4****&quot;, &quot;eap-bp67acfmxazb5****&quot;]</para>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The billing method of instances. Valid values: PostPaid. Only pay-as-you-go is supported.</para>
+        /// <para>The billing method of the instance. Valid values: PostPaid. Only pay-as-you-go is supported.</para>
         /// <para>Default value: PostPaid.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can use the instance type to query only active elasticity assurance services. Released services can only be queried by using <c>PrivatePoolOptions.Ids</c>.</para>
+        /// <para>The instance type. You can use the instance type to query only active elasticity assurances. Released elasticity assurances can be queried only by using <c>PrivatePoolOptions.Ids</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the elasticity assurance service query. Obtain the value from the result of the previous request.</para>
+        /// <para>The pagination token for the elasticity assurance query. Obtain the value from the result of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the elasticity assurance service. Valid values:</para>
+        /// <para>The type of the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ElasticityAssurance: standard elasticity assurance (used when RecurrenceRules is not specified).</para>
+        /// <item><description><para>ElasticityAssurance: standard elasticity assurance. This is the type when RecurrenceRules is not specified.</para>
         /// </description></item>
-        /// <item><description><para>TimeDivisionElasticityAssurance: time-division elasticity assurance (used when RecurrenceRules is specified).</para>
+        /// <item><description><para>TimeDivisionElasticityAssurance: time-division elasticity assurance. This is the type when RecurrenceRules is specified.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the elasticity assurance service belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The ID of the region to which the elasticity assurance belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -137,16 +137,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the elasticity assurance service. Valid values:</para>
+        /// <para>The status of the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>All: all states.</description></item>
-        /// <item><description>Deactived: pending activation (this state is in invitational preview).</description></item>
+        /// <item><description>Deactived: to be activated. This state is in invitational preview.</description></item>
         /// <item><description>Preparing: being prepared.</description></item>
-        /// <item><description>Prepared: pending effectiveness.</description></item>
-        /// <item><description>Active: active.</description></item>
+        /// <item><description>Prepared: to take effect.</description></item>
+        /// <item><description>Active: in effect.</description></item>
         /// <item><description>Released: released.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, elasticity assurance services in all states except Pending and Released are queried.</para>
+        /// <para>If you do not specify this parameter, elasticity assurances in all states except Pending and Released are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of tag key-value pairs bound to the elasticity assurance service.</para>
+        /// <para>The list of tag key-value pairs bound to the elasticity assurance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeElasticityAssurancesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. N indicates that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value. N indicates that you can specify multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID in the region to which the elasticity assurance service belongs.</para>
+        /// <para>The zone ID in the region to which the elasticity assurance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

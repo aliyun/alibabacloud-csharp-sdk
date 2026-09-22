@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The port range. Valid values of N: 0 to 200. Settings:</para>
             /// <list type="bullet">
-            /// <item><description><para>The number of entries cannot exceed the maximum entry capacity (<c>MaxEntries</c>).</para>
+            /// <item><description><para>The number of entries cannot exceed the maximum number of entries (MaxEntries).</para>
             /// </description></item>
-            /// <item><description><para>You cannot specify duplicate values for <c>PortRange</c>.</para>
+            /// <item><description><para>You cannot specify duplicate PortRange values.</para>
             /// </description></item>
-            /// <item><description><para>The value cannot be the same as the value of the <c>RemoveEntry.N.PortRange</c> parameter.</para>
+            /// <item><description><para>The value cannot be the same as a RemoveEntry.N.PortRange parameter value.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The port range. Valid values of N: 0 to 200. Settings:</para>
             /// <list type="bullet">
-            /// <item><description><para>You cannot specify duplicate values for <c>PortRange</c>.</para>
+            /// <item><description><para>You cannot specify duplicate PortRange values.</para>
             /// </description></item>
-            /// <item><description><para>The value cannot be the same as the value of the <c>AddEntry.N.PortRange</c> parameter.</para>
+            /// <item><description><para>The value cannot be the same as an AddEntry.N.PortRange parameter value.</para>
             /// </description></item>
             /// </list>
             /// 

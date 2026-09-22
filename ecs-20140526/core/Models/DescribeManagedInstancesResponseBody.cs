@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The number of times that Cloud Assistant tasks were run on the managed instance.</para>
+            /// <para>The number of times that Cloud Assistant tasks have been executed on the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the last Cloud Assistant task was run.</para>
+            /// <para>The time when the last Cloud Assistant task was executed. The time is displayed in ISO 8601 format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T09:00:40Z</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LastInvokedTime { get; set; }
 
             /// <summary>
-            /// <para>The machine ID of the managed instance.</para>
+            /// <para>The machine code of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e03231b37ab14e53b5795ad625fc****</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The version of the operating system.</para>
+            /// <para>The version information of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// <para>The registration time of the managed instance.</para>
+            /// <para>The time when the managed instance was registered. The time is displayed in ISO 8601 format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T08:57:56Z</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeManagedInstancesResponseBodyInstancesTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-                /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+                /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
                 /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page as specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The scenario in which the image is used. Valid values:</para>
+        /// <para>The scenario in which the image is to be used. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateEcs (default): instance creation.</description></item>
         /// <item><description>ChangeOS: system disk replacement or operating system replacement.</description></item>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// <list type="bullet">
-        /// <item><description>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. The request does not send the actual query.</description></item>
-        /// <item><description>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is directly queried.</description></item>
+        /// <item><description>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. No request is sent.</description></item>
+        /// <item><description>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is queried directly.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The list of filter conditions used to query resources.</para>
+        /// <para>The list of filter conditions when querying resources.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImagesRequestFilter> Filter { get; set; }
         public class DescribeImagesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key used to query resources. Valid values:</para>
+            /// <para>The filter key when querying resources. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>When this parameter is set to <c>CreationStartTime</c>, you can query resources created after the specified time point (<c>Filter.N.Value</c>).</description></item>
             /// <item><description>When this parameter is set to <c>CreationEndTime</c>, you can query resources created before the specified time point (<c>Filter.N.Value</c>).</description></item>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value used to query resources.</para>
+            /// <para>The filter value when querying resources.</para>
             /// <list type="bullet">
-            /// <item><description><para>When <c>Filter.N.Key</c> is set to <c>CreationStartTime</c> or <c>CreationEndTime</c>, the format is <c>yyyy-MM-ddTHH:mmZ</c>, in UTC+0 time zone.</para>
+            /// <item><description><para>When <c>Filter.N.Key</c> is set to <c>CreationStartTime</c> or <c>CreationEndTime</c>, the format is <c>yyyy-MM-ddTHH:mmZ</c>, using the UTC+0 time zone.</para>
             /// </description></item>
             /// <item><description><para>When <c>Filter.N.Key</c> is set to <c>NetworkType</c>, valid network type values include <c>vpc</c> and <c>classic</c>.</para>
             /// </description></item>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. Fuzzy search is supported.</para>
+        /// <para>The image name. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paging query. Settings this parameter to specify the number of entries to return on each page.</para>
+        /// <para>The number of entries per page for paging queries. Settings this parameter to specify the number of entries to return on each page.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeImagesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the image. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>When you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. When you use multiple tags to filter resources, the resource count that are attached to all specified tags cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the image is available.</para>
         /// <remarks>
-        /// <para>An available image indicates that the image can be immediately used to create instances. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</para>
+        /// <para>An available image indicates that the image can be used immediately to create an instance. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -388,8 +388,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the image is running on ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: The image is in use and running on ECS instances.</description></item>
-        /// <item><description>none: The image is idle and not running on any ECS instances.</description></item>
+        /// <item><description>instance: The image is in use by ECS instances.</description></item>
+        /// <item><description>none: The image is idle and not used by any ECS instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

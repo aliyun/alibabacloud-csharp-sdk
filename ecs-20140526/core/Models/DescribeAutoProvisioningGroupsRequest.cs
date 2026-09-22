@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupStatus { get; set; }
 
+        /// <summary>
+        /// <para>The type of the auto-provisioning group. Valid values: request, maintain, and candidate.</para>
+        /// </summary>
         [NameInMap("AutoProvisioningGroupTypes")]
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupTypes { get; set; }
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the paging query to return.</para>
+        /// <para>The page number of the list to return in a paging query.</para>
         /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the paging query. Settings:</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
