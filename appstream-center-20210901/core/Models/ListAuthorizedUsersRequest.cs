@@ -10,24 +10,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID used to filter authorization relationships.</para>
-        /// <para>Set this parameter when querying authorized users of a specific application. This parameter is not required when querying cloud browser groups or delivery group sets.</para>
+        /// <para>The application ID. Specifies the application to filter users who are <b>authorized for that specific application</b> (authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). This parameter applies to delivery groups with the <c>App</c> authorization mode. Obtain the application ID from the Apps list returned by the <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a> operation.</para>
+        /// <para>If not specified, all authorized users under the delivery group are returned. This parameter is not supported when querying by delivery group set.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>ca-i87mycyn419nu****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group ID. When querying cloud browsers, set this parameter to the browser group ID.</para>
-        /// <para>Specify either this parameter or <c>AppInstanceGroupSetId</c>, but not both.</para>
+        /// <para>The delivery group ID. Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain this value. For cloud browser groups, specify the browser group ID returned by the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</para>
+        /// <para><b>Exactly one of this parameter and AppInstanceGroupSetId must be specified.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>big-3jm9d0abc00example</para>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
@@ -35,7 +33,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The delivery group set ID.</para>
-        /// <para>Specify either this parameter or <c>AppInstanceGroupId</c>, but not both. When querying by set, omit <c>AppId</c> and <c>AppInstancePersistentId</c>.</para>
+        /// <para><b>Exactly one of this parameter and AppInstanceGroupId must be specified.</b> When querying by set, do not specify AppId or AppInstancePersistentId. Otherwise, a parameter error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -45,18 +43,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>The persistent session ID used to filter authorization relationships. This parameter applies to delivery groups that use session-based authorization.</para>
-        /// <para>This parameter is not required when querying delivery group sets.</para>
+        /// <para>The persistent session ID. Specifies the persistent session to filter users who are granted that session. This parameter applies to delivery groups with the <c>Session</c> authorization mode. Call the <a href="~~ListPersistentAppInstances~~">ListPersistentAppInstances</a> operation to obtain this value.</para>
+        /// <para>If specified, only users granted that session are returned. However, the response parameter AppInstancePersistentIds still lists all persistent sessions granted to each user. This parameter is not supported when querying by delivery group set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ai-3jm9d0abc00example</para>
+        /// <para>p-0cc7s3mw2fg4j****</para>
         /// </summary>
         [NameInMap("AppInstancePersistentId")]
         [Validation(Required=false)]
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
-        /// <para>Performs an exact match by authorized username. If this parameter is not specified, results are not filtered by exact username.</para>
+        /// <para>The username for <b>exact matching</b>. If not specified, no filtering by exact username is applied. Can be specified together with UserIdFuzzy, in which case both conditions must be met.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is required. Pages start from page 1.</para>
+        /// <para>The page number, starting from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +75,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page. This parameter is required. Maximum value: 100.</para>
+        /// <para>The number of records per page. Valid values: 1 to 100.</para>
+        /// <para>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, pagination is based on authorization records. Multiple authorization records for the same user are merged into a single user entry. Therefore, the actual number of users returned on the current page may be less than this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,18 +87,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. Set this parameter to <c>CloudBrowser</c> when querying authorized users of cloud browsers.</para>
+        /// <para>The product type. The value must match the product type of the queried delivery group or delivery group set. If the value does not match, a resource-not-found error code is returned.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: Wuying Cloud Application.</description></item>
+        /// <item><description>CloudBrowser: Cloud Browser.</description></item>
+        /// <item><description>WuyingServer: Enterprise Edition Workstation.</description></item>
+        /// <item><description>WuyingWorkstation: Personal Edition Linggou Container Workstation.</description></item>
+        /// <item><description>WuyingWorkstationTeam: Linggou Team Edition Container Workstation.</description></item>
+        /// <item><description>WuyingWorkstationBusiness: Linggou Dedicated Edition Container Workstation.</description></item>
+        /// <item><description>AndroidCloud: Cloud Phone.</description></item>
+        /// <item><description>AIAgent: AgentBay (AI agent).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CloudBrowser</para>
+        /// <para>CloudApp</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy match by text contained in the authorized username.</para>
+        /// <para>The username keyword for <b>fuzzy matching</b>. A match occurs if the username contains this keyword. For example, if you specify <c>ali</c>, both <c>alice</c> and <c>ali.wang</c> are returned. If not specified, no keyword-based filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali</para>

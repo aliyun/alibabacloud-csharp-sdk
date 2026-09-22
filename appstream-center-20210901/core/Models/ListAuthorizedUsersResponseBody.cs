@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page in this request.</para>
+        /// <para>The number of records per page, which is the same as the PageSize request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate this call.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5C1A4F2D-713A-5C98-8AF6-1B5D0868****</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorization records that match the query conditions.</para>
+        /// <para>The total number of records that match the query conditions. Use this value to determine whether to continue paging.</para>
+        /// <list type="bullet">
+        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, this is the number of authorization records. If the same user has multiple authorization records, the user is counted multiple times. Therefore, this value may be greater than the actual number of users.</description></item>
+        /// <item><description>When the authorization mode is <c>Session</c>, this is the deduplicated user count.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,17 +54,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized users on the current page. An empty list is returned if no authorization records are matched.</para>
+        /// <para>The list of authorized users on the current page. Multiple authorization records for the same user are merged into a single entry. An empty list is returned if no authorized users match the conditions.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListAuthorizedUsersResponseBodyUsers> Users { get; set; }
         public class ListAuthorizedUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The user account type.</para>
+            /// <para>The account type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>simple</c>: convenience account.</description></item>
-            /// <item><description><c>ad</c>: Active Directory (AD) domain account.</description></item>
+            /// <item><description>simple: Convenience account.</description></item>
+            /// <item><description>ad: Active Directory (AD) domain account, which originates from an enterprise AD domain.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,27 +75,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The application ID specified in this query. This field is not returned if no application filter condition is specified.</para>
+            /// <para>The application ID. Returned only when AppId is specified in the request. The value is the same as the request parameter. Not returned if AppId is not specified or when querying by delivery group set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>app-3jm9d0abc00example</para>
+            /// <para>ca-i87mycyn419nu****</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The delivery group ID to which the authorization relationship belongs. When querying cloud browsers, this is the browser group ID. When querying by set, this field is the primary delivery group ID of the set.</para>
+            /// <para>The delivery group ID associated with the user\&quot;s authorization relationship. When querying by delivery group, this value is the same as the request parameter. When querying by delivery group set, this value is the primary delivery group ID of the set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>big-3jm9d0abc00example</para>
+            /// <para>aig-9ciijz60n4xsv****</para>
             /// </summary>
             [NameInMap("AppInstanceGroupId")]
             [Validation(Required=false)]
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The delivery group set ID of this query. This field is returned when querying by set.</para>
+            /// <para>The delivery group set ID. Returned only when querying by delivery group set. The value is the same as the AppInstanceGroupSetId request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>set-3jm9d0abc00example</para>
@@ -101,19 +105,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupSetId { get; set; }
 
             /// <summary>
-            /// <para>The list of persistent session IDs authorized to the user. This field is returned when the authorization mode is <c>Session</c>.</para>
+            /// <para>The list of persistent session IDs granted to the user. Returned only when the delivery group authorization mode (AuthMode) is <c>Session</c>. This list is not affected by the AppInstancePersistentId request parameter and always includes all persistent sessions granted to the user.</para>
             /// </summary>
             [NameInMap("AppInstancePersistentIds")]
             [Validation(Required=false)]
             public List<string> AppInstancePersistentIds { get; set; }
 
             /// <summary>
-            /// <para>The authorization mode of the delivery group. Valid values:</para>
+            /// <para>The authorization mode of the delivery group, which determines the scope of results returned by this operation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>App</c>: Authorization by application.</description></item>
-            /// <item><description><c>Session</c>: Authorization by persistent session.</description></item>
-            /// <item><description><c>AppInstanceGroup</c>: Authorization by delivery group.</description></item>
+            /// <item><description>App: Application-level authorization. Applications within the delivery group are authorized to users without restricting which sessions the users can use.</description></item>
+            /// <item><description>Session: Session-level authorization. Persistent sessions within the delivery group are authorized to users without restricting which applications the users can use. In this case, AppInstancePersistentIds returns the persistent sessions granted to the user.</description></item>
+            /// <item><description>AppInstanceGroup: Delivery group-level authorization. The entire delivery group is authorized to users, allowing them to open any application using any session within the delivery group.</description></item>
             /// </list>
+            /// <para>When querying by delivery group set, the authorization mode of the primary delivery group in the set is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppInstanceGroup</para>
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthMode { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user. This field may not be returned if the email address is not available.</para>
+            /// <para>The email address of the user. Returned only when the account information of the user can be retrieved.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:alice@example.com">alice@example.com</a></para>
@@ -133,7 +138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The authorized username.</para>
+            /// <para>The username. To remove authorization, pass this value to the UnAuthorizeUserIds parameter of the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -145,10 +150,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>Indicates whether the query is not restricted to a specific application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: No application filter condition is specified.</description></item>
-            /// <item><description><c>false</c>: An application filter condition is specified.</description></item>
+            /// <item><description>true: AppId is not specified in the request. All authorized users under the delivery group are returned.</description></item>
+            /// <item><description>false: AppId is specified in the request. Only users authorized for that specific application are returned.</description></item>
             /// </list>
-            /// <para>This field is determined by the query conditions and cannot be used alone to determine whether the user is authorized for all applications.</para>
+            /// <remarks>
+            /// <para>This field is determined by whether the AppId request parameter is specified. It does not reflect the actual scope of applications authorized to the user and cannot be used to determine whether the user is authorized for all applications.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -158,7 +165,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string IsAuthAllApps { get; set; }
 
             /// <summary>
-            /// <para>The phone number of the user. This field may not be returned if the phone number is not available.</para>
+            /// <para>The phone number of the user. Returned only when the account information of the user can be retrieved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>138****0000</para>
