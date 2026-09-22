@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateSkillDraftResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill-1234567890abcdef</para>

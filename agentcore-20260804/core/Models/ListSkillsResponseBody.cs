@@ -54,6 +54,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
+                /// <para>The draft mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>HEAD: The Skill has a persistent draft.</description></item>
+                /// <item><description>VERSIONED: Each edit creates a versioned draft.</description></item>
+                /// </list>
+                /// <para>The value is determined by the server. The caller uses this value to render the status column.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HEAD</para>
                 /// </summary>
@@ -62,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string DraftMode { get; set; }
 
                 /// <summary>
-                /// <para>The version that is being edited.</para>
+                /// <para>The version that is being edited. In HEAD draft mode, the value is HEAD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -126,7 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The version that is under review.</para>
+                /// <para>The version that is under review. In HEAD draft mode, the value is HEAD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -207,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

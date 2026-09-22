@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The draft version number to assign. If not specified, the version number is automatically incremented.</para>
+            /// <para>The draft version number. If not specified, the version number is automatically incremented.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.2</para>

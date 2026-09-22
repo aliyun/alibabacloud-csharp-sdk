@@ -4604,7 +4604,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
         /// </description>
         /// 
@@ -4650,7 +4650,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
         /// </description>
         /// 
@@ -4696,7 +4696,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
         /// </description>
         /// 
@@ -4721,7 +4721,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
         /// </description>
         /// 
@@ -5436,7 +5436,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
         /// </description>
         /// 
@@ -5482,7 +5482,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
         /// </description>
         /// 
@@ -5528,7 +5528,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
         /// </description>
         /// 
@@ -5553,7 +5553,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
         /// </description>
         /// 
@@ -13019,13 +13019,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13103,13 +13103,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13187,13 +13187,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13212,13 +13212,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// <para>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14367,13 +14367,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <h2>Request description</h2>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14425,13 +14425,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <h2>Request description</h2>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14483,13 +14483,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <h2>Request description</h2>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14508,13 +14508,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// <h2>Request description</h2>
+        /// <para>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</para>
         /// </description>
         /// 
         /// <param name="request">

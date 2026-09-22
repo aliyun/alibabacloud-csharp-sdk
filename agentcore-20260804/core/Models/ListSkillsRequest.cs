@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field. The value download_count is supported. Default value: gmt_modified.</para>
+        /// <para>The field by which to sort results. The value download_count is supported. Default value: gmt_modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
