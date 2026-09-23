@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).</para>
+            /// <para>The client IDs. Multiple client IDs are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>598469743454717****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).</para>
+            /// <para>The fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>902ef2deeb3c5b13ea4c3d5193629309e231****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Fingerprints { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the OIDC IdP was created.</para>
+            /// <para>The time when the OIDC IdP was created. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636613763000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the OIDC IdP was modified.</para>
+            /// <para>The time when the OIDC IdP was last modified. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636706309000</para>
@@ -87,7 +87,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</para>
+            /// <para>The earliest time when an external IdP is allowed to issue an ID token. If the iat field in the ID token indicates a time earlier than the current time by more than this value, the request is rejected.
+            /// Unit: hours. Valid values: 1 to 168.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -97,7 +98,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public long? IssuanceLimitTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the issuer.</para>
+            /// <para>The issuer URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></para>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string OIDCProviderName { get; set; }
 
             /// <summary>
-            /// <para>The time when the OIDC IdP was modified. The time is displayed in UTC.</para>
+            /// <para>The time when the OIDC IdP was last modified. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-12T08:38:29Z</para>

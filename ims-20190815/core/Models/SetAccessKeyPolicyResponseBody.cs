@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetAccessKeyPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID.</para>
+        /// <para>The access key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LTAI*******************</para>

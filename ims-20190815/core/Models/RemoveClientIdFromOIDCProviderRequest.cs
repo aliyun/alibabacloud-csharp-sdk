@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class RemoveClientIdFromOIDCProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID that you want to remove.</para>
-        /// <para>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <c>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</c>.\<c>\\</c></para>
-        /// <para>The client ID can be up to 128 characters in length.</para>
+        /// <para>The client ID to remove.</para>
+        /// <para>Format: letters, digits, and the special characters <c>.-_:/</c> are allowed. The value cannot start with the special characters <c>.-_:/</c>.</para>
+        /// <para>Length: up to 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>498469743454717****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The name of the OIDC IdP.</para>
+        /// <para>The name of an existing OIDC IdP that has the target <c>ClientId</c> attached. If you have not created or attached one, call <c>CreateOIDCProvider</c> (with <c>ClientIds</c> specified) or <c>AddClientIdToOIDCProvider</c> first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestOIDCProvider</para>

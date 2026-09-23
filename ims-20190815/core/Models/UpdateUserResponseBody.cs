@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the RAM user.</para>
+        /// <para>The Resource Access Management (RAM) user information.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public UpdateUserResponseBodyUser User { get; set; }
         public class UpdateUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The comments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a cloud computing engineer.</para>
@@ -37,7 +37,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM user was created.</para>
+            /// <para>The time when the Resource Access Management (RAM) user was created.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-12T09:12:00Z</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The display name of the RAM user.</para>
+            /// <para>The display name of the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>new</para>
@@ -57,9 +58,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the RAM user.</para>
+            /// <para>The email address of the Resource Access Management (RAM) user.</para>
             /// <remarks>
-            /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+            /// <para>This parameter is applicable only to China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +71,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</para>
+            /// <para>The most recent time when the Resource Access Management (RAM) user logged on to the console.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-12T09:12:00Z</para>
@@ -80,9 +82,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string LastLoginDate { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number of the RAM user.</para>
+            /// <para>The mobile phone number of the Resource Access Management (RAM) user.</para>
             /// <remarks>
-            /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+            /// <para>This parameter is applicable only to China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,14 +95,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string MobilePhone { get; set; }
 
             /// <summary>
-            /// <para>The source of the RAM user. Valid values:</para>
+            /// <para>The synchronization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Manual: The RAM user is manually created in the RAM console.</para>
-            /// </description></item>
-            /// <item><description><para>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</para>
-            /// </description></item>
-            /// <item><description><para>CloudSSO: The RAM user is mapped from a CloudSSO user.</para>
-            /// </description></item>
+            /// <item><description>Manual: The Resource Access Management (RAM) user was manually created in RAM.</description></item>
+            /// <item><description>SCIM: The Resource Access Management (RAM) user was created by using the System for Cross-domain Identity Management protocol.</description></item>
+            /// <item><description>CloudSSO: The user was created by using CloudSSO.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +110,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the RAM user was updated.</para>
+            /// <para>The time when the Resource Access Management (RAM) user was last updated.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-13T09:19:49Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-13T09:19:49Z</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string UpdateDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM user.</para>
+            /// <para>The ID of the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20732900249392****</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The logon name of the RAM user.</para>
+            /// <para>The logon name of the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></para>

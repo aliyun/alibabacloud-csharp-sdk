@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListApplicationProvisionInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the applications. Valid values:</para>
+        /// <para>The source type of the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>inner: The applications are from the current account.</para>
-        /// </description></item>
-        /// <item><description><para>external: The applications are from other accounts.</para>
-        /// </description></item>
+        /// <item><description>inner: applications from the current account.</description></item>
+        /// <item><description>external: applications from other accounts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

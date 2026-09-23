@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The logon name of the Resource Access Management (RAM) user.
-        /// If not specified, the service credential of the current caller identity that invokes this operation is retrieved.</para>
+        /// If not specified, the service credential of the current identity that invokes this operation is retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>

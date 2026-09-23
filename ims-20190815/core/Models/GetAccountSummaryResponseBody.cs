@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetAccountSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81313F5E-3C85-478F-BCC9-E1B70E4556DB</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An overview of the Alibaba Cloud account.</para>
+        /// <para>The overview information of the Alibaba Cloud account.</para>
         /// </summary>
         [NameInMap("SummaryMap")]
         [Validation(Required=false)]
         public GetAccountSummaryResponseBodySummaryMap SummaryMap { get; set; }
         public class GetAccountSummaryResponseBodySummaryMap : TeaModel {
             /// <summary>
-            /// <para>The maximum number of access keys that a RAM user can have.</para>
+            /// <para>The maximum number of AccessKey pairs that each Resource Access Management (RAM) user can have.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AccessKeysPerUserQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of access keys that an Alibaba Cloud account can have.</para>
+            /// <para>The maximum number of AccessKey pairs for the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AccountAccessKeysPerAccountQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of custom policies that can be attached to a user group.</para>
+            /// <para>The maximum number of custom policies that can be attached to each user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedPoliciesPerGroupQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of custom policies that can be attached to a RAM role.</para>
+            /// <para>The maximum number of custom policies that can be attached to each RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedPoliciesPerRoleQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of custom policies that can be attached to a RAM user.</para>
+            /// <para>The maximum number of custom policies that can be attached to each RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedPoliciesPerUserQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of system policies that can be attached to a user group.</para>
+            /// <para>The maximum number of system policies that can be attached to each user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedSystemPoliciesPerGroupQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of system policies that can be attached to a RAM role.</para>
+            /// <para>The maximum number of system policies that can be attached to each RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedSystemPoliciesPerRoleQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of system policies that can be attached to a RAM user.</para>
+            /// <para>The maximum number of system policies that can be attached to each RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -106,12 +106,18 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? AttachedSystemPoliciesPerUserQuota { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of authorized clients that each RAM user can have.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AuthorizedClientPerUserQuota")]
             [Validation(Required=false)]
             public int? AuthorizedClientPerUserQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of conditions allowed in a network access control policy for an account or an access key.</para>
+            /// <para>The maximum number of policy entries that can be specified in an account-level or AccessKey-level network access restriction policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? Groups { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of user groups to which a RAM user can be added.</para>
+            /// <para>The maximum number of user groups that each Resource Access Management (RAM) user can join.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? GroupsQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of IP addresses or CIDR blocks allowed in a network access control policy for an account or an access key.</para>
+            /// <para>The maximum number of IP addresses that can be specified in an account-level or AccessKey-level network access restriction policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? IPItemsPerAKPolicyQuota { get; set; }
 
             /// <summary>
-            /// <para>The number of virtual MFA devices.</para>
+            /// <para>The number of virtual multi-factor authentication devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MFADevices { get; set; }
 
             /// <summary>
-            /// <para>The number of virtual MFA devices in use.</para>
+            /// <para>The number of virtual multi-factor authentication devices in use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -201,7 +207,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? PoliciesQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum character length of a policy document.</para>
+            /// <para>The maximum length of the access policy content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -231,7 +237,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? RolesQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of service-specific credentials that a RAM user can create for each service.</para>
+            /// <para>The maximum number of API keys that each user can create for each service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -241,7 +247,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? ServiceCredentialsPerUserPerServiceQuota { get; set; }
 
             /// <summary>
-            /// <para>The number of RAM users.</para>
+            /// <para>The number of Resource Access Management (RAM) users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -251,7 +257,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? Users { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of RAM users that can be created.</para>
+            /// <para>The maximum number of Resource Access Management (RAM) users that can be created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -261,7 +267,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? UsersQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of versions that can be created for a policy.</para>
+            /// <para>The maximum number of access policy versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -271,7 +277,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? VersionsPerPolicyQuota { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of virtual MFA devices that can be created.</para>
+            /// <para>The maximum number of virtual multi-factor authentication devices that can be created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>

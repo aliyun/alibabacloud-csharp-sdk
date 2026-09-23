@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the RAM user group.</para>
+        /// <para>The user group information.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public UpdateGroupResponseBodyGroup Group { get; set; }
         public class UpdateGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The comments.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试团队</para>
+            /// <para>Test team</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-19T16:15:17Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-19T16:15:17Z</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The display name of the RAM user group.</para>
+            /// <para>The display name of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test-Team</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM user group.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>740317625433843****</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM user group.</para>
+            /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test-Team</para>
@@ -68,6 +69,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             /// <summary>
             /// <para>The update time.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-20T03:44:27Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-20T03:44:27Z</para>

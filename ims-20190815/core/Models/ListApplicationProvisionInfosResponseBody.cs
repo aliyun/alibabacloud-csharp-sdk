@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
+                [NameInMap("AppCategory")]
+                [Validation(Required=false)]
+                public string AppCategory { get; set; }
+
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("AssignmentType")]
+                [Validation(Required=false)]
+                public string AssignmentType { get; set; }
 
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
@@ -62,6 +70,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("NeedPrincipalConsent")]
+                [Validation(Required=false)]
+                public bool? NeedPrincipalConsent { get; set; }
 
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]

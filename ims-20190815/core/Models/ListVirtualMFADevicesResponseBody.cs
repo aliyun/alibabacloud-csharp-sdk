@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <para>Indicates whether the returned results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for querying the next page of results.</para>
         /// <remarks>
         /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>

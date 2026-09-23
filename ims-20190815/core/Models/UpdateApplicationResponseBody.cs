@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AccessTokenValidity { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the application belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the application belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>177242285274****</para>
@@ -67,7 +67,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The creation time.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -77,15 +78,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The information about the permissions that are granted on the application.</para>
+            /// <para>The permission scope information of the application.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
             public UpdateApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
             public class UpdateApplicationResponseBodyApplicationDelegatedScope : TeaModel {
-                /// <summary>
-                /// <para>The information about the permissions that are granted on the application.</para>
-                /// </summary>
                 [NameInMap("PredefinedScopes")]
                 [Validation(Required=false)]
                 public UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes PredefinedScopes { get; set; }
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the application is allowed to be installed by other accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -135,10 +133,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// <para>The OAuth protocol version of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>2.0</c>: OAuth 2.0</para>
-            /// </description></item>
-            /// <item><description><para><c>2.1</c>: OAuth 2.1</para>
-            /// </description></item>
+            /// <item><description><c>2.0</c>: OAuth 2.0 protocol.</description></item>
+            /// <item><description><c>2.1</c>: OAuth 2.1 protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,9 +144,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string ProtocolVersion { get; set; }
 
-            /// <summary>
-            /// <para>The redirect URLs.</para>
-            /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
             public UpdateApplicationResponseBodyApplicationRedirectUris RedirectUris { get; set; }
@@ -172,7 +165,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? RefreshTokenValidity { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a secret is required.</para>
+            /// <para>Indicates whether an application secret is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -182,7 +175,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? SecretRequired { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was updated.</para>
+            /// <para>The update time.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>

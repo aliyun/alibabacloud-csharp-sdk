@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public class GetServiceCredentialResponseBodyServiceCredential : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>Format: RFC 3339 (UTC), for example, 2026-03-15T09:20:58Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-15T09:20:58Z</para>
@@ -37,7 +38,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. This field is not returned for permanent service credentials.</para>
+            /// <para>The expiration time.
+            /// This field is not returned for permanent service credentials.</para>
+            /// <para>Format: RFC 3339 (UTC), for example, 2026-04-15T09:20:58Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-15T09:20:58Z</para>

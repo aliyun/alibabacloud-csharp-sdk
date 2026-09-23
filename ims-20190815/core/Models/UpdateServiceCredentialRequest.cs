@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateServiceCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The service credential ID.</para>
+        /// <para>The ID of the service credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ServiceCredentialId { get; set; }
 
         /// <summary>
-        /// <para>The name of the service credential. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). Specify at least one of Status and ServiceCredentialName.</para>
+        /// <para>The name of the service credential. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). You must specify at least one of Status and ServiceCredentialName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourServiceCredentialName</para>
@@ -31,12 +31,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ServiceCredentialName { get; set; }
 
         /// <summary>
-        /// <para>The status of the service credential. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Active</description></item>
-        /// <item><description>Inactive</description></item>
-        /// </list>
-        /// <para>Specify at least one of Status and ServiceCredentialName.</para>
+        /// <para>The status of the service credential. Valid values: Active, Inactive. You must specify at least one of Status and ServiceCredentialName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -46,7 +41,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The logon name of the Resource Access Management (RAM) user. If this parameter is not specified, the service credential of the identity that invokes this operation is modified.</para>
+        /// <para>The logon name of the Resource Access Management (RAM) user. If not specified, the service credential of the current invoke identity is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>

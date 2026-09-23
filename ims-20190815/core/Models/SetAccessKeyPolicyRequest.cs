@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string AccessKeyPolicy { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey ID.</para>
+        /// <para>The access key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The logon name of the RAM user. </para>
-        /// <para>If this parameter is left empty, the network access restriction policy is set for the specified AccessKey pair of the current user by default.</para>
+        /// <para>If this parameter is left empty, the network access restriction policy is set for the specified access key of the current user by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>

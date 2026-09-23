@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the RAM user.</para>
-        /// <para>The description must be 1 to 128 characters in length.</para>
+        /// <para>The new comments.</para>
+        /// <para>The comments must be 1 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a cloud computing engineer.</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewComments { get; set; }
 
         /// <summary>
-        /// <para>The new display name of the RAM user.</para>
+        /// <para>The new display name of the Resource Access Management (RAM) user.</para>
         /// <para>The name must be 1 to 24 characters in length.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The new email address of the RAM user.</para>
+        /// <para>The new email address of the Resource Access Management (RAM) user.</para>
         /// <remarks>
-        /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+        /// <para>This parameter is applicable only to China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewEmail { get; set; }
 
         /// <summary>
-        /// <para>The new mobile phone number of the RAM user.</para>
-        /// <para>Format: \<Country code>-\<Mobile phone number>.</para>
+        /// <para>The new mobile phone number of the Resource Access Management (RAM) user.</para>
+        /// <para>Format: area code-phone number.</para>
         /// <remarks>
-        /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+        /// <para>This parameter is applicable only to China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewMobilePhone { get; set; }
 
         /// <summary>
-        /// <para>The new logon name of the RAM user.</para>
-        /// <para>The name is in the format of <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>. <c>&lt;username&gt;</c> indicates the name of the RAM user. <c>&lt;AccountAlias&gt;.onaliyun.com</c> indicates the default domain name.</para>
-        /// <para>The value of <c>NewUserPrincipalName</c> must be <c>1 to 128</c> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be <c>1 to 64</c> characters in length.</para>
+        /// <para>The new logon name of the Resource Access Management (RAM) user.</para>
+        /// <para>The format is <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>, where <c>&lt;username&gt;</c> is the RAM username and <c>&lt;AccountAlias&gt;.onaliyun.com</c> is the default domain name.</para>
+        /// <para>The <c>UserPrincipalName</c> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The <c>&lt;username&gt;</c> must be 1 to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></para>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewUserPrincipalName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user.</para>
+        /// <para>The ID of the specified Resource Access Management (RAM) user.</para>
         /// <remarks>
-        /// <para>You must specify only one of the following parameters: <c>UserPrincipalName</c> and <c>UserId</c>.</para>
+        /// <para>You must specify either the <c>UserPrincipalName</c> or <c>UserId</c> parameter, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The logon name of the RAM user.</para>
+        /// <para>The logon name of the specified Resource Access Management (RAM) user.</para>
         /// <remarks>
-        /// <para>You must specify only one of the following parameters: <c>UserPrincipalName</c> and <c>UserId</c>.</para>
+        /// <para>You must specify either the <c>UserPrincipalName</c> or <c>UserId</c> parameter, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

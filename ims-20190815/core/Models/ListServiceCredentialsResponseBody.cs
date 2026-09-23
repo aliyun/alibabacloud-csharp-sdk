@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListServiceCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether there is a next page of results.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE*******</para>
@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public class ListServiceCredentialsResponseBodyServiceCredentials : TeaModel {
             /// <summary>
             /// <para>The time when the service credential was created.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2026-05-07T05:49:57Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-07T05:49:57Z</para>
@@ -68,6 +69,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             /// <summary>
             /// <para>The expiration time. This field is not returned for permanent service credentials.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2026-06-07T05:49:57Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-07T05:49:57Z</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ServiceCredentialName { get; set; }
 
             /// <summary>
-            /// <para>The service name of the Alibaba Cloud service.</para>
+            /// <para>The Alibaba Cloud service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.aliyuncs.com</para>

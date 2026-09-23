@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateServiceCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration time of the service credential, in days.
-        /// Valid values: 1 to 36600.
-        /// If this parameter is not specified, the service credential is permanently valid.</para>
+        /// <para>The expiration period of the service credential, in days. Valid values: 1 to 36600. If this parameter is not specified, the service credential never expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -25,8 +23,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? CredentialAgeDays { get; set; }
 
         /// <summary>
-        /// <para>The service credential name.
-        /// The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
+        /// <para>The name of the service credential. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +34,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ServiceCredentialName { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud service name.</para>
+        /// <para>The service name of the Alibaba Cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,8 +45,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The logon name of the RAM user.
-        /// If this parameter is left empty, a service credential is created for the current user by default.</para>
+        /// <para>The logon name of the RAM user. If this parameter is left empty, the service credential is created for the current user by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>

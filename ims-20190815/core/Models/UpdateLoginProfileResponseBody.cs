@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The console logon settings.</para>
+        /// <para>The console logon information.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public UpdateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class UpdateLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to automatically disable console logon for an inactive account. This feature is enabled by default and cannot be disabled.</para>
+            /// <para>Indicates whether console logon is automatically disabled when the idle disable conditions are met. This feature is enabled by default and cannot be disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AutoDisableLoginStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether MFA is enforced for the user.</para>
+            /// <para>Indicates whether the user is required to enable multi-factor authentication (MFA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must reset the password at the next logon.</para>
+            /// <para>Indicates whether the Resource Access Management (RAM) user is required to reset the password at the next logon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,15 +47,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// <para>The status of the initial password. An initial password is the one set when a logon profile is created or console logon is re-enabled.</para>
+            /// <para>The status of the initial password. The initial password refers to the password that is set when console logon is newly created or re-enabled.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>&quot;NotInitial&quot;: Not an initial password.</para>
-            /// </description></item>
-            /// <item><description><para>&quot;InitialValid&quot;: The initial password is valid.</para>
-            /// </description></item>
-            /// <item><description><para>&quot;InitialExpired&quot;: The initial password has expired.</para>
-            /// </description></item>
+            /// <item><description>NotInitial: The password is not an initial password.</description></item>
+            /// <item><description>InitialValid: The initial password is valid.</description></item>
+            /// <item><description>InitialExpired: The initial password has expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +63,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string PasswordStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether password logon to the console is enabled or disabled.</para>
+            /// <para>Indicates whether console password logon is enabled or disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -76,7 +73,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the logon profile was updated.</para>
+            /// <para>The update time.</para>
+            /// <para>Format: RFC 3339 (UTC). Example: 2020-10-14T07:48:41Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T07:48:41Z</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string UpdateDate { get; set; }
 
             /// <summary>
-            /// <para>The logon name of the RAM user.</para>
+            /// <para>The logon name of the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@example11.onaliyun.com">test@example11.onaliyun.com</a></para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string PasskeyId { get; set; }
 
         /// <summary>
-        /// <para>The logon name of the RAM user.</para>
+        /// <para>The logon name of the Resource Access Management (RAM) user.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>

@@ -18,11 +18,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hangzhou", "ims.aliyuncs.com"},
-            };
+            this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ims", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1863,7 +1859,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1917,7 +1913,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1971,7 +1967,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1989,7 +1985,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,7 +3211,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey for a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes a passkey of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3261,7 +3257,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey for a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes a passkey of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3307,7 +3303,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey for a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes a passkey of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3321,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey for a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes a passkey of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3463,8 +3459,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes the service credential of a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>使用说明</h3>
+        /// <para>删除服务凭证前，必须先调用 <c>UpdateServiceCredential</c> 将目标服务凭证的 <c>Status</c> 设置为 <c>Inactive</c>，再调用本接口。<c>Active</c> 状态的服务凭证不能直接删除。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceCredentialRequest
@@ -3509,8 +3511,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes the service credential of a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>使用说明</h3>
+        /// <para>删除服务凭证前，必须先调用 <c>UpdateServiceCredential</c> 将目标服务凭证的 <c>Status</c> 设置为 <c>Inactive</c>，再调用本接口。<c>Active</c> 状态的服务凭证不能直接删除。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceCredentialRequest
@@ -3555,8 +3563,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes the service credential of a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>使用说明</h3>
+        /// <para>删除服务凭证前，必须先调用 <c>UpdateServiceCredential</c> 将目标服务凭证的 <c>Status</c> 设置为 <c>Inactive</c>，再调用本接口。<c>Active</c> 状态的服务凭证不能直接删除。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceCredentialRequest
@@ -3573,8 +3587,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// <para>Deletes the service credential of a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>使用说明</h3>
+        /// <para>删除服务凭证前，必须先调用 <c>UpdateServiceCredential</c> 将目标服务凭证的 <c>Status</c> 设置为 <c>Inactive</c>，再调用本接口。<c>Active</c> 状态的服务凭证不能直接删除。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceCredentialRequest
@@ -5079,7 +5099,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
+        /// <para>Queries the overview information of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -5109,7 +5129,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
+        /// <para>Queries the overview information of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -5139,7 +5159,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
+        /// <para>Queries the overview information of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5153,7 +5173,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
+        /// <para>Queries the overview information of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5438,6 +5458,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries installation information about a specified installed application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetApplicationProvisionInfoRequest
         /// </param>
@@ -5479,6 +5504,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries installation information about a specified installed application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetApplicationProvisionInfoRequest
@@ -5522,6 +5552,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries installation information about a specified installed application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetApplicationProvisionInfoRequest
         /// </param>
@@ -5539,6 +5574,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries installation information about a specified installed application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetApplicationProvisionInfoRequest
@@ -5774,6 +5814,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about an installed external application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口时，<c>AppId</c> 必须来自当前账号已安装的外部应用。可先调用 <c>ListExternalApplications</c> 获取；如果账号中没有已安装的外部应用，需先调用 <c>ProvisionExternalApplication</c> 安装。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetExternalApplicationRequest
         /// </param>
@@ -5815,6 +5860,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries information about an installed external application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口时，<c>AppId</c> 必须来自当前账号已安装的外部应用。可先调用 <c>ListExternalApplications</c> 获取；如果账号中没有已安装的外部应用，需先调用 <c>ProvisionExternalApplication</c> 安装。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExternalApplicationRequest
@@ -5858,6 +5908,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about an installed external application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口时，<c>AppId</c> 必须来自当前账号已安装的外部应用。可先调用 <c>ListExternalApplications</c> 获取；如果账号中没有已安装的外部应用，需先调用 <c>ProvisionExternalApplication</c> 安装。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetExternalApplicationRequest
         /// </param>
@@ -5875,6 +5930,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries information about an installed external application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口时，<c>AppId</c> 必须来自当前账号已安装的外部应用。可先调用 <c>ListExternalApplications</c> 获取；如果账号中没有已安装的外部应用，需先调用 <c>ProvisionExternalApplication</c> 安装。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExternalApplicationRequest
@@ -6238,6 +6298,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询前，目标 RAM 用户必须已有控制台登录配置（<c>LoginProfile</c>）；如果尚未配置，需先调用 <c>CreateLoginProfile</c> 创建登录配置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -6279,6 +6344,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询前，目标 RAM 用户必须已有控制台登录配置（<c>LoginProfile</c>）；如果尚未配置，需先调用 <c>CreateLoginProfile</c> 创建登录配置。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginProfileRequest
@@ -6322,6 +6392,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询前，目标 RAM 用户必须已有控制台登录配置（<c>LoginProfile</c>）；如果尚未配置，需先调用 <c>CreateLoginProfile</c> 创建登录配置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -6339,6 +6414,11 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <summary>
         /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询前，目标 RAM 用户必须已有控制台登录配置（<c>LoginProfile</c>）；如果尚未配置，需先调用 <c>CreateLoginProfile</c> 创建登录配置。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginProfileRequest
@@ -7875,7 +7955,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about all installed applications.</para>
+        /// <para>Queries the installation information of all installed applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7917,7 +7997,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about all installed applications.</para>
+        /// <para>Queries the installation information of all installed applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7959,7 +8039,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about all installed applications.</para>
+        /// <para>Queries the installation information of all installed applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7977,7 +8057,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about all installed applications.</para>
+        /// <para>Queries the installation information of all installed applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9047,7 +9127,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all Resource Access Management (RAM) users under an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9105,7 +9185,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all Resource Access Management (RAM) users under an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9163,7 +9243,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all Resource Access Management (RAM) users under an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9181,7 +9261,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all Resource Access Management (RAM) users under an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10039,7 +10119,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries the list of multi-factor authentication devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10085,7 +10165,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries the list of multi-factor authentication devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10131,7 +10211,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries the list of multi-factor authentication devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10149,7 +10229,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries the list of multi-factor authentication devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10423,12 +10503,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Usage notes</h3>
         /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
@@ -10475,12 +10555,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Usage notes</h3>
         /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
@@ -10527,12 +10607,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Usage notes</h3>
         /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
@@ -10551,12 +10631,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Usage notes</h3>
         /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
@@ -11103,7 +11183,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// <para>Settings the network access restriction policy for an access key of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11153,7 +11233,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// <para>Settings the network access restriction policy for an access key of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11203,7 +11283,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// <para>Settings the network access restriction policy for an access key of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11221,7 +11301,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// <para>Settings the network access restriction policy for an access key of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12803,7 +12883,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration information of an application.</para>
+        /// <para>Modifies the configuration of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12877,7 +12957,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration information of an application.</para>
+        /// <para>Modifies the configuration of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12951,7 +13031,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration information of an application.</para>
+        /// <para>Modifies the configuration of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12969,7 +13049,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration information of an application.</para>
+        /// <para>Modifies the configuration of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12987,7 +13067,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a Resource Access Management (RAM) user group.</para>
+        /// <para>Modifies the basic information of a specified user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13041,7 +13121,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a Resource Access Management (RAM) user group.</para>
+        /// <para>Modifies the basic information of a specified user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13095,7 +13175,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a Resource Access Management (RAM) user group.</para>
+        /// <para>Modifies the basic information of a specified user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13113,7 +13193,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a Resource Access Management (RAM) user group.</para>
+        /// <para>Modifies the basic information of a specified user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13131,7 +13211,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon information of a specified Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13189,7 +13269,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon information of a specified Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13247,7 +13327,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon information of a specified Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13265,7 +13345,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon information of a specified Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13451,7 +13531,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of a passkey.</para>
+        /// <para>Updates a passkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13501,7 +13581,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of a passkey.</para>
+        /// <para>Updates a passkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13551,7 +13631,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of a passkey.</para>
+        /// <para>Updates a passkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13569,7 +13649,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of a passkey.</para>
+        /// <para>Updates a passkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13751,7 +13831,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// <para>Updates the status or name of a service credential for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13805,7 +13885,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// <para>Updates the status or name of a service credential for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13859,7 +13939,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// <para>Updates the status or name of a service credential for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13877,7 +13957,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// <para>Updates the status or name of a service credential for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13895,13 +13975,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a RAM user.</para>
+        /// <para>Invokes UpdateUser to modify the information of a Resource Access Management (RAM) user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example to show how to modify the name of a RAM user from <c>test@example.onaliyun.com</c> to <c>new@example.onaliyun.com</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -13966,13 +14041,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a RAM user.</para>
+        /// <para>Invokes UpdateUser to modify the information of a Resource Access Management (RAM) user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example to show how to modify the name of a RAM user from <c>test@example.onaliyun.com</c> to <c>new@example.onaliyun.com</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -14037,13 +14107,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a RAM user.</para>
+        /// <para>Invokes UpdateUser to modify the information of a Resource Access Management (RAM) user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example to show how to modify the name of a RAM user from <c>test@example.onaliyun.com</c> to <c>new@example.onaliyun.com</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -14060,13 +14125,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a RAM user.</para>
+        /// <para>Invokes UpdateUser to modify the information of a Resource Access Management (RAM) user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example to show how to modify the name of a RAM user from <c>test@example.onaliyun.com</c> to <c>new@example.onaliyun.com</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest

@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>ThirdParty</para>
+            /// </summary>
+            [NameInMap("AppCategory")]
+            [Validation(Required=false)]
+            public string AppCategory { get; set; }
+
+            /// <summary>
             /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +53,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AllowAll</para>
+            /// </summary>
+            [NameInMap("AssignmentType")]
+            [Validation(Required=false)]
+            public string AssignmentType { get; set; }
 
             /// <summary>
             /// <para>The time when the application was installed. The value is a timestamp.</para>
@@ -94,6 +110,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("NeedPrincipalConsent")]
+            [Validation(Required=false)]
+            public bool? NeedPrincipalConsent { get; set; }
 
             /// <summary>
             /// <para>The update time. The value is a timestamp.</para>

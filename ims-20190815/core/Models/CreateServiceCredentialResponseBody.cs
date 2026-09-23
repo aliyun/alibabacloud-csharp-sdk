@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public CreateServiceCredentialResponseBodyServiceCredential ServiceCredential { get; set; }
         public class CreateServiceCredentialResponseBodyServiceCredential : TeaModel {
             /// <summary>
-            /// <para>The time when the service credential was created.</para>
+            /// <para>The time when the service credential was created. The time follows RFC 3339 (UTC). Example: 2026-01-01T10:05:24Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T10:05:24Z</para>
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the service credential.
-            /// This field is not returned for permanently valid service credentials.</para>
+            /// <para>The expiration time of the service credential. This field is not returned for service credentials that never expire. The time follows RFC 3339 (UTC). Example: 2026-02-01T10:05:24Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-01T10:05:24Z</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The service credential ID.</para>
+            /// <para>The ID of the service credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SC*************</para>
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ServiceCredentialId { get; set; }
 
             /// <summary>
-            /// <para>The service credential name.</para>
+            /// <para>The name of the service credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourServiceCredentialName</para>
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ServiceCredentialSecret { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud service name.</para>
+            /// <para>The service name of the Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.aliyuncs.com</para>
@@ -91,7 +90,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the service credential.</para>
+            /// <para>The status of the service credential. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active: enabled.</description></item>
+            /// <item><description>Inactive: disabled.</description></item>
+            /// <item><description>Expired: expired.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>

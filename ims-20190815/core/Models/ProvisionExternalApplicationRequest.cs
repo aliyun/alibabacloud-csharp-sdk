@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ProvisionExternalApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the external application that was created by another Alibaba Cloud account and can be installed by the current account. The application IDs returned by <c>ListApplications</c> for the current account are not applicable. <c>ListExternalApplications</c> and <c>ListApplicationProvisionInfos</c> only query installed records and cannot discover external application IDs that have not been installed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The permissions that are granted to the application. Separate multiple permissions with a semicolon (;).</para>
+        /// <para>The permission scopes granted to the application. You can specify multiple scopes separated by semicolons (;).</para>
         /// <remarks>
-        /// <para>For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</para>
+        /// <para>For supported permission scopes, refer to &quot;OAuth Scopes&quot; in <a href="https://help.aliyun.com/document_detail/93693.html">OAuth application overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

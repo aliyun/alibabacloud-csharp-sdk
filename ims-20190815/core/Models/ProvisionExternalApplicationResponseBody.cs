@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ProvisionExternalApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the external application.</para>
+        /// <para>The external application information.</para>
         /// </summary>
         [NameInMap("ExternalApplication")]
         [Validation(Required=false)]
         public ProvisionExternalApplicationResponseBodyExternalApplication ExternalApplication { get; set; }
         public class ProvisionExternalApplicationResponseBodyExternalApplication : TeaModel {
             /// <summary>
-            /// <para>The name of the application principal. The value is in the <c>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</c> format.</para>
+            /// <para>The application principal name in the format of <c>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:GiteePrd@app.177242285274">GiteePrd@app.177242285274</a>****.onaliyun.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppPrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was installed. The value is a timestamp.</para>
+            /// <para>The installation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603693518000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The information about the scopes of permissions that are granted to the application.</para>
+            /// <para>The permission scope information of the application.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The display name of the application.</para>
+            /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GiteeAliyun</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The external application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>403550611646604****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ForeignAppId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the external application belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the external application is installed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>157242285274****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The update time. The value is a timestamp.</para>
+            /// <para>The update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603693518000</para>

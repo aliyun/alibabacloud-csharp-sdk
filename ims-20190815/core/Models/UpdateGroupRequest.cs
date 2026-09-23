@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM user group.</para>
+        /// <para>The name of the user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dev-Team</para>
@@ -20,19 +20,19 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The new description.</para>
-        /// <para>The description can be up to 128 characters in length.</para>
+        /// <para>The new comments.</para>
+        /// <para>Maximum length: 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试团队</para>
+        /// <para>Test team</para>
         /// </summary>
         [NameInMap("NewComments")]
         [Validation(Required=false)]
         public string NewComments { get; set; }
 
         /// <summary>
-        /// <para>The new display name of the RAM user group.</para>
-        /// <para>The name can be up to 24 characters in length.</para>
+        /// <para>The new display name of the user group.</para>
+        /// <para>Maximum length: 24 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test-Team</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The new name of the RAM user group.</para>
-        /// <para>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The new name of the user group.</para>
+        /// <para>Maximum length: 64 characters. The name can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test-Team</para>

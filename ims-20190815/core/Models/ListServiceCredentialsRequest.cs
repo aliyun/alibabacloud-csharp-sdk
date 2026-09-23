@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class ListServiceCredentialsRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to query service credentials for all Resource Access Management (RAM) users under the Alibaba Cloud account.</para>
-        /// <para>If this parameter is set to true, you cannot specify UserPrincipalName at the same time.</para>
+        /// <para>When the value is true, you cannot specify UserPrincipalName at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first API call.</para>
+        /// <para>The token used to retrieve the next page of results. This parameter is not required for the first API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE*******</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The service name of the Alibaba Cloud service.</para>
+        /// <para>The Alibaba Cloud service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx.aliyuncs.com</para>
