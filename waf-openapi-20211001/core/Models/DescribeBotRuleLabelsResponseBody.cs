@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBotRuleLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</para>
+        /// <para>The pagination token for the next page. If a next page exists, this field returns a value.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter returns a value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19****5EB0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeBotRuleLabelsResponseBodyRuleLabels> RuleLabels { get; set; }
         public class DescribeBotRuleLabelsResponseBodyRuleLabels : TeaModel {
             /// <summary>
-            /// <para>The crawler behavior corresponding to the rule tag.</para>
+            /// <para>The crawler behavior corresponding to the rule tag. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>malicious</b>: malicious crawler.</description></item>
             /// <item><description><b>suspicious</b>: suspected crawler.</description></item>
@@ -67,12 +67,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The default action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>block</b>: Block.</description></item>
-            /// <item><description><b>monitor</b>: Monitor.</description></item>
+            /// <item><description><b>block</b>: block.</description></item>
+            /// <item><description><b>monitor</b>: monitor.</description></item>
             /// <item><description><b>js</b>: JavaScript verification.</description></item>
             /// <item><description><b>captcha</b>: slider CAPTCHA.</description></item>
             /// <item><description><b>captcha_strict</b>: strict slider CAPTCHA.</description></item>
-            /// <item><description><b>bypass</b>: Allow.</description></item>
+            /// <item><description><b>bypass</b>: allow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefaultConfig { get; set; }
 
             /// <summary>
-            /// <para>The default status of the tag rule.</para>
+            /// <para>The default status of the tag rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The rule is enabled.</description></item>
-            /// <item><description><b>0</b>: The rule is disabled.</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><b>0</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,10 +117,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string LabelKey { get; set; }
 
             /// <summary>
-            /// <para>The tag status.</para>
+            /// <para>The tag status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: Online.</description></item>
-            /// <item><description><b>wait_offline</b>: Pending offline.</description></item>
+            /// <item><description><b>online</b>: online.</description></item>
+            /// <item><description><b>wait_offline</b>: pending offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string LabelType { get; set; }
 
             /// <summary>
-            /// <para>The set of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</para>
+            /// <para>The collection of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>web</b>: Web protection scenario.</description></item>
             /// <item><description><b>app</b>: App protection scenario.</description></item>

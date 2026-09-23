@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ApiId { get; set; }
 
         /// <summary>
+        /// <para>The list of API IDs.</para>
+        /// </summary>
+        [NameInMap("ApiIds")]
+        [Validation(Required=false)]
+        public List<string> ApiIds { get; set; }
+
+        /// <summary>
         /// <para>The request method of the API. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>GET</b>: GET request.</description></item>
@@ -52,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NewbornInterface</b>: newly added.</description></item>
-        /// <item><description><b>OfflineInterface</b>: inactive.</description></item>
-        /// <item><description><b>normal</b>: normal.</description></item>
+        /// <item><description><b>NewbornInterface</b>: New.</description></item>
+        /// <item><description><b>OfflineInterface</b>: Inactive.</description></item>
+        /// <item><description><b>normal</b>: Normal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,9 +87,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The service object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PublicAPI</b>: public service.</description></item>
-        /// <item><description><b>ThirdpartAPI</b>: third-party collaboration.</description></item>
-        /// <item><description><b>InternalAPI</b>: internal office.</description></item>
+        /// <item><description><b>PublicAPI</b>: Public service.</description></item>
+        /// <item><description><b>ThirdpartAPI</b>: Third-party collaboration.</description></item>
+        /// <item><description><b>InternalAPI</b>: Internal office.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +102,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Specifies whether the API has an authentication field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: has authentication.</description></item>
-        /// <item><description><b>1</b>: does not have authentication.</description></item>
+        /// <item><description><b>0</b>: Has authentication.</description></item>
+        /// <item><description><b>1</b>: Does not have authentication.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,8 +139,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Specifies whether the API is followed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: followed.</description></item>
-        /// <item><description><b>0</b>: not followed.</description></item>
+        /// <item><description><b>1</b>: Followed.</description></item>
+        /// <item><description><b>0</b>: Not followed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,8 +206,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b>: descending order (default).</description></item>
-        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: Descending order (default).</description></item>
+        /// <item><description><b>asc</b>: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,7 +218,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderWay { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paging query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -221,7 +228,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page in a paging query. Default value: <b>10</b>, which indicates that each page contains 10 entries.</para>
+        /// <para>The number of entries to return on each page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -231,7 +238,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -272,10 +279,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The sensitivity level of the API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>L1</b>: high sensitivity.</description></item>
-        /// <item><description><b>L2</b>: medium sensitivity.</description></item>
-        /// <item><description><b>L3</b>: low sensitivity.</description></item>
-        /// <item><description><b>N</b>: not sensitive.</description></item>
+        /// <item><description><b>L1</b>: High sensitivity.</description></item>
+        /// <item><description><b>L2</b>: Medium sensitivity.</description></item>
+        /// <item><description><b>L3</b>: Low sensitivity.</description></item>
+        /// <item><description><b>N</b>: Not sensitive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

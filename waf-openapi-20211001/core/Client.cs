@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Copies the current mitigation template and generates a new mitigation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -728,7 +728,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Copies the current mitigation template and generates a new mitigation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -786,7 +786,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Copies the current mitigation template and generates a new mitigation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Copies the current mitigation template and generates a new mitigation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8087,6 +8087,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ApiId"] = request.ApiId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIds))
+            {
+                query["ApiIds"] = request.ApiIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiMethod))
             {
                 query["ApiMethod"] = request.ApiMethod;
@@ -8216,6 +8220,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
             {
                 query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIds))
+            {
+                query["ApiIds"] = request.ApiIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiMethod))
             {

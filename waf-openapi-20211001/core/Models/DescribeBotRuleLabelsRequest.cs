@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LabelType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</para>
+        /// <para>The pagination token for the next page. If a next page exists, this field returns a value.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter returns a value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of bot management protection scenario.</para>
+        /// <para>The bot management protection scenario type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>
