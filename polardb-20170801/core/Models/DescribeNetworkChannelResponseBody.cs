@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>eni-2z******</para>
+            /// </summary>
+            [NameInMap("EniId")]
+            [Validation(Required=false)]
+            public string EniId { get; set; }
+
+            /// <summary>
             /// <para>The notes about the channel.</para>
             /// 
             /// <b>Example:</b>

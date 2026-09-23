@@ -14962,6 +14962,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBClusterId))
             {
                 query["TargetDBClusterId"] = request.TargetDBClusterId;
@@ -15055,6 +15059,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBClusterId))
             {
@@ -66149,7 +66157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66243,7 +66251,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66337,7 +66345,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66355,7 +66363,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>sg-2z********</para>
+        /// </summary>
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
+        /// <summary>
         /// <para>The name of the destination instance.</para>
         /// 
         /// <b>Example:</b>

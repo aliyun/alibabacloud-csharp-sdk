@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The time when the synchronization link was created.</para>
+        /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-14T05:58:42Z</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The source directory address for synchronization.</para>
+        /// <para>The directory address of the synchronization source.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></para>

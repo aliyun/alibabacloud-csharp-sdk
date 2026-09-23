@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkName { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server address for DingTalk documents.</para>
+        /// <para>The MCP Server endpoint for DingTalk documents.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server address for DingTalk sheets.</para>
+        /// <para>The MCP Server endpoint for DingTalk spreadsheets.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SheetMcpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The source directory address for synchronization.</para>
+        /// <para>The directory address of the synchronization source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
