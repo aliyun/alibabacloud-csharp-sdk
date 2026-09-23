@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SaveCostCenterShareRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The list of sharing rules to create.</para>
+        /// <para>The list of allocation rules to create.</para>
         /// </summary>
         [NameInMap("CreateShareRuleList")]
         [Validation(Required=false)]
         public List<SaveCostCenterShareRuleRequestCreateShareRuleList> CreateShareRuleList { get; set; }
         public class SaveCostCenterShareRuleRequestCreateShareRuleList : TeaModel {
             /// <summary>
-            /// <para>The list of source cost centers.</para>
+            /// <para>The list of source financial units.</para>
             /// </summary>
             [NameInMap("FromCostCenterList")]
             [Validation(Required=false)]
             public List<long?> FromCostCenterList { get; set; }
 
             /// <summary>
-            /// <para>The list of sharing ratios.</para>
+            /// <para>The list of allocation ratios.</para>
             /// </summary>
             [NameInMap("ShareRatioList")]
             [Validation(Required=false)]
             public List<double?> ShareRatioList { get; set; }
 
             /// <summary>
-            /// <para>The name of the sharing rule.</para>
+            /// <para>The name of the allocation rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ShareRuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the sharing rule.</para>
+            /// <para>The type of the allocation rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The list of target cost centers.</para>
+            /// <para>The list of destination financial units.</para>
             /// </summary>
             [NameInMap("ToCostCenterList")]
             [Validation(Required=false)]
@@ -61,28 +61,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The list of sharing rules to modify.</para>
+        /// <para>The list of allocation rules to update.</para>
         /// </summary>
         [NameInMap("ModifyShareRuleList")]
         [Validation(Required=false)]
         public List<SaveCostCenterShareRuleRequestModifyShareRuleList> ModifyShareRuleList { get; set; }
         public class SaveCostCenterShareRuleRequestModifyShareRuleList : TeaModel {
             /// <summary>
-            /// <para>The list of source cost centers.</para>
+            /// <para>The list of source financial units.</para>
             /// </summary>
             [NameInMap("FromCostCenterList")]
             [Validation(Required=false)]
             public List<long?> FromCostCenterList { get; set; }
 
             /// <summary>
-            /// <para>The list of sharing ratios.</para>
+            /// <para>The list of allocation ratios.</para>
             /// </summary>
             [NameInMap("ShareRatioList")]
             [Validation(Required=false)]
             public List<double?> ShareRatioList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sharing rule.</para>
+            /// <para>The ID of the allocation rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ShareRuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sharing rule.</para>
+            /// <para>The name of the allocation rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ShareRuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the sharing rule.</para>
+            /// <para>The type of the allocation rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The list of target cost centers.</para>
+            /// <para>The list of destination financial units.</para>
             /// </summary>
             [NameInMap("ToCostCenterList")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the level-1 sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the cost center owner.</para>
+        /// <para>The ID of the user who owns the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1977800748053695</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? OwnerAccountId { get; set; }
 
         /// <summary>
-        /// <para>The list of sharing rules to delete.</para>
+        /// <para>The list of allocation rules to delete.</para>
         /// </summary>
         [NameInMap("RemoveShareRuleList")]
         [Validation(Required=false)]

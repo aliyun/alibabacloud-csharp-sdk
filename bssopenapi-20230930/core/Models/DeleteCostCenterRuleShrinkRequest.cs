@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteCostCenterRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Financial unit ID.</para>
+        /// <para>The cost center ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>637127</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>Rule expression.
-        /// <b>This field does not need to be entered during the delete operation.</b></para>
+        /// <para>The rule expression.
+        /// <b>This field does not need to be specified for delete operations.</b></para>
         /// </summary>
         [NameInMap("FilterExpression")]
         [Validation(Required=false)]
         public string FilterExpressionShrink { get; set; }
 
         /// <summary>
-        /// <para>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostByCostCenterRequest : TeaModel {
         /// <summary>
-        /// <para>Billing month (format: YYYYMM)</para>
+        /// <para>The billing cycle month in the format of YYYYMM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? BillingMonth { get; set; }
 
         /// <summary>
-        /// <para>Whether to display data rows with zero payable amount</para>
+        /// <para>Specifies whether to display data rows with a payable amount of 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? DisplayZeroAmountBills { get; set; }
 
         /// <summary>
-        /// <para>Whether to aggregate and display by cost center level</para>
+        /// <para>Specifies whether to display results grouped by financial unit level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? GroupByCostCenterLevel { get; set; }
 
         /// <summary>
-        /// <para>Cost type</para>
+        /// <para>The cost type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>Account ID that owns the resource</para>
+        /// <para>The account ID of the resource ownership.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1374729705039203</para>

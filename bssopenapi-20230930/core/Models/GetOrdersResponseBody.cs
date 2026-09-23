@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. A maximum of 20 entries per page is recommended. A larger number may cause a timeout.</para>
+            /// <para>The number of entries per page. A maximum of 20 entries per page is recommended. Excessive entries may cause a timeout.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

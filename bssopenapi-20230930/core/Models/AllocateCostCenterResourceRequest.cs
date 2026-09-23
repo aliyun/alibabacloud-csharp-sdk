@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The ID of the source cost center. This parameter is required.</para>
         /// <list type="bullet">
-        /// <item><description>0 indicates that the cost center is unallocated.</description></item>
+        /// <item><description>0 indicates the unallocated cost center.</description></item>
         /// <item><description>A value greater than 0 indicates an allocated cost center ID.</description></item>
         /// </list>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The attached resource type of the attached-resource instance. This parameter is required only for attached-resource product instances.</para>
             /// <list type="bullet">
             /// <item><description>Currently, eight commodities support attached resources. The commodity codes are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</description></item>
-            /// <item><description>You can call the QueryCostUnitResource operation to obtain all billing instances (including attached-resource instances with their attached resources) under a specific cost center (including the unallocated cost center) of a user.</description></item>
+            /// <item><description>You can call the QueryCostUnitResource operation to retrieve all billing instances (including attached-resource instances with their attached resource types) under a specific cost center (including the unallocated cost center) of a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ApportionCode { get; set; }
 
             /// <summary>
-            /// <para>The attached resource name.</para>
+            /// <para>The name of the attached resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>split-item-test1</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResourceNick { get; set; }
 
             /// <summary>
-            /// <para>The resource source. Valid values:</para>
+            /// <para>The source of the resource. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>AUTO_ALLOCATE: automatic allocation.</description></item>
             /// <item><description>MANUAL_ALLOCATE: manual allocation.</description></item>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ResourceUserId { get; set; }
 
             /// <summary>
-            /// <para>The resource ownership username.</para>
+            /// <para>The username of the resource ownership user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -224,8 +224,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The ID of the destination cost center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: moves the allocated resource to the unallocated state.</description></item>
-        /// <item><description>A value greater than 0: allocates the resource to the specified cost center.</description></item>
+        /// <item><description>-1: moves allocated resources back to the unallocated state.</description></item>
+        /// <item><description>A value greater than 0: allocates resources to the specified cost center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

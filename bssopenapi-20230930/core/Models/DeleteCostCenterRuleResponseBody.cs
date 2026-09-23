@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteCostCenterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the financial unit allocation rule.</para>
+        /// <para>The ID of the cost center allocation rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>37404</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The response metadata.</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

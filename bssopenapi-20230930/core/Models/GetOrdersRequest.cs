@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
+        /// <para>The end of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
+        /// <para>The start of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T13:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The UID of a member account in an enterprise with multiple member accounts. Leave this parameter empty if this scenario does not apply.</para>
+        /// <para>The UID of a member account in the enterprise multi-account management. Leave this parameter empty if this scenario does not apply.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1779628988149763</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <list type="bullet">
         /// <item><description>Unpaid: unpaid.</description></item>
         /// <item><description>Paid: paid.</description></item>
-        /// <item><description>Cancelled: canceled.</description></item>
+        /// <item><description>Cancelled: cancelled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For refund orders, set this parameter to NULL.</para>
+        /// <para>For refund orders, this parameter can be set to NULL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

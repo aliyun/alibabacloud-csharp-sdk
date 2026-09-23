@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateReportDefinitionRequest : TeaModel {
         /// <summary>
-        /// <para>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</para>
+        /// <para>The start billing cycle for push. After a successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not trigger re-push of historical data. Data within the last year can be pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BeginBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>Email subscription configuration. Specifies whether to include enterprise multi-account members in the bill.</para>
+        /// <para>An email subscription configuration. Specifies whether to include enterprise multi-account members in the bill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string McTableName { get; set; }
 
         /// <summary>
-        /// <para>The primary sales site ID. If left empty, the system uses the site ID of the current user by default.</para>
+        /// <para>The primary sales site ID. If this parameter is left empty, the site ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Email subscription configuration. Specifies whether to skip sending emails when no bills are available.</para>
+        /// <para>An email subscription configuration. Specifies whether to skip sending emails when no bills are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the OSS owner that stores the files. If this is a Bid/Reseller subscription and you need to push to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</para>
+        /// <para>The UID of the OSS owner that stores the files. If you are a Bid/Reseller subscriber and need to push files to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string OssBucketPath { get; set; }
 
         /// <summary>
-        /// <para>The subscription source. Valid values: OSS, MC, or MSC_EMAIL.</para>
+        /// <para>The subscription source. Valid values: OSS, MC, and MSC_EMAIL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ReportType { get; set; }
 
         /// <summary>
-        /// <para>The user-specified subscription fields.</para>
+        /// <para>The fields specified by the user for subscription.</para>
         /// </summary>
         [NameInMap("SelectedFields")]
         [Validation(Required=false)]
         public List<string> SelectedFields { get; set; }
 
         /// <summary>
-        /// <para>Email subscription configuration. Specifies whether to include bill attachments in emails.</para>
+        /// <para>An email subscription configuration. Specifies whether to include bill attachments in emails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SendWithAttach { get; set; }
 
         /// <summary>
-        /// <para>Email subscription configuration. Specifies whether to split attachments by user ID.</para>
+        /// <para>An email subscription configuration. Specifies whether to split attachments by user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

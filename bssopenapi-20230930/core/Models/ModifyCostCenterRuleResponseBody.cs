@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ModifyCostCenterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Financial unit allocation rule ID</para>
+        /// <para>The allocation rule ID of the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5632</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>Response metadata</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>

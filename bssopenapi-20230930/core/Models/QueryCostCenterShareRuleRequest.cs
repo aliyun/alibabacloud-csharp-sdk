@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostCenterShareRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The list of enterprises and accounts. If empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. An empty value indicates that the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<QueryCostCenterShareRuleRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryCostCenterShareRuleRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accounts to access. If empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. An empty value indicates that all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the enterprise entity.</para>
+            /// <para>The enterprise entity ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

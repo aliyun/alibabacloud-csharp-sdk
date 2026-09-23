@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateCostCenterRequest : TeaModel {
         /// <summary>
-        /// <para>Cost center entity list</para>
+        /// <para>The list of cost center entities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CostCenterEntityList")]
@@ -18,18 +18,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<CreateCostCenterRequestCostCenterEntityList> CostCenterEntityList { get; set; }
         public class CreateCostCenterRequestCostCenterEntityList : TeaModel {
             /// <summary>
-            /// <para>Cost center name (must be unique within the same account)</para>
+            /// <para>The cost center name. The name must be unique within the same account.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>资源组</para>
+            /// <para>ResourceGroup</para>
             /// </summary>
             [NameInMap("CostCenterName")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>Owner user ID of the new cost center</para>
+            /// <para>The owner user ID of the new cost center.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? OwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>Parent cost center ID. A value of -1 indicates the root cost center.</para>
+            /// <para>The parent cost center ID. A value of -1 indicates the root cost center.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2084210001</para>

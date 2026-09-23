@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CostCenterEntityListShrink { get; set; }
 
         /// <summary>
-        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of report definitions.</para>
         /// </summary>
         [NameInMap("ReportDefinitions")]
         [Validation(Required=false)]
         public List<ListReportDefinitionsResponseBodyReportDefinitions> ReportDefinitions { get; set; }
         public class ListReportDefinitionsResponseBodyReportDefinitions : TeaModel {
             /// <summary>
-            /// <para>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed.</para>
+            /// <para>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed at most.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BeginBillingCycle { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket that stores the files.</para>
+            /// <para>The name of the OSS bucket for file storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-bill</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>The UID of the OSS bucket owner that stores the files. Specify this parameter when a Bid/Reseller subscription needs to push data to the OSS bucket of a sub-account. The specified account must be a sub-account of the calling account and must be granted the AliyunConsumeDump2OSSRole permission. Regular users do not need to specify this parameter. The calling account is used by default.</para>
+            /// <para>The UID of the OSS owner that stores the files. If a Bid/Reseller subscription is used and data needs to be pushed to the OSS bucket of a sub-account, specify this parameter. The specified account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The calling account is used by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567812345678</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string OssBucketPath { get; set; }
 
             /// <summary>
-            /// <para>The subscription source name.</para>
+            /// <para>The name of the subscription source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ReportSourceType { get; set; }
 
             /// <summary>
-            /// <para>The bill subscription task ID.</para>
+            /// <para>The ID of the bill subscription task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123321</para>
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <summary>
             /// <para>The subscription type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BillingItemDetailForBillingPeriod: billable item consumption details.</description></item>
+            /// <item><description>BillingItemDetailForBillingPeriod: billing item consumption details.</description></item>
             /// <item><description>InstanceDetailForBillingPeriod: instance consumption details.</description></item>
-            /// <item><description>BillingItemDetailMonthly: billable item consumption summary by billing cycle.</description></item>
+            /// <item><description>BillingItemDetailMonthly: billing item consumption summary by billing cycle.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string ReportType { get; set; }
 
+            /// <summary>
+            /// <para>The fields specified by the user for the subscription.</para>
+            /// </summary>
             [NameInMap("SelectedFields")]
             [Validation(Required=false)]
             public List<string> SelectedFields { get; set; }

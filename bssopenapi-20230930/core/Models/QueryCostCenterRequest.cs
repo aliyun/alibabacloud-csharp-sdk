@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<QueryCostCenterRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryCostCenterRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of account IDs to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the enterprise entity.</para>
+            /// <para>The enterprise entity ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the primary sales channel. If this parameter is left empty, the sales channel ID of the current user is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who owns the financial unit.</para>
+        /// <para>The ID of the user who owns the cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</para>
+        /// <para>The ID of the parent cost center. A value of -1 indicates the root cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

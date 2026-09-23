@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ModifyCostCenterRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Financial unit ID</para>
+        /// <para>The financial unit ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>485938</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>Rule expression</para>
+        /// <para>The rule expression.</para>
         /// </summary>
         [NameInMap("FilterExpression")]
         [Validation(Required=false)]
         public string FilterExpressionShrink { get; set; }
 
         /// <summary>
-        /// <para>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary sales channel ID. If left empty, the channel ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Owner of the financial unit (deprecated)</para>
+        /// <para>The owner of the financial unit. (Deprecated)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>

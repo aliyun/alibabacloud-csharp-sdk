@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostCenterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of financial unit data.</para>
+        /// <para>The list of cost center data.</para>
         /// </summary>
         [NameInMap("CostCenterDtoList")]
         [Validation(Required=false)]
         public List<QueryCostCenterResponseBodyCostCenterDtoList> CostCenterDtoList { get; set; }
         public class QueryCostCenterResponseBodyCostCenterDtoList : TeaModel {
             /// <summary>
-            /// <para>The code of the financial unit.</para>
+            /// <para>The code of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15945703968#</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the financial unit.</para>
+            /// <para>The ID of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>485938</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the financial unit. The name must be unique within the same account.</para>
+            /// <para>The name of the cost center. The name must be unique within the same account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>资源组</para>
+            /// <para>ResourceGroup</para>
             /// </summary>
             [NameInMap("CostCenterName")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>The level of the financial unit node.</para>
+            /// <para>The level of the cost center node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>loose</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Level { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who owns the financial unit.</para>
+            /// <para>The ID of the user who owns the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1314839403940987</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? OwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent financial unit.</para>
+            /// <para>The ID of the parent cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ParentCostCenterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the previous financial unit.</para>
+            /// <para>The ID of the previous cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>485996</para>
@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public long? PrevCostCenterId { get; set; }
 
+            /// <summary>
+            /// <para>The priority of the cost center.</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }

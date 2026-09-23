@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The ID of the source cost center. This parameter is required.</para>
         /// <list type="bullet">
-        /// <item><description>0 indicates that the cost center is unallocated.</description></item>
+        /// <item><description>0 indicates the unallocated cost center.</description></item>
         /// <item><description>A value greater than 0 indicates an allocated cost center ID.</description></item>
         /// </list>
         /// 
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The ID of the destination cost center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: moves the allocated resource to the unallocated state.</description></item>
-        /// <item><description>A value greater than 0: allocates the resource to the specified cost center.</description></item>
+        /// <item><description>-1: moves allocated resources back to the unallocated state.</description></item>
+        /// <item><description>A value greater than 0: allocates resources to the specified cost center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

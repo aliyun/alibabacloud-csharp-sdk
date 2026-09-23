@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ModifyCostCenterRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Financial unit ID</para>
+        /// <para>The financial unit ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>485938</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>Rule expression</para>
+        /// <para>The rule expression.</para>
         /// </summary>
         [NameInMap("FilterExpression")]
         [Validation(Required=false)]
         public ModifyCostCenterRuleRequestFilterExpression FilterExpression { get; set; }
         public class ModifyCostCenterRuleRequestFilterExpression : TeaModel {
             /// <summary>
-            /// <para>Operation type</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NARY</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ExpressionType { get; set; }
 
             /// <summary>
-            /// <para>Sub-condition filter</para>
+            /// <para>The sub-condition filter.</para>
             /// </summary>
             [NameInMap("FilterValues")]
             [Validation(Required=false)]
             public ModifyCostCenterRuleRequestFilterExpressionFilterValues FilterValues { get; set; }
             public class ModifyCostCenterRuleRequestFilterExpressionFilterValues : TeaModel {
                 /// <summary>
-                /// <para>Condition filter key</para>
+                /// <para>The condition filter key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TAG-test-xxx-key</para>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Condition filter key name (deprecated)</para>
+                /// <para>The condition filter key name. (Deprecated)</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>无</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("CodeName")]
                 [Validation(Required=false)]
                 public string CodeName { get; set; }
 
                 /// <summary>
-                /// <para>Association between code and value</para>
+                /// <para>The association between the code and value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IN</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string SelectType { get; set; }
 
                 /// <summary>
-                /// <para>Condition filter value list</para>
+                /// <para>The list of condition filter values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -83,24 +83,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>Filter condition (deprecated)</para>
+            /// <para>The filter condition. (Deprecated)</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Operand")]
             [Validation(Required=false)]
             public object Operand { get; set; }
 
             /// <summary>
-            /// <para>Condition expression</para>
+            /// <para>The conditional expression.</para>
             /// </summary>
             [NameInMap("Operands")]
             [Validation(Required=false)]
             public List<object> Operands { get; set; }
 
             /// <summary>
-            /// <para>Relational expression</para>
+            /// <para>The relational expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AND</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary sales channel ID. If left empty, the channel ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Owner of the financial unit (deprecated)</para>
+        /// <para>The owner of the financial unit. (Deprecated)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>

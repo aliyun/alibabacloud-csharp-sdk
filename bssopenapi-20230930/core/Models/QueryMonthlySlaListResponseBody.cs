@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public double? AvailableRate { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the damage record, used for targeted claims.</para>
+            /// <para>The unique identifier of the damaged record, which is used to call the applyCoupon operation for targeted claim.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9b7***9413</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The month in yyyyMM format.</para>
+            /// <para>The month in the yyyyMM format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202603</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Month { get; set; }
 
             /// <summary>
-            /// <para>The monthly service fee.</para>
+            /// <para>The monthly service charge.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365.00</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The response struct metadata.</para>
+        /// <para>The response metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

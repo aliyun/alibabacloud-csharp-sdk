@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SaveCostCenterShareRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metadata of the response.</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

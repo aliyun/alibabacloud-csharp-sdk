@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ShareRuleType { get; set; }
 
             /// <summary>
-            /// <para>The rule information of the destination financial unit.</para>
+            /// <para>The rule information of the target financial unit.</para>
             /// </summary>
             [NameInMap("ToCostCenterShareRuleDetails")]
             [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response struct metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

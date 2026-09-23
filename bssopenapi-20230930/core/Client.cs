@@ -264,6 +264,166 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>席位新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCreditSeatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCreditSeatsResponse
+        /// </returns>
+        public AddCreditSeatsResponse AddCreditSeatsWithOptions(AddCreditSeatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                query["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seats))
+            {
+                query["Seats"] = request.Seats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCreditSeats",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCreditSeatsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>席位新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCreditSeatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCreditSeatsResponse
+        /// </returns>
+        public async Task<AddCreditSeatsResponse> AddCreditSeatsWithOptionsAsync(AddCreditSeatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                query["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seats))
+            {
+                query["Seats"] = request.Seats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCreditSeats",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCreditSeatsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>席位新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCreditSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCreditSeatsResponse
+        /// </returns>
+        public AddCreditSeatsResponse AddCreditSeats(AddCreditSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddCreditSeatsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>席位新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCreditSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCreditSeatsResponse
+        /// </returns>
+        public async Task<AddCreditSeatsResponse> AddCreditSeatsAsync(AddCreditSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddCreditSeatsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</para>
         /// </summary>
         /// 
@@ -720,403 +880,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified budgetName exists.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CheckBudgetNameExistsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CheckBudgetNameExistsResponse
-        /// </returns>
-        public CheckBudgetNameExistsResponse CheckBudgetNameExistsWithOptions(CheckBudgetNameExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckBudgetNameExists",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckBudgetNameExistsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Checks whether a specified budgetName exists.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CheckBudgetNameExistsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CheckBudgetNameExistsResponse
-        /// </returns>
-        public async Task<CheckBudgetNameExistsResponse> CheckBudgetNameExistsWithOptionsAsync(CheckBudgetNameExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckBudgetNameExists",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckBudgetNameExistsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Checks whether a specified budgetName exists.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CheckBudgetNameExistsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CheckBudgetNameExistsResponse
-        /// </returns>
-        public CheckBudgetNameExistsResponse CheckBudgetNameExists(CheckBudgetNameExistsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CheckBudgetNameExistsWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Checks whether a specified budgetName exists.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CheckBudgetNameExistsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CheckBudgetNameExistsResponse
-        /// </returns>
-        public async Task<CheckBudgetNameExistsResponse> CheckBudgetNameExistsAsync(CheckBudgetNameExistsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CheckBudgetNameExistsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// CreateBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateBudgetResponse
-        /// </returns>
-        public CreateBudgetResponse CreateBudgetWithOptions(CreateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
-            {
-                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
-            {
-                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
-            {
-                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
-            {
-                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
-            {
-                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
-            {
-                body["BudgetType"] = request.BudgetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
-            {
-                body["Comment"] = request.Comment;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
-            {
-                body["CycleEndPeriod"] = request.CycleEndPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
-            {
-                body["CycleQuota"] = request.CycleQuotaShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
-            {
-                body["CycleStartPeriod"] = request.CycleStartPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
-            {
-                body["CycleType"] = request.CycleType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
-            {
-                body["Metric"] = request.Metric;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
-            {
-                body["QueryFilter"] = request.QueryFilterShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
-            {
-                body["Quota"] = request.Quota;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
-            {
-                body["QuotaType"] = request.QuotaType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
-            {
-                body["WarnConfs"] = request.WarnConfsShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateBudgetResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// CreateBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateBudgetResponse
-        /// </returns>
-        public async Task<CreateBudgetResponse> CreateBudgetWithOptionsAsync(CreateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
-            {
-                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
-            {
-                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
-            {
-                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
-            {
-                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
-            {
-                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
-            {
-                body["BudgetType"] = request.BudgetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
-            {
-                body["Comment"] = request.Comment;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
-            {
-                body["CycleEndPeriod"] = request.CycleEndPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
-            {
-                body["CycleQuota"] = request.CycleQuotaShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
-            {
-                body["CycleStartPeriod"] = request.CycleStartPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
-            {
-                body["CycleType"] = request.CycleType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
-            {
-                body["Metric"] = request.Metric;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
-            {
-                body["QueryFilter"] = request.QueryFilterShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
-            {
-                body["Quota"] = request.Quota;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
-            {
-                body["QuotaType"] = request.QuotaType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
-            {
-                body["WarnConfs"] = request.WarnConfsShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateBudgetResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateBudgetResponse
-        /// </returns>
-        public CreateBudgetResponse CreateBudget(CreateBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateBudgetWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateBudgetResponse
-        /// </returns>
-        public async Task<CreateBudgetResponse> CreateBudgetAsync(CreateBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateBudgetWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Create Cost Center</para>
+        /// <para>Creates cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1173,7 +937,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cost Center</para>
+        /// <para>Creates cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1230,7 +994,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cost Center</para>
+        /// <para>Creates cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1253,7 +1017,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cost Center</para>
+        /// <para>Creates cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1276,7 +1040,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a financial unit auto-allocation rule</para>
+        /// <para>Creates an automatic allocation rule for a financial unit.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1334,7 +1098,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a financial unit auto-allocation rule</para>
+        /// <para>Creates an automatic allocation rule for a financial unit.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1392,7 +1156,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a financial unit auto-allocation rule</para>
+        /// <para>Creates an automatic allocation rule for a financial unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1410,7 +1174,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a financial unit auto-allocation rule</para>
+        /// <para>Creates an automatic allocation rule for a financial unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1424,6 +1188,182 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCostCenterRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCreditSeatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCreditSeatResponse
+        /// </returns>
+        public CreateCreditSeatResponse CreateCreditSeatWithOptions(CreateCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionConfigs))
+            {
+                query["SubscriptionConfigs"] = request.SubscriptionConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCreditSeat",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCreditSeatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCreditSeatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCreditSeatResponse
+        /// </returns>
+        public async Task<CreateCreditSeatResponse> CreateCreditSeatWithOptionsAsync(CreateCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionConfigs))
+            {
+                query["SubscriptionConfigs"] = request.SubscriptionConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCreditSeat",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCreditSeatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCreditSeatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCreditSeatResponse
+        /// </returns>
+        public CreateCreditSeatResponse CreateCreditSeat(CreateCreditSeatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCreditSeatWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCreditSeatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCreditSeatResponse
+        /// </returns>
+        public async Task<CreateCreditSeatResponse> CreateCreditSeatAsync(CreateCreditSeatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCreditSeatWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1965,19 +1905,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A user can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
+        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
         /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></para>
+        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</description></item>
-        /// <item><description>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
@@ -1993,7 +1933,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2101,19 +2041,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A user can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
+        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
         /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></para>
+        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</description></item>
-        /// <item><description>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
@@ -2129,7 +2069,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2237,19 +2177,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A user can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
+        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
         /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></para>
+        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</description></item>
-        /// <item><description>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
@@ -2265,7 +2205,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2289,19 +2229,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>A user can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
+        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
         /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></para>
+        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</description></item>
-        /// <item><description>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
@@ -2317,7 +2257,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2336,144 +2276,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteBudgetResponse
-        /// </returns>
-        public DeleteBudgetResponse DeleteBudgetWithOptions(DeleteBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteBudgetResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteBudgetResponse
-        /// </returns>
-        public async Task<DeleteBudgetResponse> DeleteBudgetWithOptionsAsync(DeleteBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteBudgetResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteBudgetResponse
-        /// </returns>
-        public DeleteBudgetResponse DeleteBudget(DeleteBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteBudgetWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a budget.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteBudgetResponse
-        /// </returns>
-        public async Task<DeleteBudgetResponse> DeleteBudgetAsync(DeleteBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteBudgetWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Delete Cost Center</para>
+        /// <para>Deletes a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2523,12 +2331,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Cost Center</para>
+        /// <para>Deletes a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2578,12 +2386,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Cost Center</para>
+        /// <para>Deletes a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2601,12 +2409,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Cost Center</para>
+        /// <para>Deletes a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2624,12 +2432,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete financial unit automatic allocation rule</para>
+        /// <para>Deletes an automatic allocation rule for a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2687,12 +2495,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete financial unit automatic allocation rule</para>
+        /// <para>Deletes an automatic allocation rule for a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2750,12 +2558,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete financial unit automatic allocation rule</para>
+        /// <para>Deletes an automatic allocation rule for a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2773,12 +2581,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete financial unit automatic allocation rule</para>
+        /// <para>Deletes an automatic allocation rule for a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// <para>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3084,302 +2892,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteReportDefinitionWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Query a Single Budget</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetResponse
-        /// </returns>
-        public DescribeBudgetResponse DescribeBudgetWithOptions(DescribeBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeBudgetResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Query a Single Budget</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetResponse
-        /// </returns>
-        public async Task<DescribeBudgetResponse> DescribeBudgetWithOptionsAsync(DescribeBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeBudget",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeBudgetResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Query a Single Budget</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetResponse
-        /// </returns>
-        public DescribeBudgetResponse DescribeBudget(DescribeBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeBudgetWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Query a Single Budget</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetResponse
-        /// </returns>
-        public async Task<DescribeBudgetResponse> DescribeBudgetAsync(DescribeBudgetRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeBudgetWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of budgets.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetsResponse
-        /// </returns>
-        public DescribeBudgetsResponse DescribeBudgetsWithOptions(DescribeBudgetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
-            {
-                body["BudgetType"] = request.BudgetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
-            {
-                body["ExpireStatus"] = request.ExpireStatus;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                body["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                body["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeBudgets",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeBudgetsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of budgets.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetsResponse
-        /// </returns>
-        public async Task<DescribeBudgetsResponse> DescribeBudgetsWithOptionsAsync(DescribeBudgetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
-            {
-                query["Nbid"] = request.Nbid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
-            {
-                body["BudgetName"] = request.BudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
-            {
-                body["BudgetType"] = request.BudgetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
-            {
-                body["ExpireStatus"] = request.ExpireStatus;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                body["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                body["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeBudgets",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeBudgetsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of budgets.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetsResponse
-        /// </returns>
-        public DescribeBudgetsResponse DescribeBudgets(DescribeBudgetsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeBudgetsWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of budgets.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeBudgetsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeBudgetsResponse
-        /// </returns>
-        public async Task<DescribeBudgetsResponse> DescribeBudgetsAsync(DescribeBudgetsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeBudgetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5436,7 +4948,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
+        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5486,7 +4998,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
+        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5536,7 +5048,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
+        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5554,7 +5066,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
+        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5572,7 +5084,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5654,7 +5166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5736,7 +5248,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5754,7 +5266,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7144,7 +6656,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost centers</para>
+        /// <para>Modifies one or more cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7201,7 +6713,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost centers</para>
+        /// <para>Modifies one or more cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7258,7 +6770,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost centers</para>
+        /// <para>Modifies one or more cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7281,7 +6793,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost centers</para>
+        /// <para>Modifies one or more cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7304,12 +6816,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify financial unit rules</para>
+        /// <para>Modifies the automatic allocation rule of a financial unit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modify one or more financial units</para>
+        /// <para>Modifies one or more financial units.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7371,12 +6883,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify financial unit rules</para>
+        /// <para>Modifies the automatic allocation rule of a financial unit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modify one or more financial units</para>
+        /// <para>Modifies one or more financial units.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7438,12 +6950,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify financial unit rules</para>
+        /// <para>Modifies the automatic allocation rule of a financial unit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modify one or more financial units</para>
+        /// <para>Modifies one or more financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7461,12 +6973,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify financial unit rules</para>
+        /// <para>Modifies the automatic allocation rule of a financial unit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modify one or more financial units</para>
+        /// <para>Modifies one or more financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7652,12 +7164,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center expense overview</para>
+        /// <para>Queries the cost overview of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// <para>Queries the cost overview results of a financial unit for a specified billing cycle.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7715,12 +7227,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center expense overview</para>
+        /// <para>Queries the cost overview of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// <para>Queries the cost overview results of a financial unit for a specified billing cycle.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7778,12 +7290,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center expense overview</para>
+        /// <para>Queries the cost overview of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// <para>Queries the cost overview results of a financial unit for a specified billing cycle.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7801,12 +7313,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center expense overview</para>
+        /// <para>Queries the cost overview of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// <para>Queries the cost overview results of a financial unit for a specified billing cycle.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7824,12 +7336,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries financial units.</para>
+        /// <para>Queries cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7897,12 +7409,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries financial units.</para>
+        /// <para>Queries cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7970,12 +7482,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries financial units.</para>
+        /// <para>Queries cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7993,12 +7505,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries financial units.</para>
+        /// <para>Queries cost centers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8016,7 +7528,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
+        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8080,7 +7592,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
+        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8144,7 +7656,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
+        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8162,7 +7674,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
+        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8180,12 +7692,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center rules</para>
+        /// <para>Queries the automatic allocation rules of a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query parent cost center and its child cost centers.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8237,12 +7749,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center rules</para>
+        /// <para>Queries the automatic allocation rules of a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query parent cost center and its child cost centers.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8294,12 +7806,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center rules</para>
+        /// <para>Queries the automatic allocation rules of a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query parent cost center and its child cost centers.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8317,12 +7829,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center rules</para>
+        /// <para>Queries the automatic allocation rules of a cost center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query parent cost center and its child cost centers.</para>
+        /// <para>Queries a parent cost center and its child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8517,7 +8029,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
+        /// <para>Queries the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8594,7 +8106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
+        /// <para>Queries the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8671,7 +8183,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
+        /// <para>Queries the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8694,7 +8206,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
+        /// <para>Queries the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8712,7 +8224,327 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
+        /// <para>减席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReduceCreditSeatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReduceCreditSeatsResponse
+        /// </returns>
+        public ReduceCreditSeatsResponse ReduceCreditSeatsWithOptions(ReduceCreditSeatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReduceCreditSeats",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReduceCreditSeatsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>减席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReduceCreditSeatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReduceCreditSeatsResponse
+        /// </returns>
+        public async Task<ReduceCreditSeatsResponse> ReduceCreditSeatsWithOptionsAsync(ReduceCreditSeatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReduceCreditSeats",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReduceCreditSeatsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>减席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReduceCreditSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReduceCreditSeatsResponse
+        /// </returns>
+        public ReduceCreditSeatsResponse ReduceCreditSeats(ReduceCreditSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReduceCreditSeatsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>减席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReduceCreditSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReduceCreditSeatsResponse
+        /// </returns>
+        public async Task<ReduceCreditSeatsResponse> ReduceCreditSeatsAsync(ReduceCreditSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReduceCreditSeatsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整体续费席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewCreditSeatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewCreditSeatResponse
+        /// </returns>
+        public RenewCreditSeatResponse RenewCreditSeatWithOptions(RenewCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewCreditSeat",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewCreditSeatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整体续费席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewCreditSeatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewCreditSeatResponse
+        /// </returns>
+        public async Task<RenewCreditSeatResponse> RenewCreditSeatWithOptionsAsync(RenewCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewCreditSeat",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewCreditSeatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整体续费席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewCreditSeatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewCreditSeatResponse
+        /// </returns>
+        public RenewCreditSeatResponse RenewCreditSeat(RenewCreditSeatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewCreditSeatWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整体续费席位</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewCreditSeatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewCreditSeatResponse
+        /// </returns>
+        public async Task<RenewCreditSeatResponse> RenewCreditSeatAsync(RenewCreditSeatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewCreditSeatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8784,7 +8616,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
+        /// <para>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8856,7 +8688,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
+        /// <para>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8874,7 +8706,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
+        /// <para>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9332,13 +9164,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User claims coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the last two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
         /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
         /// </ol>
@@ -9397,13 +9229,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User claims coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the last two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
         /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
         /// </ol>
@@ -9462,13 +9294,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User claims coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the last two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
         /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
         /// </ol>
@@ -9489,13 +9321,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User claims coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the last two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
         /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
         /// </ol>
@@ -9516,110 +9348,54 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a budget.</para>
+        /// <para>升级席位</para>
         /// </summary>
         /// 
-        /// <param name="tmpReq">
-        /// UpdateBudgetRequest
+        /// <param name="request">
+        /// UpgradeCreditSeatRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// UpdateBudgetResponse
+        /// UpgradeCreditSeatResponse
         /// </returns>
-        public UpdateBudgetResponse UpdateBudgetWithOptions(UpdateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpgradeCreditSeatResponse UpgradeCreditSeatWithOptions(UpgradeCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
-            {
-                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
-            {
-                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
-            {
-                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
-            {
-                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
-                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+                query["ClientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
             {
-                query["Nbid"] = request.Nbid;
+                query["Configs"] = request.Configs;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
-                body["BudgetName"] = request.BudgetName;
+                query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
-                body["BudgetType"] = request.BudgetType;
+                query["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
             {
-                body["Comment"] = request.Comment;
+                query["ProductType"] = request.ProductType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
             {
-                body["CycleEndPeriod"] = request.CycleEndPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
-            {
-                body["CycleQuota"] = request.CycleQuotaShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
-            {
-                body["CycleStartPeriod"] = request.CycleStartPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
-            {
-                body["CycleType"] = request.CycleType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
-            {
-                body["Metric"] = request.Metric;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalBudgetName))
-            {
-                body["OriginalBudgetName"] = request.OriginalBudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
-            {
-                body["QueryFilter"] = request.QueryFilterShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
-            {
-                body["Quota"] = request.Quota;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
-            {
-                body["QuotaType"] = request.QuotaType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
-            {
-                body["WarnConfs"] = request.WarnConfsShrink;
+                query["SubscriptionType"] = request.SubscriptionType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UpdateBudget",
+                Action = "UpgradeCreditSeat",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -9629,115 +9405,59 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateBudgetResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UpgradeCreditSeatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a budget.</para>
+        /// <para>升级席位</para>
         /// </summary>
         /// 
-        /// <param name="tmpReq">
-        /// UpdateBudgetRequest
+        /// <param name="request">
+        /// UpgradeCreditSeatRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// UpdateBudgetResponse
+        /// UpgradeCreditSeatResponse
         /// </returns>
-        public async Task<UpdateBudgetResponse> UpdateBudgetWithOptionsAsync(UpdateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpgradeCreditSeatResponse> UpgradeCreditSeatWithOptionsAsync(UpgradeCreditSeatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
-            {
-                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
-            {
-                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
-            {
-                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
-            {
-                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
-                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+                query["ClientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
             {
-                query["Nbid"] = request.Nbid;
+                query["Configs"] = request.Configs;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
-                body["BudgetName"] = request.BudgetName;
+                query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
-                body["BudgetType"] = request.BudgetType;
+                query["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
             {
-                body["Comment"] = request.Comment;
+                query["ProductType"] = request.ProductType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
             {
-                body["CycleEndPeriod"] = request.CycleEndPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
-            {
-                body["CycleQuota"] = request.CycleQuotaShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
-            {
-                body["CycleStartPeriod"] = request.CycleStartPeriod;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
-            {
-                body["CycleType"] = request.CycleType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
-            {
-                body["Metric"] = request.Metric;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalBudgetName))
-            {
-                body["OriginalBudgetName"] = request.OriginalBudgetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
-            {
-                body["QueryFilter"] = request.QueryFilterShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
-            {
-                body["Quota"] = request.Quota;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
-            {
-                body["QuotaType"] = request.QuotaType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
-            {
-                body["WarnConfs"] = request.WarnConfsShrink;
+                query["SubscriptionType"] = request.SubscriptionType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UpdateBudget",
+                Action = "UpgradeCreditSeat",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -9747,43 +9467,43 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateBudgetResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpgradeCreditSeatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a budget.</para>
+        /// <para>升级席位</para>
         /// </summary>
         /// 
         /// <param name="request">
-        /// UpdateBudgetRequest
+        /// UpgradeCreditSeatRequest
         /// </param>
         /// 
         /// <returns>
-        /// UpdateBudgetResponse
+        /// UpgradeCreditSeatResponse
         /// </returns>
-        public UpdateBudgetResponse UpdateBudget(UpdateBudgetRequest request)
+        public UpgradeCreditSeatResponse UpgradeCreditSeat(UpgradeCreditSeatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateBudgetWithOptions(request, runtime);
+            return UpgradeCreditSeatWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a budget.</para>
+        /// <para>升级席位</para>
         /// </summary>
         /// 
         /// <param name="request">
-        /// UpdateBudgetRequest
+        /// UpgradeCreditSeatRequest
         /// </param>
         /// 
         /// <returns>
-        /// UpdateBudgetResponse
+        /// UpgradeCreditSeatResponse
         /// </returns>
-        public async Task<UpdateBudgetResponse> UpdateBudgetAsync(UpdateBudgetRequest request)
+        public async Task<UpgradeCreditSeatResponse> UpgradeCreditSeatAsync(UpgradeCreditSeatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateBudgetWithOptionsAsync(request, runtime);
+            return await UpgradeCreditSeatWithOptionsAsync(request, runtime);
         }
 
     }

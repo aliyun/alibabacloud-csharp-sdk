@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<QueryCostCenterResourceResponseBodyCostCenterResourceDtoList> CostCenterResourceDtoList { get; set; }
         public class QueryCostCenterResourceResponseBodyCostCenterResourceDtoList : TeaModel {
             /// <summary>
+            /// <para>The add strategy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AUTO_ALLOCATE</para>
             /// </summary>
@@ -25,14 +27,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AddStrategy { get; set; }
 
             /// <summary>
+            /// <para>The Policy Name of the add policy.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>自动分配</para>
+            /// <para>automatic allocation</para>
             /// </summary>
             [NameInMap("AddStrategyName")]
             [Validation(Required=false)]
             public string AddStrategyName { get; set; }
 
             /// <summary>
+            /// <para>The number of refreshed billing cycles.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ApplicablePeriodNum { get; set; }
 
             /// <summary>
-            /// <para>The apportionment item code of the resource.</para>
+            /// <para>The code of the attached resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ApportionItemCode { get; set; }
 
             /// <summary>
-            /// <para>The apportionment item name of the resource.</para>
+            /// <para>The name of the attached resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -74,14 +80,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commodity name of the resource.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云数据库</para>
+            /// <para>ApsaraDB</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
             public string CommodityName { get; set; }
 
             /// <summary>
-            /// <para>The cost center code.</para>
+            /// <para>The code of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>code</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterCode { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the cost center.</para>
+            /// <para>The time when the cost center was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-18 12:12:25</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cost center ID.</para>
+            /// <para>The ID of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
-            /// <para>The cost center name.</para>
+            /// <para>The name of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the cost center.</para>
+            /// <para>The time when the cost center was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-18 16:12:25</para>
@@ -131,6 +137,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterUpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The rule version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -149,6 +157,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The associated commodity code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
             /// </summary>
@@ -157,6 +167,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MasterCommodityCode { get; set; }
 
             /// <summary>
+            /// <para>The associated instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-xxxxx</para>
             /// </summary>
@@ -165,7 +177,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MasterInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The customer ID to which the cost center belongs.</para>
+            /// <para>The ID of the customer to whom the cost center belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567812345678</para>
@@ -175,17 +187,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? OwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>The customer name to which the cost center belongs.</para>
+            /// <para>The name of the customer to whom the cost center belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户A</para>
+            /// <para>CustomerA</para>
             /// </summary>
             [NameInMap("OwnerAccountName")]
             [Validation(Required=false)]
             public string OwnerAccountName { get; set; }
 
             /// <summary>
-            /// <para>The parent cost center ID.</para>
+            /// <para>The ID of the parent cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -195,7 +207,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ParentCostCenterId { get; set; }
 
             /// <summary>
-            /// <para>The product code, which is the same as the product code in Cost Center bills.</para>
+            /// <para>The product code, which is the same as the product code in User Center bills.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds</para>
@@ -208,13 +220,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云数据库</para>
+            /// <para>ApsaraDB</para>
             /// </summary>
             [NameInMap("PipName")]
             [Validation(Required=false)]
             public string PipName { get; set; }
 
             /// <summary>
+            /// <para>The most recent billing cycle.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>202509</para>
             /// </summary>
@@ -223,14 +237,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? RecentBillingMonth { get; set; }
 
             /// <summary>
+            /// <para>The region name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>上海</para>
+            /// <para>Shanghai</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
 
             /// <summary>
+            /// <para>The region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -242,7 +260,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The resource group to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认资源组</para>
+            /// <para>Default resource group</para>
             /// </summary>
             [NameInMap("ResourceGroup")]
             [Validation(Required=false)]
@@ -259,7 +277,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The custom alias of the resource.</para>
+            /// <para>The custom nickname of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testResource</para>
@@ -271,8 +289,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <summary>
             /// <para>The resource source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AUTO_ALLOCATE: automatically allocated.</description></item>
-            /// <item><description>MANUAL_ALLOCATE: manually allocated.</description></item>
+            /// <item><description>AUTO_ALLOCATE: automatic allocation.</description></item>
+            /// <item><description>MANUAL_ALLOCATE: manual allocation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +321,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the cost center. This is a reserved field and is currently unavailable.</para>
+            /// <para>The time when the cost center was last updated. This is a reserved field and is currently unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-18 16:12:25</para>
@@ -313,7 +331,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResourceUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The owner user ID of the resource.</para>
+            /// <para>The user ID of the resource owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567812345678</para>
@@ -323,7 +341,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ResourceUserId { get; set; }
 
             /// <summary>
-            /// <para>The owner username of the resource.</para>
+            /// <para>The username of the resource owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></para>
@@ -333,7 +351,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResourceUserName { get; set; }
 
             /// <summary>
-            /// <para>The root cost center ID.</para>
+            /// <para>The ID of the root cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -343,6 +361,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? RootCostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The billing cycle in which the rule takes effect.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>202509</para>
             /// </summary>
@@ -353,7 +373,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per query.</para>
+        /// <para>The maximum number of records to return in a single query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -363,7 +383,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the response structure.</para>
+        /// <para>The response metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -373,7 +393,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. An empty NextToken indicates that there are no more results.</para>
+        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

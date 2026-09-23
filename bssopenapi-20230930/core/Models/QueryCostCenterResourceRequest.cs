@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostCenterResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cost center.</para>
+        /// <para>The ID of the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>The list of enterprises and accounts. An empty value indicates querying the current account.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<QueryCostCenterResourceRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryCostCenterResourceRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accessed accounts. An empty value indicates that all accounts under the current entity ID are selected.</para>
+            /// <para>The list of account IDs to access. If this parameter is empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The enterprise entity ID.</para>
+            /// <para>The ID of the enterprise entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per query.</para>
+        /// <para>The maximum number of records to return in a single query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The first-level marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. An empty NextToken indicates that there are no more results.</para>
+        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmd</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The owner user ID of the cost center.</para>
+        /// <para>The ID of the owner of the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>

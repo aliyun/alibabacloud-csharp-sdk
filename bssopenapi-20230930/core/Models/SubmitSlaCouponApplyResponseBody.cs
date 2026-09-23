@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SubmitSlaCouponApplyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response structure metadata.</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Unique request identifier used to tag a request for troubleshooting.</para>
+        /// <para>The unique request ID, which is used to identify a request and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total claimed amount.</para>
+        /// <para>The total claimed amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.4</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public double? SumCoupon { get; set; }
 
         /// <summary>
-        /// <para>End time.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Mon Apr 27 00:00:00 CST 2026</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ValidEndTime { get; set; }
 
         /// <summary>
-        /// <para>Start time.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tue Oct 27 13:15:58 CST 2026</para>

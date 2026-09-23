@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteCostCenterRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Financial unit ID.</para>
+        /// <para>The cost center ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>637127</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>Rule expression.
-        /// <b>This field does not need to be entered during the delete operation.</b></para>
+        /// <para>The rule expression.
+        /// <b>This field does not need to be specified for delete operations.</b></para>
         /// </summary>
         [NameInMap("FilterExpression")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DeleteCostCenterRuleRequestFilterExpressionFilterValues FilterValues { get; set; }
             public class DeleteCostCenterRuleRequestFilterExpressionFilterValues : TeaModel {
                 /// <summary>
-                /// <para>The condition filter key.</para>
+                /// <para>The filter condition key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TAG-test-xxx-key</para>
@@ -55,17 +55,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The condition filter key name.</para>
+                /// <para>The name of the filter condition key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>无</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("CodeName")]
                 [Validation(Required=false)]
                 public string CodeName { get; set; }
 
                 /// <summary>
-                /// <para>The association between Code and value.</para>
+                /// <para>The association between code and value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IN</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string SelectType { get; set; }
 
                 /// <summary>
-                /// <para>The condition filter values.</para>
+                /// <para>The filter condition values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The filter condition (no longer used).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Operand")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

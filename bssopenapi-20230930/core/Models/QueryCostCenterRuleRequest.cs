@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>List of enterprises and accounts. If empty, queries the current account itself.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<QueryCostCenterRuleRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryCostCenterRuleRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>List of accounts to access. If empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>Enterprise entity ID.</para>
+            /// <para>The enterprise entity ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

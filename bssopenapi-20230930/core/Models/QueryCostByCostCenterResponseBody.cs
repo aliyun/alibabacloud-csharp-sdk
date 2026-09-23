@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostByCostCenterResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cost center consumption amount details list</para>
+        /// <para>The list of cost center consumption amount details.</para>
         /// </summary>
         [NameInMap("ConsumeAmountList")]
         [Validation(Required=false)]
         public List<QueryCostByCostCenterResponseBodyConsumeAmountList> ConsumeAmountList { get; set; }
         public class QueryCostByCostCenterResponseBodyConsumeAmountList : TeaModel {
             /// <summary>
-            /// <para>Shared allocation amount</para>
+            /// <para>The apportioned amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AllocatedAmount { get; set; }
 
             /// <summary>
-            /// <para>Cost center code</para>
+            /// <para>The financial unit code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15945703968#</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterCode { get; set; }
 
             /// <summary>
-            /// <para>Cost center ID</para>
+            /// <para>The financial unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>530658</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
-            /// <para>Cost center name</para>
+            /// <para>The financial unit name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>项目组A</para>
+            /// <para>Project Team A</para>
             /// </summary>
             [NameInMap("CostCenterName")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>Cost type amount</para>
+            /// <para>The cost type amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string DirectAmount { get; set; }
 
             /// <summary>
-            /// <para>Level</para>
+            /// <para>The level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Level { get; set; }
 
             /// <summary>
-            /// <para>Account ID that owns the resource</para>
+            /// <para>The account ID of the resource ownership.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1857464601594004</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? OwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>Account name that owns the resource</para>
+            /// <para>The account name of the resource ownership.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>研发团队测试账号</para>
+            /// <para>R&amp;D Team Test Account</para>
             /// </summary>
             [NameInMap("OwnerAccountName")]
             [Validation(Required=false)]
             public string OwnerAccountName { get; set; }
 
             /// <summary>
-            /// <para>Parent cost center ID</para>
+            /// <para>The parent financial unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>637537</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ParentCostCenterId { get; set; }
 
             /// <summary>
-            /// <para>Previous cost center ID</para>
+            /// <para>The preceding financial unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6375371</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? PreCostCenterId { get; set; }
 
             /// <summary>
-            /// <para>Total (sum of cost type amount and shared allocation amount)</para>
+            /// <para>The total amount (the sum of the cost type amount and the apportioned amount).</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TotalAllocatedAmount { get; set; }
 
             /// <summary>
-            /// <para>Cost type amount percentage</para>
+            /// <para>The percentage of the cost type amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Response structure metadata</para>
+        /// <para>The response structure metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Sum of totalAllocatedAmount across all cost centers</para>
+        /// <para>The sum of totalAllocatedAmount across all cost centers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130296.64</para>

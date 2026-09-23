@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteCostCenterRequest : TeaModel {
         /// <summary>
-        /// <para>Cost center ID.</para>
+        /// <para>The cost center ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>First-level marketplace ID. If left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>User ID of the cost center owner.</para>
+        /// <para>The ID of the user who owns the cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

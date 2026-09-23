@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the response struct.</para>
+        /// <para>The metadata of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

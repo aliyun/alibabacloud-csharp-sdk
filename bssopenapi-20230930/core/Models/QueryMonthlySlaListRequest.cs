@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The enterprise and account list. If this parameter is empty, the current account is queried.</para>
+        /// <para>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<QueryMonthlySlaListRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryMonthlySlaListRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Optional. Filter by instance ID.</para>
+        /// <para>Optional. The instance IDs used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;instance_1&quot;,&quot;instance_2&quot;]</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Optional. List of months in yyyyMM format.</para>
+        /// <para>Optional. The list of months in the yyyyMM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[202602,202603]</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<int?> Months { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filter by compensation status. Valid values: 0 and 1.</para>
+        /// <para>Optional. The compensation statuses used for filtering. Valid values: 0 and 1.</para>
         /// </summary>
         [NameInMap("PayStatuses")]
         [Validation(Required=false)]
         public List<int?> PayStatuses { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filter by product code.</para>
+        /// <para>Optional. The product codes used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ecs&quot;,&quot;oss&quot;]</para>

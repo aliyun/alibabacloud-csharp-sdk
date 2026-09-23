@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetOrderDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the enterprise multi-account member managed by the current account. Leave this parameter empty if this scenario does not apply.</para>
+        /// <para>The UID of a member account managed by the current account in a multi-account enterprise scenario. Leave this parameter empty if this scenario does not apply.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1715322405372273</para>
