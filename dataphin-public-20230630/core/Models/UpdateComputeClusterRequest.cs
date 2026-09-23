@@ -10,22 +10,29 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateComputeClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ClusterConfig")]
         [Validation(Required=false)]
         public UpdateComputeClusterRequestClusterConfig ClusterConfig { get; set; }
         public class UpdateComputeClusterRequestClusterConfig : TeaModel {
+            /// <summary>
+            /// <para>The list of cluster administrator IDs.</para>
+            /// </summary>
             [NameInMap("ClusterAdmins")]
             [Validation(Required=false)]
             public List<string> ClusterAdmins { get; set; }
 
+            /// <summary>
+            /// <para>The cluster security control configuration.</para>
+            /// </summary>
             [NameInMap("ClusterSafetyControl")]
             [Validation(Required=false)]
             public UpdateComputeClusterRequestClusterConfigClusterSafetyControl ClusterSafetyControl { get; set; }
             public class UpdateComputeClusterRequestClusterConfigClusterSafetyControl : TeaModel {
                 /// <summary>
-                /// <para>管控模式。CREATE_COMPUTE_SOURCE：有创建计算源权限即可使用；USER_DEFINE：仅白名单用户/用户组可用</para>
+                /// <para>The control mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CREATE_COMPUTE_SOURCE</para>
@@ -34,10 +41,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string ClusterSafetyAuthType { get; set; }
 
+                /// <summary>
+                /// <para>The list of whitelist user group IDs.</para>
+                /// </summary>
                 [NameInMap("UserGroupIds")]
                 [Validation(Required=false)]
                 public List<string> UserGroupIds { get; set; }
 
+                /// <summary>
+                /// <para>The list of whitelist user IDs.</para>
+                /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
                 public List<string> UserIds { get; set; }
@@ -45,6 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The connection configuration items.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConfigList")]
@@ -52,6 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateComputeClusterRequestClusterConfigConfigList> ConfigList { get; set; }
             public class UpdateComputeClusterRequestClusterConfigConfigList : TeaModel {
                 /// <summary>
+                /// <para>The configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -62,6 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The cluster description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -82,6 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Des { get; set; }
 
             /// <summary>
+            /// <para>The cluster name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -92,6 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The cluster type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -102,6 +122,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The cluster version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CDH6</para>
             /// </summary>
@@ -112,6 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,6 +145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,6 +156,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

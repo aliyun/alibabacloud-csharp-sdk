@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class CheckDataSourceConnectivityByIdRequest : TeaModel {
+    public class GetServerVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The data source ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para><b>[Deprecated]</b> The environment identifier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD (default): Production environment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>PROD</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("Env")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public string Env { get; set; }
 
         /// <summary>
         /// <para>The tenant ID.</para>
@@ -32,10 +35,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operation user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30001011</para>
+        /// <para>30010012</para>
         /// </summary>
         [NameInMap("OpUserId")]
         [Validation(Required=false)]

@@ -19,14 +19,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "dataphin-public.cn-beijing.aliyuncs.com"},
-                {"cn-chengdu", "dataphin-public.cn-chengdu.aliyuncs.com"},
-                {"cn-hangzhou", "dataphin-public.cn-hangzhou.aliyuncs.com"},
-                {"cn-shanghai", "dataphin-public.cn-shanghai.aliyuncs.com"},
-                {"cn-shenzhen", "dataphin-public.cn-shenzhen.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dataphin-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -4755,17 +4747,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset under a specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in a specified project.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
         /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
         /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios respectively.</description></item>
+        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
         /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
         /// <item><description>If you need a real-time meta table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
         /// <item><description>Ensure that all required fields are correctly specified. Otherwise, the request failed.</description></item>
@@ -4831,17 +4823,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset under a specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in a specified project.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
         /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
         /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios respectively.</description></item>
+        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
         /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
         /// <item><description>If you need a real-time meta table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
         /// <item><description>Ensure that all required fields are correctly specified. Otherwise, the request failed.</description></item>
@@ -4907,17 +4899,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset under a specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in a specified project.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
         /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
         /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios respectively.</description></item>
+        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
         /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
         /// <item><description>If you need a real-time meta table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
         /// <item><description>Ensure that all required fields are correctly specified. Otherwise, the request failed.</description></item>
@@ -4939,17 +4931,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset under a specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in a specified project.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
         /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
         /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios respectively.</description></item>
+        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
         /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
         /// <item><description>If you need a real-time meta table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
         /// <item><description>Ensure that all required fields are correctly specified. Otherwise, the request failed.</description></item>
@@ -9651,7 +9643,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群。</para>
+        /// <para>Deletes a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9701,7 +9693,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群。</para>
+        /// <para>Deletes a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9751,7 +9743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群。</para>
+        /// <para>Deletes a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9769,7 +9761,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群。</para>
+        /// <para>Deletes a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23395,7 +23387,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有大模型服务供应商和可用模型列表</para>
+        /// <para>Queries all large language model service providers and available models. Available since v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23441,7 +23433,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有大模型服务供应商和可用模型列表</para>
+        /// <para>Queries all large language model service providers and available models. Available since v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23487,7 +23479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有大模型服务供应商和可用模型列表</para>
+        /// <para>Queries all large language model service providers and available models. Available since v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23505,7 +23497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有大模型服务供应商和可用模型列表</para>
+        /// <para>Queries all large language model service providers and available models. Available since v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29183,6 +29175,162 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSecuritySecretKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Dataphin server version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServerVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServerVersionResponse
+        /// </returns>
+        public GetServerVersionResponse GetServerVersionWithOptions(GetServerVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServerVersion",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServerVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Dataphin server version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServerVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServerVersionResponse
+        /// </returns>
+        public async Task<GetServerVersionResponse> GetServerVersionWithOptionsAsync(GetServerVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServerVersion",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServerVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Dataphin server version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServerVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServerVersionResponse
+        /// </returns>
+        public GetServerVersionResponse GetServerVersion(GetServerVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServerVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Dataphin server version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServerVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServerVersionResponse
+        /// </returns>
+        public async Task<GetServerVersionResponse> GetServerVersionAsync(GetServerVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServerVersionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -44351,7 +44499,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
+        /// <para>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44409,7 +44557,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
+        /// <para>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44467,7 +44615,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
+        /// <para>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44485,7 +44633,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
+        /// <para>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48515,7 +48663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群。</para>
+        /// <para>Modifies a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48577,7 +48725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群。</para>
+        /// <para>Modifies a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48639,7 +48787,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群。</para>
+        /// <para>Modifies a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48657,7 +48805,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群。</para>
+        /// <para>Modifies a cluster. Online version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48827,14 +48975,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据治理项id，批量修改问题清单对象的状态。</para>
+        /// <para>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的问题清单的状态。</description></item>
+        /// <item><description>This API operation updates the status of existing issue checklists under a specific project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48893,14 +49041,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据治理项id，批量修改问题清单对象的状态。</para>
+        /// <para>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的问题清单的状态。</description></item>
+        /// <item><description>This API operation updates the status of existing issue checklists under a specific project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48959,14 +49107,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据治理项id，批量修改问题清单对象的状态。</para>
+        /// <para>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的问题清单的状态。</description></item>
+        /// <item><description>This API operation updates the status of existing issue checklists under a specific project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48985,14 +49133,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据治理项id，批量修改问题清单对象的状态。</para>
+        /// <para>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的问题清单的状态。</description></item>
+        /// <item><description>This API operation updates the status of existing issue checklists under a specific project.</description></item>
         /// </list>
         /// </description>
         /// 

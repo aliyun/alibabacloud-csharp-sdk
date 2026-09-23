@@ -52,6 +52,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> DepartmentIdList { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>aliyun</para>
+                /// </summary>
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+                /// <summary>
                 /// <para>The user ID in the user system. This value is the unique identifier of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// 

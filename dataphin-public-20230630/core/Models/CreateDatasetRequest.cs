@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, INDEX.</para>
+            /// <para>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, and INDEX.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试数据集</para>
+            /// <para>Test dataset</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory (obtained from the file service by using the fileId).</para>
+            /// <para>The directory. Obtained from the file service by using the fileId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -261,8 +261,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The dataset scenarios. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OFFLINE: offline. This is the default value.</description></item>
-            /// <item><description>REALTIME: real-time.</description></item>
+            /// <item><description>OFFLINE: Offline. This is the default value.</description></item>
+            /// <item><description>REALTIME: Real-time.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The dataset type. Valid values: FILE, TABLE, HYBRID.</para>
+            /// <para>The dataset type. Valid values: FILE, TABLE, and HYBRID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The version number. If not specified, the default version V1 is used.</para>
+            /// <para>The version number. If this parameter is not specified, the default version V1 is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V1</para>
@@ -333,14 +333,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The data source name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试数据源</para>
+                    /// <para>Test data source</para>
                     /// </summary>
                     [NameInMap("DataSourceName")]
                     [Validation(Required=false)]
                     public string DataSourceName { get; set; }
 
                     /// <summary>
-                    /// <para>The development path (not required for basic projects).</para>
+                    /// <para>The development path. Not required for basic projects.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTML正文提取/test423/</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The data source name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试数据源</para>
+                    /// <para>Test data source</para>
                     /// </summary>
                     [NameInMap("DataSourceName")]
                     [Validation(Required=false)]
@@ -412,11 +412,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DevSchema { get; set; }
 
                     /// <summary>
-                    /// <para>The metadata storage mode. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>CREATE: create a new table.</description></item>
-                    /// <item><description>EXISTING: use an existing table.</description></item>
-                    /// </list>
+                    /// <para>The storage destination (new table or existing table).</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -466,14 +462,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchema TableSchema { get; set; }
                     public class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchema : TeaModel {
                         /// <summary>
-                        /// <para>The column list.</para>
+                        /// <para>The list of fields.</para>
                         /// </summary>
                         [NameInMap("Columns")]
                         [Validation(Required=false)]
                         public List<CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumns> Columns { get; set; }
                         public class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumns : TeaModel {
                             /// <summary>
-                            /// <para>The field comment.</para>
+                            /// <para>The field description.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>primary key</para>
@@ -483,7 +479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Comment { get; set; }
 
                             /// <summary>
-                            /// <para>The array element subtype. Valid only when type is set to ARRAY.</para>
+                            /// <para>The child class of the array element. This parameter is valid only when type is set to ARRAY.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>INT64</para>
@@ -493,7 +489,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string ElementType { get; set; }
 
                             /// <summary>
-                            /// <para>The maximum capacity of the array. Valid only when type is set to ARRAY. Default value: 4096.</para>
+                            /// <para>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>35</para>
@@ -514,7 +510,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether the field is a primary key.</para>
+                            /// <para>Indicates whether the field is a primary key.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>true</para>
@@ -535,7 +531,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether the field is a URL.</para>
+                            /// <para>Indicates whether the field is a URL.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>false</para>
@@ -552,7 +548,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig VectorIndexConfig { get; set; }
                             public class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig : TeaModel {
                                 /// <summary>
-                                /// <para>The vector dimensions.</para>
+                                /// <para>The embedding dimension.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -574,7 +570,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public string EmbeddingModel { get; set; }
 
                                 /// <summary>
-                                /// <para>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</para>
+                                /// <para>The index build parameters, which vary by index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>{M:30, efConstruction:360}</para>
@@ -584,7 +580,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public Dictionary<string, object> IndexParams { get; set; }
 
                                 /// <summary>
-                                /// <para>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</para>
+                                /// <para>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -595,7 +591,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public string IndexType { get; set; }
 
                                 /// <summary>
-                                /// <para>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</para>
+                                /// <para>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -614,14 +610,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The real-time meta table configuration. Takes effect when metadataStorageType is set to STREAM_TABLE.</para>
+                /// <para>The real-time meta table configuration. This parameter takes effect when metadataStorageType is set to STREAM_TABLE.</para>
                 /// </summary>
                 [NameInMap("RealtimeMetaTableConfig")]
                 [Validation(Required=false)]
                 public CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfig RealtimeMetaTableConfig { get; set; }
                 public class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfig : TeaModel {
                     /// <summary>
-                    /// <para>The meta table data source type (only KAFKA is supported in this version).</para>
+                    /// <para>The data source type of the meta table. Currently, only KAFKA is supported.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -636,14 +632,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试元表</para>
+                    /// <para>Test meta table</para>
                     /// </summary>
                     [NameInMap("MetaTableName")]
                     [Validation(Required=false)]
                     public string MetaTableName { get; set; }
 
                     /// <summary>
-                    /// <para>The project ID of the meta table (cross-project supported).</para>
+                    /// <para>The project ID to which the meta table belongs. Cross-project references are supported.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -661,14 +657,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchema TableSchema { get; set; }
                     public class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchema : TeaModel {
                         /// <summary>
-                        /// <para>The column list.</para>
+                        /// <para>The list of fields.</para>
                         /// </summary>
                         [NameInMap("Columns")]
                         [Validation(Required=false)]
                         public List<CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns> Columns { get; set; }
                         public class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns : TeaModel {
                             /// <summary>
-                            /// <para>The field comment.</para>
+                            /// <para>The field description.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>happen time</para>
@@ -678,7 +674,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Comment { get; set; }
 
                             /// <summary>
-                            /// <para>The array element subtype. Valid only when type is set to ARRAY.</para>
+                            /// <para>The child class of the array element. This parameter is valid only when type is set to ARRAY.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>INT64</para>
@@ -688,7 +684,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string ElementType { get; set; }
 
                             /// <summary>
-                            /// <para>The maximum capacity of the array. Valid only when type is set to ARRAY. Default value: 4096.</para>
+                            /// <para>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>35</para>
@@ -709,7 +705,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether the field is a primary key.</para>
+                            /// <para>Indicates whether the field is a primary key.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>false</para>
@@ -730,7 +726,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether the field is a URL.</para>
+                            /// <para>Indicates whether the field is a URL.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>false</para>
@@ -740,14 +736,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public bool? Url { get; set; }
 
                             /// <summary>
-                            /// <para>The vector index configuration. Configure this when the field type is FLOAT_VECTOR/FLOAT16_VECTOR/BFLOAT16_VECTOR to set the dimension, index type, and similarity.</para>
+                            /// <para>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. This parameter is used to specify the vector dimensions, index type, and similarity metric.</para>
                             /// </summary>
                             [NameInMap("VectorIndexConfig")]
                             [Validation(Required=false)]
                             public CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig VectorIndexConfig { get; set; }
                             public class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig : TeaModel {
                                 /// <summary>
-                                /// <para>The vector dimensions.</para>
+                                /// <para>The embedding dimension.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -769,7 +765,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public string EmbeddingModel { get; set; }
 
                                 /// <summary>
-                                /// <para>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</para>
+                                /// <para>The index build parameters, which vary by index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>{M:30, efConstruction:360}</para>
@@ -779,7 +775,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public Dictionary<string, object> IndexParams { get; set; }
 
                                 /// <summary>
-                                /// <para>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</para>
+                                /// <para>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -790,7 +786,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public string IndexType { get; set; }
 
                                 /// <summary>
-                                /// <para>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</para>
+                                /// <para>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -809,10 +805,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The version description.</para>
+                /// <para><b>Version description.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试数据集版本</para>
+                /// <para>Test dataset version</para>
                 /// </summary>
                 [NameInMap("VersionDescription")]
                 [Validation(Required=false)]
