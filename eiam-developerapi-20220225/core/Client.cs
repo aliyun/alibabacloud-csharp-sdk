@@ -19,15 +19,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"eu-central-1", "eiam-developerapi.eu-central-1.aliyuncs.com"},
-                {"cn-hongkong", "eiam-developerapi.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "eiam-developerapi.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-5", "eiam-developerapi.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-1", "eiam-developerapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "eiam-developerapi.ap-northeast-2.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eiam-developerapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -922,7 +913,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
         /// </remarks>
@@ -1014,7 +1005,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
         /// </remarks>
@@ -1106,7 +1097,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
         /// </remarks>
@@ -1134,7 +1125,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
         /// </remarks>
@@ -6040,7 +6031,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
         /// </remarks>
@@ -6108,7 +6099,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
         /// </remarks>
@@ -6176,7 +6167,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
         /// </remarks>
@@ -6204,7 +6195,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
         /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
         /// </remarks>
@@ -6226,15 +6217,15 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plaintext of a secret.</para>
+        /// <para>Queries credential information and retrieves the credential plaintext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API uses an access token from IDaaS for authentication and authorization.
-        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
-        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6290,15 +6281,15 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plaintext of a secret.</para>
+        /// <para>Queries credential information and retrieves the credential plaintext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API uses an access token from IDaaS for authentication and authorization.
-        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
-        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6354,15 +6345,15 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plaintext of a secret.</para>
+        /// <para>Queries credential information and retrieves the credential plaintext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API uses an access token from IDaaS for authentication and authorization.
-        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
-        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6382,15 +6373,15 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plaintext of a secret.</para>
+        /// <para>Queries credential information and retrieves the credential plaintext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API uses an access token from IDaaS for authentication and authorization.
-        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
         /// <remarks>
-        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7052,6 +7043,154 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             PatchOrganizationalUnitHeaders headers = new PatchOrganizationalUnitHeaders();
             return await PatchOrganizationalUnitWithOptionsAsync(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an organizational unit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PatchOrganizationalUnitParentIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// PatchOrganizationalUnitParentIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PatchOrganizationalUnitParentIdResponse
+        /// </returns>
+        public PatchOrganizationalUnitParentIdResponse PatchOrganizationalUnitParentIdWithOptions(string instanceId, string applicationId, string organizationalUnitId, PatchOrganizationalUnitParentIdRequest request, PatchOrganizationalUnitParentIdHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PatchOrganizationalUnitParentId",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId) + "/organizationalUnits/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationalUnitId) + "/parentId",
+                Method = "PATCH",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PatchOrganizationalUnitParentIdResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an organizational unit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PatchOrganizationalUnitParentIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// PatchOrganizationalUnitParentIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PatchOrganizationalUnitParentIdResponse
+        /// </returns>
+        public async Task<PatchOrganizationalUnitParentIdResponse> PatchOrganizationalUnitParentIdWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, PatchOrganizationalUnitParentIdRequest request, PatchOrganizationalUnitParentIdHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PatchOrganizationalUnitParentId",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId) + "/organizationalUnits/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationalUnitId) + "/parentId",
+                Method = "PATCH",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PatchOrganizationalUnitParentIdResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an organizational unit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PatchOrganizationalUnitParentIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PatchOrganizationalUnitParentIdResponse
+        /// </returns>
+        public PatchOrganizationalUnitParentIdResponse PatchOrganizationalUnitParentId(string instanceId, string applicationId, string organizationalUnitId, PatchOrganizationalUnitParentIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PatchOrganizationalUnitParentIdHeaders headers = new PatchOrganizationalUnitParentIdHeaders();
+            return PatchOrganizationalUnitParentIdWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an organizational unit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PatchOrganizationalUnitParentIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PatchOrganizationalUnitParentIdResponse
+        /// </returns>
+        public async Task<PatchOrganizationalUnitParentIdResponse> PatchOrganizationalUnitParentIdAsync(string instanceId, string applicationId, string organizationalUnitId, PatchOrganizationalUnitParentIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PatchOrganizationalUnitParentIdHeaders headers = new PatchOrganizationalUnitParentIdHeaders();
+            return await PatchOrganizationalUnitParentIdWithOptionsAsync(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

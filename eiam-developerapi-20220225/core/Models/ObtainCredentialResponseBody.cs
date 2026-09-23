@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ObtainCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time of the credential, formatted as a Unix timestamp in milliseconds.</para>
+        /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830225000</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The detailed content of the credential. The structure of this object depends on the value of <c>credentialType</c>.</para>
+        /// <para>The credential content.</para>
         /// </summary>
         [NameInMap("credentialContent")]
         [Validation(Required=false)]
         public ObtainCredentialResponseBodyCredentialContent CredentialContent { get; set; }
         public class ObtainCredentialResponseBodyCredentialContent : TeaModel {
             /// <summary>
-            /// <para>Contains details for an API key credential. Returned only when <c>credentialType</c> is <c>api_key</c>.</para>
+            /// <para>The credential content of the API Key credential type.</para>
             /// </summary>
             [NameInMap("apiKeyContent")]
             [Validation(Required=false)]
             public ObtainCredentialResponseBodyCredentialContentApiKeyContent ApiKeyContent { get; set; }
             public class ObtainCredentialResponseBodyCredentialContentApiKeyContent : TeaModel {
                 /// <summary>
-                /// <para>The API key value.</para>
+                /// <para>The value of the API Key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sk-nsklncmwizncxxxx</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             }
 
             /// <summary>
-            /// <para>Contains details for an OAuth client credential. Returned only when <c>credentialType</c> is <c>oauth_client</c>.</para>
+            /// <para>The credential content of the OAuth client authentication credential type.</para>
             /// </summary>
             [NameInMap("oauthClientContent")]
             [Validation(Required=false)]
             public ObtainCredentialResponseBodyCredentialContentOauthClientContent OauthClientContent { get; set; }
             public class ObtainCredentialResponseBodyCredentialContentOauthClientContent : TeaModel {
                 /// <summary>
-                /// <para>The <c>client_id</c> for OAuth 2.0.</para>
+                /// <para>The client_id of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dmvncmxersdxxxxxx</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The <c>client_secret</c> for OAuth 2.0.</para>
+                /// <para>The client_secret of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklnertyt5ddwizncxxxx</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         }
 
         /// <summary>
-        /// <para>Indicates how the credential was created. Valid values:</para>
+        /// <para>The creation type of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>system_init</c>: System-initiated.</para>
-        /// </description></item>
-        /// <item><description><para><c>user_custom</c>: User-created.</para>
-        /// </description></item>
+        /// <item><description>system_init: Created by the system.</description></item>
+        /// <item><description>user_custom: Created by the user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,6 +90,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public string CredentialCreationType { get; set; }
 
+        /// <summary>
+        /// <para>The external unique identifier of the credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23528e9957304f57b98112c72788b5xxxxx</para>
+        /// </summary>
         [NameInMap("credentialExternalId")]
         [Validation(Required=false)]
         public string CredentialExternalId { get; set; }
@@ -127,12 +131,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialName { get; set; }
 
         /// <summary>
-        /// <para>The usage scenario for the credential. Valid values:</para>
+        /// <para>The Scenarios label of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>llm</c>: For use with a large language model.</para>
-        /// </description></item>
-        /// <item><description><para><c>saas</c>: For use with a third-party SaaS application.</para>
-        /// </description></item>
+        /// <item><description>llm: Large language model.</description></item>
+        /// <item><description>saas: Third-party SaaS service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialScenarioLabel { get; set; }
 
         /// <summary>
-        /// <para>The sharing scope of the credential, such as whether it is exclusive to a specific account.</para>
+        /// <para>The credential sharing scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_exclusive</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialSharingScope { get; set; }
 
         /// <summary>
-        /// <para>The ID of the credential\&quot;s subject.</para>
+        /// <para>The subject ID that the credential belongs to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_werthgfdsasffxxxxx</para>
@@ -163,9 +165,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialSubjectId { get; set; }
 
         /// <summary>
-        /// <para>The credential\&quot;s subject type. Valid values:</para>
+        /// <para>The subject type that the credential belongs to. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>authentication_token_provider</c>: An authentication token provider.</description></item>
+        /// <item><description>authentication_token_provider: Authentication token provider.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,10 +180,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>api_key</c>: The credential is an API key.</para>
-        /// </description></item>
-        /// <item><description><para><c>oauth_client</c>: The credential represents an OAuth client.</para>
-        /// </description></item>
+        /// <item><description>api_key: API Key authentication credential.</description></item>
+        /// <item><description>oauth_client: OAuth client authentication credential.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that exclusively owns the credential. This field is present only when <c>credentialSharingScope</c> is <c>user_exclusive</c>.</para>
+        /// <para>The exclusive account ID of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_xxx</para>
@@ -222,12 +222,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the credential. Valid values:</para>
+        /// <para>The credential status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>enabled</c>: The credential can be used.</para>
-        /// </description></item>
-        /// <item><description><para><c>disabled</c>: The credential cannot be used.</para>
-        /// </description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -238,7 +236,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The last update time of the credential, formatted as a Unix timestamp in milliseconds.</para>
+        /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830227000</para>

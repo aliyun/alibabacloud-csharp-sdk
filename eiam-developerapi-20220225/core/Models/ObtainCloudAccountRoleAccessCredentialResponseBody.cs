@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential CloudAccountRoleAccessCredential { get; set; }
         public class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the temporary access credentials for the cloud account role, in UNIX timestamp format and in seconds.</para>
+            /// <para>The expiration time of the temporary access credentials for the cloud account role, in UNIX timestamp format (seconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767196800</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
                 public string AccessKeySecret { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the token (UTC).</para>
+                /// <para>The token expiration time (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-10-20T04:27:09Z</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
                 public string AccessKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the STS Token (UTC).</para>
+                /// <para>The STS Token expiration time (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-10-20T04:27:09Z</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
                 public string SecretAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The session token of the temporary credentials.</para>
+                /// <para>The session security token of the temporary credentials.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FwoDYXdzEJzfSjIr5bSEsj4g7BihPWGWHz****</para>
@@ -137,22 +137,49 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 
             }
 
+            /// <summary>
+            /// <para>The STS Token representing a Tencent Cloud role.</para>
+            /// </summary>
             [NameInMap("tencentCloudStsToken")]
             [Validation(Required=false)]
             public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialTencentCloudStsToken TencentCloudStsToken { get; set; }
             public class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialTencentCloudStsToken : TeaModel {
+                /// <summary>
+                /// <para>The STS Token expiration time (UTC).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-10-20T04:27:09Z</para>
+                /// </summary>
                 [NameInMap("expiration")]
                 [Validation(Required=false)]
                 public string Expiration { get; set; }
 
+                /// <summary>
+                /// <para>The access key ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AKIDq2UjXVflTbnaxpFl0RFdN9yj****</para>
+                /// </summary>
                 [NameInMap("tmpSecretId")]
                 [Validation(Required=false)]
                 public string TmpSecretId { get; set; }
 
+                /// <summary>
+                /// <para>The secret access key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3fGkJjyI+ZHWTxnq8VJHtYGRg****</para>
+                /// </summary>
                 [NameInMap("tmpSecretKey")]
                 [Validation(Required=false)]
                 public string TmpSecretKey { get; set; }
 
+                /// <summary>
+                /// <para>The session security token of the temporary credentials.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aHv1Z6aO7sxRbV4G2vjAij50jdew5Kaa****</para>
+                /// </summary>
                 [NameInMap("token")]
                 [Validation(Required=false)]
                 public string Token { get; set; }

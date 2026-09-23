@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class ObtainCredentialRequest : TeaModel {
+    public class PatchOrganizationalUnitParentIdRequest : TeaModel {
         /// <summary>
-        /// <para>The credential identifier.</para>
+        /// <para>The ID of the parent organizational unit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>credential_identifier_test</para>
+        /// <para>ou_001</para>
         /// </summary>
-        [NameInMap("credentialIdentifier")]
+        [NameInMap("parentId")]
         [Validation(Required=false)]
-        public string CredentialIdentifier { get; set; }
+        public string ParentId { get; set; }
 
     }
 

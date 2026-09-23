@@ -8,20 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class ObtainCredentialHeaders : TeaModel {
+    public class PatchOrganizationalUnitParentIdHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The authentication information. Format: Bearer ${access_token}. </para>
-        /// <remarks>
-        /// <para>Enter the Access Token issued by IDaaS.</para>
-        /// </remarks>
+        /// <para>The authentication information. Format: Bearer access_token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Bearer xxxxxx</para>
+        /// <para>Bearer xxxx</para>
         /// </summary>
         [NameInMap("Authorization")]
         [Validation(Required=false)]

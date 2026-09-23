@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateUserExclusiveCredentialResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The encrypted ciphertext of the credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJraWQiOiJBVVRIU0tFWxxxxx</para>
+        /// </summary>
         [NameInMap("credentialCiphertext")]
         [Validation(Required=false)]
         public string CredentialCiphertext { get; set; }

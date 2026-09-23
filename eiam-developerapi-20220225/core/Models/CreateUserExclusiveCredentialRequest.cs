@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 
         }
 
+        /// <summary>
+        /// <para>The external unique identifier of the credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YNWLVQAZMNRROYWKxxx</para>
+        /// </summary>
         [NameInMap("credentialExternalId")]
         [Validation(Required=false)]
         public string CredentialExternalId { get; set; }
@@ -104,6 +110,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return the encrypted ciphertext of the credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("returnCiphertext")]
         [Validation(Required=false)]
         public bool? ReturnCiphertext { get; set; }
