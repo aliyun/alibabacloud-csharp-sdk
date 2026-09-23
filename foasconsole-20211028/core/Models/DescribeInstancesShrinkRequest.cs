@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ArchitectureType { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRE</para>

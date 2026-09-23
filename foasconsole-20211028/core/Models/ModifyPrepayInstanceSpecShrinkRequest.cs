@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyPrepayInstanceSpecShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable zone-disaster recovery resources for the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
+        /// <para>The resource specifications for zone-disaster recovery.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaResourceSpecShrink { get; set; }
 
         /// <summary>
+        /// <para>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -34,6 +43,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaVSwitchIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the secondary zone for zone-disaster recovery.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -53,7 +64,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

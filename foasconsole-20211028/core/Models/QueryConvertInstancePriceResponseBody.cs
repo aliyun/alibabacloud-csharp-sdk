@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CheapRate { get; set; }
 
                 /// <summary>
-                /// <para>The standard total price after the price reduction.</para>
+                /// <para>The total list price after the price reduction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string MonthPrice { get; set; }
 
                 /// <summary>
-                /// <para>The original standard total price.</para>
+                /// <para>The original total list price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string OriginalStandAmount { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the price reduction.</para>
+                /// <para>The start time of the price reduction, in ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-21T02:06:00Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the enterprise discount is applied.</para>
+            /// <para>Indicates whether an enterprise discount is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An unpaid order exists. Pay or cancel the existing order first</para>
+            /// <para>An unpaid order exists. Pay for or cancel the existing order first</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <para>The description of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Purchase for 1 year or more and enjoy a 15% discount off the official price</para>
+                /// <para>Purchase for 1 year or more and enjoy a 15% discount off the list price</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The discounted price based on the official website discount.</para>
+            /// <para>The promotional price based on the standard discount from the official website.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21321</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The official website discounted price or direct sales contract discounted price.</para>
+            /// <para>The standard discounted price on the official website or the direct sales contract discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32432</para>

@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo DepreciateInfo { get; set; }
             public class QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo : TeaModel {
                 /// <summary>
-                /// <para>The price reduction rate.</para>
+                /// <para>The price reduction ratio.</para>
                 /// </summary>
                 [NameInMap("CheapRate")]
                 [Validation(Required=false)]
                 public string CheapRate { get; set; }
 
                 /// <summary>
-                /// <para>The standard total price after the price reduction.</para>
+                /// <para>The total list price after the price reduction.</para>
                 /// </summary>
                 [NameInMap("CheapStandAmount")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string MonthPrice { get; set; }
 
                 /// <summary>
-                /// <para>The original standard total price.</para>
+                /// <para>The original total list price.</para>
                 /// </summary>
                 [NameInMap("OriginalStandAmount")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the enterprise customer discount is applied.</para>
+            /// <para>Indicates whether an enterprise discount is applied.</para>
             /// </summary>
             [NameInMap("IsContractActivity")]
             [Validation(Required=false)]
@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
                 /// <summary>
                 /// <para>Indicates whether the coupon is selected. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Selected.</description></item>
+                /// <item><description>false: Not selected.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -191,10 +195,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public List<QueryCreateInstancePriceResponseBodyPriceInfoRules> Rules { get; set; }
             public class QueryCreateInstancePriceResponseBodyPriceInfoRules : TeaModel {
                 /// <summary>
-                /// <para>The promotion rule description.</para>
+                /// <para>The description of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Get a 15% discount for a 1-year subscription</para>
+                /// <para>Purchase for one year or longer and enjoy a 15% discount off the list price</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -213,14 +217,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The promotional price based on the official website discount.</para>
+            /// <para>The promotional price based on the standard discount from the official website.</para>
             /// </summary>
             [NameInMap("StandDiscountPrice")]
             [Validation(Required=false)]
             public string StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The official website discounted price or direct sales contract discounted price.</para>
+            /// <para>The standard discounted price on the official website or the direct sales contract discounted price.</para>
             /// </summary>
             [NameInMap("StandPrice")]
             [Validation(Required=false)]

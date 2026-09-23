@@ -4056,7 +4056,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
+        /// <para>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4102,7 +4102,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
+        /// <para>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4148,7 +4148,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
+        /// <para>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4166,7 +4166,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
+        /// <para>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4824,12 +4824,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Renews a subscription fully managed Flink workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4891,12 +4891,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Renews a subscription fully managed Flink workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4958,12 +4958,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Renews a subscription fully managed Flink workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4981,12 +4981,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Renews a subscription fully managed Flink workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">

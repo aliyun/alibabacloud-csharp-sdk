@@ -639,7 +639,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The time when the instance was created. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1629879567394</para>
@@ -649,7 +649,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public long? ResourceCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The overdue time.</para>
+            /// <para>The time when the instance expires. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637337600000</para>
@@ -715,7 +715,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public DescribeInstancesResponseBodyInstancesStorage Storage { get; set; }
             public class DescribeInstancesResponseBodyInstancesStorage : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether fully managed storage is selected. Valid values:</para>
+                /// <para>Specifies whether fully managed storage is selected. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Used.</description></item>
                 /// <item><description>false: Not used.</description></item>
@@ -944,7 +944,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The VPC description.</para>
+                /// <para>The description of the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>“”</para>

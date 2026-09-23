@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The memory size for zone-disaster recovery.</para>
+            /// <para>The active memory size for zone-disaster recovery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

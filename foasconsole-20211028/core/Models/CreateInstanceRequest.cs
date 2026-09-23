@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Extra { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable zone-disaster recovery resources.</para>
+        /// <para>Specifies whether to use zone-disaster recovery resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</para>
+            /// <para>The memory size for zone-disaster recovery high availability (HA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</para>
+        /// <para>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TAIHAO</para>
@@ -310,6 +310,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public CreateInstanceRequestStorage Storage { get; set; }
         public class CreateInstanceRequestStorage : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>Specifies whether to use fully managed storage. You can select only one of fully managed storage or binding an OSS bucket. Valid values:</para>
             /// <list type="bullet">
@@ -322,10 +324,11 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// </summary>
             [NameInMap("FullyManaged")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? FullyManaged { get; set; }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) storage.</para>
+            /// <para>The OSS storage configurations.</para>
             /// </summary>
             [NameInMap("Oss")]
             [Validation(Required=false)]

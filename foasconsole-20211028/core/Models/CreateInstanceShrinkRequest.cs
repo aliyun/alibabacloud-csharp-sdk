@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Extra { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable zone-disaster recovery resources.</para>
+        /// <para>Specifies whether to use zone-disaster recovery resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</para>
+        /// <para>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TAIHAO</para>

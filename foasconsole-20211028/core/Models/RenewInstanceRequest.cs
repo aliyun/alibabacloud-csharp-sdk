@@ -32,7 +32,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period.</para>
+        /// <para>The subscription period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Month: month.</description></item>
+        /// <item><description>Year: year.</description></item>
+        /// <item><description>Hour: hour.</description></item>
+        /// <item><description>Day: day.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: does not enable auto-renewal. (Default)</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled (default).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is invalid for pay-as-you-go instances.</para>
+        /// <para>This parameter does not take effect for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,11 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>POST: pay-as-you-go.</description></item>
+        /// <item><description>PRE: subscription.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +53,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
         /// <summary>
         /// <para>The number of billing cycles.</para>
+        /// <remarks>
+        /// <para>When ChargeType is set to PRE, the Duration parameter is required.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -175,6 +182,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             /// <summary>
             /// <para>The memory size.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -215,6 +225,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Use a coupon.</description></item>
+        /// <item><description>false: Do not use a coupon.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
