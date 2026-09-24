@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The update result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Updated.</para>
+        /// <item><description><para><b>true</b>: The update is successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Failed to update.</para>
+        /// <item><description><para><b>false</b>: The update failed.</para>
         /// </description></item>
         /// </list>
         /// 

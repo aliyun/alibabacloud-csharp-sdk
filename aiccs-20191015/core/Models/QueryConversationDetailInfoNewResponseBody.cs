@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryConversationDetailInfoNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string BatchId { get; set; }
 
             /// <summary>
+            /// <para>The branch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -70,14 +72,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <item><description>CALL_FORWARDING: Call forwarding.</description></item>
             /// <item><description>INCOMING_CALL_BARRED: Incoming call barred.</description></item>
             /// <item><description>CALL_REJECTED: Call rejected.</description></item>
-            /// <item><description>ANSWERED: User answered.</description></item>
+            /// <item><description>ANSWERED: Answered by the user.</description></item>
             /// <item><description>USER_BUSY: Callee busy.</description></item>
             /// <item><description>POWERED_OFF: Powered off.</description></item>
             /// <item><description>NO_USER_RESPONSE: Out of service area.</description></item>
-            /// <item><description>OPERATOR_BLOCK: Operator blocked.</description></item>
+            /// <item><description>OPERATOR_BLOCK: Blocked by the carrier.</description></item>
             /// <item><description>OTHERS: Other status.</description></item>
             /// <item><description>SUSPEND: Service suspended.</description></item>
-            /// <item><description>CANCEL: Caller canceled.</description></item>
+            /// <item><description>CANCEL: Canceled by the caller.</description></item>
             /// <item><description>INVALID_NUMBER: Invalid number.</description></item>
             /// <item><description>UNAVAILABLE: Temporarily unavailable.</description></item>
             /// <item><description>NETWORK_BUSY: Network busy.</description></item>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CallerPhone { get; set; }
 
             /// <summary>
-            /// <para>The chat record information. The structure is a JSON array, sorted in chronological order. The format is as follows:</para>
+            /// <para>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</para>
             /// <pre><code class="language-json">[
             ///     {
             ///         &quot;content&quot;:&quot;Chat content&quot;,
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <b>Example:</b>
             /// <para>[
             ///   {
-            ///     &quot;content&quot;: &quot;111Hello, age 222, gender male, I am the official consultant of ** Auto, we have a new model **; ** is now available, starting at ** yuan, ** minutes to break * units, would you like to learn more?&quot;,
+            ///     &quot;content&quot;: &quot;111Hello, age 222, gender male, I am the official consultant of ** Auto. We have a new model called **; ** is now available, starting at ** RMB. It sold * units in ** minutes. Would you like to learn more?&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string DetailId { get; set; }
 
             /// <summary>
-            /// <para>The call duration in seconds. The value is 0 if the call is not connected.</para>
+            /// <para>The call duration. The value is 0 if the call is not connected. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -182,7 +184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The failure reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Actively canceled.</para>
+            /// <para>Actively canceled</para>
             /// </summary>
             [NameInMap("FailedReason")]
             [Validation(Required=false)]
@@ -223,7 +225,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string MajorIntent { get; set; }
 
             /// <summary>
-            /// <para>The variable information used at runtime, stored in this field as key-value pairs.</para>
+            /// <para>The variable information used at runtime, stored in key-value format in this field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -231,7 +233,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             ///   &quot;phoneNumber&quot;: &quot;777&quot;,
             ///   &quot;distance&quot;: &quot;555&quot;,
             ///   &quot;mendian&quot;: &quot;444&quot;,
-            ///   &quot;sex&quot;: &quot;male&quot;,
+            ///   &quot;sex&quot;: &quot;Male&quot;,
             ///   &quot;name&quot;: &quot;111&quot;,
             ///   &quot;age&quot;: &quot;222&quot;
             /// }</para>
@@ -271,7 +273,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The tag description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Evaluate the customer\&quot;s interest in the model and purchase likelihood.</para>
+                /// <para>Evaluate the customer\&quot;s interest in the vehicle model and purchase likelihood</para>
                 /// </summary>
                 [NameInMap("OutputTagDescription")]
                 [Validation(Required=false)]
@@ -281,7 +283,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The tag name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Customer intent level.</para>
+                /// <para>Customer intent level</para>
                 /// </summary>
                 [NameInMap("OutputTagName")]
                 [Validation(Required=false)]
@@ -291,7 +293,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[&quot;High (very positive, high probability of conversion)&quot;]</para>
+                /// <para>[&quot;High (very positive, high conversion probability)&quot;]</para>
                 /// </summary>
                 [NameInMap("OutputTagValue")]
                 [Validation(Required=false)]

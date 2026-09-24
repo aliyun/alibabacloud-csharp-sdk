@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiVoiceAgentDetailNewRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent.</para>
+        /// <para>The agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the branch. If you do not specify this parameter, the active branch is used.</para>
+        /// <para>The branch ID. If this parameter is left empty, the currently active branch is automatically used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the version. If you do not specify this parameter, the system uses the latest published version for the specified branch. You must specify BranchId when you use this parameter.</para>
+        /// <para>The version ID. If this parameter is left empty, the latest published version of the corresponding branch is used. This parameter must be used together with BranchId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>

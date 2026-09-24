@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class PageQueryAgentListNewRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -23,14 +23,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The agent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>智能客服助手</para>
+        /// <para>Intelligent Customer Service Assistant</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the agent is available for outbound calls. The value is <c>true</c> if the agent\&quot;s current deployment branch has a published version.</para>
+        /// <para>Specifies whether to return only candidate agents that are configurable for inbound calls.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("InboundConfigurableOnly")]
+        [Validation(Required=false)]
+        public bool? InboundConfigurableOnly { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the agent is available for outbound calls. A value of True indicates that the current deployment branch of the agent has a published version and is available for outbound calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// <para>The page index. This parameter is deprecated. Use <c>PageNo</c> instead.</para>
+        /// <para>The page number. This parameter is deprecated. Use PageNo instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,6 +78,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The service direction.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
+        /// </summary>
+        [NameInMap("ServiceDirection")]
+        [Validation(Required=false)]
+        public string ServiceDirection { get; set; }
+
+        /// <summary>
+        /// <para>The source template ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23</para>
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
 
     }
 

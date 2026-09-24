@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateAiOutboundTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Concurrent call rate for automated outbound calls.</para>
+        /// <para>The call concurrency for automatic outbound calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,19 +20,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? ConcurrentRate { get; set; }
 
         /// <summary>
-        /// <para>Job description. Length: 0 to 100 characters.</para>
+        /// <para>The task description. The description can be up to 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>房产销售</para>
+        /// <para>RealEstateSales</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Job execution time, in JSON format.</para>
+        /// <para>The task execution time. The value is in JSON format.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time.</para>
+        /// <para>The end time (end) must be later than the start time (start).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ExecutionTime { get; set; }
 
         /// <summary>
-        /// <para>Fixed outbound ratio for predictive dialing. Valid values: <b>≥1</b>.</para>
+        /// <para>The fixed call ratio for predictive outbound calls. Valid values: <b>≥ 1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public float? ForecastCallRate { get; set; }
 
         /// <summary>
-        /// <para>The skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls). You can obtain this information in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The skill group ID (for predictive outbound calls) or IVR ID (for automatic outbound calls). You can obtain this information from the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HandlerId { get; set; }
 
         /// <summary>
-        /// <para>AICCS instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+        /// You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,21 +77,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Job name. Length: 1 to 15 characters.</para>
+        /// <para>The task name. The name must be 1 to 15 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试任务</para>
+        /// <para>TestTask</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Called number deduplication policy. Valid values:</para>
+        /// <para>The callee number deduplication policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Remove duplicates within the job.</description></item>
-        /// <item><description><b>1</b>: Do not remove duplicates.</description></item>
+        /// <item><description><b>0</b>: deduplicate within the task.</description></item>
+        /// <item><description><b>1</b>: no deduplication.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -102,9 +103,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? NumRepeated { get; set; }
 
         /// <summary>
-        /// <para>Outbound caller numbers.  </para>
+        /// <para>The outbound caller numbers.</para>
         /// <remarks>
-        /// <para>Must be purchased numbers. Separate multiple numbers with commas (,).</para>
+        /// <para>The numbers must be purchased numbers. Separate multiple numbers with commas (,).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -113,9 +114,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OutboundNumsShrink { get; set; }
 
         /// <summary>
-        /// <para>Failed call retry policy.  </para>
+        /// <para>The failed call retry policy.</para>
         /// <remarks>
-        /// <para>If empty, no retries are performed.</para>
+        /// <para>If the value is empty, no retry is performed.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RecallRule")]
@@ -123,10 +124,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RecallRuleShrink { get; set; }
 
         /// <summary>
-        /// <para>Task Type. Valid values:  </para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Predictive outbound call.  </description></item>
-        /// <item><description><b>3</b>: Automated outbound call.</description></item>
+        /// <item><description><b>2</b>: predictive outbound call.</description></item>
+        /// <item><description><b>3</b>: automatic outbound call.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

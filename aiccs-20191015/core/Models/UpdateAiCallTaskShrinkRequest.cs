@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAiCallTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The available call days.</para>
+        /// <para>The callable days.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallDay")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallDayShrink { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of outbound call details (the specific deadline).</para>
+        /// <para>The expiration date of outbound call details (the specific deadline). Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-30 20:00:20</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         /// <summary>
         /// <para>The outbound call validity type. Valid values:</para>
-        /// <para>0: permanently valid.
-        /// 1: valid for a specified duration after import.
-        /// 2: valid until a specified date.</para>
+        /// <para>0: Permanently valid.
+        /// 1: Valid for a specified period after import.
+        /// 2: Valid until a specified date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallExpireType { get; set; }
 
         /// <summary>
-        /// <para>The retry interval. Unit: minutes. The maximum value is 120 minutes.</para>
+        /// <para>The retry interval. Unit: minutes. The maximum value is 120.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryInterval { get; set; }
 
         /// <summary>
-        /// <para>The reasons for retry upon failure.</para>
+        /// <para>The reasons for retrying failed calls.</para>
         /// </summary>
         [NameInMap("CallRetryReason")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryTimes { get; set; }
 
         /// <summary>
-        /// <para>The available call time periods.</para>
+        /// <para>The callable time periods.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallTime")]
@@ -151,11 +151,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         /// <summary>
         /// <para>The creation source. Valid values:</para>
-        /// <para>0: created by agent.</para>
-        /// <para>1: created by engine.</para>
+        /// <para>0: Created by agent.</para>
+        /// <para>1: Created by engine.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Cannot be modified. Leave this parameter empty</para>
+        /// <para>Cannot be modified. You do not need to specify this parameter</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -164,9 +164,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The start mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IMMEDIATE: starts immediately.</para>
+        /// <item><description><para>IMMEDIATE: Starts immediately.</para>
         /// </description></item>
-        /// <item><description><para>SCHEDULE: starts at a scheduled time.</para>
+        /// <item><description><para>SCHEDULE: Starts at a scheduled time.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
+        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748923429000</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class TestLargeModelRequest : TeaModel {
         /// <summary>
-        /// <para>The base models.</para>
+        /// <para>The foundation model.</para>
         /// </summary>
         [NameInMap("BaseModel")]
         [Validation(Required=false)]
         public List<string> BaseModel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the test scenario.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1232</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The user dialog content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好。</para>
+        /// <para>Hello</para>
         /// </summary>
         [NameInMap("UserDialogContent")]
         [Validation(Required=false)]

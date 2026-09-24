@@ -22,21 +22,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CALL_FORWARDING: call forwarding.</description></item>
-        /// <item><description>INCOMING_CALL_BARRED: incoming call barred.</description></item>
-        /// <item><description>CALL_REJECTED: call rejected.</description></item>
-        /// <item><description>ANSWERED: answered.</description></item>
-        /// <item><description>USER_BUSY: user busy.</description></item>
-        /// <item><description>POWERED_OFF: powered off.</description></item>
-        /// <item><description>NO_USER_RESPONSE: out of service area.</description></item>
-        /// <item><description>OPERATOR_BLOCK: blocked by carrier.</description></item>
-        /// <item><description>OTHERS: other status.</description></item>
-        /// <item><description>SUSPEND: suspended.</description></item>
-        /// <item><description>CANCEL: canceled by caller.</description></item>
-        /// <item><description>INVALID_NUMBER: invalid number.</description></item>
-        /// <item><description>UNAVAILABLE: temporarily unavailable.</description></item>
-        /// <item><description>NETWORK_BUSY: network busy.</description></item>
-        /// <item><description>NO_ANSWER: no answer.</description></item>
+        /// <item><description>CALL_FORWARDING: Call forwarding.</description></item>
+        /// <item><description>INCOMING_CALL_BARRED: Incoming call barred.</description></item>
+        /// <item><description>CALL_REJECTED: Call rejected.</description></item>
+        /// <item><description>ANSWERED: Answered.</description></item>
+        /// <item><description>USER_BUSY: User busy.</description></item>
+        /// <item><description>POWERED_OFF: Powered off.</description></item>
+        /// <item><description>NO_USER_RESPONSE: Out of service area.</description></item>
+        /// <item><description>OPERATOR_BLOCK: Blocked by carrier.</description></item>
+        /// <item><description>OTHERS: Other status.</description></item>
+        /// <item><description>SUSPEND: Service suspended.</description></item>
+        /// <item><description>CANCEL: Caller canceled.</description></item>
+        /// <item><description>INVALID_NUMBER: Invalid number.</description></item>
+        /// <item><description>UNAVAILABLE: Temporarily unavailable.</description></item>
+        /// <item><description>NETWORK_BUSY: Network busy.</description></item>
+        /// <item><description>NO_ANSWER: No answer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EncryptionType { get; set; }
 
         /// <summary>
-        /// <para>The end calling time. This value is a timestamp in milliseconds.</para>
+        /// <para>The end calling time. This value is a UNIX timestamp. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The end import time. This value is a timestamp in milliseconds.</para>
+        /// <para>The end import time. This value is a UNIX timestamp. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndImportedTime { get; set; }
 
         /// <summary>
-        /// <para>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click agent details to view the major intent.</para>
+        /// <para>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click the agent details to view the major intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string MajorIntent { get; set; }
 
         /// <summary>
-        /// <para>The maximum conversation duration. Unit: minutes.</para>
+        /// <para>The maximum call duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MaxConversationDuration { get; set; }
 
         /// <summary>
-        /// <para>The minimum conversation duration. Unit: minutes.</para>
+        /// <para>The minimum call duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start calling time. This value is a timestamp in milliseconds.</para>
+        /// <para>The start calling time. This value is a UNIX timestamp. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The start import time. This value is a timestamp in milliseconds.</para>
+        /// <para>The start import time. This value is a UNIX timestamp. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -188,11 +188,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: pending.</para>
+        /// <item><description><para>0: Pending.</para>
         /// </description></item>
-        /// <item><description><para>1: completed.</para>
+        /// <item><description><para>1: Completed.</para>
         /// </description></item>
-        /// <item><description><para>2: failed.</para>
+        /// <item><description><para>2: Failed.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

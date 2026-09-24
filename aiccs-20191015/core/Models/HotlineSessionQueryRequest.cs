@@ -29,15 +29,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: The call ended normally.</description></item>
-        /// <item><description><b>touchRouteError</b>: The call was terminated in the queue.</description></item>
-        /// <item><description><b>touchInQueue</b>: The call was terminated in the queue.</description></item>
-        /// <item><description><b>touchInLoss</b>: The call was terminated in the queue.</description></item>
-        /// <item><description><b>userHangup</b>: The user hung up or the call was terminated in the IVR.</description></item>
-        /// <item><description><b>sysHangup</b>: The system hung up or the call was terminated in the IVR.</description></item>
-        /// <item><description><b>transferAgent</b>: The user hung up or the call was terminated in the IVR.</description></item>
-        /// <item><description><b>dailing</b>: The agent hung up or the call was terminated during ringing.</description></item>
-        /// <item><description><b>TouchRingCallLoss</b>: The call was terminated in the queue or during ringing.</description></item>
+        /// <item><description><b>normal</b>: normal hangup.</description></item>
+        /// <item><description><b>touchRouteError</b>: queue hangup.</description></item>
+        /// <item><description><b>touchInQueue</b>: queue hangup.</description></item>
+        /// <item><description><b>touchInLoss</b>: queue hangup.</description></item>
+        /// <item><description><b>userHangup</b>: user hangup or IVR hangup.</description></item>
+        /// <item><description><b>sysHangup</b>: system hangup or IVR hangup.</description></item>
+        /// <item><description><b>transferAgent</b>: user hangup or IVR hangup.</description></item>
+        /// <item><description><b>dailing</b>: agent hangup or ringing hangup.</description></item>
+        /// <item><description><b>TouchRingCallLoss</b>: queue hangup or ringing hangup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<int?> CallTypeList { get; set; }
 
         /// <summary>
-        /// <para>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</para>
+        /// <para>The number of the caller. For example, a mobile phone number of a user, an agent number, or a robot number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135615****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<string> CalledNumberList { get; set; }
 
         /// <summary>
-        /// <para>The number of the callee. For example, a mobile phone number, an agent number, or a robot number.</para>
+        /// <para>The number of the callee. For example, a mobile phone number of a user, an agent number, or a robot number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>057177****</para>

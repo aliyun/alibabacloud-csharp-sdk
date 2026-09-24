@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of task details.</para>
+            /// <para>The list of task records.</para>
             /// </summary>
             [NameInMap("Record")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-05-20 00:03:00</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? RetryCurTimes { get; set; }
 
                 /// <summary>
-                /// <para>The retry count.</para>
+                /// <para>The total number of retries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? RetryTimes { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-05-20 00:00:00</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The operation was successful.</description></item>
-        /// <item><description><b>false</b>: The operation failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

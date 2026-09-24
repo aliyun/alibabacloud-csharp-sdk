@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class PageQueryAgentListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Access Denied</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public PageQueryAgentListResponseBodyData Data { get; set; }
         public class PageQueryAgentListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of agents.</para>
+            /// <para>The list of agent data.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试智能体</para>
+                /// <para>TestAgent</para>
                 /// </summary>
                 [NameInMap("AgentName")]
                 [Validation(Required=false)]
@@ -74,20 +74,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ApplicationCode { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the review failure.</para>
+                /// <para>The reason for review failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>请补充流程说明</para>
+                /// <para>Provide additional process description</para>
                 /// </summary>
                 [NameInMap("AuditReason")]
                 [Validation(Required=false)]
                 public string AuditReason { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the build failure.</para>
+                /// <para>The reason for build failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>系统错误</para>
+                /// <para>System error</para>
                 /// </summary>
                 [NameInMap("BuildFailReason")]
                 [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The business scenario name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>个人客户线索转化</para>
+                /// <para>Personal customer lead conversion</para>
                 /// </summary>
                 [NameInMap("BusinessTypeName")]
                 [Validation(Required=false)]
                 public string BusinessTypeName { get; set; }
 
                 /// <summary>
-                /// <para>The time the agent was created.</para>
+                /// <para>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 17:10:17</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用于日常测试</para>
+                /// <para>Used for daily testing</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time the agent was last online.</para>
+                /// <para>The most recent online time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 14:38:15</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string LastOnlineTime { get; set; }
 
                 /// <summary>
-                /// <para>The time the agent was last modified.</para>
+                /// <para>The most recent modification time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 17:10:17</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count of entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Succeeded</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -226,12 +226,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

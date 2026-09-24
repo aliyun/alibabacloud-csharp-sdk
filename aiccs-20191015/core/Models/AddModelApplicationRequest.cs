@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddModelApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The number of concurrent requests per second (CPS).</para>
+        /// <para>The number of concurrent requests for the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试应用</para>
+        /// <para>TestApplication</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to push an event notification when a call is connected. The default value is false.</para>
+        /// <para>Specifies whether to enable call-connected event push. Disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallConnectedTriggerModel { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试场景</para>
+        /// <para>TestScenario</para>
         /// </summary>
         [NameInMap("DyvmsSceneName")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteDuration { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive mute events that trigger an automatic hang-up.</para>
+        /// <para>The number of consecutive mute events before the system proactively hangs up the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试提示词。</para>
+        /// <para>Test prompt</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the qualification.</para>
+        /// <para>The qualification name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试资质</para>
+        /// <para>TestQualification</para>
         /// </summary>
         [NameInMap("QualificationName")]
         [Validation(Required=false)]
         public string QualificationName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the audio file for the opening line. This parameter is required if <c>StartWordType</c> is set to <c>1</c>.</para>
+        /// <para>The URL of the recorded audio file for the opening statement. This parameter is required when the opening statement type is set to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source. The value must be <c>USER</c>.</para>
+        /// <para>The source. Fixed value: USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The speech script content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试话术。</para>
+        /// <para>Test speech script</para>
         /// </summary>
         [NameInMap("SpeechContent")]
         [Validation(Required=false)]
@@ -185,29 +185,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? SpeechId { get; set; }
 
         /// <summary>
-        /// <para>The opening line.</para>
+        /// <para>The opening statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好，这是一句开场白。</para>
+        /// <para>Hello, this is an opening statement</para>
         /// </summary>
         [NameInMap("StartWord")]
         [Validation(Required=false)]
         public string StartWord { get; set; }
 
         /// <summary>
-        /// <para>The type of the opening line.</para>
+        /// <para>The type of the opening statement.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0：文本
-        /// 1：录音</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("StartWordType")]
         [Validation(Required=false)]
         public long? StartWordType { get; set; }
 
         /// <summary>
-        /// <para>The TTS configuration, including voice, volume, speech speed, and more.</para>
+        /// <para>The text-to-speech (TTS) configuration, including voice, volume, and speed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TtsConfig")]
@@ -238,9 +237,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The background sound volume.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0：low
-            /// 1：medium
-            /// 2：high</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("BackgroundVolume")]
             [Validation(Required=false)]
@@ -257,7 +254,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CustomerAccountId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable mixing.</para>
+            /// <para>Specifies whether to enable audio mixing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -287,7 +284,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The speech speed for TTS playback. Valid values: -200–200. The default value is 0.</para>
+            /// <para>The speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -307,7 +304,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string TtsStyle { get; set; }
 
             /// <summary>
-            /// <para>The volume for TTS playback. Valid values: 0–100. The default value is 0.</para>
+            /// <para>The volume for TTS variable playback. Valid values: 0 to 100. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55</para>
@@ -327,11 +324,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string VoiceCode { get; set; }
 
             /// <summary>
-            /// <para>The voice type.</para>
-            /// <pre><c>SYSTEM: System voice
-            /// COSYCLONE: Cloned voice
-            /// BL-CUSTOM: Premium custom cloned voice
-            /// </c></pre>
+            /// <para>The voice type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SYSTEM: system voice.</description></item>
+            /// <item><description>COSYCLONE: cloned voice.</description></item>
+            /// <item><description>BL-CUSTOM: custom premium cloned voice.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -343,10 +341,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The purpose of the application.</para>
+        /// <para>The usage description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试用途</para>
+        /// <para>TestUsage</para>
         /// </summary>
         [NameInMap("UsageDesc")]
         [Validation(Required=false)]

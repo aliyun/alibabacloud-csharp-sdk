@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateAiCallTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the agent that is already online.</para>
+        /// <para>The code of the agent that has been published.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1180**************</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<string> CallDay { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of outbound call details (specific deadline).</para>
+        /// <para>The expiration date of outbound call details (specific deadline). Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-30 20:00:20</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         /// <summary>
         /// <para>The outbound call validity type. Valid values:</para>
-        /// <para>0: permanently valid.
-        /// 1: valid for a specified duration after import.
-        /// 2: valid until a specified date.</para>
+        /// <para>0: Permanently valid.
+        /// 1: Valid for a specified duration after import.
+        /// 2: Valid until a specified date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryInterval { get; set; }
 
         /// <summary>
-        /// <para>The list of failure retry reasons.</para>
+        /// <para>The list of retry reasons for failed calls.</para>
         /// </summary>
         [NameInMap("CallRetryReason")]
         [Validation(Required=false)]
@@ -132,9 +132,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Specifies whether to enable retry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled.</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>false (default): disabled.</para>
+        /// <item><description><para>false (default): Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <list type="bullet">
         /// <item><description><para>0: Alibaba Cloud number.</para>
         /// </description></item>
-        /// <item><description><para>1: customer-provided line.</para>
+        /// <item><description><para>1: Customer-provided line.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -176,9 +176,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The creation source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: created by agent.</para>
+        /// <item><description><para>0: Created by an agent.</para>
         /// </description></item>
-        /// <item><description><para>1: created by engine.</para>
+        /// <item><description><para>1: Created by an engine.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -190,11 +190,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Source { get; set; }
 
         /// <summary>
-        /// <para>The start mode. Valid values:</para>
+        /// <para>The start type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IMMEDIATE: starts immediately.</para>
+        /// <item><description><para>IMMEDIATE: Start immediately.</para>
         /// </description></item>
-        /// <item><description><para>SCHEDULE: starts at a scheduled time.</para>
+        /// <item><description><para>SCHEDULE: Start at a scheduled time.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
+        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12313123133</para>

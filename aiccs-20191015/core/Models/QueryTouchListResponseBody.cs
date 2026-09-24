@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryTouchListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>865658FD-80DE-5D49-ABEB-F3CC9863F4F1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Data result.</para>
+        /// <para>The data result.</para>
         /// </summary>
         [NameInMap("ResultData")]
         [Validation(Required=false)]
         public QueryTouchListResponseBodyResultData ResultData { get; set; }
         public class QueryTouchListResponseBodyResultData : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Data.</para>
+            /// <para>The data.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryTouchListResponseBodyResultDataData> Data { get; set; }
             public class QueryTouchListResponseBodyResultDataData : TeaModel {
                 /// <summary>
-                /// <para>Tenant ID.</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>905</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BuId { get; set; }
 
                 /// <summary>
-                /// <para>Session ID.</para>
+                /// <para>The session ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f8807a9de024507a3090b5b66a8****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ChannelId { get; set; }
 
                 /// <summary>
-                /// <para>Contact channel.</para>
+                /// <para>The touch channel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? ChannelType { get; set; }
 
                 /// <summary>
-                /// <para>Session end time. UNIX timestamp format (unit: milliseconds).</para>
+                /// <para>The session end time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611207976000</para>
@@ -104,17 +104,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? CloseTime { get; set; }
 
                 /// <summary>
-                /// <para>Skill group name.</para>
+                /// <para>The skill group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试1</para>
+                /// <para>Test1</para>
                 /// </summary>
                 [NameInMap("CommonQueueName")]
                 [Validation(Required=false)]
                 public string CommonQueueName { get; set; }
 
                 /// <summary>
-                /// <para>Department ID.</para>
+                /// <para>The department ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? DepId { get; set; }
 
                 /// <summary>
-                /// <para>Extension fields.</para>
+                /// <para>The extended fields.</para>
                 /// </summary>
                 [NameInMap("ExtAttrs")]
                 [Validation(Required=false)]
                 public QueryTouchListResponseBodyResultDataDataExtAttrs ExtAttrs { get; set; }
                 public class QueryTouchListResponseBodyResultDataDataExtAttrs : TeaModel {
                     /// <summary>
-                    /// <para>Inbound call caller number.</para>
+                    /// <para>The calling number for inbound calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>187****0000</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Ani { get; set; }
 
                     /// <summary>
-                    /// <para>For outbound calls, this is the called number. For inbound calls, this is also the called number.</para>
+                    /// <para>The called number for both outbound and inbound calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>05712688****</para>
@@ -151,12 +151,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Dnis { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction Level. Valid values:  </para>
+                    /// <para>The satisfaction level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>2</b>: Level 2 satisfaction.  </description></item>
-                    /// <item><description><b>3</b>: Level 3 satisfaction.  </description></item>
-                    /// <item><description><b>4</b>: Level 4 satisfaction.  </description></item>
-                    /// <item><description><b>5</b>: Level 5 satisfaction.</description></item>
+                    /// <item><description><b>2</b>: 2-level satisfaction.</description></item>
+                    /// <item><description><b>3</b>: 3-level satisfaction.</description></item>
+                    /// <item><description><b>4</b>: 4-level satisfaction.</description></item>
+                    /// <item><description><b>5</b>: 5-level satisfaction.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? EvaluationLevel { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction rating. Valid values:</para>
+                    /// <para>The satisfaction score. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>1</b>: Very dissatisfied.</description></item>
                     /// <item><description><b>2</b>: Dissatisfied.</description></item>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? EvaluationScore { get; set; }
 
                     /// <summary>
-                    /// <para>Evaluation solution.</para>
+                    /// <para>The evaluation Solutions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? EvaluationSolution { get; set; }
 
                     /// <summary>
-                    /// <para>Evaluation status. Valid values:</para>
+                    /// <para>The evaluation status. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>-1</b>: Evaluation not initiated.</description></item>
                     /// <item><description><b>0</b>: Not evaluated.</description></item>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? EvaluationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Duration until first response (unit: seconds).</para>
+                    /// <para>The first response duration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? OnlineJoinRespInterval { get; set; }
 
                     /// <summary>
-                    /// <para>Online session source.</para>
+                    /// <para>The online session source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public int? OnlineSessionSource { get; set; }
 
                     /// <summary>
-                    /// <para>Outbound call caller number.</para>
+                    /// <para>The calling number for outbound calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>05712688****</para>
@@ -241,14 +241,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>Large object.</para>
+                /// <para>The large field.</para>
                 /// </summary>
                 [NameInMap("ExtAttrsString")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> ExtAttrsString { get; set; }
 
                 /// <summary>
-                /// <para>Feedback.</para>
+                /// <para>The feedback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Feedback { get; set; }
 
                 /// <summary>
-                /// <para>Conversation pickup time, in UNIX timestamp format (unit: milliseconds).</para>
+                /// <para>The session pickup time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611209971000</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? FirstTime { get; set; }
 
                 /// <summary>
-                /// <para>Conversation initiator.</para>
+                /// <para>The session initiator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6400665****</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? FromId { get; set; }
 
                 /// <summary>
-                /// <para>Creation Time, in UNIX timestamp format (unit: milliseconds).</para>
+                /// <para>The creation time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611209971000</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Update Time. UNIX timestamp format (unit: milliseconds).</para>
+                /// <para>The update time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611207979000</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Membership ID.</para>
+                /// <para>The member ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6400665****</para>
@@ -308,17 +308,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? MemberId { get; set; }
 
                 /// <summary>
-                /// <para>Membership name.</para>
+                /// <para>The member name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>访客</para>
+                /// <para>Visitor</para>
                 /// </summary>
                 [NameInMap("MemberName")]
                 [Validation(Required=false)]
                 public string MemberName { get; set; }
 
                 /// <summary>
-                /// <para>Parent contact ID.</para>
+                /// <para>The parent touch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ParentTouchId { get; set; }
 
                 /// <summary>
-                /// <para>Skill group ID.</para>
+                /// <para>The skill group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? QueueId { get; set; }
 
                 /// <summary>
-                /// <para>Service agent ID.</para>
+                /// <para>The agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>67****</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ServicerId { get; set; }
 
                 /// <summary>
-                /// <para>Service agent name.</para>
+                /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1390000****</para>
@@ -358,11 +358,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ServicerName { get; set; }
 
                 /// <summary>
-                /// <para>Contact status. Valid values:  </para>
+                /// <para>The touch status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Incoming call received.  </description></item>
-                /// <item><description><b>2</b>: Agent has joined.  </description></item>
-                /// <item><description><b>3</b>: In conversation.  </description></item>
+                /// <item><description><b>1</b>: Queued.</description></item>
+                /// <item><description><b>2</b>: Agent connected.</description></item>
+                /// <item><description><b>3</b>: In call.</description></item>
                 /// <item><description><b>4</b>: Ended.</description></item>
                 /// </list>
                 /// 
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>Change owner list.</para>
+                /// <para>The transfer list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string SwitchUser { get; set; }
 
                 /// <summary>
-                /// <para>Conversation recipient.</para>
+                /// <para>The session receiver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>67****</para>
@@ -394,15 +394,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ToId { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the session ended. Valid values:  </para>
+                /// <para>The session end reason. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Unknown.  </description></item>
-                /// <item><description><b>1</b>: Contact failed.  </description></item>
-                /// <item><description><b>2</b>: Terminated by customer.  </description></item>
-                /// <item><description><b>3</b>: Terminated by agent.  </description></item>
-                /// <item><description><b>4</b>: Call abnormally interrupted.  </description></item>
-                /// <item><description><b>5</b>: Terminated due to change owner.  </description></item>
-                /// <item><description><b>6</b>: Terminated by system.</description></item>
+                /// <item><description><b>0</b>: Unknown.</description></item>
+                /// <item><description><b>1</b>: Touch unsuccessful.</description></item>
+                /// <item><description><b>2</b>: Customer terminated.</description></item>
+                /// <item><description><b>3</b>: Agent terminated.</description></item>
+                /// <item><description><b>4</b>: Call abnormally interrupted.</description></item>
+                /// <item><description><b>5</b>: Transfer terminated.</description></item>
+                /// <item><description><b>6</b>: System terminated.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string TouchContent { get; set; }
 
                 /// <summary>
-                /// <para>End reason.</para>
+                /// <para>The end reason.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? TouchEndReason { get; set; }
 
                 /// <summary>
-                /// <para>Touch ID.</para>
+                /// <para>The contact ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1386****</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string TouchId { get; set; }
 
                 /// <summary>
-                /// <para>Conversation duration (unit: seconds).</para>
+                /// <para>The session duration, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string TouchTime { get; set; }
 
                 /// <summary>
-                /// <para>Touch type. Valid values:</para>
+                /// <para>The touch type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: Active touch.</description></item>
                 /// <item><description><b>2</b>: Passive touch.</description></item>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? TouchType { get; set; }
 
                 /// <summary>
-                /// <para>User touch ID.</para>
+                /// <para>The user touch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1386****</para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public bool? Empty { get; set; }
 
             /// <summary>
-            /// <para>The page number of the next page.</para>
+            /// <para>The next page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? NextPage { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? OnePageSize { get; set; }
 
             /// <summary>
-            /// <para>Previous page number.</para>
+            /// <para>The previous page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? PreviousPage { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? TotalPage { get; set; }
 
             /// <summary>
-            /// <para>Total number of query results.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -531,9 +531,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:  </para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.  </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 

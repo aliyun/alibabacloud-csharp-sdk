@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAiOutboundTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Outbound call job details.</para>
+        /// <para>The details of the outbound call task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAiOutboundTaskDetailResponseBodyData Data { get; set; }
         public class GetAiOutboundTaskDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Concurrency for automated outbound calls.</para>
+            /// <para>The concurrency for automatic outbound calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? ConcurrentRate { get; set; }
 
             /// <summary>
-            /// <para>Job description.</para>
+            /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>房产销售</para>
+            /// <para>Real estate sales</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Task execution time.</para>
+            /// <para>The task execution time. Time periods are configured by day of the week using a JSON object. The start and end values are in the HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;TUESDAY&quot;:[{&quot;start&quot;:&quot;06:00&quot;,&quot;end&quot;:&quot;06:05&quot;}],&quot;MONDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;},{&quot;start&quot;:&quot;20:30&quot;,&quot;end&quot;:&quot;21:45&quot;},{&quot;start&quot;:&quot;22:30&quot;,&quot;end&quot;:&quot;22:50&quot;}],&quot;WEDNESDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;THURSDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;FRIDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SATURDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SUNDAY&quot;:[{&quot;start&quot;:&quot;17:00&quot;,&quot;end&quot;:&quot;23:45&quot;}]}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>Fixed outbound call ratio for predictive dialing.</para>
+            /// <para>The fixed call rate for predictive outbound calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public float? ForecastCallRate { get; set; }
 
             /// <summary>
-            /// <para>Skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</para>
+            /// <para>The skill group ID (for predictive outbound calls) or IVR ID (for automatic outbound calls).</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -77,30 +77,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? HandlerId { get; set; }
 
             /// <summary>
-            /// <para>Skill group name or IVR name.</para>
+            /// <para>The skill group name or IVR name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>热线技能组</para>
+            /// <para>Hotline skill group</para>
             /// </summary>
             [NameInMap("HandlerName")]
             [Validation(Required=false)]
             public string HandlerName { get; set; }
 
             /// <summary>
-            /// <para>Job name.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxx外呼</para>
+            /// <para>xxxxx outbound call</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Called number deduplication policy.</para>
+            /// <para>The callee number deduplication policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Remove duplicates.</description></item>
-            /// <item><description><b>1</b>: Do not remove duplicates.</description></item>
+            /// <item><description><b>0</b>: Deduplicate.</description></item>
+            /// <item><description><b>1</b>: Do not deduplicate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,21 +111,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? NumRepeated { get; set; }
 
             /// <summary>
-            /// <para>Outbound caller numbers.</para>
+            /// <para>The outbound caller numbers.</para>
             /// </summary>
             [NameInMap("OutboundNums")]
             [Validation(Required=false)]
             public List<string> OutboundNums { get; set; }
 
             /// <summary>
-            /// <para>Failed-call retry policy.</para>
+            /// <para>The failed recall policy.</para>
             /// </summary>
             [NameInMap("RecallRule")]
             [Validation(Required=false)]
             public GetAiOutboundTaskDetailResponseBodyDataRecallRule RecallRule { get; set; }
             public class GetAiOutboundTaskDetailResponseBodyDataRecallRule : TeaModel {
                 /// <summary>
-                /// <para>Number of retries.</para>
+                /// <para>The number of recall attempts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>Recall interval. Unit: minutes.</para>
+                /// <para>The recall interval. Unit: minutes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -147,13 +147,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Job status. Valid values:  </para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Not started.  </description></item>
-            /// <item><description><b>1</b>: In progress.  </description></item>
-            /// <item><description><b>2</b>: System paused.  </description></item>
-            /// <item><description><b>3</b>: Manually paused.  </description></item>
-            /// <item><description><b>4</b>: Completed.  </description></item>
+            /// <item><description><b>0</b>: Not started.</description></item>
+            /// <item><description><b>1</b>: In progress.</description></item>
+            /// <item><description><b>2</b>: System paused.</description></item>
+            /// <item><description><b>3</b>: Manually paused.</description></item>
+            /// <item><description><b>4</b>: Completed.</description></item>
             /// <item><description><b>5</b>: Stopped.</description></item>
             /// </list>
             /// 
@@ -165,17 +165,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Task status description.</para>
+            /// <para>The task status description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>未开始</para>
+            /// <para>Not started</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// <para>Job ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task Type. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>2</b>: Predictive outbound call.</description></item>
-            /// <item><description><b>3</b>: Automated outbound call.</description></item>
+            /// <item><description><b>3</b>: Automatic outbound call.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
@@ -221,9 +221,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API was invoked successfully.  </para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.  </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 

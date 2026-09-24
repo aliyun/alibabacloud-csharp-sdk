@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateModelApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application code.</para>
+        /// <para>The code of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The name of the model application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试应用</para>
+        /// <para>TestApplication</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallAssistantRecognize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable call-connected event push. Disabled by default.</para>
+        /// <para>Specifies whether to enable call-connected event push. This feature is disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallConnectedTriggerModel { get; set; }
 
         /// <summary>
-        /// <para>The enumeration of allowed key digits, separated by commas, such as 1,2,3. Maximum of 20 values.</para>
+        /// <para>The enumeration of allowed key digits, specified as comma-separated text such as 1,2,3. A maximum of 20 values are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DtmfAllowedDigits { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic validation of key values.</para>
+        /// <para>Specifies whether to enable automatic key value validation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The action to take when the input is out of range. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RETURN_MODEL: return to the model</description></item>
-        /// <item><description>AUTO_RETRY: automatically retry</description></item>
+        /// <item><description>RETURN_MODEL</description></item>
+        /// <item><description>AUTO_RETRY</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DtmfOutOfRangeAction { get; set; }
 
         /// <summary>
-        /// <para>The number of retry attempts (PlayTimes). Valid values: 1 to 3. Takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</para>
+        /// <para>The number of retry attempts (PlayTimes). Valid values: 1 to 3. This parameter takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -135,16 +135,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfRetryPlayTimes { get; set; }
 
         /// <summary>
-        /// <para>The custom retry prompt text. Maximum length: 50 characters. If left empty, the default message is used.</para>
+        /// <para>The custom retry prompt text. The maximum length is 50 characters. If this parameter is left empty, the default prompt &quot;Invalid input. Enter again.&quot; is used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试文本</para>
+        /// <para>Sample text</para>
         /// </summary>
         [NameInMap("DtmfRetryPromptText")]
         [Validation(Required=false)]
         public string DtmfRetryPromptText { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of DTMF key sending attempts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90</para>
         /// </summary>
@@ -153,6 +155,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfSendMaxCount { get; set; }
 
         /// <summary>
+        /// <para>The timeout period for waiting for DTMF key sending.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58</para>
         /// </summary>
@@ -161,10 +165,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfSendWaitTimeout { get; set; }
 
         /// <summary>
-        /// <para>The scenario name.</para>
+        /// <para>The name of the scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试场景</para>
+        /// <para>TestScenario</para>
         /// </summary>
         [NameInMap("DyvmsSceneName")]
         [Validation(Required=false)]
@@ -181,6 +185,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableDtmfReceive { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable DTMF key sending.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -189,7 +195,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableDtmfSend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Morse code configuration. Disabled by default.</para>
+        /// <para>Specifies whether to enable Morse code configuration. This feature is disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -206,7 +212,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InterruptConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The model code.</para>
+        /// <para>The code of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1231</para>
@@ -216,7 +222,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>The model version.</para>
+        /// <para>The version of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -246,7 +252,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteDuration { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive mute events after which the system proactively hangs up.</para>
+        /// <para>The number of consecutive mute events before the system proactively hangs up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -283,14 +289,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试提示词</para>
+        /// <para>TestPrompt</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>The qualification ID.</para>
+        /// <para>The ID of the qualification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61</para>
@@ -300,10 +306,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>The qualification name.</para>
+        /// <para>The name of the qualification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试质检</para>
+        /// <para>TestQualification</para>
         /// </summary>
         [NameInMap("QualificationName")]
         [Validation(Required=false)]
@@ -348,17 +354,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The speech script content.</para>
+        /// <para>The content of the speech script.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试话术</para>
+        /// <para>TestSpeechScript</para>
         /// </summary>
         [NameInMap("SpeechContent")]
         [Validation(Required=false)]
         public string SpeechContent { get; set; }
 
         /// <summary>
-        /// <para>The speech script ID.</para>
+        /// <para>The ID of the speech script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -371,7 +377,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The opening statement.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好，这是个测试开场白</para>
+        /// <para>Hello, this is a test opening statement</para>
         /// </summary>
         [NameInMap("StartWord")]
         [Validation(Required=false)]
@@ -381,8 +387,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The type of the opening statement.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0：文本
-        /// 1：录音</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("StartWordType")]
         [Validation(Required=false)]
@@ -399,7 +404,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The usage description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试用途</para>
+        /// <para>TestUsage</para>
         /// </summary>
         [NameInMap("UsageDesc")]
         [Validation(Required=false)]

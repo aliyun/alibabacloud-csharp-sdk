@@ -12,13 +12,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>EXCEL</para>
-        /// </description></item>
-        /// <item><description><para>JSON</para>
-        /// <remarks>
-        /// <para>Notice: </para>
+        /// <item><description>EXCEL</description></item>
+        /// <item><description>JSON<remarks>
+        /// <para>Notice: API calls currently support only the JSON data type.</para>
         /// </remarks>
-        /// <para>API calls currently support only the JSON data type.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -41,7 +38,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The OSS file path. This parameter is optional.</para>
         /// <remarks>
-        /// <para>Importing data by specifying an OSS file path is not available because API calls currently support only the JSON data type.</para>
+        /// <para>API calls do not currently support the Excel data type. Therefore, uploading an OSS file path is currently unavailable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +53,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>If <c>DataType</c> is set to <c>JSON</c>, you must use this parameter to upload the data. You can import up to 1,000 records per request.</para>
+        /// <para>If DataType is set to JSON, upload data through this field. A maximum of 1000 records can be uploaded at a time.</para>
         /// </summary>
         [NameInMap("PhoneNumberList")]
         [Validation(Required=false)]
@@ -71,7 +68,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the call task.</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

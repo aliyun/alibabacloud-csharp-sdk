@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class PageQueryAgentListNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied detail.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Access denied due to insufficient permissions</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -54,8 +54,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The agent creation mode. Valid values:<br>
-                /// <c>0</c>: Prompt mode (<c>PROMPT</c>). <c>1</c>: Conversation flow mode (<c>CONVERSATION</c>).<br></para>
+                /// <para>The agent building mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: prompt mode (PROMPT).</description></item>
+                /// <item><description>1: dialog flow mode (CONVERSATION).</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>智能客服助手</para>
+                /// <para>Intelligent Customer Service Assistant</para>
                 /// </summary>
                 [NameInMap("AgentName")]
                 [Validation(Required=false)]
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ApplicationCode { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-20 12:00:00</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The deployment branch ID.</para>
+                /// <para>The ID of the branch being deployed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? DeployBranchId { get; set; }
 
                 /// <summary>
-                /// <para>The effective branch name.</para>
+                /// <para>The name of the active branch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>master</para>
@@ -118,14 +121,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>智能客服助手，提供自动化的客户服务支持</para>
+                /// <para>Intelligent customer service assistant that provides automated customer service support</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The effective version ID.</para>
+                /// <para>The ID of the active version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>71</para>
@@ -135,7 +138,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? EffectiveVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The effective version name.</para>
+                /// <para>The name of the active version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1.0.0</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string EffectiveVersionName { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the agent can be used for outbound calls. A value of <c>true</c> means the agent\&quot;s current deployment branch has a published version.</para>
+                /// <para>Indicates whether the agent is available for outbound calls. A value of True indicates that the current deployment branch of the agent has a published version and is available for outbound calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public bool? IsAvailable { get; set; }
 
                 /// <summary>
-                /// <para>The most recent publish time.</para>
+                /// <para>The latest version publish time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-20 12:00:00</para>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string LatestPublishTime { get; set; }
 
                 /// <summary>
-                /// <para>The last modified time.</para>
+                /// <para>The last modification time, in the format of YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-15 10:30:00</para>
@@ -175,14 +178,44 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The scene.</para>
+                /// <para>The scenario.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>个人线索转化</para>
+                /// <para>Personal lead conversion</para>
                 /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }
+
+                /// <summary>
+                /// <para>The service direction.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Sample value</para>
+                /// </summary>
+                [NameInMap("ServiceDirection")]
+                [Validation(Required=false)]
+                public string ServiceDirection { get; set; }
+
+                /// <summary>
+                /// <para>The source template ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>62</para>
+                /// </summary>
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
+                public long? TemplateId { get; set; }
+
+                /// <summary>
+                /// <para>The source template name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Sample value</para>
+                /// </summary>
+                [NameInMap("TemplateName")]
+                [Validation(Required=false)]
+                public string TemplateName { get; set; }
 
             }
 
@@ -207,7 +240,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -219,7 +252,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The message that describes the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -239,12 +272,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request succeeded.</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b><c>true</c></b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b><c>false</c></b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
