@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [Validation(Required=false)]
         public string RagId { get; set; }
 
+        [NameInMap("Rule")]
+        [Validation(Required=false)]
+        public string Rule { get; set; }
+
         /// <summary>
         /// <para>The business type (reserved for future routing by business line). The current release supports skincare.</para>
         /// 

@@ -39,8 +39,89 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>虚拟试穿（同步）</para>
+        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Virtual try-on for clothing products:</b>
+        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for shoes and hats:</b>
+        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// <item><description><b>E-commerce product display and marketing:</b>
+        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// <item><description><b>Online shopping experience optimization:</b>
+        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
+        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
+        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2>Sample results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Type</b></th>
+        /// <th><b>Model image</b></th>
+        /// <th><b>Clothing image</b></th>
+        /// <th><b>Try-on result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Tops</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Bottoms</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Shoes</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Jumpsuits</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/7f5cec40-a884-4640-8339-6109305dfa1d.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Dresses</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Hats</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// AiTryOnRequest
@@ -93,8 +174,89 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>虚拟试穿（同步）</para>
+        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Virtual try-on for clothing products:</b>
+        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for shoes and hats:</b>
+        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// <item><description><b>E-commerce product display and marketing:</b>
+        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// <item><description><b>Online shopping experience optimization:</b>
+        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
+        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
+        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2>Sample results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Type</b></th>
+        /// <th><b>Model image</b></th>
+        /// <th><b>Clothing image</b></th>
+        /// <th><b>Try-on result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Tops</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Bottoms</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Shoes</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Jumpsuits</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/7f5cec40-a884-4640-8339-6109305dfa1d.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Dresses</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Hats</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// AiTryOnRequest
@@ -147,8 +309,89 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>虚拟试穿（同步）</para>
+        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Virtual try-on for clothing products:</b>
+        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for shoes and hats:</b>
+        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// <item><description><b>E-commerce product display and marketing:</b>
+        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// <item><description><b>Online shopping experience optimization:</b>
+        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
+        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
+        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2>Sample results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Type</b></th>
+        /// <th><b>Model image</b></th>
+        /// <th><b>Clothing image</b></th>
+        /// <th><b>Try-on result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Tops</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Bottoms</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Shoes</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Jumpsuits</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/7f5cec40-a884-4640-8339-6109305dfa1d.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Dresses</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Hats</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// AiTryOnRequest
@@ -165,8 +408,89 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>虚拟试穿（同步）</para>
+        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Virtual try-on for clothing products:</b>
+        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for shoes and hats:</b>
+        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// <item><description><b>E-commerce product display and marketing:</b>
+        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// <item><description><b>Online shopping experience optimization:</b>
+        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
+        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
+        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2>Sample results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Type</b></th>
+        /// <th><b>Model image</b></th>
+        /// <th><b>Clothing image</b></th>
+        /// <th><b>Try-on result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Tops</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Bottoms</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Shoes</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Jumpsuits</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/7f5cec40-a884-4640-8339-6109305dfa1d.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Dresses</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td>Hats</td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// AiTryOnRequest
@@ -6878,6 +7202,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             {
                 query["RagId"] = request.RagId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["Type"] = request.Type;
@@ -6957,6 +7285,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
             {
                 query["RagId"] = request.RagId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
