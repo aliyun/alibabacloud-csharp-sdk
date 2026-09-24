@@ -1,3 +1,6 @@
+2026-09-24 Version: 7.0.2
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2026-09-11 Version: 7.0.1
 - Update API Enrich: add response parameters Body.data.solution_list.$.journey_list.$.segment_list.$.fare_basis.
 - Update API Pricing: add response parameters Body.data.solution.journey_list.$.segment_list.$.fare_basis.
