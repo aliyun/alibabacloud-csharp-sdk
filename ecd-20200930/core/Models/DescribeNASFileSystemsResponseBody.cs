@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The NAS file system information.</para>
+        /// <para>The NAS file system information list.</para>
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
+            /// <para>The bandwidth.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>720</para>
+            /// </summary>
+            [NameInMap("Bandwidth")]
+            [Validation(Required=false)]
+            public long? Bandwidth { get; set; }
+
+            /// <summary>
             /// <para>The total capacity of the NAS file system. Unit: GiB.</para>
             /// <list type="bullet">
             /// <item><description>If the storage type is Capacity, the capacity is fixed at 10 PiB (10485760 GiB).</description></item>
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The time when the NAS file system was created.</para>
+            /// <para>The time when the NAS file system was created. The time is in the ISO 8601 format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-10T11:39Z</para>
@@ -247,6 +257,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            /// <summary>
+            /// <para>The product type of the NAS file system.</para>
+            /// </summary>
             [NameInMap("ProductType")]
             [Validation(Required=false)]
             public string ProductType { get; set; }
@@ -295,6 +308,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Scene { get; set; }
 
+            /// <summary>
+            /// <para>The capacity quota of the NAS file system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SizeQuota")]
             [Validation(Required=false)]
             public long? SizeQuota { get; set; }
@@ -320,7 +339,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SupportAcl { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-f</para>
@@ -332,7 +351,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

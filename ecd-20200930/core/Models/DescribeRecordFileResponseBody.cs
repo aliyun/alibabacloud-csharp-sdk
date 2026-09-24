@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the recording files.</para>
+        /// <para>The details of the recording file list.</para>
         /// </summary>
         [NameInMap("RecordFiles")]
         [Validation(Required=false)]
         public List<DescribeRecordFileResponseBodyRecordFiles> RecordFiles { get; set; }
         public class DescribeRecordFileResponseBodyRecordFiles : TeaModel {
+            /// <summary>
+            /// <para>The audit status list.</para>
+            /// </summary>
+            [NameInMap("AuditStatus")]
+            [Validation(Required=false)]
+            public List<string> AuditStatus { get; set; }
+
             /// <summary>
             /// <para>The Cloud Desktop ID.</para>
             /// 
@@ -27,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Cloud Desktop.</para>
+            /// <para>The Cloud Desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fvt-ecd</para>
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The name of the file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task3</para>
@@ -96,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The size of the file. Unit: bytes.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>139</para>
@@ -116,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The time when the recording ended. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The recording end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T06:02:25Z</para>
@@ -136,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordExpire { get; set; }
 
             /// <summary>
-            /// <para>The time when the recording started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The recording start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T06:02:25Z</para>
@@ -194,8 +201,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The status of the screen recording file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: uploaded.</description></item>
-            /// <item><description>1: uploading.</description></item>
+            /// <item><description>0: Upload succeeded.</description></item>
+            /// <item><description>1: Uploading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

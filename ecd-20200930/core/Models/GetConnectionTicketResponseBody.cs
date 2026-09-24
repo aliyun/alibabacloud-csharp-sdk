@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud computer ID.</para>
+        /// <para>The ID of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content and save it as an xxx.ica file, and then open the file. The following Python code provides an example:</para>
+        /// <para>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content, save the decoded content as an xxx.ica file, and then open the file. Python code example:</para>
         /// <pre><c>import base64
         /// response = {
         ///     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The connection credential for the cloud computer.</para>
+        /// <para>The connection credential of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</para>

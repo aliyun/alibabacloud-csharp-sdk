@@ -9151,21 +9151,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud computers, complete the following preparations:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
         /// <b>Call examples:</b><details>
-        /// <summary>Example of creating with a template</summary></description></item>
+        /// <summary>Example of creating a cloud desktop by using a template</summary></description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -9179,7 +9179,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>Example of creating without a template</summary>
+        /// <summary>Example of creating a cloud desktop without a template</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9199,7 +9199,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating a monthly hourly package</summary>
+        /// <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9224,7 +9224,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating an Agent resource</summary>
+        /// <summary>Example of creating an agent resource</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9244,7 +9244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9395,6 +9395,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePoolId))
+            {
+                query["ReservePoolId"] = request.ReservePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -9468,21 +9472,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud computers, complete the following preparations:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
         /// <b>Call examples:</b><details>
-        /// <summary>Example of creating with a template</summary></description></item>
+        /// <summary>Example of creating a cloud desktop by using a template</summary></description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -9496,7 +9500,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>Example of creating without a template</summary>
+        /// <summary>Example of creating a cloud desktop without a template</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9516,7 +9520,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating a monthly hourly package</summary>
+        /// <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9541,7 +9545,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating an Agent resource</summary>
+        /// <summary>Example of creating an agent resource</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9561,7 +9565,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9712,6 +9716,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePoolId))
+            {
+                query["ReservePoolId"] = request.ReservePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -9785,21 +9793,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud computers, complete the following preparations:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
         /// <b>Call examples:</b><details>
-        /// <summary>Example of creating with a template</summary></description></item>
+        /// <summary>Example of creating a cloud desktop by using a template</summary></description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -9813,7 +9821,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>Example of creating without a template</summary>
+        /// <summary>Example of creating a cloud desktop without a template</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9833,7 +9841,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating a monthly hourly package</summary>
+        /// <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9858,7 +9866,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating an Agent resource</summary>
+        /// <summary>Example of creating an agent resource</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9878,7 +9886,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -9896,21 +9904,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud computers, complete the following preparations:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
         /// <b>Call examples:</b><details>
-        /// <summary>Example of creating with a template</summary></description></item>
+        /// <summary>Example of creating a cloud desktop by using a template</summary></description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -9924,7 +9932,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>Example of creating without a template</summary>
+        /// <summary>Example of creating a cloud desktop without a template</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9944,7 +9952,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating a monthly hourly package</summary>
+        /// <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9969,7 +9977,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example of creating an Agent resource</summary>
+        /// <summary>Example of creating an agent resource</summary>
         /// ```
         /// {
         ///   "RegionId": "cn-hangzhou",
@@ -9989,7 +9997,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -10874,6 +10882,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capacity))
+            {
+                query["Capacity"] = request.Capacity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -10881,6 +10893,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
             {
                 query["EncryptType"] = request.EncryptType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemType))
+            {
+                query["FileSystemType"] = request.FileSystemType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -10950,6 +10966,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capacity))
+            {
+                query["Capacity"] = request.Capacity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -10957,6 +10977,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
             {
                 query["EncryptType"] = request.EncryptType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemType))
+            {
+                query["FileSystemType"] = request.FileSystemType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -13648,10 +13672,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note the following items:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
+        /// <item><description>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13701,6 +13725,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -13789,10 +13817,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note the following items:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
+        /// <item><description>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13842,6 +13870,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -13930,10 +13962,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note the following items:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
+        /// <item><description>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13957,10 +13989,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note the following items:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
+        /// <item><description>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18004,7 +18036,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
+        /// <para>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18055,7 +18087,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
+        /// <para>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18106,7 +18138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
+        /// <para>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18129,7 +18161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
+        /// <para>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19776,7 +19808,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19839,7 +19871,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19902,7 +19934,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19925,7 +19957,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22968,6 +23000,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePoolId))
+            {
+                query["ReservePoolId"] = request.ReservePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -23165,6 +23201,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePoolId))
+            {
+                query["ReservePoolId"] = request.ReservePoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -24763,13 +24803,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
+        /// <item><description>China site users must select Shanghai as the site. International site users must select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -24887,13 +24927,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
+        /// <item><description>China site users must select Shanghai as the site. International site users must select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -25011,13 +25051,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
+        /// <item><description>China site users must select Shanghai as the site. International site users must select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -25039,13 +25079,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
+        /// <item><description>China site users must select Shanghai as the site. International site users must select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -26153,7 +26193,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26247,7 +26287,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26341,7 +26381,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26367,7 +26407,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -29584,6 +29624,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
+            {
+                query["AuditStatus"] = request.AuditStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -29674,6 +29718,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
+            {
+                query["AuditStatus"] = request.AuditStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -30255,7 +30303,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the renewal price of a Wuying product.</para>
+        /// <para>Queries the renewal price of an Elastic Desktop Service product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30325,7 +30373,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the renewal price of a Wuying product.</para>
+        /// <para>Queries the renewal price of an Elastic Desktop Service product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30395,7 +30443,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the renewal price of a Wuying product.</para>
+        /// <para>Queries the renewal price of an Elastic Desktop Service product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30413,7 +30461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the renewal price of a Wuying product.</para>
+        /// <para>Queries the renewal price of an Elastic Desktop Service product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33067,14 +33115,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
-        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33092,6 +33140,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
+            {
+                query["ConnectionStatus"] = request.ConnectionStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
             {
                 query["CveId"] = request.CveId;
@@ -33099,6 +33151,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdList))
             {
                 query["DesktopIdList"] = request.DesktopIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatus))
+            {
+                query["DesktopStatus"] = request.DesktopStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
             {
@@ -33173,14 +33229,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
-        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33198,6 +33254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
+            {
+                query["ConnectionStatus"] = request.ConnectionStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
             {
                 query["CveId"] = request.CveId;
@@ -33205,6 +33265,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdList))
             {
                 query["DesktopIdList"] = request.DesktopIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatus))
+            {
+                query["DesktopStatus"] = request.DesktopStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
             {
@@ -33279,14 +33343,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
-        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33305,14 +33369,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
-        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35367,6 +35431,142 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries desktop data statistics by different dimensions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAggregatedDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAggregatedDesktopsResponse
+        /// </returns>
+        public GetAggregatedDesktopsResponse GetAggregatedDesktopsWithOptions(GetAggregatedDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationFactor))
+            {
+                query["AggregationFactor"] = request.AggregationFactor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAggregatedDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAggregatedDesktopsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries desktop data statistics by different dimensions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAggregatedDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAggregatedDesktopsResponse
+        /// </returns>
+        public async Task<GetAggregatedDesktopsResponse> GetAggregatedDesktopsWithOptionsAsync(GetAggregatedDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationFactor))
+            {
+                query["AggregationFactor"] = request.AggregationFactor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAggregatedDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAggregatedDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries desktop data statistics by different dimensions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAggregatedDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAggregatedDesktopsResponse
+        /// </returns>
+        public GetAggregatedDesktopsResponse GetAggregatedDesktops(GetAggregatedDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAggregatedDesktopsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries desktop data statistics by different dimensions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAggregatedDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAggregatedDesktopsResponse
+        /// </returns>
+        public async Task<GetAggregatedDesktopsResponse> GetAggregatedDesktopsAsync(GetAggregatedDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAggregatedDesktopsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</para>
         /// </summary>
         /// 
@@ -35500,7 +35700,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35517,6 +35717,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                query["ClientType"] = request.ClientType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
             {
                 query["CommandContent"] = request.CommandContent;
@@ -35583,7 +35787,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35600,6 +35804,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                query["ClientType"] = request.ClientType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
             {
                 query["CommandContent"] = request.CommandContent;
@@ -35666,7 +35874,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35689,7 +35897,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47389,7 +47597,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -47435,6 +47643,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -47524,7 +47736,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -47570,6 +47782,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -47659,7 +47875,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -47684,7 +47900,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -47703,12 +47919,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
+        /// <para>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47728,6 +47944,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -47758,12 +47978,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
+        /// <para>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47783,6 +48003,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -47813,12 +48037,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
+        /// <para>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47836,12 +48060,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
+        /// <para>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48995,6 +49219,198 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryActiveUserStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuthUserConnectDurationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuthUserConnectDurationListResponse
+        /// </returns>
+        public QueryAuthUserConnectDurationListResponse QueryAuthUserConnectDurationListWithOptions(QueryAuthUserConnectDurationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComparisonOperator))
+            {
+                query["ComparisonOperator"] = request.ComparisonOperator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDate))
+            {
+                query["DataDate"] = request.DataDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdUser))
+            {
+                query["IsAdUser"] = request.IsAdUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticType))
+            {
+                query["StatisticType"] = request.StatisticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDetail))
+            {
+                query["WithDetail"] = request.WithDetail;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAuthUserConnectDurationList",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAuthUserConnectDurationListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuthUserConnectDurationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuthUserConnectDurationListResponse
+        /// </returns>
+        public async Task<QueryAuthUserConnectDurationListResponse> QueryAuthUserConnectDurationListWithOptionsAsync(QueryAuthUserConnectDurationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComparisonOperator))
+            {
+                query["ComparisonOperator"] = request.ComparisonOperator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDate))
+            {
+                query["DataDate"] = request.DataDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdUser))
+            {
+                query["IsAdUser"] = request.IsAdUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticType))
+            {
+                query["StatisticType"] = request.StatisticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDetail))
+            {
+                query["WithDetail"] = request.WithDetail;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAuthUserConnectDurationList",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAuthUserConnectDurationListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuthUserConnectDurationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuthUserConnectDurationListResponse
+        /// </returns>
+        public QueryAuthUserConnectDurationListResponse QueryAuthUserConnectDurationList(QueryAuthUserConnectDurationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAuthUserConnectDurationListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAuthUserConnectDurationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAuthUserConnectDurationListResponse
+        /// </returns>
+        public async Task<QueryAuthUserConnectDurationListResponse> QueryAuthUserConnectDurationListAsync(QueryAuthUserConnectDurationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAuthUserConnectDurationListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computers affected by the vulnerability.</para>
+        /// <para>The details of cloud desktops affected by the vulnerability.</para>
         /// </summary>
         [NameInMap("VulDesktops")]
         [Validation(Required=false)]
@@ -69,6 +69,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConfigGroupId { get; set; }
 
             /// <summary>
+            /// <para>The connection status of the cloud desktop.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Connected</para>
+            /// </summary>
+            [NameInMap("ConnectionStatus")]
+            [Validation(Required=false)]
+            public string ConnectionStatus { get; set; }
+
+            /// <summary>
             /// <para>The number of vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
@@ -79,14 +89,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CveCount { get; set; }
 
             /// <summary>
-            /// <para>The list of vulnerability details.</para>
+            /// <para>The vulnerability details.</para>
             /// </summary>
             [NameInMap("Cves")]
             [Validation(Required=false)]
             public List<DescribeVulDesktopsResponseBodyVulDesktopsCves> Cves { get; set; }
             public class DescribeVulDesktopsResponseBodyVulDesktopsCves : TeaModel {
                 /// <summary>
-                /// <para>The CVE ID.</para>
+                /// <para>The CVE ID of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CVE-2026-62690</para>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ImpactScore { get; set; }
 
                 /// <summary>
-                /// <para>The reference URL.</para>
+                /// <para>The reference URL for the vulnerability details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690</a></para>
@@ -146,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReferenceUrl { get; set; }
 
                 /// <summary>
-                /// <para>The release time. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The release time. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-11 07:00:00</para>
@@ -158,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud computer affected by the vulnerability.</para>
+            /// <para>The ID of the cloud desktop affected by the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-0jtd4z5binubxe32e</para>
@@ -166,6 +176,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
+
+            /// <summary>
+            /// <para>The running status of the cloud desktop.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
+            /// </summary>
+            [NameInMap("DesktopStatus")]
+            [Validation(Required=false)]
+            public string DesktopStatus { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the activation code is disabled.</para>
@@ -178,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the vulnerability was first discovered.</para>
+            /// <para>The time when the vulnerability was first detected. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-05 00:00:00</para>
@@ -188,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FirstFoundTime { get; set; }
 
             /// <summary>
-            /// <para>The list of fix records for the cloud computer.</para>
+            /// <para>The fix records of the cloud desktop.</para>
             /// </summary>
             [NameInMap("FixRecords")]
             [Validation(Required=false)]
@@ -247,7 +267,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The list of patch IDs.</para>
+            /// <para>The patch IDs.</para>
             /// </summary>
             [NameInMap("PatchIds")]
             [Validation(Required=false)]

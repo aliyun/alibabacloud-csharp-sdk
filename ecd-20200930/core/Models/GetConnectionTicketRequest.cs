@@ -10,10 +10,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies a custom user-mode application that is automatically started after the credential is obtained.</para>
+        /// <para>The client type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>macos</para>
+        /// </summary>
+        [NameInMap("ClientType")]
+        [Validation(Required=false)]
+        public string ClientType { get; set; }
+
+        /// <summary>
+        /// <para>The custom user-mode application to configure. After the credential is obtained, the application is automatically started.</para>
         /// <list type="bullet">
-        /// <item><description>appPath: a value of the String type that specifies the application startup file path, such as <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double backslashes (\\) as path separators.</description></item>
-        /// <item><description>appParameter: a value of the String type that specifies the application startup parameters, such as <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate parameters with spaces.</description></item>
+        /// <item><description>appPath: a value of the STRING type that specifies the path of the application startup file. Example: <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double backslashes (\\) as path separators.</description></item>
+        /// <item><description>appParameter: a value of the STRING type that specifies the application startup parameters. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate parameters with spaces.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer for which to generate a connection credential. This parameter is required to generate the credential.</para>
+        /// <para>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>

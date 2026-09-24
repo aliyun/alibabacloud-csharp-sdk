@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>myHost</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
         /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Shanghai template1</para>
+        /// <para>ShanghaiTemplate1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

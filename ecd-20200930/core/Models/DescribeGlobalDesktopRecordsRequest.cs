@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGlobalDesktopRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The business channel. Valid values:
-        /// Enterprise: Enterprise Edition.
-        /// Business: Business Edition.</para>
+        /// <para>The business channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enterprise: Enterprise Edition.</description></item>
+        /// <item><description>Business: Business Edition.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Enterprise</para>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopStatusList { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</para>
+        /// <para>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.2c4g</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// <para>The end time. The maximum interval between the start time and end time is 30 days. Supported format:</para>
+        /// <para>The end time. The interval between the start time and end time cannot exceed 30 days. Supported format:</para>
         /// <list type="bullet">
         /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</para>
+        /// <para>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>uptime: sorts by cloud desktop uptime.</description></item>
         /// </list>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page when using paging.<br>Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Default value: ascending order. Valid values:</para>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Asc: ascending order.</description></item>
         /// <item><description>Desc: descending order.</description></item>

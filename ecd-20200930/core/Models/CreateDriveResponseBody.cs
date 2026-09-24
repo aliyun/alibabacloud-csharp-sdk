@@ -135,9 +135,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ProfileRoaming")]
             [Validation(Required=false)]

@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100</description></item>
-        /// <item><description>Default value: 20</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 20.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTA0MjA=</para>

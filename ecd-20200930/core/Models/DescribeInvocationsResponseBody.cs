@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CommandType { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the task.</para>
+            /// <para>The time when the task was created. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-19T09:15:46Z</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The cloud desktop scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Classic: the classic cloud desktop scenario.</description></item>
-            /// <item><description>JvsClaw: the JVS Claw cloud desktop scenario.</description></item>
+            /// <item><description>Classic: Classic cloud desktop scenario.</description></item>
+            /// <item><description>JvsClaw: JVS Claw cloud desktop scenario.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,26 +71,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The overall execution status of the script. The overall execution status depends on the combined execution status of all cloud desktops in this call. Valid values:</para>
+            /// <para>The overall execution status of the script. The overall execution status is determined by the combined execution status of all cloud desktops in this invocation. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Pending: The system is validating or sending the command. The overall execution status is Pending if at least one cloud desktop has a script execution status of Pending.</description></item>
             /// <item><description>Running: The command is running on the cloud desktop. The overall execution status is Running if at least one cloud desktop has a script execution status of Running.</description></item>
             /// <item><description>Success: The overall execution status is Success if the script execution status on each cloud desktop is Stopped or Success, and at least one cloud desktop has a script execution status of Success.</description></item>
-            /// <item><description>Failed: The overall execution status is Failed if the script execution status on each cloud desktop is Stopped or Failed. The return value is Failed when one or more of the following statuses occur on a cloud desktop:<list type="bullet">
-            /// <item><description>Command validation failed (Invalid)</description></item>
-            /// <item><description>Command delivery failed (Aborted)</description></item>
-            /// <item><description>Command execution completed with a non-zero exit code (Failed)</description></item>
-            /// <item><description>Command execution timed out (Timeout)</description></item>
-            /// <item><description>Command execution encountered an exception (Error)</description></item>
+            /// <item><description>Failed: The overall execution status is Failed if the script execution status on each cloud desktop is Stopped or Failed. The return value is Failed if one or more of the following statuses occur on a cloud desktop:<list type="bullet">
+            /// <item><description>Command validation failed (Invalid).</description></item>
+            /// <item><description>Command delivery failed (Aborted).</description></item>
+            /// <item><description>Command execution completed but the exit code is non-zero (Failed).</description></item>
+            /// <item><description>Command execution timed out (Timeout).</description></item>
+            /// <item><description>Command execution encountered an exception (Error).</description></item>
             /// </list>
             /// </description></item>
             /// <item><description>Stopping: The task is being stopped. The overall execution status is Stopping if at least one instance has a script execution status of Stopping.</description></item>
-            /// <item><description>Stopped: The task has been stopped. The overall execution status is Stopped if the script execution status on all instances is Stopped. The return value is Stopped when the script execution status on an instance is one of the following:<list type="bullet">
-            /// <item><description>Task cancelled (Cancelled)</description></item>
-            /// <item><description>Task terminated (Terminated)</description></item>
+            /// <item><description>Stopped: The task is stopped. The overall execution status is Stopped if the script execution status on all instances is Stopped. The return value is Stopped if the script execution status on an instance is one of the following:<list type="bullet">
+            /// <item><description>Task cancelled (Cancelled).</description></item>
+            /// <item><description>Task terminated (Terminated).</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>PartialFailed: The overall execution status is PartialFailed if some instances succeeded and some instances failed. The overall execution status is PartialFailed if the script execution status on each instance is Success, Failed, or Stopped.</description></item>
+            /// <item><description>PartialFailed: The overall execution status is PartialFailed if some instances succeeded and some instances failed. The script execution status on each instance is Success, Failed, or Stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeInvocationsResponseBodyInvocationsInvokeDesktops> InvokeDesktops { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvokeDesktops : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the script process.</para>
+                /// <para>The time when the script process was created. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:54Z</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopName { get; set; }
 
                 /// <summary>
-                /// <para>The length of the truncated and discarded text after the text length in the Output field exceeded 24 KB.</para>
+                /// <para>The length of the truncated and discarded text after the text length in the Output field exceeds 24 KB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Dropped { get; set; }
 
                 /// <summary>
-                /// <para>The error code indicating the reason for command delivery failure or execution failure. Valid values:</para>
+                /// <para>The error code that indicates the reason for a command delivery failure or execution failure. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Empty: The command ran normally.</description></item>
                 /// <item><description>InstanceNotExists: The specified cloud desktop does not exist or has been released.</description></item>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The detailed reason for command delivery failure or execution failure. Valid values:</para>
+                /// <para>The detailed information about the reason for a command delivery failure or execution failure. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Empty: The command ran normally.</description></item>
                 /// <item><description>the specified instance does not exists: The specified cloud desktop does not exist or has been released.</description></item>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? ExitCode { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the script process.</para>
+                /// <para>The time when the script process ended. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:56Z</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The script process status on a single cloud desktop.</para>
+                /// <para>The script execution status on a single cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -260,10 +260,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string JvsAgentId { get; set; }
 
                 /// <summary>
-                /// <para>The output information of the script process.</para>
+                /// <para>The output of the script process.</para>
                 /// <list type="bullet">
-                /// <item><description>If the request parameter <c>IncludeOutput</c> is set to false, Output is not returned.</description></item>
-                /// <item><description>If the request parameter <c>ContentEncoding</c> is set to Base64, Output is the Base64-encoded output information.</description></item>
+                /// <item><description>If the request parameter IncludeOutput is set to false, Output is not returned.</description></item>
+                /// <item><description>If the request parameter ContentEncoding is set to Base64, Output is the Base64-encoded output.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Repeats { get; set; }
 
                 /// <summary>
-                /// <para>The time when the script process started running on the cloud desktop.</para>
+                /// <para>The time when the script process started running on the cloud desktop. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:55Z</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the execution was stopped, if StopInvocation was called.</para>
+                /// <para>The time when the execution was stopped, if StopInvocation was called. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-25T09:15:47Z</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string StopTime { get; set; }
 
                 /// <summary>
-                /// <para>The update time of the task status.</para>
+                /// <para>The time when the task status was last updated. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-25T06:15:56Z</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The operation result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -60,11 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

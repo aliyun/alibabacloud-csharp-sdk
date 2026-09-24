@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop ID. If you specify a cloud desktop, all script execution records of the cloud desktop are queried.</para>
+        /// <para>The cloud desktop ID. If you specify a cloud desktop, all script execution records for that cloud desktop are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-7w78ozhjcwa3u****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The list of cloud desktop IDs.</para>
         /// <remarks>
-        /// <para>The <c>DesktopId</c> parameter will be deprecated. Use this parameter to pass the list of cloud desktop IDs.</para>
+        /// <para>The DesktopId parameter will be deprecated. Use this parameter to pass the list of cloud desktop IDs.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DesktopIds")]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the execution results of all cloud desktops when the remote command is executed on multiple cloud desktops.</para>
+        /// <para>Specifies whether to return the execution results of all cloud desktops when a remote command is executed on multiple cloud desktops.</para>
         /// </summary>
         [NameInMap("IncludeInvokeDesktops")]
         [Validation(Required=false)]
         public bool? IncludeInvokeDesktops { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the output information of the script execution in the results.</para>
+        /// <para>Specifies whether to return the output of the script execution in the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The overall execution status of the script. The overall execution status depends on the combined execution status of one or more cloud desktops in the execution.</para>
+        /// <para>The overall execution status of the script. The overall execution status is determined by the combined execution status of one or more cloud desktops in the invocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Finished</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

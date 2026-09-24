@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups> CloudDriveGroups { get; set; }
         public class DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups : TeaModel {
             /// <summary>
+            /// <para>The authorization dimension.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ROSTER</para>
+            /// </summary>
+            [NameInMap("AuthDimension")]
+            [Validation(Required=false)]
+            public string AuthDimension { get; set; }
+
+            /// <summary>
             /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
@@ -109,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTA0MjA=</para>
@@ -139,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

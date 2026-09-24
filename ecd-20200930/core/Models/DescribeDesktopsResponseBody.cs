@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <list type="bullet">
                 /// <item><description>cloud_efficiency (ultra cloud disk)<list type="bullet">
                 /// <item><description>cloud_auto (ultra-fast cloud disk)</description></item>
-                /// <item><description>cloud_essd (enhanced standard SSD cloud disk. Only specific types are supported.)</description></item>
+                /// <item><description>cloud_essd (enhanced standard SSD. Only specific types are supported.)</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -595,7 +595,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the secondary ENI created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</para>
+            /// <para>The ID of the secondary network interface controller (NIC) created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -605,7 +605,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the secondary ENI created by the cloud desktop service for the RAM or AD user.</para>
+            /// <para>The IP address of the secondary NIC created by the cloud desktop service for the RAM or AD user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -699,7 +699,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public List<DescribeDesktopsResponseBodyDesktopsOsUpdatePackages> Packages { get; set; }
                 public class DescribeDesktopsResponseBodyDesktopsOsUpdatePackages : TeaModel {
                     /// <summary>
-                    /// <para>The NAS file system description.</para>
+                    /// <para>The description of the NAS file system.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>newDescription</para>
@@ -797,6 +797,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>rp-xxx</para>
+            /// </summary>
+            [NameInMap("ReservePoolId")]
+            [Validation(Required=false)]
+            public string ReservePoolId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>reserve-pool</para>
+            /// </summary>
+            [NameInMap("ReservePoolName")]
+            [Validation(Required=false)]
+            public string ReservePoolName { get; set; }
+
+            /// <summary>
             /// <para>The list of enterprise resource group information.</para>
             /// </summary>
             [NameInMap("ResourceGroups")]
@@ -853,7 +869,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeDesktopsResponseBodyDesktopsSessions> Sessions { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsSessions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the user connected to the cloud desktop.</para>
+                /// <para>The ID of the user who is connected to the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29615820929547****</para>
@@ -905,7 +921,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. The time is in the ISO 8601 standard and in UTC+0, in the format of <c>yyyy-mm-ddthh:mm:ssz</c>.</para>
+            /// <para>The start time of the query. The time is in the ISO 8601 standard and in UTC+0. Format: <c>yyyy-mm-ddthh:mm:ssz</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-27T02:20:10Z</para>
@@ -1018,6 +1034,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VolumeEncryptionKey { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
+            /// </summary>
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+            /// <summary>
             /// <para>The type of the zone. Default value: <c>AvailabilityZone</c>, which indicates a regular cloud zone.</para>
             /// 
             /// <b>Example:</b>
@@ -1030,7 +1054,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

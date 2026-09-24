@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVulDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The CVE ID.</para>
+        /// <para>The connection status of the cloud desktop. Valid values: CONNECTED and DISCONNECTED.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Connected</para>
+        /// </summary>
+        [NameInMap("ConnectionStatus")]
+        [Validation(Required=false)]
+        public string ConnectionStatus { get; set; }
+
+        /// <summary>
+        /// <para>The CVE ID of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2026-43284</para>
@@ -20,11 +30,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CveId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer IDs.</para>
+        /// <para>The list of cloud desktop IDs.</para>
         /// </summary>
         [NameInMap("DesktopIdList")]
         [Validation(Required=false)]
         public List<string> DesktopIdList { get; set; }
+
+        /// <summary>
+        /// <para>The running status of the cloud desktop.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
+        [NameInMap("DesktopStatus")]
+        [Validation(Required=false)]
+        public string DesktopStatus { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to include patch update results.</para>
@@ -37,7 +57,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeFixResult { get; set; }
 
         /// <summary>
-        /// <para>The language type of the returned information.</para>
+        /// <para>The language of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ch</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ch</para>
@@ -69,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include only cloud computers on which fix tasks were executed in the current month.</para>
+        /// <para>Specifies whether to include only cloud desktops that have had fix tasks executed in the current month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -129,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID used to filter cloud computer information for a specific region.</para>
+        /// <para>The region ID used to filter cloud desktop information for a specific region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -146,14 +170,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The security level of the intrusion prevention event. Valid values:</para>
+        /// <para>The severity level of the intrusion prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>low</b>: Low risk.</description></item>
-        /// <item><description><b>medium</b>: Medium risk.</description></item>
-        /// <item><description><b>critical</b>: High risk.</description></item>
+        /// <item><description><b>low</b>: Low.</description></item>
+        /// <item><description><b>medium</b>: Medium.</description></item>
+        /// <item><description><b>critical</b>: Critical.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not set this parameter, vulnerabilities of all security levels are queried.</para>
+        /// <para>If you do not set this parameter, vulnerabilities of all severity levels are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

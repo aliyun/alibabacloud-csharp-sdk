@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The modification result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? AutoPay { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</para>
+            /// <para>Indicates whether auto-renewal is enabled for subscription shared cloud computers.</para>
             /// </summary>
             [NameInMap("AutoRenew")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The data cloud disk size. Unit: GiB.</para>
+                /// <para>The size of the data cloud disk. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the template (UTC).</para>
+            /// <para>The time when the template was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T05:18:46.000+00:00</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time of the template (UTC).</para>
+            /// <para>The time when the template was last updated (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T05:18:46.000+00:00</para>
@@ -140,7 +140,34 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</para>
+            /// <para>The instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>myHost</para>
+            /// </summary>
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            /// <summary>
+            /// <para>The subscription duration of the subscription shared cloud computer. This parameter takes effect and is required only when <c>ChargeType</c> is set to <c>PrePaid</c>. The unit is specified by <c>PeriodUnit</c>.</para>
+            /// <list type="bullet">
+            /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values:<list type="bullet">
+            /// <item><description>1</description></item>
+            /// <item><description>2</description></item>
+            /// <item><description>3</description></item>
+            /// <item><description>6</description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values:<list type="bullet">
+            /// <item><description>1</description></item>
+            /// <item><description>2</description></item>
+            /// <item><description>3</description></item>
+            /// <item><description>4</description></item>
+            /// <item><description>5</description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -150,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</para>
+            /// <para>The unit of the duration for the subscription billable methods.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -160,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The policy group ID.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-0caoeogkhz*****</para>
@@ -170,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</para>
+            /// <para>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration package is exhausted.</para>
             /// </summary>
             [NameInMap("PostPaidAfterUsedUp")]
             [Validation(Required=false)]
@@ -204,7 +231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? CpuCount { get; set; }
 
                 /// <summary>
-                /// <para>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</para>
+                /// <para>The GPU memory information. This field is displayed only when the specification is a graphics type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4GiB</para>
@@ -272,6 +299,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [NameInMap("SubnetId")]
                 [Validation(Required=false)]
                 public string SubnetId { get; set; }
+
+                /// <summary>
+                /// <para>The virtual node pool ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vnp-0bw*******</para>
+                /// </summary>
+                [NameInMap("VirtualNodePoolId")]
+                [Validation(Required=false)]
+                public string VirtualNodePoolId { get; set; }
 
                 /// <summary>
                 /// <para>Indicates whether disk encryption is enabled.</para>
@@ -434,7 +471,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TimerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The per-user usage duration plan.</para>
+            /// <para>The per-user duration package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -496,7 +533,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The instance ID. The value depends on the resource type (ResourceType) for which you want to query the renewal price:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>ResourceType</c> is set to <c>Desktop</c> (to query the renewal price of a cloud computer), set <c>InstanceId</c> to the cloud computer ID.</description></item>
-        /// <item><description>If <c>ResourceType</c> is set to <c>DesktopGroup</c> (to query the renewal price of a cloud computer pool), set <c>InstanceId</c> to the cloud computer pool ID.</description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>Desktop</c> (to query the renewal price of a cloud desktop), set <c>InstanceId</c> to the cloud desktop ID.</description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>DesktopGroup</c> (to query the renewal price of a cloud desktop pool), set <c>InstanceId</c> to the cloud desktop pool ID.</description></item>
         /// <item><description>If <c>ResourceType</c> is set to <c>Bandwidth</c> (to query the renewal price of premium Internet bandwidth), set <c>InstanceId</c> to the premium Internet bandwidth ID.</description></item>
         /// </list>
         /// 
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the resource ownership user in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
+        /// <para>The user ID of the resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1017457975738750</para>

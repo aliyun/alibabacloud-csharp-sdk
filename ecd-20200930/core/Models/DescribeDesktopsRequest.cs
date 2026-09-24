@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer pool ID. If <c>DesktopId</c> is specified, <c>DesktopGroupId</c> is ignored. If <c>DesktopId</c> is empty, the system retrieves the IDs of all cloud computers in the cloud computer pool specified by <c>DesktopGroupId</c>.</para>
+        /// <para>The cloud computer pool ID. If <c>DesktopId</c> is specified, <c>DesktopGroupId</c> is ignored. If <c>DesktopId</c> is empty, the system retrieves the DesktopId values of all cloud computers in the cloud computer pool specified by <c>DesktopGroupId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer status list.</para>
+        /// <para>The list of cloud computer statuses.</para>
         /// </summary>
         [NameInMap("DesktopStatusList")]
         [Validation(Required=false)]
@@ -182,6 +182,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>Specifies whether to include automatic snapshot policy information in the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeAutoSnapshotPolicy")]
         [Validation(Required=false)]
@@ -198,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ManagementFlag { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100.</description></item>
         /// <item><description>Default value: 10.</description></item>
@@ -212,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether multiple resources exist.</para>
+        /// <para>Specifies whether there are multiple resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -221,12 +224,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? MultiResource { get; set; }
 
+        /// <summary>
+        /// <para>The private IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.1.1</para>
+        /// </summary>
         [NameInMap("NetworkInterfaceIp")]
         [Validation(Required=false)]
         public string NetworkInterfaceIp { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -312,6 +321,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
+        /// <summary>
+        /// <para>The public IP address of the instance to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>121.199.28.39</para>
+        /// </summary>
         [NameInMap("PublicIp")]
         [Validation(Required=false)]
         public string PublicIp { get; set; }
@@ -347,6 +362,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ReservePoolId")]
+        [Validation(Required=false)]
+        public string ReservePoolId { get; set; }
+
         /// <summary>
         /// <para>The resource group ID.</para>
         /// 
@@ -378,14 +397,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The tags. A tag is a key-value pair that is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
+        /// <para>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDesktopsRequestTag> Tag { get; set; }
         public class DescribeDesktopsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. If you specify <c>Tag</c>, <c>Key</c> is required. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, contain <c>http://</c> or <c>https://</c>, or consist of only spaces.</para>
+            /// <para>The tag key. If you specify <c>Tag</c>, <c>Key</c> is required. The tag key cannot exceed 128 characters, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. It also cannot consist of only spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -395,7 +414,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The tag value cannot exceed 128 characters, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

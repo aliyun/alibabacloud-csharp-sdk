@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The protocol type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SMB</para>
+        /// </summary>
+        [NameInMap("ProtocolType")]
+        [Validation(Required=false)]
+        public string ProtocolType { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

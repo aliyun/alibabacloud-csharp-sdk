@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNASFileSystemRequest : TeaModel {
         /// <summary>
+        /// <para>The capacity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3600</para>
+        /// </summary>
+        [NameInMap("Capacity")]
+        [Validation(Required=false)]
+        public long? Capacity { get; set; }
+
+        /// <summary>
         /// <para>The description of the NAS file system.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a Key Management Service (KMS) managed key to encrypt data stored in the file system. Encrypted data does not need to be decrypted during read and write operations.</para>
+        /// <para>Specifies whether the file system uses a key managed by Key Management Service (KMS) to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -28,6 +38,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("EncryptType")]
         [Validation(Required=false)]
         public string EncryptType { get; set; }
+
+        /// <summary>
+        /// <para>The file system type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
+        [NameInMap("FileSystemType")]
+        [Validation(Required=false)]
+        public string FileSystemType { get; set; }
 
         /// <summary>
         /// <para>The name of the NAS file system. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, underscores (_), or hyphens (-).</para>
@@ -54,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The protocol type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ASP</para>
+        /// <para>SMB</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]

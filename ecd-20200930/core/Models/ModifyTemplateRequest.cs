@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</para>
+            /// <para>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The description of the template. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</description></item>
         /// </list>
         /// 
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer image. You can query the ID on the Image Management page. System images and custom images are supported.</para>
+        /// <para>The cloud computer image ID. You can query the ID on the image management page. System images, custom images, and other image types are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-gx2x1dhsmusr2****</para>
@@ -95,6 +95,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        /// <summary>
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wework-aim-test</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
 
         /// <summary>
         /// <para>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <c>ChargeType</c> is set to <c>PrePaid</c>. The unit is specified by <c>PeriodUnit</c>.</para>
@@ -191,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the automatic snapshot policy.</para>
+            /// <para>The automatic snapshot policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-35fvn8m2*****</para>
@@ -209,6 +219,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("SubnetId")]
             [Validation(Required=false)]
             public string SubnetId { get; set; }
+
+            /// <summary>
+            /// <para>The virtual node pool ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vnp-0bz55ic*******</para>
+            /// </summary>
+            [NameInMap("VirtualNodePoolId")]
+            [Validation(Required=false)]
+            public string VirtualNodePoolId { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to enable disk encryption.</para>
@@ -243,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</para>
+        /// <para>The cloud computer tags in key-value format. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("ResourceTagList")]
         [Validation(Required=false)]
@@ -303,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The type of the system cloud disk.</para>
         /// <remarks>
-        /// <para>Only high frequency and graphics cloud computer specifications support ESSD cloud disks.</para>
+        /// <para>Only high frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -314,7 +334,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</para>
+        /// <para>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</para>
         /// <remarks>
         /// <para>The system cloud disk size cannot be smaller than the size of the configured image.</para>
         /// </remarks>
@@ -340,8 +360,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 126 characters in length.</description></item>
-        /// <item><description>The name must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character. The name cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</description></item>
         /// </list>
         /// 
@@ -363,7 +383,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TimerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The per-user usage duration plan.</para>
+        /// <para>The duration plan for a single user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>

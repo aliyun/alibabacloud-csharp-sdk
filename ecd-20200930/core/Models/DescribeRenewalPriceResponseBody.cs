@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public List<DescribeRenewalPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The promotion rule description.</para>
+                    /// <para>The description of the promotion rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion description.</para>
+                    /// <para>The description of the promotion.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>New product launch, enjoy discounts now</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Get 15% off the list price when you purchase a 1-year subscription</para>
+                /// <para>Purchase for 1 year or more and enjoy a 15% discount off the list price</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

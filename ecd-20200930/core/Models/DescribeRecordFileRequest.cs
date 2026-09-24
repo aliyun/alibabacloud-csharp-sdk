@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordFileRequest : TeaModel {
         /// <summary>
+        /// <para>The audit status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AI_ANALYZED: AI analysis completed.</description></item>
+        /// <item><description>REVIEWING: Under review.</description></item>
+        /// <item><description>REVIEWED: Reviewed.</description></item>
+        /// <item><description>UNREVIEWED: Not reviewed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>REVIEWING</para>
+        /// </summary>
+        [NameInMap("AuditStatus")]
+        [Validation(Required=false)]
+        public string AuditStatus { get; set; }
+
+        /// <summary>
         /// <para>The Cloud Desktop ID.</para>
         /// 
         /// <b>Example:</b>
@@ -50,9 +66,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</para>
+        /// <para>The field used for sorting. If not specified, results are sorted by recording start time in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>startTime: recording start time.</description></item>
+        /// <item><description>startTime: the recording start time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows per page in a paging query.</para>
+        /// <para>The maximum number of rows per page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -146,8 +162,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The status of the screen recording file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: uploaded.</description></item>
-        /// <item><description>1: uploading.</description></item>
+        /// <item><description>0: Upload succeeded.</description></item>
+        /// <item><description>1: Uploading.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

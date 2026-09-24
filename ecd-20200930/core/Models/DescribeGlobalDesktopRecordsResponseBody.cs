@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</para>
+            /// <para>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:28Z</para>
@@ -144,6 +144,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LatestConnectionTime { get; set; }
 
             /// <summary>
+            /// <para>The latest end time of the current session. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-14T05:01:12Z</para>
+            /// </summary>
+            [NameInMap("LatestSessionEndTime")]
+            [Validation(Required=false)]
+            public string LatestSessionEndTime { get; set; }
+
+            /// <summary>
             /// <para>The memory of the cloud desktop. Unit: MiB.</para>
             /// 
             /// <b>Example:</b>
@@ -198,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The specific operating system model.</para>
+            /// <para>The specific operating system version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows 10</para>
@@ -288,8 +298,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The session creation time.
-                /// The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The time when the session was created. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-31T06:56:45Z</para>
@@ -301,7 +310,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</para>
+            /// <para>The UNIX timestamp when the cloud desktop status changed. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760583xxxx</para>
