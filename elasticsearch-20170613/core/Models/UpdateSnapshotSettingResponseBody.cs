@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The list of indexes to back up.</para>
+            /// </summary>
+            [NameInMap("indices")]
+            [Validation(Required=false)]
+            public List<string> Indices { get; set; }
+
+            /// <summary>
             /// <para>The automatic backup start time.</para>
             /// 
             /// <b>Example:</b>

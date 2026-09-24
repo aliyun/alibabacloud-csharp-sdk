@@ -1,3 +1,10 @@
+2026-09-24 Version: 3.4.0
+- Support API InvokeEsAgent.
+- Support API InvokeEsRequest.
+- Update API DescribeSnapshotSetting: add response parameters Body.Result.Indices.
+- Update API UpdateSnapshotSetting: add response parameters Body.Result.indices.
+
+
 2026-09-04 Version: 3.3.5
 - Update API ListDiagnosisItems: add request parameters level.
 - Update API ListDiagnosisItems: add response parameters Body.Result.$.billable.

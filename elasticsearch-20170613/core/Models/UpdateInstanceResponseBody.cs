@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The error code. This parameter is returned only when an exception occurs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InstanceNotFound</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The error message. This parameter is returned only when an exception occurs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The specified cluster does not exist. Check the cluster status and try again.</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -55,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The internal-facing access endpoint of the instance for private network access.</para>
+            /// <para>The internal-facing access domain name of the instance for private network access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc.elasticsearch.aliyuncs.com</para>
@@ -238,8 +250,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>prepaid: subscription.</description></item>
-            /// <item><description>postpaid: pay-as-you-go.</description></item>
+            /// <item><description>prepaid: Subscription.</description></item>
+            /// <item><description>postpaid: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
