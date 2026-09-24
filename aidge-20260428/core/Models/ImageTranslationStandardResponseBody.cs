@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
+        /// <para>The response code. 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The translation result data, including the translated image URL and usage information.</para>
+        /// <para>The translation result data, including the URL of the translated image and usage information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Font { get; set; }
 
                 /// <summary>
-                /// <para>The product area rectangles.</para>
+                /// <para>The rectangle of the product area.</para>
                 /// </summary>
                 [NameInMap("GoodsRects")]
                 [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The product image URL.</para>
+                /// <para>The URL of the product image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Languages { get; set; }
 
                 /// <summary>
-                /// <para>The original image URL.</para>
+                /// <para>The URL of the original image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string PictUrl { get; set; }
 
                 /// <summary>
-                /// <para>The repaired image URL.</para>
+                /// <para>The URL of the repaired image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string HorizontalLayout { get; set; }
 
                     /// <summary>
-                    /// <para>The line count.</para>
+                    /// <para>The number of lines.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public string Language { get; set; }
 
                         /// <summary>
-                        /// <para>The line count.</para>
+                        /// <para>The number of lines.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>

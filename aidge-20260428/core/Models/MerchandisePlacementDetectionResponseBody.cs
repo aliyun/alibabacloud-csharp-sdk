@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MerchandisePlacementDetectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? BoxCount { get; set; }
 
             /// <summary>
-            /// <para>The list of recall details for each detection box.</para>
+            /// <para>The list of retrieval details for each detection box.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<MerchandisePlacementDetectionResponseBodyDataData> Data { get; set; }
             public class MerchandisePlacementDetectionResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// <para>The position coordinates of the detection box in the format [x1,y1,x2,y2].</para>
+                /// <para>The detection box position coordinates in the format [x1,y1,x2,y2].</para>
                 /// </summary>
                 [NameInMap("Bbox")]
                 [Validation(Required=false)]
                 public List<float?> Bbox { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason for the detection box. The value is null if the detection is successful.</para>
+                /// <para>The failure reason for a single detection box. The value is null if the detection is successful.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;Embedding failed&quot;</para>
+                /// <para>&quot;embedding failed&quot;</para>
                 /// </summary>
                 [NameInMap("Error")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<MerchandisePlacementDetectionResponseBodyDataDataTopk> Topk { get; set; }
                 public class MerchandisePlacementDetectionResponseBodyDataDataTopk : TeaModel {
                     /// <summary>
-                    /// <para>The recall rank of the product.</para>
+                    /// <para>The recall rank.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

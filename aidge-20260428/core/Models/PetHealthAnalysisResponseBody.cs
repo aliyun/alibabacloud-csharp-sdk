@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationPlusResponseBody : TeaModel {
+    public class PetHealthAnalysisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ImageTranslationPlusResponseBodyData Data { get; set; }
-        public class ImageTranslationPlusResponseBodyData : TeaModel {
+        public PetHealthAnalysisResponseBodyData Data { get; set; }
+        public class PetHealthAnalysisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult operation.</para>
+            /// <para>The asynchronous task ID used for QueryAsyncTaskResult queries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>task-abc123</para>
+            /// <para>task_778fa8bd21804828a5d147050e30edac</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -39,31 +39,27 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The response message or failure description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>Task submitted</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
+        /// <para>70CBEFDF-BB17-1EB3-8A21-569F3124738F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
