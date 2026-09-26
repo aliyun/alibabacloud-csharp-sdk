@@ -635,6 +635,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public long? ScenicId { get; set; }
 
+                [NameInMap("SellerAgent")]
+                [Validation(Required=false)]
+                public TicketQueryProductResponseBodyDataProductSellerAgent SellerAgent { get; set; }
+                public class TicketQueryProductResponseBodyDataProductSellerAgent : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>飞猪景区乐园旗舰店</para>
+                    /// </summary>
+                    [NameInMap("AgentName")]
+                    [Validation(Required=false)]
+                    public string AgentName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("AgentType")]
+                    [Validation(Required=false)]
+                    public int? AgentType { get; set; }
+
+                }
+
                 [NameInMap("Session")]
                 [Validation(Required=false)]
                 public TicketQueryProductResponseBodyDataProductSession Session { get; set; }
@@ -726,14 +748,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string SpuName { get; set; }
 
                 }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>飞猪景区乐园旗舰店</para>
-                /// </summary>
-                [NameInMap("SupplierName")]
-                [Validation(Required=false)]
-                public string SupplierName { get; set; }
 
                 [NameInMap("TicketKind")]
                 [Validation(Required=false)]
