@@ -19,13 +19,6 @@ namespace AlibabaCloud.SDK.Governance20210120
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"eu-central-1", "governance.eu-central-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "governance.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-hangzhou", "governance.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-1", "governance.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("governance", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -354,6 +347,126 @@ namespace AlibabaCloud.SDK.Governance20210120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccountFactoryBaselineWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and unsubscribes from Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DecommissionGovernanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DecommissionGovernanceResponse
+        /// </returns>
+        public DecommissionGovernanceResponse DecommissionGovernanceWithOptions(DecommissionGovernanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DecommissionGovernance",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DecommissionGovernanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and unsubscribes from Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DecommissionGovernanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DecommissionGovernanceResponse
+        /// </returns>
+        public async Task<DecommissionGovernanceResponse> DecommissionGovernanceWithOptionsAsync(DecommissionGovernanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DecommissionGovernance",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DecommissionGovernanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and unsubscribes from Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DecommissionGovernanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DecommissionGovernanceResponse
+        /// </returns>
+        public DecommissionGovernanceResponse DecommissionGovernance(DecommissionGovernanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DecommissionGovernanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and unsubscribes from Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DecommissionGovernanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DecommissionGovernanceResponse
+        /// </returns>
+        public async Task<DecommissionGovernanceResponse> DecommissionGovernanceAsync(DecommissionGovernanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DecommissionGovernanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2266,6 +2379,126 @@ namespace AlibabaCloud.SDK.Governance20210120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListEvaluationScoreHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenGovernanceServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenGovernanceServiceResponse
+        /// </returns>
+        public OpenGovernanceServiceResponse OpenGovernanceServiceWithOptions(OpenGovernanceServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenGovernanceService",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenGovernanceServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenGovernanceServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenGovernanceServiceResponse
+        /// </returns>
+        public async Task<OpenGovernanceServiceResponse> OpenGovernanceServiceWithOptionsAsync(OpenGovernanceServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenGovernanceService",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenGovernanceServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenGovernanceServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenGovernanceServiceResponse
+        /// </returns>
+        public OpenGovernanceServiceResponse OpenGovernanceService(OpenGovernanceServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenGovernanceServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Cloud Governance Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenGovernanceServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenGovernanceServiceResponse
+        /// </returns>
+        public async Task<OpenGovernanceServiceResponse> OpenGovernanceServiceAsync(OpenGovernanceServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenGovernanceServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
