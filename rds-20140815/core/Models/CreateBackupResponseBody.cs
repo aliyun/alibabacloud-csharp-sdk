@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup task.</para>
+        /// <para>The backup task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5073731</para>
+        /// <para>507****</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C125605-266F-41CA-8AC5-3A643D4F42C5</para>

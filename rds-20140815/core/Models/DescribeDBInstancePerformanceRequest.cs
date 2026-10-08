@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
         /// <remarks>
-        /// <para> The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.</para>
+        /// <para>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 values. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</para>
+        /// <para>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</para>
         /// <remarks>
-        /// <para> If you set <b>Key</b> to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, you can query the monitoring data within only one day.</para>
+        /// <para>If <b>Key</b> is set to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, only monitoring data within the last day can be queried.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MySQL_Sessions</para>
+        /// <para>MySQL_NetworkTraffic</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The unique identifier of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>339****</para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
         /// <remarks>
-        /// <para> The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.</para>
+        /// <para>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

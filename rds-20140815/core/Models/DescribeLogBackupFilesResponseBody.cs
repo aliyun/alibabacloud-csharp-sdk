@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number of the page returned.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total size of log files. Unit: bytes.</para>
+        /// <para>The total size of all log files. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2300</para>

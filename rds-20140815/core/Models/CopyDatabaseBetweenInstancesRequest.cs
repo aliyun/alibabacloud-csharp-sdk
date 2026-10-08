@@ -10,35 +10,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseBetweenInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set based on which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.</para>
+        /// <para>The backup set ID of the source instance. To copy a database from a backup set, call DescribeBackups to query the backup set ID.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify either <b>BackupId</b> or <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>106523874****</para>
+        /// <para>259321****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The source instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-bp172446ys9cf****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The names of the databases that you want to copy. Format: <c>Source database name 1,Source database name 2</c>.</para>
+        /// <para>The list of database names to be copied. Format: <c>{&quot;Source database name&quot;:&quot;Destination database name&quot;}</c>. Separate multiple databases with commas (,). Examples:</para>
+        /// <list type="bullet">
+        /// <item><description>Copy a single database: <c>{&quot;zhttest&quot;:&quot;zhttest&quot;}</c></description></item>
+        /// <item><description>Copy multiple databases: <c>{&quot;zhttest01&quot;:&quot;zhttest01&quot;,&quot;zhttest02&quot;:&quot;zhttest02&quot;}</c></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The database name on the target instance can be different from that on the source instance. However, make sure that the target instance does not contain a database with the same name before copying.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</para>
+        /// <para>{&quot;zhttest&quot;:&quot;zhttest&quot;}</para>
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
@@ -49,25 +56,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The point in time to which you want to copy the database. You can specify any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para>You must specify one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify either <b>BackupId</b> or <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2011-06-11T16:00:00Z</para>
+        /// <para>2025-06-08T17:41:14Z</para>
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to copy users and permissions.</para>
+        /// <para>Specifies whether to copy users and permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>YES</b>: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.</description></item>
-        /// <item><description><b>NO</b>: does not copy users and permissions.</description></item>
+        /// <item><description><b>YES</b>: Users and permissions are copied. If the target instance contains a user with the same name, the permissions of the user on the source instance are merged with those of the user on the target instance.</description></item>
+        /// <item><description><b>NO</b> (default): Users and permissions are not copied.</description></item>
         /// </list>
-        /// <para>Default value: <b>NO</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NO</para>
@@ -77,11 +83,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SyncUserPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The target instance ID. You can invoke DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-ut5ajk3xxxxxxx</para>
+        /// <para>rm-bp1m71wvzfiq7****</para>
         /// </summary>
         [NameInMap("TargetDBInstanceId")]
         [Validation(Required=false)]

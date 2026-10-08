@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCSnapshotsRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud disk ID.</para>
+        /// <para>The ID of the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rcd-wz9c8isqly8637zw****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot IDs.</para>
-        /// <para>You can specify a maximum of 100 IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of snapshots.</para>
+        /// <para>You can specify multiple snapshot IDs separated by commas (,). A maximum of 100 IDs can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;rcds-bp67acfmxazb4p****&quot;, &quot;rcds-bp67acfmxazb5p****&quot;, … &quot;rcds-bp67acfmxazb6p****&quot;]</para>
@@ -64,14 +64,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SnapshotIds { get; set; }
 
+        /// <summary>
+        /// <para>The tag details.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRCSnapshotsRequestTag> Tag { get; set; }
         public class DescribeRCSnapshotsRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testRC</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test01</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

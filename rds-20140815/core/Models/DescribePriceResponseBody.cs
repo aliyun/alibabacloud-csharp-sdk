@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The order parameters.</para>
         /// <remarks>
-        /// <para> If the <b>OrderParamOut</b> parameter is set to <b>true</b>, the value of the OrderParams parameter is returned.</para>
+        /// <para>This parameter is returned only when the <b>OrderParamOut</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The information about the promotion.</para>
+            /// <para>The price information.</para>
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribePriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// <para>The returned message.</para>
+                /// <para>The error description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error description</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CheckErrMsg { get; set; }
 
                 /// <summary>
-                /// <para>The error code that is returned.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The original price.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2504</para>
+            /// <para>10508</para>
             /// </summary>
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</para>
+            /// <para>The estimated hourly fee calculated based on the maximum RCU selected by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</para>
+            /// <para>The estimated hourly fee calculated based on the minimum RCU selected by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**</para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+            /// <para>The final price, which is the original price minus the discount.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2504</para>
+            /// <para>10508</para>
             /// </summary>
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</para>
@@ -213,14 +213,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The pricing information about a serverless RDS instance.</para>
+        /// <para>The serverless price information.</para>
         /// </summary>
         [NameInMap("ServerlessPrice")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
         public class DescribePriceResponseBodyServerlessPrice : TeaModel {
             /// <summary>
-            /// <para>The discount amount of the maximum number of RCUs.</para>
+            /// <para>The discount amount for the maximum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**.*</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUDiscountMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The discount amount of the minimum number of RCUs.</para>
+            /// <para>The discount amount for the minimum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1*.*</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUDiscountMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The price of the maximum number of RCUs.</para>
+            /// <para>The original price for the maximum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**.*</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The price of the minimum number of RCUs.</para>
+            /// <para>The original price for the minimum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3*.*</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price of the disk capacity.</para>
+            /// <para>The original price of the disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1*</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? StorageOriginalAmount { get; set; }
 
             /// <summary>
-            /// <para>The maximum total price before the discount.</para>
+            /// <para>The maximum total price before discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**.*</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TotalOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The minimum total price before the discount.</para>
+            /// <para>The minimum total price before discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2*.*</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TotalOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price of the maximum number of RCUs.</para>
+            /// <para>The trade price for the maximum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**.*</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price of the minimum number of RCUs.</para>
+            /// <para>The trade price for the minimum RCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2*.*</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The discounted price of the disk capacity.</para>
+            /// <para>The discount price of the disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.*</para>
@@ -322,17 +322,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether discounts can be used.</para>
+        /// <para>Indicates whether discounts are allowed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ShowDiscount")]
         [Validation(Required=false)]
         public bool? ShowDiscount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee that is calculated based on the maximum number of RCUs.</para>
+        /// <para>The estimated hourly fee calculated based on the maximum RCU selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2**</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public float? TradeMaxRCUAmount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee that is calculated based on the minimum number of RCUs.</para>
+        /// <para>The estimated hourly fee calculated based on the minimum RCU selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1**</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>87BDAE8C-xxxx-4A26-BBCC-7D1DD31D630D</para>
+        /// <para>87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachRCInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The node IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The key pair of the node.</para>
+        /// <para>The key pair of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom_test</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPair { get; set; }
 
         /// <summary>
-        /// <para>The logon password of the node.</para>
+        /// <para>The logon password of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <remarks>
-        /// <para>This is a reserved parameter.</para>
+        /// <para>Reserved parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

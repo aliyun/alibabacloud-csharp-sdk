@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup task.</para>
+        /// <para>The backup task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4762614</para>
+        /// <para>476****</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public int? BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup task. Valid values:</para>
+        /// <para>The backup task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NoStart</b></description></item>
-        /// <item><description><b>Progressing</b></description></item>
+        /// <item><description><b>NoStart</b>: not started</description></item>
+        /// <item><description><b>Progressing</b>: in progress</description></item>
         /// </list>
-        /// <para>By default, this operation returns backup tasks in both states.</para>
+        /// <para>Default value: all statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoStart</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b></description></item>
-        /// <item><description><b>Manual</b></description></item>
+        /// <item><description><b>Automated</b>: automatic backup</description></item>
+        /// <item><description><b>Manual</b>: manual backup</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

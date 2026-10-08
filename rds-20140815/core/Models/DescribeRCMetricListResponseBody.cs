@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,19 +20,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The monitoring data.</para>
+        /// <para>The list of monitoring data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;timestamp\&quot;:1722909960000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988087373\&quot;,\&quot;Minimum\&quot;:0.097,\&quot;Maximum\&quot;:0.097,\&quot;Average\&quot;:0.097},{\&quot;timestamp\&quot;:1722910020000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988087373\&quot;,\&quot;Minimum\&quot;:0.093,\&quot;Maximum\&quot;:0.093,\&quot;Average\&quot;:0.093}]</para>
+        /// <para>[{\&quot;timestamp\&quot;:1722909960000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.097,\&quot;Maximum\&quot;:0.097,\&quot;Average\&quot;:0.097},{\&quot;timestamp\&quot;:1722910020000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.093,\&quot;Maximum\&quot;:0.093,\&quot;Average\&quot;:0.093}]</para>
         /// </summary>
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
         public string Datapoints { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned for the request.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
+        /// <para>This parameter returns <b>Successful</b> if the request is successful. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6178f1825f9fb76ce0b5e8707e68181f</para>
+        /// <para>6178f1825f9fb76ce0b5e8707e******</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

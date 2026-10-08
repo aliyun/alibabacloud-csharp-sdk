@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCustinsResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The deadline for the modification.</para>
+        /// <para>The adjustment time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31 23:59:06</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AdjustDeadline { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The increase rate in percentage.</para>
+        /// <para>The increase ratio. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The original value. This parameter must be specified when the <b>ResourceType</b> parameter is set to <b>instance</b>.</para>
+        /// <para>The original value. This parameter is required when <b>ResourceType</b> is set to <b>instance</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreOriginalSpecification { get; set; }
 
         /// <summary>
-        /// <para>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</para>
+        /// <para>The target value. This parameter is applicable to target tracking rules and predictive rules. The value of TargetValue can contain up to three decimal places and must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>

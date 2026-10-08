@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5******</para>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,18 +25,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-4n******</para>
+        /// <para>dhg-4nxxxxxxx</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time when you want the system to start the migration. Valid values:</para>
+        /// <para>The migration time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The system immediately starts the migration. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The system starts the migration during the specified maintenance window.</description></item>
-        /// <item><description><b>Specified</b>: The system starts the migration at the specified point in time.</description></item>
+        /// <item><description><b>Immediately</b>: migrates the instance immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: migrates the instance during the maintenance window.</description></item>
+        /// <item><description><b>Specified</b>: migrates the instance at a specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The specified switchover time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para>This parameter must be specified when you set <b>EffectiveTime</b> to <b>Specified</b>.</para>
+        /// <para>This parameter is required when <b>EffectiveTime</b> is set to <b>Specified</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,20 +82,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SpecifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
+        /// <para>The ID of the destination host to which the primary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp******</para>
+        /// <para>i-bpxxxxxxx1</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
+        /// <para>The ID of the destination host to which the secondary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp******</para>
+        /// <para>i-bpxxxxxxx2</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForSlave")]
         [Validation(Required=false)]
@@ -105,17 +105,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The zone ID of the secondary node.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-h</para>
+        /// <para>cn-hangzhou-j</para>
         /// </summary>
         [NameInMap("ZoneIdForFollower")]
         [Validation(Required=false)]
         public string ZoneIdForFollower { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the logger instance.</para>
+        /// <para>The zone ID of the log node.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-i</para>
+        /// <para>cn-hangzhou-k</para>
         /// </summary>
         [NameInMap("ZoneIdForLog")]
         [Validation(Required=false)]

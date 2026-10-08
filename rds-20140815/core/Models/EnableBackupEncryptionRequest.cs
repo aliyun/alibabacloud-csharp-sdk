@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class EnableBackupEncryptionRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The backup encryption key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>564cf6c4-d2ee-495b-b265-5724******</para>
         /// </summary>

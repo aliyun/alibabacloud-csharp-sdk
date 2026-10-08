@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The number of archived backup files that are retained. Default value: <b>1</b>. Valid values:</para>
+        /// <para>The number of archived backups to retain. The default value is <b>1</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when <b>ArchiveBackupKeepPolicy</b> is set to <b>ByMonth</b>: <b>1</b> to <b>31</b>.</description></item>
-        /// <item><description>Valid values when <b>ArchiveBackupKeepPolicy</b> is set to <b>ByWeek</b>: <b>1</b> to <b>7</b>.</description></item>
+        /// <item><description>When <b>ArchiveBackupKeepPolicy</b> is set to <b>ByMonth</b>, valid values are <b>1 to 31</b>.</description></item>
+        /// <item><description>When <b>ArchiveBackupKeepPolicy</b> is set to <b>ByWeek</b>, valid values are <b>1 to 7</b>.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter when <b>ArchiveBackupKeepPolicy</b> is set to <b>KeepAll</b>.</description></item>
+        /// <item><description>When <b>ArchiveBackupKeepPolicy</b> is set to <b>KeepAll</b>, this parameter does not need to be specified.</description></item>
         /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -142,11 +142,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ArchiveBackupKeepCount { get; set; }
 
         /// <summary>
-        /// <para>The retention period of archived backup files. The number of archived backup files that can be retained within the specified retention period is specified by <b>ArchiveBackupKeepCount</b>. Default value: <b>0</b>. Valid values:</para>
+        /// <para>The retention cycle of archived backups. The number of backups retained within this cycle is determined by <b>ArchiveBackupKeepCount</b>. The default value is <b>0</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ByMonth</b></description></item>
-        /// <item><description><b>ByWeek</b></description></item>
-        /// <item><description><b>KeepAll</b></description></item>
+        /// <item><description><b>ByMonth</b>: monthly</description></item>
+        /// <item><description><b>ByWeek</b>: weekly</description></item>
+        /// <item><description><b>KeepAll</b>: all retained</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupKeepPolicy { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the archived backup is retained. The default value <b>0</b> specifies that the backup archiving feature is disabled. Valid values: <b>30</b> to <b>1095</b>.</para>
+        /// <para>The number of days for which archived backups are retained. The default value is <b>0</b>, which indicates that archived backup is not enabled. Valid values: <b>30 to 1095</b>.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
@@ -173,21 +173,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The frequency at which you want to perform a snapshot backup on the instance. Valid values:</para>
+        /// <para>The snapshot backup frequency. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: No backup frequencies are specified.</description></item>
-        /// <item><description><b>30</b>: A snapshot backup is performed every 30 minutes.</description></item>
-        /// <item><description><b>60</b>: A snapshot backup is performed every 60 minutes.</description></item>
-        /// <item><description><b>120</b>: A snapshot backup is performed every 120 minutes.</description></item>
-        /// <item><description><b>240</b>: A snapshot backup is performed every 240 minutes.</description></item>
-        /// <item><description><b>480</b>: A snapshot backup is performed every 480 minutes.</description></item>
+        /// <item><description><b>15</b>: 15 minutes.</description></item>
+        /// <item><description><b>30</b>: 30 minutes.</description></item>
+        /// <item><description><b>60</b>: 60 minutes.</description></item>
+        /// <item><description><b>120</b>: 120 minutes.</description></item>
+        /// <item><description><b>180</b>: 180 minutes.</description></item>
+        /// <item><description><b>240</b>: 240 minutes.</description></item>
+        /// <item><description><b>360</b>: 360 minutes.</description></item>
+        /// <item><description><b>480</b>: 480 minutes.</description></item>
+        /// <item><description><b>720</b>: 720 minutes.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can configure a backup policy by using this parameter and the <b>PreferredBackupPeriod</b> parameter. For example, if you set <b>PreferredBackupPeriod</b> to Saturday,Sunday and BackupInterval to \<em>\</em>-1\<em>\</em>, a snapshot backup is performed on every Saturday and Sunday.</description></item>
-        /// <item><description>If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.</description></item>
-        /// <item><description>If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/211143.html">Enable snapshot backups for an ApsaraDB RDS for SQL Server instance</a>.</description></item>
-        /// <item><description>If <b>Category</b> is set to <b>Flash</b>, BackupInterval is invalid.</description></item>
+        /// <item><description>This parameter works together with the <b>PreferredBackupPeriod</b> parameter to determine the backup policy.</description></item>
+        /// <item><description>MySQL instances must be cloud disk instances running MySQL 5.7 or 8.0 in the <b>high-availability series or Cluster Edition</b>.</description></item>
+        /// <item><description>PostgreSQL instances must be cloud disk instances.</description></item>
+        /// <item><description>SQL Server instances must have <a href="https://help.aliyun.com/document_detail/211143.html"><b>snapshot backup</b></a> <b>enabled</b>.</description></item>
+        /// <item><description>This parameter is invalid when <b>Category</b> is set to <b>Flash</b>.</description></item>
         /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -200,16 +204,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the log backup feature. Valid values:</para>
+        /// <para>Specifies whether to enable log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: enables the feature.</description></item>
-        /// <item><description><b>Disabled</b>: disables the feature.</description></item>
+        /// <item><description><b>Enable</b>: Enable.</description></item>
+        /// <item><description><b>Disabled</b>: Disable.</description></item>
+        /// </list>
+        /// <para><b>For SQL Server instances</b>, log backup is enabled by default and cannot be disabled. However, you can modify the log backup frequency as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>Log backup frequency of <b>every 5 minutes</b>: Set BackupLog to Enable and leave LogBackupFrequency empty. For more information, see <a href="https://help.aliyun.com/document_detail/2861729.html">5-minute log backup</a>. <b>This configuration is not supported when backup on the secondary instance is preferred (BackupPriority is set to 1). Otherwise, an error is returned.</b></description></item>
+        /// <item><description>Log backup frequency of <b>every 30 minutes</b>: Leave BackupLog empty and set LogBackupFrequency to LogInterval.</description></item>
+        /// <item><description>Log backup frequency <b>consistent with data backup</b>: Leave both BackupLog and LogBackupFrequency empty.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b> and is used to enable or disable log backup.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -220,17 +227,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupLog { get; set; }
 
         /// <summary>
-        /// <para>The backup method of the instance. Valid values:</para>
+        /// <para>The backup method for <b>SQL Server instances with cloud disks</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Physical</b>: physical backup</description></item>
-        /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+        /// <item><description><b>Physical</b> (default): physical backup.</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup.</description></item>
         /// </list>
-        /// <para>Default value: <b>Physical</b>.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter takes effect only on instances that run SQL Server with cloud disks.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -241,7 +244,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup. Valid values:</para>
+        /// <para>The type of the backup policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>DataBackupPolicy</b>: data backup</description></item>
         /// <item><description><b>LogBackupPolicy</b>: log backup</description></item>
@@ -255,15 +258,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupPolicyMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the backup settings of a secondary instance are configured. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/95717.html">backup on secondary instance</a> setting for <b>SQL Server Cluster Edition</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: secondary instance preferred</description></item>
-        /// <item><description><b>2</b>: primary instance preferred</description></item>
+        /// <item><description><b>1</b>: secondary instance preferred.</description></item>
+        /// <item><description><b>2</b>: primary instance forced.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupMethod</b> is set to <b>Physical</b>. If <b>BackupMethod</b> is set to <b>Snapshot</b>, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.</description></item>
+        /// <item><description>This parameter takes effect only when <b>BackupMethod</b> is set to <b>Physical</b>. If <b>BackupMethod</b> is set to <b>Snapshot</b>, SQL Server Cluster Edition instances are forced to perform backups on the primary instance.</description></item>
+        /// <item><description>After you set <b>secondary instance preferred</b> (BackupPriority to 1), the <b>5-minute log backup</b> policy (BackupLog set to Enable and LogBackupFrequency left empty) is <b>not supported</b>. Otherwise, an error is returned. Set the log backup frequency to every 30 minutes or consistent with data backup.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -275,10 +278,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? BackupPriority { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which you want to retain data backup files. Valid values: <b>7 to 730</b>.</para>
+        /// <para>The number of days for which data backups are retained. Valid values: <b>7 to 730</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
+        /// <item><description>This parameter is required when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -291,10 +294,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the single-digit second backup feature. Valid values:</para>
+        /// <para>Specifies whether to enable backup within seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Flash</b>: enables the feature.</description></item>
-        /// <item><description><b>Standard</b>: disables the feature.</description></item>
+        /// <item><description><b>Flash</b>: Enable.</description></item>
+        /// <item><description><b>Standard</b>: Disable.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
@@ -308,13 +311,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The format that is used to compress backup data. Valid values:</para>
+        /// <para>The backup compression method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Backups are not compressed.</description></item>
-        /// <item><description><b>1</b>: The zlib tool is used to compress backups into .tar.gz files.</description></item>
-        /// <item><description><b>2</b>: The zlib tool is used to compress backups in parallel.</description></item>
-        /// <item><description><b>4</b>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</description></item>
-        /// <item><description><b>8</b>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.</description></item>
+        /// <item><description><b>0</b>: not compressed.</description></item>
+        /// <item><description><b>1</b>: zlib compression. The format is tar.gz.</description></item>
+        /// <item><description><b>2</b>: parallel zlib compression.</description></item>
+        /// <item><description><b>4</b>: quicklz compression. The format is xb.gz. This method is applicable only to MySQL 5.6 and 5.7 and can be used for <a href="https://help.aliyun.com/document_detail/103175.html">individual database and table restoration</a>.</description></item>
+        /// <item><description><b>8</b>: quicklz compression. The format is xb.gz. This method is applicable only to MySQL 8.0. Individual database and table restoration is not supported.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
@@ -328,11 +331,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -343,19 +346,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? EnableAdvancedBackupPolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the log backup feature. Valid values:</para>
+        /// <para>Specifies whether to enable instance log backup for <b>MySQL</b>, <b>PostgreSQL</b>, and <b>MariaDB</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b> or <b>1</b>: enables the log backup feature.</description></item>
-        /// <item><description><b>False</b> or <b>0</b>: disables the log backup feature.</description></item>
+        /// <item><description><b>True</b> or <b>1</b>: Enable.</description></item>
+        /// <item><description><b>False</b> or <b>0</b>: Disable.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You must specify this parameter when you set the <b>BackupPolicyMode</b> parameter to <b>LogBackupPolicy</b>.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter takes effect only when you set the <b>BackupPolicyMode</b> parameter to <b>LogBackupPolicy</b>.</para>
-        /// </description></item>
+        /// <item><description>Instance log backup for <b>SQL Server</b> instances is enabled by default and cannot be disabled. You do not need to configure this parameter for SQL Server instances.</description></item>
+        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b> and is used to enable or disable instance log backup.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -365,32 +366,43 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable incremental backup. Valid values:</para>
+        /// <para>Specifies whether to enable incremental backup for <b>SQL Server instances with cloud disks or MySQL instances with local disks</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disables the feature.</description></item>
-        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>False</b> (default): Disable.</description></item>
+        /// <item><description><b>True</b>: Enable.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter takes effect only on instances that run SQL Server with cloud disks.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("EnableIncrementDataBackup")]
         [Validation(Required=false)]
         public bool? EnableIncrementDataBackup { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: <b>Enable and Disable</b>. You can retain the default value.</para>
-        /// <remarks>
+        /// <para>Specifies whether to enable point-in-time recovery for <b>MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You must specify this parameter when you set the <b>BackupPolicyMode</b> parameter to <b>LogBackupPolicy</b>.</description></item>
-        /// <item><description>This parameter takes effect only when you set the <b>BackupPolicyMode</b> parameter to <b>LogBackupPolicy</b>.</description></item>
+        /// <item><description><b>True</b>: Enable.</description></item>
+        /// <item><description><b>False</b>: Disable.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b> and <b>BackupLog</b> is set to <b>Enable</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure a point-in-time recovery policy</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
+        [NameInMap("EnablePitrProtection")]
+        [Validation(Required=false)]
+        public bool? EnablePitrProtection { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to unconditionally clean up binary logs when the storage usage of a <b>MySQL</b> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values: <b>Enable | Disable</b>. The default value is not modified.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b> and is required in this case.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -401,12 +413,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HighSpaceUsageProtection { get; set; }
 
         /// <summary>
-        /// <para>The number of hours for which you want to retain log backup files on the instance. Valid values: <b>0 to 168</b>. The value 0 specifies that log backup files are not retained on the instance. The value 168 is calculated based on the following formula: 7 × 24.</para>
-        /// <remarks>
+        /// <para>The high-frequency incremental backup frequency for <b>MySQL instances with local disks</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b>.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b>.</description></item>
+        /// <item><description><b>60</b>: 60 minutes.</description></item>
+        /// <item><description><b>120</b>: 120 minutes.</description></item>
+        /// <item><description><b>240</b>: 240 minutes.</description></item>
+        /// <item><description><b>360</b>: 360 minutes.</description></item>
+        /// <item><description><b>720</b>: 720 minutes.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter takes effect only when <b>EnableIncrementDataBackup</b> is set to <b>True</b>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120</para>
+        /// </summary>
+        [NameInMap("IncBackupInterval")]
+        [Validation(Required=false)]
+        public int? IncBackupInterval { get; set; }
+
+        /// <summary>
+        /// <para>The number of hours for which instance log backups are retained on the local storage of a <b>MySQL</b> instance. Valid values: <b>0 to 168</b> (7 × 24). A value of 0 indicates that instance logs are not retained locally.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b> and is required in this case.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -417,12 +446,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LocalLogRetentionHours { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage usage that is allowed for log backup files on the instance. If the storage usage for log backup files on the instance exceeds the value of this parameter, the system deletes earlier log backup files until the storage usage falls below the value of this parameter. Valid values:<b>0 to 50</b>. You can retain the default value.</para>
+        /// <para>The maximum usage of the local log storage space for a <b>MySQL</b> instance. If the usage exceeds this value, the system starts to clean up binary logs from the earliest one until the usage drops below this threshold. Valid values: <b>0 to 50</b>. The default value is not modified.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b>.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b> and is required in this case.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -433,16 +459,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LocalLogRetentionSpace { get; set; }
 
         /// <summary>
-        /// <para>The frequency at which you want to back up the logs of the instance. Valid values:</para>
+        /// <para>The log backup frequency for <b>SQL Server</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LogInterval</b>: A log backup is performed every 30 minutes.</description></item>
-        /// <item><description>The default value is the same as the data backup frequency.</description></item>
+        /// <item><description><b>LogInterval</b>: every <b>30 minutes</b>.</description></item>
+        /// <item><description><b>Empty</b> (no value required): every <b>5 minutes</b> or <b>consistent with data backup</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>The value <b>LogInterval</b> is supported only for instances that run SQL Server.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -453,15 +476,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LogBackupFrequency { get; set; }
 
         /// <summary>
-        /// <para>The number of binary log files that you want to retain on the instance. Default value: <b>60</b>. Valid values: <b>6</b> to <b>100</b>.</para>
+        /// <para>The number of binary logs retained locally. The default value is <b>60</b>. Valid values: <b>6 to 100</b>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when you set the <b>BackupPolicyMode</b> parameter to <b>LogBackupPolicy</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</para>
-        /// </description></item>
+        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>LogBackupPolicy</b>.</description></item>
+        /// <item><description>For MySQL instances, you can set this parameter to -1, which indicates that the number of locally retained binary logs is not limited.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -471,11 +492,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupLocalRetentionNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the log backup is retained. Valid values: <b>7 to 730</b>. The log backup retention period cannot be longer than the data backup retention period.</para>
+        /// <para>The number of days for which log backups are retained. Valid values: <b>7 to 730</b>. The value cannot be greater than the number of days for which data backups are retained.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you enable the log backup feature, you can specify the log backup retention period. This parameter is supported for instances that run MySQL and PostgreSQL.</description></item>
-        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b> or <b>LogBackupPolicy</b>.</description></item>
+        /// <item><description>When log backup is enabled, you can set the retention period of log backup files. Currently, only MySQL and PostgreSQL instances support this setting.</description></item>
+        /// <item><description>This parameter applies when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b> or <b>LogBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -495,7 +516,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The backup cycle. Specify at least two days of the week and separate the days with commas (,). Valid values:</para>
+        /// <para>The backup cycle. Specify at least two days. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Monday</b></description></item>
         /// <item><description><b>Tuesday</b></description></item>
@@ -507,8 +528,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can configure a backup policy by using this parameter and the <b>BackupInterval</b> parameter. For example, if you set this parameter to Saturday,Sunday and the <b>BackupInterval</b> parameter to 30, a backup is performed every 30 minutes on every Saturday and Sunday.</description></item>
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
+        /// <item><description>This parameter works together with the <b>BackupInterval</b> parameter to determine the backup policy. For example, if you set this parameter to Saturday and Sunday and set <b>BackupInterval</b> to 30 minutes, a backup is performed every 30 minutes on Saturday and Sunday each week.</description></item>
+        /// <item><description>This parameter is required when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -521,10 +542,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time at which you want to perform a backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The time at which to perform a backup task. Format: <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter must be specified when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
+        /// <item><description>This parameter is required when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -537,16 +558,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain archived backup files if the instance is released. Valid values:</para>
+        /// <para>The archived backup data retention policy for deleted <b>MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backup files are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup file is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backup files are retained.</description></item>
+        /// <item><description><b>None</b>: not retained.</description></item>
+        /// <item><description><b>Lastest</b>: the last backup is retained.</description></item>
+        /// <item><description><b>All</b>: all backups are retained.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when you set the <b>BackupPolicyMode</b> parameter to <b>DataBackupPolicy</b>.</description></item>
-        /// <item><description>If the instance uses cloud disks and was created on or after February 1, 2024, this parameter is automatically set to <b>Lastest</b>. If the instance uses local disks in the same scenario, this parameter is automatically set to <b>None</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backup for deleted instances</a>.</description></item>
+        /// <item><description>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL cloud disk instances purchased on or after February 1, 2024, the default value of ReleasedKeepPolicy is <b>Lastest</b>. For instances with Premium Local SSDs, the default value is <b>None</b>. For more information about this feature, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backups of deleted instances</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 

@@ -13,18 +13,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOC*****</para>
+        /// <para>ETnLKlblzczshOTUbOC****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: regular endpoint</description></item>
-        /// <item><description><b>ReadWriteSplitting</b>: read/write splitting endpoint</description></item>
+        /// <item><description><b>Normal</b>: regular endpoint.</description></item>
+        /// <item><description><b>ReadWriteSplitting</b>: read/write splitting endpoint.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>By default, the system returns both types of endpoints.</para>
+        /// <para>By default, endpoints of all types are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Flag")]
         [Validation(Required=false)]
         public int? Flag { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</para>
+        /// <para>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rgc-2ze*****</para>
+        /// <para>rgc-2ze****</para>
         /// </summary>
         [NameInMap("GeneralGroupName")]
         [Validation(Required=false)]

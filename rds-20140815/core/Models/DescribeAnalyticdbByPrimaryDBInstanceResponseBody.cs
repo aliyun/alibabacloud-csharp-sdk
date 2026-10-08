@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of associated analytic instances.</para>
+        /// <para>The number of associated analytical instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

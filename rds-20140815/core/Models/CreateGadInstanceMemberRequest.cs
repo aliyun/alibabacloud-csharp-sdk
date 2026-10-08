@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateGadInstanceMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the central node . You can call the DescribeGadInstances operation to query the ID.</para>
+        /// <para>The ID of the central node. You can call DescribeGadInstances to query the central node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gad-rm-bp1npi2j8****</para>
+        /// <para>rm-bp190h8y69tad****</para>
         /// </summary>
         [NameInMap("CentralDBInstanceId")]
         [Validation(Required=false)]
         public string CentralDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.</para>
+        /// <para>The privileged account of the central node. You can call DescribeAccounts to query the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CentralRdsDtsAdminAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged account of the central node.</para>
+        /// <para>The password of the privileged account for the central node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CentralRdsDtsAdminPassword { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID of the central node (primary node). You can call DescribeRegions to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,15 +54,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CentralRegionId { get; set; }
 
         /// <summary>
-        /// <para>A JSON array that consists of the information about the databases on the central node. All database information that you specify in this array is synchronized to the unit nodes of the global active database cluster. The JSON array contains the following fields:</para>
+        /// <para>A JSON array of database information from the central node. All databases in the array are synchronized to the current unit node. Metric description:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of the database.</description></item>
-        /// <item><description><b>all</b>: specifies whether to synchronize all data in the database or the table. Valid values: <b>true</b> and <b>false</b>.</description></item>
-        /// <item><description><b>Table</b>: the name of the table. If you set the <b>all</b> field to <b>false</b>, you must nest the name of the table that you want to synchronize into the JSON array.</description></item>
+        /// <item><description><b>name</b>: the database name.</description></item>
+        /// <item><description><b>all</b>: specifies whether to synchronize all data in the current database or table. Valid values: <b>true</b> | <b>false</b>.</description></item>
+        /// <item><description><b>Table</b>: the table name. If the <b>all</b> parameter is set to <b>false</b>, you must also specify the table names to be synchronized in the JSON array.</description></item>
         /// </list>
-        /// <para>Example: <c>{ &quot;testdb&quot;: { &quot;name&quot;: &quot;testdb&quot;, &quot;all&quot;: false, &quot;Table&quot;: { &quot;order&quot;: { &quot;name&quot;: &quot;order&quot;, &quot;all&quot;: true }, &quot;ordernew&quot;: { &quot;name&quot;: &quot;ordernew&quot;, &quot;all&quot;: true } } } }</c></para>
+        /// <para>Example: <c>{    &quot;testdb&quot;: {     &quot;name&quot;: &quot;testdb&quot;,     &quot;all&quot;: false,     &quot;Table&quot;: {       &quot;order&quot;: {         &quot;name&quot;: &quot;order&quot;,         &quot;all&quot;: true       },       &quot;ordernew&quot;: {         &quot;name&quot;: &quot;ordernew&quot;,         &quot;all&quot;: true       }     }   } }</c></para>
         /// <remarks>
-        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects for migration, synchronization, or subscribe</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the global active database cluster. You can call the DescribeGadInstances operation to query the ID.</para>
+        /// <para>The ID of the ApsaraDB RDS global active database cluster. You can call DescribeGadInstances to query the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GadInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the unit node.</para>
+        /// <para>The list of unit node (secondary node) information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UnitNode")]
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<CreateGadInstanceMemberRequestUnitNode> UnitNode { get; set; }
         public class CreateGadInstanceMemberRequestUnitNode : TeaModel {
             /// <summary>
-            /// <para>The name of the unit node that you want to create. The name must meet the following requirements:</para>
+            /// <para>The name of the new unit node. The name must meet the following requirements:</para>
             /// <list type="bullet">
             /// <item><description>The name must be <b>2 to 255</b> characters in length.</description></item>
-            /// <item><description>The name can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</description></item>
+            /// <item><description>The name must start with a Chinese character or a letter. It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</description></item>
             /// <item><description>The name cannot start with <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the unit node that you want to create. Unit: GB The storage capacity increases in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</para>
+            /// <para>The storage capacity of the new unit node. Unit: GB. The value is incremented in steps of 5 GB. For the value range, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>. You can also call the DescribeAvailableResource operation to query the available storage capacity range for the target instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -118,13 +118,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? DBInstanceStorage { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance. Valid values:</para>
+            /// <para>The instance storage type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>local_ssd</b>: local SSD</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-            /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
-            /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-            /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk</description></item>
+            /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk</description></item>
+            /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk</description></item>
+            /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceStorageType { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the unit node that you want to create. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can call the DescribeAvailableResource operation to query the available instance types in a region.</para>
+            /// <para>The instance type of the new unit node. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available instance types in the target region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.t1.small</para>
@@ -145,11 +145,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbInstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The conflict resolution policy based on which Data Transmission Service (DTS) responds to primary key conflicts during data synchronization to the unit node that you want to create. Valid values:</para>
+            /// <para>The conflict resolution policy used when a primary key conflict occurs during data synchronization for the new unit node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>overwrite</b>: DTS overwrites the conflicting primary key on the destination node.</description></item>
-            /// <item><description><b>interrupt</b>: DTS stops the synchronization task, reports an error, and then exits.</description></item>
-            /// <item><description><b>ignore</b>: DTS overwrites the conflicting primary key on the logger node.</description></item>
+            /// <item><description><b>overwrite</b>: Overwrites the conflicting primary key on the destination node.</description></item>
+            /// <item><description><b>interrupt</b>: Stops the synchronization task and reports an error.</description></item>
+            /// <item><description><b>ignore</b>: Overwrites the conflicting primary key on the current node.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DtsConflict { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the data synchronization task for the unit node that you want to create. Valid values:</para>
+            /// <para>The specification of the data synchronization link for the new unit node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>small</b></description></item>
             /// <item><description><b>medium</b></description></item>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description><b>micro</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization tasks</a>.</para>
+            /// <para>For more information about the differences between specifications, see <a href="https://help.aliyun.com/document_detail/26605.html">Data synchronization link specifications</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DtsInstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The database engine of the unit node that you want to create. Set the value to <b>MySQL</b>.</para>
+            /// <para>The database engine of the new unit node. Only <b>MySQL</b> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The database engine version of the unit node that you want to create. Valid values:</para>
+            /// <para>The database engine version of the new unit node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>8.0</b></description></item>
             /// <item><description><b>5.7</b></description></item>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the unit node or secondary node that you want to create. You can call the DescribeRegions operation to query the most recent region list.</para>
+            /// <para>The region ID of the new unit node (secondary node). You can call DescribeRegions to query the region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -218,10 +218,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionID { get; set; }
 
             /// <summary>
-            /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</para>
+            /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the new unit node. Separate multiple entries with commas (,). Entries cannot be duplicated. A maximum of 1,000 entries are allowed. The following two formats are supported:</para>
             /// <list type="bullet">
-            /// <item><description>IP addresses, such as <c>10.10.XX.XX</c>.</description></item>
-            /// <item><description>CIDR blocks, such as <c>10.10.XX.XX/24</c>. In this example, <b>24</b> indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of <b>1 to 32</b>.</description></item>
+            /// <item><description>IP address format, such as <c>10.10.XX.XX</c>.</description></item>
+            /// <item><description>CIDR format, such as <c>10.10.XX.XX/24</c> (Classless Inter-Domain Routing, where <b>24</b> indicates the prefix length, ranging from <b>1 to 32</b>).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecurityIPList { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID of the unit node that you want to create.</para>
+            /// <para>The vSwitch ID of the new unit node.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string VSwitchID { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID of the unit node that you want to create.</para>
+            /// <para>The virtual private cloud (VPC) ID of the new unit node.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -254,38 +254,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string VpcID { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.</para>
+            /// <para>The zone ID of the new unit node. You can call DescribeRegions to query the zone ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou-h</para>
+            /// <para>cn-hangzhou-j</para>
             /// </summary>
             [NameInMap("ZoneID")]
             [Validation(Required=false)]
             public string ZoneID { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the secondary node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.</para>
+            /// <para>The zone ID of the secondary node for the new unit node. You can call DescribeRegions to query the zone ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of this parameter is the same as the <b>zone ID</b> of the unit node that you want to create, the single-zone deployment method is used.</description></item>
-            /// <item><description>If the value of this parameter is different from the <b>zone ID</b> of the unit node that you want to create, the multiple-zone deployment method is used.</description></item>
+            /// <item><description>If this value is the same as the <b>ZoneId</b> of the current unit node, the single-zone deployment is used.</description></item>
+            /// <item><description>If this value is different from the <b>ZoneId</b> of the current unit node, the multi-zone deployment is used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou-h</para>
+            /// <para>cn-hangzhou-j</para>
             /// </summary>
             [NameInMap("ZoneIDSlave1")]
             [Validation(Required=false)]
             public string ZoneIDSlave1 { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the logger node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.</para>
+            /// <para>The zone ID of the logger node for the new unit node. You can call DescribeRegions to query the zone ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of this parameter is the same as the <b>zone ID</b> of the unit node that you want to create, the single-zone deployment method is used.</description></item>
-            /// <item><description>If the value of this parameter is different from the <b>zone ID</b> of the unit node that you want to create, the multiple-zone deployment method is used.</description></item>
+            /// <item><description>If this value is the same as the <b>ZoneId</b> of the current unit node, the single-zone deployment is used.</description></item>
+            /// <item><description>If this value is different from the <b>ZoneId</b> of the current unit node, the multi-zone deployment is used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou-h</para>
+            /// <para>cn-hangzhou-j</para>
             /// </summary>
             [NameInMap("ZoneIDSlave2")]
             [Validation(Required=false)]

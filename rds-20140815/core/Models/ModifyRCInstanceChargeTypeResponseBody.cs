@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyRCInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// <item><description><b>PREPAY</b>: subscription.</description></item>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance expires.</para>
+        /// <para>The expiration time.</para>
         /// <remarks>
-        /// <para> If you change the billing method from subscription to pay-as-you-go, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if the billing method is changed to pay-as-you-go.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ExpiredTime")]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<string> ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// </summary>
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
         public List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> FeeOfInstances { get; set; }
         public class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances : TeaModel {
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>Reserved parameter. Not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>Reserved parameter. Not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Fee { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>Reserved parameter. Not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>

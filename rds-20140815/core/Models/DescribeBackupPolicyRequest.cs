@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupPolicyMode { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to compress backup data. Valid values:</para>
+        /// <para>The backup compression method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Backup data is not compressed.</description></item>
-        /// <item><description><b>1</b>: Backup data is compressed by using zlib.</description></item>
-        /// <item><description><b>2</b>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</description></item>
-        /// <item><description><b>4</b>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</description></item>
-        /// <item><description><b>8</b>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</description></item>
+        /// <item><description><b>0</b>: no compression</description></item>
+        /// <item><description><b>1</b>: zlib compression</description></item>
+        /// <item><description><b>2</b>: parallel zlib compression</description></item>
+        /// <item><description><b>4</b>: QuickLZ compression with fast restoration for individual databases and tables enabled</description></item>
+        /// <item><description><b>8</b>: QuickLZ compression without fast restoration for individual databases and tables supported</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain archived backup files if the instance is released. Valid values:</para>
+        /// <para>The archived backup data retention policy for deleted <b>MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backup files are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup file is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backup files are retained.</description></item>
+        /// <item><description><b>None</b>: No archived backups are retained.</description></item>
+        /// <item><description><b>Lastest</b>: Only the last archived backup is retained.</description></item>
+        /// <item><description><b>All</b>: All archived backups are retained.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

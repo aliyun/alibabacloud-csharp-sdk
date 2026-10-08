@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeActionEventPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the event history feature is enabled.</para>
+        /// <para>The status of the historical events feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

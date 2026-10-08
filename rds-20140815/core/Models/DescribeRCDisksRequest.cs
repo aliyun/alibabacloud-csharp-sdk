@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCDisksRequest : TeaModel {
         /// <summary>
-        /// <para>The disk ID. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,). Format: <c>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</c>.</para>
+        /// <para>The disk IDs. The value is a JSON array that contains up to 100 IDs separated by commas (,). Format: <c>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;rcd-bp67acfmxazb4p****&quot;, &quot;rcd-bp67acfmxazb4g****&quot;, … &quot;rcd-bp67acfmxazb4d****&quot;]</para>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskIds { get; set; }
 
         /// <summary>
+        /// <para>The type of cloud disk or elastic ephemeral disk to query. Valid values:
+        /// ● all: queries both system cloud disks and data cloud disks.
+        /// ● system: queries only system cloud disks.
+        /// ● data: queries only data cloud disks.
+        /// Default value: all.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>data</para>
         /// </summary>
@@ -69,6 +75,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The disk status. Valid values:
+        /// ● In_use: in use.
+        /// ● Available: to be attached.
+        /// ● Attaching: being attached.
+        /// ● Detaching: being detached.
+        /// ● Creating: being created.
+        /// ● ReIniting: being initialized.
+        /// ● All: all statuses.
+        /// Default value: All.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>All</para>
         /// </summary>
@@ -77,14 +93,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of the tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRCDisksRequestTag> Tag { get; set; }
         public class DescribeRCDisksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. The tag key <b>cannot be</b> an empty string or a duplicate value.</para>
+            /// <para>The tag key. Empty values and duplicate values are <b>not allowed</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey1</para>
@@ -94,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. The tag value <b>can be</b> an empty string.</para>
+            /// <para>The tag value. Empty values are <b>allowed</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of SQL log reports on the current page.</para>
+        /// <para>The number of SQL log running reports on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

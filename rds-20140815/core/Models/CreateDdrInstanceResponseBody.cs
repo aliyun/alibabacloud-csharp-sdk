@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDdrInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint that is used to connect to the destination instance.</para>
+        /// <para>The endpoint of the new instance.</para>
         /// <remarks>
-        /// <para> The <b>DBInstanceNetType</b> parameter indicates whether the endpoint is internal or public.</para>
+        /// <para>The <b>DBInstanceNetType</b> parameter determines whether this endpoint is an internal endpoint or a public endpoint.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-xxxxx.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The destination instance ID.</para>
+        /// <para>The instance ID of the new instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-xxxxx</para>
+        /// <para>rm-****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -36,16 +36,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2038691xxxxx</para>
+        /// <para>2038691****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to connect to the destination instance.</para>
+        /// <para>The port of the new instance.</para>
         /// <remarks>
-        /// <para><b>DBInstanceNetType</b> indicates whether the port is internal or public.</para>
+        /// <para>The <b>DBInstanceNetType</b> parameter determines whether this port is an internal port or a public port.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E52666CC-330E-418A-8E5B-A19E3FB42D13</para>

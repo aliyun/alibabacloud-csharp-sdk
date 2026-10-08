@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test02</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The status of the database. Valid values:</para>
+        /// <para>The database status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
+        /// <item><description><b>Creating</b>: The database is being created.</description></item>
+        /// <item><description><b>Running</b>: The database is running.</description></item>
+        /// <item><description><b>Deleting</b>: The database is being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2562****</para>

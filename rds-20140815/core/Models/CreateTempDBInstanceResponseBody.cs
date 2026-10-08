@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>248DE93F-8647-4B9D-8287-4A4A0FE56AD5</para>
+        /// <para>069EB9B1-DE12-54B9-8C20-822****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The temporary instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sub138****_rm-******</para>
+        /// <para>sub16****_rm-bp13****</para>
         /// </summary>
         [NameInMap("TempDBInstanceId")]
         [Validation(Required=false)]

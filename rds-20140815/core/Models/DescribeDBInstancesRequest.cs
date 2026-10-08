@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-        /// <item><description><b>cluster</b>: RDS Cluster Edition</description></item>
-        /// <item><description><b>serverless_basic</b>: RDS Serverless Basic Edition</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
+        /// <item><description><b>cluster</b>: Cluster Edition</description></item>
+        /// <item><description><b>serverless_basic</b>: Serverless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,19 +29,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connection mode of the instance. Valid values:</para>
+        /// <para>The access mode of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: standard mode</description></item>
+        /// <item><description><b>Standard</b>: standard access mode</description></item>
         /// <item><description><b>Safe</b>: database proxy mode</description></item>
         /// </list>
-        /// <para>By default, this operation queries the instances that use any of the supported connection modes.</para>
+        /// <para>By default, instances in all access modes are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionMode { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the instance. You must specify this parameter only when you want to query a single instance.</para>
+        /// <para>The endpoint of the instance. Use this endpoint to query the corresponding instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-uf6wjk5****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds.mys2.small</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Primary</b>: primary instance</description></item>
         /// <item><description><b>Readonly</b>: read-only instance</description></item>
         /// <item><description><b>Guard</b>: disaster recovery instance</description></item>
         /// <item><description><b>Temp</b>: temporary instance</description></item>
         /// </list>
-        /// <para>By default, this operation returns the instances that assume any of the supported roles.</para>
+        /// <para>By default, instances of all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Primary</para>
@@ -111,31 +111,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The dedicated cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-7a9xxxxxxxx</para>
+        /// <para>dhg-7a9****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The host ID of the instance in the dedicated cluster.</para>
+        /// <para>The host ID in the dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bpxxxxxxx</para>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("DedicatedHostId")]
         [Validation(Required=false)]
         public string DedicatedHostId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>SQLServer</b></description></item>
         /// <item><description><b>PostgreSQL</b></description></item>
         /// <item><description><b>MariaDB</b></description></item>
         /// </list>
-        /// <para>By default, this operation returns the instances that run any of the supported database engines.</para>
+        /// <para>By default, instances of all database engines are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -148,17 +148,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5.7</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instances have expired. Valid values:</para>
+        /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: The instance has expired.</description></item>
+        /// <item><description><b>False</b>: The instance has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>The JSON string that consists of filter condition parameters and their values.</para>
+        /// <para>The JSON string that contains the instance filter conditions and their values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;babelfishEnabled&quot;:&quot;true&quot;}</para>
@@ -179,10 +179,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the RDS edition of the instance by using the Category parameter. Valid values:</para>
+        /// <para>Specifies whether to return the instance edition (Category) information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: returns the RDS edition of the instance.</description></item>
-        /// <item><description><b>1</b>: does not return the RDS edition of the instance.</description></item>
+        /// <item><description><b>0</b>: does not return the information</description></item>
+        /// <item><description><b>1</b>: returns the information</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,10 +195,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>Classic</b></description></item>
+        /// <item><description><b>VPC</b>: an instance in a virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: an instance in the classic network</description></item>
         /// </list>
-        /// <para>By default, this operation returns the instances that reside in any of the supported network types.</para>
+        /// <para>By default, instances of all network types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Classic</para>
@@ -208,10 +208,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, <b>PageSize</b> and <b>PageNumber</b> are unavailable.</para>
+        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are unavailable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the <b>DescribeDBInstances</b> operation for <b>NextToken</b>. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</para>
+        /// <para>The pagination token. Set this parameter to the value of <b>NextToken</b> that is returned from the last call to the <b>DescribeDBInstances</b> operation. If the results span multiple pages, pass in this value to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>o7PORW5o2TJg**********</para>
+        /// <para>o7PORW5o2TJg****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number. Valid values: any value greater than 0 that does not exceed the maximum value of Integer.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
         /// <item><description><b>Prepaid</b>: subscription</description></item>
@@ -275,12 +275,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter. You do not need to configure this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("QueryAutoRenewal")]
         [Validation(Required=false)]
         public bool? QueryAutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -291,10 +297,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmyxxxxx</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -309,7 +315,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for fuzzy search. The keyword can be part of an instance ID or an instance description.</para>
+        /// <para>The keyword for fuzzy search based on the instance ID or instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6w</para>
@@ -319,7 +325,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the instance. Each tag is a key-value pair that consists of two fields: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</para>
+        /// <para>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to five pairs of tags at a time. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If the instance matches any of the specified tags, the instance information is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -332,24 +338,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>VPC ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
+        /// <para>vpc-uf6f7l4fg90****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

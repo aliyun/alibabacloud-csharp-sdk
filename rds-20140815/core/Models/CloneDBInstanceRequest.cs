@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature for the new instance. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <ol>
-        /// <item><description><b>true</b>: enables the feature. You must make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// <item><description><para><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: generates an order without charging the account.</para>
+        /// </description></item>
         /// </ol>
         /// <remarks>
-        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,9 +30,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The backup set ID.</para>
-        /// <para>You can call the DescribeBackups operation to query the backup set ID.</para>
+        /// <para>You can call the DescribeBackups operation to query the backup set list.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>BackupId</b> or <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +43,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The type of backup that is used to restore the data of the original instance. Valid values:</para>
+        /// <para>The backup type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FullBackup</b></description></item>
-        /// <item><description><b>IncrementalBackup</b></description></item>
+        /// <item><description><b>FullBackup</b>: full backup.</description></item>
+        /// <item><description><b>IncrementalBackup</b>: incremental backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,18 +56,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupType { get; set; }
 
-        /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+        /// <para>Specifies whether to enable the I/O burst feature for the Premium ESSD cloud disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b>: disables the feature.<remarks>
+        /// <para>For more information about the I/O burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is Premium ESSD?</a>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -75,23 +78,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition.</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition.</description></item>
-        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</description></item>
-        /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</description></item>
-        /// <item><description><b>Finance</b>: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition.</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+        /// <item><description><b>AlwaysOn</b>: Cluster Edition (SQL Server).</description></item>
+        /// <item><description><b>cluster</b>: Cluster Edition (MySQL).</description></item>
+        /// <item><description><b>Finance</b>: Enterprise Edition. This value is supported only on the China site (aliyun.com).</description></item>
         /// </list>
         /// <para><b>Serverless instances</b></para>
         /// <list type="bullet">
-        /// <item><description><b>serverless_basic</b>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</description></item>
-        /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for ApsaraDB RDS for MySQL</description></item>
-        /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for ApsaraDB RDS for SQL Server</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</para>
+        /// <item><description><b>serverless_basic</b>: Serverless Basic Edition. This value is valid only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</description></item>
+        /// <item><description><b>serverless_standard</b>: MySQL Serverless High-availability Edition.</description></item>
+        /// <item><description><b>serverless_ha</b>: SQL Server Serverless High-availability Edition.<remarks>
+        /// <para>You do not need to specify this parameter. The clone instance uses the same edition as the source instance.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HighAvailability</para>
@@ -115,9 +118,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CustomExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para>By default, the new instance uses the same instance type as the original primary instance.</para>
+        /// <para>Default value: the instance type of the source instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,9 +131,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The value must be 2 to 255 characters in length The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <para>The name of the instance. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para> The value cannot start with http:// or https://.</para>
+        /// <para>The name cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,16 +148,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>Instance storage capacity of the instance. Unit: GB. The value increases in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para>By default, the new instance has the same storage capacity as the original primary instance.</para>
+        /// <para>Default value: instance storage capacity of the source instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -165,28 +168,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the new instance. Valid values:</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>general_essd</b> (recommend): general Enterprise SSD (ESSD)</description></item>
-        /// <item><description><b>local_ssd</b>: local SSD</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) ESSD</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>general_essd</b>: Premium ESSD (recommended).</description></item>
+        /// <item><description><b>local_ssd</b>: local SSD.</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Serverless instances support only PL1 ESSDs and general ESSDs.</para>
+        /// <para>Serverless instances support only PL1 ESSDs and Premium ESSDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>cloud_essd</para>
+        /// <para>general_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. If you specify more than one database, the value is in the following format: <c>Original database name 1,Original database name 2</c>.</para>
+        /// <para>The database names in the following format: <c>OriginalDatabaseName1,OriginalDatabaseName2</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1,test2</para>
@@ -196,20 +199,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated cluster.</para>
+        /// <para>The dedicated cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-7a9xxxxxxxx</para>
+        /// <para>dhg-7a9****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the release protection feature for the new instance. Valid values:</para>
+        /// <para>Specifies whether to enable the release protection feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b> (default): disables the feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,13 +223,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The network type of the new instance. Valid values:</para>
+        /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>Classic</b></description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>Classic</b>: classic network.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>By default, the new instance has the same network type as the original primary instance.</para>
+        /// <para>Default value: the network type of the source instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -237,21 +240,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>Specifies whether to enable the Buffer Pool Extension (BPE) feature for the Premium ESSD cloud disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enables the feature.</description></item>
+        /// <item><description><b>0</b>: disables the feature.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information about the BPE feature, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
-        /// <item><description><b>Serverless</b>: serverless. This value is not supported for instances that run MariaDB. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</description></item>
+        /// <item><description><b>Serverless</b>: serverless. This value is not supported for ApsaraDB RDS for MariaDB instances. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of PostgreSQL Serverless instances</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -263,13 +273,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Year</b></description></item>
         /// <item><description><b>Month</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required if PayType is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -280,10 +290,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. The system automatically assigns an internal IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.XX.XXX.69</para>
+        /// <para>172.XX.XX.69</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -304,19 +314,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restore only the databases and tables that you specify. The value <b>1</b> specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.</para>
+        /// <para>Specifies whether to restore individual databases and tables. Set this parameter to <b>true</b> to restore individual databases and tables. Otherwise, leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RestoreTable")]
         [Validation(Required=false)]
         public string RestoreTable { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>Any point in time within the backup retention period. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -326,96 +336,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
-        /// <summary>
-        /// <para>The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</para>
-        /// <remarks>
-        /// <para> This parameter is available only on the China site (aliyun.com).</para>
-        /// </remarks>
-        /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public CloneDBInstanceRequestServerlessConfig ServerlessConfig { get; set; }
         public class CloneDBInstanceRequestServerlessConfig : TeaModel {
-            /// <summary>
-            /// <para>Specifies whether to enable the automatic start and stop feature for the serverless ApsaraDB RDS for MySQL instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
-            /// </list>
-            /// <remarks>
-            /// <list type="bullet">
-            /// <item><description>This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</description></item>
-            /// <item><description>This parameter is available only on the China site (aliyun.com).</description></item>
-            /// </list>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("AutoPause")]
             [Validation(Required=false)]
             public bool? AutoPause { get; set; }
 
-            /// <summary>
-            /// <para>The maximum number of RDS Capacity Units (RCUs). Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>1 to 8</b></description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b></description></item>
-            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>1 to 12</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <list type="bullet">
-            /// <item><description>The value of this parameter must be greater than or equal to the value of <b>MinCapacity</b> and can be specified only to an <b>integer</b>.</description></item>
-            /// <item><description>This parameter is available only on the China site (aliyun.com).</description></item>
-            /// </list>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>8</para>
-            /// </summary>
             [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
             public double? MaxCapacity { get; set; }
 
-            /// <summary>
-            /// <para>The minimum number of RCUs. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>0.5 to 8</b>.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b>. Only integers are supported.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>0.5 to 12</b>.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <list type="bullet">
-            /// <item><description>The value of this parameter must be less than or equal to the value of <b>MaxCapacity</b>.</description></item>
-            /// <item><description>This parameter is available only on the China site (aliyun.com).</description></item>
-            /// </list>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0.5</para>
-            /// </summary>
             [NameInMap("MinCapacity")]
             [Validation(Required=false)]
             public double? MinCapacity { get; set; }
 
-            /// <summary>
-            /// <para>Specifies whether to enable the forced scaling feature for the serverless ApsaraDB RDS for MySQL instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
-            /// </list>
-            /// <remarks>
-            /// </remarks>
-            /// <list type="bullet">
-            /// <item><description><para>This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is available only on the China site (aliyun.com).</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("SwitchForce")]
             [Validation(Required=false)]
             public bool? SwitchForce { get; set; }
@@ -423,7 +359,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The information about the database and table that you want to restore. The value is in the following format: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 1&quot;,&quot;newname&quot;:&quot;New name of Database 1&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 2&quot;,&quot;newname&quot;:&quot;New name of Database 2&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]}]</c></para>
+        /// <para>The information about the databases and tables that you want to restore. Format:
+        /// <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Database1Name&quot;,&quot;newname&quot;:&quot;NewDatabase1Name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table1NameInDatabase1&quot;,&quot;newname&quot;:&quot;NewTable1Name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table2NameInDatabase1&quot;,&quot;newname&quot;:&quot;NewTable2Name&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Database2Name&quot;,&quot;newname&quot;:&quot;NewDatabase2Name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table1NameInDatabase2&quot;,&quot;newname&quot;:&quot;NewTable1Name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table2NameInDatabase2&quot;,&quot;newname&quot;:&quot;NewTable2Name&quot;}]}]</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;testdb1&quot;,&quot;newname&quot;:&quot;testdb1_new&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;testdb1table1&quot;,&quot;newname&quot;:&quot;testdb1table1_new&quot;}]}]</para>
@@ -433,13 +370,53 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TableMeta { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the new instance. Valid values:</para>
+        /// <para>The tag list.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CloneDBInstanceRequestTag> Tag { get; set; }
+        public class CloneDBInstanceRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. Specify this parameter to attach a tag to the instance.</para>
+            /// <list type="bullet">
+            /// <item><description>If the specified tag key already exists, the tag is directly attached to the instance. You can call the ListTagResources operation to query existing tags.</description></item>
+            /// <item><description>If the specified tag key does not exist, the tag key is created and then attached to the instance.</description></item>
+            /// <item><description>Empty strings are not allowed.</description></item>
+            /// <item><description>This parameter must be used together with <b>Tag.Value</b>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testkey1</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value that corresponds to the tag key. Specify this parameter to attach a tag to the instance.</para>
+            /// <list type="bullet">
+            /// <item><description>If the specified tag value already exists for the corresponding tag key, the tag value is directly attached to the instance. You can call the ListTagResources operation to query existing tags.</description></item>
+            /// <item><description>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then attached to the instance.</description></item>
+            /// <item><description>This parameter must be used together with <b>Tag.Key</b>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testvalue1</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1 to 3</b>.</description></item>
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1 to 9</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of UsedTime ranges from <b>1 to 3</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of UsedTime ranges from <b>1 to 9</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set the PayType parameter to <b>Prepaid</b>, you must also specify this parameter.</para>
+        /// <para>This parameter is required if PayType is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -450,36 +427,36 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para> Make sure that the VPC belongs to the required region.</para>
+        /// <para>Make sure that the VPC belongs to the corresponding region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
+        /// <para>vpc-uf6f7l4fg90****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
+        /// <para>The vSwitch ID. The zone of the vSwitch must correspond to the active zone ID specified in <b>ZoneId</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>InstanceNetworkType</b> to <b>VPC</b>, you must also specify this parameter.</description></item>
-        /// <item><description>If you specify the <b>ZoneSlaveId1</b> parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</description></item>
+        /// <item><description>The network type (<b>InstanceNetworkType</b>) must be set to <b>VPC</b>.</description></item>
+        /// <item><description>If you specify <b>ZoneSlaveId1</b> (secondary zone ID), you must specify two vSwitch IDs separated by a comma (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <para>The primary zone ID. You can call the DescribeRegions operation to query the zone ID.</para>
         /// <remarks>
-        /// <para> Set this value to the zone ID of the original instance.</para>
+        /// <para>Default value: the zone of the source instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -490,7 +467,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the <b>ZoneId</b> parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the <b>ZoneId</b> parameter to different values, the multi-zone deployment method is used.</para>
+        /// <para>The zone ID of the secondary node. If this parameter is set to the same value as <b>ZoneId</b>, the single-zone deployment method is used. If this parameter is set to a different value from <b>ZoneId</b>, the multi-zone deployment method is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-c</para>
@@ -500,7 +477,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the <b>ZoneId</b> parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the <b>ZoneId</b> parameter, the multi-zone deployment method is used.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The zone ID of the logger node. If this parameter is set to the same value as <b>ZoneId</b>, the single-zone deployment method is used. If this parameter is set to a different value from <b>ZoneId</b>, the multi-zone deployment method is used.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The zone ID of the secondary node or logger node. If this parameter is set to the same value as <b>ZoneId</b>, the single-zone deployment method is used. If this parameter is set to a different value from <b>ZoneId</b>, the multi-zone deployment method is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

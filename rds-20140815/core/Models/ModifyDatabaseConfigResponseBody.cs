@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDatabaseConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8B993DA9-5272-5414-94E3-4CA8BA0146C2</para>
+        /// <para>F5C79A20-E931-5389-BC04-DEBA2D3ABD8D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

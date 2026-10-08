@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The application scope of this modification. Valid values:</para>
+        /// <para>The scope of the modification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instance</b>: This modification is applied only to the current instance.</description></item>
-        /// <item><description><b>region</b>: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs.</description></item>
+        /// <item><description><b>instance</b>: instance level.</description></item>
+        /// <item><description><b>region</b>: region level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

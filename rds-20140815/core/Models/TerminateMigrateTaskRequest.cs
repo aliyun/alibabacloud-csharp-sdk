@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TerminateMigrateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the ApsaraDB RDS for SQL Server instance. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp159vfbu******</para>
+        /// <para>rm-bp159vf****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</para>
+        /// <para>The ID of the backup migration task. You can call DescribeMigrateTasks to query the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

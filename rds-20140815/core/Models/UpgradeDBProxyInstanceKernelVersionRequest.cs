@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBProxyInstanceKernelVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>A reserved parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para> If you set <b>UpgradeTime</b> to <b>SpecifyTime</b>, you must specify SwitchTime.</para>
+        /// <para>This parameter is required if <b>UpgradeTime</b> is set to <b>SpecifyTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,18 +60,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when you want to upgrade the database proxy version of the instance. Valid values:</para>
+        /// <para>The upgrade time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MaintainTime</b> (default): performs the upgrade during the maintenance window that you specified. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">Modify the maintenance window</a>.</description></item>
-        /// <item><description><b>Immediate</b>: performs the upgrade immediately.</description></item>
-        /// <item><description><b>SpecifyTime</b>: performs the upgrade at a specified point in time.</description></item>
+        /// <item><description><b>MaintainTime</b> (default): The upgrade is performed during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</description></item>
+        /// <item><description><b>Immediate</b>: The upgrade is performed immediately.</description></item>
+        /// <item><description><b>SpecifyTime</b>: The upgrade is performed at a specified time.</description></item>
         /// </list>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><b>If the instance runs MySQL, you can set this parameter to <b>MaintainTime</b>, <b>Immediate</b>, or SpecifyTime</b>.</description></item>
-        /// <item><description>If the instance runs PostgreSQL, you can set this parameter to <b>MaintainTime</b> or <b>Immediate</b>.</description></item>
-        /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>MaintainTime</para>

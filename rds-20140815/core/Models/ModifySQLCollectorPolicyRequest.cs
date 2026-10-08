@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmx**********</para>
+        /// <para>rg-acfmx****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:</para>
+        /// <para>Specifies whether to enable or disable SQL Explorer (SQL Audit). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enable</b></description></item>
         /// <item><description><b>Disabled</b></description></item>

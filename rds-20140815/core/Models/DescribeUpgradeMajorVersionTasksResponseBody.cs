@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tasks for major engine version upgrades.</para>
+        /// <para>The list of major engine version upgrade tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeUpgradeMajorVersionTasksResponseBodyItems> Items { get; set; }
         public class DescribeUpgradeMajorVersionTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the system collects the statistics.</para>
+            /// <para>The statistics information collection pattern.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>After</b>: The system collects the statistics after a switchover.</description></item>
-            /// <item><description><b>Before</b>: The system collects the statistics before a switchover.</description></item>
+            /// <item><description><b>After</b>: Upgrade after the cutover.</description></item>
+            /// <item><description><b>Before</b>: Upgrade before the cutover.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CollectStatMode { get; set; }
 
             /// <summary>
-            /// <para>The details of the task.</para>
+            /// <para>The detailed information about the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-27 15:03:05 --- do upgrade precheck on slave succcess.\n2021-10-27 15:03:11 --- begin to upgrade major version, source instance will locked in readonly mode.\n2021-10-27 15:03:21 --- upgrade master success.\n2021-10-27 15:06:10 --- exchange source and target instance dns success.\n</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</para>
+            /// <para>The end time of the major engine version upgrade.</para>
+            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1614237779000</para>
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The final result of the task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Success</b>: The task is successful.</description></item>
             /// <item><description><b>Failed</b>: The task failed.</description></item>
-            /// <item><description><b>Running</b>: The task is in the phase in which data is being migrated to a new instance.</description></item>
+            /// <item><description><b>Running</b>: The migration is in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The ID of the original instance.</para>
+            /// <para>The ID of the original instance before the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-bp1i3kkq7321****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceInsName { get; set; }
 
             /// <summary>
-            /// <para>The major engine version of the original instance.</para>
+            /// <para>The version of the original instance before the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11.0</para>
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceMajorVersion { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</para>
+            /// <para>The start time of the major engine version upgrade.</para>
+            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1614236007000</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the switching from the original instance to the new instance.</para>
-            /// <para>Expressed in Unix timestamp. Unit: milliseconds.</para>
+            /// <para>The end time of the instance switchover from the original instance to the new instance.</para>
+            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1714237539000</para>
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchEndTime { get; set; }
 
             /// <summary>
-            /// <para>The time at which your workloads are switched over from the original instance to the new instance.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</para>
+            /// <para>The time of the instance switchover from the original instance to the new instance.</para>
+            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1614237539000</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the new instance.</para>
+            /// <para>The ID of the new instance after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-bp1c0v6d8092****</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInsName { get; set; }
 
             /// <summary>
-            /// <para>The major engine version of the new instance. Valid values:</para>
+            /// <para>The major engine version after the upgrade. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>10.0</b></description></item>
             /// <item><description><b>11.0</b></description></item>
@@ -162,8 +162,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The upgrade mode.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>clone</b>: The system does not migrate data to the new instance and does not switch your workloads over to the new instance.</description></item>
-            /// <item><description><b>switch</b>: The system migrates data to the new instance and switches your workloads over to the new instance.</description></item>
+            /// <item><description><b>clone</b>: no cutover</description></item>
+            /// <item><description><b>switch</b>: cutover</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,22 +173,68 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string UpgradeMode { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether a cutover is performed.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: A cutover is performed.</description></item>
+            /// <item><description><b>false</b>: No cutover is performed.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("cutOver")]
             [Validation(Required=false)]
             public bool? CutOver { get; set; }
 
+            /// <summary>
+            /// <para>The estimated synchronization time for the logical replication lag. Unit: seconds.</para>
+            /// <remarks>
+            /// <para>This parameter is used only for <b>zero-downtime</b> major engine version upgrades.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("totalLogicRepDelayTime")]
             [Validation(Required=false)]
             public int? TotalLogicRepDelayTime { get; set; }
 
+            /// <summary>
+            /// <para>The size of the logical replication lag. Unit: MB.</para>
+            /// <remarks>
+            /// <para>This parameter is used only for <b>zero-downtime</b> major engine version upgrades.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("totalLogicRepLatencyMB")]
             [Validation(Required=false)]
             public int? TotalLogicRepLatencyMB { get; set; }
 
+            /// <summary>
+            /// <para>The temporary internal endpoint of the higher-version instance for the zero-downtime major engine version upgrade. The format is <c>****.pg.rds.aliyuncs.com</c>.</para>
+            /// <remarks>
+            /// <para>This parameter is used only for <b>zero-downtime</b> major engine version upgrades.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>****.pg.rds.aliyuncs.com</para>
+            /// </summary>
             [NameInMap("zeroDownTimeConnectionString")]
             [Validation(Required=false)]
             public string ZeroDownTimeConnectionString { get; set; }
 
+            /// <summary>
+            /// <para>The port of the higher-version instance, which is the same as the port of the source instance.</para>
+            /// <remarks>
+            /// <para>This parameter is used only for <b>zero-downtime</b> major engine version upgrades.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5432</para>
+            /// </summary>
             [NameInMap("zeroDownTimePort")]
             [Validation(Required=false)]
             public int? ZeroDownTimePort { get; set; }
@@ -226,7 +272,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

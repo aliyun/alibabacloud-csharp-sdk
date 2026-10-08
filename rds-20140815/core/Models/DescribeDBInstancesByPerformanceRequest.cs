@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeDBInstancesByPerformanceRequestTag> Tag { get; set; }
         public class DescribeDBInstancesByPerformanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag 1 that is added to the instances.</para>
+            /// <para>Queries instances that are bound to the tag Tag.1.key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag 1 that is added to the instances.</para>
+            /// <para>Queries instances that are bound to the tag Tag.1.value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxx</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5xxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: any non-zero positive integer.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>5</b> to <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>5</b> to <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis.</para>
+        /// <para>The sorting criterion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU_Usage</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SortMethod { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <c>{&quot;key1&quot;:&quot;value1&quot;}</c>.</para>
+        /// <para>The tags that are bound to the instances you want to query. The tags include TagKey and TagValue. Format: <c>{&quot;key1&quot;:&quot;value1&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>

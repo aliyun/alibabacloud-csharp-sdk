@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-u****</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The version of the IP protocol. Valid values:</para>
+            /// <para>The IP address protocol version. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ipv4</b></description></item>
             /// <item><description><b>ipv6</b></description></item>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>777C4593-8053-427B-****105593277CAB</para>

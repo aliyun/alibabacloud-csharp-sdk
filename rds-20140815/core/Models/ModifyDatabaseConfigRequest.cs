@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-t4nnu1my39qr8****</para>
+        /// <para>rm-t4nnu1my39q******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database name.</para>
         /// <remarks>
-        /// <para> You can specify only one database name.</para>
+        /// <para>Specifying multiple database names is not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The database property that you want to modify.</para>
+        /// <para>The database attribute that you want to modify.</para>
         /// <list type="bullet">
-        /// <item><description><b>If you want to modify a property of the database</b>, set this parameter to the name of the database property.</description></item>
-        /// <item><description><b>If you want to archive data from the database to an OSS bucket</b>, specify the database status. If you set this parameter to <c>covert_online_db_to_cold_storage</c>, the system converts an online database to a cold storage database. If you set this parameter to <c>convert_cold_storage_db_to_online</c>, the system converts a cold storage database to an online database.</description></item>
+        /// <item><description><b>Modify database attributes feature</b>: Enter the attribute name of the target database.</description></item>
+        /// <item><description><b>Data archiving to OSS feature</b>: Enter the status of the target database. Set this parameter to <c>covert_online_db_to_cold_storage</c> to convert an online database to a cold storage database, or set this parameter to <c>convert_cold_storage_db_to_online</c> to convert a cold storage database to an online database.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DatabasePropertyName { get; set; }
 
         /// <summary>
-        /// <para>The value of the database property that you want to modify.</para>
+        /// <para>The value of the database attribute that you want to modify.</para>
         /// <list type="bullet">
-        /// <item><description><b>If you want to modify a property of the database</b>, set this parameter to the property value.</description></item>
-        /// <item><description><b>If you want to archive data from the database to an OSS bucket</b>, set this parameter to <b>1</b>. The system converts a database to a cold storage database or an online database.</description></item>
+        /// <item><description><b>Modify database attributes feature</b>: Enter the attribute value of the target database.</description></item>
+        /// <item><description><b>Data archiving to OSS feature</b>: Set this parameter to <b>1</b> to convert the target database to cold storage or online status.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

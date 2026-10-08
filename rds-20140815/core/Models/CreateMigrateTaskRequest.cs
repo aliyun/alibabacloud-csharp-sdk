@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateMigrateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the migration task. Valid values:</para>
+        /// <para>The type of the cloud migration task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: The migration task migrates full backup files.</description></item>
-        /// <item><description><b>UPDF</b>: The migration task migrates incremental or log backup files.</description></item>
+        /// <item><description><b>FULL</b>: performs a restore operation by using a full backup file. This value is applicable to first-time migrations or full data recovery scenarios.</description></item>
+        /// <item><description><b>UPDF</b>: restores incremental data by using an incremental backup file or log file. This value is applicable to incremental synchronization scenarios where a full backup already exists.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,15 +25,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The consistency check method for the database. Valid values:</para>
+        /// <para>The consistency check method after the database is brought online. This parameter takes effect only when IsOnlineDB is set to True. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SyncExecuteDBCheck</b>: synchronous database check</description></item>
-        /// <item><description><b>AsyncExecuteDBCheck</b>: asynchronous database check</description></item>
+        /// <item><description><b>SyncExecuteDBCheck</b>: performs a synchronous database check. This value is applicable to scenarios that require high data consistency.</description></item>
+        /// <item><description><b>AsyncExecuteDBCheck</b>: performs an asynchronous database check. This value provides higher performance but may delay the detection of potential issues.</description></item>
         /// </list>
-        /// <para>Default value: <b>AsyncExecuteDBCheck</b> (compatible with SQL Server 2008 R2)</para>
-        /// <remarks>
-        /// <para> This parameter is valid when <b>IsOnlineDB</b> is set to <b>True</b>.</para>
-        /// </remarks>
+        /// <para>Default value: <b>AsyncExecuteDBCheck</b> (compatible with SQL Server 2008 R2).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AsyncExecuteDBCheck</para>
@@ -43,11 +40,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CheckDBMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk******</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -65,13 +62,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to make the restored database data available for user access. Valid values:</para>
+        /// <para>Specifies whether to bring the restored database online so that users can access it. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: Brings the database online.</description></item>
+        /// <item><description><b>False</b>: Does not bring the database online.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Set the value to <b>True</b> for instances that run SQL Server 2008 R2.</para>
+        /// <list type="bullet">
+        /// <item><description>For SQL Server 2008 R2, this value is always True.</description></item>
+        /// <item><description>When <b>IsOnlineDB</b> is set to <b>True</b>, <b>BackupMode</b> must be set to <b>FULL</b>.</description></item>
+        /// <item><description>When <b>IsOnlineDB</b> is set to <b>False</b>, <b>BackupMode</b> must be set to <b>UPDF</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,17 +84,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IsOnlineDB { get; set; }
 
         /// <summary>
-        /// <para>The migration task ID.</para>
+        /// <para>The migration task ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>BackupMode</b> to <b>FULL</b>, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</description></item>
-        /// <item><description>If you set <b>BackupMode</b> to <b>UPDF</b>, the value of this parameter is the ID of the required full migration task.</description></item>
+        /// <item><description>When <b>BackupMode</b> is set to <b>FULL</b>, leave this parameter empty (compatible with SQL Server 2008 R2).</description></item>
+        /// <item><description>When <b>BackupMode</b> is set to <b>UPDF</b>, set this parameter to the ID of the corresponding FULL task. You can call DescribeMigrateTasks to query the task ID.</description></item>
         /// </list>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set <b>IsOnlineDB</b> to <b>True</b>, the value of <b>BackupMode</b> must be <b>FULL</b>.</description></item>
-        /// <item><description>If you set <b>IsOnlineDB</b> to <b>False</b>, the value of <b>BackupMode</b> must be <b>UPDF</b>.</description></item>
-        /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -103,31 +98,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MigrateTaskId { get; set; }
 
         /// <summary>
-        /// <para>The shared URL of the backup file in the OSS bucket. The URL must be encoded.</para>
-        /// <para>If you specify multiple URLs, separate them with vertical bars (|) and then encode them.</para>
+        /// <para>The shared URL of the backup file on OSS (URL-encoded). If multiple URLs exist, separate them with vertical bars (|) before encoding, and then pass the encoded value.</para>
         /// <remarks>
-        /// <para> This parameter is required for instances that run SQL Server 2008 R2.</para>
+        /// <para>This parameter is required for SQL Server 2008 R2.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>check_cdn_oss.sh <a href="http://www.xxxxxx.mobi">www.xxxxxx.mobi</a></para>
+        /// <para>check_cdn_oss.sh www.******.mobi</para>
         /// </summary>
         [NameInMap("OSSUrls")]
         [Validation(Required=false)]
         public string OSSUrls { get; set; }
 
         /// <summary>
-        /// <para>The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):</para>
+        /// <para>The OSS file information, which consists of the following three parts separated by colons (:):</para>
         /// <list type="bullet">
-        /// <item><description>OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</description></item>
-        /// <item><description>Name of the OSS bucket: rdsmssqlsingapore.</description></item>
-        /// <item><description>Key of the backup file in the OSS bucket: autotest_2008R2_TestMigration_FULL.bak.</description></item>
+        /// <item><description><b>OSS endpoint</b>: oss-ap-southeast-1.aliyuncs.com.</description></item>
+        /// <item><description><b>OSS bucket name</b>: rdsmssqlsingapore.</description></item>
+        /// <item><description><b>Backup file name on OSS</b>: autotest_2008R2_TestMigration_FULL.bak.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is optional for instances that run SQL Server 2008 R2.</description></item>
-        /// <item><description>This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.</description></item>
-        /// </list>
+        /// <para>This parameter is required for SQL Server versions later than SQL Server 2008 R2.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the proxy endpoint Enter a custom prefix.</para>
+        /// <para>The prefix of the new database proxy endpoint. Specify a custom value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,24 +21,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-t4n3axxxxx</para>
+        /// <para>rm-t4n3****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the proxy endpoint. Valid values:</para>
+        /// <para>The network type of the new database proxy endpoint. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Public</b>: Internet</description></item>
-        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
-        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>VPC</b> (default): virtual private cloud (VPC)</description></item>
         /// </list>
-        /// <para>Default value: <b>Classic</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,11 +47,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</para>
+        /// <para>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ta9um4xxxxx</para>
+        /// <para>ta9um4****</para>
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
@@ -70,10 +68,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The port number that is associated with the proxy endpoint.</para>
+        /// <para>The port of the new database proxy endpoint. Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL, the default value is <b>3306</b>.</description></item>
-        /// <item><description>If the instance runs PostgreSQL, the default value is <b>5432</b>.</description></item>
+        /// <item><description>MySQL: <b>3306</b></description></item>
+        /// <item><description>PostgreSQL: <b>5432</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyNewConnectStringPort { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -94,36 +92,36 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.</para>
+        /// <para>The VPC ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the VPC ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
+        /// <para>This parameter is required when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-bpxxxxxx</para>
+        /// <para>vpc-bp****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</para>
+        /// <para>The vSwitch ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the vSwitch ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
+        /// <para>This parameter is required when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-bpxxxxxx</para>
+        /// <para>vsw-bp****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

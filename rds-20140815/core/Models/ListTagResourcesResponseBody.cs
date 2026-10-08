@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token used to return more results. If a query does not return all results, pass in the token returned from the previous query to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec21345</para>

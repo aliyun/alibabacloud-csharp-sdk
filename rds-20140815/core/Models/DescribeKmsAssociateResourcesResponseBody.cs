@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeKmsAssociateResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the associated ApsaraDB RDS instances.</para>
+        /// <para>The list of associated ApsaraDB RDS instances.</para>
         /// </summary>
         [NameInMap("AssociateDBInstances")]
         [Validation(Required=false)]
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The purpose of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DiskEncryption</b>: cloud disk encryption</description></item>
-            /// <item><description><b>TDE</b>: transparent data encryption</description></item>
+            /// <item><description><b>DiskEncryption</b>: cloud disk data encryption.</description></item>
+            /// <item><description><b>TDE</b>: transparent data encryption.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,16 +56,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string KeyUsedBy { get; set; }
 
             /// <summary>
-            /// <para>The state of the instance. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
             /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
             /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
             /// <item><description><b>RESTARTING</b>: The instance is being restarted.</description></item>
-            /// <item><description><b>INS_MAINTAINING</b>: The configuration of the instance is being changed.</description></item>
+            /// <item><description><b>CLASS_CHANGING</b>: The instance specifications are being changed.</description></item>
             /// <item><description><b>INS_MAINTAINING</b>: The instance is being maintained.</description></item>
-            /// <item><description><b>BACKUP_RECOVERING</b>: The instance is being restored.</description></item>
-            /// <item><description><b>NET_MODIFYING</b>: The network type of the instance is being changed.</description></item>
+            /// <item><description><b>BACKUP_RECOVERING</b>: A backup is being restored.</description></item>
+            /// <item><description><b>NET_MODIFYING</b>: The network is being changed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether an associated RDS instance exists.</para>
+        /// <para>Indicates whether associated ApsaraDB RDS instances exist.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes</description></item>
-        /// <item><description><b>false</b>: No</description></item>
+        /// <item><description><b>true</b>: Associated instances exist.</description></item>
+        /// <item><description><b>false</b>: No associated instances exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// <para>38F6B598-A6D7-508A-8401-12BB9936****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

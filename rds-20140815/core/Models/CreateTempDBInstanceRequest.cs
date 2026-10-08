@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</para>
         /// <remarks>
-        /// <para> You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>603******</para>
+        /// <para>1883****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5******</para>
+        /// <para>rm-bp13****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -60,16 +60,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>A point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.</description></item>
-        /// <item><description>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</description></item>
+        /// <item><description>You can specify any point in time within the last 7 days that is at least 30 minutes earlier than the current time. The default time zone is UTC.</description></item>
+        /// <item><description>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2011-06-11T16:00:00Z</para>
+        /// <para>2023-06-11T16:00:00Z</para>
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]

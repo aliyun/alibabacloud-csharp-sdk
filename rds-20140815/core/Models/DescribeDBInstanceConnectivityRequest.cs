@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The source IP address of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

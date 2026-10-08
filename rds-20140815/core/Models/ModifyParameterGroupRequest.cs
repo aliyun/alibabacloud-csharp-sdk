@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The modification mode of the parameter template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Collectivity</b> (default): adds new parameters or modifies parameters in the original parameter template.</description></item>
-        /// </list>
+        /// <item><description><para><b>Collectivity</b> (default): adds or updates parameters.</para>
         /// <remarks>
-        /// <para> If you set the ModifyMode parameter to Collectivity, the system adds the value of the <b>Parameters</b> parameter to the original parameter template or modifies the corresponding parameters in the original parameter template. Other parameters in the original parameter template are not affected.</para>
+        /// <para>The parameters that you specify in the <b>Parameters</b> parameter are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><b>Individual</b>: overwrites original parameters.</description></item>
-        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Individual</b>: overwrites the parameter template.</para>
         /// <remarks>
-        /// <para> If you set the ModifyMode parameter to Individual, the system uses the value of the <b>Parameters</b> parameter to overwrite the parameter settings in the original parameter template.</para>
+        /// <para>The existing parameter template is replaced with the parameters that you specify in the <b>Parameters</b> parameter.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Collectivity</para>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the parameter template. The description can be up to 200 characters in length.</para>
+        /// <para>The description of the parameter template. The description can be up to 200 characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the original description of the parameter template is retained.</para>
+        /// <para>If you do not specify this parameter, the original parameter template description is retained.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,13 +60,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The parameter template name.</para>
+        /// <para>The name of the parameter template.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, periods (.), and underscores (_). It must start with a letter.</description></item>
-        /// <item><description>It can be 8 to 64 characters in length.</description></item>
+        /// <item><description>The name must start with a letter and can contain letters, digits, periods (.), and underscores (_).</description></item>
+        /// <item><description>The name must be 8 to 64 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the original name of the parameter template is retained.</para>
+        /// <para>If you do not specify this parameter, the original parameter template name is retained.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that consists of parameters and their values in the parameter template. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
+        /// <para>A JSON string that consists of parameters and their values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Configure the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Configure the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If <b>ModifyMode</b> is set to <b>Individual</b> and this parameter is specified, the new parameters overwrite the parameters in the original parameter template.</description></item>
-        /// <item><description>If you set <b>ModifyMode</b> to <b>Collectivity</b> and specify this parameter, the new parameters are added to the original parameter template, or the parameters in the original parameter template are modified.</description></item>
-        /// <item><description>If you do not specify this parameter, the parameters in the original parameter template remain unchanged.</description></item>
+        /// <item><description>If <b>ModifyMode</b> is set to <b>Individual</b>, the parameters that you specify overwrite the existing parameter template.</description></item>
+        /// <item><description>If <b>ModifyMode</b> is set to <b>Collectivity</b>, the parameters that you specify are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</description></item>
+        /// <item><description>If you do not specify this parameter, the original parameter information is retained.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <remarks>
-        /// <para> The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to replicate a parameter template to a specific region.</para>
+        /// <para>The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to copy a parameter template to another region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

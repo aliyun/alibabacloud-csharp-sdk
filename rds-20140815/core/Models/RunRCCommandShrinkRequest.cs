@@ -9,36 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RunRCCommandShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCziJZNwH****</para>
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ZWNobyAxMjM=</para>
         /// </summary>
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</para>
-        /// </summary>
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
         public string ContainerId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test-container</para>
-        /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }
@@ -51,18 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ContentEncoding { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>testDescription</para>
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("EnableParameter")]
         [Validation(Required=false)]
         public bool? EnableParameter { get; set; }
@@ -75,43 +52,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("KeepCommand")]
         [Validation(Required=false)]
         public bool? KeepCommand { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
-        /// </summary>
         [NameInMap("Launcher")]
         [Validation(Required=false)]
         public string Launcher { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>testName</para>
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</para>
-        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -125,10 +83,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RepeatMode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -149,10 +103,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string TerminationMode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>60</para>
-        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public long? Timeout { get; set; }
@@ -167,26 +117,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test</para>
-        /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("WindowsPasswordName")]
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>/home/user</para>
-        /// </summary>
         [NameInMap("WorkingDir")]
         [Validation(Required=false)]
         public string WorkingDir { get; set; }

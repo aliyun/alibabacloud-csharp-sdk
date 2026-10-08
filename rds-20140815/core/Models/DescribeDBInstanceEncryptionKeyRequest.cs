@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEncryptionKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the IDs of instances.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The custom key ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
+        /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The destination region ID. You can call the DescribeRegions operation to query the available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>

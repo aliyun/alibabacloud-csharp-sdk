@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CancelActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the tasks that are canceled. Multiple task IDs are separated with commas (,).</para>
+        /// <para>The IDs of the tasks that are canceled in batch. Multiple IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>188****,188****,188****</para>

@@ -13,34 +13,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1*****</para>
+        /// <para>rm-bp1****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Details of the Enhanced Monitoring metric.</para>
+        /// <para>The list of enhanced monitoring metrics.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAvailableMetricsResponseBodyItems> Items { get; set; }
         public class DescribeAvailableMetricsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The description of the Enhanced Monitoring metric.</para>
+            /// <para>The description of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</para>
+            /// <para>sys cpu usage, sys cpu usage / total cpu</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The category of the Enhanced Monitoring metric. Valid values:</para>
+            /// <para>The category of the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>os</b>: OS metric</description></item>
-            /// <item><description><b>db</b>: database metric</description></item>
+            /// <item><description><b>os</b>: operating system metric.</description></item>
+            /// <item><description><b>db</b>: database metric.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Dimension { get; set; }
 
             /// <summary>
-            /// <para>The key of the group to which the Enhanced Monitoring metric belongs.</para>
+            /// <para>The key of the group to which the enhanced monitoring metric belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os.cpu_usage</para>
@@ -61,21 +61,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GroupKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the group to which the Enhanced Monitoring metric belongs.</para>
+            /// <para>The name of the group to which the enhanced monitoring metric belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU Utilization Rate</para>
+            /// <para>CPU Usage</para>
             /// </summary>
             [NameInMap("GroupKeyType")]
             [Validation(Required=false)]
             public string GroupKeyType { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:</para>
+            /// <para>The statistical method of the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>avg</b>: The system calculates the average value of the Enhanced Monitoring metric.</description></item>
-            /// <item><description><b>min</b>: The system calculates the minimum value of the Enhanced Monitoring metric.</description></item>
-            /// <item><description><b>max</b>: The system calculates the maximum value of the Enhanced Monitoring metric.</description></item>
+            /// <item><description><b>avg</b>: average value.</description></item>
+            /// <item><description><b>min</b>: minimum value.</description></item>
+            /// <item><description><b>max</b>: maximum value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The key of the Enhanced Monitoring metric.</para>
+            /// <para>The key of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os.cpu_usage.sys.avg</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MetricsKey { get; set; }
 
             /// <summary>
-            /// <para>The alias of the Enhanced Monitoring metric.</para>
+            /// <para>The alias of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_sys_per_core</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MetricsKeyAlias { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the Enhanced Monitoring metric.</para>
+            /// <para>The sequence number of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? SortRule { get; set; }
 
             /// <summary>
-            /// <para>The unit of the Enhanced Monitoring metric.</para>
+            /// <para>The unit of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CD61041-35F7-10F7-BE94-33A48B221218</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of enhanced monitoring metrics that are available for the instance.</para>
+        /// <para>The total number of enhanced monitoring metrics supported by the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The target instance ID. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,22 +21,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address that is used to connect to the self-managed PostgreSQL instance.</para>
+        /// <para>The internal IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
-        /// <item><description>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
-        /// <item><description>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</description></item>
+        /// <item><description>For a one-click cloud migration of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
+        /// <item><description>For a one-click cloud migration of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the netstat -a | grep PGSQL command to obtain the port number.</para>
+        /// <para>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to query the port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5432</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</para>
+        /// <para>The task ID. You can obtain the task ID from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440437220</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</para>
+        /// <para>The task name. You can obtain the task name from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>

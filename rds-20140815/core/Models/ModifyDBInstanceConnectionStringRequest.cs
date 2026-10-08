@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
-        /// <para>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</para>
+        /// <para>The TDS port number for Babelfish for RDS PostgreSQL.</para>
         /// <remarks>
-        /// <para>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</para>
+        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for RDS PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BabelfishPort { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the endpoint after the change. Only the prefix of the value of <b>CurrentConnectionString</b> can be changed.</para>
+        /// <para>The prefix of the endpoint. You can modify only the prefix of the value specified by the <b>CurrentConnectionString</b> parameter.</para>
         /// <remarks>
-        /// <para>The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ &amp; \* = + | {} ; : \&quot; &quot; ,&lt;&gt; / ?</para>
+        /// <para>The prefix must be 8 to 64 characters in length and cannot contain Chinese characters or special characters (~!#%^&amp;*=+\|{};:\&quot;&quot;,&lt;&gt;/?). The prefix can contain letters, digits, and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.</para>
+        /// <para>The current endpoint of the instance. The endpoint can be a public endpoint or internal endpoint, or a classic network connectivity endpoint in hybrid access mode.</para>
         /// <remarks>
-        /// <para>The read/write splitting endpoint cannot be changed.</para>
+        /// <para>Modification of read/write splitting connection endpoints is not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</para>
+        /// <para>The name of the group to which the dedicated cluster MySQL general-purpose instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgc-bp1tkv8****</para>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The PgBouncer port.</para>
+        /// <para>The PgBouncer port number.</para>
         /// <remarks>
-        /// <para>This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.</para>
+        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. If PgBouncer is enabled, you can modify the PgBouncer port number.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PGBouncerPort { get; set; }
 
         /// <summary>
-        /// <para>The port number after the change.</para>
+        /// <para>The target port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,10 +111,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retain the virtual IP address (VIP) when swapping the endpoint.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The VIP is retained.</description></item>
+        /// <item><description><b>false</b> (default): The VIP is not retained.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("RetainVip")]
         [Validation(Required=false)]
         public bool? RetainVip { get; set; }
 
+        /// <summary>
+        /// <para>The instance ID of the target ApsaraDB RDS for PostgreSQL instance with which you want to swap the endpoint.</para>
+        /// <remarks>
+        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pgm-bp1206s14p3o****</para>
+        /// </summary>
         [NameInMap("TargetDBInstanceId")]
         [Validation(Required=false)]
         public string TargetDBInstanceId { get; set; }

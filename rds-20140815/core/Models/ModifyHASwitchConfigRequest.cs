@@ -14,21 +14,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The mode of the automatic primary/secondary switchover feature. Valid values:</para>
+        /// <para>The primary/secondary switchover setting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b>: The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</description></item>
-        /// <item><description><b>Manual</b>: The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</description></item>
+        /// <item><description><b>Auto</b>: The system automatically switches over between the primary and secondary instances upon a fault.</description></item>
+        /// <item><description><b>Manual</b>: Temporarily disables automatic switchover.</description></item>
         /// </list>
         /// <para>Default value: <b>Auto</b>.</para>
         /// <remarks>
-        /// <para> If you set this parameter to <b>Manual</b>, you must specify the <b>ManualHATime</b> parameter.</para>
+        /// <para>If you set this parameter to <b>Manual</b>, you must also specify the <b>ManualHATime</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HAConfig { get; set; }
 
         /// <summary>
-        /// <para>The time to disable the automatic primary/secondary switchover feature. The time can range from the current time to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The deadline for temporarily disabling automatic switchover. You can set this parameter to a point in time up to 23:59:59 seven days later. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when you set the <b>HAConfig</b> parameter to <b>Manual</b>.</para>
+        /// <para>This parameter takes effect only when <b>HAConfig</b> is set to <b>Manual</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

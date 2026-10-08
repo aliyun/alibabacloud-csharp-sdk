@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCNodePoolRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACK Edge cluster in which the RDS Custom instance resides.</para>
+        /// <para>The ID of the RDS Custom container cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c463aaa89e2b84cacacfbf23c4867****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>115855279</para>
+        /// <para>11585****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

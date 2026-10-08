@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceLinkedWhitelistTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned. Valid values:</para>
+        /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: success</description></item>
-        /// <item><description><b>400</b>: client error</description></item>
-        /// <item><description><b>401</b>: identity authentication failed</description></item>
-        /// <item><description><b>404</b>: request page not found</description></item>
-        /// <item><description><b>500</b>: server error</description></item>
+        /// <item><description><b>200</b>: Normal.</description></item>
+        /// <item><description><b>400</b>: Client fault.</description></item>
+        /// <item><description><b>401</b>: Authentication failed.</description></item>
+        /// <item><description><b>404</b>: Request page not found.</description></item>
+        /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rm-bp191w771kd3****</para>
+            /// <para>rm-bp191w771k******</para>
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The information about whitelists that are returned by page.</para>
+            /// <para>The whitelist template information returned in a paged manner.</para>
             /// </summary>
             [NameInMap("Templates")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses.</para>
+                /// <para>The IP address list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12.0.X.X,10.2.X.X</para>
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: success</description></item>
-        /// <item><description><b>400</b>: client error</description></item>
-        /// <item><description><b>500</b>: server error</description></item>
+        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>400</b>: Client error.</description></item>
+        /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,10 +140,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

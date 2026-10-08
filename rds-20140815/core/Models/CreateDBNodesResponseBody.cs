@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze450g4ctg6t****</para>
@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the created node. The value is a string. Multiple values are separated by commas (<c>,</c>).</para>
+        /// <para>The IDs of the created nodes. The value is of the String type. Multiple node IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rn-abcd2*****</para>
+        /// <para>rn-abcd2****</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public string NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2133400000*****</para>
+        /// <para>2133400000****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</para>

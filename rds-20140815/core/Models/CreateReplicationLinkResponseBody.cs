@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReplicationLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the DR instance.</para>
+        /// <para>The instance ID of the disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pgm-****.pg.rds.aliyuncs.com</para>
+        /// <para>PostgreSQL：pgm-<b><b>.pg.rds.aliyuncs.com
+        /// SQL Server：92</b></b></para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</para>
+        /// <para>442FC501-C4DD-1349-B70A-DE13D189072E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>564532302</para>
+        /// <para>159****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test01</para>
+        /// <para>zbtest</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of price information.</para>
+        /// <para>The pricing information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The information about the promotion.</para>
+            /// <para>The promotion information.</para>
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// <para>The returned message.</para>
+                /// <para>The error description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error description</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CheckErrMsg { get; set; }
 
                 /// <summary>
-                /// <para>The error code that is returned.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount.</para>
+            /// <para>The discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+            /// <para>The final price, which is the original price minus the discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC9F4EF6-D038-4405-B497-1F48E722C9F2</para>

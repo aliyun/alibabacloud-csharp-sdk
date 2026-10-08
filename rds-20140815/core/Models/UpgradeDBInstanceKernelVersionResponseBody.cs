@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceKernelVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bpxxxxx</para>
+        /// <para>rm-bp****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DA2ECBA0-4745-4491-9166-799FF8984AC9</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The new minor engine version of the instance.</para>
+        /// <para>The target minor engine version to which the instance is upgraded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xcluster80_20210305</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>226917****</para>
+        /// <para>226917711</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

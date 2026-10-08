@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-        /// <item><description><b>AlwaysOn</b>: SQL Server on RDS Cluster Edition</description></item>
-        /// <item><description><b>cluster</b>: MySQL on RDS Cluster Edition</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
+        /// <item><description><b>AlwaysOn</b>: SQL Server Cluster Edition</description></item>
+        /// <item><description><b>cluster</b>: MySQL Cluster Edition</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
         /// </list>
         /// 
@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CustomExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set <b>IsModifySpec</b> to <b>true</b>, you must specify at least one of DBInstanceClass and <b>DBInstanceStorage</b>.</para>
+        /// <para>The target instance type of the destination instance. Only the instance type can be changed. The storage type cannot be changed.
+        /// When the <b>IsModifySpec</b> parameter settings require <b>true</b>, you must specify at least one of this parameter and <b>DBInstanceStorage</b>.</para>
         /// <para>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -42,19 +43,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new storage capacity of the instance. If you set <b>IsModifySpec</b> to <b>true</b>, you must specify at least one of DBInstanceStorage and <b>DBInstanceClass</b>.</para>
-        /// <para>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</para>
+        /// <para>The destination storage capacity. When the <b>IsModifySpec</b> parameter settings require <b>true</b>, you must specify at least one of this parameter and <b>DBInstanceClass</b>.</para>
+        /// <para>Unit: GB.
+        /// Valid values: The storage capacity varies based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -64,40 +66,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
-        /// <item><description><b>general_essd</b>: general Enterprise SSD (ESSD). This is the recommended storage type.</description></item>
-        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</description></item>
+        /// <item><description>cloud_essd: PL1 ESSD cloud disk.</description></item>
+        /// <item><description>cloud_essd2: PL2 ESSD cloud disk.</description></item>
+        /// <item><description>cloud_essd3: PL3 ESSD cloud disk.</description></item>
+        /// <item><description>cloud_ssd: standard SSD (not recommended because standard SSDs are no longer available for purchase in some regions).</description></item>
         /// </list>
-        /// <para>The default value of this parameter is determined by the instance type specified by the <b>DBInstanceClass</b> parameter.</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance type specifies the local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
-        /// <item><description>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <b>cloud_essd</b>.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> Serverless instances support only PL1 ESSDs and general ESSDs.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>local_ssd</para>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The time when you want the change to take effect. Valid values:</para>
+        /// <para>The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b> (default): The change immediately takes effect.</description></item>
-        /// <item><description><b>MaintainTime</b>: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>ScheduleTime</b>: The change takes effect at the point in time that you specify.</description></item>
+        /// <item><description><b>Immediate</b>: The migration takes effect immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The migration takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>ScheduleTime</b>: The migration takes effect at a custom time.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to <b>ScheduleTime</b>, you must specify the <b>SwitchTime</b> parameter.</para>
+        /// <para>If you set this parameter to <b>ScheduleTime</b>, you must also specify the <b>SwitchTime</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +100,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>Specifies whether to enable the Buffer Pool Extension (BPE) feature for premium performance disks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Enable.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information about the BPE feature, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -118,13 +117,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:</para>
+        /// <para>Specifies whether to change the instance specifications during zone migration.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to <b>true</b>, you must specify at least one of <b>DBInstanceClass</b> and <b>DBInstanceStorage</b>.</description></item>
-        /// <item><description><b>false</b> (default): You do not want to change the specifications of the instance during the cross-zone migration.</description></item>
+        /// <item><description><b>true</b>: Change the specifications. When this parameter is set to <b>true</b>, you must specify at least one of the <b>DBInstanceClass</b> and <b>DBInstanceStorage</b> parameters.</description></item>
+        /// <item><description><b>false</b>: Do not change the specifications. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter applies only to instances that run MySQL.</para>
+        /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,9 +150,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The migration time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The custom time at which the zone switch takes effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>This parameter is used with <b>EffectiveTime</b>. You must specify this parameter only when <b>EffectiveTime</b> is set to <b>ScheduleTime</b>.</para>
+        /// <para>This parameter is used together with the <b>EffectiveTime</b> parameter and is required only when <b>EffectiveTime</b> is set to <b>ScheduleTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -164,14 +163,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC). Do not change the VPC of the instance when you migrate the instance across zones.</para>
+        /// <para>The virtual private cloud (VPC) ID. The VPC cannot be changed during instance migration and must remain the same.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter must be specified when the instance resides in a VPC.</description></item>
-        /// <item><description>If the instance runs SQL Server, you can change the VPC of the instance.</description></item>
+        /// <item><description>This parameter is required when you migrate a VPC-connected instance to a different zone.</description></item>
+        /// <item><description>If the instance engine is SQL Server, the VPC can be changed during instance migration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-xxxxxxx</para>
+        /// <para>vpc-****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -180,19 +179,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.</description></item>
-        /// <item><description>If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).</description></item>
+        /// <item><description>This parameter is required when you migrate a VPC-connected instance to a different zone. You can invoke DescribeVSwitches to query the vSwitches that have been created.</description></item>
+        /// <item><description>When you perform instance migration for an ApsaraDB RDS for PostgreSQL or SQL Server instance to a different zone with a secondary zone configured, you can specify multiple vSwitch IDs separated by commas (,), corresponding to the zones.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2pxxxxxxx</para>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The ID of the destination zone. You can call DescribeRegions to query the zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -203,9 +202,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone 1 of the instance.</para>
+        /// <para>The secondary zone 1.</para>
         /// <remarks>
-        /// <para> This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.</para>
+        /// <para>This parameter is required for instances that are not of the Basic Edition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,9 +215,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone 2 of the instance.</para>
+        /// <para>The secondary zone 2.</para>
         /// <remarks>
-        /// <para> You can specify this parameter only for instances that run RDS Enterprise Edition.</para>
+        /// <para>This parameter is applicable only to RDS Enterprise Edition instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ConfirmNotifyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to <b>0</b>, which indicates that the notification is confirmed by the system.</para>
+        /// <para>The Alibaba Cloud account ID of the user who confirms the notification. You can also set this parameter to <b>0</b>, which indicates that the notification is automatically confirmed by the system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? Confirmor { get; set; }
 
         /// <summary>
-        /// <para>The notification IDs.</para>
+        /// <para>The list of notification IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>

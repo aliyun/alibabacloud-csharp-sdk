@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySecurityIpsRequest : TeaModel {
         /// <summary>
-        /// <para>The attribute of the IP address whitelist. By default, this parameter is empty.</para>
-        /// <remarks>
-        /// <para>The IP address whitelists that have the hidden attribute are not displayed in the ApsaraDB RDS console. These IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</para>
-        /// </remarks>
+        /// <para>The attribute of the whitelist group.</para>
+        /// <list type="bullet">
+        /// <item><description>(Default) If you do not specify this parameter, the group is a common group.</description></item>
+        /// <item><description>If you set this parameter to <c>hidden</c>, the group is a system default group used by services such as DMS, DTS, and DAS. These groups are not displayed in the console. Deleting or modifying these groups may prevent DMS, DTS, and DAS from accessing ApsaraDB RDS. Proceed with caution.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>hidden</para>
@@ -23,9 +24,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceIPArrayAttribute { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP address whitelist that you want to modify. Default value: <b>Default</b>.</para>
+        /// <para>The name of the whitelist group to modify. Default value: Default. If the specified group does not exist, a new group is automatically created.</para>
         /// <remarks>
-        /// <para>A maximum of 200 IP address whitelists can be configured for each instance.</para>
+        /// <para>Each instance supports up to 200 whitelist groups.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceIPArrayName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The target instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +48,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The read-only instances to which you want to synchronize the IP address whitelist.</para>
+        /// <para>The list of read-only instances to which the whitelist is synchronized.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter applies only to ApsaraDB RDS for PostgreSQL instances.</description></item>
-        /// <item><description>If the instance is attached with a read-only instance, you can use this parameter to synchronize the IP address whitelist to the read-only instance. If the instance is attached with multiple read-only instances, separate the read-only instances with commas (,).</description></item>
-        /// <item><description>If the instance is not attached with a read-only instance, leave this parameter empty.</description></item>
+        /// <item><description>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances that have read-only instances.</description></item>
+        /// <item><description>Separate multiple read-only instances with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,13 +62,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FreshWhiteListReadins { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to modify the whitelist. Valid values:</para>
+        /// <para>The modification mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b>: Use the IP addresses and CIDR blocks that are specified in the <b>SecurityIps</b> parameter to overwrite the existing IP addresses and CIDR blocks in the IP address whitelist.</description></item>
-        /// <item><description><b>Append</b>: Add the IP addresses and CIDR blocks that are specified in the <b>SecurityIps</b> parameter to the IP address whitelist.</description></item>
-        /// <item><description><b>Delete</b>: Delete the IP addresses and CIDR blocks that are specified in the <b>SecurityIps</b> parameter from the IP address whitelist. You must retain at least one IP address or CIDR block.</description></item>
+        /// <item><description><b>Cover</b> (default): overwrites the original IP whitelist with the value of the <b>SecurityIps</b> parameter.</description></item>
+        /// <item><description><b>Append</b>: appends the IP addresses specified in the <b>SecurityIps</b> parameter to the original IP whitelist.</description></item>
+        /// <item><description><b>Delete</b>: removes the IP addresses specified in the <b>SecurityIps</b> parameter from the original IP whitelist. At least one IP address must be retained.</description></item>
         /// </list>
-        /// <para>Default value: <b>Cover</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cover</para>
@@ -82,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address type. The value is fixed as IPv4.</para>
+        /// <para>The type of IP address. The value is fixed as IPv4. IPv6 is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -92,14 +91,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityIPType { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:</para>
+        /// <para>The IP whitelist. Before you modify the IP whitelist, call the <a href="https://help.aliyun.com/document_detail/610518.html">DescribeDBInstanceIPArrayList</a> operation to query the existing IP whitelist information of the instance.</para>
+        /// <details>
+        /// <summary>Configuration rules</summary>
+        /// 
         /// <list type="bullet">
-        /// <item><description>IP addresses, such as 10.23.XX.XX.</description></item>
-        /// <item><description>CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</description></item>
+        /// <item><description><para>IP addresses (such as 10.23.XX.XX) and CIDR blocks (such as 10.23.XX.XX/24) are supported.</para>
+        /// </description></item>
+        /// <item><description><para>Separate multiple IP addresses or CIDR blocks with commas (,). No spaces are allowed before or after the commas.</para>
+        /// </description></item>
+        /// <item><description><para>Each instance can contain up to 1,000 IP addresses or CIDR blocks. If you have a large number of IP addresses, merge them into CIDR blocks, such as 10.23.XX.XX/24.</para>
+        /// </details></description></item>
         /// </list>
-        /// <remarks>
-        /// <para>A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,24 +113,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityIps { get; set; }
 
         /// <summary>
-        /// <para>The network type of the IP address whitelist. Valid values:</para>
+        /// <para>The network type of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network in enhanced whitelist mode</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC) network type in enhanced whitelist mode.</description></item>
-        /// <item><description><b>MIX</b>: standard whitelist mode</description></item>
+        /// <item><description><b>MIX</b> (default): general mode.</description></item>
+        /// <item><description><b>Classic</b>: the classic network in enhanced whitelist mode.</description></item>
+        /// <item><description><b>VPC</b>: the virtual private cloud (VPC) in enhanced whitelist mode.</description></item>
         /// </list>
-        /// <para>Default value: <b>MIX</b>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.</para>
-        /// </description></item>
-        /// <item><description><para>If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.</para>
-        /// </description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL instances with cloud disks use only the general mode (MIX). If you set this parameter to another mode, the value is automatically converted to MIX.</description></item>
+        /// <item><description>Only ApsaraDB RDS for MySQL 5.1, 5.5, 5.6, and 5.7 instances with Premium Local SSDs and ApsaraDB RDS for PostgreSQL 9.4 and 10 instances with Premium Local SSDs support the enhanced whitelist mode.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Classic</para>
+        /// <para>MIX</para>
         /// </summary>
         [NameInMap("WhitelistNetworkType")]
         [Validation(Required=false)]

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListImportTasksResponseBody : TeaModel {
+        /// <summary>
+        /// <para>None.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListImportTasksResponseBodyItems> Items { get; set; }
         public class ListImportTasksResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The creation time in UTC. The time follows the format of YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
+            /// <para>The kernel version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbVersion { get; set; }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Importing</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The instance ID of the target instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-bp*****</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>342900000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? TaskId { get; set; }
 
             /// <summary>
+            /// <para>The task name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskName { get; set; }
 
             /// <summary>
+            /// <para>The task type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>import</para>
             /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
+        /// <remarks>
+        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are not available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>

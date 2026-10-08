@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountMaskingPrivilegeRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Database name</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDB</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>Permission expiration time in UTC format. (Required only for fullAccess permission.)</para>
+        /// <para>The permission expiration time in UTC format. This parameter is required only for the fullAccess privilege.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-22T02:01:20Z</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Permission type (noneAccess, restrictedAccess, fullAccess)</para>
+        /// <para>The privilege type. Valid values: noneAccess, restrictedAccess, and fullAccess.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Privilege { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Account name. Multiple accounts are supported and must be separated by commas.</para>
+        /// <para>The account name. You can specify multiple accounts separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

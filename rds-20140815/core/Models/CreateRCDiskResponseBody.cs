@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The cloud disk ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rcd-2zegrjtnkp6dqbe1egca</para>
+        /// <para>rcd-2zegrjtnkp6dqbe1****</para>
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]

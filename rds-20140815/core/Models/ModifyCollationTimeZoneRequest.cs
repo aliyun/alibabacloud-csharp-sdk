@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCollationTimeZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The character set collation of the instance. By default, the system does not modify the character set collation of the instance. Valid values:</para>
+        /// <para>The system character set collation. By default, the value is not modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Chinese_PRC_CI_AS</b></description></item>
         /// <item><description><b>Chinese_PRC_CS_AS</b></description></item>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The default character set collation of the instance is <b>Chinese_PRC_CI_AS</b>.</description></item>
-        /// <item><description>You must specify one of the <b>Collation</b> and <b>Timezone</b> parameters.</description></item>
+        /// <item><description>You must specify at least one of <b>Collation</b> and <b>Timezone</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Latin1_General_CI_AS</para>
+        /// <para>Chinese_PRC_CS_AS</para>
         /// </summary>
         [NameInMap("Collation")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-bp15qi0nd1u27****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the instance. By default, the system does not modify the time zone.</para>
+        /// <para>The system time zone. By default, the value is not modified.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The default time zone of the instance is <b>China Standard Time</b>.</description></item>
-        /// <item><description>You must specify one of the <b>Collation</b> and <b>Timezone</b> parameters.</description></item>
+        /// <item><description>You must specify at least one of <b>Collation</b> and <b>Timezone</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 

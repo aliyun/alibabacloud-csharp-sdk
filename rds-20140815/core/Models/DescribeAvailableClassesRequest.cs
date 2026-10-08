@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableClassesRequest : TeaModel {
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Regular instance</para>
+        /// <item><description><para>Regular instances</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-        /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL</description></item>
-        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: high-availability series</description></item>
+        /// <item><description><b>cluster</b>: Cluster Edition (applicable only to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>AlwaysOn</b>: SQL Server Cluster Edition</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Serverless instance</para>
+        /// <item><description><para>Serverless instances</para>
         /// <list type="bullet">
-        /// <item><description><b>serverless_basic</b>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</description></item>
-        /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for ApsaraDB RDS for MySQL.</description></item>
-        /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</description></item>
+        /// <item><description><b>serverless_basic</b>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_standard</b>: Serverless high availability series (applicable only to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_ha</b>: SQL Server Serverless high availability series</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you create a serverless instance, you must specify this parameter.</para>
+        /// <para>This parameter is required when you create a serverless instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -44,19 +44,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds</b>: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rords</b>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).</description></item>
-        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_serverless_public_cn</b>: The instance is a serverless instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds_serverless_public_intl</b>: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance (China site)</description></item>
+        /// <item><description><b>rds</b>: subscription primary instance (China site)</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance (China site)</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance (China site)</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance (international site)</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance (international site)</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance (international site)</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance (international site)</description></item>
+        /// <item><description><b>rds_serverless_public_cn</b>: serverless (China site)</description></item>
+        /// <item><description><b>rds_serverless_public_intl</b>: serverless (international site)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you want to query the price of a read-only instance, you must specify this parameter.</para>
+        /// <para>This parameter is required when you query a read-only instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,23 +70,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) Enterprise SSD (ESSD)</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>general_essd</b>: premium performance disk</description></item>
+        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd0</b>: PL0 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Serverless instances use only PL1 ESSDs. If you want to create a serverless instance, you must set this parameter to <b>cloud_essd</b>.</para>
+        /// <para>Serverless instances support only PL1 ESSD cloud disks. Set this parameter to <b>cloud_essd</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The database engine that is run by the instance. Valid values:</para>
+        /// <para>The database engine of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>SQLServer</b></description></item>
@@ -117,19 +119,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine version of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Regular instance</para>
+        /// <item><description><para>Regular instances</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if you set Engine to MySQL: <b>5.5, 5.6, 5.7, and 8.0</b></description></item>
-        /// <item><description>Valid values if you set Engine to SQLServer: <b>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</b></description></item>
-        /// <item><description>Valid values if you set Engine to PostgreSQL: <b>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</b></description></item>
-        /// <item><description>Valid value when you set Engine to MariaDB: <b>10.3</b></description></item>
+        /// <item><description>MySQL: <b>5.5, 5.6, 5.7, 8.0</b></description></item>
+        /// <item><description>SQL Server: <b>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, 2019_ent</b></description></item>
+        /// <item><description>PostgreSQL: <b>10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0</b></description></item>
+        /// <item><description>MariaDB: <b>10.3</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Serverless instance</para>
+        /// <item><description><para>Serverless instances</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if you set Engine to MySQL: <b>5.7</b> and <b>8.0</b></description></item>
-        /// <item><description>Valid values if you set Engine to SQLServer: <b>2016_std_sl</b>, <b>2017_std_sl</b>, and <b>2019_std_sl</b></description></item>
-        /// <item><description>Valid value if you set Engine to PostgreSQL: <b>14.0</b></description></item>
+        /// <item><description>MySQL: <b>5.7</b>, <b>8.0</b></description></item>
+        /// <item><description>SQL Server: <b>2016_std_sl</b>, <b>2017_std_sl</b>, <b>2019_std_sl</b></description></item>
+        /// <item><description>PostgreSQL: <b>14.0, 15.0, 16.0, 17.0</b></description></item>
         /// </list>
         /// <remarks>
         /// <para>ApsaraDB RDS for MariaDB does not support serverless instances.</para>
@@ -164,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The type of order. Set the value to <b>BUY</b></para>
+        /// <para>The order type. The only valid value is <b>BUY</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -174,7 +176,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</para>
+        /// <para>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -189,14 +191,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID of the instance.</para>
+        /// <para>The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID.</para>
         /// <remarks>
-        /// <para> If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns <c>cn-hangzhou-MAZ9(g,h)</c>, you can set this parameter to <c>cn-hangzhou-g</c> or <c>cn-hangzhou-h</c>.</para>
+        /// <para>If DescribeDBInstanceAttribute returns a multi-zone value (such as <c>cn-hangzhou-MAZ9(g,h)</c>), specify a single zone. Example: <c>cn-hangzhou-g</c> or <c>cn-hangzhou-j</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-h</para>
+        /// <para>cn-hangzhou-j</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -13,27 +13,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The node ID, which can be used to restart a specified node. You can call the <a href="https://help.aliyun.com/document_detail/610434.html">DescribeDBInstanceHAConfig</a> operation to obtain the node ID.</para>
+        /// <para>The unique ID of the node. This parameter is used to restart a specified node. You can call DescribeDBInstanceHAConfig to query the node ID.</para>
         /// <remarks>
-        /// <para>: The secondary instance restart feature is supported for RDS instances that run SQL Server EE on RDS Cluster Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2411880.html">Restart a secondary database</a>.</para>
+        /// <para>Currently, only ApsaraDB RDS for SQL Server instances that run Enterprise Edition with the cluster architecture support restarting secondary nodes. For more information, see <a href="https://help.aliyun.com/document_detail/2411880.html">Restart a secondary node</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of distributed transaction whitelists.</para>
+        /// <para>The number of entries in the distributed transaction whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

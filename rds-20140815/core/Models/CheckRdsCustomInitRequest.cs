@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account.</para>
+        /// <para>The name of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The new password.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value must be 8 to 32 characters in length.</description></item>
-        /// <item><description>The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The following special characters are supported: ! @ # $ &amp; % ^ \* ( ) _ + - =</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include <c>!@#$&amp;%^*()_+-=</c></description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

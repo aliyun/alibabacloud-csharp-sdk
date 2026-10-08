@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyActionEventPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the event history feature. Valid values:</para>
+        /// <para>Specifies whether to enable the historical events feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>True</b></description></item>
         /// <item><description><b>False</b></description></item>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

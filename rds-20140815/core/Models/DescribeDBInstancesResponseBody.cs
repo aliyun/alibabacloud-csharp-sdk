@@ -270,19 +270,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with <b>NextToken</b> specified.</para>
+        /// <para>The pagination token. If the results are displayed on multiple pages, pass this value in the <b>NextToken</b> parameter in the next request to display the next page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>o7PORW5o2TJg**********</para>
+        /// <para>o7PORW5o2TJg****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// <remarks>
-        /// <para>If you specify <b>MaxResults</b> or <b>NextToken</b>, only the value <b>1</b> is returned. You can ignore the value 1.</para>
+        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, only <b>1</b> is returned for this parameter. You can ignore this return value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of instances on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -313,9 +313,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// <remarks>
-        /// <para>If you specify <b>MaxResults</b> or <b>NextToken</b>, only the number of entries on the current page is returned. You can ignore the number.</para>
+        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, only the number of records on the current page is returned for this parameter. You can ignore this return value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

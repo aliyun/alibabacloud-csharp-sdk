@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListUserBackupFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the full backup file.</para>
+        /// <para>The user backup ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b-kwwvr7v8t7of********</para>
+        /// <para>b-kwwvr7v8t7of****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The description of the full backup file.</para>
+        /// <para>The comment of the user backup to query.</para>
         /// <remarks>
-        /// <para>The system implements a fuzzy match based on the value of this parameter.</para>
+        /// <para>You can enter part of the comment for fuzzy matching.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the access URL after you upload objects</a>.</para>
+        /// <para>The OSS download URL of the user backup file. For information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">How do I obtain the URL of an uploaded object?</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>https://<b><b><b>.oss-ap-</b></b></b>**.aliyuncs.com/backup_qp.xb</para>
+        /// <para>https://<b><b>.oss-ap-</b></b>.aliyuncs.com/backup_qp.xb</para>
         /// </summary>
         [NameInMap("OssUrl")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -76,13 +76,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the full backup file. Valid values:</para>
+        /// <para>The status of the user backup file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Importing</b>: The full backup file is being imported.</description></item>
-        /// <item><description><b>Failed</b>: The full backup file fails to be imported.</description></item>
-        /// <item><description><b>CheckSucccess</b>: The full backup file passes the check.</description></item>
-        /// <item><description><b>BackupSuccess</b>: The full backup file is imported.</description></item>
-        /// <item><description><b>Deleted</b>: The full backup file is deleted.</description></item>
+        /// <item><description><b>Importing</b>: The backup is being imported.</description></item>
+        /// <item><description><b>Failed</b>: The import failed.</description></item>
+        /// <item><description><b>CheckSuccess</b>: The verification passed.</description></item>
+        /// <item><description><b>BackupSuccess</b>: The import succeeded.</description></item>
+        /// <item><description><b>Deleted</b>: The backup is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the full backup file.</para>
+        /// <para>The tag information used to query the user backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1:value1</para>

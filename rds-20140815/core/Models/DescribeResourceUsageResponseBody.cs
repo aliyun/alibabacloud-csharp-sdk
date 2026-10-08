@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The storage that is occupied by archived backup files on the instance. Unit: bytes.</para>
+        /// <para>The storage consumed by archived backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ArchiveBackupSize { get; set; }
 
         /// <summary>
-        /// <para>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</para>
+        /// <para>The total storage consumed by data backups, excluding archived backups. Unit: bytes.</para>
+        /// <remarks>
+        /// <para>For <b>SQL Server</b> instances, this value indicates the total size of physical backups and snapshot backups.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>94324736</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupDataSize { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity that is used to store the snapshot backup files of the <b>RDS for SQL Server</b> instance. Unit: bytes. The value 0 indicates that no snapshot backup files are stored for the instance.</para>
+        /// <para>The storage consumed by snapshot backups for <b>SQL Server instances</b>. Unit: bytes. A value of 0 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEcsSnapshotSize { get; set; }
 
         /// <summary>
-        /// <para>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</para>
+        /// <para>The total storage consumed by log backups, excluding archived backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45145563</para>
@@ -50,7 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupLogSize { get; set; }
 
         /// <summary>
-        /// <para>The size of data backup files that are stored in Object Storage Service (OSS) buckets. Unit: bytes. The value 0 indicates no data backup files are stored in OSS buckets.</para>
+        /// <para>The size of data files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</para>
+        /// <remarks>
+        /// <para>For <b>SQL Server</b> instances, this value indicates the storage consumed by physical backups.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8821760</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupOssDataSize { get; set; }
 
         /// <summary>
-        /// <para>The size of log backup files that are stored in OSS buckets. Unit: bytes. The value 0 indicates no log backup files are stored in OSS buckets.</para>
+        /// <para>The size of log files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44180999</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupOssLogSize { get; set; }
 
         /// <summary>
-        /// <para>The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.</para>
+        /// <para>The storage consumed by backups (data backups + log backups). Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53002759</para>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The storage that is used to store cold backup files. Unit: bytes. The value -1 indicates that no cold backup files are stored.</para>
+        /// <para>The storage consumed by cold backups. Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2337275904</para>
@@ -93,14 +99,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage that is used to store data files. Unit: bytes. The value -1 indicates that no data files are stored.</para>
+        /// <para>The storage consumed by data files. Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1292094741</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.</para>
+        /// <para>The used storage (DataSize + LogSize). Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2337275904</para>
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DiskUsed { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The storage that is used to store log files. Unit: bytes. The value -1 indicates that no log files are stored.</para>
+        /// <para>The storage consumed by log files. Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1045181163</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? LogSize { get; set; }
 
         /// <summary>
-        /// <para>The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</para>
+        /// <para>The billable storage consumed by backups after the free quota is deducted. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The storage that is occupied to execute SQL statements on the instance. Unit: bytes. The value -1 indicates that no SQL statements are executed.</para>
+        /// <para>The storage consumed by SQL data. Unit: bytes. A value of -1 indicates no data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>315052751</para>

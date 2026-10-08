@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -22,17 +22,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds</b> (default): The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rords</b>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).</description></item>
-        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance. This value is available at the international site (alibabacloud.com).</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance (China site)</description></item>
+        /// <item><description><b>rds</b> (default): subscription primary instance (China site)</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance (China site)</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance (China site)</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance (international site)</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance (international site)</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance (international site)</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance (international site)</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you want to query the price of a read-only instance, you must specify this parameter.</para>
+        /// <para>This parameter is required when you query the price of a read-only instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,34 +43,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mysql.s1.small</para>
+        /// <para>mysql.x2.medium.xc</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to change the specifications or the instance that you want to renew.</para>
+        /// <para>Instance ID of the instance for which you want to change the specifications or renew.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you want to query the price of a specification change order or a renewal order, you must specify this parameter.</description></item>
-        /// <item><description>If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</description></item>
+        /// <item><description>This parameter is required when you query the price for a specification change or renewal.</description></item>
+        /// <item><description>If the instance is a read-only instance, specify instance ID of its primary instance.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-*****</para>
+        /// <para>rm-****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>The instance storage space. Unit: GB. The value increases in increments of 5 GB. For more information about the value range, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the new instance. Valid values:</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>general_essd</b>: premium Enterprise SSD (ESSD)</description></item>
-        /// <item><description><b>local_ssd</b>: premium local SSD</description></item>
+        /// <item><description><b>general_essd</b>: Premium ESSD</description></item>
+        /// <item><description><b>local_ssd</b>: Premium Local SSDs</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) ESSD</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The information about the node.</para>
+        /// <para>The node information.</para>
         /// <remarks>
-        /// <para> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</para>
+        /// <para>This parameter is used for ApsaraDB RDS for MySQL instances in the cluster edition.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>SQLServer</b></description></item>
@@ -129,27 +129,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if you set Engine to <b>MySQL</b>: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
-        /// <item><description>Valid values if you set Engine to <b>SQL Server</b>: <b>08r2_ent_ha</b>(cloud disks, discontinued), <b>2008r2</b>(high-performance local disks, discontinued), <b>2012</b> (SQL Server EE Basic)<b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
-        /// <item><description>Valid values if you set Engine to <b>PostgreSQL</b>: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, and <b>15.0</b></description></item>
-        /// <item><description>Valid value if you set Engine to <b>MariaDB</b>: <b>10.3</b></description></item>
+        /// <item><description><b>MySQL</b>: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, <b>8.0</b></description></item>
+        /// <item><description><b>SQL Server</b>: <b>08r2_ent_ha</b> (cloud disk, discontinued), <b>2008r2</b> (Premium Local SSDs, discontinued), <b>2012</b> (Enterprise Edition Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, <b>2022_web</b></description></item>
+        /// <item><description><b>PostgreSQL</b>: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b></description></item>
+        /// <item><description><b>MariaDB</b>: <b>10.3</b></description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The database engine version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b>: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, <b>8.0</b></description></item>
+        /// <item><description><b>SQL Server</b>: <b>08r2_ent_ha</b> (cloud disk, discontinued), <b>2008r2</b> (Premium Local SSDs, discontinued), <b>2012</b> (Enterprise Edition Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, <b>2022_web</b></description></item>
+        /// <item><description><b>PostgreSQL</b>: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b></description></item>
+        /// <item><description><b>MariaDB</b>: <b>10.3</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> The following information describes the valid values when you set Engine to SQLServer: <c>_ent</c> specifies SQL Server EE on RDS Cluster Edition, <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</para>
+        /// <para>For SQL Server instances, <c>_ent</c> indicates Enterprise Edition (Cluster), <c>_ent_ha</c> indicates Enterprise Edition, <c>_std_ha</c> indicates Standard Edition, and <c>_web</c> indicates Web Edition.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5.5</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: primary instance</description></item>
         /// <item><description><b>3</b>: read-only instance</description></item>
@@ -165,10 +172,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b></description></item>
-        /// <item><description><b>RENEW</b></description></item>
-        /// <item><description><b>UPGRADE</b></description></item>
-        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// <item><description><b>BUY</b>: purchase</description></item>
+        /// <item><description><b>RENEW</b>: renewal</description></item>
+        /// <item><description><b>UPGRADE</b>: upgrade</description></item>
+        /// <item><description><b>DOWNGRADE</b>: downgrade</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -201,7 +208,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that you want to purchase. Valid values: <b>0 to 30</b>.</para>
+        /// <para>The number of instances to purchase. Valid values: <b>0 to 30</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -212,7 +219,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -230,9 +237,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The settings of the serverless instance.</para>
+        /// <para>The settings of the serverless ApsaraDB RDS instance.</para>
         /// <remarks>
-        /// <para>ApsaraDB RDS for MariaDB does not support serverless instances.</para>
+        /// <para>MariaDB does not support serverless instances.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ServerlessConfig")]
@@ -240,10 +247,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription instance. This parameter is required when <b>CommodityCode</b> is set to <b>rds</b>, <b>rds_rordspre_public_cn</b>, <b>rds_intl</b>, or <b>rds_rordspre_public_intl</b>. Valid values:</para>
+        /// <para>The subscription type. This parameter is required when <b>CommodityCode</b> is set to <b>rds</b>, <b>rds_rordspre_public_cn</b>, <b>rds_intl</b>, or <b>rds_rordspre_public_intl</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -254,10 +261,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TimeType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance.</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1 to 100</b>.</description></item>
-        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1 to 999</b>.</description></item>
+        /// <item><description>If <b>TimeType</b> is set to <b>Year</b>, the value of UsedTime ranges from <b>1 to 100</b>.</description></item>
+        /// <item><description>If <b>TimeType</b> is set to <b>Month</b>, the value of UsedTime ranges from <b>1 to 999</b>.</description></item>
         /// </list>
         /// <para>Default value: <b>1</b>.</para>
         /// 
@@ -269,9 +276,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the primary node. You can call DescribeRegions to query the most recent zone list.</para>
         /// <remarks>
-        /// <para> If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.</para>
+        /// <para>If you specify a VPC and a vSwitch, this parameter is required to match the zone of the specified vSwitch.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

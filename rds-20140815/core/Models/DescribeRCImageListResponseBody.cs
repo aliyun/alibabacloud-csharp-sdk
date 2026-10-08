@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCImageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the images.</para>
+        /// <para>The image information.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<DescribeRCImageListResponseBodyImages> Images { get; set; }
         public class DescribeRCImageListResponseBodyImages : TeaModel {
             /// <summary>
-            /// <para>The image architecture. Valid values:</para>
+            /// <para>The system architecture of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>x86_64</description></item>
-            /// <item><description>arm64</description></item>
+            /// <item><description>x86_64.</description></item>
+            /// <item><description>arm64.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,18 +50,43 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The mapping between cloud disks and snapshots in the image.</para>
+            /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> DiskDeviceMappings { get; set; }
             public class DescribeRCImageListResponseBodyImagesDiskDeviceMappings : TeaModel {
+                /// <summary>
+                /// <para>The device information of the cloud disk, such as <c>/dev/xvdb</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/dev/xvdb</para>
+                /// </summary>
                 [NameInMap("Device")]
                 [Validation(Required=false)]
                 public string Device { get; set; }
 
+                /// <summary>
+                /// <para>The size of the cloud disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>40</para>
+                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
+                /// <summary>
+                /// <para>The type of the cloud disk.</para>
+                /// <list type="bullet">
+                /// <item><description><b>system</b>: System cloud disk.</description></item>
+                /// <item><description><b>data</b>: Data cloud disk.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -99,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ImageVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image is a public image. Public images include public images provided by Alibaba Cloud and custom images published as community images.</para>
+            /// <para>Indicates whether the image is a public image. Public images include Alibaba Cloud-provided public images and custom images that you have published as community images.</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: The image is a public image.</description></item>
             /// <item><description><b>false</b>: The image is not a public image.</description></item>
@@ -112,19 +137,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public bool? IsPublic { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the image supports RDS Custom instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsSupportRdsCustom")]
             [Validation(Required=false)]
             public bool? IsSupportRdsCustom { get; set; }
 
             /// <summary>
-            /// <para>The display name of the operating system in Chinese.</para>
+            /// <para>The Chinese display name of the operating system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud Linux  2.1903 LTS 64位 快速启动版</para>
             /// </summary>
             [NameInMap("OSName")]
             [Validation(Required=false)]
             public string OSName { get; set; }
 
             /// <summary>
-            /// <para>The display name of the operating system in English.</para>
+            /// <para>The English display name of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud Linux  2.1903 LTS 64 bit Quick Boot</para>
@@ -136,8 +174,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>linux</b></description></item>
+            /// <item><description><b>windows</b>.</description></item>
+            /// <item><description><b>linux</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,12 +185,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string OSType { get; set; }
 
+            /// <summary>
+            /// <para>The operating system platform.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Aliyun</para>
+            /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The image size. Unit: GiB.</para>
+            /// <para>The size of the image. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -162,12 +206,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The image status. Valid values:</para>
+            /// <para>The status of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unavailable</b></description></item>
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>CreateFailed</b></description></item>
+            /// <item><description><b>UnAvailable</b>: Unavailable.</description></item>
+            /// <item><description><b>Available</b>: Available.</description></item>
+            /// <item><description><b>Creating</b>: Being created.</description></item>
+            /// <item><description><b>CreateFailed</b>: Creation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,10 +222,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image is used by the RDS Custom instance. Valid values:</para>
+            /// <para>Indicates whether the image is used by RDS Custom instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>instance</b>: The image is used to create one or more RDS Custom instances.</description></item>
-            /// <item><description><b>none</b>: The image is not used to create RDS Custom instances.</description></item>
+            /// <item><description><b>instance</b>: One or more RDS Custom instances have been created.</description></item>
+            /// <item><description><b>none</b>: No RDS Custom instances have been created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,7 +248,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

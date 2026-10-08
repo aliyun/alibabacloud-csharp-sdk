@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReceiveDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the disaster recovery instance after the switchover.</para>
+        /// <para>The instance ID of the disaster recovery instance after the switchover is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-tr2whku*****</para>

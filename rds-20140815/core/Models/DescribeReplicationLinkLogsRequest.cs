@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReplicationLinkLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You must set this parameter to the ID of the task that you create by calling the <b>CreateReplicationLink</b> operation for the disaster recovery instance.</para>
+        /// <para>The task ID. The task ID returned when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8413252</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name. You must set this parameter to the name of the task that you create by calling the <b>CreateReplicationLink</b> operation for the disaster recovery instance.</para>
+        /// <para>The task name. The task name returned when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -61,15 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>create</b>: creates a synchronization link.</description></item>
-        /// <item><description><b>create-dryrun</b>: performs a precheck before a synchronization link is created.</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>create: creates a replication link.</description></item>
-        /// <item><description>create-dryrun: performs a precheck before a replication link is created.</description></item>
+        /// <item><description><b>create</b>: Create a replication link.</description></item>
+        /// <item><description><b>create-dryrun</b>: Dry run for creating a replication link.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The version of the proxy instance.</para>
+        /// <para>The current minor version of the proxy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.13.11</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceCurrentMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The latest version that is available for the proxy instance.</para>
+        /// <para>The latest minor version of the proxy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.13.12</para>
@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceLatestMinorVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2.25.9</para>
+        /// </summary>
         [NameInMap("DBProxyInstanceMinorVersions")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions DBProxyInstanceMinorVersions { get; set; }
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of proxies that are enabled on the instance.</para>
+        /// <para>The number of enabled proxy instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -128,9 +132,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBProxyInstanceNum { get; set; }
 
         /// <summary>
-        /// <para>This parameter is available only for ApsaraDB RDS for PostgreSQL instances. The specifications of the proxy instance that is enabled.</para>
-        /// <para>Format: <c>Number of cores/Memory capacity</c>.</para>
-        /// <para>For example, a value of 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</para>
+        /// <para>This parameter is supported only for ApsaraDB RDS for PostgreSQL. The actual specification size of the proxy instance.</para>
+        /// <para>Format: <c>CPU/Memory</c>.</para>
+        /// <para>Example: 4/8 indicates 4 CPU cores and 8 GB of memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4/8</para>
@@ -140,12 +144,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the proxy instance.</para>
+        /// <para>The running status of the proxy instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceClassChanging: The specifications of the proxy instance are being changed.</description></item>
-        /// <item><description>Creating: The proxy instance is being created.</description></item>
-        /// <item><description>Running: The proxy instance is running.</description></item>
-        /// <item><description>Deleting: The proxy instance is being deleted.</description></item>
+        /// <item><description>DBInstanceClassChanging: The specification is being changed.</description></item>
+        /// <item><description>Creating: The instance is being created.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Deleting: The instance is being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,14 +160,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the database proxy that is enabled on the instance. Valid values:</para>
+        /// <para>The type of the proxy service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: shared database proxy</description></item>
         /// <item><description>2: dedicated database proxy</description></item>
         /// <item><description>3: general-purpose database proxy</description></item>
         /// </list>
         /// <remarks>
-        /// <para> ApsaraDB RDS for PostgreSQL does not support shared database proxies.</para>
+        /// <para>ApsaraDB RDS for PostgreSQL does not support shared database proxies.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -174,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>An internal parameter. You do not need to specify this parameter.</para>
+        /// <para>An internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -212,11 +216,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The status of persistence connections. Valid values:</para>
+        /// <para>The persistent connection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
-        /// <item><description><b>Unsupported</b></description></item>
+        /// <item><description><b>Enabled</b>: Persistent connections are enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Persistent connections are disabled.</description></item>
+        /// <item><description><b>Unsupported</b>: The instance does not support persistent connections.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,7 +231,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyPersistentConnectionStatus { get; set; }
 
         /// <summary>
-        /// <para>The status of the database proxy.</para>
+        /// <para>The status of the database proxy feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Shutdown: disabled</description></item>
         /// <item><description>Startup: enabled</description></item>
@@ -269,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>909A69EE-71C8-4417-A0B9-FF085407E1E3</para>
@@ -279,10 +283,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

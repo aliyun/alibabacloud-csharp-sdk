@@ -10,17 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The resource status. Valid values: <b>importing</b>, failed, checksuccess, and deleted.</para>
+        /// <para>The event status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Archived</b>: archived.</description></item>
+        /// <item><description><b>UnArchived</b>: not archived.</description></item>
+        /// <item><description><b>All</b>: all.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>deleted</para>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("ArchiveStatus")]
         [Validation(Required=false)]
         public string ArchiveStatus { get; set; }
 
         /// <summary>
-        /// <para>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+        /// <para>The system event categorization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Exception</b>: abnormal event.</description></item>
+        /// <item><description><b>Optimize</b>: optimization events.</description></item>
+        /// <item><description><b>Notification</b>: notification event.</description></item>
+        /// <item><description><b>Maintenance</b>: scheduled maintenance event.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Exception</para>
@@ -40,51 +51,58 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The event level. Valid values: <em><b>high</b></em>, <b>medium</b>, and <b>low</b>.</para>
+        /// <para>The event level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INFO</b>: notification.</description></item>
+        /// <item><description><b>WARN</b>: warning.</description></item>
+        /// <item><description><b>CRITICAL</b>: critical.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>high</para>
+        /// <para>INFO</para>
         /// </summary>
         [NameInMap("EventLevel")]
         [Validation(Required=false)]
         public string EventLevel { get; set; }
 
         /// <summary>
-        /// <para>The status of the exception. Valid values:</para>
+        /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: pending</description></item>
-        /// <item><description>2: ignored</description></item>
-        /// <item><description>4: confirmed</description></item>
-        /// <item><description>8: marked as false positive</description></item>
-        /// <item><description>16: handling</description></item>
-        /// <item><description>32: handled</description></item>
-        /// <item><description>64: expired</description></item>
+        /// <item><description><b>Inquiring</b>: inquiring.</description></item>
+        /// <item><description><b>Scheduled</b>: scheduled.</description></item>
+        /// <item><description><b>Running</b>: running.</description></item>
+        /// <item><description><b>Succeed</b>: completed.</description></item>
+        /// <item><description><b>Failed</b>: failed.</description></item>
+        /// <item><description><b>Canceled</b>: canceled.<remarks>
+        /// <para>To query multiple statuses, separate them with commas (,).</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>Scheduled</para>
         /// </summary>
         [NameInMap("EventStatus")]
         [Validation(Required=false)]
         public string EventStatus { get; set; }
 
         /// <summary>
-        /// <para>The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</para>
+        /// <para>The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
-        /// <item><description>SystemFailure.Delete: The instance is released due to an instance creation failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
-        /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
-        /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.</para>
+        /// <item><description><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</description></item>
+        /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance is redeployed due to system maintenance.</description></item>
+        /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system error.</description></item>
+        /// <item><description><b>SystemFailure.Redeploy</b>: The instance is redeployed due to a system error.</description></item>
+        /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to an instance creation failure.</description></item>
+        /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance error.</description></item>
+        /// <item><description><b>InstanceExpiration.Stop</b>: The instance is stopped due to subscription expiration.</description></item>
+        /// <item><description><b>InstanceExpiration.Delete</b>: The instance is released due to subscription expiration.</description></item>
+        /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
+        /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.<remarks>
+        /// <para>The value of this parameter can only be an instance system event, not a cloud disk system event.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SystemFailure.Reboot</para>
@@ -94,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.</para>
+        /// <para>The beginning of the time range for the task start time. Tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC +0</c>. The earliest supported time is 30 days before the current time. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days before the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ApsaraDB RDS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf62br2491p5l****</para>
@@ -115,7 +133,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -125,7 +143,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 30.</para>
+        /// <para>The number of entries per page. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -155,10 +173,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Instance</b>: instance resource.</description></item>
+        /// <item><description><b>Host</b>: host resource.</description></item>
+        /// <item><description><b>User</b>: user resource.<remarks>
+        /// <para>If this parameter is not specified, all resource types are queried.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>INSTANCE</para>
+        /// <para>Instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -169,7 +195,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The task ID. This value is used to query the data of a specific task.</para>
+        /// <para>The task ID. Specify this parameter to retrieve data for a specific task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>241535739</para>
@@ -179,7 +205,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range for the task start time. Tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC +0</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

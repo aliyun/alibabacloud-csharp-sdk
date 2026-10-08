@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically create database proxies. Valid values:</para>
+        /// <para>Specifies whether to automatically create a database proxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatically creates database proxies. By default, general-purpose database proxies are created.</description></item>
-        /// <item><description><b>false</b>: does not automatically create database proxies.</description></item>
+        /// <item><description><para><b>true</b>: enables automatic creation. By default, a general-purpose database proxy is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not enable automatic creation of a database proxy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,13 +26,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoCreateProxy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
-        /// <ol>
-        /// <item><description><b>true</b>: automatically completes the payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
-        /// </ol>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: generates an order without charging your account.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>The default value is true. If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,15 +43,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter is required only for subscription instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature.</description></item>
-        /// <item><description><b>false</b>: disables the feature.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set the Period parameter to Month, the auto-renewal cycle is one month.</description></item>
-        /// <item><description>If you set the Period parameter to Year, the auto-renewal cycle is one year.</description></item>
+        /// <item><description>If you purchase the instance on a monthly basis, the auto-renewal cycle is one month.</description></item>
+        /// <item><description>If you purchase the instance on a yearly basis, the auto-renewal cycle is one year.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -61,10 +63,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <para>Specifies whether to use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: uses a coupon.</description></item>
-        /// <item><description><b>false</b> (default): does not use a coupon.</description></item>
+        /// <item><description><b>true</b>: uses coupons.</description></item>
+        /// <item><description><b>false</b> (default): does not use coupons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,18 +76,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
-        /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+        /// <para>Specifies whether to enable the I/O performance burst feature for <a href="https://help.aliyun.com/document_detail/2340501.html">Premium ESSDs</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b>: disables the feature.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -95,14 +95,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b> (default): RDS High-availability Edition</description></item>
-        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition (default)</description></item>
+        /// <item><description><b>AlwaysOn</b>: Cluster Edition</description></item>
         /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;* <b>Finance</b>: Finance Edition</para>
         /// <remarks>
-        /// <para> The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to <b>Basic</b>.</para>
+        /// <para>The read-only instances of ApsaraDB RDS for PostgreSQL cloud disk instances use the Basic Edition. You must set this parameter to <b>Basic</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,36 +123,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("CustomExtraInfo")]
         [Validation(Required=false)]
         public string CustomExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that the specifications of the read-only instance be equal to or higher than those of the primary instance. Otherwise, the read-only instance may experience high latency and heavy loads.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mys2.small</para>
+        /// <para>mysqlro.n2.small.1c</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter</para>
+        /// <para>The instance description. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</para>
         /// <remarks>
-        /// <para>The value cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></para>
+        /// <para>The description cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Test read-only instance</para>
+        /// <para>testReadOnly</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The primary instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <b>Storage capacity</b> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. This value must be a multiple of 5. Unit: GB.</para>
+        /// <para>Instance storage capacity. Instance storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <b>Storage capacity</b> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. The value is incremented in units of 5 GB. Unit: GB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -175,16 +182,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSDs</description></item>
+        /// <item><description><b>local_ssd</b>: Premium Local SSDs</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSDs</description></item>
-        /// <item><description><b>cloud_essd</b>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</description></item>
-        /// <item><description><b>cloud_essd2</b>: ESSDs of PL2</description></item>
-        /// <item><description><b>cloud_essd3</b>: ESSDs of PL3</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSDs</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSDs</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSDs</description></item>
+        /// <item><description><b>general_essd</b>: Premium ESSDs</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If the primary instance runs MySQL with local disks, you must set this parameter to <b>local_ssd</b>. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</description></item>
-        /// <item><description>If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</description></item>
+        /// <item><description>If the primary ApsaraDB RDS for MySQL instance uses Premium Local SSDs, only <b>local_ssd</b> is supported. If the primary ApsaraDB RDS for MySQL instance uses cloud disks, premium performance disk storage types are supported.</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server supports premium performance disk storage types.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -196,7 +204,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</para>
+        /// <para>The dedicated cluster ID. This parameter is required when you create a read-only instance in a dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-4n****</para>
@@ -206,13 +214,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</para>
+        /// <para>Specifies whether to enable the release protection feature for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: enables release protection.</description></item>
+        /// <item><description><b>false</b>: disables release protection. (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can enable the release protection feature for the read-only instance only when you set the <b>PayType</b> parameter to <b>Postpaid</b>.</para>
+        /// <para>This feature is supported only when the <b>billing method</b> is <b>pay-as-you-go</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -223,11 +231,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</para>
+        /// <para>The database engine version. The version must be the same as that of the primary instance.</para>
         /// <list type="bullet">
-        /// <item><description>If the read-only instance runs MySQL, set this parameter to <b>5.6</b>, <b>5.7</b>, or <b>8.0</b>.</description></item>
-        /// <item><description>If the read-only instance runs MySQL, set this parameter to <b>2017_ent, 2019_ent, or 2022_ent</b>.</description></item>
-        /// <item><description>If the read-only instance runs PostgreSQL, set this parameter to <b>10.0, 11.0, 12.0, 13.0, 14.0, or 15.0</b>.</description></item>
+        /// <item><description>Valid values for MySQL: <b>5.6</b>, <b>5.7</b>, and <b>8.0</b>.</description></item>
+        /// <item><description>Valid values for SQL Server: <b>2017_ent, 2019_ent, and 2022_ent</b>.</description></item>
+        /// <item><description>Valid values for PostgreSQL: <b>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -239,10 +247,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GdnInstanceName")]
         [Validation(Required=false)]
@@ -251,12 +259,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the read-only instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>Classic</b></description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
         /// </list>
-        /// <para>Default value: VPC. If you set this parameter to VPC, you must also specify the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>By default, a VPC-connected instance is created. You must also specify <b>VPCId</b> and <b>VSwitchId</b>.</para>
         /// <remarks>
-        /// <para> The network type of the read-only instance can be different from the network type of the primary instance.</para>
+        /// <para>The network type of the read-only instance can be different from that of the primary instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -267,25 +275,39 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("InstructionSetArch")]
         [Validation(Required=false)]
         public string InstructionSetArch { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for Premium ESSDs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enables the feature.</description></item>
+        /// <item><description><b>0</b>: does not enable the feature.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to create a DuckDB-based analytical instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: creates a DuckDB-based analytical instance.</description></item>
+        /// <item><description><b>false</b>: does not create a DuckDB-based analytical instance.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Only ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL support DuckDB-based analytical instances.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("IsAnalyticReadOnlyIns")]
         [Validation(Required=false)]
         public bool? IsAnalyticReadOnlyIns { get; set; }
@@ -299,7 +321,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the read-only instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
         /// <item><description><b>Prepaid</b>: subscription</description></item>
@@ -314,10 +336,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the read-only instance. Valid values:</para>
+        /// <para>The subscription type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -328,7 +350,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The port that is initialized when you create a read-only instance for an ApsaraDB RDS for MySQL primary instance.</para>
         /// <para>Valid values: 1000 to 65534.</para>
         /// 
         /// <b>Example:</b>
@@ -339,7 +361,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>The internal IP address of the read-only instance. The IP address must be within the address range of the specified vSwitch. The system automatically allocates an internal IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b> by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.XX.XX</para>
@@ -352,14 +374,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>717446260784</para>
+        /// <para>71744626****</para>
         /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. The read-only instance must reside in the same region as the primary instance. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -370,7 +392,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -388,7 +410,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.</para>
+        /// <para>The host ID of the primary instance in the dedicated cluster. This parameter is required when you create a read-only instance in a dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp****</para>
@@ -398,33 +420,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TddlBizType")]
         [Validation(Required=false)]
         public string TddlBizType { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TddlRegionConfig")]
         [Validation(Required=false)]
         public string TddlRegionConfig { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the read-only instance. Valid values:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>5</b>.</description></item>
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values of <b>UsedTime</b> are <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values of <b>UsedTime</b> are <b>1</b> to <b>9</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set the <b>PayType</b> parameter to <b>Prepaid</b>, you must specify the UsedTime parameter.</para>
+        /// <para>This parameter is required when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -435,11 +457,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the read-only instance. If you leave the <b>InstanceNetworkType</b> parameter empty or set it to <b>VPC</b>, you must also specify this parameter.</para>
+        /// <para>The VPC ID of the read-only instance. This parameter is required when <b>InstanceNetworkType</b> is left empty or set to <b>VPC</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</description></item>
-        /// <item><description>If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.</description></item>
+        /// <item><description>If the storage type of the primary instance is Premium Local SSDs, the read-only instance can use any VPC.</description></item>
+        /// <item><description>If the storage type of the primary instance is cloud disks, the VPC of the read-only instance must be the same as that of the primary instance.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -451,7 +473,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the read-only instance. If you leave the <b>InstanceNetworkType</b> parameter empty or set it to <b>VPC</b>, you must specify the VSwitchId parameter.</para>
+        /// <para>The vSwitch ID of the read-only instance. This parameter is required when <b>InstanceNetworkType</b> is left empty or set to <b>VPC</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>
@@ -461,11 +483,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the most recent zone list.</para>
         /// <list type="bullet">
-        /// <item><description>If you use the single-zone deployment method, set this parameter to the ID of one zone. Example: <c>cn-hangzhou-b</c>.</description></item>
-        /// <item><description>If you use the multi-zone deployment method, set this parameter to the IDs of multiple zones and separate the IDs with colons (:). Example: <c>cn-hangzhou-b:cn-hangzhou-c</c>.</description></item>
-        /// <item><description>The number of zone IDs that you specify must be less than or equal to the number of nodes created for the read-only instance. If you create a read-only instance that runs RDS Basic Edition, only one node is provisioned. If you create a read-only instance that runs RDS High-availability Edition, one primary node and one secondary node are provisioned.</description></item>
+        /// <item><description>For single-zone deployment, specify one zone ID, such as <c>cn-hangzhou-b</c>.</description></item>
+        /// <item><description>For multi-zone deployment, specify multiple zone IDs separated by colons (:), such as <c>cn-hangzhou-b:cn-hangzhou-c</c>.</description></item>
+        /// <item><description>The number of specified zones must be less than or equal to the number of nodes in the read-only instance. A Basic Edition read-only instance contains only one node. A High-availability Edition read-only instance contains two nodes (one primary node and one secondary node).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

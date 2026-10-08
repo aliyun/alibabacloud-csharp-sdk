@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The ID of the key used for TDE encryption.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
+        /// <para>key-szz644a355asjcuilll4u</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C816A4BF-A6EC-4722-95F9-2055859CCFD2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to generate the key for TDE at the instance level. Valid values:</para>
+        /// <para>The key mode of instance-level TDE encryption. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Aliyun_Generate_Key</b></description></item>
         /// <item><description><b>Customer_Provided_Key</b></description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TDEMode { get; set; }
 
         /// <summary>
-        /// <para>The TDE status of the instance. Valid values:</para>
+        /// <para>The instance-level TDE status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b></description></item>
         /// <item><description><b>Disabled</b></description></item>

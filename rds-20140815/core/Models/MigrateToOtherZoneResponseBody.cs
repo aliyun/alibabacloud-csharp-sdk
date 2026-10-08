@@ -13,24 +13,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order. This parameter is returned only when the instance runs MySQL.</para>
+        /// <para>The order ID. This parameter is applicable only to ApsaraDB RDS for MySQL instances.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>213341575990728</para>
+        /// <para>21334157599****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65BDA532-28AF-4122-AA39-B382721EEE64</para>

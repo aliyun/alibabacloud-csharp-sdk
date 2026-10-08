@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid value if the new billing method is pay-as-you-go: POSTPAY</description></item>
-        /// <item><description>Valid value if the new billing method is subscription: PREPAY</description></item>
+        /// <item><description>POSTPAY: pay-as-you-go</description></item>
+        /// <item><description>PREPAY: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// <para>POSTPAY</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The expiration time.</para>
         /// <remarks>
-        /// <para>If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if the billing method is changed to pay-as-you-go.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>205157600280623</para>
+        /// <para>20515760028****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</para>

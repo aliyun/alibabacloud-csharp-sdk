@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The internal IP addresses and hostnames of the ECS instance on which a primary ApsaraDB RDS for SQL Server instance and its secondary RDS instance reside. Format: <c>IP address 1, Hostname 1; IP address 2, Hostname 2</c>.</para>
+        /// <para>The internal IP addresses and hostnames of the underlying ECS instances for the ApsaraDB RDS for SQL Server instance, including the primary and secondary instances. Format: <c>ip1,hostname1;ip2,hostname2</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.16.xx.xx,sdxxxxxxxxB;172.16.xx.xx,sdxxxxxxxxA</para>
+        /// <para>172.16.xx.xx,sd<b><b>B;172.16.xx.xx,sd</b></b>A</para>
         /// </summary>
         [NameInMap("IpHostnameInfos")]
         [Validation(Required=false)]

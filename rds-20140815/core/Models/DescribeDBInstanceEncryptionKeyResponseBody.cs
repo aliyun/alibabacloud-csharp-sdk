@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEncryptionKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The user who created the key.</para>
+        /// <para>The creator of the key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1443*****9604</para>
+        /// <para>1443****9604</para>
         /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-08T08:14:16Z</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key.</para>
+        /// <para>The key ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5306d1b6-7fd3-42d9-9511-xxxxxxx</para>
+        /// <para>5306d1b6-7fd3-42d9-9511-****</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The details about the key.</para>
+        /// <para>The list of keys.</para>
         /// </summary>
         [NameInMap("EncryptionKeyList")]
         [Validation(Required=false)]
@@ -60,24 +60,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The alias of the key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alias/xxx</para>
+            /// <para>alias/****</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The user who created the key.</para>
+            /// <para>The creator of the key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1443*****9604</para>
+            /// <para>1443****9604</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-08T08:14:16Z</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the key.</para>
+            /// <para>The key ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5306d1b6-7fd3-42d9-9511-xxxxxxx</para>
+            /// <para>5306d1b6-7fd3-42d9-9511-****</para>
             /// </summary>
             [NameInMap("EncryptionKey")]
             [Validation(Required=false)]
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The status of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b></description></item>
-            /// <item><description><b>Disabled</b></description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The type of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CMK</b></description></item>
-            /// <item><description><b>ServiceKey</b></description></item>
+            /// <item><description>CMK: customer master key (CMK).</description></item>
+            /// <item><description>ServiceKey: service key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string KeyUsage { get; set; }
 
             /// <summary>
-            /// <para>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-18T08:14:16Z</para>
@@ -165,14 +165,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>The role of the instance. Valid values:</para>
+            /// <para>The usage of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Master</b>: primary instance</description></item>
-            /// <item><description><b>slave</b>: read-only instance</description></item>
+            /// <item><description><b>TDE</b>: transparent data encryption.</description></item>
+            /// <item><description><b>DiskEncryption</b>: cloud disk encryption.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Master</para>
+            /// <para>TDE</para>
             /// </summary>
             [NameInMap("UsedBy")]
             [Validation(Required=false)]
@@ -183,8 +183,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// <para>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-18T08:14:16Z</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3BC2768E-DEDA-40FC-BBE9-6B884F3626AF</para>

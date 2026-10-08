@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the SQL Explorer (SQL Audit) feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Enable</b>: enabled.</description></item>
+        /// <item><description><b>Disabled</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

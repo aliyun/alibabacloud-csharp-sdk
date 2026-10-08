@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteSlotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2875D608-A228-53D7-B8C9-35F13EDCF36D</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication slot.</para>
+        /// <para>The replication slot name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slot_test01</para>

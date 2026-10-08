@@ -13,28 +13,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The name of the database account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1</para>
+        /// <para>zhttest</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <remarks>
-        /// <para> This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.</para>
+        /// <para>SQL Server 2017 Cluster Edition instances are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rm-bp1v6z81ho9******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>. Pages start from page 1.</para>
+        /// <para>The page number. Default value: <b>1</b>. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>30 to 200</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b> to <b>200</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

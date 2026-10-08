@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The direction of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ingress</b>: the inbound security group rule.</description></item>
-        /// <item><description><b>egress</b>: the outbound security group rule.</description></item>
+        /// <item><description><b>ingress</b>: inbound.</description></item>
+        /// <item><description><b>egress</b>: outbound.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-2ze27hs990o2hn9****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The information about the security group.</para>
+        /// <para>The security group information.</para>
         /// </summary>
         [NameInMap("SecurityGroupPermissions")]
         [Validation(Required=false)]

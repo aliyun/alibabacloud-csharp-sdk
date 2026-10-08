@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckRegionSupportBackupEncryptionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>081FAAD5-9E56-5BE7-A495-*******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether backup encryption is supported. Valid values: true and false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

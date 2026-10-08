@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeResourceDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</para>
+        /// <para>The storage space occupied by data backups, excluding archived backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8139046912</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupDataSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the backup log. Unit: bytes.</para>
+        /// <para>The size of backup logs. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21183797</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupLogSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the backup data. Unit: MB.</para>
+        /// <para>The backup size. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53002759</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The disk capacity of the instance.</para>
+        /// <para>The disk capacity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DbInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The name of the proxy instance.</para>
+        /// <para>The name of the database proxy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mr-n1m1wjrylfolvrt67s</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.</para>
+        /// <para>The used storage space, which consists of the space occupied by data files and log files. Unit: bytes. A value of -1 indicates that no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4871684096</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DiskUsed { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance.</para>
+        /// <para>The instance storage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_essd</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The rule for the IP address whitelist of the instance.</para>
+        /// <para>The RDS whitelist group specifications.</para>
         /// </summary>
         [NameInMap("RdsEcsSecurityGroupRel")]
         [Validation(Required=false)]
         public List<DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel> RdsEcsSecurityGroupRel { get; set; }
         public class DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel : TeaModel {
             /// <summary>
-            /// <para>The name of the security group.</para>
+            /// <para>The security group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_switch</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EA815761-F7AC-5CFE-A1AC-709D6A00B58A</para>
@@ -129,12 +129,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure IP address whitelists</a>. If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the instance. Separate multiple entries with commas (,). Each entry must be unique. A maximum of 1,000 entries are supported. The following two formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>IP addresses, such as 10.10.XX.XX.</description></item>
-        /// <item><description>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</description></item>
+        /// <item><description>IP address format, such as 10.10.XX.XX.</description></item>
+        /// <item><description>CIDR format, such as 10.10.XX.XX/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</description></item>
         /// </list>
-        /// <para>If this parameter is not specified, the default IP address whitelist is used.</para>
+        /// <para>If this parameter is not specified, the whitelist information of the default group of the original instance is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para> The vSwitch must belong to the same zone as the instance.</para>
+        /// <para>The vSwitch must belong to the same zone as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>VPC ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9rbibex7v0lxbeyo6at</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceNetworkExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The retention days of the classic network endpoint. Valid values: <b>1 to 120</b>. Unit: days.</para>
+        /// <para>The number of days for the classic network endpoint reservation. Valid values: <b>1 to 120</b>. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,26 +21,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>The classic network endpoint whose expiration time you want to extend. Two types of classic network endpoints are supported:</para>
+        /// <para>The classic network connectivity endpoint to be extended. Two types of classic network endpoints are supported:</para>
         /// <list type="bullet">
-        /// <item><description>The internal endpoint of the classic network.</description></item>
-        /// <item><description>The read/write splitting endpoint of the classic network.</description></item>
+        /// <item><description>Classic network internal network endpoint</description></item>
+        /// <item><description>Classic network read/write splitting endpoint</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-uf6wjk5****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

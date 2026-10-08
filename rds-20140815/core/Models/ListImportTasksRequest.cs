@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListImportTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
+        /// <remarks>
+        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are not available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
         /// </summary>
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

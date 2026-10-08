@@ -10,10 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class EvaluateLocalExtendDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the instance is available. Valid values: true and false.</para>
+        /// <para>Indicates whether the expansion is available. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Available.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not available.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Available")]
         [Validation(Required=false)]
@@ -23,14 +29,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1375i66nd******</para>
+        /// <para>rm-wz9s06u4drm******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The data transfer type supported by the instance.</para>
+        /// <para>The transfer type of the database instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceTransType { get; set; }
 
         /// <summary>
-        /// <para>The maximum value of the local disk. Unit: GB.</para>
+        /// <para>The maximum capacity of the local disk. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

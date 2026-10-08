@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeCurrentModifyOrderResponseBodyModifyOrder> ModifyOrder { get; set; }
         public class DescribeCurrentModifyOrderResponseBodyModifyOrder : TeaModel {
             /// <summary>
-            /// <para>The instance family of the instance.</para>
+            /// <para>The instance family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores that are supported by the instance type. Unit: cores.</para>
+            /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The effective time. Valid values:</para>
+            /// <para>The effective period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Immediate</b>: This is the default value.</description></item>
-            /// <item><description><b>MaintainTime</b>: The effective time is within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</description></item>
+            /// <item><description><b>Immediate</b> (default): The specification change takes effect immediately.</description></item>
+            /// <item><description><b>MaintainTime</b>: The specification change takes effect during the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The mark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Mark")]
             [Validation(Required=false)]
             public string Mark { get; set; }
 
             /// <summary>
-            /// <para>The memory capacity that is supported by the instance type. Unit: GB.</para>
+            /// <para>The memory capacity for the instance type. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemoryClass { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Succeed,Scheduled,Running,Cancelling,Canceled,Waiting</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the instance.</para>
+            /// <para>The storage description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Storage { get; set; }
 
             /// <summary>
-            /// <para>The new instance type of the instance. Valid values:</para>
+            /// <para>The target instance type for the specification change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql.x2.medium.2c</para>

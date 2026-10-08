@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceDdosCountRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the asset.</para>
+        /// <para>The region ID of the assets that are assigned public IP addresses to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DdosRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset that is assigned a public IP address. Fixed value: <b>ecs</b>.</para>
+        /// <para>The instance type of the assets that are assigned public IP addresses to query. Set the value to <b>ecs</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the RDS Custom instance resides.</para>
+        /// <para>The region ID of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

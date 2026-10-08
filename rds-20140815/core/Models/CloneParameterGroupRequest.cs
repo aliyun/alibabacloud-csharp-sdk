@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter template in the destination region.</para>
+        /// <para>The description of the parameter template that is copied to the destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloneGroup1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupDesc { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</para>
+        /// <para>The ID of the source parameter template. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the parameter template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the parameter template in the destination region.</para>
+        /// <para>The name of the parameter template that is copied to the destination region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID of the source parameter template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can leave this parameter empty.</para>
+        /// <para>The resource group ID. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

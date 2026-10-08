@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableRecoveryTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-region data backup file. You can call the DescribeCrossRegionBackups operation to query the backup file ID.</para>
+        /// <para>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>14***</para>
+        /// <para>12493****</para>
         /// </summary>
         [NameInMap("CrossBackupId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

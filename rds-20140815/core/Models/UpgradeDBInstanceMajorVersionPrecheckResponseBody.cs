@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The new major engine version of the instance.</para>
+        /// <para>The major engine version of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.0</para>

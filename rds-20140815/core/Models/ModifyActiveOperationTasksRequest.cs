@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The O\&amp;M task ID. Separate multiple IDs with commas (,).</para>
+        /// <para>The O&amp;M task IDs. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the DescribeActiveOperationTask operation to query the O\&amp;M task ID.</para>
+        /// <para>You can call DescribeActiveOperationTasks to obtain O&amp;M task IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,17 +24,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately start scheduling. Valid values:</para>
+        /// <para>Specifies whether to immediately start the execution scheduling.</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): no</description></item>
-        /// <item><description>1: yes</description></item>
+        /// <item><description>0: No. This is the default value.</description></item>
+        /// <item><description>1: Yes.<remarks>
+        /// <list type="bullet">
+        /// <item><description>If the value is 0, the SwitchTime parameter takes effect. If the value is 1, the SwitchTime parameter does not take effect. The task start time is set to the current time, and the switchover time is automatically calculated based on the new start time.</description></item>
+        /// <item><description>Immediately starting the execution scheduling does not mean an immediate switchover. Instead, the task immediately enters the Preparing state. After the preparation is complete, the switchover is performed. You can call DescribeActiveOperationTasks and check the value of the PrepareInterval response parameter to obtain the preparation time.</description></item>
         /// </list>
-        /// <remarks>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>If you set this parameter to 0, the SwitchTime parameter takes effect. If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the task is the current time, and the system determines the switching time based on the start time.</para>
-        /// </description></item>
-        /// <item><description><para>Immediate scheduling specifies that the task enters the preparing state instead of being executed immediately. After the preparation is complete, the switchover is performed. You can call the DescribeActiveOperationTasks to query the preparation time that is returned for the PrepareInterval parameter.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,9 +64,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The scheduled switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// <remarks>
-        /// <para> The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the value of the Deadline parameter in the response.</para>
+        /// <para>The time cannot be later than the latest operation time. You can call DescribeActiveOperationTasks and check the value of the Deadline response parameter to obtain the latest operation time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

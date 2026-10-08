@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceNetTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint that is used to connect to the instance after the switch of endpoints.</para>
+        /// <para>The database endpoint after the switch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>new**********.mysql.rds.aliyuncs.com</para>
+        /// <para>new****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("NewConnectionString")]
         [Validation(Required=false)]
         public string NewConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The endpoint that is used to connect to the instance before the switch of endpoints.</para>
+        /// <para>The database endpoint before the switch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1**************.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-bp1****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("OldConnectionString")]
         [Validation(Required=false)]

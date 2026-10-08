@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</description></item>
-        /// <item><description>All strings except <b>true</b> are considered <b>false</b>.</description></item>
+        /// <item><description>This parameter takes effect only when you change the billing method from pay-as-you-go to subscription.</description></item>
+        /// <item><description>All non-<b>true</b> strings are treated as <b>false</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use vouchers to offset fees. Valid values:</para>
+        /// <para>Specifies whether to use coupons to offset fees. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: Uses coupons to offset fees.</description></item>
+        /// <item><description><b>false</b>: Does not use coupons to offset fees. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The additional business information about the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
@@ -57,18 +57,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the instance. Valid values:</para>
+        /// <para>The billing method of the instance after the change. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
         /// <item><description><b>Prepaid</b>: subscription</description></item>
@@ -98,13 +98,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the instance. Valid values:</para>
+        /// <para>The renewal cycle of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter must be specified if you set <b>PayType</b> to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>726702810223</para>
+        /// <para>726122650073</para>
         /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
@@ -133,13 +133,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Valid values:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>Period</b> to <b>Year</b>, the value of UsedTime ranges from <b>1 to 5</b>.</description></item>
-        /// <item><description>If you set <b>Period</b> to <b>Month</b>, the value of UsedTime ranges from <b>1 to 11</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of UsedTime ranges from <b>1 to 5</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of UsedTime ranges from <b>1 to 11</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter must be specified when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

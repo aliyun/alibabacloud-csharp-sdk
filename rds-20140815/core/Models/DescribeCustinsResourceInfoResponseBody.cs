@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeCustinsResourceInfoResponseBodyData> Data { get; set; }
         public class DescribeCustinsResourceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The deadline for the CPU adjustment.</para>
+            /// <para>The deadline for CPU adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-25</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum percentage of the system CPU resources that the instance can use.</para>
+            /// <para>The maximum adjustable CPU ratio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuAdjustableMaxRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum CPU utilization.</para>
+            /// <para>The maximum CPU usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The CPU utilization.</para>
+            /// <para>The CPU usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The CPU utilization. Unit: percentage.</para>
+            /// <para>The CPU usage. Unit: %.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rm-wz92gn1ll9fe5d3a4</para>
+            /// <para>rm-wz9s06u4drm******</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
+            /// <para>The maximum number of I/O requests per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string IopsAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the adjustment of the maximum number of connections.</para>
+            /// <para>The deadline for maximum connection adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-25</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxConnIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the adjustment of the maximum IOPS.</para>
+            /// <para>The deadline for maximum IOPS adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-25</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
+            /// <para>The maximum number of I/O requests per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS that can be supported by the instance.</para>
+            /// <para>The maximum number of I/O requests per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The maximum percentage of the system memory that the instance can use.</para>
+            /// <para>The maximum adjustable memory ratio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemAdjustableMaxRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum value of the resources to be evaluated.</para>
+            /// <para>The maximum value of the resource to be evaluated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the memory adjustment.</para>
+            /// <para>The deadline for memory adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-25</para>
@@ -187,10 +187,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemoryAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The memory increase percentage.</para>
+            /// <para>The memory increase ratio.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("MemoryIncreaseRatio")]
             [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemoryIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The number of CPUs of the instance.</para>
+            /// <para>The number of CPU cores of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OriginMaxConn { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
+            /// <para>The maximum number of I/O requests per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OriginMaxIops { get; set; }
 
             /// <summary>
-            /// <para>The actual memory used. Unit: MB.</para>
+            /// <para>The actual memory usage. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

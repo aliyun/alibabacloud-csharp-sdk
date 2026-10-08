@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A2E94301-D07F-4457-9B49-6AA2BB388C85</para>
+        /// <para>17F2EA6C-3CA2-528D-A263-DC29707AD652</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -128,26 +128,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when the super administrator (SA) account was first activated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para> This parameter is returned only for instances that run SQL Server.</para>
+        /// <para>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-06T11:00:00Z</para>
+        /// <para>2023-10-17T07:51:22Z</para>
         /// </summary>
         [NameInMap("SystemAdminAccountFirstActivationTime")]
         [Validation(Required=false)]
         public string SystemAdminAccountFirstActivationTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the system admin account was enabled. Valid values:</para>
+        /// <para>Indicates whether the super administrator (SA) account is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system admin account was enabled.</description></item>
-        /// <item><description><b>false</b>: The system admin account was disabled.</description></item>
+        /// <item><description><b>True</b>: Activated.</description></item>
+        /// <item><description><b>False</b>: Not activated.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</para>
+        /// <para>Only ApsaraDB RDS for SQL Server instances support the <a href="https://help.aliyun.com/document_detail/170736.html">super administrator (SA) account</a>, and this parameter has a return value. For instances of other engines, the return value is empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SystemAdminAccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: high-availability series</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
         /// </list>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1imnm**********</para>
+        /// <para>rm-bp1imnm****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>mysql</b>: MySQL</description></item>
         /// <item><description><b>mssql</b>: SQL Server</description></item>
@@ -62,12 +62,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine. Valid values:</para>
+        /// <para>The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when you set the Engine parameter to mysql: <b>5.5, 5.6, 5.7, and 8.0</b>.</description></item>
-        /// <item><description>Valid values when you set the Engine parameter to mssql: <b>2008r2</b>.</description></item>
-        /// <item><description>Valid values when you set the Engine parameter to PostgreSQL: <b>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</b>.</description></item>
-        /// <item><description>Valid values when you set the Engine parameter to MariaDB: <b>10.3</b>.</description></item>
+        /// <item><description>MySQL: <b>5.5, 5.6, 5.7, 8.0</b></description></item>
+        /// <item><description>SQL Server: <b>2008r2</b></description></item>
+        /// <item><description>PostgreSQL: <b>10.0, 11.0, 12.0, 13.0, 14.0, 15.0</b></description></item>
+        /// <item><description>MariaDB: <b>10.3</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

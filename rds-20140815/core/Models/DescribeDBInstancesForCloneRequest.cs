@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connection mode of the instance. Valid values:</para>
+        /// <para>The access mode of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: standard mode</description></item>
+        /// <item><description><b>Standard</b>: standard access mode</description></item>
         /// <item><description><b>Safe</b>: database proxy mode</description></item>
         /// </list>
-        /// <para>By default, this operation queries the instances that use any of the supported connection modes.</para>
+        /// <para>By default, instances in all access modes are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the current instance.</para>
+        /// <para>The current instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5xxxxxxxxxx</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CurrentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.n1.micro.1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5xxxxxxxxxx</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance that you want to query. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Primary</b>: primary instance</description></item>
         /// <item><description><b>Readonly</b>: read-only instance</description></item>
         /// <item><description><b>Guard</b>: disaster recovery instance</description></item>
         /// <item><description><b>Temp</b>: temporary instance</description></item>
         /// </list>
-        /// <para>By default, this operation queries the instances of all roles.</para>
+        /// <para>By default, instances of all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Primary</para>
@@ -92,15 +92,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MySQL</description></item>
         /// <item><description>SQLServer</description></item>
         /// <item><description>PostgreSQL</description></item>
-        /// <item><description>PPAS</description></item>
         /// <item><description>MariaDB</description></item>
         /// </list>
-        /// <para>By default, this operation queries the instances that run any of the supported database engine types.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, instances of all database engines are returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -110,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -120,10 +121,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance expires. Valid values:</para>
+        /// <para>Specifies whether the instance has expired. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: queries the instances that have expired.</description></item>
-        /// <item><description><b>False</b>: does not query instances that have expired.</description></item>
+        /// <item><description><b>True</b>: The instance has expired.</description></item>
+        /// <item><description><b>False</b>: The instance has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,8 +137,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b></description></item>
-        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,8 +151,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the database node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Master</b>: the primary node</description></item>
-        /// <item><description><b>Slave</b>: the secondary node</description></item>
+        /// <item><description><b>Master</b>: primary node</description></item>
+        /// <item><description><b>Slave</b>: secondary node</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,7 +171,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -180,7 +181,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -196,7 +197,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
         /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
-        /// <para>By default, this operation queries the instances that use any of the supported billing methods.</para>
+        /// <para>By default, instances of all billing methods are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -206,7 +207,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -217,7 +218,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>
@@ -235,7 +236,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.</para>
+        /// <para>The search keyword. You can perform a fuzzy search by instance ID or instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6w</para>
@@ -245,7 +246,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-j6csw46bgrgkxxxxxxxxxx</para>
@@ -255,7 +256,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-j6cjvqms29yxxxxxxxxxx</para>
@@ -265,7 +266,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

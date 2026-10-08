@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<AddTagsToResourceRequestTag> Tag { get; set; }
         public class AddTagsToResourceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</para>
+            /// <para>The key of the first tag. Each tag consists of a TagKey and a TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty, but TagValue can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</para>
+            /// <para>The value of the first tag. Each tag consists of a TagKey and a TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty, but TagValue can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -48,12 +48,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</para>
+        /// <para>You can specify up to 30 instance IDs for a batch operation. Separate multiple instance IDs with commas (,).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hagnzhou</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</para>
+        /// <para>The list of tags to bind, including TagKey and TagValue. You can specify up to 5 pairs at a time. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</para>
         /// <remarks>
-        /// <para> The tag key is required and the tag value is optional.</para>
+        /// <para>TagKey cannot be empty, but TagValue can be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{“key1”:”value1”,“key2”:””}</para>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

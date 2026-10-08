@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReplicationLinkLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-bp1trqb4p1xd****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The items.</para>
+        /// <para>The records.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeReplicationLinkLogsResponseBodyItems> Items { get; set; }
         public class DescribeReplicationLinkLogsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The details of the task.</para>
+            /// <para>The task details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is displayed in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-25T06:57:41Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is displayed in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T06:39:51Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The synchronization information. This parameter is a reserved parameter.</para>
+            /// <para>The synchronization information. This is a reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicationInfo { get; set; }
 
             /// <summary>
-            /// <para>The status of the synchronization. Valid values:</para>
+            /// <para>The synchronization status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>steaming</b>: The synchronization is in progress.</description></item>
-            /// <item><description><b>finish</b>: The synchronization is complete.</description></item>
-            /// <item><description><b>disconnect</b>: The synchronization is disconnected.</description></item>
+            /// <item><description><b>steaming</b>: Synchronizing.</description></item>
+            /// <item><description><b>finish</b>: Completed.</description></item>
+            /// <item><description><b>disconnect</b>: Disconnected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicationState { get; set; }
 
             /// <summary>
-            /// <para>The account of the database that is used for data synchronization.</para>
+            /// <para>The database account used for data synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testdbuser</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicatorAccount { get; set; }
 
             /// <summary>
-            /// <para>The password of the account.</para>
+            /// <para>The password of the synchronization account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testpassword</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicatorPassword { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the source instance.</para>
+            /// <para>The address of the source instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-****.pg.rds.aliyuncs.com</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceAddress { get; set; }
 
             /// <summary>
-            /// <para>The type of the source instance. Valid values:</para>
+            /// <para>The category of the source instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>other: other instances</description></item>
-            /// <item><description>aliyunRDS: an ApsaraDB RDS instance</description></item>
+            /// <item><description>other: Other.</description></item>
+            /// <item><description>aliyunRDS: ApsaraDB RDS instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceCategory { get; set; }
 
             /// <summary>
-            /// <para>The port number of the source instance.</para>
+            /// <para>The port of the source instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5432</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// <para>The destination instance ID.</para>
+            /// <para>The ID of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-bp1l4dutw453****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8413252</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test01</para>
@@ -166,12 +166,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The stage of the task. Valid values:</para>
+            /// <para>The task stage. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>precheck</b>: the precheck stage.</description></item>
-            /// <item><description><b>basebackup</b>: the basic backup stage.</description></item>
-            /// <item><description><b>startup</b>: the startup stage.</description></item>
-            /// <item><description><b>increment</b>: the incremental synchronization stage.</description></item>
+            /// <item><description><b>precheck</b>: Dry run.</description></item>
+            /// <item><description><b>basebackup</b>: Basic backup.</description></item>
+            /// <item><description><b>startup</b>: Startup.</description></item>
+            /// <item><description><b>increment</b>: Incremental synchronization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,11 +182,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskStage { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b></description></item>
-            /// <item><description><b>failure</b></description></item>
-            /// <item><description><b>running</b></description></item>
+            /// <item><description><b>success</b>: Succeeded.</description></item>
+            /// <item><description><b>failure</b>: Failed.</description></item>
+            /// <item><description><b>running</b>: Running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,10 +197,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the task. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>create</b>: creates a synchronization link.</description></item>
-            /// <item><description><b>create-dryrun</b>: performs a precheck before a synchronization link is created.</description></item>
+            /// <item><description><b>create</b>: Create a replication link.</description></item>
+            /// <item><description><b>create-dryrun</b>: Dry run for creating a replication link.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</para>
+        /// <para>The user credential of the created Data API account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</para>
+        /// <para>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</para>
         /// </summary>
         [NameInMap("SecretArn")]
         [Validation(Required=false)]
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the credential.</para>
+        /// <para>The name of the user credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Foo</para>

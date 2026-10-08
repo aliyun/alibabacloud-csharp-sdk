@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the snapshot that is used to create cloud disks. Valid values:</para>
+        /// <para>Specifies whether to force delete a snapshot that has been used to create a cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: forcefully deletes the snapshot After the snapshot is forcefully deleted, the cloud disks created from the snapshot cannot be re-initialized.</description></item>
-        /// <item><description><b>false</b>(default): does not forcefully delete the snapshot.</description></item>
+        /// <item><description><b>true</b>: Force deletes the snapshot. After the snapshot is forcefully deleted, the cloud disk cannot be reinitialized.</description></item>
+        /// <item><description><b>false</b> (default): Does not force delete the snapshot.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCImageListRequest : TeaModel {
         /// <summary>
-        /// <para>The image architecture. Valid values:</para>
+        /// <para>The system architecture of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>x86_64</description></item>
-        /// <item><description>arm64</description></item>
+        /// <item><description>x86_64.</description></item>
+        /// <item><description>arm64.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        /// <summary>
+        /// <para>The image ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-2oqiu973jwcxe****</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>The image name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_image_name</para>
+        /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// <para>Queries available images for the specified instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql.x2.xlarge.6cm</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -67,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The image type. Set the value to <b>self</b>.</para>
+        /// <para>The image type. Currently, only <b>self</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>self</para>

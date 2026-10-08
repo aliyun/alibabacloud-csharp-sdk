@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AssociateEipAddressWithRCInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The EIP ID.</para>
+        /// <para>The ID of the EIP.</para>
         /// <remarks>
-        /// <para> If no EIP is available, create an EIP. For more information, see <a href="https://help.aliyun.com/document_detail/292841.html">Create an EIP</a>.</para>
+        /// <para>If you do not have an EIP, <a href="https://help.aliyun.com/document_detail/292841.html">create an EIP</a> first.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-i322y2t562oh7o******</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

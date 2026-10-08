@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event.</para>
+        /// <para>The event list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+            /// <para>The system event categorization. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Exception</b>: abnormal event.</description></item>
+            /// <item><description><b>Optimize</b>: optimization events.</description></item>
+            /// <item><description><b>Notification</b>: notification event.</description></item>
+            /// <item><description><b>Maintenance</b>: scheduled maintenance event.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Exception</para>
@@ -27,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EventCategory { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31</para>

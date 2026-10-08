@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RebuildDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.</para>
+        /// <para>The queue number for the rebuild. When the number is 0, the rebuild migration starts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>329****</para>
+        /// <para>3298015</para>
         /// </summary>
         [NameInMap("MigrationId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20867****</para>
+        /// <para>208676661</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

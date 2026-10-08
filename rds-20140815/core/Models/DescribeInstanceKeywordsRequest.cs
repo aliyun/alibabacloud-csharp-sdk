@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceKeywordsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of reserved keyword to query. Valid values:</para>
+        /// <para>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>account</b></description></item>
-        /// <item><description><b>database</b></description></item>
+        /// <item><description><para><b>account</b></para>
+        /// </description></item>
+        /// <item><description><para><b>database</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

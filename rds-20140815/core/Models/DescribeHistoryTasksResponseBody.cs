@@ -10,32 +10,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</para>
+            /// <para>The allowed operation information. When used, the system matches the Action based on currentStepName and status in this information. If no Action is matched, the task does not support operations in its current state. Example:</para>
             /// <pre><c>  &quot;steps&quot;: [
             ///     {
-            ///       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.      &quot;action_info&quot;: {    // The actions supported for this step.        &quot;Waiting&quot;: [      // The status, which matches Status.          &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.        ]
+            ///       &quot;step_name&quot;: &quot;exec_task&quot;, // Step name, matched with currentStepName
+            ///       &quot;action_info&quot;: {    // Operations supported by the step
+            ///         &quot;Waiting&quot;: [      // Status, matched with status
+            ///           &quot;modifySwitchTime&quot; // Action. Multiple actions may be available.
+            ///         ]
             ///       }
             ///     },
             ///     {
-            ///       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.      &quot;action_info&quot;: {    // The actions supported for this step.        &quot;Running&quot;: [      // The status.          &quot;cancel&quot;,       // The action.          &quot;pause&quot;
+            ///       &quot;step_name&quot;: &quot;init_task&quot;, // Step name
+            ///       &quot;action_info&quot;: {    // Operations supported by the step
+            ///         &quot;Running&quot;: [      // Status
+            ///           &quot;cancel&quot;,       // Action
+            ///           &quot;pause&quot;
             ///         ]
             ///       }
             ///     }
             ///   ]
             /// }
             /// </c></pre>
-            /// <para>The system may support the following actions:</para>
+            /// <para>Supported operations:</para>
             /// <list type="bullet">
-            /// <item><description><b>retry</b>: retries the action.</description></item>
-            /// <item><description><b>cancel</b>: cancels the action.</description></item>
-            /// <item><description><b>modifySwitchTime</b>: changes the switching time or restoration time.</description></item>
+            /// <item><description><b>retry</b>: Retry.</description></item>
+            /// <item><description><b>cancel</b>: Cancel.</description></item>
+            /// <item><description><b>modifySwitchTime</b>: Modify the switchover time or recovery time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</para>
+            /// <para>The request user ID. If callerSource is User, this value indicates the user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141345906006****</para>
@@ -56,10 +64,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CallerSource { get; set; }
 
             /// <summary>
-            /// <para>The source of the request. Valid values:</para>
+            /// <para>The request source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>System</b></description></item>
-            /// <item><description><b>User</b></description></item>
+            /// <item><description><b>System</b>: System.</description></item>
+            /// <item><description><b>User</b>: User.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CallerUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the current step. If this parameter is left empty, the task is not started.</para>
+            /// <para>The name of the current step being executed. An empty value indicates that the task has not started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exec_task</para>
@@ -90,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The task end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-03T12:06:17Z</para>
@@ -120,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The instance category.</para>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Instance</para>
@@ -130,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The service name.</para>
+            /// <para>The product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds</para>
@@ -140,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>Indicates the task progress.</para>
+            /// <para>The current progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>79.0</para>
@@ -170,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The estimated amount of time remaining to complete the task. Unit: seconds.</para>
+            /// <para>The estimated remaining execution time. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -180,7 +188,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
+            /// <para>The task start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-03T11:31:03Z</para>
@@ -192,13 +200,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduled</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Succeed</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Cancelling</description></item>
-            /// <item><description>Canceled</description></item>
-            /// <item><description>Waiting</description></item>
+            /// <item><description>Scheduled: Waiting to be executed.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Succeed: Succeeded.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Cancelling: Being terminated.</description></item>
+            /// <item><description>Canceled: Terminated.</description></item>
+            /// <item><description>Waiting: Waiting for the scheduled time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -239,7 +247,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user to which the resources belong.</para>
+            /// <para>The user ID of the resource owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141345906006****</para>
@@ -251,7 +259,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -271,7 +279,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</para>
+        /// <para>The request ID. If you encounter an issue, provide this request ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CD61041-35F7-10F7-BE94-33A48B22****</para>
@@ -281,7 +289,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of tasks that meet these constraints without taking pagination into account.</para>
+        /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

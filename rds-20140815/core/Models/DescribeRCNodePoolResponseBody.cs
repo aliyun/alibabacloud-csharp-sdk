@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node pool information.</para>
+        /// <para>The list of node pool information.</para>
         /// </summary>
         [NameInMap("NodePoolList")]
         [Validation(Required=false)]
         public List<DescribeRCNodePoolResponseBodyNodePoolList> NodePoolList { get; set; }
         public class DescribeRCNodePoolResponseBodyNodePoolList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to enable automatic payment. Valid values:</para>
+            /// <para>Indicates whether automatic payment is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b> (default): enables the feature. You must make sure that your account balance is sufficient.</description></item>
-            /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+            /// <item><description><b>true</b> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
+            /// <item><description><b>false</b>: Only an order is generated. No payment is made.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? AutoPay { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable auto-renewal for the instance. Valid values:</para>
+            /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b> (default)</description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b> (default): Enabled.</description></item>
+            /// <item><description><b>false</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container cluster in which the RDS Custom instance resides.</para>
+            /// <para>The ID of the RDS Custom container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c463aaa89e2b84cacacfbf23c4867****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to add the instance to the ACK cluster.</para>
+            /// <para>Indicates whether the node is allowed to join an ACK cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreateMode { get; set; }
 
             /// <summary>
-            /// <para>The data disks.</para>
+            /// <para>The list of data cloud disks.</para>
             /// </summary>
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
             public List<DescribeRCNodePoolResponseBodyNodePoolListDataDisk> DataDisk { get; set; }
             public class DescribeRCNodePoolResponseBodyNodePoolListDataDisk : TeaModel {
                 /// <summary>
-                /// <para>The type of the data disk. Set the value to <b>cloud_essd</b>, which indicates Enterprise SSDs (ESSDs).</para>
+                /// <para>The type of the data cloud disk. Only <b>cloud_essd</b> (ESSD cloud disk) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_essd</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The reserved parameter. This parameter is not supported.</para>
+                /// <para>A reserved parameter. This parameter is not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? DeleteWithInstance { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to encrypt the cloud disk. Valid values:</para>
+                /// <para>Indicates whether the cloud disk is encrypted. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b> (default)</description></item>
+                /// <item><description><b>true</b>: Encrypted.</description></item>
+                /// <item><description><b>false</b> (default): Not encrypted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,12 +106,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Encrypted { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD. Valid values:</para>
+                /// <para>The performance level (PL) of the standard SSD. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>PL0</b>: A single ESSD delivers up to 10,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL1</b>: A single ESSD delivers up to 50,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL2</b>: A single ESSD delivers up to 100,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL3</b>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
+                /// <item><description><b>PL0</b>: A maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL1</b>: A maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL2</b>: A maximum of 100,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL3</b>: A maximum of 1,000,000 random read/write IOPS per cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The data disk size. Unit: GiB.</para>
+                /// <para>The size of the data cloud disk. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The ID of the deployment set.</para>
+            /// <para>The deployment set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-bp18ukv66rlyuffv****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The instance hostname.</para>
+            /// <para>The hostname of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testHost1</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid value:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Prepaid</b>: subscription</description></item>
-            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>Prepaid</b>: subscription.</description></item>
+            /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string IoOptimized { get; set; }
 
             /// <summary>
-            /// <para>The key pair name.</para>
+            /// <para>The name of the key pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dell5502</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string NodePoolName { get; set; }
 
             /// <summary>
-            /// <para>The password of the root user of the instance.</para>
+            /// <para>The password of the root account of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testPassword</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration.</para>
+            /// <para>The subscription duration of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -288,10 +288,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period. Valid values:</para>
+            /// <para>The unit of the subscription billable methods duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Year</b></description></item>
-            /// <item><description><b>Month</b> (default)</description></item>
+            /// <item><description><b>Year</b>: year.</description></item>
+            /// <item><description><b>Month</b> (default): month.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmy****</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -352,14 +352,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>The specification of the system disk.</para>
+            /// <para>The system cloud disk specifications.</para>
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
             public DescribeRCNodePoolResponseBodyNodePoolListSystemDisk SystemDisk { get; set; }
             public class DescribeRCNodePoolResponseBodyNodePoolListSystemDisk : TeaModel {
                 /// <summary>
-                /// <para>The type of the system disk. Set the value to <b>cloud_essd</b>, which indicates ESSDs.</para>
+                /// <para>The type of the system cloud disk. Only <b>cloud_essd</b> (Enterprise SSD (ESSD)) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_essd</para>
@@ -369,12 +369,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD. Valid values:</para>
+                /// <para>The performance level (PL) of the standard SSD. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>PL0</b>: A single ESSD delivers up to 10,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL1</b>: A single ESSD delivers up to 50,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL2</b>: A single ESSD delivers up to 100,000 random read/write IOPS.</description></item>
-                /// <item><description><b>PL3</b>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
+                /// <item><description><b>PL0</b>: A maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL1</b>: A maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL2</b>: A maximum of 100,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description><b>PL3</b>: A maximum of 1,000,000 random read/write IOPS per cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The size of the system disk. Unit: GiB.</para>
+                /// <para>The size of the system cloud disk. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40</para>
@@ -397,14 +397,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeRCNodePoolResponseBodyNodePoolListTag> Tag { get; set; }
             public class DescribeRCNodePoolResponseBodyNodePoolListTag : TeaModel {
                 /// <summary>
-                /// <para>The tag keys.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Testkey1</para>
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag value that corresponds to the tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Testvalue1</para>

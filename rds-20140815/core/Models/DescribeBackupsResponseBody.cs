@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1A6D328C-84B8-40DC-BF49-6C73984D7494</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TotalEcsSnapshotSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

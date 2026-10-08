@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>Target instance ID. You can call the DescribeDBInstances operation to query target instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can leave this parameter empty.</para>
+        /// <para>The resource group ID. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</para>
+        /// <para>The replication slot name. You can call the DescribeSlots operation to query the replication slot name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SlotName { get; set; }
 
         /// <summary>
-        /// <para>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</para>
+        /// <para>The replication slot status. You can call the DescribeSlots operation to query the replication slot status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ACTIVE</b></description></item>
-        /// <item><description><b>INACTIVE</b></description></item>
+        /// <item><description><b>ACTIVE</b>: active.</description></item>
+        /// <item><description><b>INACTIVE</b>: inactive.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

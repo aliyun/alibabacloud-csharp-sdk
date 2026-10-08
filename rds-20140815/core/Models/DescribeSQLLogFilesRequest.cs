@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the audit log file.</para>
+        /// <para>The name of the audit file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>custinsxxxxx.csv</para>
+        /// <para>custins****.csv</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -39,7 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: <b>1 to 100000</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: <b>1 to 100000</b>.
+        /// Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

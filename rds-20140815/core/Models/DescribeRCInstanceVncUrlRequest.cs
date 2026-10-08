@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceVncUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>mssql</b>: SQL Server</description></item>
         /// <item><description><b>mysql</b>: MySQL</description></item>

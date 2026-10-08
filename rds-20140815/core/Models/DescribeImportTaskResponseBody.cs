@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeImportTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myadmin</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Account { get; set; }
 
         /// <summary>
+        /// <para>The Milvus version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbVersion { get; set; }
 
         /// <summary>
+        /// <para>The detailed information about the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Error Message</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Detail { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A103039D-B1B2-4C57-B989-7D7C0DA95426</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The category of the source instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECS</b>: Alibaba Cloud ECS.</description></item>
+        /// <item><description><b>other</b>: Other.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>aliyunRDS</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceCategory { get; set; }
 
         /// <summary>
+        /// <para>The source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>59.172.25.122</para>
         /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The source MySQL port.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3306</para>
         /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourcePort { get; set; }
 
         /// <summary>
+        /// <para>The task status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Importing</para>
         /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination disaster recovery instance for the switchover.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-t4neh0q12v1******</para>
         /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>416980000</para>
         /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test01</para>
         /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>The task type. This parameter is used to query tasks of specific types. Separate multiple task types with commas (,). A maximum of 30 task types are supported. If this parameter is left empty, tasks of all types are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>import</para>
         /// </summary>

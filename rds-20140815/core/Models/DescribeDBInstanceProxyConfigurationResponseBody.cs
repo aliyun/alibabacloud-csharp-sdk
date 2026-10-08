@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceProxyConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the mechanism that is used to mitigate brute-force attacks is enabled:</para>
+        /// <para>Indicates whether brute-force attacks protection is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
         /// </list>
-        /// <para>The return value is a JSON string. Example:</para>
+        /// <para>The return value is a JSON character string in the following format:</para>
         /// <pre><c>{&quot;status&quot;:&quot;Disable&quot;, &quot;check_interval_seconds&quot;: 60,
         ///           &quot;max_failed_login_attempts&quot;: 60, &quot;blocking_seconds&quot;: 600}
         /// </c></pre>
-        /// <para>Description:</para>
+        /// <para>Parameter description and value ranges:</para>
         /// <list type="bullet">
-        /// <item><description><para>Each client allows {max_failed_login_attempts} logon attempts that fail due to incorrect passwords within {check_interval_seconds} seconds. If one more such attempt is conducted, the client must wait for {blocking_seconds} seconds before you can try again.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description>For each client, a maximum of max_failed_login_attempts fault password logon attempts are allowed within check_interval_seconds seconds. If the limit is exceeded, the client IP address is blocked for blocking_seconds seconds.</description></item>
+        /// <item><description>Value ranges:<list type="bullet">
         /// <item><description>check_interval_seconds: <b>30 to 600</b>. Unit: seconds.</description></item>
-        /// <item><description>max_failed_login_attempts: <b>10 to 5000</b>. Unit: times.</description></item>
+        /// <item><description>max_failed_login_attempts: <b>10 to 5000</b>. Unit: attempts.</description></item>
         /// <item><description>blocking_seconds: <b>30 to 3600</b>. Unit: seconds.</description></item>
         /// </list>
         /// </description></item>
@@ -40,12 +38,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AttacksProtectionConfiguration { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the short-lived connection optimization feature is enabled.</para>
+        /// <para>Indicates whether short-lived connection optimization is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
         /// </list>
-        /// <para>In this case, the return value is a JSON string. Examples:</para>
+        /// <para>The return value is a JSON string in the following format:</para>
         /// <pre><c>{&quot;status&quot;:&quot;Disable&quot;}.
         /// </c></pre>
         /// 
@@ -67,13 +65,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the transparent switchover feature is enabled.</para>
+        /// <para>Indicates whether transparent switchover is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
         /// </list>
-        /// <para>The return value is a JSON string. Example:</para>
-        /// <pre><c>{&quot;status&quot;:&quot;Enable&quot;}
+        /// <para>The return value is a JSON string in the following format:</para>
+        /// <pre><c>{&quot;status&quot;:&quot;Enable&quot;}.
         /// </c></pre>
         /// 
         /// <b>Example:</b>

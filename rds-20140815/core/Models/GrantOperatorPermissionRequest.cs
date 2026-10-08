@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantOperatorPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The expiration time of the permissions. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant to the service account. Valid values:</para>
+        /// <para>The authorization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Control</b>: the configuration permissions, which allow you to view and modify configurations of the instance.</description></item>
-        /// <item><description><b>Data</b>: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.</description></item>
+        /// <item><description><b>Control</b>: configuration permissions. You can view and modify instance configurations.</description></item>
+        /// <item><description><b>Data</b>: database permissions. You can view table schemas, indexes, and SQL statements.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

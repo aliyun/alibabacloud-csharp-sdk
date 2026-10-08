@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceSwitchLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>rdsaiiabnaiiabn</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,14 +74,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>60</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D1CA494F-CC13-4EB6-8C4D-5352EE4045BD</para>
         /// </summary>
@@ -86,8 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

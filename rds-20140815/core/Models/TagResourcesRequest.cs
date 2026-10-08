@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTANCE</b>: regular ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>CUSTOM</b>: RDS Custom instance.</description></item>
+        /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: RDS Custom deployment set.</description></item>
+        /// <item><description><b>CUSTOMDISK</b>: RDS Custom cloud disk.</description></item>
+        /// <item><description><b>CUSTOMSNAPSHOT</b>: RDS Custom snapshot.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can create N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. The value of this parameter cannot be an empty string.</para>
+            /// <para>The tag key. Empty values and duplicate values are <b>not allowed</b>.</para>
+            /// <remarks>
+            /// <para>An existing tag key is overwritten by a new tag key with the same name.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can create N tag values at a time. Valid values of N: <b>1</b> to <b>20</b>. The value of this parameter can be an empty string.</para>
+            /// <para>The tag value. Empty values are <b>allowed</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

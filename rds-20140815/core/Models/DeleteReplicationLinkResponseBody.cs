@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteReplicationLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the DR instance.</para>
+        /// <para>The instance ID of the disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pgm-bp1trqb4p1xd****</para>
+        /// <para>PostgreSQL：pgm-bp1trqb4p1******
+        /// SQL Server：135****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>847BA085-B377-4BFA-8267-F82345ECE1D2</para>
+        /// <para>1EFCFB59-7152-19C4-8C53-F887D107AFD3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3472****</para>
+        /// <para>159****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test01</para>
+        /// <para>zbtest</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

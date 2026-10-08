@@ -14,17 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AllocateStrategy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance. For more information, see <a href="https://help.aliyun.com/document_detail/127458.html">Upgrade the major engine version</a>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
-        /// </list>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>When you upgrade the major engine version, you must also specify the required parameters such as DBInstanceId, EngineVersion, DBInstanceClass, Category, ZoneId, and VSwitchId.</description></item>
-        /// <item><description>If you want to upgrade the instance edition to RDS High-availability Edition or RDS Cluster Edition, you must specify ZoneIdSlave1.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>Specifies whether to enable <a href="https://help.aliyun.com/document_detail/127458.html">major engine version upgrade</a> for the SQL Server instance. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,21 +24,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AllowMajorVersionUpgrade { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use vouchers to offset fees. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
-        /// </list>
+        /// <para>Specifies whether to use coupons to offset fees. Valid values:</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O performance burst feature for Premium ESSDs</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -58,23 +48,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/53509.html">instance edition</a>. Valid values:</para>
         /// <remarks>
-        /// <para> If you set <b>EngineVersion</b> to an SQL Server version number, you must also specify this parameter.</para>
+        /// <para>This parameter is required if <b>EngineVersion</b> is set to a SQL Server version number.</para>
         /// </remarks>
-        /// <para><b>Regular RDS instances</b></para>
+        /// <details>
+        /// <summary>Regular ApsaraDB RDS instances</summary>
+        /// 
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition.</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition.</description></item>
-        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</description></item>
-        /// <item><description><b>Cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</description></item>
+        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
+        /// <item><description><b>AlwaysOn</b>: SQL Server Cluster Edition</description></item>
+        /// <item><description><b>Cluster</b>: MySQL Cluster Edition.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;<b>Finance</b>: Enterprise Edition</description></item>
         /// </list>
-        /// <para><b>Serverless instances. ApsaraDB RDS for MariaDB does not support serverless instances.</b></para>
+        /// </details>
+        /// 
+        /// <details>
+        /// <summary>Serverless ApsaraDB RDS instances (not supported for MariaDB)</summary>
+        /// 
         /// <list type="bullet">
-        /// <item><description><b>serverless_basic</b>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</description></item>
-        /// <item><description><b>serverless_standard</b>: RDS High-availability Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</description></item>
-        /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
+        /// <item><description><b>serverless_basic</b>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_standard</b>: Serverless High-availability Edition (applicable only to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_ha</b>: Serverless High-availability Edition (applicable only to SQL Server)</description></item>
         /// </list>
+        /// </details>
         /// 
         /// <b>Example:</b>
         /// <para>HighAvailability</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2701832.html">cold data archiving feature</a> for premium performance disks. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -94,11 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? ColdDataEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the storage compression feature for the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/2861985.html">Use the storage compression feature</a>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
-        /// </list>
+        /// <para>The MySQL <a href="https://help.aliyun.com/document_detail/2861985.html">storage compression feature</a>. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -108,59 +102,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressionMode { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the new instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Specifications</a>. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the instance types.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must specify at least one of DBInstanceClass and <b>DBInstanceStorage</b>.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the current instance type of the instance.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/26312.html">target instance type</a>. You can call <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> to query the instance types to which the instance can be changed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mys2.small</para>
+        /// <para>mysql.n8.large.2c</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the instance IDs.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*******</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Storage types</a>. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the storage capacity range that is supported by the new instance type.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must specify at least one of DBInstanceStorage and <b>DBInstanceClass</b>.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the current storage capacity of the instance.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>. Unit: GB. You can call <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> to query the available storage capacity range for the target instance type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the new instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSD.</description></item>
-        /// <item><description><b>cloud_ssd</b>: SSD cloud disks. This storage medium is not recommended and is unavailable in specific Alibaba Cloud regions.</description></item>
-        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) Enterprise SSD (ESSD).</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
-        /// </list>
-        /// <para>To change the storage type, take note of the following items:</para>
-        /// <para>If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSDs to ESSDs. However, you cannot downgrade the storage type of the instance from ESSDs to standard SSDs. ESSDs provide the following PLs: ESSDs of PL1, ESSDs of PL2, and ESSDs of PL3. You can upgrade or downgrade the storage type between ESSD of PL1, ESSD of PL2, and ESSD of PL3. For more information, see <a href="https://help.aliyun.com/document_detail/96750.html">Configuration items</a>.</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>local_ssd</para>
@@ -170,25 +143,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated cluster.</para>
+        /// <para>The dedicated cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-7a9********</para>
+        /// <para>dhg-7a9****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of change that you want to perform on the instance. Valid values:</para>
+        /// <para>The type of specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Up</b> (default): upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</description></item>
-        /// <item><description><b>Down</b>: downgrades a subscription instance.</description></item>
-        /// <item><description><b>TempUpgrade</b>: performs auto scaling on a subscription instance that runs SQL Server. This value is required for auto scaling.</description></item>
-        /// <item><description><b>Serverless</b>: modifies the auto scaling settings of a serverless instance.</description></item>
+        /// <item><description><b>Up</b> (default): upgrade of a subscription instance or upgrade/downgrade of a pay-as-you-go instance.</description></item>
+        /// <item><description><b>Down</b>: downgrade of a subscription instance.</description></item>
+        /// <item><description><b>TempUpgrade</b>: elastic specification change of a subscription ApsaraDB RDS for SQL Server instance. This value is required for elastic specification changes.</description></item>
+        /// <item><description><b>Serverless</b>: configuration of elastic settings for a serverless instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify only <b>DBInstanceStorageType</b>, you can leave Direction empty. For example, if you want to change only the storage type of the instance from standard SSD to Enterprise SSD (ESSD), you do not need to specify Direction.</para>
+        /// <para>If you want to change only the <b>DBInstanceStorageType</b> parameter, for example, from standard SSD to ESSD, leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -199,14 +172,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The time when the new specifications take effect. Valid values:</para>
+        /// <para>The time when the new configurations take effect. Valid values:</para>
         /// <remarks>
-        /// <para> <b>Specific changes may affect the instance</b>. Read the <a href="https://help.aliyun.com/document_detail/96061.html">Impact</a> section before you specify this parameter. We recommend that you specify this parameter during off-peak hours.</para>
+        /// <para><b>Changing certain configurations may affect the instance</b>. Read the <a href="https://help.aliyun.com/document_detail/96061.html">impact section in the feature documentation</a> before configuring this parameter. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b> (default): The changes immediately take effect.</description></item>
-        /// <item><description><b>MaintainTime</b>: The changes take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a> of the instance.</description></item>
-        /// <item><description><b>ScheduleTime</b>: The changes take effect at the point in time that you specify. This time must be at least 12 hours later than the current time. The actual effective time is calculated based on the following formula: EffectiveTime = ScheduleTime + SwitchTime.</description></item>
+        /// <item><description><b>Immediate</b> (default): The new configurations take effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The new configurations take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</description></item>
+        /// <item><description><b>ScheduleTime</b>: The new configurations take effect at a specified time. The specified time must be at least 12 hours later than the current time. The actual switchover time follows the rule: EffectiveTime = ScheduleTime + SwitchTime.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,44 +190,51 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
-        /// <para><b>Regular RDS instances</b></para>
+        /// <para>The database engine version. Valid values:</para>
+        /// <details>
+        /// <summary>Regular ApsaraDB RDS instances</summary>
+        /// 
         /// <list type="bullet">
-        /// <item><description>Valid values when Engine is set to MySQL: 5.5, 5.6, 5.7, and 8.0.</description></item>
-        /// <item><description>Valid values when Engine is set to SQLServer: 2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent.</description></item>
-        /// <item><description>Valid values when Engine is set to PostgreSQL: 10.0, 11.0, 12.0, 13.0, 14.0, and 15.0.</description></item>
-        /// <item><description>Valid value when Engine is set to MariaDB: 10.3.</description></item>
+        /// <item><description>MySQL: 5.5, 5.6, 5.7, 8.0</description></item>
+        /// <item><description>SQL Server: 2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, 2019_ent, 2022_web, 2022_std_ha, 2022_ent, 2025_std, 2025_ent</description></item>
+        /// <item><description>PostgreSQL: 10.0, 11.0, 12.0, 13.0, 14.0, 15.0</description></item>
+        /// <item><description>MariaDB: 10.3</description></item>
         /// </list>
-        /// <para><b>Serverless instances. ApsaraDB RDS for MariaDB does not support serverless instances.</b></para>
+        /// </details>
+        /// 
+        /// <details>
+        /// <summary>Serverless ApsaraDB RDS instances (MariaDB is not supported)</summary>
+        /// 
         /// <list type="bullet">
-        /// <item><description>Valid values when Engine is set to MySQL: 5.7 and 8.0.</description></item>
-        /// <item><description>Valid values when Engine is set to SQL Server: 2016_std_sl, 2017_std_sl, and 2019_std_sl.</description></item>
-        /// <item><description>Valid values when Engine is set to PostgreSQL: 14.0, 15.0, and 16.0.</description></item>
+        /// <item><description>MySQL: 5.7, 8.0</description></item>
+        /// <item><description>SQL Server: 2016_std_sl, 2017_std_sl, 2019_std_sl</description></item>
+        /// <item><description>PostgreSQL: 14.0, 15.0, 16.0</description></item>
         /// </list>
+        /// </details>
         /// 
         /// <b>Example:</b>
-        /// <para>5.6</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature</a> for premium performance disks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Not enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the write optimization feature for the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the write optimization feature</a>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>optimized</b>: enables the feature.</description></item>
-        /// <item><description><b>none</b>: disables the feature.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable the MySQL <a href="https://help.aliyun.com/document_detail/2858761.html">16KB atomic write feature</a>. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -276,10 +256,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
-        /// <item><description><b>Serverless</b>: serverless. This value is not supported for ApsaraDB RDS for MariaDB instances.</description></item>
+        /// <item><description><b>Serverless</b> (not supported for MariaDB instances): serverless billing method.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you want to set this parameter to Serverless, **you must specify **AutoPause, MaxCapacity, MinCapacity, and SwitchForce. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</para>
+        /// <para>To change the billing method to Serverless, you <b>must configure the following parameters</b>: automatic start and stop (AutoPause), scaling range (MaxCapacity and MinCapacity), and elastic policy (SwitchForce). For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Introduction to MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Introduction to SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Introduction to PostgreSQL Serverless instances</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -293,27 +273,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>723298850895</para>
+        /// <para>72329885****</para>
         /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The specification of the read-only instance when you change the storage type of the ApsaraDB RDS for MySQL instance that runs RDS High-availability Edition from cloud disk to local disk.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/276980.html">target instance type of read-only instances</a> when you perform an Upgrade/Downgrade to change a MySQL high availability (HA) instance with Premium Local SSDs to a cloud disk instance. This parameter is active only when the instance meets the requirements.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mysqlro.n2.large.c</para>
+        /// <para>mysqlro.n2.large.1c</para>
         /// </summary>
         [NameInMap("ReadOnlyDBInstanceClass")]
         [Validation(Required=false)]
         public string ReadOnlyDBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy**********</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -328,21 +308,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specifications that you want to change for a serverless instance.</para>
+        /// <para>The serverless instance configuration for the specification change.</para>
         /// </summary>
         [NameInMap("ServerlessConfiguration")]
         [Validation(Required=false)]
         public ModifyDBInstanceSpecRequestServerlessConfiguration ServerlessConfiguration { get; set; }
         public class ModifyDBInstanceSpecRequestServerlessConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the automatic start and stop feature for the serverless instance that runs MySQL or PostgreSQL. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.</para>
-            /// </remarks>
+            /// <para>The <a href="https://help.aliyun.com/document_detail/2838448.html">intelligent suspension and startup</a> feature for MySQL Serverless or PostgreSQL Serverless instances. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -355,15 +328,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? AutoPause { get; set; }
 
             /// <summary>
-            /// <para>The <b>maximum</b> number of RDS Capacity Units (RCUs). Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>1 to 32</b></description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 16</b>. Only integers are supported.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>1 to 14</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> The value of this parameter must be greater than or equal to the value of <b>MinCapacity</b>.</para>
-            /// </remarks>
+            /// <para>The <b>maximum</b> value of the automatic scaling range for RCUs of the serverless instance. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -373,15 +338,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public double? MaxCapacity { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of RCUs. Valid values:****</para>
-            /// <list type="bullet">
-            /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>0.5 to 32</b>.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b>. Only integers are supported.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>0.5 to 14</b>.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> The value of this parameter must be less than or equal to the value of MaxCapacity.</para>
-            /// </remarks>
+            /// <para>The <b>minimum</b> value of the automatic scaling range for RCUs of the serverless instance. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -391,19 +348,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public double? MinCapacity { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the forceful scaling feature for the serverless instance that runs MySQL or PostgreSQL. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
-            /// </list>
-            /// <remarks>
-            /// </remarks>
-            /// <list type="bullet">
-            /// <item><description><para>If you set this parameter to true, <b>a service interruption that lasts 30 to 120 seconds occurs during forced scaling</b>. Process with caution.</para>
-            /// </description></item>
-            /// <item><description><para>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether to enable forced scaling for MySQL Serverless or PostgreSQL Serverless instances. Elastic scaling of instance RCUs usually takes effect immediately, but in certain special cases (such as during large transaction execution), scaling cannot be completed instantly. In such cases, you can enable this parameter to force scaling. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -415,24 +360,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
+        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Specifies whether to enable the automatic suspension feature.</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]
         public string SourceBiz { get; set; }
 
         /// <summary>
-        /// <para>The time at which you want to change the specifications. <b>We recommend that you perform the specification changes during off-peak hours.</b></para>
-        /// <para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>The time at which you want to change the specifications <b>must be later than the current time</b>. Otherwise, the specification change task fails. If the specification change task fails, you must wait for the order to be automatically canceled, and then call this operation again.</description></item>
-        /// <item><description>If you want to increase the storage capacity or change the ESSD storage type between different PLs, the specification change immediately takes effect and does not affect your workloads. You do not need to specify this parameter.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>The time at which the specification change is performed. <b>Perform the specification change during off-peak hours.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-10T13:15:12Z</para>
@@ -442,8 +380,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version number of the ApsaraDB RDS for PostgreSQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Update the minor engine version</a>. If the minor engine version does not support changing the instance type, you must specify the minor engine version to <b>update the minor engine version when you change the instance type</b>.</para>
-        /// <para>Format: <c>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</c>. For example, if the instance runs PostgreSQL 12, set this parameter to <c>rds_postgres_1200_20200830</c>.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. If the specification change fails because the minor engine version is not supported, specify this parameter to <b>upgrade the minor engine version during the specification change</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_postgres_1200_20200830</para>
@@ -453,7 +390,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the specification changes on an ApsaraDB RDS for SQL Server instance. At the end of the validity period, the specifications of the instance are restored to the specifications that are used before an <a href="https://help.aliyun.com/document_detail/95665.html">elastic upgrade</a> is performed. Unit: days.</para>
+        /// <para>The duration of the SQL Server <a href="https://help.aliyun.com/document_detail/95665.html">elastic upgrade</a>. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -463,33 +400,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
-        /// <list type="bullet">
-        /// <item><description>If you set <b>InstanceNetworkType</b> to <b>VPC</b>, you must also specify this parameter.</description></item>
-        /// <item><description>If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If you want to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance by specifying AllowMajorVersionUpgrade or change the vSwitch, you must specify this parameter.</para>
-        /// </remarks>
+        /// <para>The vSwitch ID. The zone of the vSwitch must correspond to the zone ID specified in <b>ZoneId</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-bp1oxflciovg9l7163lr7</para>
+        /// <para>vsw-bp1oxflciovg9l7******</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The RDS edition of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Basic</b>: RDS Basic Edition.</description></item>
-        /// <item><description><b>HighAvailability</b>: RDS High-availability Edition.</description></item>
-        /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for SQL Server.</description></item>
-        /// <item><description><b>Finance</b>: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you set <b>EngineVersion</b> to an SQL Server version number, you must also specify this parameter.</para>
-        /// </remarks>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>
@@ -499,10 +420,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the secondary instance. If you set this parameter to the same value as <b>ZoneId</b>, the single-zone deployment method is used. If you set this parameter to a different value from <b>ZoneId</b>, the multi-zone deployment method is used.</para>
-        /// <remarks>
-        /// <para> If you want to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance by specifying AllowMajorVersionUpgrade or change the secondary zone, you must specify this parameter.</para>
-        /// </remarks>
+        /// <para>The zone ID of the secondary node. If this value is the same as <b>ZoneId</b>, the instance uses single-zone deployment. If this value is different from <b>ZoneId</b>, the instance uses multi-zone deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-c</para>

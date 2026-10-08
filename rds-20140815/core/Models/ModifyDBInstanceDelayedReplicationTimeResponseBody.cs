@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceDelayedReplicationTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID of the read-only instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rr-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The replication latency of the read-only instance. Unit: seconds.</para>
+        /// <para>The replication delay time of the read-only instance. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

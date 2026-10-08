@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReplicationLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DR instance.</para>
+        /// <para>The instance ID of the disaster recovery instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pgm-bp1trqb4p1xd****</para>
+        /// <para>rm-2zeytekus0r******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run before the system creates the DR instance. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run for creating the synchronization link of the disaster recovery instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run but does not create the instance. The system checks the request parameters, request syntax, limits, and available resources.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and the actual request. If the request passes the dry run, the instance is directly created.</description></item>
+        /// <item><description><b>true</b>: Executes a dry run without creating the instance. The system checks items such as request parameters, request format, business limits, and inventory.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and creates the instance after the check is passed.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The account of the database that is used for data synchronization.</para>
+        /// <para>The database account used for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdbuser</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicatorAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the account.</para>
+        /// <para>The password of the synchronization account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testpassword</para>
@@ -56,20 +56,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicatorPassword { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the source ApsaraDB RDS for PostgreSQL instance or the IP address of the source ApsaraDB RDS for SQL Server instance.</para>
+        /// <para>The endpoint of the PostgreSQL source instance or the IP address of the SQL Server source instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pgm-****.pg.rds.aliyuncs.com</para>
+        /// <para>PostgreSQL：pgm-****.pg.rds.aliyuncs.com
+        /// SQL Server：10.XX.XXX.XXX</para>
         /// </summary>
         [NameInMap("SourceAddress")]
         [Validation(Required=false)]
         public string SourceAddress { get; set; }
 
         /// <summary>
-        /// <para>The type of the source instance. Valid values:</para>
+        /// <para>The category of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>other</b>: other instances. <b>SQL Server instances are not supported.</b></description></item>
-        /// <item><description><b>aliyunRDS</b>: an ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>other</b>: Other. (<b>Not supported for SQL Server.</b>)</description></item>
+        /// <item><description><b>aliyunRDS</b>: ApsaraDB RDS instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,17 +81,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the source instance. If you set <b>SourceCategory</b> to <b>aliyunRDS</b>, this parameter is required.</para>
+        /// <para>The name of the source instance. This parameter is required when <b>SourceCategory</b> is set to <b>aliyunRDS</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testInstance</para>
+        /// <para>rm-2zeaaz62s18******</para>
         /// </summary>
         [NameInMap("SourceInstanceName")]
         [Validation(Required=false)]
         public string SourceInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source instance. If you set <b>SourceCategory</b> to <b>aliyunRDS</b>, this parameter is required.</para>
+        /// <para>The region ID of the source instance. This parameter is required when <b>SourceCategory</b> is set to <b>aliyunRDS</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -110,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the DR instance of the ApsaraDB RDS for SQL Server instance.</para>
+        /// <para>The IP address of the SQL Server disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XXX.XX.XXX</para>
@@ -120,20 +121,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetAddress { get; set; }
 
         /// <summary>
-        /// <para>The task ID of the successful dry run.</para>
+        /// <para>The ID of a successful dry run task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>439946016</para>
+        /// <para>43994****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name of the dry run. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</para>
+        /// <para>The name of the dry run task. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test01</para>
+        /// <para>zbtest</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

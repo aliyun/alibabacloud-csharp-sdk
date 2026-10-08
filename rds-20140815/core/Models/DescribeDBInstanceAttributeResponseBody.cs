@@ -231,6 +231,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DisasterRecoveryInstances { get; set; }
 
+                [NameInMap("DrReplicaInfo")]
+                [Validation(Required=false)]
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo DrReplicaInfo { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo : TeaModel {
+                    [NameInMap("InsName")]
+                    [Validation(Required=false)]
+                    public string InsName { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("UnitCode")]
+                    [Validation(Required=false)]
+                    public string UnitCode { get; set; }
+
+                }
+
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
@@ -346,6 +364,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("MultipleTempUpgrade")]
                 [Validation(Required=false)]
                 public bool? MultipleTempUpgrade { get; set; }
+
+                [NameInMap("NodePerformance")]
+                [Validation(Required=false)]
+                public string NodePerformance { get; set; }
 
                 [NameInMap("OptimizedWritesInfo")]
                 [Validation(Required=false)]
@@ -497,6 +519,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                [NameInMap("WarmStandbyInfo")]
+                [Validation(Required=false)]
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo WarmStandbyInfo { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo : TeaModel {
+                    [NameInMap("InsName")]
+                    [Validation(Required=false)]
+                    public string InsName { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("UnitCode")]
+                    [Validation(Required=false)]
+                    public string UnitCode { get; set; }
+
+                }
+
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -510,7 +550,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

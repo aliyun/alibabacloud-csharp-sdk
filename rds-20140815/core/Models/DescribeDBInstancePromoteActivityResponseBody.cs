@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePromoteActivityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22973492**********</para>
@@ -21,22 +21,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>China site: 26842</description></item>
+        /// <item><description>Chinese site: 26842</description></item>
         /// <item><description>International site: 26888</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>268**</para>
+        /// <para>26888</para>
         /// </summary>
         [NameInMap("Bid")]
         [Validation(Required=false)]
         public string Bid { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5******</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>PostgreSQL</b></description></item>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The activity information about the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance activities</a>.</para>
+        /// <para>The dynamic property of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>1 (indicates that the target instance is not participating in any promotions)</para>
         /// </summary>
         [NameInMap("IsActivity")]
         [Validation(Required=false)]

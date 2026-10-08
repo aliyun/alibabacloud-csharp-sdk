@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run for this release operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</description></item>
+        /// <item><description><b>true</b>: Performs a dry run without releasing the instance.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and directly releases the instance after the request passes the check.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release a running instance. Valid values:</para>
+        /// <para>Specifies whether to forcefully release running instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Yes</b></description></item>
-        /// <item><description><b>No</b> (default)</description></item>
+        /// <item><description><b>Yes</b>: Forcefully releases the instances.</description></item>
+        /// <item><description><b>No</b> (default): Does not forcefully release the instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The instance details.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
@@ -56,14 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release an expired subscription instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
-        /// </list>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("TerminateSubscription")]
         [Validation(Required=false)]

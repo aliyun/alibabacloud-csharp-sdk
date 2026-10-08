@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchOverMajorVersionUpgradeRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -32,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -41,6 +47,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public byte[] RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -54,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the switchover operation. The operation is canceled after it has been performed for a time period that exceeds the value. Unit: seconds. Valid value: 10 to 3600.</para>
+        /// <para>The maximum tolerable time for the switchover, in seconds. If the switchover exceeds this time, it is canceled. Valid values: 10 to 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,11 +76,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SwitchoverTimeout { get; set; }
 
         /// <summary>
-        /// <para>The type of the switchover operation. Valid values:</para>
+        /// <para>The type of switchover operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>switch</description></item>
-        /// <item><description>cancel</description></item>
-        /// <item><description>interrupt</description></item>
+        /// <item><description>switch: performs the switchover.</description></item>
+        /// <item><description>cancel: cancels the switchover.</description></item>
+        /// <item><description>interrupt: interrupts the switchover.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

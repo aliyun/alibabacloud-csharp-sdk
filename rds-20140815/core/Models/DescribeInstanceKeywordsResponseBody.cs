@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceKeywordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of reserved keyword returned.</para>
+        /// <para>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>

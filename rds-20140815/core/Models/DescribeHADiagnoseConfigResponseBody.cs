@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The availability check method of the instance. Valid values:</para>
+        /// <para>The availability check method that Alibaba Cloud uses for the ApsaraDB RDS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LONG</b>: Alibaba Cloud uses persistent connections to check the availability of the instance.</description></item>
-        /// <item><description><b>SHORT</b>: Alibaba Cloud uses short-lived connections to check the availability of the instance.</description></item>
+        /// <item><description><b>LONG</b>: persistent connection.</description></item>
+        /// <item><description><b>SHORT</b>: short-lived connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

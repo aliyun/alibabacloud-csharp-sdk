@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceCrossBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the cross-region backup feature on the instance. Valid values:</para>
+        /// <para>The status of the cross-region backup feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b></description></item>
-        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b>: disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEnabled { get; set; }
 
         /// <summary>
-        /// <para>The point in time at which the cross-region backup feature is enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when cross-region backup was enabled. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-12T05:44:21Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEnabledTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region where the cross-region backup files of the instance are stored.</para>
+        /// <para>The ID of the destination region for cross-region backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupRegion { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to save the cross-region backup files of the instance. Default value: <b>1</b>. The value 1 indicates that all cross-region backup files are saved.</para>
+        /// <para>The storage type for cross-region backup. Default value: <b>1</b>, which indicates that each backup is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,13 +54,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <para>The instance name. The name is 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter or a Chinese character.</para>
         /// <remarks>
-        /// <para> The value cannot start with http:// or https://.</para>
+        /// <para>The name cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Test database</para>
+        /// <para>testdb</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
         /// <item><description><b>LockByExpiration</b>: The instance is automatically locked due to instance expiration.</description></item>
         /// <item><description><b>LockByRestoration</b>: The instance is automatically locked before a rollback.</description></item>
-        /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</description></item>
+        /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because the storage space is exhausted. The instance is inaccessible.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the cross-region log backup feature on the instance. Valid values:</para>
+        /// <para>The status of the cross-region log backup feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b></description></item>
-        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b>: disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LogBackupEnabled { get; set; }
 
         /// <summary>
-        /// <para>The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when cross-region log backup was enabled. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-12T05:44:21Z</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain the cross-region backup files of the instance. Default value: <b>1</b>. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</para>
+        /// <para>The retention method for cross-region backup. Default value: <b>1</b>, which indicates that backups are retained based on the specified retention period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? RetentType { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the cross-region backup files of the instance are retained. Valid values: <b>7 to 1825</b>.</para>
+        /// <para>The number of days for which cross-region backups are retained. Valid values: <b>7 to 1825</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

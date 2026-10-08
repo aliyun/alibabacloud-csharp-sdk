@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <remarks>
-        /// <para> If you specify this parameter, you must also specify the <b>SecretName</b> parameter. parameter.</para>
+        /// <para>This parameter must be specified together with <b>SecretName</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The engine of the database.</para>
+        /// <para>The database engine type.</para>
         /// <remarks>
-        /// <para>Only MySQL is supported.</para>
+        /// <para>This parameter currently supports only the value MySQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.</para>
+        /// <para>The user credential of the Data API account that has been created. You can call the createSecret operation to query the value of this parameter.</para>
         /// <remarks>
-        /// <para> You must specify one of the SecretArn and <b>SecretName</b> parameters.</para>
+        /// <para>You must specify either <b>SecretName</b> or this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,11 +93,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the credential.</para>
+        /// <para>The name of the user credential.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify one of <b>SecretArn</b> and SecretName.</description></item>
-        /// <item><description>If you specify this parameter, you must also specify <b>DbInstanceId</b>.</description></item>
+        /// <item><description>You must specify either <b>SecretArn</b> or this parameter.</description></item>
+        /// <item><description>This parameter must be specified together with <b>DbInstanceId</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 

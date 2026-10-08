@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceReplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the native replication mods is enabled. Valid values:</para>
+        /// <para>Indicates whether native replication mode is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b></description></item>
-        /// <item><description><b>OFF</b></description></item>
+        /// <item><description><b>ON</b>: Enabled.</description></item>
+        /// <item><description><b>OFF</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ExternalReplication { get; set; }
 
         /// <summary>
+        /// <para>The executed global transaction identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</para>
         /// </summary>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GtidExecuted { get; set; }
 
         /// <summary>
-        /// <para>COMPLETED: 导入完成，INIT: 初始化，IMPORTING: 正在导入</para>
+        /// <para>The import status, which indicates whether full data is successfully imported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETED</para>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ImportStatus { get; set; }
 
         /// <summary>
-        /// <para>The replication latency. Unit: seconds.</para>
+        /// <para>The current replication delay, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicationErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the replication endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.10.x</para>
         /// </summary>
@@ -70,6 +74,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicationIp { get; set; }
 
         /// <summary>
+        /// <para>The port of the replication endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3306</para>
         /// </summary>
@@ -78,10 +84,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicationPort { get; set; }
 
         /// <summary>
-        /// <para>The source of the native replication.</para>
+        /// <para>The replication source of native replication.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.x.x</para>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("ReplicationSource")]
         [Validation(Required=false)]
@@ -90,17 +96,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The current replication status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Connecting</b></description></item>
-        /// <item><description><b>Stopped</b></description></item>
-        /// <item><description><b>Error</b></description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Connecting</b>: Connecting.</description></item>
+        /// <item><description><b>Stopped</b>: Stopped.</description></item>
+        /// <item><description><b>Error</b>: Error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Running
-        /// Connecting
-        /// Stopped
-        /// Error</para>
+        /// <para>Stopped</para>
         /// </summary>
         [NameInMap("ReplicationState")]
         [Validation(Required=false)]
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExecutedGtidSet { get; set; }
 
             /// <summary>
-            /// <para>0表示无错误，其他值表示具体的错误代码</para>
+            /// <para>A value of 0 indicates no error. Other values indicate specific error codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? LastErrno { get; set; }
 
             /// <summary>
-            /// <para>0表示无错误，其他值表示IO线程的错误代码</para>
+            /// <para>A value of 0 indicates no error. Other values indicate error codes of the I/O thread.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -161,14 +164,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? LastIoErrno { get; set; }
 
             /// <summary>
-            /// <para>IO线程的错误信息描述</para>
+            /// <para>The error message description of the I/O thread.</para>
             /// </summary>
             [NameInMap("LastIoError")]
             [Validation(Required=false)]
             public string LastIoError { get; set; }
 
             /// <summary>
-            /// <para>0表示无错误，其他值表示SQL线程的错误代码</para>
+            /// <para>A value of 0 indicates no error. Other values indicate error codes of the SQL thread.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? LastSqlErrno { get; set; }
 
             /// <summary>
-            /// <para>SQL线程的错误信息描述</para>
+            /// <para>The error message description of the SQL thread.</para>
             /// </summary>
             [NameInMap("LastSqlError")]
             [Validation(Required=false)]
@@ -265,7 +268,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? SecondsBehindMaster { get; set; }
 
             /// <summary>
-            /// <para>Yes: 运行中，No: 已停止</para>
+            /// <para>Valid values: Yes (running) and No (stopped).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Yes</para>
@@ -283,7 +286,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SlaveIoState { get; set; }
 
             /// <summary>
-            /// <para>Yes: 运行中，No: 已停止</para>
+            /// <para>Valid values: Yes (running) and No (stopped).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Yes</para>

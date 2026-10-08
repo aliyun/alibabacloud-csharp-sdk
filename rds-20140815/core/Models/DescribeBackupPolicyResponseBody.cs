@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The number of archived backup files that are retained.</para>
+        /// <para>The number of archived backups retained for the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupKeepCount { get; set; }
 
         /// <summary>
-        /// <para>The cycle based on which archived backup files are retained.</para>
+        /// <para>The retention cycle of archived backups for the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ByMonth</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupKeepPolicy { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which archived backup files are retained.</para>
+        /// <para>The number of days for which archived backups are retained for the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>
@@ -170,8 +170,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup interval. Unit: minutes.</para>
         /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/98818.html">Back up an ApsaraDB RDS for MySQL instance</a>.</description></item>
-        /// <item><description>If the instance runs SQL Server, the interval is the same as the log backup frequency.</description></item>
+        /// <item><description>For MySQL instances: the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a> (not the snapshot backup cycle).</description></item>
+        /// <item><description>For SQL Server instances: the log backup frequency.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,10 +182,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupInterval { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log backup feature is enabled. Valid values:</para>
+        /// <para>Indicates whether log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Enable</b>: enabled</description></item>
+        /// <item><description><b>Disabled</b>: disabled</description></item>
+        /// </list>
+        /// <para><b>For SQL Server instances:</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b> is returned only when instance log backup frequency is <b>every 5 minutes</b>.</description></item>
+        /// <item><description>When instance log backup frequency is <b>every 30 minutes</b> or <b>consistent with the data backup cycle</b>, this parameter returns <b>Disabled</b>. <b>Use the value of BackupInterval as the reference</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -196,14 +201,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupLog { get; set; }
 
         /// <summary>
-        /// <para>The backup method of the instance. Valid values:</para>
+        /// <para>The backup method of the <b>SQL Server instance with cloud disks</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Physical</b>: physical backup</description></item>
         /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is returned only when the instance runs SQL Server and uses cloud disks.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Physical</para>
@@ -213,13 +215,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// <para>The backup settings of the secondary instance. Valid values:</para>
+        /// <para>The backup settings for the secondary instance of an <b>SQL Server Enterprise Cluster Edition</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Secondary instance preferred</description></item>
-        /// <item><description><b>2</b>: Primary instance preferred</description></item>
+        /// <item><description><b>1</b>: The secondary instance is preferred.</description></item>
+        /// <item><description><b>2</b>: The primary instance is forced.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for instances that run SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.</para>
+        /// <para>This parameter is returned only when SupportModifyBackupPriority is True.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,7 +232,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? BackupPriority { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which data backup files are retained.</para>
+        /// <para>The number of days for which data backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -240,13 +242,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable the single-digit second backup feature. This feature allows ApsaraDB RDS to complete a backup within single-digit seconds. Valid values:</para>
+        /// <para>Indicates whether backup within seconds is enabled for the <b>MySQL</b> or <b>PostgreSQL</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Flash</b>: The single-digit second backup feature is enabled.</description></item>
-        /// <item><description><b>Standard</b>: The single-digit second backup feature is disabled.</description></item>
+        /// <item><description><b>Flash</b>: enabled</description></item>
+        /// <item><description><b>Standard</b>: disabled</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when you set the <b>BackupPolicyMode</b> parameter to <b>DataBackupPolicy</b>.</para>
+        /// <para>This parameter takes effect only when the <b>BackupPolicyMode</b> parameter is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -257,13 +259,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to compress backup data. Valid values:</para>
+        /// <para>The backup compression method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Backup data is not compressed.</description></item>
-        /// <item><description><b>1</b>: Backup data is compressed by using zlib.</description></item>
-        /// <item><description><b>2</b>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</description></item>
-        /// <item><description><b>4</b>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</description></item>
-        /// <item><description><b>8</b>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</description></item>
+        /// <item><description><b>0</b>: no compression</description></item>
+        /// <item><description><b>1</b>: zlib compression</description></item>
+        /// <item><description><b>2</b>: parallel zlib compression</description></item>
+        /// <item><description><b>4</b>: QuickLZ compression with fast restoration for individual databases and tables enabled</description></item>
+        /// <item><description><b>8</b>: QuickLZ compression without fast restoration for individual databases and tables supported</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -274,10 +276,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log backup feature is enabled. Valid values:</para>
+        /// <para>Indicates whether log backup is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: enabled</description></item>
         /// <item><description><b>0</b>: disabled</description></item>
+        /// </list>
+        /// <para><b>For SQL Server instances:</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b> is returned only when instance log backup frequency is <b>every 5 minutes</b>.</description></item>
+        /// <item><description>When instance log backup frequency is <b>every 30 minutes</b> or <b>consistent with the data backup cycle</b>, this parameter returns <b>0</b>. <b>Use the value of BackupInterval as the reference</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -288,10 +295,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether incremental backup is enabled. Valid values:</para>
+        /// <para>Indicates whether incremental backup is enabled for the <b>SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: Incremental backup is enabled.</description></item>
-        /// <item><description><b>False</b>: Incremental backup is disabled.</description></item>
+        /// <item><description><b>True</b>: enabled</description></item>
+        /// <item><description><b>False</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -302,13 +309,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnableIncrementDataBackup { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the point-in-time restoration (PITR) feature is enabled. The PITR feature is an enhancement of the log backup feature. Valid values:</para>
+        /// <para>Indicates whether point-in-time recovery (PITR) is enabled for the <b>MySQL</b> instance. PITR is an upgraded version of log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: enabled</description></item>
+        /// <item><description><b>False</b>: disabled</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only when the instance runs MySQL. For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure the PITR feature</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure a point-in-time recovery policy</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -319,10 +326,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnablePitrProtection { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:</para>
+        /// <para>Indicates whether binary logs are forcibly deleted when the storage usage of the <b>MySQL</b> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b></description></item>
-        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b>: Binary logs are not deleted.</description></item>
+        /// <item><description><b>Enable</b>: Binary logs are deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -332,8 +339,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string HighSpaceUsageProtection { get; set; }
 
+        [NameInMap("IncBackupInterval")]
+        [Validation(Required=false)]
+        public int? IncBackupInterval { get; set; }
+
         /// <summary>
-        /// <para>The number of hours for which log backup files are retained on the instance.</para>
+        /// <para>The number of hours for which binary logs are retained on the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -343,7 +354,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LocalLogRetentionHours { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage usage that is allowed for log files on the instance.</para>
+        /// <para>The maximum storage usage of binary logs on the <b>MySQL</b> instance, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -353,14 +364,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LocalLogRetentionSpace { get; set; }
 
         /// <summary>
-        /// <para>The backup frequency of logs. Valid values:</para>
+        /// <para>The log backup frequency of the <b>SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LogInterval</b>: Log backups are performed every 30 minutes.</description></item>
-        /// <item><description>Default value: same as the value of the <b>PreferredBackupPeriod</b> parameter.</description></item>
+        /// <item><description><b>LogInterval</b>: every 30 minutes.</description></item>
+        /// <item><description>Default: consistent with the data backup cycle specified by <b>PreferredBackupPeriod</b>.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter is returned only when the instance runs SQL Server.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>LogInterval</para>
@@ -370,7 +378,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LogBackupFrequency { get; set; }
 
         /// <summary>
-        /// <para>The number of binary log files that you want to retain on the instance.</para>
+        /// <para>The number of binary logs retained on the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -380,7 +388,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupLocalRetentionNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which log backup files are retained.</para>
+        /// <para>The number of days for which log backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -390,7 +398,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The number of days during which you can restore data of the instance to any point in time.</para>
+        /// <para>The number of days for which point-in-time recovery is supported for the <b>MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -400,7 +408,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PitrRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The data backup cycle. Multiple values are separated by commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Monday</b></description></item>
         /// <item><description><b>Tuesday</b></description></item>
@@ -419,7 +427,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time when a data backup is performed. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The data backup time. Format: <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>15:00Z-16:00Z</para>
@@ -429,7 +437,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the next backup is performed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The next backup time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-19T15:15Z</para>
@@ -439,11 +447,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredNextBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain archived backup files if the instance is released. Valid values:</para>
+        /// <para>The archived backup data retention policy for deleted <b>MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backup files are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup file is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backup files are retained.</description></item>
+        /// <item><description><b>None</b>: No archived backups are retained.</description></item>
+        /// <item><description><b>Lastest</b>: Only the last archived backup is retained.</description></item>
+        /// <item><description><b>All</b>: All archived backups are retained.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -454,7 +462,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReleasedKeepPolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B87E2AB3-B7C9-4394-9160-7F639F732031</para>
@@ -464,10 +472,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the backup settings of a secondary instance can be modified. Valid values:</para>
+        /// <para>Indicates whether the secondary instance backup option can be modified for the <b>SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: The option can be modified.</description></item>
+        /// <item><description><b>False</b>: The option cannot be modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -488,14 +496,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SupportReleasedKeep { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance supports snapshot backups. Valid values:</para>
+        /// <para>Indicates whether snapshot backup is supported for the <b>SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The instance supports snapshot backups.</description></item>
-        /// <item><description><b>0</b>: The instance does not support snapshot backups.</description></item>
+        /// <item><description><b>1</b>: supported</description></item>
+        /// <item><description><b>0</b>: not supported</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter is returned only when the instance runs SQL Server.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -505,10 +510,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SupportVolumeShadowCopy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether log backups for SQL Server are performed verery five minutes.</para>
+        /// <para>Indicates whether the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a> is supported for the <b>SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: No</description></item>
-        /// <item><description>1: Yes</description></item>
+        /// <item><description><b>0</b>: not supported</description></item>
+        /// <item><description><b>1</b>: supported</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

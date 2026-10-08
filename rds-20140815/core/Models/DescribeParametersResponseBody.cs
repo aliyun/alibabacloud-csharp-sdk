@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -44,24 +44,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5.5</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The information about the parameter template.</para>
+        /// <para>The parameter template information.</para>
         /// </summary>
         [NameInMap("ParamGroupInfo")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyParamGroupInfo ParamGroupInfo { get; set; }
         public class DescribeParametersResponseBodyParamGroupInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the parameter template.</para>
+            /// <para>The parameter template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rpg-sys-01040401010200</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParamGroupId { get; set; }
 
             /// <summary>
-            /// <para>The description of the parameter template.</para>
+            /// <para>The parameter template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParameterGroupDesc { get; set; }
 
             /// <summary>
-            /// <para>The name of the parameter template.</para>
+            /// <para>The parameter template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_innodb_8.0_basic_normal_high</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParameterGroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the parameter template.</para>
+            /// <para>The parameter templatetype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

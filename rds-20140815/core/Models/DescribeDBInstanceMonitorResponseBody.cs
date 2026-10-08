@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The monitoring frequency. Unit: seconds.</para>
+        /// <para>The interval at which monitoring data is collected. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

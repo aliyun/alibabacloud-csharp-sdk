@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyActionEventPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the event history feature is enabled.</para>
+        /// <para>The status of the historical events feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EnableEventLog { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region for which the event history feature is enabled or disabled.</para>
+        /// <para>The region ID for which the historical events feature is enabled or disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

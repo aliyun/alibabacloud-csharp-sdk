@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateCloudMigrationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</para>
+        /// <para>The username. The database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,25 +36,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceAccount { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the self-managed PostgreSQL instance runs.</para>
+        /// <para>The category of the source instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>idcOnVpc</b>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</description></item>
-        /// <item><description><b>ecsOnVpc</b>: The self-managed PostgreSQL instance resides on an ECS instance.</description></item>
+        /// <item><description><b>aliyunRDS</b>: ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>other</b>: other.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecsOnVpc</para>
+        /// <para>aliyunRDS</para>
         /// </summary>
         [NameInMap("SourceCategory")]
         [Validation(Required=false)]
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</para>
+        /// <para>The internal or public IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
-        /// <item><description>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
-        /// <item><description>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</description></item>
+        /// <item><description>To migrate a self-managed PostgreSQL database on an ECS instance to the cloud, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</description></item>
+        /// <item><description>To migrate a self-managed PostgreSQL database in an Internet Data Center (IDC) to the cloud, set this parameter to the internal IP address of the IDC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</para>
+        /// <para>The password. The password of the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourcePassword { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the <c>netstat -a | grep PGSQL</c> command to obtain the port number.</para>
+        /// <para>The port of the self-managed PostgreSQL database. You can run the <c>netstat -a | grep PGSQL</c> command to view the port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</para>
+        /// <para>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>

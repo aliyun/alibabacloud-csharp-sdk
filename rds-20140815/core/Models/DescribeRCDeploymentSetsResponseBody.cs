@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
             public class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
+                public string AccountId { get; set; }
+
                 [NameInMap("Capacities")]
                 [Validation(Required=false)]
                 public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities Capacities { get; set; }
@@ -123,52 +127,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The region ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>39265F46-EC77-4036-8AC4-F035F32F6BE2</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The total number of entries returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

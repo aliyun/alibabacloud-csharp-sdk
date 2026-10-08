@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of remaining days for which the instances are available. Valid values: <b>0 to 180</b>.</para>
+        /// <para>The remaining available days of the instance. Valid values: <b>0</b> to <b>180</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ExpirePeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query instances that have expired. Valid values:</para>
+        /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: queries instances that have expired.</description></item>
-        /// <item><description><b>False</b>: does not query instances that have expired.</description></item>
+        /// <item><description><b>True</b>: The instance has expired.</description></item>
+        /// <item><description><b>False</b>: The instance has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: any <b>non-zero</b> positive integer.</para>
+        /// <para>The page number. The value must be greater than <b>0</b> and must not exceed the maximum value of the Integer data type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1 to 100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</c>.</para>
+        /// <para>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to 5 tag pairs at a time. Format: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>API</para>
         /// </summary>
         [NameInMap("proxyId")]
         [Validation(Required=false)]

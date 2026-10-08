@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StartDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The migration task ID. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The migration task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>740</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MigrationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A417FB41-A3D9-464E-AD0A-C7FE05C72E98</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>238028563</para>

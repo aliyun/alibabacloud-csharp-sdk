@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
+        /// <summary>
+        /// <para>Queries the monitoring data of specified resources in batches for Custom for SQL Server.
+        /// Format: a collection of <c>key:value</c> pairs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</para>
+        /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Example: <c>2024-08-06 10:15:00</c>.</para>
+        /// <para>The end of the time range to query. Specify the time in the <c>2024-08-06 10:15:00</c> format. The end time must be later than the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:15:00</para>
@@ -24,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -34,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Express { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-dh2jf9n6j4s14926****</para>
@@ -44,11 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page for paging query.</para>
         /// <para>Default value: 1000.</para>
-        /// <remarks>
-        /// <para> The maximum value of the Length parameter in a request is 1440.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The metric that you want to use. For more information, see <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">CloudMonitor metrics</a>.</para>
+        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitoring metric</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,17 +76,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6178f1825f9fb76ce0b5e8707e68181f</para>
+        /// <para>6178f1825f9fb76ce0b5e8707e******</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of the monitoring data.</para>
-        /// <para>Set the value to 60 or an integer multiple of 60.</para>
-        /// <para>Unit: seconds.</para>
-        /// <para>Default value: 60.</para>
+        /// <para>The statistical period of the monitoring data. Unit: seconds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>60 (default)</description></item>
+        /// <item><description>An integer multiple of 60</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -102,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Example: <c>2024-08-06 10:05:00</c>.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>2024-08-06 10:05:00</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:05:00</para>

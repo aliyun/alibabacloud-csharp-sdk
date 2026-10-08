@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The additional business information about the instance.</para>
+        /// <para>The business extension parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121436975448952</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. By default, the current instance type applies.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. Default value: the current instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.n2.medium.2c</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of order. Set the value to <b>BUY</b>.</para>
+        /// <para>The order type. The only valid value is <b>BUY</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The number of the instances. Default value: <b>1</b>.</para>
+        /// <para>The number of instances. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmx****</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the instance. Valid values:</para>
+        /// <para>The subscription type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -138,8 +138,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Year</b>, the value of the UsedTime parameter is within the range of <b>1 to 3</b>.</description></item>
-        /// <item><description>If you set the <b>TimeType</b> parameter to <b>Month</b>, the value of the UsedTime parameter is within the range of <b>1 to 9</b>.</description></item>
+        /// <item><description>If <b>TimeType</b> is set to <b>Year</b>, the value ranges from <b>1 to 3</b>.</description></item>
+        /// <item><description>If <b>TimeType</b> is set to <b>Month</b>, the value ranges from <b>1 to 9</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

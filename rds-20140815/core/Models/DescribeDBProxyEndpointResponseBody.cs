@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timeout period for consistency reads. Unit: milliseconds. Default value: <b>10</b>. Valid values: <b>0</b> to <b>60000</b>.</para>
+        /// <para>The timeout period for consistency reads. Unit: milliseconds. Default value: <b>10</b>. Valid values: <b>0 to 60000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CausalConsistReadTimeout { get; set; }
 
         /// <summary>
-        /// <para>The proxy endpoint queried.</para>
+        /// <para>The proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testproxy****.rwlb.rds.aliyuncs.com</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the proxy endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>InnerString</b>: internal network</description></item>
-        /// <item><description><b>OuterString</b>: Internet</description></item>
+        /// <item><description><b>InnerString</b>: internal endpoint.</description></item>
+        /// <item><description><b>OuterString</b>: public endpoint.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The port number that is associated with the proxy endpoint.</para>
+        /// <para>The port of the proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -88,17 +88,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following parameters:</para>
+        /// <para>The settings of the proxy endpoint in JSON format. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: the status of the transaction splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
-        /// <item><description><b>ConnectionPersist</b>: the status of the connection pooling feature. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</description></item>
-        /// <item><description><b>ReadWriteSpliting</b>: the status of the read/write splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
-        /// <item><description><b>AZProximityAccess</b>: the status of the nearest access feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
-        /// <item><description><b>CausalConsistRead</b>: the read consistency settings. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates eventual consistency. The value 1 indicates session consistency. The value 2 indicates global consistency.</description></item>
-        /// <item><description><b>PinPreparedStmt</b>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</description></item>
+        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: the transaction splitting setting. The value is <b>0</b> (disabled) or <b>1</b> (enabled).</description></item>
+        /// <item><description><b>ConnectionPersist</b>: the connection pool setting. The value is <b>0</b> (disabled), <b>1</b> (session-level connection pool), or <b>2</b> (transaction-level connection pooling).</description></item>
+        /// <item><description><b>ReadWriteSpliting</b>: the read/write splitting setting. The value is <b>0</b> (disabled) or <b>1</b> (enabled).</description></item>
+        /// <item><description><b>AZProximityAccess</b>: the nearest access feature. The value is <b>0</b> (disabled) or <b>1</b> (enabled).</description></item>
+        /// <item><description><b>CausalConsistRead</b>: the read consistency setting. The value is <b>0</b> (eventual consistency), <b>1</b> (session consistency), or <b>2</b> (global consistency).</description></item>
+        /// <item><description><b>HtapFilter</b>: the automatic request distribution among row store and column store nodes setting. The value is <b>0</b> (disabled) or <b>1</b> (enabled).</description></item>
+        /// <item><description><b>PinPreparedStmt</b>: visible only for ApsaraDB RDS for PostgreSQL. This is an internal parameter.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the instance runs PostgreSQL, you can change only the value of the <b>ReadWriteSpliting</b> field. The <b>TransactionReadSqlRouteOptimizeStatus</b> and <b>PinPreparedStmt</b> fields are set to their default values 1.</para>
+        /// <para>ApsaraDB RDS for PostgreSQL supports modification of only <b>ReadWriteSpliting</b>. <b>TransactionReadSqlRouteOptimizeStatus</b> and <b>PinPreparedStmt</b> are set to 1 by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The description of the proxy terminal.</para>
+        /// <para>The description of the proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxyterminal-test</para>
@@ -143,10 +144,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyEndpointAliases { get; set; }
 
         /// <summary>
-        /// <para>The read and write attributes of the proxy terminal. Valid values:</para>
+        /// <para>The read/write type of the proxy endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: The proxy terminal supports read and write requests.</description></item>
-        /// <item><description><b>ReadOnly</b>: The proxy terminal supports only read requests.</description></item>
+        /// <item><description><b>ReadWrite</b>: read/write splitting mode.</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyEndpointReadWriteMode { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the proxy.</para>
+        /// <para>The VPC ID of the proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-****</para>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyEndpointVpcId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the proxy terminal.</para>
+        /// <para>The vSwitch ID of the proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-****</para>
@@ -177,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyEndpointVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the proxy terminal.</para>
+        /// <para>The zone information of the proxy endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-c</para>
@@ -211,10 +212,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The method that is used to assign read weights. For more information, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a>. Valid values:</para>
+        /// <para>The read weight distribution mode. For more information, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight distribution</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</description></item>
-        /// <item><description><b>Custom</b>: You must manually assign read weights to the instance and its read-only instances.</description></item>
+        /// <item><description><b>Standard</b>: automatically distributes weights based on instance specifications.</description></item>
+        /// <item><description><b>Custom</b>: uses custom weight distribution.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,7 +226,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceDistributionType { get; set; }
 
         /// <summary>
-        /// <para>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</para>
+        /// <para>The latency threshold for read/write splitting. When the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -235,17 +236,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceMaxDelayTime { get; set; }
 
         /// <summary>
-        /// <para>The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:</para>
+        /// <para>The read weight distribution information, which specifies the read request weights of the primary instance and read-only instances. The value is in JSON format and includes the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: the ID of the instance.</description></item>
-        /// <item><description><b>DBInstanceType</b>: the role of the instance. Valid values: <b>Master</b> and <b>ReadOnly</b>.</description></item>
-        /// <item><description><b>NodeID</b>: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.</description></item>
-        /// <item><description><b>NodeType</b>: The node type. Valid values: <b>Primary</b> and <b>Secondary</b>.</description></item>
-        /// <item><description><b>Weight</b>: the read weight of the instance. The read weight increases in increments of <b>100</b> and cannot exceed <b>10000</b>.</description></item>
+        /// <item><description><b>DBInstanceId</b>: the instance ID.</description></item>
+        /// <item><description><b>DBInstanceType</b>: the instance type. The value is <b>Master</b> (primary instance) or <b>ReadOnly</b> (read-only instance).</description></item>
+        /// <item><description><b>NodeID</b>: the node ID of the primary node or secondary node of the primary instance in the Cluster Edition.</description></item>
+        /// <item><description><b>NodeType</b>: the node type in the Cluster Edition. The value is <b>Primary</b> (primary node of the primary instance) or <b>Secondary</b> (secondary node of the primary instance).</description></item>
+        /// <item><description><b>Weight</b>: the read request weight. The value increases in increments of <b>100</b>. Maximum value: <b>10000</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rr-bp176984qewd8****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;ReadOnly\&quot;,\&quot;Weight\&quot;:400},{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rm-bp1ja4f56s7us****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;Weight\&quot;:0}]</para>
+        /// <para>[{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rm-2z****\&quot;，\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;NodeId\&quot;:\&quot;rn-t2****\&quot;,\&quot;NodeType\&quot;:\&quot;Primary\&quot;,\&quot;Weight\&quot;:0}, {\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rm-2z****\&quot;，\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;NodeId\&quot;:\&quot;rn-z9****\&quot;,\&quot;NodeType\&quot;:\&quot;Secondary\&quot;,\&quot;Weight\&quot;:400}, {\&quot;Availability\&quot;:\&quot;Available\&quot;,,\&quot;DBInstanceId\&quot;:\&quot;rm-2z****\&quot;，\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;NodeId\&quot;:\&quot;rn-1c****\&quot;,\&quot;NodeType\&quot;:\&quot;Secondary\&quot;,\&quot;Weight\&quot;:400}]]</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]
         [Validation(Required=false)]

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpdateUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</para>
+        /// <para>The user backup ID. You can call ListUserBackupFiles to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b-kwwvr7v8t7of********</para>
+        /// <para>b-g14d0m772f7b****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the full backup file.</para>
+        /// <para>The new description to set for the user backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CommentTest</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</para>
+        /// <para>The new retention period of the user backup. Unit: days. The value must be an integer greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

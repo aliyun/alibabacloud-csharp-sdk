@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-15T12:10:00Z</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of cross-region data backup files on the current page.</para>
+        /// <para>The number of backup files on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-05-30T12:10:00Z</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

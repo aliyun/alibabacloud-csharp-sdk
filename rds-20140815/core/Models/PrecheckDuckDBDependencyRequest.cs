@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PrecheckDuckDBDependencyRequest : TeaModel {
         /// <summary>
-        /// <para>The primary instance ID.</para>
+        /// <para>The instance ID of the primary instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
+        /// <item><description><b>false</b>: generates an order without charging.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If your account balance is insufficient, you can set the parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</para>
+        /// <para>If your payment method has insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,13 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. You must specify this parameter only when the data disk uses the subscription billing method. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter is valid only when you create a subscription data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The auto-renewal cycle is one month for a monthly subscription. The auto-renewal cycle is one year for a yearly subscription.</para>
+        /// <para>If you purchase the cloud disk on a monthly basis, the auto-renewal epoch is one month.
+        ///  If you purchase the cloud disk on a yearly basis, the auto-renewal epoch is one year.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The disk description. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the cloud disk. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -54,26 +55,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The data disk type. Valid values:</para>
+        /// <para>The category of the data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-        /// <item><description><b>cloud_essd</b>: ESSD</description></item>
-        /// <item><description><b>cloud_auto</b> (default): Premium ESSD</description></item>
+        /// <item><description><b>cloud_efficiency</b>: ultra cloud disk.</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+        /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
+        /// <item><description><b>cloud_auto</b> (default): premium performance disk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cloud_ssd</para>
+        /// <para>cloud_auto</para>
         /// </summary>
         [NameInMap("DiskCategory")]
         [Validation(Required=false)]
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ZStack-Hybrid-Test-ECS-Instance</para>
+        /// <para>testDisk</para>
         /// </summary>
         [NameInMap("DiskName")]
         [Validation(Required=false)]
@@ -82,8 +83,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go Pay-as-you-go disks do not require to be attached. You can also attach the pay-as-you-go disk to an instance of any billing method based on your business requirements.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription Subscription disks must be attached to a subscription instance. Set <b>InstanceId</b> to the ID of a subscription instance.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go. Cloud disks with this billing method do not need to be mounted to an instance. You can also mount them to an instance of any billing method during creation as needed.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription. Cloud disks with this billing method must be mounted to a subscription instance. You must specify the <b>InstanceId</b> (instance ID) of a subscription instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which you want to attach the disk. If you set <b>InstanceChargeType</b> to <b>Prepaid</b>, you must set InstanceId to the ID of a subscription instance.</para>
+        /// <para>Instance ID of the instance to which the cloud disk is attached. If <b>InstanceChargeType</b> is set to <b>Prepaid</b> (subscription), you must specify instance ID of a subscription instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-v28c6k3jupp61m2t****</para>
@@ -104,14 +105,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of ESSDs. Valid values:</para>
+        /// <para>The performance level (PL) of the ESSD cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PL0</b>: A single ESSD delivers up to 10,000 random read/write IOPS.</description></item>
-        /// <item><description><b>PL1: An ESSD delivers up to 50,000 random read/write IOPS.</b></description></item>
-        /// <item><description><b>PL2</b>: A single ESSD delivers up to 100,000 random read/write IOPS.</description></item>
-        /// <item><description><b>PL3</b>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
+        /// <item><description><b>PL0</b>: A single cloud disk can deliver up to 10,000 random read/write IOPS.</description></item>
+        /// <item><description><b>PL1</b> (default): A single cloud disk can deliver up to 50,000 random read/write IOPS.</description></item>
+        /// <item><description><b>PL2</b>: A single cloud disk can deliver up to 100,000 random read/write IOPS.</description></item>
+        /// <item><description><b>PL3</b>: A single cloud disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
-        /// <para>For information about ESSD PLs, see <a href="https://help.aliyun.com/document_detail/2859916.html">ESSDs</a>.</para>
+        /// <para>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/2859916.html">ESSD cloud disk</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -141,7 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -152,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac****</para>
@@ -162,24 +163,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GiB. This parameter is required. Valid values:</para>
+        /// <para>The capacity size. Unit: GiB. You must specify a value for this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_efficiency</b>: 20 to 32768.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_ssd</b>: 20 to 32768.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_auto</b>: 1 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when DiskCategory is set to cloud_essd: depending on the value of <b>PerformanceLevel</b>.****</para>
-        /// <list type="bullet">
-        /// <item><description>Valid values if PerformanceLevel is set to PL0: 1 to 65536</description></item>
-        /// <item><description>Valid values if PerformanceLevel is set to PL1: 20 to 65536</description></item>
-        /// <item><description>Valid values if PerformanceLevel is set to PL2: 461 to 65536</description></item>
-        /// <item><description>Valid values if PerformanceLevel is set to PL3: 1261 to 65536</description></item>
+        /// <item><description><b>cloud_efficiency</b>: 20 to 32,768.</description></item>
+        /// <item><description><b>cloud_ssd</b>: 20 to 32,768.</description></item>
+        /// <item><description><b>cloud_auto</b>: 1 to 65,536.</description></item>
+        /// <item><description><b>cloud_essd</b>: The valid value range depends on the value of <b>PerformanceLevel</b>.<list type="bullet">
+        /// <item><description>PL0: 1 to 65,536.</description></item>
+        /// <item><description>PL1: 20 to 65,536.</description></item>
+        /// <item><description>PL2: 461 to 65,536.</description></item>
+        /// <item><description>PL3: 1,261 to 65,536.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>If <b>SnapshotId</b> is specified and the size of the corresponding snapshot is greater than the <b>Size</b> value, the size of the created disk is the same as that of the snapshot. If the snapshot size is less than the <b>Size</b> value, the size of the created disk is equal to the <b>Size</b> value.</para>
+        /// <para>If <b>SnapshotId</b> is specified and the capacity of the corresponding snapshot is greater than the value of <b>Size</b>, snapshot size of the created cloud disk is the same as the snapshot capacity. If the snapshot capacity is less than the value of <b>Size</b>, snapshot size of the created cloud disk is the value of <b>Size</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -189,12 +186,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The snapshot that you want to use to create the disk.</para>
+        /// <para>The snapshot that is used to create the cloud disk.</para>
         /// <list type="bullet">
-        /// <item><description>The snapshots of RDS Custom instances and the non-shared snapshots of ECS instances are supported.</description></item>
-        /// <item><description>If the size of the snapshot specified by <b>SnapshotId</b> is greater than the value of <b>Size</b>, the size of the created disk is equal to the specified snapshot size. If the snapshot size is less than the <b>Size</b> value, the size of the created disk is equal to the <b>Size</b> value.</description></item>
-        /// <item><description>You cannot create elastic ephemeral disks from snapshots.</description></item>
-        /// <item><description>Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</description></item>
+        /// <item><description>RDS Custom snapshots and ECS snapshots (non-shared type) are supported.</description></item>
+        /// <item><description>If the capacity of the snapshot specified by <b>SnapshotId</b> is greater than the value of <b>Size</b>, snapshot size of the created cloud disk is the same as the snapshot capacity. If the snapshot capacity is less than the value of <b>Size</b>, snapshot size of the created cloud disk is the value of <b>Size</b>.</description></item>
+        /// <item><description>Creating elastic ephemeral disks from snapshots is not supported.</description></item>
+        /// <item><description>Snapshots created on or before July 15, 2013 cannot be used to create cloud disks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,14 +202,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateRCDiskRequestTag> Tag { get; set; }
         public class CreateRCDiskRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can create N tag keys at a time. Valid values of N: <b>1 to 20</b>. The tag key cannot be an empty string.</para>
+            /// <para>The tag key. You can specify up to N tag keys at a time. Valid values of N: <b>1 to 20</b>. The tag key cannot be an empty string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey1</para>
@@ -222,7 +219,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can query N values at a time. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string.</para>
+            /// <para>The tag value that corresponds to the tag key. You can specify up to N tag values at a time. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>
@@ -235,10 +232,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The zone ID.</para>
-        /// <para>This parameter is required if you do not specify <b>InstanceId</b>.</para>
+        /// <para>This parameter is required if the <b>InstanceId</b> parameter (the instance ID of the instance to which the cloud disk is mounted) is not specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-a</para>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

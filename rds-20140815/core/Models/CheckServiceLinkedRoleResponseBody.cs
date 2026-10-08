@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether an SLR is created.</para>
+        /// <para>Indicates whether the service-linked role (SLR) has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the service-linked role is required. Default value: true.</para>
+        /// <para>Indicates whether the service-linked role is required in the current scenario. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-sdfljk123***</para>
+        /// <para>rm-sdfljk123****</para>
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>users</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The engine of the database.</para>
+        /// <para>The database engine type.</para>
         /// <remarks>
-        /// <para>Only MySQL is supported.</para>
+        /// <para>This parameter currently supports only the value MySQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to access the database.</para>
+        /// <para>The password of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</para>
+        /// <para>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,11 +91,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</para>
+        /// <para>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmxypivk***</para>
+        /// <para>rg-acfmxypivk****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to access the database.</para>
+        /// <para>The username of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

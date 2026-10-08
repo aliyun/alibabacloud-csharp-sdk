@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyRCInstanceDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the RDS Custom instance.</para>
         /// <remarks>
-        /// <para> The name must be 2 to 255 characters in length and can contain letters, digits, <c>underscores (_)</c>, and <c>hyphens (-)</c>. It must start with a letter.</para>
+        /// <para>The name must be 2 to 255 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), or hyphens (-).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

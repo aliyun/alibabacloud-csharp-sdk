@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyRCInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b><remarks>
+        /// <item><description><b>true</b>: Enabled (default).</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// </list>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</description></item>
-        /// <item><description>All strings except <b>true</b> are considered <b>false</b>.</description></item>
+        /// <item><description>This parameter takes effect only when you switch from pay-as-you-go to subscription.</description></item>
+        /// <item><description>All non-<b>true</b> strings are treated as <b>false</b>.</description></item>
         /// </list>
         /// </remarks>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <para>Specifies whether to use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b> (default): Coupons are used.</description></item>
+        /// <item><description><b>false</b>: Coupons are not used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The additional business information about the instance.</para>
+        /// <para>The business extension parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The custom client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The custom token that is used to ensure the idempotence of the request. </para>
         /// <remarks>
-        /// <para>The value can contain ASCII characters and can be up to 64 characters in length.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? IncludeDataDisks { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance or disk.</para>
+        /// <para>The instance ID or cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the instance. Valid values:</para>
+        /// <para>The billing method of the instance after the change. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the instance. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b><remarks>
-        /// <para>This parameter must be specified if you set the PayType parameter to <b>Prepaid</b>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -183,13 +183,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance.</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>5</b>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>11</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values of UsedTime are <b>1 to 5</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values of UsedTime are <b>1 to 11</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set the <b>PayType</b> parameter to <b>Prepaid</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required if PayType is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

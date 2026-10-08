@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RenewRCInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the RDS Custom instance.</para>
+        /// <para>The instance ID of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-dh2jf9n6j4s14926****</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23202700556****</para>
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }

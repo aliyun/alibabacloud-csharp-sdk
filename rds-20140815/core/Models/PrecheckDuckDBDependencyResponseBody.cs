@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PrecheckDuckDBDependencyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The check items that do not meet the requirements for creating DuckDB-based analytical instances.</para>
+        /// <para>The items that do not meet the prerequisites for creating a DuckDB-based analytical instance.</para>
         /// </summary>
         [NameInMap("FailedCheckItems")]
         [Validation(Required=false)]
         public List<PrecheckDuckDBDependencyResponseBodyFailedCheckItems> FailedCheckItems { get; set; }
         public class PrecheckDuckDBDependencyResponseBodyFailedCheckItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the item can be changed with one click to meet the requirements.</para>
+            /// <para>Indicates whether the item can be fixed with one click.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes. You can call the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation to change the item with one click.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
+            /// <item><description><b>true</b>: The item can be fixed with one click by calling the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation.</description></item>
+            /// <item><description><b>false</b>: The item cannot be fixed with one click.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the major engine version of the primary does not meet the requirements, you must manually upgrade it.</para>
+            /// <para>Notice: If the major engine version of the database instance does not meet the requirements, you must perform a <a href="https://help.aliyun.com/document_detail/2623684.html">manual upgrade</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The value or value range that meets the requirements.</para>
+            /// <para>The target value or target range of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17.0</para>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RequiredValue { get; set; }
 
             /// <summary>
-            /// <para>The check item. Valid values:</para>
+            /// <para>The check item type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Parameter</b>: The parameters of the primary instance.</description></item>
-            /// <item><description><b>MinorVersion</b>: The minor engine version of the primary instance.</description></item>
-            /// <item><description><b>MajorVersion</b>: The major engine version of the primary instance.</description></item>
+            /// <item><description><b>Parameter</b>: parameter.</description></item>
+            /// <item><description><b>MinorVersion</b>: minor engine version.</description></item>
+            /// <item><description><b>MajorVersion</b>: major engine version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the primary instance meet the requirements for creating DuckDB-based analytical instances. Valid values:</para>
+        /// <para>Indicates whether the prerequisite check for creating a DuckDB-based analytical instance is passed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The check is passed.</description></item>
+        /// <item><description><b>false</b>: The check is not passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

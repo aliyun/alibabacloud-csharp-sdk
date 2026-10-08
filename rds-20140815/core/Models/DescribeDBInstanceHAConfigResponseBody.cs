@@ -13,20 +13,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The high availability mode of the instance. Valid values:</para>
+        /// <para>The High-availability Mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RPO</b>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</description></item>
-        /// <item><description><b>RTO</b>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</description></item>
+        /// <item><description><b>RPO</b>: Data consistency is preferred. The instance prioritizes data reliability to minimize data loss. Use RPO mode if you have high requirements for data consistency.</description></item>
+        /// <item><description><b>RTO</b>: Instance availability is preferred. The instance recovers services as soon as possible to maximize available time. Use RTO mode if you have high requirements for database uptime.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for instances that run MySQL.</para>
+        /// <para>This parameter is returned only for ApsaraDB RDS for MySQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data replication mode of the instance. Valid values:</para>
+        /// <para>The data replication mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sync</b>: the synchronous mode</description></item>
-        /// <item><description><b>Semi-sync</b>: the semi-synchronous replication mode</description></item>
-        /// <item><description><b>Async</b>: the asynchronous mode</description></item>
+        /// <item><description><b>Sync</b>: synchronous replication</description></item>
+        /// <item><description><b>Semi-sync</b>: semi-synchronous replication</description></item>
+        /// <item><description><b>Async</b>: asynchronous replication</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for instances that run MySQL.</para>
+        /// <para>This parameter is returned only for ApsaraDB RDS for MySQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

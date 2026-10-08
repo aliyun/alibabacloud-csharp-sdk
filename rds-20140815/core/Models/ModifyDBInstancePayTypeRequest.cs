@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1842vmucoa5w874</para>
+        /// <para>rm-bp****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. The value is fixed as <b>Prepaid</b>, which indicates the subscription billing method.</para>
+        /// <para>The billing method. Set the value to <b>Prepaid</b>, which specifies the subscription billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the instance.</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Year</b></description></item>
         /// <item><description><b>Month</b></description></item>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Valid values:</para>
+        /// <para>The subscription duration:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from 1 to 5.</description></item>
-        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from 1 to 11.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values are 1 to 5.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values are 1 to 11.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

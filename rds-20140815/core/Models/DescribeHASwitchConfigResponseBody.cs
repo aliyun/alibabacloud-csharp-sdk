@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHASwitchConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the automatic primary/secondary switchover feature. Valid values:</para>
+        /// <para>The automatic primary/secondary switchover setting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto:</b> The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</description></item>
-        /// <item><description><b>Manual:</b> The automatic primary/secondary switchover feature is temporarily disabled.</description></item>
+        /// <item><description><b>Auto</b>: The system automatically switches over between the primary and secondary instances upon a fault.</description></item>
+        /// <item><description><b>Manual</b>: Automatic switchover has been temporarily disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HAConfig { get; set; }
 
         /// <summary>
-        /// <para>The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The deadline for the temporary disabling of automatic switchover. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-08-29T15:00:00Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ManualHATime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.</para>
+        /// <para>The migration queue number. When the number is 0, the migration switchover is performed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>224****</para>
+        /// <para>2245016</para>
         /// </summary>
         [NameInMap("MigrationId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10824****</para>
+        /// <para>108246861</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

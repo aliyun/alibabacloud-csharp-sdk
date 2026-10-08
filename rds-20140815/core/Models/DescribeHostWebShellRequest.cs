@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostWebShellRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account that is used to log on to the host of the instance.</para>
+        /// <para>The name of the account that is used to log on to the host of the RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</para>
+        /// <para>The hostname of the instance. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeActiveOperationMaintainConfResponseBody : TeaModel {
         /// <summary>
-        /// <para>Configuration Information</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>Creation Time, formatted as YYYY-MM-DDTHH:mm:ssZ</para>
+            /// <para>The creation time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>Cycle time, with multiple values concatenated by English commas  </para>
+            /// <para>The cycle time. Multiple values are separated by commas (,).</para>
             /// <list type="bullet">
-            /// <item><description>When cycleType is Week, values 1–7 represent Monday–Sunday  </description></item>
-            /// <item><description>When cycleType is Month, values 1–28 are allowed</description></item>
+            /// <item><description>If cycleType is set to Week, valid values are 1 to 7, which represent Monday to Sunday.</description></item>
+            /// <item><description>If cycleType is set to Month, valid values are 1 to 28.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CycleTime { get; set; }
 
             /// <summary>
-            /// <para>Cycle type, either Month or Week</para>
+            /// <para>The cycle type. Valid values: Month and Week.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Week</para>
@@ -51,7 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>End time of the O&amp;M time window, in UTC<br>Default: 20:00:00Z</para>
+            /// <para>The end time of the O&amp;M time window in UTC.
+            /// Default value: 20:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20:00:00Z</para>
@@ -61,7 +62,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>Start time of the O&amp;M time window, in UTC<br>Default: 18:00:00Z</para>
+            /// <para>The start time of the O&amp;M time window in UTC.
+            /// Default value: 18:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18:00:00Z</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>Updated At, formatted as YYYY-MM-DDTHH:mm:ssZ, for example, 2018-05-30T14:30:00Z</para>
+            /// <para>The modification time in the format of YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -81,10 +83,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Whether it is effective  </para>
+            /// <para>Indicates whether the configuration is effective. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>1: Valid  </description></item>
-            /// <item><description>2: Invalid</description></item>
+            /// <item><description>1: Valid. </description></item>
+            /// <item><description>2: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,10 +99,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Whether a configuration has been set; for the first access, hasConfig is 0  </para>
+        /// <para>Indicates whether the configuration has been set. The value is 0 for the first access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Yes  </description></item>
-        /// <item><description>0: No</description></item>
+        /// <item><description>1: Yes. </description></item>
+        /// <item><description>0: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? HasConfig { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4438AC3E-ABE3-5943-9436-***********</para>

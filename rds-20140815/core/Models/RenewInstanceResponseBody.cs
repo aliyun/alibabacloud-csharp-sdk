@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>201815745430941</para>
+        /// <para>20181574543****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

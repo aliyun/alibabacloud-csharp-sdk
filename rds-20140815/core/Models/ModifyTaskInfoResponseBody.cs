@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failed task. This parameter is returned when a task fails.</para>
+        /// <para>The ID of the failed task. The first failed task ID is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-83br18hlw11ue610yo</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
+        /// <para>The number of successful tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

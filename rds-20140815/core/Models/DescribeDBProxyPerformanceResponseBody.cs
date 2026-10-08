@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the monitored instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lsmexxxxxxx</para>
+        /// <para>lsme****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>An internal parameter. You do not need to specify this parameter.</para>
+        /// <para>An internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

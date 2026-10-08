@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpdateUserBackupFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup file.</para>
+        /// <para>The user backup ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b-g14d0m772f7b********</para>
+        /// <para>b-lvn2365ev9f1****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6A236067-4727-4B42-92CF-734E417ED69A</para>
+        /// <para>29EBB093-DBD8-5EEB-841D-E611B88CDE4B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
         /// <summary>
-        /// <para>The file that contains the certificate.\
-        /// Format:</para>
+        /// <para>The certificate file.</para>
+        /// <para>Format:</para>
         /// <list type="bullet">
-        /// <item><description>Public endpoint: <c>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</c> (The file name contains the extension.)</description></item>
-        /// <item><description>Internal endpoint: <c>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</c> (The file name contains the extension.)</description></item>
+        /// <item><description>Public endpoint: <c>oss-&lt;RegionId&gt;.aliyuncs.com:&lt;BucketName&gt;:&lt;CertificateFileName (with file extension)&gt;</c></description></item>
+        /// <item><description>Internal network endpoint: <c>oss-&lt;RegionId&gt;-internal.aliyuncs.com:&lt;BucketName&gt;:&lt;CertificateFileName (with file extension)&gt;</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</description></item>
+        /// <item><description>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query active region IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).</para>
+        /// <para>The name of the database for which you want to enable TDE. You can specify multiple database names separated by commas (,). You can specify up to 50 database names.</para>
         /// <remarks>
-        /// <para>This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</para>
+        /// <para>This parameter is active and required only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The custom key ID.</para>
         /// <remarks>
-        /// <para>This parameter is available when the instance runs MySQL or PostgreSQL.</para>
+        /// <para>This parameter is available only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,13 +68,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to replace the key. Valid values:</para>
+        /// <para>Specifies whether to rotate the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: Rotate the key.</description></item>
+        /// <item><description><b>false</b> (default): Do not rotate the key.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available for only ApsaraDB RDS for PostgreSQL instances.</para>
+        /// <para>This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the certificate.</para>
+        /// <para>The certificate password.</para>
         /// <remarks>
-        /// <para>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</para>
+        /// <para>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,16 +106,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PassWord { get; set; }
 
         /// <summary>
-        /// <para>The file that contains the private key of the certificate.\
-        /// Format:</para>
+        /// <para>The private key file.</para>
+        /// <para>Format:</para>
         /// <list type="bullet">
-        /// <item><description>Public endpoint: <c>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</c> (The file name contains the extension.)</description></item>
-        /// <item><description>Internal endpoint: <c>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</c> (The file name contains the extension.)</description></item>
+        /// <item><description>Public endpoint: <c>oss-&lt;RegionId&gt;.aliyuncs.com:&lt;BucketName&gt;:&lt;PrivateKeyFileName (with file extension)&gt;</c></description></item>
+        /// <item><description>Internal network endpoint: <c>oss-&lt;RegionId&gt;-internal.aliyuncs.com:&lt;BucketName&gt;:&lt;PrivateKeyFileName (with file extension)&gt;</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</description></item>
+        /// <item><description>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query active region IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -135,9 +135,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <para>The global resource descriptor of the RAM role. The resource descriptor is used to specify a RAM role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// <remarks>
-        /// <para>This parameter is available when the instance runs MySQL or PostgreSQL.</para>
+        /// <para>This parameter is available only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,9 +148,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The status of TDE. Valid values:</para>
+        /// <para>The TDE status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
+        /// <item><description><b>Enabled</b> </description></item>
         /// <item><description><b>Disabled</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>

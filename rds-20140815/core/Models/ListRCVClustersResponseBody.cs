@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListRCVClustersResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>07F6177E-6DE4-408A-BB4F-0723301340F3</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,38 +17,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<ListRCVClustersResponseBodyVClusters> VClusters { get; set; }
         public class ListRCVClustersResponseBodyVClusters : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cd21387ea640145bab79a78276c1a****</para>
-            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
+            [NameInMap("ClusterName")]
+            [Validation(Required=false)]
+            public string ClusterName { get; set; }
+
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public long? InstanceCount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cn-hangzhou</para>
-            /// </summary>
+            [NameInMap("MysqlOperator")]
+            [Validation(Required=false)]
+            public ListRCVClustersResponseBodyVClustersMysqlOperator MysqlOperator { get; set; }
+            public class ListRCVClustersResponseBodyVClustersMysqlOperator : TeaModel {
+                [NameInMap("DashboardPublicEndpoint")]
+                [Validation(Required=false)]
+                public string DashboardPublicEndpoint { get; set; }
+
+                [NameInMap("DashboardUsername")]
+                [Validation(Required=false)]
+                public string DashboardUsername { get; set; }
+
+                [NameInMap("DashboardVpcEndpoint")]
+                [Validation(Required=false)]
+                public string DashboardVpcEndpoint { get; set; }
+
+                [NameInMap("DeployTime")]
+                [Validation(Required=false)]
+                public string DeployTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("SupportDiskPerformanceLevel")]
             [Validation(Required=false)]
             public List<string> SupportDiskPerformanceLevel { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>vpc-2zeqj40j2ce0s5yhg****</para>
-            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }

@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details about the topology.</para>
+        /// <para>The topology details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDBInstanceTopologyResponseBodyData Data { get; set; }
         public class GetDBInstanceTopologyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The network connection information of the instance.</para>
+            /// <para>The network connectivity information of the instance.</para>
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
             public List<GetDBInstanceTopologyResponseBodyDataConnections> Connections { get; set; }
             public class GetDBInstanceTopologyResponseBodyDataConnections : TeaModel {
                 /// <summary>
-                /// <para>The endpoint that is used to connect to the database instance.</para>
+                /// <para>The database endpoint.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>rm-m5ezban**********.mysql.rds.aliyuncs.com</para>
+                /// <para>rm-m5ezban****mysql.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>rm-m5ezban**********</para>
+                /// <para>rm-m5ezban****</para>
                 /// </summary>
                 [NameInMap("DBInstanceName")]
                 [Validation(Required=false)]
                 public string DBInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the endpoint. Valid values:</para>
+                /// <para>The network endpoint type of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>vpc</b></description></item>
-                /// <item><description><b>public</b></description></item>
+                /// <item><description><b>vpc</b>: internal endpoint.</description></item>
+                /// <item><description><b>public</b>: public endpoint.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NetType { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID of the instance.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-qingdao-c</para>
@@ -83,59 +83,59 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rm-m5ezban**********</para>
+            /// <para>rm-m5ezban****</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The queried nodes.</para>
+            /// <para>The node list.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<GetDBInstanceTopologyResponseBodyDataNodes> Nodes { get; set; }
             public class GetDBInstanceTopologyResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>rm-m5ezban**********</para>
+                /// <para>rm-m5ezban****</para>
                 /// </summary>
                 [NameInMap("DBInstanceName")]
                 [Validation(Required=false)]
                 public string DBInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated cluster.</para>
+                /// <para>The dedicated cluster ID.</para>
                 /// <remarks>
-                /// <para>: If the instance does not reside in the specified dedicated cluster, no value is returned.</para>
+                /// <para>This parameter is empty for non-dedicated cluster instances.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dhg-4n*****</para>
+                /// <para>dhg-4n****</para>
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The host ID of the instance in the dedicated cluster.</para>
+                /// <para>The host ID in the dedicated cluster.</para>
                 /// <remarks>
-                /// <para>: If the instance does not reside in the specified dedicated cluster, no value is returned.</para>
+                /// <para>This parameter is empty for non-dedicated cluster instances.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>i-bpxxxxxxx</para>
+                /// <para>i-bp****</para>
                 /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The unique identifier of the instance.</para>
                 /// <remarks>
-                /// <para>: The value \<em>\</em>-1\<em>\</em> is returned for an instance that does not reside in a dedicated cluster.</para>
+                /// <para>This parameter returns <b>-1</b> for non-dedicated cluster instances.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node. The following result is returned:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Master</b>: a primary node</description></item>
-                /// <item><description><b>Slave</b>: a secondary node</description></item>
+                /// <item><description><b>Master</b>: primary node.</description></item>
+                /// <item><description><b>Slave</b>: secondary node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID of the instance.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-qingdao-c</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7430AB1A-6D49-5B6D-B9E5-920250076074</para>

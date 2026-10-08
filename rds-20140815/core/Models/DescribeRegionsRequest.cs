@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language that is used for the return value of the <b>LocalName</b> parameter. Valid values:</para>
+        /// <para>The language of the returned <b>LocalName</b> parameter. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh-CN</b>: Chinese</description></item>
         /// <item><description><b>en-US</b>: English</description></item>
         /// </list>
-        /// <para>Default value: <b>en-US</b>.</para>
+        /// <para>Default value: <b>en-US</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>en-US</para>

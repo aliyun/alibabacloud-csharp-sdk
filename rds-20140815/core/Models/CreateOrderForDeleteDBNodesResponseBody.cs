@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateOrderForDeleteDBNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-7xv******</para>
+        /// <para>rm-7x******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

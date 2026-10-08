@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RecoveryDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</para>
-        /// <para>If you specify this parameter, you do not need to specify <b>DBInstanceId</b>.</para>
+        /// <para>The backup set ID. You can call the DescribeBackups operation to query backup sets.</para>
+        /// <para>If you specify this parameter, the <b>DBInstanceId</b> parameter is optional.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>BackupId</b> or <b>RestoreTime</b> parameters.</para>
+        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,65 +27,65 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance type of the new instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mysql.s2.large</para>
+        /// <para>mssql.x4.medium.s1</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the original instance.</para>
+        /// <para>The instance ID of the original instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify BackupId, you do not need to specify this parameter.</description></item>
-        /// <item><description>If you specify RestoreTime, you must also specify this parameter.</description></item>
+        /// <item><description>If you want to recover data by backup set (by specifying the BackupId parameter), this parameter is optional.</description></item>
+        /// <item><description>If you want to recover data to a point in time (by specifying the RestoreTime parameter), this parameter is required.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-xxxxxxxx1</para>
+        /// <para>rm-bp18****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The instance storage capacity of the new instance. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para> You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.</para>
+        /// <para>The disk space of the new instance cannot be smaller than that of the original instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the new instance. Valid values:</para>
+        /// <para>The instance storage type of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd/ephemeral_ssd</b>: local SSD</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: enhanced SSD (ESSD)</description></item>
+        /// <item><description><b>local_ssd/ephemeral_ssd</b>: local SSD.</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk.</description></item>
+        /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD) cloud disk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>local_ssd</para>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. When you restore data to a new instance, the format of the database name is <c>Original database name 1,New database name 2</c>.</para>
+        /// <para>The database name. To restore data to a new instance, use the following format: <c>Original database name 1,New database name 2</c>.</para>
         /// <remarks>
-        /// <para> For more information about how to restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</para>
+        /// <para>To restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Restore databases to a new instance: test1,test2. Restore databases to an existing instance: {&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</para>
+        /// <para>test1,test2</para>
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b></description></item>
-        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>Classic</b>: classic network.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
         /// </list>
-        /// <para>By default, the new instance uses the same network type as the original instance.</para>
+        /// <para>Default value: the network type of the original instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -121,13 +121,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</para>
+        /// <para>The unit of the subscription duration of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b>: month.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter must be specified when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically assigns an IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.XXX.XXX.69</para>
+        /// <para>172.XX.XX.69</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>If you specify this parameter, you must also specify <b>DBInstanceId</b>.</para>
+        /// <para>Any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>If you specify this parameter, the <b>DBInstanceId</b> parameter is required.</para>
         /// <remarks>
         /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
         /// </remarks>
@@ -166,23 +166,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination instance.</para>
+        /// <para>The instance ID of the target instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-bp17****</para>
         /// </summary>
         [NameInMap("TargetDBInstanceId")]
         [Validation(Required=false)]
         public string TargetDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Valid values:</para>
+        /// <para>The subscription duration of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when <b>Period</b> is set to <b>Year</b>: <b>1 to 3</b>.****</description></item>
-        /// <item><description>Valid values when <b>Period</b> is set to <b>Month</b>: <b>1 to 9</b>.****</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of <b>UsedTime</b> ranges from <b>1 to 3</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of <b>UsedTime</b> ranges from <b>1 to 9</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter must be specified when PayType is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,17 +196,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The VPC ID of the new instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-xxxxxxxxxxx</para>
+        /// <para>vpc-****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the new instance. If you specify more than one vSwitch ID, you must separate the IDs with commas (,).</para>
+        /// <para>The vSwitch ID of the new instance. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-xxxxxxxxxxx</para>
+        /// <para>vsw-****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

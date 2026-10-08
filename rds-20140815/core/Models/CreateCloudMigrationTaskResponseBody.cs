@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateCloudMigrationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The name of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-bp102g323jd4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8B993DA9-5272-5414-94E3-4CA8BA0146C2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440437220</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>

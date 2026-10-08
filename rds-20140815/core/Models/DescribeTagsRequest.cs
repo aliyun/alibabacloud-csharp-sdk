@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <remarks>
-        /// <para> If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.</para>
+        /// <para>If you specify this parameter, all tags of the instance are returned and other filter conditions are ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Set the value to INSTANCE.</para>
+        /// <para>The resource type. Set the value to a fixed value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
@@ -70,7 +70,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag that you want to query. The value of the parameter consists of TagKey and TagValue. Format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
+        /// <para>The tags to query, including TagKey and TagValue.
+        /// Format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“key1”:”value1”}</para>

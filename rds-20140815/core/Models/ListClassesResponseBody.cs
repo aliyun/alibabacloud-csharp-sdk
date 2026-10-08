@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListClassesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instance specifications.</para>
+        /// <para>The list of instance type information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListClassesResponseBodyItems> Items { get; set; }
         public class ListClassesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</para>
+            /// <para>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql.n1.micro.1</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</para>
+            /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Instance families</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>General</para>
+            /// <para>general-purpose</para>
             /// </summary>
             [NameInMap("ClassGroup")]
             [Validation(Required=false)]
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores that are supported by the instance type. Unit: cores.</para>
+            /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</para>
+            /// <para>The encrypted memory size for the security-enhanced instance family. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EncryptedMemory { get; set; }
 
             /// <summary>
-            /// <para>The architecture of the instance type. Valid values:</para>
+            /// <para>The architecture type of the instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the architecture of the instance type is <b>x86</b>, an empty string is returned by default.</description></item>
-            /// <item><description>If the architecture of the instance type is <b>ARM</b>, <b>arm</b> is returned.</description></item>
+            /// <item><description>If the instance uses the <b>x86</b> architecture, this parameter is empty by default.</description></item>
+            /// <item><description>If the instance uses the <b>arm</b> architecture, <b>arm</b> is returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstructionSetArch { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of connections that are supported by the instance type. Unit: connections.</para>
+            /// <para>The maximum number of connections for the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</para>
+            /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024Mbps</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIOMBPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</para>
+            /// <para>The maximum IOPS for the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -101,24 +101,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The memory size that is supported by the instance type. Unit: GB.</para>
+            /// <para>The memory size for the instance type. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1 GB (RDS Basic Edition)</para>
+            /// <para>1GB</para>
             /// </summary>
             [NameInMap("MemoryClass")]
             [Validation(Required=false)]
             public string MemoryClass { get; set; }
 
             /// <summary>
-            /// <para>The fee that you must pay for the instance type.</para>
+            /// <para>The price for the instance type.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description>Unit: cents (CNY).</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>Unit: cents (USD).</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you set <b>CommodityCode</b> to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</description></item>
-            /// <item><description>If you set <b>CommodityCode</b> to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</description></item>
+            /// <item><description>If you set the <b>CommodityCode</b> parameter to a pay-as-you-go commodity code, this parameter indicates the hourly price.</description></item>
+            /// <item><description>If you set the <b>CommodityCode</b> parameter to a subscription commodity code, this parameter indicates the monthly price.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -130,22 +135,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReferencePrice { get; set; }
 
             /// <summary>
-            /// <para>The RDS edition of the instance. Valid values:</para>
+            /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Regular instance</para>
-            /// <list type="bullet">
-            /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-            /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-            /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</description></item>
-            /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</description></item>
-            /// <item><description><b>Finance</b>: RDS Basic Edition for serverless instances</description></item>
+            /// <item><description>Regular instances<list type="bullet">
+            /// <item><description><b>Basic</b>: Basic Edition.</description></item>
+            /// <item><description><b>HighAvailability</b>: High availability series.</description></item>
+            /// <item><description><b>cluster</b>: MySQL or PostgreSQL Cluster Edition.</description></item>
+            /// <item><description><b>AlwaysOn</b>: SQL Server Cluster Edition.</description></item>
+            /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Serverless instance</para>
-            /// <list type="bullet">
-            /// <item><description><b>serverless_basic</b>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
-            /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
-            /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
+            /// <item><description>Serverless instances<list type="bullet">
+            /// <item><description><b>serverless_basic</b>: Serverless Basic Edition. (Applicable only to MySQL and PostgreSQL)</description></item>
+            /// <item><description><b>serverless_standard</b>: Serverless high availability series. (Applicable only to MySQL and PostgreSQL)</description></item>
+            /// <item><description><b>serverless_ha</b>: SQL Server Serverless high availability series.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance.</para>
+            /// <para>The instance storage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CF8D35BF-263D-4F7B-883A-1163B79A9EC6</para>

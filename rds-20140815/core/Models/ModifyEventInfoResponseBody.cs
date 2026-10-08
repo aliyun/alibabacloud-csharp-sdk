@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error ID.</para>
+        /// <para>The error event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12343</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the successful event.</para>
+        /// <para>The successful event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234221</para>

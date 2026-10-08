@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyInstanceCrossBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the cross-region backup feature on the instance. Valid values:</para>
+        /// <para>The status of the cross-region backup feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b></description></item>
-        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the cross-region backup files of the instance are stored.</para>
+        /// <para>The ID of the destination region for cross-region backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupRegion { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to save the cross-region backup files of the instance. Default value: <b>1</b>. The value 1 indicates that all cross-region backup files are saved.</para>
+        /// <para>The type of cross-region backup retention. Default value: <b>1</b>, which indicates that all backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the cross-region log backup feature on the instance. Valid values:</para>
+        /// <para>The status of cross-region log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b></description></item>
-        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50A6059D-6DBB-46C6-A851-1EE93C9013CF</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain the cross-region backup files of the instance. Default value: <b>1</b>. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</para>
+        /// <para>The cross-region backup retention method. Default value: <b>1</b>, which indicates retention by duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? RetentType { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the cross-region backup files of the instance are retained. Valid values: <b>7 to 1825</b>.</para>
+        /// <para>The number of days for which cross-region backups are retained. Valid values: <b>7 to 1825</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from 1.</para>
+        /// <para>Valid values: a value greater than 0 that does not exceed the maximum value of Integer.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The major engine version of the new instance. Valid values:</para>
+        /// <para>The major engine version after the upgrade. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>10.0</b></description></item>
         /// <item><description><b>11.0</b></description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>A reserved parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>417450000</para>

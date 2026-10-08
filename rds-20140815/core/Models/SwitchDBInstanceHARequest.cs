@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceHARequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the switching takes effect. Valid values:</para>
+        /// <para>The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: The switching immediately takes effect.</description></item>
-        /// <item><description><b>MaintainTime</b>: The switching takes effect during the maintenance time.</description></item>
+        /// <item><description><b>Immediate</b>: The switchover is executed immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The switchover is executed during the maintenance window.</description></item>
         /// </list>
         /// <para>Default value: <b>Immediate</b>.</para>
         /// 
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forcible switching. Valid values:</para>
+        /// <para>The switchover method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Yes</b></description></item>
-        /// <item><description><b>No</b></description></item>
+        /// <item><description><b>Yes</b>: A forced switchover is performed.</description></item>
+        /// <item><description><b>No</b>: A non-forced switchover is performed.</description></item>
         /// </list>
         /// <para>Default value: <b>No</b>.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Force { get; set; }
 
         /// <summary>
-        /// <para>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</para>
+        /// <para>The unique ID of the secondary instance. You can call DescribeDBInstanceHAConfig to query this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

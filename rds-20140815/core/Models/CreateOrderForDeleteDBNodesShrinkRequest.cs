@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateOrderForDeleteDBNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to automatically complete automatic payment. Valid values:</para>
         /// <ol>
-        /// <item><description><b>true</b>: You must make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: An unpaid order is generated.</description></item>
+        /// <item><description><para><b>true</b>: automatically completes automatic payment. Make sure that your account balance is sufficient.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: generates the order without completing automatic payment.</para>
+        /// </description></item>
         /// </ol>
         /// <remarks>
-        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The additional business information about the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;shopCartItemId\&quot;:\&quot;25******\&quot;,\&quot;produceDriver\&quot;:\&quot;NoOrder\&quot;,\&quot;aliyun_shopcart_order_source\&quot;:\&quot;fromShopcart\&quot;,\&quot;shopCartId\&quot;:\&quot;10190203suffix20230509******\&quot;}</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
@@ -49,14 +51,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: The instance is a pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds</b>: The instance is a subscription primary instance.</description></item>
-        /// <item><description><b>rords</b>: The instance is a pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: The instance is a subscription read-only instance.</description></item>
-        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance.</description></item>
-        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance.</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,25 +70,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-8vb******</para>
+        /// <para>rm-8vb9******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of information about the ID of the node.</para>
+        /// <para>The list of node IDs.</para>
         /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]
         public string DBNodeIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
-        /// <para>Valid values if you set Engine to MySQL: <b>5.5, 5.6, 5.7, and 8.0</b></para>
+        /// <para>The current database engine version. Valid values:</para>
+        /// <para>MySQL: <b>5.5, 5.6, 5.7, 8.0</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -96,10 +98,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of the database node. Valid values:</para>
+        /// <para>The database node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Master</b>: the primary node</description></item>
-        /// <item><description><b>Slave</b>: the secondary node</description></item>
+        /// <item><description><b>Master</b>: primary node</description></item>
+        /// <item><description><b>Slave</b>: secondary node</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>buy</para>

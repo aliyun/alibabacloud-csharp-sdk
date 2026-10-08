@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. The value of this parameter is the same as the value of the <b>PageSize</b> parameter in the request parameters.</para>
+        /// <para>The number of entries per page. This value corresponds to the value specified for the <b>PageSize</b> request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Details of the vSwitches.</para>
+        /// <para>The list of vSwitch information.</para>
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AvailableIpAddressCount { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block of the vSwitch.</para>
+            /// <para>The vSwitch CIDR block.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.0.0/24</para>
+            /// <para>172.16.XX.XX/24</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
+            /// <para>Indicates whether the vSwitch is the default vSwitch.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The vSwitch is the default vSwitch.</description></item>
+            /// <item><description><b>false</b>: The vSwitch is not the default vSwitch.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The ID of the zone to which the vSwitch belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou-h</para>
+            /// <para>cn-hangzhou-j</para>
             /// </summary>
             [NameInMap("IzNo")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The status of the vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: The vSwitch is being specified.</description></item>
+            /// <item><description><b>Pending</b>: The vSwitch is being configured.</description></item>
             /// <item><description><b>Available</b>: The vSwitch is available.</description></item>
             /// </list>
             /// 
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vsw-bp1pnaz94xc**********</para>
+            /// <para>vsw-bp1pnaz94xc****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]

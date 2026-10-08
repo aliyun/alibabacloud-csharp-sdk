@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCClusterConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The kubeconfig file of the cluster.</para>
+        /// <para>The cluster access configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apiVersion: v1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the kubeconfig file. Format: the UTC time in the RFC3339 format.</para>
+        /// <para>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-10T09:56:17Z</para>

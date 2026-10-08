@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDasInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The threshold in percentage based on which an automatic storage expansion is triggered. If the available storage reaches the threshold, ApsaraDB RDS increases the storage capacity of the instance. Valid values:</para>
+        /// <para>The threshold in percentage of remaining storage space that triggers automatic storage expansion. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>10</b></description></item>
         /// <item><description><b>20</b></description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>50</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the StorageAutoScale parameter to <b>Enable</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when <b>StorageAutoScale</b> is set to <b>Enable</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StorageThreshold { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity that is allowed for an automatic storage expansion. The value of this parameter must be greater than or equal to the current storage capacity of the RDS instance.</para>
+        /// <para>The upper limit of automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>If the RDS instance uses ESSDs, the maximum value of this parameter can be set to 32000 GB.</description></item>
-        /// <item><description>If the RDS instance uses standard SSDs, the maximum value of this parameter can be set to 6000 GB.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If you set the <b>StorageAutoScale</b> parameter to <b>Enable</b>, you must specify this parameter.</para>
+        /// <item><description>Upper limit for ESSDs: 32000 GB.</description></item>
+        /// <item><description>Upper limit for standard SSDs: 6000 GB.<remarks>
+        /// <para>This parameter is required when <b>StorageAutoScale</b> is set to <b>Enable</b>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

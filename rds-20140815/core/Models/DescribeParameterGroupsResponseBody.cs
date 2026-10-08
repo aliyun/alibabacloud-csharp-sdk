@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether parameter templates exist in the specified region. Valid values:</para>
+        /// <para><b>[Deprecated]</b> Indicates whether the specified region has parameter templates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false<remarks>
-        /// <para>Notice: This parameter is deprecated.</para>
+        /// <item><description>true: No parameter templates exist.</description></item>
+        /// <item><description>false: Parameter templates exist.<remarks>
+        /// <para>Warning: This parameter is deprecated and is not recommended.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

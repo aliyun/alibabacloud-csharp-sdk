@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeADInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DNS information about the AD domain.</para>
+        /// <para>The DNS information of the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.100.XX.XX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADDNS { get; set; }
 
         /// <summary>
-        /// <para>The service IP address of the AD domain.</para>
+        /// <para>The IP address of the AD domain server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the AD domain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: The instance is being added to the AD domain.</description></item>
-        /// <item><description><b>0</b>: The instance fails to be added to the AD domain.</description></item>
-        /// <item><description><b>1</b>: The instance is added to the AD domain.</description></item>
+        /// <item><description><b>-1</b>: The instance is being joined to the AD domain.</description></item>
+        /// <item><description><b>0</b>: Failed to join the AD domain.</description></item>
+        /// <item><description><b>1</b>: Joined the AD domain.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADStatus { get; set; }
 
         /// <summary>
-        /// <para>The cause of the error.</para>
+        /// <para>The reason for the exception.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XXXX</para>
+        /// <hr>
         /// </summary>
         [NameInMap("AbnormalReason")]
         [Validation(Required=false)]

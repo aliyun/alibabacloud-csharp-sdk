@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// <para>SQLServer</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The number of the page returned.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of SQL statements that are returned on the current page.</para>
+        /// <para>The number of SQL statements on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -273,14 +273,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The start date of the query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2011-05-30Z</para>
+        /// <para>2011-05-01Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

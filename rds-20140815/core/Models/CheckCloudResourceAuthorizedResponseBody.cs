@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The authorization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: authorized</description></item>
-        /// <item><description><b>0</b>: not authorized</description></item>
+        /// <item><description><b>1</b>: Authorized.</description></item>
+        /// <item><description><b>0</b>: Not authorized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <para>The global resource descriptor of the role, which is used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>

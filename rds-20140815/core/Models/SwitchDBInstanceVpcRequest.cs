@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the <b>VSwitchId</b> parameter.</para>
+        /// <para>The private IP address of the instance. The IP address must be within the CIDR block of the vSwitch specified by the <b>VSwitchId</b> parameter.</para>
         /// <remarks>
-        /// <para> You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</para>
+        /// <para>You can call DescribeVSwitches to query the CIDR block of the target vSwitch.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,26 +40,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para>The VPC must reside in the same region as the instance.</para>
+        /// <para>The VPC must be in the same region as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-uf6f7l4fg90*****</para>
+        /// <para>vpc-uf6f7l4fg90****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance.</para>
+        /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch must belong to the same zone as the instance.</para>
+        /// <para>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2p*****</para>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

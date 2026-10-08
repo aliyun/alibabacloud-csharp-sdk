@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReleaseReadWriteSplittingConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

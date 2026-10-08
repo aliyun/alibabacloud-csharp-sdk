@@ -13,27 +13,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-bp1f****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to which the instance can be restored.</para>
+        /// <para>The start time of the restorable time range for backups.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-03-16T07:59:18Z</para>
+        /// <para>2023-09-11T09:48:52Z</para>
         /// </summary>
         [NameInMap("RecoveryBeginTime")]
         [Validation(Required=false)]
         public string RecoveryBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to which the instance can be restored.</para>
+        /// <para>The end time of the restorable time range for backups.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-03-20T08:41:29Z</para>
+        /// <para>2023-09-18T08:03:09Z</para>
         /// </summary>
         [NameInMap("RecoveryEndTime")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>14E986AC-0F27-4FFB-8EED-9A8A3A2A0309</para>
+        /// <para>291534CC-922B-55D5-8657-B29****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

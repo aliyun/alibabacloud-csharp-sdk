@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The primary instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp*****</para>
+        /// <para>rm-bp****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The latency of data replication. Unit: seconds.</para>
+        /// <para>The latency, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The read-only instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rr-bp*****</para>
+        /// <para>rr-bp****</para>
         /// </summary>
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]

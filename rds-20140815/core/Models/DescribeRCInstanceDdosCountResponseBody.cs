@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceDdosCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances that are under DDoS attacks.</para>
+        /// <para>The details about the number of instances that are under DDoS attacks.</para>
         /// </summary>
         [NameInMap("DdosCount")]
         [Validation(Required=false)]
         public DescribeRCInstanceDdosCountResponseBodyDdosCount DdosCount { get; set; }
         public class DescribeRCInstanceDdosCountResponseBodyDdosCount : TeaModel {
             /// <summary>
-            /// <para>The number of instances for which blackhole filtering is triggered.</para>
+            /// <para>The number of instances in blackhole filtering status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string BlackholeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances for which traffic scrubbing is triggered.</para>
+            /// <para>The number of instances for which attack traffic scrubs traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F77F3176-AAEA-5836-B2B4-A854E3ED****_Zv**</para>
+        /// <para>F77F3176-AAEA-5836-B2B4-A854E3EF****_Zv**</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

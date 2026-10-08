@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksStatRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
+        /// <para>The minimum execution duration. Tasks whose execution duration is greater than this value are returned. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Format: <i>yyyy-mm-dd</i>t<i>hh:mm</i>z (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,17 +78,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Scheduled</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Succeed</b></description></item>
-        /// <item><description><b>Failed</b></description></item>
-        /// <item><description><b>Cancelling</b></description></item>
-        /// <item><description><b>Canceled</b></description></item>
-        /// <item><description><b>Waiting</b></description></item>
+        /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+        /// <item><description><b>Failed</b>: Failed.</description></item>
+        /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
+        /// <item><description><b>Canceled</b>: Stopped.</description></item>
+        /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
         /// </list>
-        /// <para>Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.</para>
+        /// <para>Separate multiple statuses with commas (,). Default value: empty, which indicates all statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
+        /// <para>The maximum execution duration. Tasks whose execution duration is not less than this value are returned. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range for the task start time. Tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

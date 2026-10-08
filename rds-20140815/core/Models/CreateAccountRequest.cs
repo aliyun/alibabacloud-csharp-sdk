@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <para>The description of the account. The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>: The name cannot start with http:// or https://.</para>
+        /// <para>The description cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Test Account A</para>
+        /// <para>testuser</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
@@ -24,28 +24,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The name of the database account.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The name must be unique.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</para>
-        /// </description></item>
-        /// <item><description><para>The name must start with a letter and end with a letter or digit.</para>
-        /// </description></item>
-        /// <item><description><para>For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is <c>Test1</c>, the name of the standard account cannot be <c>test1</c>.</para>
-        /// </description></item>
-        /// <item><description><para>The length of the value must meet the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</description></item>
-        /// <item><description>If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</description></item>
-        /// <item><description>If the instance runs SQL Server, the value must be 2 to 64 characters in length.</description></item>
-        /// <item><description>If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</description></item>
-        /// <item><description>If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</description></item>
-        /// <item><description>If the instance runs MariaDB, the value must be 2 to 16 characters in length.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords</a>.</para>
-        /// </description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>The name must be unique and can contain uppercase letters (supported only by MySQL), lowercase letters, digits, or underscores. For specific naming conventions, refer to the tutorials for each engine: <a href="https://help.aliyun.com/document_detail/96089.html">Create a MySQL account</a>, <a href="https://help.aliyun.com/document_detail/96753.html">Create a PostgreSQL account</a>, <a href="https://help.aliyun.com/document_detail/95810.html">Create a SQL Server account</a>, <a href="https://help.aliyun.com/document_detail/97132.html">Create a MariaDB account</a>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,15 +37,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account.</para>
+        /// <para>The password of the database account.</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The value must be 8 to 32 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
-        /// </description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (<c>!@#$%^&amp;*()_+-=</c>).</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,13 +54,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The account type. Valid values:</para>
+        /// <para>The type of the account. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b> (default): standard account.</description></item>
-        /// <item><description><b>Super</b>: privileged account.</description></item>
-        /// <item><description><b>Sysadmin</b>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</description></item>
+        /// <item><description><b>Super</b>: privileged account. You can create at most one privileged account per instance.</description></item>
+        /// <item><description><b>Sysadmin</b> (SQL Server instances only): database account with SA permissions. Before you create this account, check whether the instance meets the <a href="https://help.aliyun.com/document_detail/170736.html">prerequisites</a>.</description></item>
+        /// <item><description><b>GlobalRO</b> (SQL Server instances only): global read-only account. You can create at most two global read-only accounts per instance. The database engine version of the instance must be SQL Server 2016 or later, and the instance type must be dedicated or general-purpose.</description></item>
         /// </list>
-        /// <para>Before you create a system admin account, check whether the instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -91,13 +70,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a password policy.</para>
-        /// <remarks>
-        /// </remarks>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2845728.html">account password policy</a> for the SQL Server instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only for ApsaraDB RDS for SQL Server instances that do not belong to the shared instance family and do not run SQL Server 2008 R2.</para>
-        /// </description></item>
-        /// <item><description><para>Before you call this operation, you must configure a password policy for the account of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/2848317.html">Configure a password policy for the account of an ApsaraDB RDS for SQL Server instance</a>.</para>
+        /// <item><description><b>true</b>: The policy is applied.</description></item>
+        /// <item><description><b>false</b>: The policy is not applied.<remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set this parameter to true, you must first <a href="https://help.aliyun.com/document_detail/2848317.html">configure the SQL Server account password policy</a>.</description></item>
+        /// <item><description>This parameter does not support SQL Server instances of the <a href="https://help.aliyun.com/document_detail/57184.html">shared instance type</a>, <a href="https://help.aliyun.com/document_detail/145468.html">2008 R2 edition</a>, or <a href="https://help.aliyun.com/document_detail/603466.html">serverless type</a>.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -109,11 +90,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? CheckPolicy { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

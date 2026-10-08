@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDTCSecurityIpHostsForSQLServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ApsaraDB RDS instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The result of the IP address whitelist configuration. Valid values:</para>
+        /// <para>The result of configuring the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b></description></item>
-        /// <item><description><b>Fail</b></description></item>
+        /// <item><description><b>Success</b>: The configuration is successful.</description></item>
+        /// <item><description><b>Fail</b>: The configuration failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task ID of the configuration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>178968983</para>

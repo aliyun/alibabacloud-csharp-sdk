@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information returned.</para>
+        /// <para>The array of returned information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CreateGadInstanceMemberResponseBodyResult Result { get; set; }
         public class CreateGadInstanceMemberResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The number of unit nodes that are created by calling this operation.</para>
+            /// <para>The number of nodes created in this call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The ID of the global active database cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>gad-rm-bp1npi2j8********</para>
+            /// <para>gad-rm-bp1npi2j8****</para>
             /// </summary>
             [NameInMap("GadInstanceName")]
             [Validation(Required=false)]

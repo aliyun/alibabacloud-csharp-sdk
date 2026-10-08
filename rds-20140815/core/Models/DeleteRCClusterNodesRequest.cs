@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCClusterNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The virtual private cloud (VPC) ID.</para>
         /// <remarks>
-        /// <para> This is a reserved parameter.</para>
+        /// <para>Reserved parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

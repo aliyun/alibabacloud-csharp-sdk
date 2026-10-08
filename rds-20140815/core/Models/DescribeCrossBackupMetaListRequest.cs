@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossBackupMetaListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-region backup file that you want to use. You can call the <a href="https://help.aliyun.com/document_detail/121733.html">DescribeCrossRegionBackups</a> operation to query the ID of the cross-region backup file.</para>
+        /// <para>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database that you want to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.</para>
+        /// <para>The name of the database to query. Exact match is used. The specific database name and the table names within the database are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb1</para>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: any non-zero positive integer.</para>
+        /// <para>The page number. Valid values: greater than 0 and up to the maximum value of Integer.</para>
         /// <remarks>
-        /// <para>This parameter only takes effect when you specify the <b>PageSize</b> parameter.</para>
+        /// <para>This parameter takes effect only when it is specified together with <b>PageSize</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default value: <b>1</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para>This parameter only takes effect when you specify the <b>PageIndex</b> parameter.</para>
+        /// <para>This parameter takes effect only when it is specified together with <b>PageIndex</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the database that you want to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</para>
+        /// <para>The name of the database to query. Fuzzy match is used. Only the matched database names are returned, and table names are not returned.</para>
         /// <remarks>
-        /// <para>You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the <b>GetDbName</b> parameter to query only the matched database and the tables in the matched database.</para>
+        /// <para>You can use fuzzy match first. For example, pass in test to match testdb1 and testdb2. After you determine the target database name, use exact match by passing in <b>GetDbName</b> to view the specific database name and table names.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Pattern { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

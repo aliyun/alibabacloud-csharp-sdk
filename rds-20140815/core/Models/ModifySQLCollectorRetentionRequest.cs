@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorRetentionRequest : TeaModel {
         /// <summary>
-        /// <para>The log retention period that is allowed by the SQL Explorer feature on the instance. Valid values:</para>
+        /// <para>The log retention period of SQL Explorer. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>30: 30 days</description></item>
         /// <item><description>180: 180 days</description></item>
-        /// <item><description>365: one year</description></item>
-        /// <item><description>1095: three years</description></item>
-        /// <item><description>1825: five years</description></item>
+        /// <item><description>365: 1 year</description></item>
+        /// <item><description>1095: 3 years</description></item>
+        /// <item><description>1825: 5 years</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmyxxxx</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceMajorVersionPrecheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,16 +25,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</para>
+        /// <para>The major engine version of the target instance. The version must be later than the current major engine version of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12.0</para>
+        /// <para>17.0</para>
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
+        /// <summary>
+        /// <para>The upgrade mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zeroDownTimeUpgrade</b>: zero-downtime upgrade.</description></item>
+        /// <item><description><b>inPlaceUpgrade</b>: in-place upgrade.</description></item>
+        /// <item><description><b>greenBlueDeployment</b>: blue-green deployment.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zeroDownTimeUpgrade</para>
+        /// </summary>
         [NameInMap("UpgradeMode")]
         [Validation(Required=false)]
         public string UpgradeMode { get; set; }

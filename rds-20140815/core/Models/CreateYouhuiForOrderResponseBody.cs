@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateYouhuiForOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>221201******</para>
+        /// <para>22120151****</para>
         /// </summary>
         [NameInMap("YouhuiId")]
         [Validation(Required=false)]

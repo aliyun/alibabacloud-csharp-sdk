@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMarketingActivityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1979008652307170</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>China site: 26842</description></item>
+        /// <item><description>Chinese site: 26842</description></item>
         /// <item><description>International site: 26888</description></item>
         /// </list>
         /// 
@@ -33,19 +33,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Bid { get; set; }
 
         /// <summary>
-        /// <para>The activity parameters</para>
+        /// <para>The campaign parameters.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeMarketingActivityResponseBodyItems> Items { get; set; }
         public class DescribeMarketingActivityResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The RDS edition of the instance. Valid values:</para>
+            /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-            /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-            /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition</description></item>
-            /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
+            /// <item><description><b>Basic</b>: Basic Edition.</description></item>
+            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+            /// <item><description><b>AlwaysOn</b>: Cluster Edition.</description></item>
+            /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The payment type. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go</description></item>
-            /// <item><description>PREPAY: subscription</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</para>
+            /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.s3.large</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</para>
+            /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Instance families</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores that are supported by the instance type. Unit: cores.</para>
+            /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity per node. Unit: GB.</para>
+            /// <para>The disk storage size per node. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? DiskSize { get; set; }
 
             /// <summary>
-            /// <para>The database engine of the instance. Valid values:</para>
+            /// <para>The database engine. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MySQL</description></item>
             /// <item><description>SQLServer</description></item>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The version of the database engine.</para>
+            /// <para>The database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O throughput. Unit: Mbit/s.</para>
+            /// <para>The maximum I/O bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -197,13 +197,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance. Valid values:</para>
+            /// <para>The instance storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>local_ssd</b>: local SSD</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-            /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) enhanced SSD (ESSD)</description></item>
-            /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-            /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+            /// <item><description><b>local_ssd</b>: local SSD.</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk.</description></item>
+            /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk.</description></item>
+            /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk.</description></item>
+            /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The RDS edition after the upgrade.</para>
+            /// <para>The upgrade instance edition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighAvailability</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeCategory { get; set; }
 
             /// <summary>
-            /// <para>The instance type after the upgrade.</para>
+            /// <para>The upgrade instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.s3.large</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeClassCode { get; set; }
 
             /// <summary>
-            /// <para>The instance family after the upgrade.</para>
+            /// <para>The upgrade instance family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeCpu { get; set; }
 
             /// <summary>
-            /// <para>The description of the upgrade.</para>
+            /// <para>The upgrade description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeDescContent { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity after the upgrade.</para>
+            /// <para>The disk size after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? UpgradeMaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O throughput after the upgrade. Unit: Mbit/s.</para>
+            /// <para>The maximum I/O bandwidth after the upgrade. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? UpgradeMemory { get; set; }
 
             /// <summary>
-            /// <para>The reference price of the upgrade.</para>
+            /// <para>The reference price for the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23333.1</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeReferencePrice { get; set; }
 
             /// <summary>
-            /// <para>The storage type after the upgrade.</para>
+            /// <para>The instance storage type after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

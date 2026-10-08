@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DetachRCDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>none</para>
         /// </summary>
         [NameInMap("DeleteWithInstance")]
         [Validation(Required=false)]
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk that you want to detach.</para>
+        /// <para>The ID of the cloud disk to be detached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

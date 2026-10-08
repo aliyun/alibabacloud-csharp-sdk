@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyBackupSetExpireTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the returned parameters.</para>
+        /// <para>The returned fields.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{
-        ///       &quot;SupportOnlineResizeDisk&quot;: true,
-        ///       &quot;DBInstanceName&quot;: &quot;rm-bp****&quot;,
-        ///       &quot;maxSupportDiskSizeGB&quot;: 6144
-        /// }</para>
+        /// <para>{expectExpireTime=1752581423000, dbClusterId=rm-7xv8f2zcia0e4****, backupId=262186****}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The information about the status code.</para>
+        /// <para>The response code message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

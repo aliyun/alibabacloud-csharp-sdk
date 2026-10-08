@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateMaskingRulesRequest : TeaModel {
         /// <summary>
-        /// <para>instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Database name</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>Name of the default encryption or masking algorithm</para>
+        /// <para>The name of the default encryption or masking algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aes-128-gcm</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DefaultAlgo { get; set; }
 
         /// <summary>
-        /// <para>Rule algorithm. Multiple algorithms can be selected. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted characters}}</para>
+        /// <para>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
@@ -74,28 +74,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Rule configuration, in JSON string format, containing matching rules for databases, tables, and columns</para>
+        /// <para>The rule configuration in JSON string format, which contains matching rules for databases, tables, and columns.</para>
         /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
         public CreateMaskingRulesRequestRuleConfig RuleConfig { get; set; }
         public class CreateMaskingRulesRequestRuleConfig : TeaModel {
             /// <summary>
-            /// <para>List of columns</para>
+            /// <para>The list of columns.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// <para>List of databases</para>
+            /// <para>The list of databases.</para>
             /// </summary>
             [NameInMap("Databases")]
             [Validation(Required=false)]
             public List<string> Databases { get; set; }
 
             /// <summary>
-            /// <para>List of tables</para>
+            /// <para>The list of tables.</para>
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Rule Name (only one rule name is supported per request)</para>
+        /// <para>The rule name. Only one rule name can be specified at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

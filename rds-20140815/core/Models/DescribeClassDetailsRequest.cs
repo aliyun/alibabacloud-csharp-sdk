@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeClassDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the instance type.</para>
+        /// <para>The instance type code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,22 +21,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClassCode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the instance. Valid values:</para>
+        /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance.</description></item>
-        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance.</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The database engine version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,10 +89,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain this value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

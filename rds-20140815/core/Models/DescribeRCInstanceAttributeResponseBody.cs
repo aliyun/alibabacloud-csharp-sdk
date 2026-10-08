@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -16,7 +26,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The ID of the cluster to which the instance belongs.</para>
         /// <remarks>
-        /// <para> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</para>
+        /// <para>This parameter will be deprecated. For better compatibility, use other parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores.</para>
+        /// <para>The number of vCPUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -36,6 +46,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance has joined an ACK cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Yes.</description></item>
+        /// <item><description><b>0</b>: No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CreateMode")]
         [Validation(Required=false)]
         public int? CreateMode { get; set; }
@@ -51,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The performance mode of the burstable instance.</para>
+        /// <para>The running mode of the burstable instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -108,12 +128,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The database type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>mssql</b>: SQL Server</description></item>
+        /// <item><description><b>mysql</b>: MySQL</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the dedicated hosts.</para>
+        /// <para>The dedicated host attributes.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -123,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute DedicatedHostAttribute { get; set; }
         public class DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute : TeaModel {
             /// <summary>
-            /// <para>The ID of the dedicated host.</para>
+            /// <para>The dedicated host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -144,12 +174,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the release protection feature is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment set.</para>
+        /// <para>The deployment set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-uf6c8qerk019bj1l****</para>
@@ -169,7 +212,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -179,7 +222,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The Elastic Compute Service (ECS) instance family.</para>
+        /// <para>The corresponding ECS instance family.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.2xlarge</para>
@@ -189,14 +232,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EcsInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The elastic IP address (EIP) associated with the instance.</para>
+        /// <para>The elastic IP address (EIP) binding information.</para>
         /// </summary>
         [NameInMap("EipAddress")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyEipAddress EipAddress { get; set; }
         public class DescribeRCInstanceAttributeResponseBodyEipAddress : TeaModel {
             /// <summary>
-            /// <para>The EIP ID.</para>
+            /// <para>The ID of the EIP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-bp14k3rz6cbg6zxbe****</para>
@@ -206,7 +249,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The maximum Internet bandwidth of the EIP. Unit: Mbit/s.</para>
+            /// <para>The Internet bandwidth throttling of the EIP. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -216,14 +259,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the Internet-facing instance. Valid values:</para>
+            /// <para>The billing method for the public network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>paybytraffic:</b> pay-by-data-transfer</description></item>
-            /// <item><description><b>paybybandwidth</b>: pay-by-bandwidth</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If the <b>pay-by-traffic</b> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>
+            /// <item><description><b>paybytraffic</b>: pay-by-data-transfer.</description></item>
+            /// <item><description><b>paybybandwidth</b>: pay-by-bandwidth.<remarks>
+            /// <para>In <b>pay-by-data-transfer</b> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>paybytraffic</para>
@@ -233,7 +276,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The EIP.</para>
+            /// <para>The EIP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.147.XXX.XXX</para>
@@ -245,10 +288,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether the Jumbo frame feature is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,16 +313,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        /// <summary>
+        /// <para>The number of GPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public int? Gpu { get; set; }
 
+        /// <summary>
+        /// <para>The GPU type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NVIDIA V100</para>
+        /// </summary>
         [NameInMap("GpuTypes")]
         [Validation(Required=false)]
         public string GpuTypes { get; set; }
 
         /// <summary>
-        /// <para>The instance hostname.</para>
+        /// <para>The hostname of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iZ2zej1n3cin51rlmby****</para>
@@ -287,10 +347,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the host. Valid values:</para>
+        /// <para>The host storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dhg_cloud_ssd</b>: ESSD</description></item>
-        /// <item><description><b>dhg_local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>dhg_cloud_ssd</b>: ESSD cloud disk.</description></item>
+        /// <item><description><b>dhg_local_ssd</b>: local standard SSD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -301,7 +361,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HostType { get; set; }
 
         /// <summary>
-        /// <para>The image ID of the instance.</para>
+        /// <para>The ID of the image that the instance is running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-2oqiu973jwcxe****</para>
@@ -320,6 +380,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
@@ -345,10 +415,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The network type. Valid values:</para>
+        /// <para>The network type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>classic</b></description></item>
-        /// <item><description><b>vpc</b></description></item>
+        /// <item><description><b>classic</b>: classic network.</description></item>
+        /// <item><description><b>vpc</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -359,7 +429,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.x4.xlarge.6cm</para>
@@ -369,13 +439,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The billing method for network usage. Valid values:</para>
+        /// <para>The billing method for Internet bandwidth. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByBandwidth</b>: pay-by-bandwidth</description></item>
-        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer</description></item>
+        /// <item><description><b>PayByBandwidth</b>: pay-by-bandwidth.</description></item>
+        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the <b>pay-by-traffic</b> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>
+        /// <para>In the <b>pay-by-data-transfer</b> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -386,7 +456,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound bandwidth from the Internet. Unit: Mbit/s.</para>
+        /// <para>The maximum inbound Internet bandwidth. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -396,7 +466,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound bandwidth to the Internet. Unit: Mbit/s.</para>
+        /// <para>The maximum outbound Internet bandwidth. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -406,10 +476,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is I/O optimized.</para>
+        /// <para>Indicates whether the instance is an I/O optimized instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>optimized</b>: The instance is I/O optimized.</description></item>
-        /// <item><description><b>none</b>: The instance is not I/O optimized.</description></item>
+        /// <item><description><b>optimized</b>: I/O optimization enabled.</description></item>
+        /// <item><description><b>none</b>: not I/O optimized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -430,7 +500,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The memory capacity of the instance. Unit: MiB.</para>
+        /// <para>The memory size. Unit: MiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8192</para>
@@ -439,6 +509,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The node type. If <b>rds_vnode</b> is returned, the node is a container node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds_vnode</para>
+        /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
@@ -489,6 +565,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aeky6z354ks****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -513,6 +595,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
 
+        /// <summary>
+        /// <para>The bidding strategy for the pay-as-you-go instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NoSpot</b>: a regular pay-as-you-go instance.</description></item>
+        /// <item><description><b>SpotAsPriceGo</b>: the system automatically bids, following the current market price.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
+        /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
@@ -520,11 +612,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Pending</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Starting</b></description></item>
-        /// <item><description><b>Stopping</b></description></item>
-        /// <item><description><b>Stopped</b></description></item>
+        /// <item><description><b>Pending</b>: being created.</description></item>
+        /// <item><description><b>Running</b>: running.</description></item>
+        /// <item><description><b>Starting</b>: starting.</description></item>
+        /// <item><description><b>Stopping</b>: stopping.</description></item>
+        /// <item><description><b>Stopped</b>: stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -535,11 +627,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the billing of the instance continues after the instance is stopped. Valid values:</para>
+        /// <para>Indicates whether the instance continues to be billed after it is stopped. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>KeepCharging</b>: The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</description></item>
-        /// <item><description><b>StopCharging</b>: The billing of the instance stops after the instance is stopped. After the instance is stopped, resources such as CPU cores, memory resources, and public IP address are released. The instance may be unable to restart if some required resources are out of stock in the current region.</description></item>
-        /// <item><description><b>Not-applicable</b>: The No Fees for Stopped Instances feature is not supported for the instance.</description></item>
+        /// <item><description><b>KeepCharging</b>: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</description></item>
+        /// <item><description><b>StopCharging</b>: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on the available resource inventory in the current region.</description></item>
+        /// <item><description><b>Not-applicable</b>: The instance does not support the No Fees for Stopped Instances feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -549,26 +641,75 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
 
+        /// <summary>
+        /// <para>The system cloud disk specifications.</para>
+        /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodySystemDisk SystemDisk { get; set; }
         public class DescribeRCInstanceAttributeResponseBodySystemDisk : TeaModel {
+            /// <summary>
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
             [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
             public bool? DeleteWithInstance { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the cloud disk is encrypted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Encrypted.</description></item>
+            /// <item><description><b>false</b>: Not encrypted.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public string Encrypted { get; set; }
 
+            /// <summary>
+            /// <para>The type of the system cloud disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cloud_efficiency</b>: ultra cloud disk.</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+            /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
+            /// <item><description><b>cloud_auto</b>: premium performance disk.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <para>The performance level (PL) of the system cloud disk when it is an ESSD. When the system cloud disk is a standard SSD, this parameter is not returned. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PL0</b></description></item>
+            /// <item><description><b>PL1</b></description></item>
+            /// <item><description><b>PL2</b></description></item>
+            /// <item><description><b>PL3</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
             [NameInMap("SystemDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>The size of the system cloud disk. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
@@ -603,14 +744,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The custom data of the instance, in Base64-encoded format.</para>
+        /// <remarks>
+        /// <para>If the instance does not have custom data, an empty string is returned.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IyEvYmluL3NoCmVjaG8gXCJIZWxsbyBXb3JsZC4gVGhlIHRpbWUgaXMgbm93ICQoZGF0ZSAtUikhXCIgfCB0ZWUgL3Jvb3QvdXNlcmRhdGFfdGVzdDA2MjB0d28udHh0</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The virtual LAN (VLAN) ID of the instance.</para>
+        /// <para>The VLAN ID of the instance.</para>
         /// <remarks>
-        /// <para> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</para>
+        /// <para>This parameter will be deprecated. For better compatibility, use other parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -621,7 +771,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VlanId { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) attributes of the instance.</para>
+        /// <para>The VPC attributes.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -631,7 +781,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeRCInstanceAttributeResponseBodyVpcAttributes VpcAttributes { get; set; }
         public class DescribeRCInstanceAttributeResponseBodyVpcAttributes : TeaModel {
             /// <summary>
-            /// <para>The network address translation (NAT) IP address of the instance. The NAT IP address is used by instances in different VPCs for communication.</para>
+            /// <para>The IP address of the cloud service, which is used for network communication between VPC-connected cloud services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>

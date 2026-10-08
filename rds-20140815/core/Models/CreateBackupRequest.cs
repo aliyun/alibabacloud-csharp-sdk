@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The backup type of the instance. Valid values:</para>
+        /// <para>The backup type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Logical</b>: logical backup</description></item>
-        /// <item><description><b>Physical</b>: physical backup</description></item>
-        /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+        /// <item><description><b>Logical</b>: logical backup. Only MySQL instances with local disks support this type.</description></item>
+        /// <item><description><b>Physical</b>: physical backup. MySQL instances with local disks, SQL Server instances, and PostgreSQL instances support this type.</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup. MySQL instances with cloud disks, SQL Server instances, PostgreSQL instances, and MariaDB instances support this type.</description></item>
         /// </list>
         /// <para>Default value: <b>Physical</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can perform a logical backup only when databases are created on the instance.</description></item>
-        /// <item><description>When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to <b>Physical</b>.</description></item>
-        /// <item><description>For more information about the supported backup types, see <a href="https://help.aliyun.com/document_detail/98818.html">Use the data backup feature</a>.</description></item>
-        /// <item><description>When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to <b>Snapshot</b>.</description></item>
+        /// <item><description>When you use logical backup, the database must contain data (the data cannot be empty).</description></item>
+        /// <item><description>MariaDB instances support only snapshot backup. However, set this parameter to <b>Physical</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -33,18 +31,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description><b>SQL Server</b>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</description></item>
+        /// <item><description><b>MySQL</b>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public long? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup policy. Valid values:</para>
+        /// <para>The backup strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>db</b>: a database-level backup.</description></item>
-        /// <item><description><b>instance</b>: an instance-level backup.</description></item>
+        /// <item><description><b>db</b>: single-database backup</description></item>
+        /// <item><description><b>instance</b>: instance backup</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can specify this parameter when you perform a logical backup on an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on an ApsaraDB RDS for SQL Server instance.</para>
+        /// <para>This parameter takes effect only when the following conditions are met:</para>
+        /// <list type="bullet">
+        /// <item><description>MySQL: The <b>BackupMethod</b> parameter is set to <b>Logical</b>.</description></item>
+        /// <item><description>SQL Server: The <b>BackupType</b> parameter is set to <b>FullBackup</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,17 +66,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupStrategy { get; set; }
 
         /// <summary>
-        /// <para>The backup method. Valid values:</para>
+        /// <para>The backup method for SQL Server instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b>: full or incremental backup that is automatically selected</description></item>
-        /// <item><description><b>FullBackup</b>: full backup</description></item>
+        /// <item><description><b>Auto</b> (default): automatically selects full backup or incremental backup.</description></item>
+        /// <item><description><b>FullBackup</b>: full backup.</description></item>
         /// </list>
-        /// <para>Default value: <b>Auto</b>.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must set this parameter only when the instance runs SQL Server.</description></item>
-        /// <item><description>This parameter is valid only when you set the <b>BackupMethod</b> parameter to <b>Physical</b>.</description></item>
-        /// </list>
+        /// <para>This parameter takes effect only when the <b>BackupMethod</b> parameter is set to <b>Physical</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,9 +94,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The names of the databases whose data you want to back up. Separate the names of the databases with commas (,).</para>
+        /// <para>The list of databases. Separate multiple databases with commas (,).</para>
         /// <remarks>
-        /// <para>You can specify this parameter when you perform a logical backup on individual databases of an ApsaraDB RDS for MySQL instance. You can also specify this parameter when you perform a full physical backup on individual databases of an ApsaraDB RDS for SQL Server instance.</para>
+        /// <para>This parameter takes effect only when the <b>BackupStrategy</b> parameter is set to <b>db</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

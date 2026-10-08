@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The internal endpoint that is used to connect to the read-only instance.</para>
+        /// <para>The internal database connection address of the read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rr-****.mysql.rds.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the read-only instance.</para>
+        /// <para>The read-only instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rr-uf6wjk5****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10078937****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The internal port number that is used to connect to the read-only instance.</para>
+        /// <para>The internal database connection port of the read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>

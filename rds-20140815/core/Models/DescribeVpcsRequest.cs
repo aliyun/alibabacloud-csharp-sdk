@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The cloud product type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds</para>
         /// </summary>
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxxtz*****</para>
         /// </summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC. Specify this parameter to query a specific VPC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1bva4qkmvqt******</para>
         /// </summary>
@@ -78,6 +90,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-g</para>
         /// </summary>

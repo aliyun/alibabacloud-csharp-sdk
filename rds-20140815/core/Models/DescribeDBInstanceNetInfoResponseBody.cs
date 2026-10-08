@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The network type of the instance. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: classic network.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>777C4593-8053-427B-99E2-105593277CAB</para>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The whitelist mode of the instance. Valid values:</para>
+        /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: standard whitelist mode</description></item>
-        /// <item><description><b>safety</b>: enhanced whitelist mode</description></item>
+        /// <item><description><b>normal</b>: standard whitelist mode.</description></item>
+        /// <item><description><b>safety</b>: enhanced whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceKernelVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can invoke DescribeDBInstances to query the instance ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If your instance runs PostgreSQL, you must make sure that the instance uses <b>cloud disks</b>. If the instance uses local disks, you must call the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.</description></item>
-        /// <item><description>If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.</description></item>
+        /// <item><description>The storage type of the ApsaraDB RDS for PostgreSQL instance must be <b>cloud disks</b>. For an instance with Premium Local SSDs, you can invoke the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance, which automatically upgrades the instance to the latest minor engine version.</description></item>
+        /// <item><description>Only the 2019 version of ApsaraDB RDS for SQL Server supports minor engine version upgrades.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bpxxxxx</para>
+        /// <para>rm-bp****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you set <b>UpgradeTime</b> to <b>SpecifyTime</b>.</para>
+        /// <para>This parameter takes effect only when <b>UpgradeTime</b> is set to <b>SpecifyTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,23 +52,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version to which you want to update. Format:</para>
+        /// <para>The minor database engine version to which you want to upgrade. Format:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PostgreSQL</b>: <c>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</c>. Example: <c>rds_postgres_1200_20200830</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>MySQL</b>: <c>&lt;RDS edition and MySQL version&gt;_&lt;Minor engine version&gt;</c>. Examples: <c>rds_20200229</c>, <c>xcluster_20200229</c>, and <c>xcluster80_20200229</c>. The following RDS editions and MySQL versions are supported:</para>
-        /// <list type="bullet">
-        /// <item><description><b>rds</b>: RDS Basic Edition or RDS High-availability Edition</description></item>
-        /// <item><description><b>xcluster</b>: MySQL 5.7 on RDS Enterprise Edition</description></item>
-        /// <item><description><b>xcluster80</b>: MySQL 8.0 on RDS Enterprise Edition</description></item>
+        /// <item><description><b>PostgreSQL</b>: <c>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</c>. Example for version 12 with minor version 20200830: <c>rds_postgres_1200_20200830</c>.</description></item>
+        /// <item><description><b>MySQL</b>: <c>&lt;Instance version&gt;_&lt;Minor version number&gt;</c>. Examples: <c>rds_20200229</c>, <c>xcluster_20200229</c>, or <c>xcluster80_20200229</c>. The instance version can be one of the following:<list type="bullet">
+        /// <item><description><b>rds</b>: high-availability series or Basic Edition.</description></item>
+        /// <item><description><b>xcluster</b>: MySQL 5.7 RDS Enterprise Edition.</description></item>
+        /// <item><description><b>xcluster80</b>: MySQL 8.0 RDS Enterprise Edition.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>SQLServer</b>: <c>&lt;Minor engine version&gt;</c>. Example: <c>15.0.4073.23</c>.</para>
-        /// </description></item>
+        /// <item><description><b>SQLServer</b>: <c>&lt;Minor version number&gt;</c>. Example: <c>15.0.4073.23</c>.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the instance is updated to the latest minor engine version.</para>
+        /// <para>If you do not specify this parameter, the instance is upgraded to the latest minor engine version by default.</para>
         /// <remarks>
-        /// <para> For more information about minor engine versions, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of AliPG</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of AliSQL</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of minor engine versions of ApsaraDB RDS for SQL Server</a>.</para>
+        /// <para>For minor engine version numbers, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of ApsaraDB RDS for PostgreSQL minor engine versions</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of ApsaraDB RDS for MySQL minor engine versions</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of ApsaraDB RDS for SQL Server minor engine versions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,11 +76,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when the update takes effect. Valid values:</para>
+        /// <para>The upgrade time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b> (default): The update takes effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>SpecifyTime</b>: The update takes effect at the point in time you specify.</description></item>
+        /// <item><description><b>Immediate</b> (default): The upgrade takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The upgrade takes effect during the maintenance window. To modify the maintenance window, call ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecifyTime</b>: The upgrade takes effect at a specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

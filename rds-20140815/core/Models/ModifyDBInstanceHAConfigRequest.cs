@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceHAConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk543xxxxx</para>
+        /// <para>rm-uf6wjk543****</para>
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The HA mode of the instance.</para>
+        /// <para>The High-availability Mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</description></item>
-        /// <item><description>RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.</description></item>
+        /// <item><description>RPO: Data consistency is preferred. The instance ensures data reliability to the greatest extent, which minimizes the amount of data loss. Use RPO mode if you have high requirements for data consistency.</description></item>
+        /// <item><description>RTO: Instance availability is preferred. The instance recovers services as soon as possible, which maximizes the active time. Use RTO mode if you have high requirements for database uptime.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,16 +52,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The data replication mode of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/96055.html">Data replication mode</a>.</para>
+        /// <para>The data replication method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Semi-sync: the semi-synchronous mode.</description></item>
-        /// <item><description>Sync: the synchronous mode.</description></item>
-        /// <item><description>gAsyncg: the asynchronous mode.</description></item>
-        /// <item><description>Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).</description></item>
+        /// <item><description>Semi-sync: semi-synchronous replication.</description></item>
+        /// <item><description>Sync: synchronous replication.</description></item>
+        /// <item><description>Async: asynchronous replication.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Mgr: MySQL Group Replication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

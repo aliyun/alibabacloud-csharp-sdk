@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCreateDdrDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the data of the source instance can be restored across regions. Valid values:</para>
+        /// <para>Indicates whether the disaster recovery instance can be created. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>

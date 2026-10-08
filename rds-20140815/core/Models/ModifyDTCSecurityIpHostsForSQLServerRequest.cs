@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDTCSecurityIpHostsForSQLServerRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeDBInstanceAttribute to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the ECS instance and the hostname of the Windows computer. Format: <c>IP address,Hostname</c>. Separate multiple entries with semicolon (;).</para>
+        /// <para>The IP addresses of ECS instances and the computer names of the Windows operating systems. Format: <c>ip,hostname</c>. Separate multiple instances with semicolons (;).</para>
         /// <remarks>
-        /// <para> For more information about how to query the computer hostname, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</para>
+        /// <para>For more information about how to view the computer name, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.1.100,k3ecstest</para>
+        /// <para>192.168.XX.XX,k3ecstest</para>
         /// </summary>
         [NameInMap("SecurityIpHosts")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP address whitelist.</para>
+        /// <para>The name of the whitelist group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

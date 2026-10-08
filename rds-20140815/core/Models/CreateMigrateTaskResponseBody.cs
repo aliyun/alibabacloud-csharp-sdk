@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateMigrateTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the migration task. Valid values:</para>
+        /// <para>The type of the cloud migration task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: The migration task migrates full backup files.</description></item>
-        /// <item><description><b>UPDF</b>: The migration task migrates incremental or log backup files.</description></item>
+        /// <item><description><b>FULL</b>: performs a restore operation by using a full backup file.</description></item>
+        /// <item><description><b>UPDF</b>: restores incremental data by using an incremental backup file or log file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk******</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test02</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the migration task.</para>
+        /// <para>The migration task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>564******</para>
+        /// <para>564563****</para>
         /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]
         public string MigrateTaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>866F5EB8-4650-4061-87F0-379F6F968BCE</para>

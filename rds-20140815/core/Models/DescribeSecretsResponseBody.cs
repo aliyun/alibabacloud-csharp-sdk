@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the credential.</para>
+        /// <para>The list of credential details.</para>
         /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]
         public List<DescribeSecretsResponseBodySecrets> Secrets { get; set; }
         public class DescribeSecretsResponseBodySecrets : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1266348003******</para>
+            /// <para>1266348003****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</para>
+            /// <para>The user credential of the Data API account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</para>
+            /// <para>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</para>
             /// </summary>
             [NameInMap("SecretArn")]
             [Validation(Required=false)]
             public string SecretArn { get; set; }
 
             /// <summary>
-            /// <para>The name of the credential.</para>
+            /// <para>The credential name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Foo</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecretName { get; set; }
 
             /// <summary>
-            /// <para>The username that is used to access the database.</para>
+            /// <para>The database username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_jack</para>

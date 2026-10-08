@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of snapshots.</para>
+        /// <para>The snapshot information.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeRCSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeRCSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the snapshot can be shared and used to create or roll back a cloud disk. Valid values:</para>
+            /// <para>Indicates whether the snapshot can be used to create cloud disks, roll back cloud disks, or share snapshots. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Available.</description></item>
+            /// <item><description>false: Not available.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The snapshot type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Standard: standard snapshot</description></item>
-            /// <item><description>Flash: local snapshot This value will be deprecated. The local snapshot feature is replaced with the instant access feature.</description></item>
-            /// <item><description>archive: archived snapshot</description></item>
+            /// <item><description>Standard: standard snapshot.</description></item>
+            /// <item><description>Flash: local snapshot. This value will be deprecated. Local snapshots have been replaced by the instant access feature.</description></item>
+            /// <item><description>archive: archived snapshot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The snapshot description.</para>
+            /// <para>The description of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zd_test</para>
@@ -96,10 +96,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the snapshot was encrypted. Valid values:</para>
+            /// <para>Indicates whether the snapshot is encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Encrypted.</description></item>
+            /// <item><description>false: Not encrypted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string LastModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The progress of the snapshot creation task in percentage.</para>
+            /// <para>The progress of snapshot creation, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -143,6 +143,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rc-t8q22a87745hf8****</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -161,18 +167,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The snapshot name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>s-2ze8klip00xcogcwer76</para>
+            /// <para>csw-37-SystemDisk</para>
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// <para>The snapshot type. Valid values:</para>
+            /// <para>The type of automatic creation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>auto or timer: automatically created snapshot</description></item>
-            /// <item><description>user: manually created snapshot</description></item>
-            /// <item><description>all: all snapshot types</description></item>
+            /// <item><description>auto or timer: automatic snapshot.</description></item>
+            /// <item><description>user: manual snapshot.</description></item>
+            /// <item><description>all: all automatic creation types.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SnapshotType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the original disk. This parameter is retained even after the original disk for which the snapshot was created is released.</para>
+            /// <para>The ID of the source cloud disk. This field is retained even if the source cloud disk of the snapshot has been released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rcd-bp67acfmxazb4ph****</para>
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceDiskId { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the original disk. Unit: GiB.</para>
+            /// <para>The capacity of the source cloud disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -203,10 +209,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourceDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The type of the original disk. Valid values:</para>
+            /// <para>The type of the source cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SYSTEM: system disk</description></item>
-            /// <item><description>DATA: data disk</description></item>
+            /// <item><description>SYSTEM: system cloud disk.</description></item>
+            /// <item><description>DATA: data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,9 +223,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// <para>The type of the source disk.</para>
+            /// <para>The type of the source cloud disk.</para>
             /// <remarks>
-            /// <para> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</para>
+            /// <para>This parameter will be deprecated. To ensure compatibility, use other parameters instead.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -234,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description>progressing: The snapshot is being created.</description></item>
             /// <item><description>accomplished: The snapshot is created.</description></item>
-            /// <item><description>failed: The snapshot fails to be created.</description></item>
+            /// <item><description>failed: The snapshot failed to be created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -244,14 +250,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tag details.</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeRCSnapshotsResponseBodySnapshotsTag> Tag { get; set; }
             public class DescribeRCSnapshotsResponseBodySnapshotsTag : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testRC</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test01</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
@@ -259,12 +280,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the snapshot is used to create custom images or disks. Valid values:</para>
+            /// <para>Indicates whether the snapshot has been used to create images or cloud disks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>image: The snapshot is used to create custom images.</description></item>
-            /// <item><description>disk: The snapshot is used to create disks.</description></item>
-            /// <item><description>image_disk: The snapshot is used to create custom images and data disks.</description></item>
-            /// <item><description>none: The snapshot is not used to create custom images or disks.</description></item>
+            /// <item><description>image: The snapshot has been used to create custom images.</description></item>
+            /// <item><description>disk: The snapshot has been used to create cloud disks.</description></item>
+            /// <item><description>image_disk: The snapshot has been used to create both data cloud disks and custom images.</description></item>
+            /// <item><description>none: The snapshot has not been used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -277,7 +298,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

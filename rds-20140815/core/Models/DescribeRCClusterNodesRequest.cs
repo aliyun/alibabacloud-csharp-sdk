@@ -26,8 +26,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,34 +34,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
-        /// <para>Default value: <b>30</b>.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The region ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
-        /// <remarks>
-        /// <para> This is a reserved parameter.</para>
-        /// </remarks>
-        /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>vpc-2zet5c7111r33zbie****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

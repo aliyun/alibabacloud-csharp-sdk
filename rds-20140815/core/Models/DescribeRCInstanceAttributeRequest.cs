@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>k8s-node</para>
         /// </summary>
@@ -27,10 +29,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of disks returned in the response. Valid values: 10 to 500.</para>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is not specified, the default value is 20.</description></item>
+        /// <item><description>If the specified value is less than 10, the value is set to 10.</description></item>
+        /// <item><description>If the specified value is from 10 to 500, the specified value is used.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxDisksResults")]
         [Validation(Required=false)]
         public long? MaxDisksResults { get; set; }
 
+        /// <summary>
+        /// <para>The private IP address of the instance in the VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.XXX.XXX</para>
+        /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }

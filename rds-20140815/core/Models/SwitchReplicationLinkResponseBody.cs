@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchReplicationLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the DR instance.</para>
+        /// <para>The instance ID of the disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135****</para>

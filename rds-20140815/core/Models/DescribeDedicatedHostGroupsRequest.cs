@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The image based on which the hosts in the dedicated clusters are created. Valid values:</para>
+        /// <para>The host image based on which you want to query dedicated clusters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WindowsWithMssqlStdLicense</b>: a Windows image that contains the licenses of SQL Server Standard Edition</description></item>
-        /// <item><description><b>WindowsWithMssqlEntLisence</b>: a Windows image that contains the licenses of SQL Server Enterprise Edition</description></item>
-        /// <item><description><b>WindowsWithMssqlWebLisence</b>: a Windows image that contains the licenses of SQL Server Web Edition</description></item>
-        /// <item><description><b>AliLinux</b>: a Linux image</description></item>
+        /// <item><description><b>WindowsWithMssqlStdLicense</b>: Windows (with SQL Server Standard Edition license).</description></item>
+        /// <item><description><b>WindowsWithMssqlEntLisence</b>: Windows (with SQL Server Enterprise Edition license).</description></item>
+        /// <item><description><b>WindowsWithMssqlWebLisence</b>: Windows (with SQL Server Web Edition license).</description></item>
+        /// <item><description><b>AliLinux</b>: Linux.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

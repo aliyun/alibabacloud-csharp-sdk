@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCollationTimeZoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The character set collation of the instance.</para>
+        /// <para>The system character set collation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Latin1_General_CI_AS</para>
+        /// <para>Chinese_PRC_CS_AS</para>
         /// </summary>
         [NameInMap("Collation")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-bp15qi0nd1u27****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8EA054AF-DFA7-497D-9F57-790FFC974C0B</para>
+        /// <para>58D48758-F035-52D3-A4FB-80C73DA3E95C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>114413215</para>
+        /// <para>56365****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

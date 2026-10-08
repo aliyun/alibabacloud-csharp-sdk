@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5******</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -24,17 +24,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RDS_MySQL</para>
+        /// <para>testdb</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.**</para>
-        /// <remarks>
-        /// <para>The end time must be later than the start time.</para>
-        /// </remarks>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,9 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.</para>
+        /// <para>Notice: This parameter is applicable only to Cluster Edition instances. You can specify this parameter to query the logs of a specific node. If you do not specify this parameter, the logs of the primary node are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +63,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</para>
+        /// <remarks>
+        /// <para>Default value: <b>1</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid value: <b>30 to 200</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b> to <b>100</b>.</para>
+        /// <remarks>
+        /// <para>Default value: <b>30</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</para>
+        /// <para>The unique identifier of the SQL statement in the slow query log statistics. You can use this parameter to obtain the slow query log details of the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>U2FsdGVk****</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SQLHASH { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The start time must be within the last 30 days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

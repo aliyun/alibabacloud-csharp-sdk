@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>The event list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The details of the data.</para>
+            /// <para>The data overview.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public DescribeHistoryEventsResponseBodyItemsData Data { get; set; }
             public class DescribeHistoryEventsResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>The cloud service type of the application group. Valid values: <b>web</b> and native. The value web indicates a web application. The value <b>native</b> indicates a local application.</para>
+                /// <para>The cloud service type of the application group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>web</b>: web application.</description></item>
+                /// <item><description><b>native</b>: on-premises application.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>web</para>
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CmsProduct { get; set; }
 
                 /// <summary>
-                /// <para>The database engine.</para>
+                /// <para>The database type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DetailImpact { get; set; }
 
                 /// <summary>
-                /// <para>The details of the instance operation.</para>
+                /// <para>The instance operation details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DetailReason { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was closed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</para>
+                /// <para>The alert end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-06T11:46:01Z</para>
@@ -74,7 +78,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+                /// <para>The system event categorization. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Exception</b>: abnormal event.</description></item>
+                /// <item><description><b>Optimize</b>: optimization events.</description></item>
+                /// <item><description><b>Notification</b>: notification event.</description></item>
+                /// <item><description><b>Maintenance</b>: scheduled maintenance event.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Exception</para>
@@ -114,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>The event impact.</para>
+                /// <para>The event impact overview.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -124,17 +134,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventImpact { get; set; }
 
                 /// <summary>
-                /// <para>The event level. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+                /// <para>The event level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>INFO</b>: notification.</description></item>
+                /// <item><description><b>WARN</b>: warning.</description></item>
+                /// <item><description><b>CRITICAL</b>: critical.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>high</para>
+                /// <para>INFO</para>
                 /// </summary>
                 [NameInMap("EventLevel")]
                 [Validation(Required=false)]
                 public string EventLevel { get; set; }
 
                 /// <summary>
-                /// <para>The event source.</para>
+                /// <para>The source of the event operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -144,15 +159,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventReason { get; set; }
 
                 /// <summary>
-                /// <para>The status of the alert event. Valid values:</para>
+                /// <para>The event status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: pending</description></item>
-                /// <item><description><b>2</b>: ignored</description></item>
-                /// <item><description><b>4</b>: confirmed</description></item>
-                /// <item><description><b>8</b>: marked as false positive</description></item>
-                /// <item><description><b>16</b>: handling</description></item>
-                /// <item><description><b>32</b>: handled</description></item>
-                /// <item><description><b>64</b>: expired</description></item>
+                /// <item><description><b>Inquiring</b>: inquiring.</description></item>
+                /// <item><description><b>Scheduled</b>: scheduled.</description></item>
+                /// <item><description><b>Running</b>: running.</description></item>
+                /// <item><description><b>Succeed</b>: completed.</description></item>
+                /// <item><description><b>Failed</b>: failed.</description></item>
+                /// <item><description><b>Canceled</b>: canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -163,7 +177,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventStatus { get; set; }
 
                 /// <summary>
-                /// <para>The event type. Valid values:</para>
+                /// <para>The system event type. Valid values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</description></item>
+                /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance is redeployed due to system maintenance.</description></item>
+                /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system error.</description></item>
+                /// <item><description><b>SystemFailure.Redeploy</b>: The instance is redeployed due to a system error.</description></item>
+                /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to an instance creation failure.</description></item>
+                /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance error.</description></item>
+                /// <item><description><b>InstanceExpiration.Stop</b>: The instance is stopped due to subscription expiration.</description></item>
+                /// <item><description><b>InstanceExpiration.Delete</b>: The instance is released due to subscription expiration.</description></item>
+                /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
+                /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>StatusNotification</para>
@@ -173,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</para>
+                /// <para>The time when the event was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-17T16:05:40Z</para>
@@ -183,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The update time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</para>
+                /// <para>The time when the event was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-12-14T09:44:39.000+0000</para>
@@ -233,7 +259,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the alert is closed. Valid values: <b>0</b>: closed. <b>1</b>: not closed.</para>
+                /// <para>Indicates whether the event is closed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: closed.</description></item>
+                /// <item><description><b>1</b>: open.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -243,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? IsClosed { get; set; }
 
                 /// <summary>
-                /// <para>The service name.</para>
+                /// <para>The product name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -253,7 +283,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-guangzhou</para>
@@ -263,10 +293,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. The value is fixed as <b>INSTANCE</b>.</para>
+                /// <para>The resource type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Instance</b>: instance resource.</description></item>
+                /// <item><description><b>Host</b>: host resource.</description></item>
+                /// <item><description><b>User</b>: user resource.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>INSTANCE</para>
+                /// <para>Instance</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -283,7 +318,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The start time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-11-29T07:23Z</para>
@@ -293,7 +328,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource owner.</para>
+                /// <para>The ID of the user who owns the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16986832xxxxx</para>
@@ -305,7 +340,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4309</para>
@@ -315,7 +350,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -335,7 +370,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -355,7 +390,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The amount of time that has elapsed from the start time of the query. Unit: seconds.</para>
+            /// <para>The elapsed time of the query task. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1675232573125</para>
@@ -365,7 +400,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The event type. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host</para>
@@ -377,7 +412,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number. Valid values: any non-zero positive integer. Default value: <b>1</b>.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -387,7 +422,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 30.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

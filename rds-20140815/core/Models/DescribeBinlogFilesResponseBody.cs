@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total size of the log file.</para>
+        /// <para>The total size of the log files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2269410</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StartDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The data migration method of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values:</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The migration method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.</description></item>
-        /// <item><description><b>1</b>: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.</description></item>
-        /// <item><description><b>2</b>: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify <b>DedicatedHostGroupId</b>, <b>TargetDedicatedHostIdForMaster</b>, and <b>TargetDedicatedHostIdForSlave</b>. If you set DBInstanceTransType to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.</description></item>
+        /// <item><description><b>0</b>: Default value. The system preferentially performs a local specification change. If local resources are insufficient, a cross-instance migration is performed.</description></item>
+        /// <item><description><b>1</b>: Local specification change. If the system determines that the instance does not support a local specification change, an error is returned.</description></item>
+        /// <item><description><b>2</b>: Cross-instance migration. The instance is migrated to a specified host. You must specify <b>DedicatedHostGroupId</b>, <b>TargetDedicatedHostIdForMaster</b>, and <b>TargetDedicatedHostIdForSlave</b>. The instance cannot be migrated to the host on which it currently resides. Otherwise, the migration fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceTransType { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster ID. This parameter is supported if you call this operation to suspend an RDS instance in the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</para>
+        /// <para>This operation also supports starting an ApsaraDB RDS instance in a dedicated cluster. In this case, specify the dedicated cluster ID. You can call DescribeDedicatedHostGroups to query the dedicated cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-39****</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The effective time. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b></description></item>
-        /// <item><description><b>MaintainTime</b>: The change takes effect during the planned maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>SpecificTime</b>: The change takes effect at a specified point in time.</description></item>
+        /// <item><description><b>Immediate</b>: The operation takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The operation takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecificTime</b>: The operation takes effect at a specified time.</description></item>
         /// </list>
         /// <para>Default value: MaintainTime.</para>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The switching time. This parameter is available only for instances that are created in dedicated clusters. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The specified switchover time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <remarks>
-        /// <para>This parameter must be specified when <b>EffectiveTime</b> is set to <b>Specified</b>.</para>
+        /// <para>This parameter is required when <b>EffectiveTime</b> is set to <b>Specified</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SpecifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values: <b>5 to 2000</b>. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The custom storage capacity. Valid values: <b>5 to 2000</b>. Unit: GB. If you do not specify this parameter, the storage capacity remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Storage { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the required instance. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The instance type of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds.ebmhfc6.20xlarge</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dh-bp****</para>
@@ -137,9 +137,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForLog { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host on which the primary instance is created. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. Specifies the ID of the destination host for the primary node.</para>
         /// <remarks>
-        /// <para>This parameter must be specified when <b>DBInstanceTransType</b> is set to <b>2</b>.</para>
+        /// <para>This parameter is required when <b>DBInstanceTransType</b> is set to <b>2</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,9 +150,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host on which the secondary instance is created. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. Specifies the ID of the destination host for the secondary node.</para>
         /// <remarks>
-        /// <para>This parameter must be specified when <b>DBInstanceTransType</b> is set to <b>2</b>.</para>
+        /// <para>This parameter is required when <b>DBInstanceTransType</b> is set to <b>2</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForSlave { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-****</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This parameter is available only for instances that are created in dedicated clusters.</para>
+        /// <para>This parameter is supported only for dedicated cluster instances. The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

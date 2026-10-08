@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>mysql</b></description></item>
-        /// <item><description><b>mssql</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>MariaDB</b></description></item>
+        /// <item><description><b>mysql</b>: MySQL</description></item>
+        /// <item><description><b>mssql</b>: SQL Server</description></item>
+        /// <item><description><b>PostgreSQL</b>: PostgreSQL</description></item>
+        /// <item><description><b>MariaDB</b>: MariaDB</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>

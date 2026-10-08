@@ -10,30 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableRecoveryTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-region data backup file.</para>
+        /// <para>The ID of the cross-region backup file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>14377</para>
+        /// <para>1249****</para>
         /// </summary>
         [NameInMap("CrossBackupId")]
         [Validation(Required=false)]
         public int? CrossBackupId { get; set; }
 
         /// <summary>
-        /// <para>The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The start time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-06-12T05:22:29Z</para>
+        /// <para>2024-03-04T21:00:47Z</para>
         /// </summary>
         [NameInMap("RecoveryBeginTime")]
         [Validation(Required=false)]
         public string RecoveryBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The end time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-06-12T07:33:12Z</para>
+        /// <para>2024-03-07T02:23:26Z</para>
         /// </summary>
         [NameInMap("RecoveryEndTime")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The region where the source instance resides.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

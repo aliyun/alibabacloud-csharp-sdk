@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available zones in the region.</para>
+        /// <para>The list of available zone resources for ApsaraDB RDS.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The database engines that are available for purchase.</para>
+            /// <para>The list of supported database engines available for sale.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines : TeaModel {
                 /// <summary>
-                /// <para>The database engine of the instance.</para>
+                /// <para>The database engine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
@@ -44,21 +44,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The database engine versions that are available for purchase.</para>
+                /// <para>The list of supported database engine versions available for sale.</para>
                 /// </summary>
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
                     /// <summary>
-                    /// <para>The RDS editions that are available that are available for purchase.</para>
+                    /// <para>The list of supported instance editions available for sale.</para>
                     /// </summary>
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> SupportedCategorys { get; set; }
                     public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys : TeaModel {
                         /// <summary>
-                        /// <para>The RDS edition of the instance.</para>
+                        /// <para>The instance edition.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HighAvailability</para>
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Category { get; set; }
 
                         /// <summary>
-                        /// <para>The storage types that are available for purchase.</para>
+                        /// <para>The list of supported storage types available for sale.</para>
                         /// </summary>
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]
                         public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> SupportedStorageTypes { get; set; }
                         public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes : TeaModel {
                             /// <summary>
-                            /// <para>The storage type of the instance.</para>
+                            /// <para>The instance storage type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>local_ssd</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4256E149-C3C4-4FA7-BDEA-13CA415E8763</para>
