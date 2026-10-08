@@ -1,3 +1,8 @@
+2026-10-08 Version: 3.2.15
+- Update API GetInstanceDetail: add response parameters Body.OrderProgress.
+- Update API ListInstances: add request parameters VersionType.
+
+
 2026-09-18 Version: 3.2.14
 - Generated csharp 2020-04-07 for cas.
 

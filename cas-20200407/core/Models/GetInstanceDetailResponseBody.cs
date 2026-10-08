@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetInstanceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether automatic hosting is enabled. Valid values:</para>
+        /// <para>Specifies whether automatic hosting is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enable: Enabled.</description></item>
-        /// <item><description>disable: Not enabled.</description></item>
+        /// <item><description>disable: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string AutoReissue { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current version includes automatic hosting. Valid values:</para>
+        /// <para>Specifies whether the current version includes automatic hosting. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Included.</description></item>
         /// <item><description>0: Not included.</description></item>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? AutoReissueFlag { get; set; }
 
         /// <summary>
-        /// <para>The average waiting time for issuing a certificate of this specification. Unit: seconds.</para>
+        /// <para>The average waiting time for issuing a certificate of this specification, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -58,12 +58,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Brand { get; set; }
 
         /// <summary>
-        /// <para>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
+        /// <para>The global certificate ID. The format is Certificate ID + &quot;-&quot; + Site region ID. This ID is commonly used across Alibaba Cloud services.</para>
         /// <list type="bullet">
-        /// <item><description>China site: certificate ID + &quot;-cn-hangzhou&quot;</description></item>
-        /// <item><description>International site: certificate ID + &quot;-ap-southeast-1&quot;</description></item>
+        /// <item><description>For the Chinese site, the format is Certificate ID + &quot;-cn-hangzhou&quot;.</description></item>
+        /// <item><description>For the international site, the format is Certificate ID + &quot;-ap-southeast-1&quot;.
+        /// For example, if the certificate ID is 123, the CertIdentifier for the Chinese site is &quot;123-cn-hangzhou&quot;, and for the international site, it is &quot;123-ap-southeast-1&quot;.</description></item>
         /// </list>
-        /// <para>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22783111-cn-hangzhou</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
+        /// <para>The expiration time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate is issued, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CertificateNotAfter { get; set; }
 
         /// <summary>
-        /// <para>The start time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
+        /// <para>The start time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate is issued, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1781568000000</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CertificateNotBefore { get; set; }
 
         /// <summary>
-        /// <para>The revocation time of the latest certificate, in UNIX timestamp format. The value is accurate to the second.</para>
+        /// <para>The revocation time of the latest certificate. The value is a UNIX timestamp accurate to seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <list type="bullet">
         /// <item><description><b>issued</b>: Issued.</description></item>
         /// <item><description><b>revoked</b>: Revoked.</description></item>
-        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>willExpire</b>: Expiring soon.</description></item>
         /// <item><description><b>expired</b>: Expired.</description></item>
         /// </list>
         /// 
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateType { get; set; }
 
         /// <summary>
-        /// <para>The city where the company or organization of the certificate purchaser is located. This field is required when generating a certificate signing request. Default value: Beijing.</para>
+        /// <para>The city where the company or organization of the user who purchased the certificate is located. This field is required when generating a CSR. Default value: Beijing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Beijing</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The company information ID.</para>
+        /// <para>The ID of the company information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47305</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<long?> ContactIdList { get; set; }
 
         /// <summary>
-        /// <para>The country or region code of the certificate organization. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</para>
+        /// <para>The code of the country or region where the organization specified in the certificate is located. For example, CN indicates China, and US indicates the United States. This field is required when generating a CSR. Default value: CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud resources to which the certificate has been deployed.</para>
+        /// <para>The number of deployed cloud service resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? DeploymentResourceCount { get; set; }
 
         /// <summary>
-        /// <para>The used quota for cloud server deployment.</para>
+        /// <para>The used quota for deployment to cloud servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -216,14 +216,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? DeploymentUseCount { get; set; }
 
         /// <summary>
-        /// <para>The list of associated expert service DingTalk groups.</para>
+        /// <para>The list of associated DingTalk groups for expert services.</para>
         /// </summary>
         [NameInMap("DingGroupList")]
         [Validation(Required=false)]
         public List<GetInstanceDetailResponseBodyDingGroupList> DingGroupList { get; set; }
         public class GetInstanceDetailResponseBodyDingGroupList : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the expert service DingTalk group.</para>
+            /// <para>The instance ID of the DingTalk group for expert services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string DingGroupInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the expert service DingTalk group.</para>
+            /// <para>The name of the DingTalk group for expert services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -243,10 +243,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string DingGroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the expert service DingTalk group. Valid values:</para>
+            /// <para>The type of the DingTalk group for expert services. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>expedite: application assistance</description></item>
-            /// <item><description>remote: offline deployment</description></item>
+            /// <item><description>expedite: Application assistance.</description></item>
+            /// <item><description>remote: Offline deployment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string DingGroupType { get; set; }
 
             /// <summary>
-            /// <para>The URL for joining the expert service DingTalk group.</para>
+            /// <para>The link to join the DingTalk group for expert services.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://123.com">https://123.com</a></para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<GetInstanceDetailResponseBodyDomainValidationList> DomainValidationList { get; set; }
         public class GetInstanceDetailResponseBodyDomainValidationList : TeaModel {
             /// <summary>
-            /// <para>The CNAME record value for verification-free authorization. This value may be empty.</para>
+            /// <para>The CNAME record value for verification-free authorization. This parameter may be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123.com</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The prefix for CNAME validation.</para>
+            /// <para>The prefix used for CNAME validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ValidationType { get; set; }
 
             /// <summary>
-            /// <para>The host record value for validation.</para>
+            /// <para>The value of the host record for validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The number of exact-match domain names.</para>
+        /// <para>The number of exact domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -368,10 +368,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? FullDomainCount { get; set; }
 
         /// <summary>
-        /// <para>The method used to generate the certificate signing request. Valid values:</para>
+        /// <para>The method used to generate the CSR. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: System-generated. The Csr field is ignored.</description></item>
-        /// <item><description>upload: User-uploaded. The Csr field is required.</description></item>
+        /// <item><description>online: Generated by the system. The Csr field is ignored.</description></item>
+        /// <item><description>upload: Uploaded by the user. The Csr field is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string GenerateCsrMethod { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
+        /// <para>The expiration time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
+        /// <para>The start time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -412,10 +412,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? InstanceStartTime { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:</para>
+        /// <para>The type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BUY: official certificate</description></item>
-        /// <item><description>TEST: test certificate</description></item>
+        /// <item><description>BUY: Official certificate.</description></item>
+        /// <item><description>TEST: Test certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The certificate algorithm. Valid values:</para>
+        /// <para>The algorithm of the certificate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>RSA_2048</b></description></item>
         /// <item><description><b>RSA_3072</b></description></item>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the domain name monitoring quota can be expanded. Valid values:</para>
+        /// <para>Specifies whether the quota for domain name monitoring can be expanded. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Yes.</description></item>
         /// <item><description>0: No.</description></item>
@@ -467,7 +467,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? MonitorUseCount { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</para>
+        /// <para>The end time of the instance purchase. The value is a UNIX timestamp used to determine the purchase duration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -477,7 +477,31 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</para>
+        /// <para>The progress of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;orderProgress&quot;: [
+        ///     {
+        ///       &quot;certificateId&quot;: 12345,
+        ///       &quot;certificateName&quot;: &quot;example.com&quot;,
+        ///       &quot;notBefore&quot;: 1727000000000,
+        ///       &quot;notAfter&quot;: 1735000000000,
+        ///       &quot;stages&quot;: [
+        ///         { &quot;name&quot;: &quot;apply&quot;, &quot;title&quot;: &quot;apply&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1726990000000 },
+        ///         { &quot;name&quot;: &quot;domainValidation&quot;, &quot;title&quot;: &quot;domainValidation&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1727000000000 },
+        ///         { &quot;name&quot;: &quot;issue&quot;, &quot;title&quot;: &quot;issue&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1727000000000 }
+        ///       ]
+        ///     }
+        ///   ]
+        /// }</para>
+        /// </summary>
+        [NameInMap("OrderProgress")]
+        [Validation(Required=false)]
+        public string OrderProgress { get; set; }
+
+        /// <summary>
+        /// <para>The start time of the instance purchase. The value is a UNIX timestamp accurate to seconds, used to determine the time limit for refunds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -487,7 +511,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderStartTime { get; set; }
 
         /// <summary>
-        /// <para>The result returned by the CA during the last certificate operation.</para>
+        /// <para>The result returned by the CA during the last operation on the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>
@@ -497,7 +521,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string PendingResult { get; set; }
 
         /// <summary>
-        /// <para>The province or region where the company is located. This field is required when generating a certificate signing request. Default value: Beijing.</para>
+        /// <para>The province or region where the company is located. This field is required when generating a CSR. Default value: Beijing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Beijing</para>
@@ -507,7 +531,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2CE1D02-6D5E-56E5-A9BD-EE288255C7F9</para>
@@ -517,7 +541,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek****wia</para>
@@ -527,7 +551,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The purchased instance specification.</para>
+        /// <para>The specifications of the purchased instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ss.dv.t</para>
@@ -540,12 +564,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>inactive</b>: Pending use.</description></item>
-        /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
-        /// <item><description><b>willExpire</b>: The instance is about to expire.</description></item>
-        /// <item><description><b>expired</b>: The instance has expired.</description></item>
+        /// <item><description><b>pending</b>: Under review. The latest certificate is committed for review.</description></item>
+        /// <item><description><b>willExpire</b>: Expiring soon.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
         /// <item><description><b>refund</b>: Refunded.</description></item>
         /// <item><description><b>normal</b>: Normal.</description></item>
-        /// <item><description><b>closed</b>: Closed. The instance cannot be used.</description></item>
+        /// <item><description><b>closed</b>: Shutdown and unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -563,7 +587,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<GetInstanceDetailResponseBodyTags> Tags { get; set; }
         public class GetInstanceDetailResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -573,7 +597,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -585,7 +609,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The total quota for cloud server deployment.</para>
+        /// <para>The total quota for deployment to cloud servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -607,12 +631,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The upgrade status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>none: The instance has not been upgraded.</para>
-        /// </description></item>
-        /// <item><description><para>payed: The instance upgrade has been paid.</para>
-        /// </description></item>
-        /// <item><description><para>issued: The latest certificate has been issued for the instance upgrade.</para>
-        /// </description></item>
+        /// <item><description>none: The instance is not upgraded.</description></item>
+        /// <item><description>payed: The instance upgrade is paid.</description></item>
+        /// <item><description>issued: The latest certificate is issued for the instance upgrade.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -626,7 +647,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The validation method for the certificate application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DNS: DNS validation, using TXT or CNAME records.</description></item>
-        /// <item><description>HTTP: File-based validation.</description></item>
+        /// <item><description>HTTP: File validation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -637,7 +658,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ValidationMethod { get; set; }
 
         /// <summary>
-        /// <para>The version type. Valid values: FOTA: system upgrade. APP: application upgrade.</para>
+        /// <para>The version type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FOTA: System upgrade.</description></item>
+        /// <item><description>APP: Application upgrade.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

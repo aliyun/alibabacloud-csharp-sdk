@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the instance is managed. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: Managed.</description></item>
-        /// <item><description>0: Not managed.</description></item>
-        /// </list>
+        /// <para>Specifies whether the instance is managed. Valid values: 1 (managed) and 0 (not managed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paging query. Settings the current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,11 +66,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BUY: formal certificate.</description></item>
-        /// <item><description>TEST: test certificate.</description></item>
-        /// </list>
+        /// <para>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -106,8 +98,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Specifies whether to return only instances that meet server deployment conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Yes.</description></item>
-        /// <item><description>0: No.</description></item>
+        /// <item><description>1: is.</description></item>
+        /// <item><description>0: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +110,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? ServerDeployFlag { get; set; }
 
         /// <summary>
-        /// <para>The number of instances to display per page in a paged query. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The number of instances to display per page in a paging query. Settings the number of instances displayed per page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -131,12 +123,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>inactive</b>: Pending use.</description></item>
-        /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
+        /// <item><description><b>pending</b>: Under review. The latest certificate is being submitted for review.</description></item>
         /// <item><description><b>willExpire</b>: The instance is about to expire.</description></item>
         /// <item><description><b>expired</b>: The instance has expired.</description></item>
         /// <item><description><b>refund</b>: Refunded.</description></item>
         /// <item><description><b>normal</b>: Normal.</description></item>
-        /// <item><description><b>closed</b>: Closed. The instance is unavailable.</description></item>
+        /// <item><description><b>closed</b>: Shutdown and unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,6 +137,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The version type. Valid values: basic (Basic Edition), standard (Standard Edition), professional (Professional Edition), and ultimate (Ultimate Edition).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>professional</para>
+        /// </summary>
+        [NameInMap("VersionType")]
+        [Validation(Required=false)]
+        public string VersionType { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region to which the organization of the certificate owner belongs.</para>
+        /// <para>The region of the organization to which the certificate owner belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of n: 1 to 20. You can specify up to 20 tag keys. For example: tag.1.key, tag.2.key, ..., tag.20.key.</para>
+            /// <para>The tag key. Valid values of n: 1 to 20, which specifies multiple tag keys. A maximum of 20 tag keys are supported. For example: tag.1.key, tag.2.key, ..., tag.20.key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKey1</para>

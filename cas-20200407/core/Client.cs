@@ -6362,10 +6362,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a Private Certificate Authority (PCA) instance that you purchased through the SSL Certificate Service console by using the instance ID. The information includes the instance status, the total number of certificates, and the number of issued certificates.
+        /// Before you invoke this operation, you must purchase a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</para>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6412,10 +6412,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a Private Certificate Authority (PCA) instance that you purchased through the SSL Certificate Service console by using the instance ID. The information includes the instance status, the total number of certificates, and the number of issued certificates.
+        /// Before you invoke this operation, you must purchase a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</para>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6462,10 +6462,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a Private Certificate Authority (PCA) instance that you purchased through the SSL Certificate Service console by using the instance ID. The information includes the instance status, the total number of certificates, and the number of issued certificates.
+        /// Before you invoke this operation, you must purchase a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</para>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6488,10 +6488,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a Private Certificate Authority (PCA) instance that you purchased through the SSL Certificate Service console by using the instance ID. The information includes the instance status, the total number of certificates, and the number of issued certificates.
+        /// Before you invoke this operation, you must purchase a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</para>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9074,10 +9074,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9138,6 +9138,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionType))
+            {
+                query["VersionType"] = request.VersionType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9164,10 +9168,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9228,6 +9232,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionType))
+            {
+                query["VersionType"] = request.VersionType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9254,10 +9262,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9280,10 +9288,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11446,8 +11454,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of certificates included, and the number of certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased in the Certificate Service console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of SSL certificates included, and the number of SSL certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
@@ -11508,8 +11516,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of certificates included, and the number of certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased in the Certificate Service console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of SSL certificates included, and the number of SSL certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
@@ -11570,8 +11578,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of certificates included, and the number of certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased in the Certificate Service console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of SSL certificates included, and the number of SSL certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
@@ -11596,8 +11604,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of certificates included, and the number of certificates issued.
-        /// Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <para>Queries the status information of a private Certificate Authority (CA) instance that you purchased in the Certificate Service console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of SSL certificates included, and the number of SSL certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
         /// <h2>QPS limit</h2>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
