@@ -262,6 +262,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 }
 
+                [NameInMap("extensions")]
+                [Validation(Required=false)]
+                public List<string> Extensions { get; set; }
+
                 [NameInMap("markdown")]
                 [Validation(Required=false)]
                 public InvokeAssistantRequestMessagesContentMarkdown Markdown { get; set; }
@@ -276,6 +280,54 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
+
+                }
+
+                [NameInMap("metadata")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Metadata { get; set; }
+
+                [NameInMap("parts")]
+                [Validation(Required=false)]
+                public List<InvokeAssistantRequestMessagesContentParts> Parts { get; set; }
+                public class InvokeAssistantRequestMessagesContentParts : TeaModel {
+                    [NameInMap("data")]
+                    [Validation(Required=false)]
+                    public object Data { get; set; }
+
+                    [NameInMap("file")]
+                    [Validation(Required=false)]
+                    public InvokeAssistantRequestMessagesContentPartsFile File { get; set; }
+                    public class InvokeAssistantRequestMessagesContentPartsFile : TeaModel {
+                        [NameInMap("bytes")]
+                        [Validation(Required=false)]
+                        public string Bytes { get; set; }
+
+                        [NameInMap("mimeType")]
+                        [Validation(Required=false)]
+                        public string MimeType { get; set; }
+
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("uri")]
+                        [Validation(Required=false)]
+                        public string Uri { get; set; }
+
+                    }
+
+                    [NameInMap("kind")]
+                    [Validation(Required=false)]
+                    public string Kind { get; set; }
+
+                    [NameInMap("metadata")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> Metadata { get; set; }
+
+                    [NameInMap("text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
 
                 }
 
