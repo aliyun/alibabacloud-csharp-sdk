@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The functional module to which the business process belongs. Valid values: NORMAL (DataStudio) and MANUAL_BIZ (manual business process).</para>
+            /// <para>The functional module to which the business process belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (manual business process).</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>

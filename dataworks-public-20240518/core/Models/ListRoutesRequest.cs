@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the general quota.</para>
+        /// <para>The unique identifier of the general-purpose resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

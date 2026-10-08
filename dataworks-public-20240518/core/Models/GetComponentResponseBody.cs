@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>Parameter</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dim_whse_epet_warehouse_jz_storage_stock_lot_relation_id</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The region ID, such as ap-southeast-1. The region ID is automatically parsed from your endpoint.</para>
+            /// <para>The region information, usually the region where the service is located. For example, cn-shanghai specifies China (Shanghai), and cn-zhangjiakou specifies China (Zhangjiakou). You do not need to specify RegionId because it is automatically parsed from the endpoint that you call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

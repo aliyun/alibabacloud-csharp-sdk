@@ -17,13 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetComputeResourceResponseBodyComputeResource ComputeResource { get; set; }
         public class GetComputeResourceResponseBodyComputeResource : TeaModel {
             /// <summary>
-            /// <para>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Dev</para>
-            /// </description></item>
-            /// <item><description><para>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values: Dev: development environment; Prod: production environment. Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</para>
             /// 
             /// <b>Example:</b>
             /// <para>{

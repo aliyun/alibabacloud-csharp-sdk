@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Extension { get; set; }
 
                 /// <summary>
-                /// <para>The object type of the alerting accept object.</para>
+                /// <para>The alert recipient type.</para>
                 /// <list type="bullet">
                 /// <item><description>AliUid</description></item>
                 /// <item><description>WebhookUrl</description></item>

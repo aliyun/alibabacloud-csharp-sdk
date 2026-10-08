@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The table cannot be empty.</para>
+        /// <para>The table cannot be empty</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

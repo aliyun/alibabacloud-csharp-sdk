@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务API</para>
+        /// <para>Business API</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The entity type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>custom_entity-biz_api</para>
+        /// <para>custom_entity-customer_api</para>
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the type definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>biz_api</para>
+        /// <para>customer_api</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

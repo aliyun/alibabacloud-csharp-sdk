@@ -24,10 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the UDF.</para>
-        /// <remarks>
-        /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK.. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
-        /// </remarks>
+        /// <para>The destination path, without the function name.</para>
+        /// <para>For example, to move the <c>test</c> function to <c>root/demo/test</c>, set this parameter to <c>root/demo</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the ID.</para>
         /// <para>This parameter indicates the DataWorks workspace to which the API operation is applied.</para>
         /// <para>This parameter is required.</para>
         /// 

@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.<remarks>
-        /// <para>Notice: This only indicates whether the stage is triggered, not the execution result of the publish stage.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>&lt;notice&gt;This only indicates whether the stage is triggered, not the execution result of the deployment stage.&gt;&lt;/notice&gt;</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

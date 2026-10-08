@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class LoadAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error object of the SSE frame. This field is present when an error occurs.</para>
+        /// <para>The error object of the SSE frame. This field is present when an error occurs. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The method of the SSE frame.</para>
+        /// <para>The method of the SSE frame. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session/update</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the SSE frame.</para>
+        /// <para>The parameters of the SSE frame. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result object of the SSE frame. This field is present when the operation is successful.</para>
+        /// <para>The result object of the SSE frame. This field is present when the operation is successful. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;stopReason&quot;:&quot;end_turn&quot;}</para>

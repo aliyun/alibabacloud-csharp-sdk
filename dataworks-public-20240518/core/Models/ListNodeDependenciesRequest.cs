@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodeDependenciesRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the DataStudio node.</para>
+        /// <para>The unique identifier of the Data Studio node.</para>
         /// <remarks>
-        /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and was changed to the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</b>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</para>
+        /// <para>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and was changed to the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</b>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

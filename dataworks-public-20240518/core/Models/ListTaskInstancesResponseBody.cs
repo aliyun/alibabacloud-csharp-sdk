@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>WaitResource: waiting for resources.</description></item>
                 /// <item><description>Failure: execution failed.</description></item>
                 /// <item><description>Success: execution succeeded.</description></item>
-                /// <item><description>Checking: submitted for qualityrule check.</description></item>
+                /// <item><description>Checking: submitted for data quality check.</description></item>
                 /// <item><description>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting period.</description></item>
                 /// </list>
                 /// 
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The timeout period for node execution, in seconds.</para>
-                /// <para>Note: The scheduling system rounds the configured value to the nearest hour.</para>
+                /// <para>Note: The scheduling system rounds the configured value to whole hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>Manual: manually triggered.</description></item>
                 /// <item><description>ManualWorkflow: manual workflow.</description></item>
                 /// <item><description>Normal: periodic scheduling.</description></item>
-                /// <item><description>ManualFlow: manually triggered workflow.</description></item>
+                /// <item><description>ManualFlow: manually executed business flow.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Offline: Offline deployment.</description></item>
-        /// <item><description>Online: Online deployment.</description></item>
+        /// <item><description>Offline: Deployment to take the object offline.</description></item>
+        /// <item><description>Online: Deployment to bring the object online.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

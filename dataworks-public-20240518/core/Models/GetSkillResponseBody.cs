@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The content of the SKILL.md file.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>把大象装冰箱需要3步，把冰箱门打开，把大象放进去，把冰箱门关上。</para>
+            /// <para>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant inside, and close the door.</para>
             /// </summary>
             [NameInMap("Body")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The Skill description.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析技能</para>
+            /// <para>Data analysis skill</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ReplyAgentSessionRequestParamsOutcome Outcome { get; set; }
             public class ReplyAgentSessionRequestParamsOutcome : TeaModel {
                 /// <summary>
-                /// <para>Required and cannot be empty when Outcome is set to selected. Set this parameter to the optionId of an actual option in the event options. To submit an answer, select the option with kind=allow_once. Omit this parameter when Outcome is set to cancelled.</para>
+                /// <para>Required and cannot be empty when Outcome is set to selected. Set this parameter to the optionId of an actual option in the event options. To submit an answer, typically select the option with kind=allow_once. Omit this parameter when Outcome is set to cancelled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>option-from-event</para>

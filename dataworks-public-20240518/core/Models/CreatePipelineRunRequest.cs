@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreatePipelineRunRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the stage in the publish process. This parameter takes effect only when RunMode is set to Auto. After the publish process is created, it automatically runs to the specified stage.</para>
+        /// <para>The code of the stage in the deployment process. This parameter takes effect only when RunMode is set to Auto. After the deployment process is created, it automatically runs to the specified stage.</para>
         /// <remarks>
-        /// <para>Notice: The specified stage is automatically completed. For example, if you set this parameter to DEV, the automatic run stops after the DEV stage reaches the desired state.</para>
+        /// <para>&lt;notice&gt;The specified stage is automatically completed. For example, if you set this parameter to DEV, the automatic run stops after the DEV stage reaches the terminal state.&gt;&lt;/notice&gt;</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AutoRunUntilStage { get; set; }
 
         /// <summary>
-        /// <para>The description of the publish process.</para>
+        /// <para>The description of the deployment process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a OdpsSQL-node publishing process. The function is XXXX.</para>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of entity IDs that you want to publish in this publish process.</para>
+        /// <para>The list of entity IDs that you want to deploy in this deployment process.</para>
         /// <remarks>
-        /// <para>Notice: Only a single entity and its child entities can be published at a time. Only the first entity in this array and its child entities are published. Make sure that the length of this array is 1. Entities beyond the first one are ignored.</para>
+        /// <para>&lt;notice&gt;Only a single entity and its child entities can be deployed at a time. Only the first entity in this array and its child entities are deployed. Make sure that the length of this array is 1. Entities beyond the first one are ignored.&gt;&lt;/notice&gt;</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The run mode of the publish process. Default value: Normal. If you set this parameter to Auto, the publish process is automatically driven to the specified stage. This parameter is used together with the AutoRunUntilStage parameter.</para>
+        /// <para>The run mode of the deployment process. Default value: Normal. If you set this parameter to Auto, the deployment process is automatically driven to the specified stage. This parameter is used together with the AutoRunUntilStage parameter.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
@@ -71,12 +71,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RunMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the publish process is used to bring an entity online or offline.</para>
+        /// <para>Specifies whether the deployment process is used to deploy or undeploy an entity.</para>
         /// <list type="bullet">
-        /// <item><description><para>Online: online</para>
-        /// </description></item>
-        /// <item><description><para>Offline: offline</para>
-        /// </description></item>
+        /// <item><description>Online: deploy</description></item>
+        /// <item><description>Offline: undeploy</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

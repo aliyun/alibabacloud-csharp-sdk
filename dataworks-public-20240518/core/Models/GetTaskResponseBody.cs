@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string UpstreamOutput { get; set; }
 
                 /// <summary>
-                /// <para>The ancestor task ID. This parameter is returned only if <c>cross-cycle scheduling dependencies</c> or <c>same-cycle scheduling dependencies</c> and the node input are not configured.</para>
+                /// <para>The ID of the upstream task. This field is returned for cross-cycle dependencies on other nodes, or for same-cycle dependencies when input content is not configured. It is not returned in other cases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The unique identifier of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -190,14 +190,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Constant: constant</para>
-                    /// </description></item>
-                    /// <item><description><para>PassThrough: node output</para>
-                    /// </description></item>
-                    /// <item><description><para>System: variable</para>
-                    /// </description></item>
-                    /// <item><description><para>NodeOutput: script output</para>
-                    /// </description></item>
+                    /// <item><description>Constant: constant</description></item>
+                    /// <item><description>PassThrough: parameter node output</description></item>
+                    /// <item><description>System: variable</description></item>
+                    /// <item><description>NodeOutput: script output</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -224,10 +220,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The instance generation mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>T+1</para>
-            /// </description></item>
-            /// <item><description><para>Immediately</para>
-            /// </description></item>
+            /// <item><description>T+1: generated the next day</description></item>
+            /// <item><description>Immediately: generated immediately</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,14 +307,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Constant: constant</para>
-                    /// </description></item>
-                    /// <item><description><para>PassThrough: node output</para>
-                    /// </description></item>
-                    /// <item><description><para>System: variable</para>
-                    /// </description></item>
-                    /// <item><description><para>NodeOutput: script output</para>
-                    /// </description></item>
+                    /// <item><description>Constant: constant</description></item>
+                    /// <item><description>PassThrough: parameter node output</description></item>
+                    /// <item><description>System: variable</description></item>
+                    /// <item><description>NodeOutput: script output</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -439,7 +429,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetTaskResponseBodyTaskRuntimeResource RuntimeResource { get; set; }
             public class GetTaskResponseBodyTaskRuntimeResource : TeaModel {
                 /// <summary>
-                /// <para>The default number of compute units (CUs) configured for task running.</para>
+                /// <para>The number of compute units (CUs) configured for task running.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.25</para>
@@ -723,7 +713,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource RuntimeResource { get; set; }
                     public class GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource : TeaModel {
                         /// <summary>
-                        /// <para>The default number of CUs configured for task running.</para>
+                        /// <para>The number of CUs configured for task running.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.25</para>
@@ -794,12 +784,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>Pause</para>
-                        /// </description></item>
-                        /// <item><description><para>Skip</para>
-                        /// </description></item>
-                        /// <item><description><para>Normal</para>
-                        /// </description></item>
+                        /// <item><description>Pause: paused</description></item>
+                        /// <item><description>Skip: dry run</description></item>
+                        /// <item><description>Normal: normal operation</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -948,12 +935,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pause</para>
-                /// </description></item>
-                /// <item><description><para>Skip</para>
-                /// </description></item>
-                /// <item><description><para>Normal</para>
-                /// </description></item>
+                /// <item><description>Pause: paused</description></item>
+                /// <item><description>Skip: dry run</description></item>
+                /// <item><description>Normal: normal operation</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

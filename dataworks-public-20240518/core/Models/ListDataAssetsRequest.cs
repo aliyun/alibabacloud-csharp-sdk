@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public class ListDataAssetsRequestTags : TeaModel {
             /// <summary>
             /// <para>The custom tag key specified by the user.</para>
-            /// <para>The tag key can be up to 64 characters in length, cannot start with <c>dw:</c>, and supports only letters, digits, and the following special characters: <c>-@#*&lt;&gt;|[]()+=&amp;%$!~</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length, cannot start with <c>dw:</c>, and supports only Chinese characters, letters, digits, and the following special characters: <c>-@#*&lt;&gt;|[]()+=&amp;%$!~</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>

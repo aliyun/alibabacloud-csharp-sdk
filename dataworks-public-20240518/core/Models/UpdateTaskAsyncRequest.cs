@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The client unique code of the node, which uniquely identifies a node. This code is used for asynchronous operations and idempotence. If you do not specify this parameter during creation, the system automatically generates one. The code is uniquely bound to the resource ID. When updating or deleting a resource, if you specify this parameter, it must be the same as the client unique code specified during creation.</para>
+        /// <para>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The dependency type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</description></item>
-            /// <item><description>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</description></item>
-            /// <item><description>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</description></item>
-            /// <item><description>Normal: same-cycle dependency</description></item>
+            /// <item><description>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes.</description></item>
+            /// <item><description>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself.</description></item>
+            /// <item><description>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes.</description></item>
+            /// <item><description>Normal: same-cycle dependency.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The output identifier of the upstream node. This field is returned when the dependency type is same-cycle dependency and input content is set.</para>
+            /// <para>The output identifier of the upstream node. This field is returned for same-cycle dependencies when the input content is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pre.odps_sql_demo_0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string UpstreamOutput { get; set; }
 
             /// <summary>
-            /// <para>The ID of the upstream node. This field is returned when the dependency type is cross-cycle dependency on other nodes or same-cycle dependency without input content set. It is not returned in other cases.</para>
+            /// <para>The ID of the upstream node. This field is returned for cross-cycle dependencies on other nodes and for same-cycle dependencies when no input content is configured. It is not returned in other cases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -144,12 +144,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type. Valid values:</para>
+                /// <para>The variable type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Constant: constant</description></item>
-                /// <item><description>PassThrough: parameter node output</description></item>
-                /// <item><description>System: variable</description></item>
-                /// <item><description>NodeOutput: script output</description></item>
+                /// <item><description>Constant: constant.</description></item>
+                /// <item><description>PassThrough: output of a pass-through parameter node.</description></item>
+                /// <item><description>System: system variable.</description></item>
+                /// <item><description>NodeOutput: script output.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T+1: Generates instances the next day.</description></item>
-        /// <item><description>Immediately: Generates instances immediately. Note: Only periodic instances whose scheduled time is at least 10 minutes after the node publish time are generated. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</description></item>
+        /// <item><description>T+1: generates instances the next day.</description></item>
+        /// <item><description>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -242,12 +242,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type. Valid values:</para>
+                /// <para>The variable type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Constant: constant</description></item>
-                /// <item><description>PassThrough: parameter node output</description></item>
-                /// <item><description>System: variable</description></item>
-                /// <item><description>NodeOutput: script output</description></item>
+                /// <item><description>Constant: constant.</description></item>
+                /// <item><description>PassThrough: output of a pass-through parameter node.</description></item>
+                /// <item><description>System: system variable.</description></item>
+                /// <item><description>NodeOutput: script output.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -293,11 +293,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the node can be rerun. Valid values:</para>
+        /// <para>The configuration that specifies whether the node can be rerun. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllDenied: Cannot be rerun regardless of success or failure.</description></item>
-        /// <item><description>FailureAllowed: Can be rerun only upon failure.</description></item>
-        /// <item><description>AllAllowed: Can be rerun regardless of success or failure.</description></item>
+        /// <item><description>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</description></item>
+        /// <item><description>FailureAllowed: the node can be rerun only if it fails.</description></item>
+        /// <item><description>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The number of retries. This parameter takes effect when the node is configured to allow reruns.</para>
+        /// <para>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -318,14 +318,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunTimes { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment configuration, such as schedule resource group information.</para>
+        /// <para>The runtime environment configuration, such as the resource group information.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public UpdateTaskAsyncRequestRuntimeResource RuntimeResource { get; set; }
         public class UpdateTaskAsyncRequestRuntimeResource : TeaModel {
             /// <summary>
-            /// <para>The CU consumption configured for the node.</para>
+            /// <para>The CU consumption for the node runtime configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Cu { get; set; }
 
             /// <summary>
-            /// <para>The image ID configured for the node.</para>
+            /// <para>The image ID for the node runtime configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxxxxx</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the schedule resource group configured for the node.</para>
+            /// <para>The identifier of the schedule resource group for the node runtime configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>63900680</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The script information.</para>
+        /// <para>The runtime script information.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The list of data asset tags to bind.</para>
+        /// <para>The list of data asset tags to attach.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The timeout setting for scheduling configuration.</para>
+        /// <para>The timeout period defined in the scheduling configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateTaskAsyncRequestTrigger Trigger { get; set; }
         public class UpdateTaskAsyncRequestTrigger : TeaModel {
             /// <summary>
-            /// <para>The cron expression. This parameter takes effect when type is set to Scheduler.</para>
+            /// <para>The cron expression. This parameter takes effect when Type is set to Scheduler.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00 00 00 * * ?</para>
@@ -446,10 +446,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>The epoch type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies timed scheduling within a specific hour. Default value: Daily. Valid values:</para>
+            /// <para>The scheduling cycle type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies a timed scheduling at a specific hour. Default value: Daily. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Daily: daily scheduling</description></item>
-            /// <item><description>NotDaily: hourly scheduling</description></item>
+            /// <item><description>Daily: daily scheduling.</description></item>
+            /// <item><description>NotDaily: hourly scheduling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>The time when the periodic trigger expires. This parameter takes effect when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+            /// <para>The time when the periodic trigger expires. This parameter takes effect when Type is set to Scheduler. The format is <c>yyyy-mm-dd hh:mm:ss</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999-01-01 00:00:00</para>
@@ -470,11 +470,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The run mode when the trigger fires. This parameter takes effect when type is set to Scheduler. Valid values:</para>
+            /// <para>The run mode when the trigger fires. This parameter takes effect when Type is set to Scheduler. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pause: paused</description></item>
-            /// <item><description>Skip: dry run</description></item>
-            /// <item><description>Normal: normal execution</description></item>
+            /// <item><description>Pause: paused.</description></item>
+            /// <item><description>Skip: dry run.</description></item>
+            /// <item><description>Normal: normal run.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Recurrence { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the epoch trigger. This parameter takes effect when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+            /// <para>The time at which the scheduled trigger takes effect. This parameter takes effect when Type is set to Scheduler. The format is <c>yyyy-mm-dd hh:mm:ss</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1970-01-01 00:00:00</para>
@@ -497,8 +497,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: periodic scheduling trigger</description></item>
-            /// <item><description>Manual: manual trigger</description></item>
+            /// <item><description>Scheduler: scheduled periodic trigger.</description></item>
+            /// <item><description>Manual: manual trigger.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

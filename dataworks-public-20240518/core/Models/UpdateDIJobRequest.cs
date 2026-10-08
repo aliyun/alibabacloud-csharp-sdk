@@ -351,12 +351,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The handling action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Ignore</c>: Ignores the DDL message.</para>
-                /// </description></item>
-                /// <item><description><para><c>Critical</c>: Reports an error and terminates the synchronization job.</para>
-                /// </description></item>
-                /// <item><description><para><c>Normal</c>: Processes the DDL message normally.</para>
-                /// </description></item>
+                /// <item><description><c>Ignore</c>: Ignores the DDL message.</description></item>
+                /// <item><description><c>Critical</c>: Reports an error.</description></item>
+                /// <item><description><c>Normal</c>: Processes the DDL message normally.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -367,23 +364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The DDL type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><c>RenameColumn</c></para>
-                /// </description></item>
-                /// <item><description><para><c>ModifyColumn</c></para>
-                /// </description></item>
-                /// <item><description><para><c>CreateTable</c></para>
-                /// </description></item>
-                /// <item><description><para><c>TruncateTable</c></para>
-                /// </description></item>
-                /// <item><description><para><c>DropTable</c></para>
-                /// </description></item>
-                /// <item><description><para><c>DropColumn</c></para>
-                /// </description></item>
-                /// <item><description><para><c>AddColumn</c></para>
-                /// </description></item>
-                /// </list>
+                /// <para>The DDL type. Valid values: RenameColumn (rename a column), ModifyColumn (modify a column), CreateTable (create a table), TruncateTable (clear a table), DropTable (delete a table), DropColumn (delete a column), and AddColumn (add a column).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AddColumn</para>
@@ -727,80 +708,58 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <item><description>Rename rule (<c>Rename</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</c></para>
-            /// </description></item>
-            /// <item><description><para><c>expression</c>: The expression for the rename transformation rule. The expression supports variables, including <c>${srcDatasourceName}</c> (source data source name), <c>${srcDatabaseName}</c> (source database name), and <c>${srcTableName}</c> (source table name).</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</c></description></item>
+            /// <item><description><c>expression</c>: The expression for the rename transformation rule. The expression supports variables, including <c>${srcDatasourceName}</c> (source data source name), <c>${srcDatabaseName}</c> (source database name), and <c>${srcTableName}</c> (source table name).</description></item>
             /// </list>
             /// <ol start="2">
             /// <item><description>Add column rule (<c>AddColumn</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</c></para>
-            /// </description></item>
-            /// <item><description><para>If this rule is not specified, no columns are added.</para>
-            /// </description></item>
-            /// <item><description><para><c>columnName</c>: The name of the column to add.</para>
-            /// </description></item>
-            /// <item><description><para><c>columnValueType</c>: The value type of the added column. Valid values: <c>Constant</c> and <c>Variable</c>.</para>
-            /// </description></item>
-            /// <item><description><para><c>columnValue</c>: The value of the added column. If <c>columnValueType</c> is <c>Constant</c>, the value is a custom constant of the string type. If <c>columnValueType</c> is <c>Variable</c>, the value is a built-in variable. Valid built-in variables: <c>EXECUTE_TIME</c> (execution time, Long type), <c>DB_NAME_SRC</c> (source database name, String type), <c>DATASOURCE_NAME_SRC</c> (source data source name, String type), <c>TABLE_NAME_SRC</c> (source table name, String type), <c>DB_NAME_DEST</c> (destination database name, String type), <c>DATASOURCE_NAME_DEST</c> (destination data source name, String type), <c>TABLE_NAME_DEST</c> (destination table name, String type), and <c>DB_NAME_SRC_TRANSED</c> (transformed database name, String type).</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</c></description></item>
+            /// <item><description>If this rule is not specified, no columns are added or copied.</description></item>
+            /// <item><description><c>columnName</c>: The name of the column to add.</description></item>
+            /// <item><description><c>columnValueType</c>: The value type of the added column. Valid values: <c>Constant</c> and <c>Variable</c>.</description></item>
+            /// <item><description><c>columnValue</c>: The value of the added column. If <c>columnValueType</c> is <c>Constant</c>, the value is a custom constant of the string type. If <c>columnValueType</c> is <c>Variable</c>, the value is a built-in variable. Valid built-in variables: <c>EXECUTE_TIME</c> (execution time, Long type), <c>DB_NAME_SRC</c> (source database name, String type), <c>DATASOURCE_NAME_SRC</c> (source data source name, String type), <c>TABLE_NAME_SRC</c> (source table name, String type), <c>DB_NAME_DEST</c> (destination database name, String type), <c>DATASOURCE_NAME_DEST</c> (destination data source name, String type), <c>TABLE_NAME_DEST</c> (destination table name, String type), and <c>DB_NAME_SRC_TRANSED</c> (transformed database name, String type).</description></item>
             /// </list>
             /// <ol start="3">
             /// <item><description>Define primary key rule (<c>DefinePrimaryKey</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</c></para>
-            /// </description></item>
-            /// <item><description><para>If this rule is not specified, the primary key of the source is used by default.</para>
-            /// </description></item>
-            /// <item><description><para>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails.</para>
-            /// </description></item>
-            /// <item><description><para>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails.</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</c></description></item>
+            /// <item><description>If this rule is not specified, the primary key of the source is used by default.</description></item>
+            /// <item><description>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails to start.</description></item>
+            /// <item><description>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails to start.</description></item>
             /// </list>
             /// <ol start="4">
             /// <item><description>DML handling rule (<c>HandleDml</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</c></para>
-            /// </description></item>
-            /// <item><description><para>If this rule is not specified, the default action for <c>Insert</c>, <c>Update</c>, and <c>Delete</c> operations is <c>Normal</c>.</para>
-            /// </description></item>
-            /// <item><description><para><c>dmlType</c>: The DML operation type. Valid values: <c>Insert</c>, <c>Update</c>, and <c>Delete</c>.</para>
-            /// </description></item>
-            /// <item><description><para><c>dmlAction</c>: The DML handling policy. Valid values: <c>Normal</c> (process the operation), <c>Ignore</c> (ignore the operation), <c>Filter</c> (conditionally process the operation, used when <c>dmlType</c> is <c>Update</c> or <c>Delete</c>), and <c>LogicalDelete</c> (perform a logical delete).</para>
-            /// </description></item>
-            /// <item><description><para><c>filterCondition</c>: The DML filter condition, used when <c>dmlAction</c> is <c>Filter</c>.</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</c></description></item>
+            /// <item><description>If this rule is not specified, the default action for <c>Insert</c>, <c>Update</c>, and <c>Delete</c> operations is <c>Normal</c>.</description></item>
+            /// <item><description><c>dmlType</c>: The DML operation type. Valid values: <c>Insert</c>, <c>Update</c>, and <c>Delete</c>.</description></item>
+            /// <item><description><c>dmlAction</c>: The DML handling policy. Valid values: <c>Normal</c> (process the operation), <c>Ignore</c> (ignore the operation), <c>Filter</c> (conditionally process the operation, used when <c>dmlType</c> is <c>Update</c> or <c>Delete</c>), and <c>LogicalDelete</c> (perform a logical delete).</description></item>
+            /// <item><description><c>filterCondition</c>: The DML filter condition, used when <c>dmlAction</c> is <c>Filter</c>.</description></item>
             /// </list>
             /// <ol start="5">
             /// <item><description>Incremental condition rule (<c>DefineIncrementalCondition</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;where&quot;:&quot;id &gt; 0&quot;}</c></para>
-            /// </description></item>
-            /// <item><description><para>The <c>WHERE</c> clause for the incremental condition.</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;where&quot;:&quot;id &gt; 0&quot;}</c></description></item>
+            /// <item><description>The <c>WHERE</c> clause for the incremental condition.</description></item>
             /// </list>
             /// <ol start="6">
             /// <item><description>Periodic scheduling rule (<c>DefineCycleScheduleSettings</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</c></para>
-            /// </description></item>
-            /// <item><description><para>Specifies the scheduling parameters for a periodic job.</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</c></description></item>
+            /// <item><description>Specifies the scheduling parameters for a periodic job.</description></item>
             /// </list>
             /// <ol start="7">
             /// <item><description>Define partition key rule (<c>DefinePartitionKey</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>Example: <c>{&quot;columns&quot;:[&quot;id&quot;]}</c></para>
-            /// </description></item>
-            /// <item><description><para>Specifies the partition key.</para>
-            /// </description></item>
+            /// <item><description>Example: <c>{&quot;columns&quot;:[&quot;id&quot;]}</c></description></item>
+            /// <item><description>Specifies the partition key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

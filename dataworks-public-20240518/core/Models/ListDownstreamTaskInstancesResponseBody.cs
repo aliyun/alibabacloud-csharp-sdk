@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstances> DownstreamTaskInstances { get; set; }
             public class ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstances : TeaModel {
                 /// <summary>
-                /// <para>The dependency type.</para>
+                /// <para>The dependency type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: dependency within the same scheduling cycle.</description></item>
+                /// <item><description>CrossCycle: cross-cycle dependency.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -52,6 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The business date.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -62,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The creation time.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -111,6 +117,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The environment of the target data source. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Dev: development environment.</description></item>
+                    /// <item><description>Prod: production environment.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Prod</para>
@@ -121,6 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The time when the instance finished running.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -141,6 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The modification time.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -289,6 +301,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The time when the instance started running.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -298,7 +311,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? StartedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The run status of the instance.</para>
+                    /// <para>The run status of the instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>NotRun: not run.</description></item>
+                    /// <item><description>Running: running.</description></item>
+                    /// <item><description>WaitTime: waiting for TriggerTime to arrive.</description></item>
+                    /// <item><description>CheckingCondition: checking branch conditions.</description></item>
+                    /// <item><description>WaitResource: waiting for resources.</description></item>
+                    /// <item><description>Failure: execution failed.</description></item>
+                    /// <item><description>Success: execution succeeded.</description></item>
+                    /// <item><description>Checking: submitted for data quality check.</description></item>
+                    /// <item><description>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting time elapses.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Success</para>
@@ -339,6 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The timeout period for node execution. Unit: seconds.</para>
+                    /// <para>Note: The scheduling system rounds the configured value to whole hours.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3600</para>
@@ -364,6 +389,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The scheduled trigger time.</para>
+                    /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710239005403</para>
@@ -373,7 +399,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? TriggerTime { get; set; }
 
                     /// <summary>
-                    /// <para>The trigger type.</para>
+                    /// <para>The trigger type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Scheduler: triggered by a scheduling cycle.</description></item>
+                    /// <item><description>Manual: manually triggered.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Scheduler</para>
@@ -403,7 +433,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? WorkflowInstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the workflow instance to which the instance belongs.</para>
+                    /// <para>The type of the workflow instance to which the instance belongs. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Normal: scheduled execution.</description></item>
+                    /// <item><description>Manual: manual task.</description></item>
+                    /// <item><description>SmokeTest: test.</description></item>
+                    /// <item><description>SupplementData: data backfill.</description></item>
+                    /// <item><description>ManualWorkflow: manual workflow.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -465,6 +502,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The business date.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -475,6 +513,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -524,6 +563,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The environment of the target data source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Dev: development environment.</description></item>
+                /// <item><description>Prod: production environment.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
@@ -534,6 +577,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The time when the instance finished running.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -554,6 +598,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The modification time.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -715,6 +760,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The time when the instance started running.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -724,7 +770,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? StartedTime { get; set; }
 
                 /// <summary>
-                /// <para>The run status of the instance.</para>
+                /// <para>The run status of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NotRun: not run.</description></item>
+                /// <item><description>Running: running.</description></item>
+                /// <item><description>WaitTime: waiting for TriggerTime to arrive.</description></item>
+                /// <item><description>CheckingCondition: checking branch conditions.</description></item>
+                /// <item><description>WaitResource: waiting for resources.</description></item>
+                /// <item><description>Failure: execution failed.</description></item>
+                /// <item><description>Success: execution succeeded.</description></item>
+                /// <item><description>Checking: submitted for data quality check.</description></item>
+                /// <item><description>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting time elapses.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -734,7 +791,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The dependency type.</para>
+                /// <para>The dependency type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: dependency within the same scheduling cycle.</description></item>
+                /// <item><description>CrossCycle: cross-cycle dependency.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -775,6 +836,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The timeout period for node execution. Unit: seconds.</para>
+                /// <para>Note: The scheduling system rounds the configured value to whole hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -795,6 +857,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The scheduled trigger time.</para>
+                /// <para>The value is a 13-digit number, such as 1710239005403.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>

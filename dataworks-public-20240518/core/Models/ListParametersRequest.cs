@@ -74,14 +74,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</para>
+        /// <para>The list of fields to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</para>
         /// <list type="bullet">
-        /// <item><description><para>ModifyTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>Name (Desc/Asc)</para>
-        /// </description></item>
+        /// <item><description>ModifyTime (Desc/Asc)</description></item>
+        /// <item><description>CreateTime (Desc/Asc)</description></item>
+        /// <item><description>Name (Desc/Asc)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

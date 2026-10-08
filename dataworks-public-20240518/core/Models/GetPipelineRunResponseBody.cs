@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <list type="bullet">
                 /// <item><description>Deploy: deploy operation</description></item>
                 /// <item><description>Check: check operation</description></item>
-                /// <item><description>Offline: offline operation</description></item>
+                /// <item><description>Offline: undeploy operation</description></item>
                 /// <item><description>Build: build operation</description></item>
                 /// <item><description>Delete: delete operation</description></item>
                 /// </list>

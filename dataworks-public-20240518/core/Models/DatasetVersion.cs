@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The dataset version description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>初始版本</para>
+        /// <para>Initial version</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Creation time (milliseconds)</para>
+        /// <para>Creation time, represented by a timestamp in milliseconds</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736756055000</para>
@@ -60,15 +60,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The storage import configuration for the dataset; required configuration varies by storage type.</para>
-        /// <para><b>NAS</b></para>
-        /// <para>Refer to the return values from the file storage API DescribeFileSystems.</para>
+        /// <para>The storage import configuration for the dataset. The required configuration varies by storage type.</para>
+        /// <details>
+        /// <summary>NAS</summary>
+        /// For values, see the response of the File Storage NAS DescribeFileSystems API.
+        /// 
+        /// 
         /// <pre><code class="language-JSON">{
-        /// &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-        /// &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
-        /// &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+        ///   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+        ///   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The file system storage type.
+        ///   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
         /// }
         /// </c></pre>
+        /// </details>
         /// </summary>
         [NameInMap("ImportInfo")]
         [Validation(Required=false)]
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<DatasetLabel> Labels { get; set; }
 
         /// <summary>
-        /// <para>Modification time (milliseconds)</para>
+        /// <para>Modification time, represented by a timestamp in milliseconds</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736756055000</para>

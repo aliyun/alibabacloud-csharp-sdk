@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>A description of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>数据分析助手</para>
+                /// <para>Data analysis assistant</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The display name of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>我的助手</para>
+                /// <para>My assistant</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]

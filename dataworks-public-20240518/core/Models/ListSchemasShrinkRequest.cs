@@ -71,6 +71,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <remarks>
         /// <para>If you want to query the information about a MaxCompute schema, specify an empty string at the Instance ID level as a placeholder and a MaxCompute project name at the Database name level. Make sure that the schema feature is enabled for the MaxCompute project.</para>
         /// </remarks>
+        /// <para>Common ParentMetaEntityId formats:</para>
+        /// <list type="bullet">
+        /// <item><description><c>maxcompute-project:::project_name</c>: The MaxCompute project must have the schema feature enabled.</description></item>
+        /// <item><description><c>holo-database:instance_id::database_name</c></description></item>
+        /// </list>
+        /// <para><c>instance_id</c>: Hologres instance ID. <c>database_name</c>: database name. <c>project_name</c>: MaxCompute project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

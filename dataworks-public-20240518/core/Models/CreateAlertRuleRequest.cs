@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? IntervalInMinutes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of alerts within a calendar year. Valid values: 1 to 10000.</para>
+            /// <para>The maximum number of alerts within a calendar day. Valid values: 1 to 10000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

@@ -50,14 +50,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public UpdateDataQualityScanRequestComputeResourceRuntime Runtime { get; set; }
             public class UpdateDataQualityScanRequestComputeResourceRuntime : TeaModel {
                 /// <summary>
-                /// <para>The engine type. These settings are only supported for the EMR compute engine.This setting? Valid values:</para>
+                /// <para>The engine type. These settings are only supported for the EMR compute engine. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Hive: Hive SQL</para>
-                /// </description></item>
-                /// <item><description><para>Spark: Spark SQL</para>
-                /// </description></item>
-                /// <item><description><para>Kyuubi</para>
-                /// </description></item>
+                /// <item><description>Hive: Hive SQL</description></item>
+                /// <item><description>Spark: Spark SQL</description></item>
+                /// <item><description>Kyuubi</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</para>
+                /// <para>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported to configure the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mapreduce.job.queuename=dq_queue</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public Dictionary<string, object> HiveConf { get; set; }
 
                 /// <summary>
-                /// <para>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</para>
+                /// <para>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported to configure the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.yarn.queue=dq_queue</para>
@@ -211,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateDataQualityScanRequestRuntimeResource RuntimeResource { get; set; }
         public class UpdateDataQualityScanRequestRuntimeResource : TeaModel {
             /// <summary>
-            /// <para>The default number of CUs configured for task running.</para>
+            /// <para>The CU consumption configured for task execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>T+1: Instances are generated the next day.</description></item>
-        /// <item><description>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is published. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish workflows during this period, but instances are not regenerated after submission.</description></item>
+        /// <item><description>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is deployed. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy workflows during this period, but instances are not regenerated after submission.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -709,7 +709,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+            /// <para>The time when the periodic trigger takes effect. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1970-01-01 00:00:00</para>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListNodeDependenciesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNodeDependenciesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of dependent nodes returned by the query.</para>
+            /// <para>The list of dependency nodes returned by the query.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodeDependenciesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodeDependenciesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the data development node was created.</para>
+                /// <para>The timestamp when the Data Studio node was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the DataStudio node.</para>
+                /// <para>The unique identifier of the Data Studio node.</para>
                 /// <remarks>
-                /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK.</b> Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</para>
+                /// <para>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK.</b> Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The timestamp when the data development node was last modified.</para>
+                /// <para>The timestamp when the Data Studio node was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data development node.</para>
+                /// <para>The name of the Data Studio node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node name</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The owner of the data development node.</para>
+                /// <para>The owner of the Data Studio node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace to which the data development node belongs.</para>
+                /// <para>The ID of the workspace to which the Data Studio node belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65133</para>
@@ -707,7 +707,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The trigger type.</para>
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: Timed scheduling.</description></item>
+                    /// <item><description>Scheduler: Periodic scheduling.</description></item>
                     /// <item><description>Manual: Manual scheduling.</description></item>
                     /// <item><description>Streaming: Streaming scheduler.</description></item>
                     /// </list>

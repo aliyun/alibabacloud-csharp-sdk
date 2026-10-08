@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier at the top of the Data Studio page where you switch workspaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>

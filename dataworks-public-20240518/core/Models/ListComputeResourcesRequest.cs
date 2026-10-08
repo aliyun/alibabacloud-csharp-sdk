@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment type of the computing resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Dev</para>
-        /// </description></item>
-        /// <item><description><para>Prod</para>
-        /// </description></item>
+        /// <item><description>Dev: development environment.</description></item>
+        /// <item><description>Prod: production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

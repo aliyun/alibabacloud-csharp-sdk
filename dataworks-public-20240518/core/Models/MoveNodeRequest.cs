@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class MoveNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The unique identifier of the Data Studio node.</para>
+        /// <remarks>
+        /// <para>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the Data Studio node.</para>
-        /// <remarks>
-        /// <para>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
-        /// </remarks>
+        /// <para>The destination path to which you want to move the node. Do not include the node name.</para>
+        /// <para>For example, to move the test node to <c>root/demo/test</c>, set this parameter to <c>root/demo</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

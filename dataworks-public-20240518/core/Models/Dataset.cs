@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class Dataset : TeaModel {
         /// <summary>
-        /// <para>The description of the dataset. The length cannot exceed 1024 characters.</para>
+        /// <para>The description of the dataset. The length must be less than 1024 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试数据集</para>
+        /// <para>Test dataset</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -42,13 +42,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COMMON</description></item>
-        /// <item><description>PIC</description></item>
-        /// <item><description>TEXT</description></item>
-        /// <item><description>TABLE</description></item>
-        /// <item><description>VIDEO</description></item>
-        /// <item><description>AUDIO</description></item>
-        /// <item><description>INDEX</description></item>
+        /// <item><description>COMMON: general</description></item>
+        /// <item><description>PIC: image</description></item>
+        /// <item><description>TEXT: text</description></item>
+        /// <item><description>TABLE: table</description></item>
+        /// <item><description>VIDEO: video</description></item>
+        /// <item><description>AUDIO: audio</description></item>
+        /// <item><description>INDEX: index</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The dataset name. It must be a non-empty string and cannot exceed 128 characters.</para>
+        /// <para>The dataset name. It must be a non-empty string and must be less than 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_dataset</para>

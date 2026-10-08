@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The error message returned if the connectivity test fails. No such a message is returned if the connectivity test is successful.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>连接数据库失败</para>
+            /// <para>Failed to connect to the database.</para>
             /// </summary>
             [NameInMap("ConnectMessage")]
             [Validation(Required=false)]
             public string ConnectMessage { get; set; }
 
             /// <summary>
-            /// <para>The result of the connectivity test. Valid values: Connectable: The network can be connected. ConfigError: The network can be connected, but the configurations are incorrect. Unreachable: The network cannot be connected. Unsupport: An error is reported due to other causes. For example, the desired resource group is being initialized.</para>
+            /// <para>The result of the connectivity test. Valid values: Connectable: The network can be connected. ConfigError: The network can be connected, but the configurations are incorrect. Unreachable: The network cannot be connected. Unsupport: The scenario is not supported. For example, the desired resource group is being initialized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Connectable</para>

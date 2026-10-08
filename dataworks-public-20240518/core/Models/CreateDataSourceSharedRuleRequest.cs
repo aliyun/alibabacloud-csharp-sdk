@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>110755000****</para>
+        /// <para>1107550004253538</para>
         /// </summary>
         [NameInMap("SharedUser")]
         [Validation(Required=false)]

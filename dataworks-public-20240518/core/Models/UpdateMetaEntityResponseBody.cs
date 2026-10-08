@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the update operation.</para>
+        /// <para>The updated entity or the result of the write operation.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

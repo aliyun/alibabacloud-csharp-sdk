@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The table cannot be empty.</para>
+        /// <para>The table cannot be empty</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -315,17 +315,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The name of the metric to sample. This parameter is not required when a template is used.</para>
             /// <list type="bullet">
             /// <item><description>Count: the number of rows in the table.</description></item>
-            /// <item><description>Min: the minimum value of the field.</description></item>
-            /// <item><description>Max: the maximum value of the field.</description></item>
-            /// <item><description>Avg: the average value of the field.</description></item>
-            /// <item><description>DistinctCount: the number of distinct values in the field.</description></item>
-            /// <item><description>DistinctPercent: the ratio of the number of distinct values in the field to the total number of rows.</description></item>
-            /// <item><description>DuplicatedCount: the number of duplicate values in the field.</description></item>
-            /// <item><description>DuplicatedPercent: the ratio of the number of duplicate values in the field to the total number of rows.</description></item>
+            /// <item><description>Min: the minimum value of the column.</description></item>
+            /// <item><description>Max: the maximum value of the column.</description></item>
+            /// <item><description>Avg: the average value of the column.</description></item>
+            /// <item><description>DistinctCount: the number of distinct values in the column.</description></item>
+            /// <item><description>DistinctPercent: the ratio of the number of distinct values in the column to the total number of rows.</description></item>
+            /// <item><description>DuplicatedCount: the number of duplicate values in the column.</description></item>
+            /// <item><description>DuplicatedPercent: the ratio of the number of duplicate values in the column to the total number of rows.</description></item>
             /// <item><description>TableSize: the size of the table.</description></item>
-            /// <item><description>NullValueCount: the number of rows in which the field is null.</description></item>
-            /// <item><description>NullValuePercent: the percentage of rows in which the field is null.</description></item>
-            /// <item><description>GroupCount: the number of data rows for each value after aggregation by field value.</description></item>
+            /// <item><description>NullValueCount: the number of rows in which the column is null.</description></item>
+            /// <item><description>NullValuePercent: the percentage of rows in which the column is null.</description></item>
+            /// <item><description>GroupCount: the number of data rows for each value after aggregation by column value.</description></item>
             /// <item><description>CountNotIn: the number of rows that do not match the enumerated values.</description></item>
             /// <item><description>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</description></item>
             /// <item><description>UserDefinedSql: sample collection by using custom SQL.</description></item>

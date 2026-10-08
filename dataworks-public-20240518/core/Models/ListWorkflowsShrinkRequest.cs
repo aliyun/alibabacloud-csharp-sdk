@@ -84,16 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ModifyTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>Id (Desc/Asc)</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: Id Desc.</para>
+        /// <para>The field used for sorting. Fields such as ModifyTime and CreateTime are supported. Format: sort field + sort order (Desc/Asc). Asc can be omitted. Valid values: ModifyTime (Desc/Asc), CreateTime (Desc/Asc), and Id (Desc/Asc). Default value: Id Desc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id Desc</para>

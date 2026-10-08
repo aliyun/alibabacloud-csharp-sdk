@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个示例策略</para>
+        /// <para>This is a sample policy</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我的审批策略</para>
+        /// <para>My Approval Policy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

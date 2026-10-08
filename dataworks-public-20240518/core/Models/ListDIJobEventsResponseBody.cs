@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The alert details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Data integration sync task exception: Level: WARNING, DataWorks project name:** [Region: cn-shanghai], Task name:<b>, Alert rule: Business delay, aggregator:avg [</b>] for 5 minutes, service maybe abnormal.</para>
+                /// <para>Data Integration synchronization task exception: Level: WARNING, DataWorks project name:** [Region: cn-shanghai], Task name:, Alert rule: business latency, aggregator:avg [] for 5 minutes, service maybe abnormal</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -148,16 +148,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the alert event.</para>
                 /// <list type="bullet">
-                /// <item><description><para>Heartbeat</para>
-                /// </description></item>
-                /// <item><description><para>Delay</para>
-                /// </description></item>
-                /// <item><description><para>FailoverCount</para>
-                /// </description></item>
-                /// <item><description><para>DdlReport</para>
-                /// </description></item>
-                /// <item><description><para>ResourceUtilization</para>
-                /// </description></item>
+                /// <item><description>Heartbeat: task heartbeat alert.</description></item>
+                /// <item><description>Delay: task latency alert.</description></item>
+                /// <item><description>FailoverCount: failover count alert.</description></item>
+                /// <item><description>DdlReport: DDL notification.</description></item>
+                /// <item><description>ResourceUtilization: resource group utilization.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2524</para>
@@ -205,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>645F6D68-9C29-5961-80B1-BDD4****</para>
+        /// <para>645F6D68-9C29-5961-80B1-BDD4B794C22D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

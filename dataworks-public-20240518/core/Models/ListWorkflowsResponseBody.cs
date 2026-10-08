@@ -94,13 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The environment of the workspace. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Prod</para>
-                /// </description></item>
-                /// <item><description><para>Dev</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The environment of the workspace. Valid values: Prod (production) and Dev (development).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
@@ -236,15 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>Pause</para>
-                    /// </description></item>
-                    /// <item><description><para>Skip</para>
-                    /// </description></item>
-                    /// <item><description><para>Normal</para>
-                    /// </description></item>
-                    /// </list>
+                    /// <para>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>

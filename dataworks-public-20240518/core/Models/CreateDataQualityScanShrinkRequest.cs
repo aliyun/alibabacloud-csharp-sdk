@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Spec code for the content of the data quality monitoring.</para>
+        /// <para>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

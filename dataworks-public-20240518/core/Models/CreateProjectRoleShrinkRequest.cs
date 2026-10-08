@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>保留字段</para>
+        /// <para>Reserved field</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

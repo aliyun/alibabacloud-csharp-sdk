@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetAgentSessionArtifactMetaRequestParams Params { get; set; }
         public class GetAgentSessionArtifactMetaRequestParams : TeaModel {
             /// <summary>
-            /// <para>The path of the artifact.</para>
+            /// <para>The path of the artifact. Required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mock/mock_report.md</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ArtifactPath { get; set; }
 
             /// <summary>
-            /// <para>The ID of the session.</para>
+            /// <para>The ID of the session. Required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sess_0f12abc34</para>

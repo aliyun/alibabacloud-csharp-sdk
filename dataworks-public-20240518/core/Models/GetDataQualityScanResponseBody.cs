@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>Spec code for the content of the data quality monitoring.</para>
+            /// <para>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The custom attribute values. The key is the custom attribute identifier, and the value contains at most one element. An empty list indicates that the attribute value is deleted. Passing this parameter without Readme prevents the usage description from being cleared. An empty object indicates that custom attributes are not updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</para>
+        /// <para>{&quot;biz_owner&quot;:[&quot;Zhang San&quot;]}</para>
         /// </summary>
         [NameInMap("CustomAttributes")]
         [Validation(Required=false)]

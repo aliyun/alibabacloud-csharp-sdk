@@ -95,17 +95,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The name of the metric to be sampled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Count: the number of table rows.</description></item>
-            /// <item><description>Min: the minimum value of a field.</description></item>
-            /// <item><description>Max: the maximum value of a field.</description></item>
-            /// <item><description>Avg: the average value of a field.</description></item>
-            /// <item><description>DistinctCount: the number of distinct values of a field.</description></item>
-            /// <item><description>DistinctPercent: the ratio of the number of distinct values of a field to the number of data rows.</description></item>
-            /// <item><description>DuplicatedCount: the number of duplicate values of a field.</description></item>
-            /// <item><description>DuplicatedPercent: the ratio of the number of duplicate values of a field to the number of data rows.</description></item>
+            /// <item><description>Min: the minimum value of a column.</description></item>
+            /// <item><description>Max: the maximum value of a column.</description></item>
+            /// <item><description>Avg: the average value of a column.</description></item>
+            /// <item><description>DistinctCount: the number of distinct values of a column.</description></item>
+            /// <item><description>DistinctPercent: the ratio of the number of distinct values of a column to the number of data rows.</description></item>
+            /// <item><description>DuplicatedCount: the number of duplicate values of a column.</description></item>
+            /// <item><description>DuplicatedPercent: the ratio of the number of duplicate values of a column to the number of data rows.</description></item>
             /// <item><description>TableSize: the size of the table.</description></item>
-            /// <item><description>NullValueCount: the number of rows in which the field is null.</description></item>
-            /// <item><description>NullValuePercent: the percentage of rows in which the field is null.</description></item>
-            /// <item><description>GroupCount: the number of data rows corresponding to each value after the field values are aggregated.</description></item>
+            /// <item><description>NullValueCount: the number of rows in which the column is null.</description></item>
+            /// <item><description>NullValuePercent: the percentage of rows in which the column is null.</description></item>
+            /// <item><description>GroupCount: the number of data rows corresponding to each value after the column values are aggregated.</description></item>
             /// <item><description>CountNotIn: the number of rows whose values do not match the enumerated values.</description></item>
             /// <item><description>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</description></item>
             /// <item><description>UserDefinedSql: sample collection by using custom SQL.</description></item>

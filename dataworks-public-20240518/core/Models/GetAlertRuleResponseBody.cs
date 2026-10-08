@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <item><description>WebhookUrl: custom webhook URL.</description></item>
                     /// <item><description>DingdingUrl: DingTalk webhook URL.</description></item>
                     /// <item><description>FeishuUrl: Lark webhook URL.</description></item>
-                    /// <item><description>WeixinUrl: WeChat webhook URL.</description></item>
+                    /// <item><description>WeixinUrl: WeCom webhook URL.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -401,8 +401,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>InstanceKeyword: failed instance contains keyword.</description></item>
                 /// <item><description>InstanceErrorCount: number of failed instances.</description></item>
                 /// <item><description>InstanceErrorPercentage: percentage of failed instances.</description></item>
-                /// <item><description>ResourceGroupPercentage: schedule resource utilization.</description></item>
-                /// <item><description>ResourceGroupWaitCount: number of instances waiting for schedule resources.</description></item>
+                /// <item><description>ResourceGroupPercentage: resource group utilization.</description></item>
+                /// <item><description>ResourceGroupWaitCount: number of instances waiting for resource group resources.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

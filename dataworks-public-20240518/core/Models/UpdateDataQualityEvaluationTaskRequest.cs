@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <para>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</para>
                         /// <list type="bullet">
                         /// <item><description>Fluctuation rises above 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation drops below 0.01: $checkValue &lt; -0.01</description></item>
+                        /// <item><description>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</description></item>
                         /// <item><description>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
                         /// <para>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <para>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</para>
                         /// <list type="bullet">
                         /// <item><description>Fluctuation rises above 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation drops below 0.01: $checkValue &lt; -0.01</description></item>
+                        /// <item><description>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</description></item>
                         /// <item><description>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
                         /// <para>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <para>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</para>
                         /// <list type="bullet">
                         /// <item><description>Fluctuation rises above 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation drops below 0.01: $checkValue &lt; -0.01</description></item>
+                        /// <item><description>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</description></item>
                         /// <item><description>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
                         /// <para>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>

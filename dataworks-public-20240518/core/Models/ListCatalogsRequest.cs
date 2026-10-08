@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The order in which the tables are sorted. Default value: Asc. Valid values:</para>
+        /// <para>The order in which the catalogs are sorted. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Asc: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>Desc: descending order.</para>
-        /// </description></item>
+        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description>Desc: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,13 +67,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>Currently, only the DLF and StarRocks types are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>For the DLF type, you can query all catalog lists. The format of <c>ParentMetaEntityId</c> is <c>DLF</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For the StarRocks type, you can query the catalogs of a specific instance. The format of <c>ParentMetaEntityId</c> <c>is StarRocks:(instance_id|encoded_jdbc_url)</c>.</para>
-        /// </description></item>
+        /// <item><description>For the DLF type, you can query all catalog lists. The format of <c>ParentMetaEntityId</c> is <c>dlf</c>.</description></item>
+        /// <item><description>For the StarRocks type, you can query the catalogs of a specific instance. The format of <c>ParentMetaEntityId</c> is <c>starrocks:(instance_id|encoded_jdbc_url)</c>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para><br><c>instance_id</c>: The instance ID. Required if the data source is registered in instance mode.<br>
+        /// <para>&lt;br&gt;<c>instance_id</c>: The instance ID. Required if the data source is registered in instance mode.&lt;br&gt;
         /// <c>encoded_jdbc_url</c>: The JDBC connection string encoded with URL encoding. Required if the data source is registered in connection-string mode.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>

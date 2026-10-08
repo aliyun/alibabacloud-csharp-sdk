@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The metric data.</para>
+                /// <para>The metric series, consisting of sampling times and sampled values at different points in time.</para>
                 /// </summary>
                 [NameInMap("SeriesList")]
                 [Validation(Required=false)]

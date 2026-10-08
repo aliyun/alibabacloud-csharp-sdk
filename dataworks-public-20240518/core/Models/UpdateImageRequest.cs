@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The image sub-module. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: data development.</description></item>
+            /// <item><description>Scheduler: Data Studio.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

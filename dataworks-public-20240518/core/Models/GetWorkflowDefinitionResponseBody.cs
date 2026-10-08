@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The ID of the workflow.</para>
+            /// <remarks>
+            /// <para>This field is of type Long in SDK versions earlier than 8.0.0 and String in SDK version 8.0.0 and later. This change does not affect normal SDK usage; the parameter is still returned according to the type defined in the SDK. Upgrading the SDK across version 8.0.0 may cause compilation failures due to the type change. In this case, manually update the data type.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>463497880880954XXXX</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workflow on the scheduling side after publishing.</para>
+            /// <para>The ID of the workflow on the scheduling side after deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>700006657495</para>

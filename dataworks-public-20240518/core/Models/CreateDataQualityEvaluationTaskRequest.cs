@@ -66,6 +66,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The comparison operator.</para>
+                        /// <list type="bullet">
+                        /// <item><description>&gt;</description></item>
+                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>&lt;</description></item>
+                        /// <item><description>&lt;=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>=</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <remarks>
@@ -113,6 +121,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The comparison operator.</para>
+                        /// <list type="bullet">
+                        /// <item><description>&gt;</description></item>
+                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>&lt;</description></item>
+                        /// <item><description>&lt;=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>=</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>=</para>
@@ -159,6 +175,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The comparison operator.</para>
+                        /// <list type="bullet">
+                        /// <item><description>&gt;</description></item>
+                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>&lt;</description></item>
+                        /// <item><description>&lt;=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>=</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <remarks>
@@ -184,6 +208,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The threshold calculation method.</para>
+                /// <list type="bullet">
+                /// <item><description>Fixed</description></item>
+                /// <item><description>Fluctation</description></item>
+                /// <item><description>FluctationDiscreate</description></item>
+                /// <item><description>Auto</description></item>
+                /// <item><description>Average</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fixed</para>
@@ -233,6 +264,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The handler type:</para>
+                /// <list type="bullet">
+                /// <item><description>SaveErrorData: Retains problematic data.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SaveErrorData</para>
@@ -331,6 +365,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The severity level of the rule for the business (corresponding to strong or weak rules on the page). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Normal</description></item>
+            /// <item><description>High</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>High</para>
@@ -395,6 +433,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The hook type. Currently, only one type is supported:</para>
+            /// <list type="bullet">
+            /// <item><description>BlockTaskInstance: Blocks the scheduling task from continuing to run. If the data quality monitor is triggered by a scheduling task, Hook.Condition is evaluated after quality monitoring completes to determine whether the scheduling task is blocked from continuing.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>BlockTaskInstance</para>
@@ -467,6 +508,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationReceivers : TeaModel {
                     /// <summary>
                     /// <para>The additional parameter settings for sending alerts. The value is in JSON format. The following keys are supported:</para>
+                    /// <list type="bullet">
+                    /// <item><description>atAll: Specifies whether to mention all members in the group when sending DingTalk alerts. This setting takes effect when ReceiverType is DingdingUrl.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{  &quot;atAll&quot;: true }</para>
@@ -477,6 +521,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The type of the alert recipient.</para>
+                    /// <list type="bullet">
+                    /// <item><description>WebhookUrl: Custom webhook URL.</description></item>
+                    /// <item><description>FeishuUrl: Lark alert URL.</description></item>
+                    /// <item><description>DingdingUrl: DingTalk alert URL.</description></item>
+                    /// <item><description>WeixinUrl: WeCom alert URL.</description></item>
+                    /// <item><description>AliUid: Alibaba Cloud user ID.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DingdingUrl</para>
@@ -511,6 +562,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</para>
+        /// <list type="bullet">
+        /// <item><description>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</description></item>
+        /// <item><description>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The <b>Skill description</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据分析技能</para>
+        /// <para>Data analytics skill.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The <b>version note</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>初版</para>
+        /// <para>Initial version.</para>
         /// </summary>
         [NameInMap("VersionNote")]
         [Validation(Required=false)]

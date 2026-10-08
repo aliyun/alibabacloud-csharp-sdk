@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The description of the deployment pipeline run.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Release process description</para>
+                /// <para>发布流程描述信息</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

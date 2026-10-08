@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ExecuteAdhocWorkflowInstanceRequestTasksDependencies> Dependencies { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksDependencies : TeaModel {
                 /// <summary>
-                /// <para>The output identifier of the dependent task.</para>
+                /// <para>The output identifier of the upstream task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pre.odps_sql_demo_0</para>

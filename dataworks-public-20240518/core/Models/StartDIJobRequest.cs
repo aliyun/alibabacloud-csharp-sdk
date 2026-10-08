@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? ForceToRerun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The business description of the field. Currently, only MaxCompute, HMS (EMR cluster), and DLF types are supported.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>字段1的业务描述</para>
+            /// <para>Business description of column 1</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>字段1</para>
+        /// <para>Column 1</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
-        /// <para>The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentity}:${DatabaseName}:${PatternName}:${TableName}:${ColumnName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
+        /// <para>The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentity}:${DatabaseName}:${SchemaName}:${TableName}:${ColumnName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
         /// <remarks>
         /// <para>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name. Projects with the three-layer model enabled must include the schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</para>
         /// </remarks>
@@ -71,11 +71,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><c>holo-column:instance_id::database_name:schema_name:table_name:column_name</c></para>
         /// <para><c>mysql-column:(instance_id|encoded_jdbc_url)::database_name::table_name:column_name</c></para>
         /// <remarks>
-        /// <para>Where<br><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.<br><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><c>catalog_id</c>: The DLF catalog ID.<br><c>project_name</c>: The MaxCompute project name.<br><c>database_name</c>: The database name.<br><c>schema_name</c>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><c>table_name</c>: The table name.<br><c>column_name</c>: The column name.</para>
+        /// <para>Where  </para>
+        /// <para><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.  </para>
+        /// <para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </para>
+        /// <para><c>catalog_id</c>: The DLF catalog ID.  </para>
+        /// <para><c>project_name</c>: The MaxCompute project name.  </para>
+        /// <para><c>database_name</c>: The database name.  </para>
+        /// <para><c>schema_name</c>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.  </para>
+        /// <para><c>table_name</c>: The table name.  </para>
+        /// <para><c>column_name</c>: The column name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:123456::test_project:default:test_tbl:col1</para>
+        /// <para>maxcompute-column:::project_name:[schema_name]:table_name:column_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -85,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>col1</para>
+        /// <para>column_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The table ID. For more information, see the <c>Table</c> object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456::test_project:default:test_tbl</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

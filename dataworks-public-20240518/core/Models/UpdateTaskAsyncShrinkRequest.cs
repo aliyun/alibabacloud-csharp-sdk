@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskAsyncShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client unique code of the node, which uniquely identifies a node. This code is used for asynchronous operations and idempotence. If you do not specify this parameter during creation, the system automatically generates one. The code is uniquely bound to the resource ID. When updating or deleting a resource, if you specify this parameter, it must be the same as the client unique code specified during creation.</para>
+        /// <para>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T+1: Generates instances the next day.</description></item>
-        /// <item><description>Immediately: Generates instances immediately. Note: Only periodic instances whose scheduled time is at least 10 minutes after the node publish time are generated. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</description></item>
+        /// <item><description>T+1: generates instances the next day.</description></item>
+        /// <item><description>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,11 +127,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the node can be rerun. Valid values:</para>
+        /// <para>The configuration that specifies whether the node can be rerun. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllDenied: Cannot be rerun regardless of success or failure.</description></item>
-        /// <item><description>FailureAllowed: Can be rerun only upon failure.</description></item>
-        /// <item><description>AllAllowed: Can be rerun regardless of success or failure.</description></item>
+        /// <item><description>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</description></item>
+        /// <item><description>FailureAllowed: the node can be rerun only if it fails.</description></item>
+        /// <item><description>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The number of retries. This parameter takes effect when the node is configured to allow reruns.</para>
+        /// <para>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -152,28 +152,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunTimes { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment configuration, such as schedule resource group information.</para>
+        /// <para>The runtime environment configuration, such as the resource group information.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The script information.</para>
+        /// <para>The runtime script information.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string ScriptShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of data asset tags to bind.</para>
+        /// <para>The list of data asset tags to attach.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The timeout setting for scheduling configuration.</para>
+        /// <para>The timeout period defined in the scheduling configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

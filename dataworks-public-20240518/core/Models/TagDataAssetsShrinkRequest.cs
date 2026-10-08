@@ -28,13 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DataAssetIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the data asset. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ACS::DataWorks::Table</para>
-        /// </description></item>
-        /// <item><description><para>ACS::DataWorks::Task</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

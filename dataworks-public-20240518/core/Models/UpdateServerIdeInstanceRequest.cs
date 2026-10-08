@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<UpdateServerIdeInstanceRequestCredentialConfigConfigsRoles> Roles { get; set; }
                 public class UpdateServerIdeInstanceRequestCredentialConfigConfigsRoles : TeaModel {
                     /// <summary>
-                    /// <para>The Alibaba Cloud account ID of the principal that assumes the role.</para>
+                    /// <para>The Alibaba Cloud account ID of the principal that owns the role to be assumed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789012****</para>

@@ -93,22 +93,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the alert recipient. Valid valves:</para>
                 /// <list type="bullet">
-                /// <item><description><para>AliUid: Alibaba Cloud account ID.</para>
-                /// </description></item>
-                /// <item><description><para>Shift Schedules: the personnel in a shift schedule.</para>
-                /// </description></item>
-                /// <item><description><para>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</para>
-                /// </description></item>
-                /// <item><description><para>Owner: the baseline owner. The baseline owner can receive baseline alerts.</para>
-                /// </description></item>
-                /// <item><description><para>WebhookUrl: URL of a custom webhook.</para>
-                /// </description></item>
-                /// <item><description><para>DingdingUrl: DingTalk webhook URL.</para>
-                /// </description></item>
-                /// <item><description><para>FeishuUrl: Lark webhook URL.</para>
-                /// </description></item>
-                /// <item><description><para>WeixinUrl: WeCom webhook URL.</para>
-                /// </description></item>
+                /// <item><description>AliUid: Alibaba Cloud account ID.</description></item>
+                /// <item><description>ShiftSchedule: the personnel in a shift schedule.</description></item>
+                /// <item><description>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</description></item>
+                /// <item><description>Owner: the baseline owner. The baseline owner can receive baseline alerts.</description></item>
+                /// <item><description>WebhookUrl: URL of a custom webhook.</description></item>
+                /// <item><description>DingdingUrl: DingTalk webhook URL.</description></item>
+                /// <item><description>FeishuUrl: Lark webhook URL.</description></item>
+                /// <item><description>WeixinUrl: WeCom webhook URL.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -219,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateAlertRuleRequestTriggerConditionExtensionError Error { get; set; }
                 public class UpdateAlertRuleRequestTriggerConditionExtensionError : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</para>
+                    /// <para>Specifies whether to trigger an alert if a batch task is automatically rerun upon a failure.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -376,14 +368,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the monitored objects. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Task: node</para>
-                /// </description></item>
-                /// <item><description><para>Baseline: baseline</para>
-                /// </description></item>
-                /// <item><description><para>project: workspace</para>
-                /// </description></item>
-                /// <item><description><para>BizProcess: workflow</para>
-                /// </description></item>
+                /// <item><description>Task: node</description></item>
+                /// <item><description>Baseline: baseline</description></item>
+                /// <item><description>Project: workspace</description></item>
+                /// <item><description>BizProcess: workflow</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -398,32 +386,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The alert type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Finished: An instance is successfully run.</para>
-            /// </description></item>
-            /// <item><description><para>UnFinished: An instance does not finish running before a specified point in time.</para>
-            /// </description></item>
-            /// <item><description><para>Error: An error occurs on an instance.</para>
-            /// </description></item>
-            /// <item><description><para>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</para>
-            /// </description></item>
-            /// <item><description><para>Timeout: An instance times out.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceTransferComplete: An instance is generated by the auto triggered node.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceTransferFluctuate: The number of generated instances fluctuates.</para>
-            /// </description></item>
-            /// <item><description><para>ExhaustedError: An error persists after an instance is automatically rerun.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceKeyword: An instance with errors contains specified keywords.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</para>
-            /// </description></item>
-            /// <item><description><para>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</para>
-            /// </description></item>
-            /// <item><description><para>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</para>
-            /// </description></item>
+            /// <item><description>Finished: An instance finishes running.</description></item>
+            /// <item><description>UnFinished: An instance does not finish running before a specified point in time.</description></item>
+            /// <item><description>Error: An error occurs on an instance.</description></item>
+            /// <item><description>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</description></item>
+            /// <item><description>Timeout: An instance times out.</description></item>
+            /// <item><description>InstanceTransferComplete: An instance is generated by the auto triggered node.</description></item>
+            /// <item><description>InstanceTransferFluctuate: The number of generated instances fluctuates.</description></item>
+            /// <item><description>ExhaustedError: An error persists after an instance is automatically rerun.</description></item>
+            /// <item><description>InstanceKeyword: An instance with errors contains specified keywords.</description></item>
+            /// <item><description>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</description></item>
+            /// <item><description>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</description></item>
+            /// <item><description>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</description></item>
+            /// <item><description>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

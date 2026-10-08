@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alert rule description.</para>
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -65,16 +65,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The metric type in the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Heartbeat</para>
-        /// </description></item>
-        /// <item><description><para>FailoverCount</para>
-        /// </description></item>
-        /// <item><description><para>Delay</para>
-        /// </description></item>
-        /// <item><description><para>DdlReport</para>
-        /// </description></item>
-        /// <item><description><para>ResourceUtilization</para>
-        /// </description></item>
+        /// <item><description>Heartbeat: task status alert</description></item>
+        /// <item><description>FailoverCount: failover count alert</description></item>
+        /// <item><description>Delay: task latency alert</description></item>
+        /// <item><description>DdlReport: DDL notification</description></item>
+        /// <item><description>ResourceUtilization: resource group utilization</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,14 +129,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The alert notification method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Mail</para>
-                /// </description></item>
-                /// <item><description><para>Phone</para>
-                /// </description></item>
-                /// <item><description><para>Sms</para>
-                /// </description></item>
-                /// <item><description><para>Ding</para>
-                /// </description></item>
+                /// <item><description>Mail: email</description></item>
+                /// <item><description>Phone: phone call</description></item>
+                /// <item><description>Sms: SMS</description></item>
+                /// <item><description>Ding: DingTalk</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Channels")]
@@ -218,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<string> DdlReportTags { get; set; }
 
             /// <summary>
-            /// <para>The types of DDL operations for which the alert rule takes effect.</para>
+            /// <para>The types of DDL operations for which the alert rule takes effect. This setting takes effect only for DDL notifications.</para>
             /// </summary>
             [NameInMap("DdlTypes")]
             [Validation(Required=false)]

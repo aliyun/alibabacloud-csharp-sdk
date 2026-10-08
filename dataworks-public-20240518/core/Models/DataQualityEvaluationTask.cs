@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</para>
+        /// <para>The callback settings during the lifecycle of the data quality evaluation task instance. Currently, only one hook that blocks a scheduled task is supported.</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
@@ -47,10 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The type of the callback event. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>BlockTaskInstance. The value indicates that an auto triggered node is blocked.</description></item>
-            /// </list>
+            /// <para>The subsequent action type. BlockTaskInstance: blocks execution of a DataWorks task instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BlockTaskInstance</para>
@@ -72,10 +69,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// <para>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>质量校验任务</para>
+        /// <para>Data quality evaluation task</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -175,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</para>
+        /// <para>The settings used when accessing the data source. Currently, only the EMR YARN queue and the SQL engine used to collect EMR tables can be specified. Supported SQL engines: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</para>
@@ -263,7 +260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public DataQualityEvaluationTaskTrigger Trigger { get; set; }
         public class DataQualityEvaluationTaskTrigger : TeaModel {
             /// <summary>
-            /// <para>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</para>
+            /// <para>Specifies the scheduled nodes whose instances can trigger the quality evaluation task after running successfully. This setting takes effect when type is ByScheduledTaskInstance.</para>
             /// </summary>
             [NameInMap("TaskIds")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateCustomAttributeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The new description for the custom attribute. It must be 256 characters or less.</para>
+        /// <para>The new description for the custom attribute. It must be less than 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? DisplayEnabled { get; set; }
 
         /// <summary>
-        /// <para>The new display name for the custom attribute. It must be 128 characters or less.</para>
+        /// <para>The new display name for the custom attribute. It must be less than 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务负责人</para>
+        /// <para>Business owner</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]

@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The exec mode. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>chat: Conversation mode only. Suitable for simple Q&amp;A scenarios. Advantages: fast response and low token consumption. Disadvantages: cannot handle complex problems.</description></item>
+                    /// <item><description>chat: Conversation mode only. Suitable for simple data queries and Q&amp;A scenarios. Advantages: fast response and low token consumption. Disadvantages: cannot handle complex problems.</description></item>
                     /// <item><description>cli: Sandbox mode. Suitable for complex data analytics, data processing, and code writing scenarios. Advantages: can handle complex problems, and the model autonomously performs analysis and problem resolution. Disadvantages: slower processing speed and higher token consumption compared to the conversation mode.</description></item>
                     /// </list>
                     /// 

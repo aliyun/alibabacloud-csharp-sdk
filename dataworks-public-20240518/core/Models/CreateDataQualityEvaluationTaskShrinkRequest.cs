@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</para>
+        /// <list type="bullet">
+        /// <item><description>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</description></item>
+        /// <item><description>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</para>

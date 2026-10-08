@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the order for the resource group.</para>
+                /// <para>The order instance ID for the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The description of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Create a general-purpose resource group for common tasks.</para>
+                /// <para>创建用于普通任务的通用资源组</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]

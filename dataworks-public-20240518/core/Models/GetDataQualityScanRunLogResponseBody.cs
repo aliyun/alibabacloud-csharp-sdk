@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRunLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node task logs information.</para>
+        /// <para>The task log information.</para>
         /// </summary>
         [NameInMap("LogSegment")]
         [Validation(Required=false)]
         public GetDataQualityScanRunLogResponseBodyLogSegment LogSegment { get; set; }
         public class GetDataQualityScanRunLogResponseBodyLogSegment : TeaModel {
             /// <summary>
-            /// <para>The node task logs.</para>
+            /// <para>The task logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running on Serverless_resource_group_xxxxx

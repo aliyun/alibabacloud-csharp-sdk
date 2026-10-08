@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>T+1: The instance is generated the next day.</description></item>
-        /// <item><description>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node publish time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</description></item>
+        /// <item><description>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node deployment time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy nodes, but new nodes do not automatically generate instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

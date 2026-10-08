@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试类目</para>
+                /// <para>Test category</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The usage instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <h2>使用说明</h2>
+            /// <h2>Usage instructions</h2>
             /// </summary>
             [NameInMap("Readme")]
             [Validation(Required=false)]
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试表</para>
+        /// <para>Test table</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
-        /// <para>The format is <c>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}:${TableName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
+        /// <para>The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
         /// <remarks>
         /// <para>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</para>
         /// </remarks>
@@ -234,14 +234,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><c>holo-table:instance_id::database_name:schema_name:table_name</c></para>
         /// <para><c>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</c></para>
         /// <remarks>
-        /// <para>Where<br><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.<br><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><c>catalog_id</c>: The DLF catalog ID.<br><c>project_name</c>: The MaxCompute project name.<br><c>database_name</c>: The database name.<br><c>schema_name</c>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><c>table_name</c>: The table name.</para>
+        /// <para>Where  </para>
+        /// <para><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.  </para>
+        /// <para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </para>
+        /// <para><c>catalog_id</c>: The DLF catalog ID.  </para>
+        /// <para><c>project_name</c>: The MaxCompute project name.  </para>
+        /// <para><c>database_name</c>: The database name.  </para>
+        /// <para><c>schema_name</c>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.  </para>
+        /// <para><c>table_name</c>: The table name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456XXX::test_project::test_tbl
-        /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
-        /// hms-table:c-abc123xxx::test_db::test_tbl
-        /// holo-table:h-abc123xxx::test_db:test_schema:test_tbl</para>
+        /// <para>dlf-table::catalog_id:database_name::table_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -261,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_tbl</para>
+        /// <para>table_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -270,10 +274,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The parent-level metadata entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <list type="bullet">
-        /// <item><description><para>For types that support schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the Layer 3 model to be enabled for the project</c>), ParentMetaEntityId is the database pattern to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
-        /// </description></item>
-        /// <item><description><para>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
-        /// </description></item>
+        /// <item><description>For types that support schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the three-layer model to be enabled for the project</c>), ParentMetaEntityId is the database schema to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</c>. Use an empty character as a placeholder for levels that do not exist.</description></item>
+        /// <item><description>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</c>. Use an empty character as a placeholder for levels that do not exist.</description></item>
         /// </list>
         /// <remarks>
         /// <para>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</para>
@@ -289,15 +291,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><c>holo-schema:instance_id::database_name:schema_name</c></para>
         /// <para><c>mysql-database:(instance_id|encoded_jdbc_url)::database_name</c></para>
         /// <remarks>
-        /// <para>Where<br><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.<br><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><c>catalog_id</c>: The DLF catalog ID.<br><c>project_name</c>: The MaxCompute project name.<br><c>database_name</c>: The database name.<br><c>schema_name</c>: The schema name.</para>
+        /// <para>Where  </para>
+        /// <para><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.  </para>
+        /// <para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </para>
+        /// <para><c>catalog_id</c>: The DLF catalog ID.  </para>
+        /// <para><c>project_name</c>: The MaxCompute project name.  </para>
+        /// <para><c>database_name</c>: The database name.  </para>
+        /// <para><c>schema_name</c>: The schema name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-schema:123456XXX::test_project_with_schema:default
-        /// maxcompute-project:123456XXX::test_project_without_schema
-        /// dlf-database:123456XXX:test_catalog:test_db
-        /// hms-database:c-abc123xxx::test_db
-        /// holo-schema:h-abc123xxx::test_db:test_schema</para>
+        /// <para>dlf-database::catalog_id:database_name</para>
         /// </summary>
         [NameInMap("ParentMetaEntityId")]
         [Validation(Required=false)]

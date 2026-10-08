@@ -35,10 +35,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the Data Studio node.</para>
-        /// <remarks>
-        /// <para>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
-        /// </remarks>
+        /// <para>The FlowSpec information that describes the node. For the specification, see FlowSpec.</para>
+        /// <h3>How to quickly obtain a FlowSpec template</h3>
+        /// <para>Open the node in Data Studio, click Versions on the right, view the latest version, and view the scheduling configuration to obtain the FlowSpec description of the current node. Use this description to quickly build a template that meets the requirements.</para>
+        /// <h3>How to specify node content</h3>
+        /// <para>Specify the node content in <c>$.spec.nodes[*].script.content</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityEvaluationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paged query result of quality evaluation nodes.</para>
+        /// <para>The paged query result of quality evaluation tasks.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The callback settings during the epoch of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</para>
+                /// <para>The callback settings during the lifecycle of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</para>
                 /// </summary>
                 [NameInMap("Hooks")]
                 [Validation(Required=false)]
                 public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks> Hooks { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks : TeaModel {
                     /// <summary>
-                    /// <para>The cause that triggers the hook.</para>
+                    /// <para>The condition that triggers the hook.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data quality evaluation task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</para>
+                /// <para>The name of the data quality evaluation task. The name can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Data quality verification task</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications Notifications { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications : TeaModel {
                     /// <summary>
-                    /// <para>The cause that triggers the notification.</para>
+                    /// <para>The condition that triggers the notification.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${severity} == &quot;High&quot;</para>

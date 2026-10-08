@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetWorkflowInstanceResponseBodyWorkflowInstance WorkflowInstance { get; set; }
         public class GetWorkflowInstanceResponseBodyWorkflowInstance : TeaModel {
             /// <summary>
-            /// <para>The data timestamp.</para>
+            /// <para>The business date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -59,10 +59,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The environment of the workspace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Prod</para>
-            /// </description></item>
-            /// <item><description><para>Dev</para>
-            /// </description></item>
+            /// <item><description>Prod: production environment</description></item>
+            /// <item><description>Dev: development environment</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -234,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The unified pipeline instance ID. For all pipeline instances triggered under the same data timestamp in a single trigger, this field value is identical.</para>
+            /// <para>The unified workflow instance ID. This field has the same value for all workflow instances for the same business date within a single trigger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -257,9 +255,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The workflow parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>周期工作流：
+            /// <para>Scheduled workflow：
             /// key1=value1 key2=value2
-            /// 手动业务流程：
+            /// Manual workflow：
             /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
             /// </summary>
             [NameInMap("WorkflowParameters")]

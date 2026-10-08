@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the Data Studio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The functional module to which the business process belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: DataStudio.</description></item>
+        /// <item><description>NORMAL: Data Studio.</description></item>
         /// <item><description>MANUAL_BIZ: Manual business process.</description></item>
         /// </list>
         /// 

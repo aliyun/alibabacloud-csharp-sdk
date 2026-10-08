@@ -97,10 +97,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the Workspace member.</para>
             /// <list type="bullet">
-            /// <item><description><para>Normal: The member is active.</para>
-            /// </description></item>
-            /// <item><description><para>Disabled: The member is disabled.</para>
-            /// </description></item>
+            /// <item><description>Normal: The member is active.</description></item>
+            /// <item><description>Forbidden: The member is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

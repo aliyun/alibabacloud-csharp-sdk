@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The ID of the new Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek2kqofrg****</para>
+        /// <para>rg-aek2kqofrgXXXXX</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupId")]
         [Validation(Required=false)]

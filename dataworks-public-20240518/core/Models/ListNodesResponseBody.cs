@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListNodesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNodesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of data development nodes.</para>
+            /// <para>The list of Data Studio nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the data development node was created.</para>
+                /// <para>The timestamp when the Data Studio node was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722910655000</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the data development node.</para>
+                /// <para>The unique identifier of the Data Studio node.</para>
                 /// <remarks>
-                /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</b>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</para>
+                /// <para>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</b>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The timestamp when the data development node was last modified.</para>
+                /// <para>The timestamp when the Data Studio node was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722910655000</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The owner of the data development node.</para>
+                /// <para>The owner of the Data Studio node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -449,6 +449,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The scheduling type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: The task is executed normally.</description></item>
+                /// <item><description>Pause: The node is paused and blocks downstream nodes that depend on it.</description></item>
+                /// <item><description>Skip: The node performs a dry run. The system immediately returns success with a run duration of 0 seconds, does not block downstream nodes, and does not consume resources.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -546,6 +552,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public class ListNodesResponseBodyPagingInfoNodesStrategy : TeaModel {
                     /// <summary>
                     /// <para>The mode for generating instances.</para>
+                    /// <para>Valid values: T+1 and Immediately.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>T+1</para>
@@ -566,6 +573,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The mode that specifies whether reruns are allowed.</para>
+                    /// <para>Valid values: Allowed, Denied, and FailureAllowed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Allowed</para>

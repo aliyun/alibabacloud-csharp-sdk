@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public DataQualityResultRuleCheckingConfig CheckingConfig { get; set; }
             public class DataQualityResultRuleCheckingConfig : TeaModel {
                 /// <summary>
-                /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</para>
+                /// <para>Some types of thresholds require querying reference samples and aggregating their values to calculate the comparison threshold. An expression specifies how to query these reference samples.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<DataQualityResultRuleErrorHandlers> ErrorHandlers { get; set; }
             public class DataQualityResultRuleErrorHandlers : TeaModel {
                 /// <summary>
-                /// <para>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</para>
+                /// <para>For a custom SQL rule, you must specify an SQL statement to filter problematic data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
@@ -285,10 +285,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+            /// <para>The name of the rule. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>表不能为空</para>
+            /// <para>The table must not be empty</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The template used by the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>system::user_defined</para>
+            /// <para>SYSTEM:user_defined_sql</para>
             /// </summary>
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]

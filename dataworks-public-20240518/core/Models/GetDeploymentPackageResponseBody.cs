@@ -46,13 +46,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The status of the deployed item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>UNPUBLISHED(0): not published</description></item>
-                /// <item><description>SUCCESS(1): published successfully</description></item>
-                /// <item><description>ERROR(2): publishing failed</description></item>
+                /// <item><description>UNPUBLISHED(0): not deployed</description></item>
+                /// <item><description>SUCCESS(1): deployed successfully</description></item>
+                /// <item><description>ERROR(2): deployment failed</description></item>
                 /// <item><description>CLONED(3): cloned successfully</description></item>
-                /// <item><description>DEPLOY_ERROR(4): publishing failed</description></item>
+                /// <item><description>DEPLOY_ERROR(4): deployment failed</description></item>
                 /// <item><description>CLONING(5): cloning in progress</description></item>
-                /// <item><description>REJECT(6): publishing rejected</description></item>
+                /// <item><description>REJECT(6): deployment rejected</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetDeploymentPackageResponseBodyDataDeployment Deployment { get; set; }
             public class GetDeploymentPackageResponseBodyDataDeployment : TeaModel {
                 /// <summary>
-                /// <para>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can publish the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</para>
+                /// <para>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can deploy the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</para>
                 /// <list type="bullet">
                 /// <item><description>7: The check failed.</description></item>
                 /// <item><description>8: The check is in progress.</description></item>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The target environment to which the file information is published. Valid values:</para>
+                /// <para>The target environment to which the file information is deployed. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: development environment</description></item>
                 /// <item><description>2: production environment</description></item>

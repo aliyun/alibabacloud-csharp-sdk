@@ -109,13 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? DevEnvironmentEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Develop role is disabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>false (default)</para>
-                /// </description></item>
-                /// <item><description><para>true</para>
-                /// </description></item>
-                /// </list>
+                /// <para>Indicates whether the developer role is disabled. Valid values: false (enabled) and true (disabled).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -181,27 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? PaiTaskEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The status of the workspace. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Available</para>
-                /// </description></item>
-                /// <item><description><para>Initializing</para>
-                /// </description></item>
-                /// <item><description><para>InitFailed</para>
-                /// </description></item>
-                /// <item><description><para>Forbidden</para>
-                /// </description></item>
-                /// <item><description><para>Deleting</para>
-                /// </description></item>
-                /// <item><description><para>DeleteFailed</para>
-                /// </description></item>
-                /// <item><description><para>Frozen</para>
-                /// </description></item>
-                /// <item><description><para>Updating</para>
-                /// </description></item>
-                /// <item><description><para>UpdateFailed</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The status of the workspace. Valid values: Available (running normally), Initializing (initializing), InitFailed (initialization failed), Forbidden (manually disabled), Deleting (being deleted), DeleteFailed (deletion failed), Frozen (frozen due to overdue payments), Updating (being updated), and UpdateFailed (update failed).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecPipelineRunStageRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the publish flow stage. For the specific value, see the response of the GetPipelineRun operation.</para>
+        /// <para>The code of the deployment process stage. For the specific value, see the response of the GetPipelineRun operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the publish flow.</para>
+        /// <para>The unique identifier of the deployment process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

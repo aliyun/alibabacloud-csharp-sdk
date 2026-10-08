@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+                /// <para>The time when the periodic trigger takes effect. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1970-01-01 00:00:00</para>

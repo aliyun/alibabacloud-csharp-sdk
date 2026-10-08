@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the process definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lwt_ide_simple 项目 MaxCompute 表审批策略</para>
+        /// <para>MaxCompute table approval policy for the lwt_ide_simple project</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the process definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxCompute 表审批</para>
+        /// <para>MaxCompute table approval</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

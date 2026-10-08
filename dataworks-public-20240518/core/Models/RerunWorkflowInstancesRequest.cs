@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The end trigger time of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</para>
+        /// <para>The end trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -30,8 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTriggerTime { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
-        /// <para>Prod Dev</para>
+        /// <para>The environment of the workspace. Valid values: Prod (production) and Dev (development).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
@@ -130,13 +129,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The status used for matching manual workflow instances.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Success</para>
-        /// </description></item>
-        /// <item><description><para>Failure</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Failure</para>
@@ -146,8 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance. Valid values:</para>
-        /// <para>ManualWorkflow.</para>
+        /// <para>The type of the workflow instance. Valid value: ManualWorkflow (manual workflow).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

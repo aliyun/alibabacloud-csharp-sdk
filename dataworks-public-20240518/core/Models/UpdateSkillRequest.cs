@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateSkillRequestVisibilityScope VisibilityScope { get; set; }
         public class UpdateSkillRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of visible project IDs.</para>
+            /// <para>The IDs of the projects in which the Skill is visible.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of visible user IDs.</para>
+            /// <para>The IDs of the users to whom the Skill is visible.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

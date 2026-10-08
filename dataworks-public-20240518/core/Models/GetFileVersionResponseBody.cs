@@ -151,10 +151,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The functional module to which the file belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: NORMAL (DataStudio)</description></item>
+            /// <item><description>0: NORMAL (Data Studio)</description></item>
             /// <item><description>1: MANUAL (manual node)</description></item>
             /// <item><description>2: MANUAL_BIZ (manual workflow)</description></item>
-            /// <item><description>3: SKIP (dry-run scheduling in DataStudio)</description></item>
+            /// <item><description>3: SKIP (dry-run scheduling in Data Studio)</description></item>
             /// <item><description>10: ADHOCQUERY (ad hoc query)</description></item>
             /// <item><description>30: COMPONENT (component management)</description></item>
             /// </list>

@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The reason for the application.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>业务需要</para>
+                /// <para>Business requirement</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]

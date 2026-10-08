@@ -20,14 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Filter condition: The type of the workflow. The default value is CycleWorkflow.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>CycleWorkflow</para>
-        /// </description></item>
-        /// <item><description><para>ManualWorkflow</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The ID of the owner, which is the account UID of the workspace administrator. To view the UID, log on to the Alibaba Cloud console and go to the Security Management section of Account Management.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110755000425XXXX</para>
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the data to retrieve, used for pagination.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to query the ID.</para>
         /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
         /// <para>This parameter is required.</para>
         /// 

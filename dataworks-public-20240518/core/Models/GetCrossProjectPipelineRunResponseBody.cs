@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ObjectName { get; set; }
 
             /// <summary>
-            /// <para>The object type of the publish object.</para>
+            /// <para>The type of the deployment object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ODPS_SQL</para>

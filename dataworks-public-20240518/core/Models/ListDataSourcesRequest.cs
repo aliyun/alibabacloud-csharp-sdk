@@ -87,12 +87,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The field that you want to use to sort the data sources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateTime</para>
-        /// </description></item>
-        /// <item><description><para>Id</para>
-        /// </description></item>
-        /// <item><description><para>Name</para>
-        /// </description></item>
+        /// <item><description>CreateTime: creation time</description></item>
+        /// <item><description>Id: data source ID</description></item>
+        /// <item><description>Name: data source name</description></item>
         /// </list>
         /// <para>Default value: CreateTime</para>
         /// 
@@ -106,10 +103,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tag of the data source. This parameter specifies a filter condition.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <c>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</para>
-        /// </description></item>
+        /// <item><description>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <c>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</c>.</description></item>
+        /// <item><description>If you do not configure this parameter or leave it empty, tag-based filtering is not performed. You can specify up to 10 tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

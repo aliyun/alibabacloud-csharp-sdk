@@ -37,15 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string FailureMessage { get; set; }
 
             /// <summary>
-            /// <para>The creation status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// </description></item>
-            /// <item><description><para>Created</para>
-            /// </description></item>
-            /// <item><description><para>CreateFailure</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The creation status. Valid values: Creating (creation in progress), Created (creation succeeded), and CreateFailure (creation failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Created</para>
@@ -55,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Unified workflow instance ID. For all task instances triggered under the same data timestamp in a single trigger, the value of this field is identical. This field is returned after successful creation.</para>
+            /// <para>Unified workflow instance ID. For all task instances triggered under the same business date in a single trigger, the value of this field is identical. This field is returned after successful creation.</para>
             /// </summary>
             [NameInMap("UnifiedWorkflowInstanceIds")]
             [Validation(Required=false)]

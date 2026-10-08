@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>Time when the request was submitted.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>申请时间</para>
+                /// <para>Application time</para>
                 /// </summary>
                 [NameInMap("ApplicationTime")]
                 [Validation(Required=false)]
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>Reason for the request.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>业务需要</para>
+                /// <para>Business requirement</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]

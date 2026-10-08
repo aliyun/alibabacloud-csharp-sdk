@@ -73,16 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FunctionType { get; set; }
 
         /// <summary>
-        /// <para>The function parameter description, corresponding to the parameter description field in the Create Function form.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ALL_ALLOWD</para>
-        /// </description></item>
-        /// <item><description><para>FAILURE_ALLOWED</para>
-        /// </description></item>
-        /// <item><description><para>ALL_DENIED</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The description of the function input parameters, corresponding to the Parameter Description field in the Create Function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>List of strings to be connected</para>
@@ -102,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier at the top of the Data Studio page where you switch workspaces.</para>
         /// <para>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>

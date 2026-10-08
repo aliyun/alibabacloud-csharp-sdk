@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the rule template is updated.</para>
+        /// <para>Indicates whether the rule template is updated successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

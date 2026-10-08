@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The timeout period for task execution. Unit: seconds.</para>
-            /// <para>Note: The scheduling system rounds the configured value to the nearest hour.</para>
+            /// <para>Note: The scheduling system rounds the configured value to whole hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>

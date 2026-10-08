@@ -19,30 +19,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The approver type for the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>DataWorksProjectRole</c>: A workspace role.</para>
-            /// </description></item>
-            /// <item><description><para><c>DataWorksProjectMember</c>: A workspace member.</para>
-            /// </description></item>
-            /// <item><description><para><c>TableAdministrator</c>: A table administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>TableOrProjectAdministrator</c>: The administrator of the table or project.</para>
-            /// </description></item>
-            /// <item><description><para><c>AliyunResourceOwner</c>: An Alibaba Cloud account.</para>
-            /// </description></item>
-            /// <item><description><para><c>MaxComputeRole</c>: A MaxCompute administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>DLFAdmin</c>: A DlfLegacy administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>DLFNextAdmin</c>: A DLFNext administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>TenantRole</c>: A tenant role.</para>
-            /// </description></item>
-            /// <item><description><para><c>EmrAdministrator</c>: An EMR administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>LindormAdministrator</c>: A Lindorm administrator.</para>
-            /// </description></item>
-            /// <item><description><para><c>AliyunRamUser</c>: A RAM user.</para>
-            /// </description></item>
+            /// <item><description><c>DataWorksProjectRole</c>: A workspace role.</description></item>
+            /// <item><description><c>DataWorksProjectMember</c>: A workspace member.</description></item>
+            /// <item><description><c>TableAdministrator</c>: A table owner.</description></item>
+            /// <item><description><c>TableOrProjectAdministrator</c>: The administrator of the table or workspace.</description></item>
+            /// <item><description><c>AliyunResourceOwner</c>: An Alibaba Cloud account.</description></item>
+            /// <item><description><c>MaxComputeRole</c>: A MaxCompute administrator.</description></item>
+            /// <item><description><c>DLFAdmin</c>: A DlfLegacy administrator.</description></item>
+            /// <item><description><c>DLFNextAdmin</c>: A DLFNext administrator.</description></item>
+            /// <item><description><c>TenantRole</c>: A tenant role.</description></item>
+            /// <item><description><c>EmrAdministrator</c>: An EMR administrator.</description></item>
+            /// <item><description><c>LindormAdministrator</c>: A Lindorm administrator.</description></item>
+            /// <item><description><c>AliyunRamUser</c>: A RAM user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the process definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lwt_ide_simple 项目 MaxCompute 表审批策略</para>
+        /// <para>MaxCompute table approval policy for the lwt_ide_simple project</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -134,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the process definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxCompute 表审批</para>
+        /// <para>MaxCompute table approval</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

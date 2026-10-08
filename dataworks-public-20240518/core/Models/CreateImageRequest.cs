@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProviderImageId { get; set; }
 
         /// <summary>
-        /// <para>The image reference data type. Valid values:</para>
+        /// <para>The image reference type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ACR: ACR image repository.</description></item>
         /// <item><description>DataWorks: DataWorks official image.</description></item>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The image sub-module. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: DataStudio.</description></item>
+            /// <item><description>Scheduler: Data Studio.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

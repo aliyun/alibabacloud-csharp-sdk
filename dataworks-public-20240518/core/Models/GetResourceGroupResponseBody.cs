@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonV2: new-version resource group.</description></item>
+            /// <item><description>CommonV2: new-version general-purpose resource group.</description></item>
             /// <item><description>ExclusiveDataIntegration: exclusive data integration resource group.</description></item>
             /// <item><description>ExclusiveScheduler: exclusive scheduling resource group.</description></item>
             /// <item><description>ExclusiveDataService: exclusive data service resource group.</description></item>

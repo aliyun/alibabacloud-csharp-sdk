@@ -79,16 +79,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The metric type in the alert rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Heartbeat</para>
-                /// </description></item>
-                /// <item><description><para>FailoverCount</para>
-                /// </description></item>
-                /// <item><description><para>Delay</para>
-                /// </description></item>
-                /// <item><description><para>DdlReport</para>
-                /// </description></item>
-                /// <item><description><para>ResourceUtilization</para>
-                /// </description></item>
+                /// <item><description>Heartbeat: task status alert</description></item>
+                /// <item><description>FailoverCount: failover count alert</description></item>
+                /// <item><description>Delay: task latency alert</description></item>
+                /// <item><description>DdlReport: DDL notification</description></item>
+                /// <item><description>ResourceUtilization: resource group utilization</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -297,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>

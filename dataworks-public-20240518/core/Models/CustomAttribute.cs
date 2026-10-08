@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Display name for the custom attribute. It must be fewer than 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务负责人</para>
+        /// <para>Business owner</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]

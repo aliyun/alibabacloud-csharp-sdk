@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><b>The policy description.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>控制数据分析模块的查询结果安全行为</para>
+        /// <para>Controls the security behavior of query results in the Data Analysis module</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><b>The policy name.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认数据分析策略</para>
+        /// <para>Default data analysis policy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

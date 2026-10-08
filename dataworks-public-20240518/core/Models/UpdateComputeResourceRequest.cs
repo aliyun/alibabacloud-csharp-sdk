@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionProperties { get; set; }
 
         /// <summary>
-        /// <para>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode and UrlMode.</para>
+        /// <para>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode (instance mode) and UrlMode (connection string mode).</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceMode</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the computing resource. The maximum length is 3000 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Level description</para>
+        /// <para>Table level description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

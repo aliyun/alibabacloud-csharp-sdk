@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the certificate files. Valid values: Desc: descending order ASC: ascending order Default value: Asc</para>
+        /// <para>The order in which you want to sort the certificate files. Valid values: Desc: descending order Asc: ascending order Default value: Asc</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asc</para>

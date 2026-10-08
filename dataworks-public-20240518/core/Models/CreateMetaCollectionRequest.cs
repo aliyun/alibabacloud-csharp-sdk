@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collection.</para>
+        /// <para>The name of the collection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,14 +41,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>The collection name.</para>
+        /// <para>The collection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Category</para>
-        /// </description></item>
-        /// <item><description><para>Album</para>
-        /// </description></item>
-        /// <item><description><para>AlbumCategory: Album subcategory.</para>
-        /// </description></item>
+        /// <item><description>Category: category.</description></item>
+        /// <item><description>Album: data album.</description></item>
+        /// <item><description>AlbumCategory: album subcategory.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is used to query the information about workspaces that belong to a specific resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmzbn****</para>
+        /// <para>rg-acfmzbn7pti3zff</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupId")]
         [Validation(Required=false)]
         public string AliyunResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags. This parameter queries workspaces that have any of the specified tag key-value pairs.</para>
         /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
@@ -66,13 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? DevEnvironmentEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the Develop role is disabled. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>false (default)</para>
-        /// </description></item>
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Specifies whether the developer role is disabled. Valid values: false (enabled, default) and true (disabled). This parameter filters workspaces by whether the developer role is enabled or disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -132,27 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? PaiTaskEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of the workspaces. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Available</para>
-        /// </description></item>
-        /// <item><description><para>Initializing</para>
-        /// </description></item>
-        /// <item><description><para>InitFailed</para>
-        /// </description></item>
-        /// <item><description><para>Forbidden</para>
-        /// </description></item>
-        /// <item><description><para>Deleting</para>
-        /// </description></item>
-        /// <item><description><para>DeleteFailed</para>
-        /// </description></item>
-        /// <item><description><para>Frozen</para>
-        /// </description></item>
-        /// <item><description><para>Updating</para>
-        /// </description></item>
-        /// <item><description><para>UpdateFailed</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The status of the workspaces. Valid values: Available (running normally), Initializing (initializing), InitFailed (initialization failed), Forbidden (manually disabled), Deleting (being deleted), DeleteFailed (deletion failed), Frozen (frozen due to overdue payments), Updating (being updated), and UpdateFailed (update failed). This parameter filters workspaces by the specified status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

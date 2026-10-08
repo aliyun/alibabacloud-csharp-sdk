@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? CurrentVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the data source with which the file is associated.</para>
+                    /// <para>The unique identifier of the data source with which the file is associated.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_source</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfiguration NodeConfiguration { get; set; }
                 public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The interval at which the node corresponding to the file is rerun. Unit: milliseconds.</para>
+                    /// <para>The interval at which the node corresponding to the file is automatically rerun. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120000</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? AutoRerunIntervalMillis { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the node corresponding to the file can be rerun.</para>
+                    /// <para>The number of automatic reruns.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</para>
-                    /// <para>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                    /// <para>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DAY</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The ID of the node on which the node that corresponds to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).</para>
-                    /// <para>The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                    /// <para>The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5,10,15,20</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList : TeaModel {
                         /// <summary>
                         /// <para>The output name of the parent file on which the current file depends.</para>
-                        /// <para>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                        /// <para>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>dw_project_root</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationOutputList : TeaModel {
                         /// <summary>
                         /// <para>The output name of the current file.</para>
-                        /// <para>This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                        /// <para>This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>dw_project.002_out</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The output table name of the current file.</para>
-                        /// <para>This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                        /// <para>This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ods_user_info_d</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The scheduling parameters of the node.</para>
-                    /// <para>This parameter corresponds to the Scheduling Parameter section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</para>
+                    /// <para>This parameter corresponds to the Scheduling Parameter section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>a=x b=y</para>
@@ -324,14 +324,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>Indicates whether the node that corresponds to the file can be rerun. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</para>
-                    /// </description></item>
-                    /// <item><description><para>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</para>
-                    /// </description></item>
-                    /// <item><description><para>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</para>
-                    /// </description></item>
+                    /// <item><description>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</description></item>
+                    /// <item><description>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</description></item>
+                    /// <item><description>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</description></item>
                     /// </list>
-                    /// <para>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                    /// <para>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ALL_ALLOWED</para>
@@ -385,18 +382,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>NORMAL: The file is used for DataStudio.</para>
-                /// </description></item>
-                /// <item><description><para>MANUAL: The file is used for a manually triggered node.</para>
-                /// </description></item>
-                /// <item><description><para>MANUAL_BIZ: The file is used for a manually triggered workflow.</para>
-                /// </description></item>
-                /// <item><description><para>SKIP: The file is used for a dry-run node in DataStudio.</para>
-                /// </description></item>
-                /// <item><description><para>ADHOCQUERY: The file is used for an ad hoc query.</para>
-                /// </description></item>
-                /// <item><description><para>COMPONENT: The file is used for a script template.</para>
-                /// </description></item>
+                /// <item><description>NORMAL: The file is used for Data Studio.</description></item>
+                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
+                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
+                /// <item><description>SKIP: The file is used for a dry-run node in Data Studio.</description></item>
+                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
+                /// <item><description>COMPONENT: The file is used for component management.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -446,7 +437,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CurrentVersion { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data source with which the file is associated.</para>
+                /// <para>The unique identifier of the data source with which the file is associated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_source</para>
@@ -528,18 +519,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>NORMAL: The file is used for DataStudio.</para>
-                /// </description></item>
-                /// <item><description><para>MANUAL: The file is used for a manually triggered node.</para>
-                /// </description></item>
-                /// <item><description><para>MANUAL_BIZ: The file is used for a manually triggered workflow.</para>
-                /// </description></item>
-                /// <item><description><para>SKIP: The file is used for a dry-run node in DataStudio.</para>
-                /// </description></item>
-                /// <item><description><para>ADHOCQUERY: The file is used for an ad hoc query.</para>
-                /// </description></item>
-                /// <item><description><para>COMPONENT: The file is used for a script template.</para>
-                /// </description></item>
+                /// <item><description>NORMAL: The file is used for Data Studio.</description></item>
+                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
+                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
+                /// <item><description>SKIP: The file is used for a dry-run node in Data Studio.</description></item>
+                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
+                /// <item><description>COMPONENT: The file is used for component management.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -569,7 +554,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data source with which the file is associated.</para>
+                /// <para>The unique identifier of the data source with which the file is associated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_source</para>
@@ -673,7 +658,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data source to which the table belongs.</para>
+                /// <para>The unique identifier of the data source to which the table belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_source</para>
@@ -709,7 +694,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? LifeCycle { get; set; }
 
                 /// <summary>
-                /// <para>The path of the table.</para>
+                /// <para>The Location information of the external table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hdfs://path/to/object</para>

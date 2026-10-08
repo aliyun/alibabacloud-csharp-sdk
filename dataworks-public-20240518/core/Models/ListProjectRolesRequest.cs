@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> Names { get; set; }
 
         /// <summary>
-        /// <para>The page number. Used for paging.</para>
+        /// <para>The requested page number. Used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
-        /// <para>This parameter specifies the DataWorks workspace for this API invoke operation.</para>
+        /// <para>This parameter specifies the DataWorks workspace to use for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the workspace role. Valid values:</para>
+        /// <para>The role type of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UserCustom: user-defined role.</description></item>
-        /// <item><description>System: system role.</description></item>
+        /// <item><description>UserCustom: user-defined role</description></item>
+        /// <item><description>System: system role</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

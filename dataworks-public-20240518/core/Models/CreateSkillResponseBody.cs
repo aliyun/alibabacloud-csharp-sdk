@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The Skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析技能</para>
+            /// <para>Data analytics skill.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

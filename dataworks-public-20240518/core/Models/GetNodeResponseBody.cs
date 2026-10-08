@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The ID of the corresponding scheduling task after the node is published.</para>
+            /// <para>The ID of the corresponding scheduling task after the node is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>700006680527</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>Purchased DataWorks edition name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>标准版</para>
+            /// <para>Standard Edition</para>
             /// </summary>
             [NameInMap("EditionDisplayName")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <para>Display name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>查询结果-单次展示记录值上限</para>
+                        /// <para>Query Results - Single Display Record Limit</para>
                         /// </summary>
                         [NameInMap("DisplayName")]
                         [Validation(Required=false)]
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para><b>Display name</b></para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>数据分析</para>
+                    /// <para>Data Analysis</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para><b>Policy description</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>控制数据分析模块的查询结果安全行为</para>
+                /// <para>Controls the security behavior of query results in the Data Analysis module.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para><b>Policy name</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>默认数据分析策略</para>
+                /// <para>Default Data Analysis Policy</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string UpstreamOutput { get; set; }
 
                 /// <summary>
-                /// <para>The ancestor task ID. This parameter is returned only if <c>cross-cycle scheduling dependencies</c> or <c>same-cycle scheduling dependencies</c> and the node input are not configured.</para>
+                /// <para>The ID of the upstream task. This field is returned for cross-cycle dependencies on other nodes, or for same-cycle dependencies when input content is not specified. It is not returned in other cases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -335,13 +335,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The environment of the workspace. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Prod</para>
-                /// </description></item>
-                /// <item><description><para>Dev</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The environment of the workspace. Valid values: Prod (production) and Dev (development).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
@@ -466,7 +460,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public GetWorkflowResponseBodyWorkflowTasksRuntimeResource RuntimeResource { get; set; }
                 public class GetWorkflowResponseBodyWorkflowTasksRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>The default number of compute units (CUs) configured for task running.</para>
+                    /// <para>The number of compute units (CUs) configured for task running.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -508,15 +502,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The running mode of the task after it is triggered. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Pause</para>
-                /// </description></item>
-                /// <item><description><para>Skip</para>
-                /// </description></item>
-                /// <item><description><para>Normal</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The running mode of the task after it is triggered. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -575,15 +561,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Pause</para>
-                /// </description></item>
-                /// <item><description><para>Skip</para>
-                /// </description></item>
-                /// <item><description><para>Normal</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Attribute description</para>
         /// 
         /// <b>Example:</b>
-        /// <para>层级描述</para>
+        /// <para>Hierarchy description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the attribute appears on the product page. Default is true.</para>
+        /// <para>Indicates whether the attribute appears on the details page. Default is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Display name. It can be up to 32 characters long.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>API编码</para>
+        /// <para>API code</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]

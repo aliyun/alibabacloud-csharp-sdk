@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<long?> TaskIds { get; set; }
 
         /// <summary>
-        /// <para>The alert triggering condition.</para>
+        /// <para>The list of alert types.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]

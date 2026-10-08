@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>true: The file automatically parses code.</description></item>
                 /// <item><description>false: The file does not automatically parse code.</description></item>
                 /// </list>
-                /// <para>This parameter corresponds to the &quot;Code Parsing&quot; option when you select &quot;Same Cycle&quot; in &quot;Scheduling Configuration &gt; Scheduling Dependencies&quot; for a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                /// <para>This parameter corresponds to the &quot;Code Parsing&quot; option when you select &quot;Same Cycle&quot; in &quot;Scheduling Configuration &gt; Scheduling Dependencies&quot; for a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -242,10 +242,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The functional module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: DataStudio.</description></item>
+                /// <item><description>NORMAL: Data Studio.</description></item>
                 /// <item><description>MANUAL: manual node.</description></item>
                 /// <item><description>MANUAL_BIZ: manual workflow.</description></item>
-                /// <item><description>SKIP: dry-run scheduling in DataStudio.</description></item>
+                /// <item><description>SKIP: dry-run scheduling in Data Studio.</description></item>
                 /// <item><description>ADHOCQUERY: ad hoc query.</description></item>
                 /// <item><description>COMPONENT: component management.</description></item>
                 /// </list>

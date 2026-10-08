@@ -103,13 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The environment of the workspace. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Prod</para>
-                /// </description></item>
-                /// <item><description><para>Dev</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The environment of the workspace. Valid values: Prod (production) and Dev (development).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
@@ -129,13 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The instance generation mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>T+1</para>
-                /// </description></item>
-                /// <item><description><para>Immediately</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The instance generation mode. Valid values: T+1 (generate the next day) and Immediately (generate immediately).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T+1</para>
@@ -271,7 +259,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListUpstreamTasksResponseBodyPagingInfoTasksRuntimeResource RuntimeResource { get; set; }
                 public class ListUpstreamTasksResponseBodyPagingInfoTasksRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>The default number of compute units (CUs) configured for task running.</para>
+                    /// <para>The number of compute units (CUs) configured for task running.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -535,13 +523,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The environment of the workspace. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>Prod</para>
-                    /// </description></item>
-                    /// <item><description><para>Dev</para>
-                    /// </description></item>
-                    /// </list>
+                    /// <para>The environment of the workspace. Valid values: Prod (production) and Dev (development).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Prod</para>
@@ -682,7 +664,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTaskRuntimeResource RuntimeResource { get; set; }
                     public class ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTaskRuntimeResource : TeaModel {
                         /// <summary>
-                        /// <para>The default number of compute units (CUs) configured for task running.</para>
+                        /// <para>The number of compute units (CUs) configured for task running.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.25</para>
@@ -751,15 +733,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><para>Pause</para>
-                        /// </description></item>
-                        /// <item><description><para>Skip</para>
-                        /// </description></item>
-                        /// <item><description><para>Normal</para>
-                        /// </description></item>
-                        /// </list>
+                        /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Normal</para>

@@ -34,23 +34,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Serverless_res_group_524257424564736_6831777003****</para>
+        /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The fields used for sorting. Fields such as scheduled time and start time are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Id (Desc/Asc): the network ID</para>
-        /// </description></item>
-        /// <item><description><para>Status (Desc/Asc): the network status</para>
-        /// </description></item>
-        /// <item><description><para>CreateUser (Desc/Asc): the user who created the network</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime (Desc/Asc): the time when the network was created</para>
-        /// </description></item>
+        /// <item><description>Id (Desc/Asc): the network ID</description></item>
+        /// <item><description>Status (Desc/Asc): the network status</description></item>
+        /// <item><description>CreateUser (Desc/Asc): the user who created the network</description></item>
+        /// <item><description>CreateTime (Desc/Asc): the time when the network was created</description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc.</para>
         /// 

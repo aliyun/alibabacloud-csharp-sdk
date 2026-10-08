@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Q { get; set; }
 
         /// <summary>
-        /// <para>The visibility level for filtering the results.</para>
+        /// <para>The visibility levels for filtering the results. You can specify multiple levels.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

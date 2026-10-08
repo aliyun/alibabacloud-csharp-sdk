@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The sub-agent display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>子助手</para>
+                /// <para>Sub-assistant</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The description.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析助手</para>
+            /// <para>Data analysis assistant</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The display name.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>我的助手</para>
+            /// <para>My assistant</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The system prompt.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>你是一个数据分析助手。</para>
+            /// <para>You are a data analysis assistant.</para>
             /// </summary>
             [NameInMap("SystemPrompt")]
             [Validation(Required=false)]

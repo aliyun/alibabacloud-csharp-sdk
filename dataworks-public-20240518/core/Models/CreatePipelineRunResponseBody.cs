@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreatePipelineRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the publish process.</para>
+        /// <para>The unique identifier of the deployment process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>

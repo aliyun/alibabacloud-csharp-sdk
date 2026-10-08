@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The type of the destination data source. Valid values: <c>Hologres</c>, <c>OSS-HDFS</c>, <c>OSS</c>, <c>MaxCompute</c>, <c>LogHub</c>, <c>StarRocks</c>, <c>DataHub</c>, <c>AnalyticDB for MySQL</c>, <c>Kafka</c>, and <c>Hive</c>.</para>
+            /// <para>The type of the destination data source. Valid values: <c>Hologres</c>, <c>OSS-HDFS</c>, <c>OSS</c>, <c>MaxCompute</c>, <c>LogHub</c>, <c>StarRocks</c>, <c>DataHub</c>, <c>AnalyticDB_For_MySQL</c>, <c>Kafka</c>, and <c>Hive</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hologres</para>
@@ -296,18 +296,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Finished</c>: The job is complete.</para>
-            /// </description></item>
-            /// <item><description><para><c>Failed</c>: The job failed.</para>
-            /// </description></item>
-            /// <item><description><para><c>Running</c>: The job is running.</para>
-            /// </description></item>
-            /// <item><description><para><c>Initialized</c>: The job is initialized but has not started.</para>
-            /// </description></item>
-            /// <item><description><para><c>Stopping</c>: The job is being stopped.</para>
-            /// </description></item>
-            /// <item><description><para><c>Stop</c>: The job is stopped.</para>
-            /// </description></item>
+            /// <item><description><c>Finished</c>: The job completed successfully.</description></item>
+            /// <item><description><c>Failed</c>: The job failed.</description></item>
+            /// <item><description><c>Running</c>: The job is running.</description></item>
+            /// <item><description><c>Initialized</c>: The job is initialized but has not started.</description></item>
+            /// <item><description><c>Stopping</c>: The job is being stopped.</description></item>
+            /// <item><description><c>Stop</c>: The job is stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

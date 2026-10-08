@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateMcpServerRequestVisibilityScope VisibilityScope { get; set; }
         public class CreateMcpServerRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
+            /// <para>The IDs of the projects in which the MCP Server is visible. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
+            /// <para>The IDs of the users to whom the MCP Server is visible. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

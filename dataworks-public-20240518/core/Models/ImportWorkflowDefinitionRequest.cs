@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <remarks>
         /// <para>How to quickly obtain a FlowSpec template?</para>
         /// <list type="bullet">
-        /// <item><description>Open a workflow in DataStudio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</description></item>
+        /// <item><description>Open a workflow in Data Studio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.</para>
+        /// <para>&lt;notice&gt;This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.&gt;&lt;/notice&gt;</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

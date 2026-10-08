@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? FileVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the workspace management page and view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000011</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the DataStudio page for switching workspaces.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the Data Studio page for switching workspaces.</para>
         /// <para>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>

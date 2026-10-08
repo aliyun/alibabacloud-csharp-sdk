@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class ListNodesRequest : TeaModel {
         /// <summary>
         /// <para>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</para>
+        /// <para>This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. This change does not affect normal SDK usage; the field is returned in the type defined in the SDK. When upgrading across SDK version 8.0.0, the type change may cause compilation failures. In this case, manually correct the data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>860438872620113XXXX</para>
@@ -97,14 +98,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in DataStudio. Valid values:</para>
+        /// <para>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in Data Studio. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DataworksProject: project folder.</para>
-        /// </description></item>
-        /// <item><description><para>DataworksManualWorkflow: manual workflow.</para>
-        /// </description></item>
-        /// <item><description><para>DataworksManualTask: manual node.</para>
-        /// </description></item>
+        /// <item><description>DataworksProject: project folder.</description></item>
+        /// <item><description>DataworksManualWorkflow: manual workflow.</description></item>
+        /// <item><description>DataworksManualTask: manual node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -273,9 +273,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The workflow parameters.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Periodic workflow:
+                /// <para>Scheduled workflow:
                 /// key1=value1 key2=value2
-                /// Manual workflow:
+                /// Manual business flow:
                 /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
                 /// </summary>
                 [NameInMap("WorkflowParameters")]

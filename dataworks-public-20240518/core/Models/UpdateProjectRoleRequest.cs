@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <item><description>8: DataService Studio</description></item>
             /// <item><description>9: Data Integration</description></item>
             /// <item><description>10: Data Modeling (DataBlau DDM)</description></item>
-            /// <item><description>11: DataStudio</description></item>
+            /// <item><description>11: Data Studio</description></item>
             /// <item><description>12: Data Quality</description></item>
             /// <item><description>13: Data Governance Center</description></item>
             /// <item><description>14: Operation Center</description></item>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
         /// <para>This parameter specifies the DataWorks workspace for this API invocation.</para>
         /// <para>This parameter is required.</para>
         /// 
