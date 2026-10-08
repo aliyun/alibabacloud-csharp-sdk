@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the scaling rule. You can leave this parameter empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCALE_IN: scale-in rules</description></item>
-        /// <item><description>SCALE_OUT: scale-out rules</description></item>
+        /// <item><description><para>SCALE_IN: scale-in rules</para>
+        /// </description></item>
+        /// <item><description><para>SCALE_OUT: scale-out rules</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

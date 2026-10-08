@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateApplicationScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. Call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The behavior of the auto scaling. See the example for the data structure.</para>
+        /// <para>The configuration of custom scaling behaviors. For more information about the data structure, see the example.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;scaleUp&quot;:{&quot;stabilizationWindowSeconds&quot;:&quot;0&quot;,&quot;selectPolicy&quot;:&quot;Max&quot;,&quot;policies&quot;:[{&quot;type&quot;:&quot;Pods&quot;,&quot;value&quot;:5,&quot;periodSeconds&quot;:15}]},&quot;scaleDown&quot;:{&quot;stabilizationWindowSeconds&quot;:&quot;300&quot;,&quot;selectPolicy&quot;:&quot;Max&quot;,&quot;policies&quot;:[{&quot;type&quot;:&quot;Percent&quot;,&quot;value&quot;:200,&quot;periodSeconds&quot;:15}]}}</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingBehaviour { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the auto scaling policy. Valid values:</para>
+        /// <para>The status of the Auto Scaling policy.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the auto scaling policy.</description></item>
-        /// <item><description><b>false</b>: disables the auto scaling policy.</description></item>
+        /// <item><description><para><b>true</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleMetric { get; set; }
 
         /// <summary>
-        /// <para>The name of the auto scaling policy.</para>
+        /// <para>The name of the Auto Scaling policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu-trigger</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleTimer { get; set; }
 
         /// <summary>
-        /// <para>The trigger policy for the auto scaling policy. Set this parameter in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional description of request parameters.</para>
+        /// <para>The trigger policy, which is a JSON string of a ScalingRuleTriggerDTO object. For more information about the format, see the Additional information about request parameters section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ScalingRuleTriggerDTO{......}</para>
@@ -84,9 +86,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleTrigger { get; set; }
 
         /// <summary>
-        /// <para>The type of the auto scaling policy.</para>
+        /// <para>The type of the Auto Scaling policy. Only the following type is supported:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to trigger.</description></item>
+        /// <item><description>trigger: a trigger-based policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

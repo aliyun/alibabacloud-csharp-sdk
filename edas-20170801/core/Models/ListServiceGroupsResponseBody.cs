@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about service groups.</para>
-        /// </summary>
         [NameInMap("ServiceGroupsList")]
         [Validation(Required=false)]
         public ListServiceGroupsResponseBodyServiceGroupsList ServiceGroupsList { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups> ListServiceGroups { get; set; }
             public class ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups : TeaModel {
-                /// <summary>
-                /// <para>The time when the service group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1575357165770</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the service group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>789d9cda-74b1-<b><b>-</b></b>-05e21a0a7661</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the service group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>edas-test-group</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }

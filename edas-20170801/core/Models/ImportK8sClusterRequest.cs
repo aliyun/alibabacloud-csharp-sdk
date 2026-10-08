@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable the integration with Alibaba Cloud Service Mesh (ASM). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enables the integration with ASM.</description></item>
-        /// <item><description>false: Disables the integration with ASM.</description></item>
+        /// <item><description><para>true: Enables the integration with ASM.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables the integration with ASM.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

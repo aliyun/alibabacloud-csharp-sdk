@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeployK8sApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The annotation of an application pod.</para>
+        /// <para>The annotations for the application pod.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;annotation-name-1&quot;:&quot;annotation-value-1&quot;,&quot;annotation-name-2&quot;:&quot;annotation-value-2&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Annotations { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The application ID. Obtain the ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The argument array in the container start-up command. Set this parameter to a JSON array in the format of <c>[&quot;args1&quot;,&quot;args2&quot;\\]</c>, where each key is set to a string. If you want to cancel this configuration, set this parameter to an empty JSON array in the format of <c>&quot;[\\]&quot;</c>.</para>
+        /// <para>The arguments for the container startup command. The value must be a JSON array of strings, such as <c>[&quot;Argument 1&quot;, &quot;Argument 2&quot;]</c>. To clear the arguments, set the parameter to an empty JSON array <c>&quot;[]&quot;</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;args1&quot;,&quot;args2&quot;]</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Args { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for an at-a-time release. Unit: seconds.</para>
+        /// <para>The timeout period for a single batch release. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? BatchTimeout { get; set; }
 
         /// <summary>
-        /// <para>The minimum time interval for the phased release of pods. For more information, see <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#min-ready-seconds">minReadySeconds</a>.</para>
+        /// <para>The minimum interval for a phased release of pods. For more information, see <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#min-ready-seconds">minReadySeconds</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -61,15 +61,19 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? BatchWaitTime { get; set; }
 
         /// <summary>
-        /// <para>The build package number of EDAS Container.</para>
+        /// <para>The build package number for EDAS Container:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to set the parameter if you do not need to change the EDAS Container version during the deployment.</description></item>
-        /// <item><description>Set the parameter if you need to update the EDAS Container version of the application during the deployment.</description></item>
+        /// <item><description><para>If you do not need to change the EDAS Container version during deployment, you can leave this parameter unset.</para>
+        /// </description></item>
+        /// <item><description><para>To update the EDAS Container version of the target application during this deployment, you must set this parameter.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You can query the build package number by using one of the following methods:</para>
+        /// <para>You can obtain the number in two ways:</para>
         /// <list type="bullet">
-        /// <item><description>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/423222.html">ListBuildPack</a>.</description></item>
-        /// <item><description>Obtain the value in the <b>Build package number</b> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic. For example, <c>59</c> indicates <c>EDAS Container 3.5.8</c>.</description></item>
+        /// <item><description><para>Call the ListBuildPack operation to query the list of container versions. For more information, see <a href="https://help.aliyun.com/document_detail/423222.html">ListBuildPack</a>.</para>
+        /// </description></item>
+        /// <item><description><para>Obtain it from the <b>Build Package Number</b> column in the <a href="https://help.aliyun.com/document_detail/92614.html">Version guide</a> table. For example, <c>59</c> indicates <c>EDAS Container 3.5.8</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,6 +84,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string BuildPackId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the canary release rule policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a8daf22e-****-968c7ff2ea34</para>
         /// </summary>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string CanaryRuleId { get; set; }
 
         /// <summary>
-        /// <para>The description of the change process.</para>
+        /// <para>The description of the change record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Upgrade</para>
@@ -98,9 +104,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ChangeOrderDesc { get; set; }
 
         /// <summary>
-        /// <para>The commands that you run to start the container.</para>
+        /// <para>The container startup command.</para>
         /// <remarks>
-        /// <para>If you want to cancel this configuration, set this parameter to an empty string in the format of <c>&quot;&quot;</c>.</para>
+        /// <para>To clear this configuration, set the parameter to an empty string <c>&quot;&quot;</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,11 +117,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:</para>
+        /// <para>Configures Kubernetes ConfigMap and Secret mounts. This lets you mount a ConfigMap or Secret to a specified container directory. The parameters for \<c>ConfigMountDescs\\</c> are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>name: the name of the Kubernetes ConfigMap or Secret.</description></item>
-        /// <item><description>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</description></item>
-        /// <item><description>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</description></item>
+        /// <item><description><para>\<c>name\\</c>: The name of the ConfigMap or Secret.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>type\\</c>: The configuration type. \<c>ConfigMap\\</c> and \<c>Secret\\</c> are supported.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>mountPath\\</c>: The mount path. An absolute path in the container that starts with a forward slash (/).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +146,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ConfigMountDescs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CPU cores allowed for each application instance when the application is running. Unit: cores. Value 0 indicates that no limit is set on CPU cores.</para>
+        /// <para>The CPU limit for the application instance during runtime. Unit: cores. A value of 0 means no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,9 +156,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? CpuLimit { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores requested for each application instance when the application is running. Unit: cores. We recommend that you set this parameter. Value 0 indicates that no limit is set on CPU cores.</para>
+        /// <para>The CPU quota to request for the application instance during runtime. Setting this parameter is recommended.
+        /// Unit: cores. A value of 0 means no limit.</para>
         /// <remarks>
-        /// <para>You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</para>
+        /// <para>If you set this parameter, also set the CpuLimit parameter. The value of CpuRequest must be less than or equal to the value of CpuLimit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? CpuRequest { get; set; }
 
         /// <summary>
-        /// <para>The affinity configuration of the pod. This parameter takes effect only if both the DeployAcrossNodes and DeployAcrossZones parameters are set to false.</para>
+        /// <para>The pod affinity configuration. This takes effect only when both \<c>DeployAcrossNodes\\</c> and \<c>DeployAcrossZones\\</c> are \<c>false\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;nodeAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:{&quot;nodeSelectorTerms&quot;:[{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;beta.kubernetes.io/arch&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;arm64&quot;,&quot;arm32&quot;]}]}]},&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;weight&quot;:5,&quot;preference&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;kubernetes.io/os&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;linux&quot;]}]}}]},&quot;podAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;kubernetes.io/hostname&quot;,&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;edas-test-app&quot;]}]}}]},&quot;podAntiAffinity&quot;:{&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;podAffinityTerm&quot;:{&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;failure-domain.beta.kubernetes.io/zone&quot;,&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;edas-test-app-2&quot;]}]}},&quot;weight&quot;:15}]}}</para>
@@ -170,6 +180,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string CustomAffinity { get; set; }
 
         /// <summary>
+        /// <para>Sets the version of the custom Application Real-Time Monitoring Service (ARMS) agent to mount to the application.</para>
+        /// <remarks>
+        /// <para>This feature is available only to whitelisted users. To use this feature, submit a ticket to be added to the whitelist.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3.1.4</para>
         /// </summary>
@@ -178,7 +193,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string CustomAgentVersion { get; set; }
 
         /// <summary>
-        /// <para>The scheduling tolerance configuration of the pod. This parameter takes effect only if both the DeployAcrossNodes and DeployAcrossZones parameters are set to false.</para>
+        /// <para>The pod scheduling toleration configuration. This takes effect only when both \<c>DeployAcrossNodes\\</c> and \<c>DeployAcrossZones\\</c> are \<c>false\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;edas-taint-key2&quot;,&quot;operator&quot;:&quot;Exists&quot;,&quot;effect&quot;:&quot;NoExecute&quot;,&quot;tolerationSeconds&quot;:50},{&quot;key&quot;:&quot;edas-taint-key&quot;,&quot;operator&quot;:&quot;Equal&quot;,&quot;value&quot;:&quot;edas-taint-value&quot;,&quot;effect&quot;:&quot;PreferNoSchedule&quot;}]</para>
@@ -188,7 +203,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string CustomTolerations { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to distribute application instances to multiple nodes. Value true indicates that application instances are distrubuted across zones. Other values indicate that application instances are not distributed across zones.</para>
+        /// <para>Specifies whether to distribute application instances across multiple nodes. \<c>true\\</c> indicates yes, and other values indicate no.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -198,7 +213,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string DeployAcrossNodes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to distribute application instances across zones. Value true indicates that application instances are distrubuted across zones. Other values indicate that application instances are not distributed across zones.</para>
+        /// <para>Specifies whether to distribute application instances across multiple zones. \<c>true\\</c> indicates yes, and other values indicate no.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -208,7 +223,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string DeployAcrossZones { get; set; }
 
         /// <summary>
-        /// <para>The version of EDAS Container on which the deployment package of the application depends. This parameter is applicable to High-Speed Service Framework (HSF) applications that you deploy by using WAR packages. This parameter is unavailable if you deploy applications by using images.</para>
+        /// <para>The EDAS Container version on which the deployment package depends. This parameter applies to HSF applications deployed using WAR packages. It is not supported for image-based deployments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.5.9</para>
@@ -218,11 +233,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string EdasContainerVersion { get; set; }
 
         /// <summary>
-        /// <para>The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:</para>
+        /// <para>Configures Kubernetes \<c>emptyDir\\</c> mounts. This lets you mount an \<c>emptyDir\\</c> volume to a specified container directory. The parameters for \<c>EmptyDirs\\</c> are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>mountPath: The mount path in the container. This parameter is required.</description></item>
-        /// <item><description>readOnly: (Optional) The mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.</description></item>
-        /// <item><description>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</description></item>
+        /// <item><description><para>\<c>mountPath\\</c>: The container mount path. This is required.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>readOnly\\</c>: Specifies whether the volume is read-only. Optional. \<c>true\\</c> for read-only, \<c>false\\</c> for read-write. The default is \<c>false\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>subPathExpr\\</c>: The subdirectory expression. Optional.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,7 +251,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string EmptyDirs { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable access to Application High Availability Service (AHAS).</para>
+        /// <para>Specifies whether to connect to Application High Availability Service (AHAS).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -243,10 +261,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? EnableAhas { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the empty list protection feature. Valid values:</para>
+        /// <para>Specifies whether to enable empty push protection:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the empty list protection feature.</description></item>
-        /// <item><description>false: disables the empty list protection feature.</description></item>
+        /// <item><description><para>\<c>true\\</c>: Enable empty push protection.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>false\\</c>: Do not enable empty push protection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -257,10 +277,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? EnableEmptyPushReject { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable graceful start rules. Valid values:</para>
+        /// <para>Specifies whether to enable the graceful start rule:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables graceful start rules.</description></item>
-        /// <item><description>false: disables graceful start rules.</description></item>
+        /// <item><description><para>\<c>true\\</c>: Enable the graceful start rule.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>false\\</c>: Do not enable the graceful start rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -271,17 +293,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? EnableLosslessRule { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes environment variables that are configured in EnvFrom mode. A ConfigMap or Secret is mounted to a directory. Each key corresponds to a file in the directory, and the content of the file is the value of the key.</para>
-        /// <para>This parameter contains the following parameters:</para>
+        /// <para>Configures environment variables of the Kubernetes \<c>EnvFrom\\</c> type. This mounts a specified ConfigMap or Secret to a directory. Each key corresponds to a file in the directory, and the file content is the value of the key.</para>
+        /// <para>The parameters for \<c>EnvFroms\\</c> are as follows.</para>
         /// <list type="bullet">
-        /// <item><description><para>configMapRef: the ConfigMap that is referenced. The following parameter is contained:</para>
+        /// <item><description><para>\<c>configMapRef\\</c>: A reference to a ConfigMap. This field includes the following parameter:</para>
         /// <list type="bullet">
-        /// <item><description>name: the name of the ConfigMap.</description></item>
+        /// <item><description>\<c>name\\</c>: The name of the ConfigMap.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>secretRef: the Secret that is referenced. The following parameter is contained:</para>
+        /// <item><description><para>\<c>secretRef\\</c>: A reference to a Secret. This field includes the following parameter:</para>
         /// <list type="bullet">
-        /// <item><description>name: the name of the Secret.</description></item>
+        /// <item><description>\<c>name\\</c>: The name of the Secret.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -294,14 +316,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string EnvFroms { get; set; }
 
         /// <summary>
-        /// <para>The environment variables that are used to deploy the application. Set this parameter to a JSON array. Valid values: regular environment variables, Kubernetes ConfigMap environment variables, and Kubernetes Secret environment variables. Specify regular environment variables in the following format:</para>
+        /// <para>The environment variables for the deployment. The value must be a JSON array of objects. Three types of environment variables are supported: regular, Kubernetes ConfigMap, and Kubernetes Secret. The format for a regular environment variable is as follows:</para>
         /// <para><c>{&quot;name&quot;:&quot;x&quot;, &quot;value&quot;: &quot;y&quot;}</c></para>
-        /// <para>Specify Kubernetes ConfigMap environment variables in the following format to reference values from ConfigMaps:</para>
+        /// <para>A ConfigMap environment variable injects the value of a specified key from a ConfigMap into the container\&quot;s environment variables. The format is as follows:</para>
         /// <para><c>{ &quot;name&quot;: &quot;x2&quot;, &quot;valueFrom&quot;: { &quot;configMapKeyRef&quot;: { &quot;name&quot;: &quot;my-config&quot;, &quot;key&quot;: &quot;y2&quot; } } }</c></para>
-        /// <para>Specify Kubernetes Secret environment variables in the following format to reference values from Secrets:</para>
+        /// <para>A Secret environment variable injects the value of a specified key from a Secret into the container\&quot;s environment variables. The format is as follows:</para>
         /// <para><c>{ &quot;name&quot;: &quot;x3&quot;, &quot;valueFrom&quot;: { &quot;secretKeyRef&quot;: { &quot;name&quot;: &quot;my-secret&quot;, &quot;key&quot;: &quot;y3&quot; } } }</c></para>
         /// <remarks>
-        /// <para> If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of &quot;[]&quot;.</para>
+        /// <para>To clear this configuration, set the parameter to an empty JSON array \<c>[]\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -312,27 +334,34 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Envs { get; set; }
 
         /// <summary>
-        /// <para>The absolute URL of the image. This parameter setting overwrites the setting of the ImageTag parameter.</para>
+        /// <para>The full URL of the image. This parameter overwrites the ImageTag parameter.</para>
         /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The destination image platform. This parameter takes effect only when you deploy applications by using .war or .jar packages.</para>
+        /// <para>The target platform architecture for the image. This is valid when deploying with a WAR or JAR file. Examples:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to specify x86_64, set the value to linux/amd64.</description></item>
-        /// <item><description>If you want to specify ARM64, set the value to linux/arm64.</description></item>
-        /// <item><description>If you want to specify both x86_64 and ARM64, set the value to linux/amd64,linux/arm64.</description></item>
-        /// <item><description>If you leave this parameter empty, the default architecture is used.</description></item>
+        /// <item><description><para>To specify the x86-64 architecture: \<c>linux/amd64\\</c></para>
+        /// </description></item>
+        /// <item><description><para>To specify the ARM 64 architecture: \<c>linux/arm64\\</c></para>
+        /// </description></item>
+        /// <item><description><para>To build a dual-architecture image: \<c>linux/amd64,linux/arm64\\</c></para>
+        /// </description></item>
+        /// <item><description><para>If you do not enter a value, the default architecture is used.</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>linux/arm64,linux/amd64</para>
         /// </summary>
         [NameInMap("ImagePlatforms")]
         [Validation(Required=false)]
         public string ImagePlatforms { get; set; }
 
         /// <summary>
-        /// <para>The tag of the image.</para>
+        /// <para>The image tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>latest</para>
@@ -342,6 +371,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ImageTag { get; set; }
 
         /// <summary>
+        /// <para>Sets an init container for the application pod. The container configuration is in YAML format. The value is the base64-encoded YAML configuration of the init container.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///       {
@@ -354,7 +385,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string InitContainers { get; set; }
 
         /// <summary>
-        /// <para>The version of the Java Development Kit (JDK) on which the deployment package of the application depends. Open JDK 7 and Open JDK 8 are supported. This parameter is unavailable if you deploy applications by using images.</para>
+        /// <para>The JDK version on which the deployment package depends. Valid values: Open JDK 7, Open JDK 8, or Custom OpenJDK. This parameter is not supported for image-based deployments. If you use Custom OpenJDK, you must also configure the \<c>UserBaseImageUrl\\</c> field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Open JDK 8</para>
@@ -364,7 +395,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string JDK { get; set; }
 
         /// <summary>
-        /// <para>The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Proper parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c>.</para>
+        /// <para>The Java startup parameters. You can configure memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom settings. Correctly configuring these parameters helps reduce GC overhead, shorten server response time, and improve throughput. The parameter is a JSON string. \<c>original\\</c> is the configuration value, and \<c>startup\\</c> is the startup parameter. The system automatically concatenates all \<c>startup\\</c> values as the Java startup parameters for the application. Set to <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c> to delete the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;InitialHeapSize&quot;:{&quot;original&quot;:512,&quot;startup&quot;:&quot;-Xms512m&quot;},&quot;MaxHeapSize&quot;:{&quot;original&quot;:1024,&quot;startup&quot;:&quot;-Xmx1024m&quot;}}</para>
@@ -374,7 +405,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string JavaStartUpConfig { get; set; }
 
         /// <summary>
-        /// <para>The label of an application pod.</para>
+        /// <para>The labels for the application pod.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;label-name-1&quot;:&quot;label-value-1&quot;,&quot;label-name-2&quot;:&quot;label-value-2&quot;}</para>
@@ -384,7 +415,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the ephemeral storage space.</para>
+        /// <para>The upper limit of the temporary storage resource requirement. Unit: GB. A value of 0 means no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -394,7 +425,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? LimitEphemeralStorage { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the liveness check on the container. Example: <c>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</c>. If you want to cancel this configuration, set this parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
+        /// <para>The liveness probe for the container. Example: <c>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</c>. To delete this configuration, set the parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not set this parameter, the configuration is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</para>
@@ -404,7 +435,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Liveness { get; set; }
 
         /// <summary>
-        /// <para>The configurations that are used when the host files are mounted to the container on which the application is running. Example: <c>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}\\]</c>. The nodePath parameter specifies the host path, the mountPath parameter specifies the path within the container, and the type parameter specifies the mounting type.</para>
+        /// <para>The configuration for mounting a host file to a container. Example: <c>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}]</c>. In this example, \<c>nodePath\\</c> is the host path, \<c>mountPath\\</c> is the path in the container, and \<c>type\\</c> is the mount type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}]</para>
@@ -414,15 +445,15 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string LocalVolume { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Graceful Rolling Release and configure Complete Service Registration before Readiness Probing. Valid values:</para>
+        /// <para>Specifies whether to enable the graceful rolling deployment mode to complete service registration before the readiness probe succeeds:</para>
         /// <list type="bullet">
-        /// <item><description>true: If you turn on the switch, the system uses the /health path and provides port 55199 for the health check. The system does not intrude into the application. When the service is registered, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.</description></item>
+        /// <item><description>\<c>true\\</c>: This switch provides a health check for the application on port 55199 and the \<c>/health\\</c> path without intrusion. When service registration is complete, the interface returns 200. Otherwise, it returns 500.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set both the LosslessRuleRelated parameter and this parameter to true, the operation checks whether the service prefetching is complete.</para>
+        /// <para>If \<c>LosslessRuleRelated\\</c> is also set to \<c>true\\</c>, this interface checks whether service prefetch is complete.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>false: If you turn off the switch, the system does not provide a port to check whether the service is registered.</description></item>
+        /// <item><description>\<c>false\\</c>: Does not provide an interface for the application to check if service registration is complete.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -433,7 +464,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? LosslessRuleAligned { get; set; }
 
         /// <summary>
-        /// <para>The delay of service registration. Valid values: 0 to 86400. Unit: seconds.</para>
+        /// <para>The service registration latency. Unit: seconds. The value ranges from 0 to 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -443,7 +474,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? LosslessRuleDelayTime { get; set; }
 
         /// <summary>
-        /// <para>The number of prefetching curves. Valid values: 0 to 20. The default value is 2, which is suitable for common prefetching scenarios. This value indicates that the received traffic amount of the provider during prefetching is displayed as a quadratic curve.</para>
+        /// <para>The service prefetch curve. The value ranges from 0 to 20. The default is 2, which is suitable for general prefetch scenarios. This indicates that the traffic receiving curve of the service provider follows a quadratic curve during the prefetch period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -453,10 +484,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? LosslessRuleFuncType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Graceful Rolling Release and configure Complete Service Prefetching before Readiness Probing. Valid values:</para>
+        /// <para>Specifies whether to enable the graceful rolling deployment mode to complete service prefetch before the readiness probe succeeds:</para>
         /// <list type="bullet">
-        /// <item><description>true: If you turn on the switch, the system uses the /health path and provides port 55199 for the health check. The system does not intrude into the application. When service prefetching is complete, the system returns HTTP 200 status code. Otherwise, the system returns HTTP 500 status code.</description></item>
-        /// <item><description>false: If you turn off the switch, the system does not provide a port to check whether service prefetching is complete.</description></item>
+        /// <item><description><para>\<c>true\\</c>: This switch provides a health check for the application on port 55199 and the \<c>/health\\</c> path without intrusion. When service prefetch is complete, the interface returns 200. Otherwise, it returns 500.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>false\\</c>: Does not provide an interface for the application to check if service prefetch is complete.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -467,7 +500,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? LosslessRuleRelated { get; set; }
 
         /// <summary>
-        /// <para>The service prefetching duration. Valid values: 0 to 86400. Unit: seconds.</para>
+        /// <para>The service prefetch duration. Unit: seconds. The value ranges from 0 to 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -477,7 +510,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? LosslessRuleWarmupTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CPU cores allowed. Unit: cores. Value 0 indicates that no limit is set on CPU cores.</para>
+        /// <para>The maximum CPU that can be used. Unit: cores. A value of 0 means no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -487,9 +520,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? McpuLimit { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of CPU cores required. Unit: cores. Value 0 indicates that no limit is set on CPU cores.</para>
+        /// <para>The minimum CPU resource requirement. Unit: cores. A value of 0 means no limit.</para>
         /// <remarks>
-        /// <para>You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</para>
+        /// <para>If you set this parameter, you must also set the \<c>CpuLimit\\</c> parameter. The value must be less than or equal to the value of \<c>CpuLimit\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -500,7 +533,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? McpuRequest { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. Value 0 indicates that no limit is set on the memory size.</para>
+        /// <para>The memory limit for the application instance during runtime. Unit: MB. A value of 0 means no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -510,9 +543,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? MemoryLimit { get; set; }
 
         /// <summary>
-        /// <para>The size of memory requested for each application instance when the application is running. Unit: MB. We recommend that you set this parameter. If you do not want to apply for a memory quota, set this parameter to 0.</para>
+        /// <para>The memory quota to request for the application instance during runtime. Setting this parameter is recommended. Unit: MB. A value of 0 means no request.</para>
         /// <remarks>
-        /// <para>You must set this parameter together with the MemoryLimit parameter. Make sure that the value of this parameter does not exceed that of the MemoryLimit parameter.</para>
+        /// <para>If you set this parameter, also set the MemoryLimit parameter. The value of MemoryRequest must be less than or equal to the value of MemoryLimit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -523,7 +556,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? MemoryRequest { get; set; }
 
         /// <summary>
-        /// <para>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: <c>[{&quot;nasPath&quot;: &quot;/k8s&quot;,&quot;mountPath&quot;: &quot;/mnt&quot;},{&quot;nasPath&quot;: &quot;/files&quot;,&quot;mountPath&quot;: &quot;/app/files&quot;}\\]</c>. The nasPath parameter specifies the file storage path, and the mountPath parameter specifies the path to mount the file system to the container in which the application is running.</para>
+        /// <para>The mount configurations, which are a serialized JSON string. Example: <c>[{&quot;nasPath&quot;: &quot;/k8s&quot;,&quot;mountPath&quot;: &quot;/mnt&quot;},{&quot;nasPath&quot;: &quot;/files&quot;,&quot;mountPath&quot;: &quot;/app/files&quot;}]</c>. In this example, \<c>nasPath\\</c> is the file storage path and \<c>mountPath\\</c> is the path in the container to which the file system is mounted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;nasPath&quot;: &quot;/k8s&quot;,&quot;mountPath&quot;: &quot;/mnt&quot;},{&quot;nasPath&quot;: &quot;/files&quot;,&quot;mountPath&quot;: &quot;/app/files&quot;}]</para>
@@ -533,7 +566,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string MountDescs { get; set; }
 
         /// <summary>
-        /// <para>The ID of the File Storage NAS (NAS) file system mounted to the container in which the application is running. The NAS file system must be in the same region as the cluster. The NAS file system must have an available mount target, or have a mount target on the vSwitch in the virtual private cloud (VPC) in which the application resides. If you do not specify this parameter but specify the MountDescs parameter, a NAS file system is automatically purchased and mounted to the vSwitch in the VPC.</para>
+        /// <para>The ID of the Apsara File Storage NAS (NAS) file system to mount. The NAS file system must be in the same region as the cluster. It must have an available mount target quota, or its mount target must be on a vSwitch in the VPC. If you do not set this parameter but the \<c>mountDescs\\</c> field exists, a NAS file system is automatically purchased and mounted to a vSwitch in the VPC by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfs23****</para>
@@ -543,9 +576,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string NasId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</para>
+        /// <para>The URL of the deployment package. Configure this parameter for applications deployed using a FatJar or WAR package.</para>
         /// <remarks>
-        /// <para>The version of EDAS SDK for Java or Python must be V2.44.0 or later.</para>
+        /// <para>The Java or Python SDK for EDAS POP API must be version 2.44.0 or later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -556,9 +589,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string PackageUrl { get; set; }
 
         /// <summary>
-        /// <para>The version of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application. You must specify a version.</para>
+        /// <para>The version number of the deployment package. This parameter is required for WAR and FatJar packages. You can define the meaning of the version number.</para>
         /// <remarks>
-        /// <para>The version of EDAS SDK for Java or Python must be V2.44.0 or later.</para>
+        /// <para>The Java or Python SDK for EDAS POP API must be version 2.44.0 or later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -569,7 +602,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string PackageVersion { get; set; }
 
         /// <summary>
-        /// <para>The version ID of the deployment package.</para>
+        /// <para>The ID of the deployment package version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2bcc********</para>
@@ -579,34 +612,51 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string PackageVersionId { get; set; }
 
         /// <summary>
-        /// <para>The post-start script. Example: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</c>. If you want to cancel this configuration, set this parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
+        /// <para>The script to execute after the container starts. Example: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</c>. To delete this configuration, set the parameter to <c>{}</c>. If you do not set this parameter, the configuration is ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</para>
+        /// <para>{
+        ///     &quot;exec&quot;:{
+        ///         &quot;command&quot;:[
+        ///             &quot;ls&quot;,
+        ///             &quot;/&quot;
+        ///         ]
+        ///     }
+        /// }</para>
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// <para>The pre-stop script. Example: <c>{&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</c>. If you want to cancel this configuration, set this parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
+        /// <para>The script to execute before stopping the container. Example: <c>{&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</c>.
+        /// To delete this configuration, set the parameter to <c>{}</c>. If you do not set this parameter, the configuration is ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</para>
+        /// <para>{
+        ///     &quot;exec&quot;:{
+        ///         &quot;command&quot;:[
+        ///             &quot;ls&quot;,
+        ///             &quot;/&quot;
+        ///         ]
+        ///     }
+        /// }</para>
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
         public string PreStop { get; set; }
 
         /// <summary>
-        /// <para>The configuration for mounting a Kubernetes PersistentVolumeClaim (PVC) to a directory in an elastic container instance. The following parameters are included in the configuration:</para>
+        /// <para>Configures Kubernetes PersistentVolumeClaim (PVC) mounts. This lets you mount a Kubernetes PVC volume to a specified container directory. The parameters for \<c>PvcMountDescs\\</c> are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>pvcName: the name of the PVC. Make sure that the volume exists and is in the Bound state.</para>
+        /// <item><description><para>\<c>pvcName\\</c>: The name of the PVC volume. The PVC volume must already exist and be in the Bound state.</para>
         /// </description></item>
-        /// <item><description><para>mountPaths: the directory to which you want to mount the PVC. You can configure multiple directories. You can set the following two parameters for each mount directory:</para>
+        /// <item><description><para>\<c>mountPaths\\</c>: A list of mount directories. You can configure multiple mount directories. Each mount directory supports the following two parameters:</para>
         /// <list type="bullet">
-        /// <item><description>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</description></item>
-        /// <item><description>readOnly: the mount mode. Value true indicates the read-only mode. Value false indicates the read and write mode. Default value: false.</description></item>
+        /// <item><description><para>\<c>mountPath\\</c>: The mount path. An absolute path in the container that starts with a forward slash (/).</para>
+        /// </description></item>
+        /// <item><description><para>\<c>readOnly\\</c>: The mount mode. \<c>true\\</c> for read-only, \<c>false\\</c> for read-write. The default is \<c>false\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -619,7 +669,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string PvcMountDescs { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes service is not transmitted to the container. Example: <c>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}\\]}}</c>. If you want to cancel this configuration, set this parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
+        /// <para>The readiness probe for the container. If the probe fails, traffic from the Kubernetes service is not routed to the container. Example: <c>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}</c>. To delete this configuration, set the parameter to <c>&quot;&quot;</c> or <c>{}</c>. If you do not set this parameter, the configuration is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}</para>
@@ -639,7 +689,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The minimum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the ephemeral storage space.</para>
+        /// <para>The minimum temporary storage resource requirement. Unit: GB. A value of 0 means no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -649,12 +699,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? RequestsEphemeralStorage { get; set; }
 
         /// <summary>
-        /// <para>The type of the container runtime. Valid values:</para>
+        /// <para>The container runtime type:</para>
         /// <list type="bullet">
-        /// <item><description>runc: standard container runtime</description></item>
-        /// <item><description>runv: sandboxed container runtime</description></item>
+        /// <item><description><para>\<c>runc\\</c>: regular container runtime.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>runv\\</c>: sandboxed container.</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is applicable only to clusters that use sandboxed containers.</para>
+        /// <para>This parameter applies only to clusters that use sandboxed containers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>runc</para>
@@ -663,11 +715,19 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string RuntimeClassName { get; set; }
 
+        /// <summary>
+        /// <para>Sets the \<c>SecurityContext\\</c> property for the application pod container. The value is the base64-encoded YAML configuration of the \<c>SecurityContext\\</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;yamlEncoded&quot;:&quot;cnVuQXNVc2VyOiAwCnJ1bkFzR3JvdXA6IDA=&quot;}</para>
+        /// </summary>
         [NameInMap("SecurityContext")]
         [Validation(Required=false)]
         public string SecurityContext { get; set; }
 
         /// <summary>
+        /// <para>Sets a sidecar container for the application pod. The container configuration is in YAML format. The value is the base64-encoded YAML configuration of the sidecar container.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///       {
@@ -680,20 +740,23 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Sidecars { get; set; }
 
         /// <summary>
-        /// <para>The Logstore configuration. If you want to cancel this configuration, leave the parameter value empty by entering <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c>.</para>
+        /// <para>The Logstore configuration. Set to <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c> to delete the configuration:</para>
         /// <list type="bullet">
-        /// <item><description><para>The following parameters are included in the configuration:</para>
+        /// <item><description><para>\<c>Configs\\</c>:</para>
         /// <list type="bullet">
-        /// <item><description><para>type: the collection type. Set this parameter to file to specify the file type. Set this parameter to stdout to specify the standard output type.</para>
+        /// <item><description><para>\<c>type\\</c>: The collection type. \<c>file\\</c> for file type, \<c>stdout\\</c> for standard output type.</para>
         /// </description></item>
-        /// <item><description><para>logstore: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:</para>
+        /// <item><description><para>\<c>Logstore\\</c>: The name of the Logstore. Make sure the Logstore name is unique within the same cluster. The name must follow these rules:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>The name must be 3 to 63 characters in length. If you leave this parameter empty, the system automatically generates a name.</description></item>
+        /// <item><description><para>It can only contain lowercase letters, numbers, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start and end with a lowercase letter or a number.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 3 to 63 characters long. If left empty, the system generates a name automatically.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>logDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: <c>^/(.+)/(.*)^/$</c>.</para>
+        /// <item><description><para>\<c>LogDir\\</c>: If the type is standard output, the collection path is \<c>stdout.log\\</c>. If the type is file, this is the path of the file to collect. Wildcards are supported. The collection path must match the regular expression: <c>^/(.+)/(.*)^/$</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -707,6 +770,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlsConfigs { get; set; }
 
         /// <summary>
+        /// <para>The startup probe can be used to perform liveness checks on slow-starting containers to prevent them from being killed before they are up and running. Example: {&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}.</para>
+        /// <para>To delete this configuration, set the parameter to &quot;&quot; or {}. If you do not set this parameter, the configuration is ignored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</para>
         /// </summary>
@@ -715,12 +781,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Startup { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the NAS file system.</para>
+        /// <para>The storage type of the NAS file system. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values for General-purpose NAS file systems: Capacity and Performance.</description></item>
-        /// <item><description>Valid values for Extreme NAS file systems: standard and advance.</description></item>
+        /// <item><description><para>General-purpose NAS: \<c>Capacity\\</c> and \<c>Performance\\</c></para>
+        /// </description></item>
+        /// <item><description><para>Extreme NAS: \<c>standard\\</c> and \<c>advance\\</c></para>
+        /// </description></item>
         /// </list>
-        /// <para>You can set this parameter only to Performance.</para>
+        /// <para>Currently, only the \<c>Performance\\</c> type is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Performance</para>
@@ -730,6 +798,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
+        /// <para>The graceful stop timeout period for the application. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>120</para>
         /// </summary>
@@ -738,7 +808,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? TerminateGracePeriod { get; set; }
 
         /// <summary>
-        /// <para>The traffic adjustment policy for a canary release.</para>
+        /// <para>The traffic control policy for phased release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;http&quot;:{&quot;rules&quot;:[{&quot;conditionType&quot;:&quot;percent&quot;,&quot;percent&quot;:10}]}}</para>
@@ -750,17 +820,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The phased release policy.</para>
         /// <list type="bullet">
-        /// <item><description>Example 1: One instance for a canary release + Two subsequent batches + Automatic batching + 1-minute batch interval.</description></item>
+        /// <item><description><para>Example 1: Phased release with one canary instance, followed by two batches, automatic batching, and a 1-minute interval.
+        /// <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
+        /// </description></item>
+        /// <item><description><para>Example 2: Phased release with one canary instance, followed by two batches and manual batching.
+        /// <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
+        /// </description></item>
+        /// <item><description><para>Example 3: Phased release in two batches, with automatic batching and a 0-minute interval.
+        /// <c>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</c></para>
+        /// </description></item>
         /// </list>
-        /// <para><c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
-        /// <list type="bullet">
-        /// <item><description>Example 2: One instance for a canary release + Two subsequent batches + Manual batching.</description></item>
-        /// </list>
-        /// <para><c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
-        /// <list type="bullet">
-        /// <item><description>Example 3: Two batches + Automatic batching + 0-minute batch interval.</description></item>
-        /// </list>
-        /// <para><c>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</para>
@@ -770,9 +839,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string UpdateStrategy { get; set; }
 
         /// <summary>
-        /// <para>The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</para>
+        /// <para>The URI encoding format. Supported formats: ISO-8859-1, GBK, GB2312, and UTF-8.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter in the application configurations, the default URI encoding scheme in the Tomcat container is applied.</para>
+        /// <para>If you do not set this parameter in the application configuration, the default Tomcat value is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -783,9 +852,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string UriEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the encoding scheme specified in the request body for URI query parameters.</para>
+        /// <para>Specifies whether to enable \<c>useBodyEncodingForURI\\</c>.</para>
         /// <remarks>
-        /// <para>If this parameter is not specified in application configuration, the default value false is applied.</para>
+        /// <para>If you do not set this parameter in the application configuration, the default value \<c>false\\</c> is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -796,6 +865,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? UseBodyEncoding { get; set; }
 
         /// <summary>
+        /// <para>When using a custom JDK runtime, you must configure the base image address. This address must be publicly accessible. The EDAS server pulls this image to build the application image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openjdk:8u302</para>
         /// </summary>
@@ -804,7 +875,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string UserBaseImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The data volume.</para>
+        /// <para>The data volumes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -814,7 +885,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string VolumesStr { get; set; }
 
         /// <summary>
-        /// <para>The version of the Tomcat container on which the deployment package of the application depends. This parameter is applicable to Spring Cloud and Dubbo applications that you deploy by using WAR packages. This parameter is unavailable if you deploy applications by using images.</para>
+        /// <para>The Tomcat version on which the deployment package depends. This parameter applies to Spring Cloud and Dubbo applications deployed using WAR packages. It is not supported for image-based deployments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apache-tomcat-7.0.91</para>
@@ -824,32 +895,36 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string WebContainer { get; set; }
 
         /// <summary>
-        /// <para>The Tomcat container configuration. If you want to cancel this configuration, set this parameter to <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c>. The following parameters are included in the configuration:</para>
+        /// <para>The Tomcat container configuration. Set to <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c> to delete the configuration:</para>
         /// <list type="bullet">
-        /// <item><description><para>useDefaultConfig: specifies whether to use the default configuration. Value true indicates to use the default configuration. Value false indicates to use the custom configuration. If the default configuration is used, the following parameters do not take effect.</para>
+        /// <item><description><para>\<c>useDefaultConfig\\</c>: Specifies whether to use a custom configuration. If \<c>true\\</c>, the custom configuration is not used. If \<c>false\\</c>, the custom configuration is used. If you do not use a custom configuration, the following parameter settings do not take effect.</para>
         /// </description></item>
-        /// <item><description><para>contextInputType: the type of the access path for the application. Valid values:</para>
+        /// <item><description><para>\<c>contextInputType\\</c>: The access path of the application.</para>
         /// <list type="bullet">
-        /// <item><description>war: The access path for the application is the name of the WAR package. You do not need to specify a custom path.</description></item>
-        /// <item><description>root: The access path for the application is /. You do not need to specify a custom path.</description></item>
-        /// <item><description>custom: If you select this option, you must specify a custom path for the contextPath parameter.</description></item>
+        /// <item><description><para>\<c>war\\</c>: You do not need to enter a custom path. The access path is the name of the WAR package.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>root\\</c>: You do not need to enter a custom path. The access path is \<c>/\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>custom\\</c>: You need to enter a custom path in the \<c>contextPath\\</c> parameter below.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>contextPath: the custom access path for the application. This parameter is required only when you set the contextInputType parameter to custom.</para>
+        /// <item><description><para>\<c>contextPath\\</c>: The custom path. This parameter is required only when \<c>contextInputType\\</c> is set to \<c>custom\\</c>.</para>
         /// </description></item>
-        /// <item><description><para>httpPort: the port number. The port number ranges from 1024 to 65535. Though the admin permissions are configured for the container, the root permissions are required to perform operations on ports whose number is less than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not configure this parameter, the default port number 8080 is used.</para>
+        /// <item><description><para>\<c>httpPort\\</c>: The port number. The valid range is 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with administrator permissions, specify a port number greater than 1024. If you do not configure this, the default port is 8080.</para>
         /// </description></item>
-        /// <item><description><para>maxThreads: the maximum number of connections in the connection pool. Default value: 400.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b>This parameter greatly affects the application performance. We recommend that you set this parameter under professional guidance.</para>
+        /// <item><description><para>\<c>maxThreads\\</c>: The size of the connection pool. The default value is 400.</para>
+        /// <remarks>
+        /// <para>This configuration greatly affects application performance. Configure it under professional guidance.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>uriEncoding: the URI encoding scheme in the Tomcat container. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312. If you do not specify this parameter, the default value ISO-8859-1 is used.</para>
+        /// <item><description><para>\<c>uriEncoding\\</c>: The encoding format for Tomcat. Valid values: UTF-8, ISO-8859-1, GBK, and GB2312. If you do not set this, the default is ISO-8859-1.</para>
         /// </description></item>
-        /// <item><description><para>useBodyEncoding: specifies whether to use the encoding scheme specified in the request body for URI query parameters.</para>
+        /// <item><description><para>\<c>useBodyEncoding\\</c>: Specifies whether to use BodyEncoding for URLs.</para>
         /// </description></item>
-        /// <item><description><para>useAdvancedServerXml: specifies whether to use advanced configurations to customize the <c>server.xml</c> file. If the preceding parameter types and specific parameters cannot meet your requirements, you can use advanced configurations to customize the <c>server.xml</c> file of Tomcat.</para>
+        /// <item><description><para>\<c>useAdvancedServerXml\\</c>: Specifies whether to use advanced configuration to customize the \<c>server.xml\\</c> file. If the preceding parameter types and values do not meet your needs, you can use the advanced settings to directly edit the Tomcat \<c>Server.xml\\</c> file.</para>
         /// </description></item>
-        /// <item><description><para>serverXml: the content of the <c>server.xml</c> file customized by using advanced configurations. This parameter takes effect only when you set the useAdvancedServerXml parameter to true.</para>
+        /// <item><description><para>\<c>serverXml\\</c>: The content of the custom \<c>server.xml\\</c> text file in the advanced configuration. This takes effect when \<c>useAdvancedServerXml\\</c> is \<c>true\\</c>.</para>
         /// </description></item>
         /// </list>
         /// 

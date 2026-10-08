@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class TransformClusterMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para><c>Transform submit success!</c> is returned if the request is successful.</para>
+        /// <para>The data returned. If the request is successful, <c>Transform submit success!</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Transform submit success!</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

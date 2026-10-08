@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateApplicationScalingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the auto scaling policy.</para>
+        /// <para>The Auto Scaling policy.</para>
         /// </summary>
         [NameInMap("AppScalingRule")]
         [Validation(Required=false)]
         public UpdateApplicationScalingRuleResponseBodyAppScalingRule AppScalingRule { get; set; }
         public class UpdateApplicationScalingRuleResponseBodyAppScalingRule : TeaModel {
             /// <summary>
-            /// <para>The ID of the application to which the auto scaling policy belongs.</para>
+            /// <para>The ID of the application to which the Auto Scaling policy belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
@@ -26,23 +26,29 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <para>The scaling behavior configuration.</para>
+            /// </summary>
             [NameInMap("Behaviour")]
             [Validation(Required=false)]
             public UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviour Behaviour { get; set; }
             public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviour : TeaModel {
+                /// <summary>
+                /// <para>The scale-in behavior configuration.</para>
+                /// </summary>
                 [NameInMap("ScaleDown")]
                 [Validation(Required=false)]
                 public UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDown ScaleDown { get; set; }
                 public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDown : TeaModel {
                     /// <summary>
-                    /// <para>The configuration of the policy.</para>
+                    /// <para>The policy configurations.</para>
                     /// </summary>
                     [NameInMap("Policies")]
                     [Validation(Required=false)]
                     public List<UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDownPolicies> Policies { get; set; }
                     public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDownPolicies : TeaModel {
                         /// <summary>
-                        /// <para>The cycle of the policy check. Valid values: 0 to 1800. Unit: seconds.</para>
+                        /// <para>The check period. Valid values: 0 to 1,800. Unit: seconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>15</para>
@@ -52,7 +58,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public int? PeriodSeconds { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the policy. Valid values: Pods and Percent.</para>
+                        /// <para>The policy type. Valid values: Pods and Percent.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Pods</para>
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The policy value of auto scaling. Set the value to an integer greater than zero. If the policy type is Pods, the value of this parameter indicates the number of pods. If the policy type is Percent, the value of this parameter indicates a percentage, which can exceed 100%.</para>
+                        /// <para>The value of the policy for the scaling behavior. The value must be an integer greater than 0. If the policy type is Pods, the value indicates the number of pods. If the policy type is Percent, the value indicates a percentage, which can exceed 100%.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     }
 
                     /// <summary>
-                    /// <para>The step size policy for the scale-in. Valid values: Max, Min, and Disable.</para>
+                    /// <para>The policy for the scale-in step size. Valid values: Max, Min, and Disable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Max</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public string SelectPolicy { get; set; }
 
                     /// <summary>
-                    /// <para>The cooldown time of the scale-in. Valid values: 0 to 3600. Unit: seconds. Default value: 300.</para>
+                    /// <para>The cooldown time for scale-ins. Valid values: 0 to 3,600. Unit: seconds. Default value: 300.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -95,19 +101,22 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
                 }
 
+                /// <summary>
+                /// <para>The scale-out behavior configuration.</para>
+                /// </summary>
                 [NameInMap("ScaleUp")]
                 [Validation(Required=false)]
                 public UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUp ScaleUp { get; set; }
                 public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUp : TeaModel {
                     /// <summary>
-                    /// <para>The configuration of the policy.</para>
+                    /// <para>The policy configurations.</para>
                     /// </summary>
                     [NameInMap("Policies")]
                     [Validation(Required=false)]
                     public List<UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUpPolicies> Policies { get; set; }
                     public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUpPolicies : TeaModel {
                         /// <summary>
-                        /// <para>The cycle of the policy check. Valid values: 0 to 1800. Unit: seconds.</para>
+                        /// <para>The check period. Valid values: 0 to 1,800. Unit: seconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>15</para>
@@ -117,7 +126,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public int? PeriodSeconds { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the policy. Valid values: Pods and Percent.</para>
+                        /// <para>The policy type. Valid values: Pods and Percent.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Pods</para>
@@ -127,7 +136,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The policy value of auto scaling. Set the value to an integer greater than zero. If the policy type is Pods, the value of this parameter indicates the number of pods. If the policy type is Percent, the value of this parameter indicates a percentage, which can exceed 100%.</para>
+                        /// <para>The value of the policy for the scaling behavior. The value must be an integer greater than 0. If the policy type is Pods, the value indicates the number of pods. If the policy type is Percent, the value indicates a percentage, which can exceed 100%.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -139,7 +148,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     }
 
                     /// <summary>
-                    /// <para>The step size policy for the scale-out. Valid values: Max, Min, and Disable.</para>
+                    /// <para>The policy for the scale-out step size. Valid values: Max, Min, and Disable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Max</para>
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public string SelectPolicy { get; set; }
 
                     /// <summary>
-                    /// <para>The cooldown time of the scale-out. Valid values: 0 to 3600. Unit: seconds. Default value: 0.</para>
+                    /// <para>The cooldown time for scale-outs. Valid values: 0 to 3,600. Unit: seconds. Default value: 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp when the Auto Scaling policy was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1574251601785</para>
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was last disabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp when the Auto Scaling policy was last disabled. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1574251601785</para>
@@ -261,10 +270,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? MinReplicas { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the auto scaling policy is enabled. Valid values:</para>
+            /// <para>The status of the Auto Scaling policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The auto scaling policy is enabled.</description></item>
-            /// <item><description><b>false</b>: The auto scaling policy is disabled.</description></item>
+            /// <item><description><para><b>true</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,7 +286,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public bool? ScaleRuleEnabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the auto scaling policy.</para>
+            /// <para>The name of the Auto Scaling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu-trigger</para>
@@ -285,7 +296,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ScaleRuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the auto scaling policy. The value is fixed to trigger.</para>
+            /// <para>The type of the Auto Scaling policy. Only the trigger type is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trigger</para>
@@ -295,14 +306,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ScaleRuleType { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the trigger.</para>
+            /// <para>The trigger configuration.</para>
             /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
             public UpdateApplicationScalingRuleResponseBodyAppScalingRuleTrigger Trigger { get; set; }
             public class UpdateApplicationScalingRuleResponseBodyAppScalingRuleTrigger : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of replicas. The maximum value is 1000.</para>
+                /// <para>The maximum number of replicas. The value cannot exceed 1,000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>122</para>
@@ -312,7 +323,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? MaxReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of replicas. The minimum value is 0.</para>
+                /// <para>The minimum number of replicas. The value cannot be less than 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -322,7 +333,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? MinReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of the trigger.</para>
+                /// <para>The list of trigger configurations.</para>
                 /// </summary>
                 [NameInMap("Triggers")]
                 [Validation(Required=false)]
@@ -349,7 +360,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the trigger. Valid values: cron and app_metric.</para>
+                    /// <para>The trigger type. Only cron and app_metric are supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cron</para>
@@ -363,7 +374,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp when the Auto Scaling policy was updated. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1574251601785</para>
@@ -375,7 +386,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -385,7 +396,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -395,7 +406,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a5281053-08e4-47a5-b2ab-5c0323de7b5a</para>

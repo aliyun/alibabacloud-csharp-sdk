@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DescribeLocalitySettingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application. To obtain the application ID, call the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/423162.html">ListApplication</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the microservices namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

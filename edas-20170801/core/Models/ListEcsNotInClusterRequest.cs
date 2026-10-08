@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: classic network</description></item>
-        /// <item><description>2: virtual private cloud (VPC)</description></item>
+        /// <item><description><para>1: classic network</para>
+        /// </description></item>
+        /// <item><description><para>2: virtual private cloud (VPC)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

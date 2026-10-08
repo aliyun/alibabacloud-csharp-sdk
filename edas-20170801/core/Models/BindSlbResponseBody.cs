@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class BindSlbResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ExtVServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the internal-facing SLB instance.</para>
+            /// <para>The ID of the internal SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-wz96ph63r************</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the internal-facing SLB instance.</para>
+            /// <para>The IP address of the internal SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.16*.<em>.</em></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the internal-facing SLB instance.</para>
+            /// <para>The name of the internal SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test**********</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbName { get; set; }
 
             /// <summary>
-            /// <para>The listener port for the SLB instance.</para>
+            /// <para>The listener port of the SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? SlbPort { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vServer group for the internal-facing SLB instance.</para>
+            /// <para>The ID of the internal vServer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>“”</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bind slb success</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23DR4FDXXXXXXXXXX</para>

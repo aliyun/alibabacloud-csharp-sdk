@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The source from which data is queried.</para>
+        /// <para>The source of the query.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, a common query is performed.</description></item>
-        /// <item><description>If you set the value to deploy, you query application information from the deployment page.</description></item>
+        /// <item><description><para>If this parameter is empty, a regular query is performed.</para>
+        /// </description></item>
+        /// <item><description><para>deploy: The query is initiated from the deployment page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

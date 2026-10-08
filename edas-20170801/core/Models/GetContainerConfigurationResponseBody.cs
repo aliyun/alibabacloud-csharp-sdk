@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The maximum number of threads in the Tomcat container.</para>
             /// <list type="bullet">
-            /// <item><description>If no instance group is specified, the configuration of the application is returned.</description></item>
-            /// <item><description>If no application is specified, the default configuration is returned.</description></item>
+            /// <item><description><para>If no instance group is specified, the configuration of the application is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If no application is specified, the default configuration is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,8 +65,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The Uniform Resource Identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</para>
             /// <list type="bullet">
-            /// <item><description>If no instance group is specified, the configuration of the application is returned.</description></item>
-            /// <item><description>If no application is specified, the default configuration is returned.</description></item>
+            /// <item><description><para>If no instance group is specified, the configuration of the application is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If no application is specified, the default configuration is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,8 +81,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether useBodyEncodingForURI is enabled in the Tomcat container.</para>
             /// <list type="bullet">
-            /// <item><description>If no instance group is specified, the configuration of the application is returned.</description></item>
-            /// <item><description>If no application is specified, the default configuration is returned.</description></item>
+            /// <item><description><para>If no instance group is specified, the configuration of the application is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If no application is specified, the default configuration is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

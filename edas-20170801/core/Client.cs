@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>You can call the AbortAndRollbackChangeOrder operation to stop and roll back a change order for applications in Container Service for Kubernetes (ACK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>You can call the AbortAndRollbackChangeOrder operation to stop and roll back a change order for applications in Container Service for Kubernetes (ACK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>You can call the AbortAndRollbackChangeOrder operation to stop and roll back a change order for applications in Container Service for Kubernetes (ACK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>You can call the AbortAndRollbackChangeOrder operation to stop and roll back a change order for applications in Container Service for Kubernetes (ACK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +757,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// <para>Grant permissions to RAM roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -807,7 +807,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// <para>Grant permissions to RAM roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// <para>Grant permissions to RAM roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -876,7 +876,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// <para>Grant permissions to RAM roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1089,7 +1089,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Attaches a Server Load Balancer (SLB) instance to an application in a Container Service for Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1171,7 +1171,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Attaches a Server Load Balancer (SLB) instance to an application in a Container Service for Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1253,7 +1253,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Attaches a Server Load Balancer (SLB) instance to an application in a Container Service for Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1272,7 +1272,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Attaches a Server Load Balancer (SLB) instance to an application in a Container Service for Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1291,7 +1291,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>Calls the BindSlb operation to attach a Server Load Balancer (SLB) instance to a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1357,7 +1357,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>Calls the BindSlb operation to attach a Server Load Balancer (SLB) instance to a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1423,7 +1423,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>Calls the BindSlb operation to attach a Server Load Balancer (SLB) instance to a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1442,7 +1442,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>Calls the BindSlb operation to attach a Server Load Balancer (SLB) instance to a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1461,7 +1461,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// <para>Call the ChangeDeployGroup operation to change the group of an ECS instance in an application deployed in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,7 +1519,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// <para>Call the ChangeDeployGroup operation to change the group of an ECS instance in an application deployed in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1577,7 +1577,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// <para>Call the ChangeDeployGroup operation to change the group of an ECS instance in an application deployed in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1596,7 +1596,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// <para>Call the ChangeDeployGroup operation to change the group of an ECS instance in an application deployed in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1753,7 +1753,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a Deployment into an application.</para>
+        /// <para>Converts a Deployment resource into an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1811,7 +1811,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a Deployment into an application.</para>
+        /// <para>Converts a Deployment resource into an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1869,7 +1869,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a Deployment into an application.</para>
+        /// <para>Converts a Deployment resource into an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1888,7 +1888,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts a Deployment into an application.</para>
+        /// <para>Converts a Deployment resource into an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1907,7 +1907,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Call the CreateApplicationScalingRule operation to create an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1981,7 +1981,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Call the CreateApplicationScalingRule operation to create an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,7 +2055,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Call the CreateApplicationScalingRule operation to create an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2074,7 +2074,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Call the CreateApplicationScalingRule operation to create an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3073,7 +3073,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Call the DeleteApplication operation to delete an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3119,7 +3119,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Call the DeleteApplication operation to delete an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3165,7 +3165,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Call the DeleteApplication operation to delete an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3184,7 +3184,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Call the DeleteApplication operation to delete an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,7 +3203,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// <para>Deletes an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3253,7 +3253,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// <para>Deletes an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3303,7 +3303,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// <para>Deletes an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3322,7 +3322,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// <para>Deletes an Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4729,7 +4729,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// <para>Deletes resources associated with a log directory. This operation is suitable for applications deployed on Alibaba Cloud Elastic Compute Service (ECS) instances or container orchestration clusters from other cloud providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4779,7 +4779,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// <para>Deletes resources associated with a log directory. This operation is suitable for applications deployed on Alibaba Cloud Elastic Compute Service (ECS) instances or container orchestration clusters from other cloud providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4829,7 +4829,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// <para>Deletes resources associated with a log directory. This operation is suitable for applications deployed on Alibaba Cloud Elastic Compute Service (ECS) instances or container orchestration clusters from other cloud providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4848,7 +4848,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// <para>Deletes resources associated with a log directory. This operation is suitable for applications deployed on Alibaba Cloud Elastic Compute Service (ECS) instances or container orchestration clusters from other cloud providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5665,7 +5665,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5983,7 +5983,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6301,7 +6301,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6320,7 +6320,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6477,7 +6477,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Call the DescribeApplicationScalingRules operation to query the scaling rules for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6523,7 +6523,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Call the DescribeApplicationScalingRules operation to query the scaling rules for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6569,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Call the DescribeApplicationScalingRules operation to query the scaling rules for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6588,7 +6588,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Call the DescribeApplicationScalingRules operation to query the scaling rules for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6605,6 +6605,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DescribeApplicationScalingRulesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the locality configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only deployment resources can be modified.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeLocalitySettingRequest
         /// </param>
@@ -6654,6 +6666,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeLocalitySettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the locality configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only deployment resources can be modified.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeLocalitySettingRequest
         /// </param>
@@ -6703,6 +6727,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeLocalitySettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the locality configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only deployment resources can be modified.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeLocalitySettingRequest
         /// </param>
@@ -6717,6 +6753,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DescribeLocalitySettingWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the locality configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only deployment resources can be modified.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeLocalitySettingRequest
         /// </param>
@@ -7139,7 +7187,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Retrieves information about a specified application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7185,7 +7233,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Retrieves information about a specified application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7231,7 +7279,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Retrieves information about a specified application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7250,7 +7298,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Retrieves information about a specified application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7269,7 +7317,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a change process.</para>
+        /// <para>You can call the GetChangeOrderInfo operation to view the details of a change process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7315,7 +7363,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a change process.</para>
+        /// <para>You can call the GetChangeOrderInfo operation to view the details of a change process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7361,7 +7409,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a change process.</para>
+        /// <para>You can call the GetChangeOrderInfo operation to view the details of a change process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7380,7 +7428,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a change process.</para>
+        /// <para>You can call the GetChangeOrderInfo operation to view the details of a change process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8081,7 +8129,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Retrieves information about an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +8179,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Retrieves information about an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8181,7 +8229,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Retrieves information about an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8200,7 +8248,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Retrieves information about an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8219,7 +8267,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// <para>Gets a list of Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes (ASK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8281,7 +8329,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// <para>Gets a list of Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes (ASK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8343,7 +8391,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// <para>Gets a list of Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes (ASK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8362,7 +8410,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// <para>Gets a list of Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes (ASK) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8381,7 +8429,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// <para>Gets a list of Services for an application in a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8427,7 +8475,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// <para>Gets a list of Services for an application in a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8473,7 +8521,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// <para>Gets a list of Services for an application in a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8492,7 +8540,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// <para>Gets a list of Services for an application in a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10331,13 +10379,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Creates an application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10468,13 +10516,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Creates an application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10605,13 +10653,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Creates an application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10631,13 +10679,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// <para>Creates an application in an ECS cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11163,7 +11211,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// <para>Creates an application in a Kubernetes cluster or a Serverless Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11549,7 +11597,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// <para>Creates an application in a Kubernetes cluster or a Serverless Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11935,7 +11983,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// <para>Creates an application in a Kubernetes cluster or a Serverless Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11954,7 +12002,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// <para>Creates an application in a Kubernetes cluster or a Serverless Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13019,7 +13067,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Retrieves the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13093,7 +13141,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Retrieves the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13167,7 +13215,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Retrieves the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13186,7 +13234,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Retrieves the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13445,7 +13493,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// <para>Calls the ListBuildPack operation to retrieve the list of container versions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13481,7 +13529,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// <para>Calls the ListBuildPack operation to retrieve the list of container versions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13517,7 +13565,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// <para>Calls the ListBuildPack operation to retrieve the list of container versions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13532,7 +13580,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// <para>Calls the ListBuildPack operation to retrieve the list of container versions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -14095,7 +14143,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are consumed by an application.</para>
+        /// <para>Queries consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14141,7 +14189,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are consumed by an application.</para>
+        /// <para>Queries consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14187,7 +14235,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are consumed by an application.</para>
+        /// <para>Queries consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14206,7 +14254,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are consumed by an application.</para>
+        /// <para>Queries consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14355,7 +14403,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// <para>Call the ListDeployGroup operation to obtain a list of deployment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14401,7 +14449,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// <para>Call the ListDeployGroup operation to obtain a list of deployment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14447,7 +14495,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// <para>Call the ListDeployGroup operation to obtain a list of deployment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14466,7 +14514,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// <para>Call the ListDeployGroup operation to obtain a list of deployment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15571,7 +15619,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries service methods.</para>
+        /// <para>You can call the ListMethods operation to query a list of service methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15621,7 +15669,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries service methods.</para>
+        /// <para>You can call the ListMethods operation to query a list of service methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15671,7 +15719,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries service methods.</para>
+        /// <para>You can call the ListMethods operation to query a list of service methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15690,7 +15738,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries service methods.</para>
+        /// <para>You can call the ListMethods operation to query a list of service methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15709,7 +15757,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are published by an application.</para>
+        /// <para>Queries published services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15755,7 +15803,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are published by an application.</para>
+        /// <para>Queries published services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15801,7 +15849,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are published by an application.</para>
+        /// <para>Queries published services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15820,7 +15868,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services that are published by an application.</para>
+        /// <para>Queries published services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16071,7 +16119,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries roles.</para>
+        /// <para>Queries a list of roles.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16107,7 +16155,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries roles.</para>
+        /// <para>Queries a list of roles.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16143,7 +16191,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries roles.</para>
+        /// <para>Queries a list of roles.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16158,7 +16206,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries roles.</para>
+        /// <para>Queries a list of roles.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16493,7 +16541,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// <para>Retrieves a list of SLB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16547,7 +16595,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// <para>Retrieves a list of SLB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16601,7 +16649,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// <para>Retrieves a list of SLB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16620,7 +16668,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// <para>Retrieves a list of SLB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16639,7 +16687,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// <para>Queries a list of Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16675,7 +16723,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// <para>Queries a list of Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16711,7 +16759,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// <para>Queries a list of Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16726,7 +16774,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// <para>Queries a list of Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17163,7 +17211,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom namespaces.</para>
+        /// <para>Queries a list of user-defined namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17209,7 +17257,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom namespaces.</para>
+        /// <para>Queries a list of user-defined namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17255,7 +17303,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom namespaces.</para>
+        /// <para>Queries a list of user-defined namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17274,7 +17322,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom namespaces.</para>
+        /// <para>Queries a list of user-defined namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17293,7 +17341,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>Queries virtual private clouds (VPCs). This operation is applicable to Elastic Compute Service (ECS) clusters and Kubernetes clusters.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -17329,7 +17377,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>Queries virtual private clouds (VPCs). This operation is applicable to Elastic Compute Service (ECS) clusters and Kubernetes clusters.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -17365,7 +17413,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>Queries virtual private clouds (VPCs). This operation is applicable to Elastic Compute Service (ECS) clusters and Kubernetes clusters.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17380,7 +17428,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>Queries virtual private clouds (VPCs). This operation is applicable to Elastic Compute Service (ECS) clusters and Kubernetes clusters.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17395,19 +17443,209 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// <para>Migrates an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
-        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <remarks>
+        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateApplicationResponse
+        /// </returns>
+        public MigrateApplicationResponse MigrateApplicationWithOptions(MigrateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["appIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cmd))
+            {
+                query["cmd"] = request.Cmd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawData))
+            {
+                query["rawData"] = request.RawData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MigrateApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/migrateK8sApp",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MigrateApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateApplicationResponse
+        /// </returns>
+        public async Task<MigrateApplicationResponse> MigrateApplicationWithOptionsAsync(MigrateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["appIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cmd))
+            {
+                query["cmd"] = request.Cmd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawData))
+            {
+                query["rawData"] = request.RawData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MigrateApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/migrateK8sApp",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MigrateApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateApplicationResponse
+        /// </returns>
+        public MigrateApplicationResponse MigrateApplication(MigrateApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return MigrateApplicationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateApplicationResponse
+        /// </returns>
+        public async Task<MigrateApplicationResponse> MigrateApplicationAsync(MigrateApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await MigrateApplicationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transfers an ECU to the default cluster in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>This API operation is deprecated. Use the TransformClusterMember operation instead. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// This operation imports an Elastic Compute Service (ECS) instance and reinstalls its operating system. This process deletes all data on the instance. You must also reset the logon password. Before you import an instance, back up its data or make sure it contains no important data.</para>
         /// <h2>Terms</h2>
         /// <list type="bullet">
-        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
-        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
-        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// <item><description><b>Namespace</b>: A logical concept in Enterprise Distributed Application Service (EDAS) used to isolate resources and microservices. Resources include clusters, ECS instances, and applications. Namespaces can be default or custom. Each region has one default namespace and can have multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>ECU</b>: An ECS instance becomes an Elastic Compute Unit (ECU) after it is imported into a cluster.</description></item>
+        /// <item><description><b>ECC</b>: An ECU in a cluster becomes an Elastic Compute Container (ECC) after it is deployed in an application.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17458,19 +17696,19 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// <para>Transfers an ECU to the default cluster in a specified namespace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
-        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This API operation is deprecated. Use the TransformClusterMember operation instead. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// This operation imports an Elastic Compute Service (ECS) instance and reinstalls its operating system. This process deletes all data on the instance. You must also reset the logon password. Before you import an instance, back up its data or make sure it contains no important data.</para>
         /// <h2>Terms</h2>
         /// <list type="bullet">
-        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
-        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
-        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// <item><description><b>Namespace</b>: A logical concept in Enterprise Distributed Application Service (EDAS) used to isolate resources and microservices. Resources include clusters, ECS instances, and applications. Namespaces can be default or custom. Each region has one default namespace and can have multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>ECU</b>: An ECS instance becomes an Elastic Compute Unit (ECU) after it is imported into a cluster.</description></item>
+        /// <item><description><b>ECC</b>: An ECU in a cluster becomes an Elastic Compute Container (ECC) after it is deployed in an application.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17521,19 +17759,19 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// <para>Transfers an ECU to the default cluster in a specified namespace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
-        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This API operation is deprecated. Use the TransformClusterMember operation instead. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// This operation imports an Elastic Compute Service (ECS) instance and reinstalls its operating system. This process deletes all data on the instance. You must also reset the logon password. Before you import an instance, back up its data or make sure it contains no important data.</para>
         /// <h2>Terms</h2>
         /// <list type="bullet">
-        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
-        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
-        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// <item><description><b>Namespace</b>: A logical concept in Enterprise Distributed Application Service (EDAS) used to isolate resources and microservices. Resources include clusters, ECS instances, and applications. Namespaces can be default or custom. Each region has one default namespace and can have multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>ECU</b>: An ECS instance becomes an Elastic Compute Unit (ECU) after it is imported into a cluster.</description></item>
+        /// <item><description><b>ECC</b>: An ECU in a cluster becomes an Elastic Compute Container (ECC) after it is deployed in an application.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17553,19 +17791,19 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// <para>Transfers an ECU to the default cluster in a specified namespace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
-        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This API operation is deprecated. Use the TransformClusterMember operation instead. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// This operation imports an Elastic Compute Service (ECS) instance and reinstalls its operating system. This process deletes all data on the instance. You must also reset the logon password. Before you import an instance, back up its data or make sure it contains no important data.</para>
         /// <h2>Terms</h2>
         /// <list type="bullet">
-        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
-        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
-        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// <item><description><b>Namespace</b>: A logical concept in Enterprise Distributed Application Service (EDAS) used to isolate resources and microservices. Resources include clusters, ECS instances, and applications. Namespaces can be default or custom. Each region has one default namespace and can have multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>ECU</b>: An ECS instance becomes an Elastic Compute Unit (ECU) after it is imported into a cluster.</description></item>
+        /// <item><description><b>ECC</b>: An ECU in a cluster becomes an Elastic Compute Container (ECC) after it is deployed in an application.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18861,7 +19099,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Restarts an application. This operation is suitable for applications that are deployed on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18911,7 +19149,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Restarts an application. This operation is suitable for applications that are deployed on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18961,7 +19199,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Restarts an application. This operation is suitable for applications that are deployed on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18980,7 +19218,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Restarts an application. This operation is suitable for applications that are deployed on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18999,7 +19237,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Call the RestartK8sApplication operation to restart an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19049,7 +19287,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Call the RestartK8sApplication operation to restart an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19099,7 +19337,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Call the RestartK8sApplication operation to restart an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19118,7 +19356,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// <para>Call the RestartK8sApplication operation to restart an application deployed in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19137,7 +19375,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed process.</para>
+        /// <para>Call the RetryChangeOrderTask operation to retry a failed change order task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19187,7 +19425,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed process.</para>
+        /// <para>Call the RetryChangeOrderTask operation to retry a failed change order task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19237,7 +19475,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed process.</para>
+        /// <para>Call the RetryChangeOrderTask operation to retry a failed change order task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19256,7 +19494,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed process.</para>
+        /// <para>Call the RetryChangeOrderTask operation to retry a failed change order task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19567,7 +19805,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in an application.</para>
+        /// <para>Scales in the instances of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19621,7 +19859,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in an application.</para>
+        /// <para>Scales in the instances of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19675,7 +19913,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in an application.</para>
+        /// <para>Scales in the instances of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19694,7 +19932,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in an application.</para>
+        /// <para>Scales in the instances of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19713,7 +19951,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Scales out or scales down application instances in a Container Service for Kubernetes (K8s) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19767,7 +20005,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Scales out or scales down application instances in a Container Service for Kubernetes (K8s) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19821,7 +20059,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Scales out or scales down application instances in a Container Service for Kubernetes (K8s) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19840,7 +20078,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Scales out or scales down application instances in a Container Service for Kubernetes (K8s) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20707,7 +20945,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20761,7 +20999,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20815,7 +21053,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20834,7 +21072,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes (ASK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21599,13 +21837,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// <para>Imports or transfers ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Limitations</h2>
+        /// <para>Calling this API to import an ECS instance reinstalls its operating system. This process deletes all data on the instance and requires you to reset the logon password. Before you import the instance, back up any important data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21659,13 +21897,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// <para>Imports or transfers ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Limitations</h2>
+        /// <para>Calling this API to import an ECS instance reinstalls its operating system. This process deletes all data on the instance and requires you to reset the logon password. Before you import the instance, back up any important data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21719,13 +21957,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// <para>Imports or transfers ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Limitations</h2>
+        /// <para>Calling this API to import an ECS instance reinstalls its operating system. This process deletes all data on the instance and requires you to reset the logon password. Before you import the instance, back up any important data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21744,13 +21982,13 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// <para>Imports or transfers ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Limitations</h2>
+        /// <para>Calling this API to import an ECS instance reinstalls its operating system. This process deletes all data on the instance and requires you to reset the logon password. Before you import the instance, back up any important data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21923,7 +22161,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// <para>Call the UnbindSlb operation to detach a Server Load Balancer (SLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21981,7 +22219,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// <para>Call the UnbindSlb operation to detach a Server Load Balancer (SLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22039,7 +22277,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// <para>Call the UnbindSlb operation to detach a Server Load Balancer (SLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22058,7 +22296,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// <para>Call the UnbindSlb operation to detach a Server Load Balancer (SLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22239,7 +22477,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an account.</para>
+        /// <para>Modifies information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22293,7 +22531,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an account.</para>
+        /// <para>Modifies information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22347,7 +22585,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an account.</para>
+        /// <para>Modifies information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22366,7 +22604,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an account.</para>
+        /// <para>Modifies information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22385,7 +22623,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// <para>Updates the basic information such as the description and owner of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22443,7 +22681,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// <para>Updates the basic information such as the description and owner of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22501,7 +22739,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// <para>Updates the basic information such as the description and owner of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22520,7 +22758,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// <para>Updates the basic information such as the description and owner of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22539,7 +22777,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// <para>Calls the UpdateApplicationScalingRule operation to update the Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22613,7 +22851,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// <para>Calls the UpdateApplicationScalingRule operation to update the Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22687,7 +22925,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// <para>Calls the UpdateApplicationScalingRule operation to update the Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22706,7 +22944,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// <para>Calls the UpdateApplicationScalingRule operation to update the Auto Scaling rule for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24353,7 +24591,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// <para>Update Kubernetes resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24414,7 +24652,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// <para>Update Kubernetes resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24475,7 +24713,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// <para>Update Kubernetes resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24501,7 +24739,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// <para>Update Kubernetes resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24875,7 +25113,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Call UpdateK8sSlb to update the Server Load Balancer (SLB) instance attached to a Container Service for Kubernetes application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24961,7 +25199,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Call UpdateK8sSlb to update the Server Load Balancer (SLB) instance attached to a Container Service for Kubernetes application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25047,7 +25285,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Call UpdateK8sSlb to update the Server Load Balancer (SLB) instance attached to a Container Service for Kubernetes application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25066,7 +25304,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Call UpdateK8sSlb to update the Server Load Balancer (SLB) instance attached to a Container Service for Kubernetes application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25085,8 +25323,15 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新本地设置</para>
+        /// <para>Updates a localization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation modifies only Deployment resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLocalitySettingRequest
@@ -25147,8 +25392,15 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新本地设置</para>
+        /// <para>Updates a localization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation modifies only Deployment resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLocalitySettingRequest
@@ -25209,8 +25461,15 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新本地设置</para>
+        /// <para>Updates a localization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation modifies only Deployment resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLocalitySettingRequest
@@ -25228,8 +25487,15 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新本地设置</para>
+        /// <para>Updates a localization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation modifies only Deployment resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLocalitySettingRequest
@@ -25523,7 +25789,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道</para>
+        /// <para>Updates a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25585,7 +25851,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道</para>
+        /// <para>Updates a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25647,7 +25913,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道</para>
+        /// <para>Updates a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25666,7 +25932,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道</para>
+        /// <para>Updates a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">

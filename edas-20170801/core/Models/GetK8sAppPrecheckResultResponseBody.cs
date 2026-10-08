@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 /// <summary>
                 /// <para>Specifies whether the precheck of the item was interrupted:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The precheck of the item was interrupted.</description></item>
-                /// <item><description>false: The precheck of the item was not interrupted.</description></item>
+                /// <item><description><para>true: The precheck of the item was interrupted.</para>
+                /// </description></item>
+                /// <item><description><para>false: The precheck of the item was not interrupted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 /// <summary>
                 /// <para>Indicates whether the precheck item passed the precheck:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The precheck item passed the precheck.</description></item>
-                /// <item><description>false: The precheck item failed the precheck.</description></item>
+                /// <item><description><para>true: The precheck item passed the precheck.</para>
+                /// </description></item>
+                /// <item><description><para>false: The precheck item failed the precheck.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 /// <para>The reason why the precheck item failed the precheck or the precheck of the item was interrupted. This parameter is left empty when the application passed the precheck.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The Kubernetes cluster is disconnected from the EDAS control plane.</para>
+                /// <para>K8s集群失联。</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <para>The reason why the application failed the precheck. This parameter is left empty when the application passed the precheck.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The Kubernetes cluster is disconnected from the EDAS control plane.</para>
+            /// <para>K8s cluster disconnected.</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -96,9 +100,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The precheck state for the application change. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>checking: The application is being prechecked.</description></item>
-            /// <item><description>pass: The application passed the precheck.</description></item>
-            /// <item><description>failed: The application failed the precheck.</description></item>
+            /// <item><description><para>checking: The application is being prechecked.</para>
+            /// </description></item>
+            /// <item><description><para>pass: The application passed the precheck.</para>
+            /// </description></item>
+            /// <item><description><para>failed: The application failed the precheck.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

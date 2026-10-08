@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class StartK8sApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. You can call the ListApplication operation to obtain the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The number of instances on which you want to start the application.</para>
+        /// <para>The number of application instances to start.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the change process. Valid values: 1 to 1800. Default value: 600. Unit: seconds.</para>
+        /// <para>The timeout period for the change process, in seconds. Valid values: 1 to 1800. Default value: 600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

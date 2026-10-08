@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ScaleK8sApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. Call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The expected number of application instances after the scale-out or scale-in. The minimum number is 0.</para>
+        /// <para>The target number of application instances. The minimum value is 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the change process. Unit: seconds.</para>
+        /// <para>The timeout period for the change process, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <para>The configured name of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Beijing)</para>
+            /// <para>华北2</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

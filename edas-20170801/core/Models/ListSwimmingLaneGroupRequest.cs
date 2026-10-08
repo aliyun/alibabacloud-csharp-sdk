@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
         /// <summary>
         /// <para>The ID of the namespace.</para>
-        /// <para>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\
+        /// <para>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.<br>
         /// The ID of the default namespace is in the region ID format. Example: cn-beijing.</para>
         /// <para>This parameter is required.</para>
         /// 

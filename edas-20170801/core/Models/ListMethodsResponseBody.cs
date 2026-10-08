@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListMethodsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message that indicates whether the request is successful.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about service methods.</para>
-        /// </summary>
         [NameInMap("ServiceMethodList")]
         [Validation(Required=false)]
         public ListMethodsResponseBodyServiceMethodList ServiceMethodList { get; set; }
@@ -50,12 +47,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListMethodsResponseBodyServiceMethodListServiceMethod> ServiceMethod { get; set; }
             public class ListMethodsResponseBodyServiceMethodListServiceMethod : TeaModel {
-                /// <summary>
-                /// <para>The name of the application.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>App</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
@@ -70,22 +61,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
                 }
 
-                /// <summary>
-                /// <para>The name of the service method.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>echo</para>
-                /// </summary>
                 [NameInMap("MethodName")]
                 [Validation(Required=false)]
                 public string MethodName { get; set; }
 
-                /// <summary>
-                /// <para>The return type of the service method.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>java.lang.string</para>
-                /// </summary>
                 [NameInMap("Output")]
                 [Validation(Required=false)]
                 public string Output { get; set; }
@@ -100,12 +79,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
                 }
 
-                /// <summary>
-                /// <para>The name of the service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>com.alibaba.edas.demo.EchoService</para>
-                /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }

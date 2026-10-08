@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the change process.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4823-bhjf-23u4-eiufh</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of services in the Kubernetes cluster.</para>
+        /// <para>The list of Kubernetes Services.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<GetK8sServicesResponseBodyServices> Services { get; set; }
         public class GetK8sServicesResponseBodyServices : TeaModel {
             /// <summary>
-            /// <para>The IP address of the service in the Kubernetes cluster.</para>
+            /// <para>The IP address of the Kubernetes Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104.23.xx.xx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ClusterIP { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service-http</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The mapping of service ports.</para>
+            /// <para>The list of port mappings.</para>
             /// </summary>
             [NameInMap("ServicePorts")]
             [Validation(Required=false)]
             public List<GetK8sServicesResponseBodyServicesServicePorts> ServicePorts { get; set; }
             public class GetK8sServicesResponseBodyServicesServicePorts : TeaModel {
                 /// <summary>
-                /// <para>The port of the node.</para>
+                /// <para>The node port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol of the service.</para>
+                /// <para>The service protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The type of the service.</para>
+            /// <para>The service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClusterIP</para>

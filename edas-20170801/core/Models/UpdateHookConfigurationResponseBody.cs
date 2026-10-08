@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether a mount failure is ignored. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A mount failure is ignored.</description></item>
-            /// <item><description><b>false</b>: A mount failure is not ignored.</description></item>
+            /// <item><description><para><b>true</b>: A mount failure is ignored.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: A mount failure is not ignored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -29,10 +29,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The deployment type of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>War: The application is deployed by using a WAR package.</description></item>
-            /// <item><description>FatJar: The application is deployed by using a JAR package.</description></item>
-            /// <item><description>Image: The application is deployed by using an image.</description></item>
-            /// <item><description>If this parameter is empty, the application is not deployed.</description></item>
+            /// <item><description><para>War: The application is deployed by using a WAR package.</para>
+            /// </description></item>
+            /// <item><description><para>FatJar: The application is deployed by using a JAR package.</para>
+            /// </description></item>
+            /// <item><description><para>Image: The application is deployed by using an image.</para>
+            /// </description></item>
+            /// <item><description><para>If this parameter is empty, the application is not deployed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,12 +69,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: normal Docker cluster</description></item>
-            /// <item><description>1: Swarm cluster</description></item>
-            /// <item><description>2: ECS cluster</description></item>
-            /// <item><description>3: self-managed Kubernetes cluster in EDAS</description></item>
-            /// <item><description>4: cluster in which Pandora automatically registers applications</description></item>
-            /// <item><description>5: Container Service for Kubernetes (ACK) clusters</description></item>
+            /// <item><description><para>0: normal Docker cluster</para>
+            /// </description></item>
+            /// <item><description><para>1: Swarm cluster</para>
+            /// </description></item>
+            /// <item><description><para>2: ECS cluster</para>
+            /// </description></item>
+            /// <item><description><para>3: self-managed Kubernetes cluster in EDAS</para>
+            /// </description></item>
+            /// <item><description><para>4: cluster in which Pandora automatically registers applications</para>
+            /// </description></item>
+            /// <item><description><para>5: Container Service for Kubernetes (ACK) clusters</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

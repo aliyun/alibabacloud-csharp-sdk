@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 /// <summary>
                 /// <para>Indicates whether the data is Base64-encoded. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The data is Base64-encoded.</description></item>
-                /// <item><description>false: The data is not Base64-encoded.</description></item>
+                /// <item><description><para>true: The data is Base64-encoded.</para>
+                /// </description></item>
+                /// <item><description><para>false: The data is not Base64-encoded.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,11 +116,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     /// <summary>
                     /// <para>The state of the SSL certificate. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>normal: The SSL certificate is valid.</description></item>
-                    /// <item><description>invalid: The SSL certificate is invalid.</description></item>
-                    /// <item><description>expired: The SSL certificate has expired.</description></item>
-                    /// <item><description>not_yet_valid: The SSL certificate is currently invalid.</description></item>
-                    /// <item><description>about_to_expire: The SSL certificate is about to expire.</description></item>
+                    /// <item><description><para>normal: The SSL certificate is valid.</para>
+                    /// </description></item>
+                    /// <item><description><para>invalid: The SSL certificate is invalid.</para>
+                    /// </description></item>
+                    /// <item><description><para>expired: The SSL certificate has expired.</para>
+                    /// </description></item>
+                    /// <item><description><para>not_yet_valid: The SSL certificate is currently invalid.</para>
+                    /// </description></item>
+                    /// <item><description><para>about_to_expire: The SSL certificate is about to expire.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -319,8 +326,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 /// <summary>
                 /// <para>The type of the Secret. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Opaque: user-defined data</description></item>
-                /// <item><description>kubernetes.io/tls: Transport Layer Security (TLS) certificate</description></item>
+                /// <item><description><para>Opaque: user-defined data</para>
+                /// </description></item>
+                /// <item><description><para>kubernetes.io/tls: Transport Layer Security (TLS) certificate</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

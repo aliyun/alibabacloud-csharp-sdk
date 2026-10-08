@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the instance group.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</description></item>
-        /// <item><description>If this parameter is not specified, this operation queries the Tomcat configuration of the application.</description></item>
+        /// <item><description><para>If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is not specified, this operation queries the Tomcat configuration of the application.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class TransformClusterMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance that you want to import or migrate. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the ECS instances. Separate multiple IDs with a comma (,).</para>
         /// <list type="bullet">
-        /// <item><description>An instance may not belong to a cluster, but an instance can belong to only one cluster at most.</description></item>
-        /// <item><description>The ECS instances and the destination cluster must be in the same virtual private cloud (VPC).</description></item>
+        /// <item><description><para>The instances must be in the same VPC as the target cluster.</para>
+        /// </description></item>
+        /// <item><description><para>An instance can belong to only one cluster at a time.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The logon password of the ECS instance that you want to import or migrate to the cluster.</para>
+        /// <para>The logon password to set for the instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination cluster.</para>
+        /// <para>The ID of the target cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

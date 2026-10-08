@@ -72,8 +72,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The source of the data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>agent: Use this value if you use the service query feature of the latest version to pass the query result.</description></item>
-        /// <item><description>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</description></item>
+        /// <item><description><para>agent: Use this value if you use the service query feature of the latest version to pass the query result.</para>
+        /// </description></item>
+        /// <item><description><para>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,9 +158,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>dubbo: Dubbo service</description></item>
-        /// <item><description>springCloud: Spring Cloud service</description></item>
-        /// <item><description>hsf: High-speed Service Framework (HSF) service</description></item>
+        /// <item><description><para>dubbo: Dubbo service</para>
+        /// </description></item>
+        /// <item><description><para>springCloud: Spring Cloud service</para>
+        /// </description></item>
+        /// <item><description><para>hsf: High-speed Service Framework (HSF) service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

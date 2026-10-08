@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether the application was released in canary release mode.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The application was released in canary release mode.</description></item>
-            /// <item><description><c>false</c>: The application was not released in canary release mode</description></item>
+            /// <item><description><para><c>true</c>: The application was released in canary release mode.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The application was not released in canary release mode</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

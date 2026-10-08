@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ChangeDeployGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</para>
+        /// <para>The Elastic Compute Container (ECC) ID of the ECS instance whose group you want to change. Call the ListApplicationEcc operation to query the ECC ID of an application. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</para>
         /// <remarks>
-        /// <para>You can change the application instance group for only one ECS instance at a time.</para>
+        /// <para>You can change the group for only one ECS instance at a time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string EccInfo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly change the application instance group if the deployment package version of the ECC is different from that of the application instance group.</para>
+        /// <para>Specifies whether to force the change when the deployment package version of the ECC is different from the deployment package version of the application group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? ForceStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is <c>_DEFAULT_GROUP</c>. The name can be up to 64 characters in length.</para>
+        /// <para>The name of the application group, such as \<c>group_a\\</c> and \<c>group_b\\</c>. The GroupName for the default group is <c>_DEFAULT_GROUP</c>. The name can be up to 64 characters long.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

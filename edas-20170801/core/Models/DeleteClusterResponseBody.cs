@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Indicates whether the cluster is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The cluster is deleted.</description></item>
-        /// <item><description>false: The cluster is not deleted.</description></item>
+        /// <item><description><para>true: The cluster is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>false: The cluster is not deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

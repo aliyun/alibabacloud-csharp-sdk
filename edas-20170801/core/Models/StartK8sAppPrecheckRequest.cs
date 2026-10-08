@@ -54,10 +54,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <para>The ID of the application component. You can call the ListComponents operation to query application components. This parameter must be specified when the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</para>
         /// <para>Valid values for regular application component IDs:</para>
         /// <list type="bullet">
-        /// <item><description>4: Apache Tomcat 7.0.91</description></item>
-        /// <item><description>5: OpenJDK 1.8.x</description></item>
-        /// <item><description>6: OpenJDK 1.7.x</description></item>
-        /// <item><description>7: Apache Tomcat 8.5.42</description></item>
+        /// <item><description><para>4: Apache Tomcat 7.0.91</para>
+        /// </description></item>
+        /// <item><description><para>5: OpenJDK 1.8.x</para>
+        /// </description></item>
+        /// <item><description><para>6: OpenJDK 1.7.x</para>
+        /// </description></item>
+        /// <item><description><para>7: Apache Tomcat 8.5.42</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by Enterprise Distributed Application Service (EDAS), such as aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</para>
         /// 
@@ -71,9 +75,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:</para>
         /// <list type="bullet">
-        /// <item><description>name: the name of the Kubernetes ConfigMap or Secret.</description></item>
-        /// <item><description>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</description></item>
-        /// <item><description>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</description></item>
+        /// <item><description><para>name: the name of the Kubernetes ConfigMap or Secret.</para>
+        /// </description></item>
+        /// <item><description><para>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</para>
+        /// </description></item>
+        /// <item><description><para>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,9 +93,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:</para>
         /// <list type="bullet">
-        /// <item><description>mountPath: The mount path in the container. This parameter is required.</description></item>
-        /// <item><description>readOnly: (Optional) The mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</description></item>
-        /// <item><description>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</description></item>
+        /// <item><description><para>mountPath: The mount path in the container. This parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>readOnly: (Optional) The mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +121,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;name&quot;:&quot;appname&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;appconf&quot;,&quot;key&quot;:&quot;name&quot;}}}]</para>
+        /// <para>[
+        ///       {
+        ///             &quot;name&quot;: &quot;appname&quot;,
+        ///             &quot;valueFrom&quot;: {
+        ///                   &quot;configMapKeyRef&quot;: {
+        ///                         &quot;name&quot;: &quot;appconf&quot;
+        ///                   }
+        ///             }
+        ///       }
+        /// ]</para>
         /// </summary>
         [NameInMap("EnvFroms")]
         [Validation(Required=false)]
@@ -148,10 +167,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Proper parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering <c>&quot;&quot;</c> or <c>&quot;{}&quot;</c>. The following parameters are included in the configuration:</para>
         /// <list type="bullet">
-        /// <item><description>InitialHeapSize: the initial size of the heap memory.</description></item>
-        /// <item><description>MaxHeapSize: the maximum size of the heap memory.</description></item>
-        /// <item><description>CustomParams: the custom parameters, such as JVM -D parameters.</description></item>
-        /// <item><description>Other parameters: You can view the JSON structure submitted by the frontend.</description></item>
+        /// <item><description><para>InitialHeapSize: the initial size of the heap memory.</para>
+        /// </description></item>
+        /// <item><description><para>MaxHeapSize: the maximum size of the heap memory.</para>
+        /// </description></item>
+        /// <item><description><para>CustomParams: the custom parameters, such as JVM -D parameters.</para>
+        /// </description></item>
+        /// <item><description><para>Other parameters: You can view the JSON structure submitted by the frontend.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,9 +227,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The configurations that are used when the host files are mounted to the container on which the application is running. Example: <c>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}\\]</c>. Description:</para>
         /// <list type="bullet">
-        /// <item><description><c>nodePath</c>: the host path.</description></item>
-        /// <item><description><c>mountPath</c>: the path in the container.</description></item>
-        /// <item><description><c>type</c>: the mounting type.</description></item>
+        /// <item><description><para><c>nodePath</c>: the host path.</para>
+        /// </description></item>
+        /// <item><description><para><c>mountPath</c>: the path in the container.</para>
+        /// </description></item>
+        /// <item><description><para><c>type</c>: the mounting type.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -244,8 +270,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// </description></item>
         /// <item><description><para>mountPaths: the directory to which you want to mount the PVC. You can configure multiple directories. You can set the following two parameters for each mount directory:</para>
         /// <list type="bullet">
-        /// <item><description>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</description></item>
-        /// <item><description>readOnly: the mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</description></item>
+        /// <item><description><para>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</para>
+        /// </description></item>
+        /// <item><description><para>readOnly: the mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>

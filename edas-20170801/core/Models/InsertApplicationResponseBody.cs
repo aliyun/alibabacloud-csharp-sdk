@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the created application.</para>
+        /// <para>The application object that is returned after the application is created.</para>
         /// </summary>
         [NameInMap("ApplicationInfo")]
         [Validation(Required=false)]
         public InsertApplicationResponseBodyApplicationInfo ApplicationInfo { get; set; }
         public class InsertApplicationResponseBodyApplicationInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the application. The ID is the unique identifier of the application in EDAS.</para>
+            /// <para>The ID of the application. This ID is the unique identifier of an EDAS application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6c733bcd-6efb-47a1-8226-cf722c******</para>
@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether the application is a Docker application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The application is a Docker application.</description></item>
-            /// <item><description><b>false</b>: The application is not a Docker application.</description></item>
+            /// <item><description><para><b>true</b>: The application is a Docker application.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The application is not a Docker application.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public bool? Dockerize { get; set; }
 
             /// <summary>
-            /// <para>The owner of the application. The owner is the user who created the application.</para>
+            /// <para>The owner of the application. This is the user who created the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>249763358688********</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see <a href="https://help.aliyun.com/document_detail/149403.html">UpdateContainerConfiguration</a>.</para>
+            /// <para>The default port of the application is 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see <a href="https://help.aliyun.com/document_detail/149403.html">UpdateContainerConfiguration</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the application.</para>
+            /// <para>The user ID of the application owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tdy218@1362469756xxxxxx</para>
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The application name test-hsy-C5039-paas-6 had been created successfully.</para>

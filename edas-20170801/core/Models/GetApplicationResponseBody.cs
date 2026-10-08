@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the application.</para>
+        /// <para>The application information.</para>
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cfac****-847e-4325-ad56-b5c2bc54****</para>
@@ -27,14 +27,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The current status of the Kubernetes application, which is used to determine whether the application is in a stable state. If the application is in an unstable state, related configuration operations are prohibited. Valid values:</para>
+            /// <para>The current phase of the Kubernetes application. This helps determine if the application is stable. Configuration operations are prohibited when the application is in an unstable state.</para>
             /// <list type="bullet">
-            /// <item><description>ready: The application is in the ready state and can be changed.</description></item>
-            /// <item><description>progressive: The application is being changed.</description></item>
-            /// <item><description>pending: The application change is blocked.</description></item>
-            /// <item><description>failed: The application fails to be changed.</description></item>
+            /// <item><description><para>ready: The application is ready and can be changed.</para>
+            /// </description></item>
+            /// <item><description><para>progressing: The application is being changed.</para>
+            /// </description></item>
+            /// <item><description><para>pending: The application change is blocked.</para>
+            /// </description></item>
+            /// <item><description><para>failed: The application change failed.</para>
+            /// </description></item>
             /// </list>
-            /// <para>In these states, ready is a stable state and other states are unstable.</para>
+            /// <para>The ready phase is stable. Other phases are unstable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ready</para>
@@ -44,11 +48,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string AppPhase { get; set; }
 
             /// <summary>
-            /// <para>The deployment type of the application. Valid values:</para>
+            /// <para>The deployment type of the application:</para>
             /// <list type="bullet">
-            /// <item><description>War: The application is deployed by using a WAR package.</description></item>
-            /// <item><description>FatJar: The application is deployed by using a JAR package.</description></item>
-            /// <item><description>Empty: The application is not deployed.</description></item>
+            /// <item><description><para>War: The application is deployed from a WAR package.</para>
+            /// </description></item>
+            /// <item><description><para>FatJar: The application is deployed from a JAR package.</para>
+            /// </description></item>
+            /// <item><description><para>Empty: The application is not deployed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ApplicationType { get; set; }
 
             /// <summary>
-            /// <para>The build package number of Enterprise Distributed Application Service (EDAS) Container.</para>
+            /// <para>The ID of the container version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>59</para>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? BuildPackageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECS cluster in which the application is deployed.</para>
+            /// <para>The ID of the ECS cluster where the application is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5ffc5895-<b><b>-b03a-c223c6c3</b></b></para>
@@ -79,13 +86,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The type of the application cluster:</para>
             /// <list type="bullet">
-            /// <item><description>0: regular Docker cluster</description></item>
-            /// <item><description>1: Swarm cluster</description></item>
-            /// <item><description>2: ECS cluster</description></item>
-            /// <item><description>3: Kubernetes cluster</description></item>
-            /// <item><description>4: cluster in which Pandora automatically registers applications</description></item>
+            /// <item><description><para>0: A regular Docker cluster.</para>
+            /// </description></item>
+            /// <item><description><para>1: A Swarm cluster.</para>
+            /// </description></item>
+            /// <item><description><para>2: An ECS cluster.</para>
+            /// </description></item>
+            /// <item><description><para>3: A Kubernetes cluster.</para>
+            /// </description></item>
+            /// <item><description><para>4: A Pandora application cluster that supports automatic registration.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +118,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp when the application was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1610550324226</para>
@@ -126,10 +138,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application is a Docker application. Valid values:</para>
+            /// <para>Indicates whether the application is a Docker application:</para>
             /// <list type="bullet">
-            /// <item><description>false: The application is not a Docker application.</description></item>
-            /// <item><description>true: The application is a Docker application.</description></item>
+            /// <item><description><para>false: The application is not a Docker application.</para>
+            /// </description></item>
+            /// <item><description><para>true: The application is a Docker application.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,22 +154,24 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public bool? Dockerize { get; set; }
 
             /// <summary>
-            /// <para>The email address of the account.</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="mailto:xxxx@gmail.com">xxxx@gmail.com</a></para>
+            /// <para>****@***.com</para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the port health check is enabled. Valid values:</para>
+            /// <para>Indicates whether the port health check is enabled:</para>
             /// <list type="bullet">
-            /// <item><description>true: The port health check is enabled.</description></item>
-            /// <item><description>false: The port health check is disabled.</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disabled.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If the port health check is enabled, EDAS checks whether a port exists during application startup. If the port exists, the application is considered to have started.</para>
+            /// <para>If enabled, EDAS checks if the port is in use during application startup. If the port is in use, the application is considered started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -165,12 +181,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public bool? EnablePortCheck { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the URL health check is enabled. Valid values:</para>
+            /// <para>Indicates whether the URL health check is enabled:</para>
             /// <list type="bullet">
-            /// <item><description>true: The URL health check is enabled.</description></item>
-            /// <item><description>false: The URL health check is disabled.</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disabled.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If the URL health check is enabled, EDAS attempts to detect the specified URL during application startup. If EDAS detects the specified URL, the application is considered to have started.</para>
+            /// <para>If enabled, EDAS probes the specified URL during application startup. If the URL is accessible, the application is considered started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -180,7 +198,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public bool? EnableUrlCheck { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Internet-facing SLB instance that is bound to the application.</para>
+            /// <para>The ID of the public-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp1vceck3s3b9xs6x****</para>
@@ -190,7 +208,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ExtSlbId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the Internet-facing Server Load Balancer (SLB) instance that is bound to the application.</para>
+            /// <para>The public IP address of the SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.114.xxx.xx</para>
@@ -200,7 +218,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ExtSlbIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the Internet-facing SLB instance that is bound to the application.</para>
+            /// <para>The name of the public-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aa8eee383db084f42aebc4d9f52c****</para>
@@ -209,6 +227,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public string ExtSlbName { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the current user has management permissions on the application. This parameter is available only in RAM authentication mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("HaveManageAccess")]
             [Validation(Required=false)]
             public string HaveManageAccess { get; set; }
@@ -224,7 +248,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string HealthCheckUrl { get; set; }
 
             /// <summary>
-            /// <para>The number of instances deployed with the application.</para>
+            /// <para>The number of instances in the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -234,7 +258,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the application instance. Unit: MB.</para>
+            /// <para>The memory size for the application instance, in MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -264,7 +288,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string NameSpace { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the application.</para>
+            /// <para>The creator of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ouou@117274586608****</para>
@@ -284,7 +308,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the application is deployed.</para>
+            /// <para>The ID of the region where the application is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -293,12 +317,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekz****</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The number of running instances for the application.</para>
+            /// <para>The number of running application instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -308,7 +338,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? RunningInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the internal-facing SLB instance that is bound to the application.</para>
+            /// <para>The ID of the internal-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp<b><b>ck3s3b9xs6x</b></b></para>
@@ -318,7 +348,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbId { get; set; }
 
             /// <summary>
-            /// <para>The information about the internal-facing SLB instance that is bound to the application.</para>
+            /// <para>Information about the internal-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -328,17 +358,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbInfo { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the internal-facing SLB instance that is bound to the application.</para>
+            /// <para>The IP address of the internal-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.0.100</para>
+            /// <para>192.<em><b>.</b></em>.***</para>
             /// </summary>
             [NameInMap("SlbIp")]
             [Validation(Required=false)]
             public string SlbIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the internal-facing SLB instance that is bound to the application.</para>
+            /// <para>The name of the internal-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -348,7 +378,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SlbName { get; set; }
 
             /// <summary>
-            /// <para>The port of the internal-facing SLB instance that is bound to the application.</para>
+            /// <para>The port of the internal-facing SLB instance attached to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -367,6 +397,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// <para>The workload type used to create the application. Supported types are Deployment and StatefulSet. This parameter does not apply to ECS applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>StatefulSet</para>
+            /// </summary>
             [NameInMap("WorkloadType")]
             [Validation(Required=false)]
             public string WorkloadType { get; set; }
@@ -374,7 +410,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -384,7 +420,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -394,7 +430,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8DFGED-K98***************</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateK8sSlbRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. Call <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> to get this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster. You can query the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</para>
+        /// <para>The ID of the cluster. Call <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a> to get this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable listener configuration overriding.</para>
+        /// <para>Specifies whether to disable overwriting the SLB listener configuration.</para>
         /// <list type="bullet">
-        /// <item><description>true: disables listener configuration overriding.</description></item>
-        /// <item><description>false: enables listener configuration overriding.</description></item>
+        /// <item><description><para>true: Disables overwriting.</para>
+        /// </description></item>
+        /// <item><description><para>false: Allows overwriting.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? DisableForceOverride { get; set; }
 
         /// <summary>
-        /// <para>The frontend port. Valid values: 1 to 65535.</para>
+        /// <para>The frontend port. The value ranges from 1 to 65535.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -56,10 +58,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The scheduling algorithm for the SLB instance. If you do not specify this parameter, the default value rr is used. SLB supports the following scheduling algorithms: round-robin and weighted round-robin. Valid values:</para>
+        /// <para>The scheduling algorithm of the SLB instance. If you do not set this parameter, rr is used. The supported algorithms are round-robin (rr) and weighted round-robin (wrr).</para>
         /// <list type="bullet">
-        /// <item><description>wrr: weighted round-robin scheduling. Backend servers that have higher weights receive more requests than those that have lower weights.</description></item>
-        /// <item><description>rr: round-robin scheduling. Requests are sequentially distributed to backend servers.</description></item>
+        /// <item><description><para>Weighted round-robin (wrr): Backend servers with higher weights receive more requests.</para>
+        /// </description></item>
+        /// <item><description><para>Round-robin (rr): Requests are distributed to backend servers in sequence.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,13 +74,19 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// <para>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;lo adBalancerProtocol&quot;:&quot;HTTPS&quot;}]</para>
+        /// <para>This parameter is used for scenarios that involve multiple ports or protocols other than TCP. The value must be a JSON array. For example:
+        /// [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;loadBalancerProtocol&quot;:&quot;HTTPS&quot;}]</para>
         /// <list type="bullet">
-        /// <item><description>port: required. The frontend port. Valid values: 1 to 65535. Each port must be unique.</description></item>
-        /// <item><description>targetPort: required. The backend port. Valid values: 1 to 65535.</description></item>
-        /// <item><description>loadBalancerProtocol: required. Valid values: TCP and HTTPS. If the HTTP protocol is used, set this parameter to TCP.</description></item>
-        /// <item><description>certId: the ID of the certificate. This parameter is required if the HTTPS protocol is used. You can purchase an SLB instance in the SLB console.</description></item>
-        /// <item><description>Note: The ServicePortInfos parameter is specified to support multi-port mappings. If you want this parameter to take effect, make sure that you specify the AppId, ClusterId, Type, and SlbId parameters.</description></item>
+        /// <item><description><para>port: Required. The frontend port. The value ranges from 1 to 65535. Each port number must be unique.</para>
+        /// </description></item>
+        /// <item><description><para>targetPort: Required. The backend port. The value ranges from 1 to 65535.</para>
+        /// </description></item>
+        /// <item><description><para>loadBalancerProtocol: Required. Only TCP and HTTPS are supported. For HTTP listeners, set this parameter to TCP.</para>
+        /// </description></item>
+        /// <item><description><para>certId: This parameter is required for HTTPS listeners. It specifies the ID of a certificate that you can purchase in the SLB console.</para>
+        /// </description></item>
+        /// <item><description><para>Note: This parameter is used to support multiple ports and must be used with the appId, clusterId, type, and slbId parameters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlbName { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the SLB instance. Set the value to TCP.</para>
+        /// <para>The protocol of the SLB instance. Currently, only TCP is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -107,16 +117,22 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlbProtocol { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the SLB instance.</para>
+        /// <para>The specification of the SLB instance. The following specifications are supported:</para>
         /// <list type="bullet">
-        /// <item><description>slb.s1.small</description></item>
-        /// <item><description>slb.s2.small</description></item>
-        /// <item><description>slb.s2.medium</description></item>
-        /// <item><description>slb.s3.small</description></item>
-        /// <item><description>slb.s3.medium</description></item>
-        /// <item><description>slb.s3.large</description></item>
+        /// <item><description><para>slb.s1.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s2.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s2.medium</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.medium</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.large</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the default value slb.s1.small is used.</para>
+        /// <para>If you do not set this parameter, the default value is slb.s1.small.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slb.s1.small</para>
@@ -126,7 +142,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Specification { get; set; }
 
         /// <summary>
-        /// <para>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</para>
+        /// <para>The backend port, which is the service port of the application. The value ranges from 1 to 65535.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8082</para>
@@ -136,10 +152,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string TargetPort { get; set; }
 
         /// <summary>
-        /// <para>The type of the SLB instance. Valid values:</para>
+        /// <para>The type of the SLB instance.</para>
         /// <list type="bullet">
-        /// <item><description>Internet: an Internet-facing SLB instance</description></item>
-        /// <item><description>Intranet: an internal-facing SLB instance</description></item>
+        /// <item><description><para>Internet: An Internet-facing instance.</para>
+        /// </description></item>
+        /// <item><description><para>Intranet: An internal-facing instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

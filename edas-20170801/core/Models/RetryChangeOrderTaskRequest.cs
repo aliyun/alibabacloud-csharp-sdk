@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? RetryStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the process.</para>
+        /// <para>The ID of the change order task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

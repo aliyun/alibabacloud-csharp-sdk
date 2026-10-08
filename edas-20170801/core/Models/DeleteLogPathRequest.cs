@@ -23,11 +23,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The absolute path of the log directory that you want to remove. The value must start and end with a forward slash (<c>/</c>) and must contain <c>/log</c> or <c>/logs</c>. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</para>
         /// <list type="bullet">
-        /// <item><description>/home/admin/edas-container/logs/</description></item>
-        /// <item><description>/home/admin/taobao-tomcat-7.0.59/logs/</description></item>
-        /// <item><description>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</description></item>
-        /// <item><description>/home/admin/taobao-tomcat-production-7.0.70/logs/</description></item>
-        /// <item><description>/home/admin/edas-agent/logs/</description></item>
+        /// <item><description><para>/home/admin/edas-container/logs/</para>
+        /// </description></item>
+        /// <item><description><para>/home/admin/taobao-tomcat-7.0.59/logs/</para>
+        /// </description></item>
+        /// <item><description><para>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</para>
+        /// </description></item>
+        /// <item><description><para>/home/admin/taobao-tomcat-production-7.0.70/logs/</para>
+        /// </description></item>
+        /// <item><description><para>/home/admin/edas-agent/logs/</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

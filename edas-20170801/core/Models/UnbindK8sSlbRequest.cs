@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the SLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b>: Internet-facing SLB instance</description></item>
-        /// <item><description><b>intranet</b>: internal-facing SLB instance</description></item>
+        /// <item><description><para><b>internet</b>: Internet-facing SLB instance</para>
+        /// </description></item>
+        /// <item><description><para><b>intranet</b>: internal-facing SLB instance</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

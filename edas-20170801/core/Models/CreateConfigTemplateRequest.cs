@@ -32,12 +32,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The data format of the configuration template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>JSON: JSON format</description></item>
-        /// <item><description>XML: XML format</description></item>
-        /// <item><description>YAML: YAML format</description></item>
-        /// <item><description>Properties: .properties format</description></item>
-        /// <item><description>KeyValue: key-value pairs</description></item>
-        /// <item><description>Custom: custom format</description></item>
+        /// <item><description><para>JSON: JSON format</para>
+        /// </description></item>
+        /// <item><description><para>XML: XML format</para>
+        /// </description></item>
+        /// <item><description><para>YAML: YAML format</para>
+        /// </description></item>
+        /// <item><description><para>Properties: .properties format</para>
+        /// </description></item>
+        /// <item><description><para>KeyValue: key-value pairs</para>
+        /// </description></item>
+        /// <item><description><para>Custom: custom format</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

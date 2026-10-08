@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the elastic compute container (ECC) that corresponds to the Elastic Compute Service (ECS) instance on which you want to stop the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/149394.html">QueryApplicationStatus</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the application will be stopped on all ECS instances.</description></item>
+        /// <item><description><para>If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty, the application will be stopped on all ECS instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

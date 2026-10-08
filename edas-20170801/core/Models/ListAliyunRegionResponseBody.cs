@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The details of the regions.</para>
-        /// </summary>
         [NameInMap("RegionEntityList")]
         [Validation(Required=false)]
         public ListAliyunRegionResponseBodyRegionEntityList RegionEntityList { get; set; }
@@ -40,22 +37,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListAliyunRegionResponseBodyRegionEntityListRegionEntity> RegionEntity { get; set; }
             public class ListAliyunRegionResponseBodyRegionEntityListRegionEntity : TeaModel {
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China East 1 (Hangzhou)</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

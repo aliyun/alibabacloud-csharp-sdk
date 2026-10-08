@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class RestartK8sApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the change process.</para>
+        /// <para>The ID of the change process for this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*********-ed2ae98de18d</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status of the API call or a POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

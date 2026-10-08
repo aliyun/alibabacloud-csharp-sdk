@@ -26,9 +26,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public InsertSwimmingLaneGroupResponseBodyData Data { get; set; }
         public class InsertSwimmingLaneGroupResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The list of all applications that are related to the lane group.</para>
-            /// </summary>
             [NameInMap("ApplicationList")]
             [Validation(Required=false)]
             public InsertSwimmingLaneGroupResponseBodyDataApplicationList ApplicationList { get; set; }
@@ -37,22 +34,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public List<InsertSwimmingLaneGroupResponseBodyDataApplicationListApplication> Application { get; set; }
                 public class InsertSwimmingLaneGroupResponseBodyDataApplicationListApplication : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the application.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>bdb251cc-02a6-48dd-891b-2ab21b25****</para>
-                    /// </summary>
                     [NameInMap("AppId")]
                     [Validation(Required=false)]
                     public string AppId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the application.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test-app</para>
-                    /// </summary>
                     [NameInMap("AppName")]
                     [Validation(Required=false)]
                     public string AppName { get; set; }

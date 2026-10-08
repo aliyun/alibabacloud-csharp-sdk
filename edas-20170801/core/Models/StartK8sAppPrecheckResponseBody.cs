@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public class StartK8sAppPrecheckResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The jobs and the details about the jobs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Cluster health check.</para>
             /// </summary>
             [NameInMap("Jobs")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the application.</para>
+        /// <para>The application information.</para>
         /// </summary>
         [NameInMap("Applcation")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public GetK8sApplicationResponseBodyApplcationApp App { get; set; }
             public class GetK8sApplicationResponseBodyApplcationApp : TeaModel {
                 /// <summary>
-                /// <para>The annotation of an application pod.</para>
+                /// <para>The annotations of the application pod.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;test-annokey&quot;:&quot;test-annovalue&quot;}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Annotations { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+                /// <para>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00ee517d-dd7d-4d4e-<b><b>-</b></b></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string ApplicationName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the application.</para>
+                /// <para>The application type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>War</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string ApplicationType { get; set; }
 
                 /// <summary>
-                /// <para>The build package number of Enterprise Distributed Application Service (EDAS) Container.</para>
+                /// <para>The ID of the application build type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>57</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? BuildpackId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c37aec2a-bcca-4ec1-<b><b>-</b></b></para>
@@ -93,9 +93,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public string Cmd { get; set; }
 
-                /// <summary>
-                /// <para>The list of commands.</para>
-                /// </summary>
                 [NameInMap("CmdArgs")]
                 [Validation(Required=false)]
                 public GetK8sApplicationResponseBodyApplcationAppCmdArgs CmdArgs { get; set; }
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the cluster to which the container belongs.</para>
+                /// <para>The ID of the container cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c383bc813c1974e<b><b>451b50c0c8</b></b></para>
@@ -117,7 +114,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string CsClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The deployment type of the application. Example: Image.</para>
+                /// <para>The deployment type. The value is Image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Image</para>
@@ -127,11 +124,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string DeployType { get; set; }
 
                 /// <summary>
-                /// <para>The application type. Valid values:</para>
+                /// <para>The application type:</para>
                 /// <list type="bullet">
-                /// <item><description>General: native Java application</description></item>
-                /// <item><description>Pandora: Pandora application</description></item>
-                /// <item><description>Multilingual: multilingual application</description></item>
+                /// <item><description><para>General: a native Java application.</para>
+                /// </description></item>
+                /// <item><description><para>Pandora: a Pandora application.</para>
+                /// </description></item>
+                /// <item><description><para>Multilingual: a multilingual application.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string DevelopType { get; set; }
 
                 /// <summary>
-                /// <para>The version of EDAS Container.</para>
+                /// <para>The version of the EDAS container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.60.0</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string EdasContainerVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Empty List Protection feature is enabled for the application.</para>
+                /// <para>Indicates whether empty-push protection is enabled for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public bool? EnableEmptyPushReject { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Graceful Release feature is enabled for the application.</para>
+                /// <para>Indicates whether graceful start is enabled for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -171,9 +171,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public bool? EnableLosslessRule { get; set; }
 
-                /// <summary>
-                /// <para>The list of environment variables.</para>
-                /// </summary>
                 [NameInMap("EnvList")]
                 [Validation(Required=false)]
                 public GetK8sApplicationResponseBodyApplcationAppEnvList EnvList { get; set; }
@@ -182,22 +179,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     [Validation(Required=false)]
                     public List<GetK8sApplicationResponseBodyApplcationAppEnvListEnv> Env { get; set; }
                     public class GetK8sApplicationResponseBodyApplcationAppEnvListEnv : TeaModel {
-                        /// <summary>
-                        /// <para>The name of the environment variable.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>CATALINA_OPTS</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the environment variable.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>-Xmx 1024m -Dhsf.default.tid=false $(EDAS_CATALINA_OPTS)</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -207,12 +192,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 }
 
                 /// <summary>
-                /// <para>The feature annotations. Possible values:</para>
+                /// <para>The tags of advanced configurations for the current application. This parameter indicates the features that are enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>base.combination.edas: enables EDAS integrated management solution.</description></item>
-                /// <item><description>base.combination.arms: enables ARMS monitoring.</description></item>
-                /// <item><description>base.combination.mse: enables MSE microservices governance.</description></item>
-                /// <item><description>base.combination.none: enables lifecycle management.</description></item>
+                /// <item><description><para>base.combination.edas: the EDAS integrated management solution.</para>
+                /// </description></item>
+                /// <item><description><para>base.combination.arms: ARMS monitoring is enabled.</para>
+                /// </description></item>
+                /// <item><description><para>base.combination.mse: MSE is enabled.</para>
+                /// </description></item>
+                /// <item><description><para>base.combination.none: Only lifecycle management is enabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -233,7 +222,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? Instances { get; set; }
 
                 /// <summary>
-                /// <para>The number of application instances before the last auto scaling operation.</para>
+                /// <para>The number of application instances before the last scaling event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -243,7 +232,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? InstancesBeforeScaling { get; set; }
 
                 /// <summary>
-                /// <para>The namespace of the Kubernetes cluster.</para>
+                /// <para>The Kubernetes namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -253,7 +242,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string K8sNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The label of an application pod.</para>
+                /// <para>The labels of the application pod.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;test-labelkey&quot;:&quot;test-labelvalue&quot;}</para>
@@ -263,7 +252,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of CPU cores allowed. Unit: millicores. 1,000 millicores equal one CPU core.</para>
+                /// <para>The CPU limit. Unit: millicores. 1,000 millicores are equal to one CPU core.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -273,7 +262,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LimitCpuM { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</para>
+                /// <para>The limit of ephemeral storage resources. Unit: GB. A value of 0 indicates that no limit is set.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -283,7 +272,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string LimitEphemeralStorage { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of the memory allowed. Unit: MiB.</para>
+                /// <para>The memory limit. Unit: MiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -293,7 +282,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LimitMem { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.</para>
+                /// <para>Indicates whether the application, in graceful rolling deployment mode, is configured to complete service registration before it passes the readiness probe.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -303,7 +292,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public bool? LosslessRuleAligned { get; set; }
 
                 /// <summary>
-                /// <para>The delay of service registration. Unit: seconds.</para>
+                /// <para>The duration of delayed service registration that is configured for the application. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -313,7 +302,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LosslessRuleDelayTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of prefetching curves.</para>
+                /// <para>The service prefetch curve that is set for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -323,7 +312,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LosslessRuleFuncType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.</para>
+                /// <para>Indicates whether the application, in graceful rolling deployment mode, is configured to complete service prefetch before it passes the readiness probe.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -333,7 +322,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public bool? LosslessRuleRelated { get; set; }
 
                 /// <summary>
-                /// <para>The service prefetching duration. Unit: seconds.</para>
+                /// <para>The service prefetch duration that is set for the application. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -343,7 +332,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LosslessRuleWarmupTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -353,7 +342,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The number of requested CPU cores. Unit: millicores. 1,000 millicores equal one CPU core.</para>
+                /// <para>The number of CPU cores that are requested. Unit: millicores. 1,000 millicores are equal to one CPU core.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -363,7 +352,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? RequestCpuM { get; set; }
 
                 /// <summary>
-                /// <para>The size of space reserved for ephemeral storage resources. Unit: GB. Value 0 indicates that no limit is set on the space size.</para>
+                /// <para>The amount of ephemeral storage resources to reserve. Unit: GB. A value of 0 indicates that no limit is set.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -373,7 +362,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RequestEphemeralStorage { get; set; }
 
                 /// <summary>
-                /// <para>The size of the reserved memory. Unit: MiB.</para>
+                /// <para>The amount of memory that is reserved. Unit: MiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -382,12 +371,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public int? RequestMem { get; set; }
 
+                /// <summary>
+                /// <para>The SecurityContext properties of the application pod container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;runAsUser\&quot;:0,\&quot;runAsGroup\&quot;:0}</para>
+                /// </summary>
                 [NameInMap("SecurityContext")]
                 [Validation(Required=false)]
                 public string SecurityContext { get; set; }
 
                 /// <summary>
-                /// <para>The configuration information about the Server Load Balancer (SLB).</para>
+                /// <para>The SLB configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -430,7 +425,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string TomcatVersion { get; set; }
 
                 /// <summary>
-                /// <para>The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.</para>
+                /// <para>The type of the workload that is used to create the application. Valid values: Deployment and StatefulSet. If you leave this parameter empty, Deployment is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deployment</para>
@@ -442,7 +437,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+            /// <para>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a5281053-<b><b>-47a5-b2ab-5c0323de</b></b></para>
@@ -452,14 +447,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The configurations.</para>
+            /// <para>The configuration information.</para>
             /// </summary>
             [NameInMap("Conf")]
             [Validation(Required=false)]
             public GetK8sApplicationResponseBodyApplcationConf Conf { get; set; }
             public class GetK8sApplicationResponseBodyApplcationConf : TeaModel {
                 /// <summary>
-                /// <para>The affinity configuration of the pod.</para>
+                /// <para>The pod affinity configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{\&quot;nodeAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:{\&quot;nodeSelectorTerms\&quot;:[{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;beta.kubernetes.io/arch\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;arm64\&quot;,\&quot;arm32\&quot;]}]}]},\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:5,\&quot;preference\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;kubernetes.io/os\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;linux\&quot;]}]}}]},\&quot;podAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;kubernetes.io/hostname\&quot;}]},\&quot;podAntiAffinity\&quot;:{\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:15,\&quot;podAffinityTerm\&quot;:{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app-2\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;failure-domain.beta.kubernetes.io/zone\&quot;}}]}}&quot;</para>
@@ -469,7 +464,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Affinity { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the application is connected to Application High Availability Service (AHAS).</para>
+                /// <para>Indicates whether the application is connected to AHAS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -479,10 +474,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public bool? AhasEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the application instances are deployed across nodes.</para>
+                /// <para>Indicates whether to distribute application instances across multiple nodes:</para>
                 /// <list type="bullet">
-                /// <item><description>Value <c>true</c> indicates that the application instances are deployed across nodes.</description></item>
-                /// <item><description>Other values indicate that the application instances are not deployed across nodes.</description></item>
+                /// <item><description><para><c>true</c>: The application instances are distributed across multiple nodes.</para>
+                /// </description></item>
+                /// <item><description><para>Other values: The application instances are not distributed across multiple nodes.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -493,10 +490,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string DeployAcrossNodes { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the application instances are deployed across zones.</para>
+                /// <para>Indicates whether to distribute application instances across multiple zones:</para>
                 /// <list type="bullet">
-                /// <item><description>Value <c>true</c> indicates that the application instances are deployed across zones.</description></item>
-                /// <item><description>Other values indicate that the application instances are not deployed across zones.</description></item>
+                /// <item><description><para><c>true</c>: The application instances are distributed across multiple zones.</para>
+                /// </description></item>
+                /// <item><description><para>Other values: The application instances are not distributed across multiple zones.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -507,7 +506,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string DeployAcrossZones { get; set; }
 
                 /// <summary>
-                /// <para>The startup parameters for a JAR application. This parameter is deprecated.</para>
+                /// <para>The startup parameters of the JAR package. This parameter is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-lh</para>
@@ -517,7 +516,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string JarStartArgs { get; set; }
 
                 /// <summary>
-                /// <para>The startup options for a JAR application. This parameter is deprecated.</para>
+                /// <para>The startup options of the JAR package. This parameter is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-h</para>
@@ -547,7 +546,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string K8sCmdArgs { get; set; }
 
                 /// <summary>
-                /// <para>The information about the local storage.</para>
+                /// <para>The local storage information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</para>
@@ -557,7 +556,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string K8sLocalvolumeInfo { get; set; }
 
                 /// <summary>
-                /// <para>The information about the File Storage NAS (NAS) storage.</para>
+                /// <para>The NAS storage information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;nasPath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</para>
@@ -567,7 +566,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string K8sNasInfo { get; set; }
 
                 /// <summary>
-                /// <para>The information about the storage.</para>
+                /// <para>The storage information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{\&quot;hostPaths\&quot;:\&quot;[]\&quot;,\&quot;emptyDirs\&quot;:\&quot;[]\&quot;}&quot;</para>
@@ -577,7 +576,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string K8sVolumeInfo { get; set; }
 
                 /// <summary>
-                /// <para>The information about the liveness check on the container.</para>
+                /// <para>The information about the liveness probe of the Kubernetes container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</para>
@@ -587,7 +586,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Liveness { get; set; }
 
                 /// <summary>
-                /// <para>The script executed after the container is started.</para>
+                /// <para>The information about the post-start execution of the Kubernetes container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</para>
@@ -597,7 +596,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string PostStart { get; set; }
 
                 /// <summary>
-                /// <para>The script executed before the container is stopped.</para>
+                /// <para>The information about the pre-stop execution of the Kubernetes container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</para>
@@ -607,7 +606,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string PreStop { get; set; }
 
                 /// <summary>
-                /// <para>The information about the readiness check on the container.</para>
+                /// <para>The information about the readiness probe of the Kubernetes container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}\]}}</para>
@@ -617,7 +616,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Readiness { get; set; }
 
                 /// <summary>
-                /// <para>The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.</para>
+                /// <para>The pod runtime class. This parameter is applicable only to clusters that use sandboxed containers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>runc</para>
@@ -627,7 +626,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RuntimeClassName { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling tolerance configuration of the pod.</para>
+                /// <para>The pod scheduling toleration configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;[{\&quot;key\&quot;:\&quot;edas-taint-key2\&quot;,\&quot;operator\&quot;:\&quot;Exists\&quot;,\&quot;effect\&quot;:\&quot;NoExecute\&quot;,\&quot;tolerationSeconds\&quot;:50},{\&quot;key\&quot;:\&quot;edas-taint-key\&quot;,\&quot;operator\&quot;:\&quot;Equal\&quot;,\&quot;value\&quot;:\&quot;edas-taint-value\&quot;,\&quot;effect\&quot;:\&quot;PreferNoSchedule\&quot;}]&quot;</para>
@@ -637,7 +636,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Tolerations { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.</para>
+                /// <para>The URL of the base image. This parameter is configured when a custom OpenJDK runtime is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>openjdk:8u302</para>
@@ -648,9 +647,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
             }
 
-            /// <summary>
-            /// <para>The information about the instance group in which the application is deployed.</para>
-            /// </summary>
             [NameInMap("DeployGroups")]
             [Validation(Required=false)]
             public GetK8sApplicationResponseBodyApplcationDeployGroups DeployGroups { get; set; }
@@ -659,9 +655,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public List<GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup> DeployGroup { get; set; }
                 public class GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup : TeaModel {
-                    /// <summary>
-                    /// <para>The information about the component.</para>
-                    /// </summary>
                     [NameInMap("Components")]
                     [Validation(Required=false)]
                     public GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponents Components { get; set; }
@@ -670,32 +663,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         [Validation(Required=false)]
                         public List<GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents> Components { get; set; }
                         public class GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents : TeaModel {
-                            /// <summary>
-                            /// <para>The component ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>5</para>
-                            /// </summary>
                             [NameInMap("ComponentId")]
                             [Validation(Required=false)]
                             public string ComponentId { get; set; }
 
-                            /// <summary>
-                            /// <para>The keyword that is included in the component name.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>Open JDK 8</para>
-                            /// </summary>
                             [NameInMap("ComponentKey")]
                             [Validation(Required=false)]
                             public string ComponentKey { get; set; }
 
-                            /// <summary>
-                            /// <para>The component type. Valid values:</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>JDK</para>
-                            /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
@@ -704,22 +679,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The environment variable. This parameter is different from the EnvList parameter. This parameter specifies the referenced configuration of the ConfigMap or Secret.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>&quot;[&quot;{\&quot;name\&quot;:\&quot;test1\&quot;,\&quot;valueFrom\&quot;:{\&quot;configMapKeyRef\&quot;:{\&quot;name\&quot;:\&quot;edas-demo-configmap\&quot;,\&quot;key\&quot;:\&quot;key1\&quot;}}}&quot;,&quot;{\&quot;name\&quot;:\&quot;k2\&quot;,\&quot;value\&quot;:\&quot;v2\&quot;}&quot;,&quot;{\&quot;name\&quot;:\&quot;s1\&quot;,\&quot;valueFrom\&quot;:{\&quot;secretKeyRef\&quot;:{\&quot;name\&quot;:\&quot;edas-demo-secret\&quot;,\&quot;key\&quot;:\&quot;k1\&quot;}}}&quot;]&quot;</para>
-                    /// </summary>
                     [NameInMap("Env")]
                     [Validation(Required=false)]
                     public string Env { get; set; }
 
-                    /// <summary>
-                    /// <para>The source of the environment variable.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>[{&quot;configMapRef&quot;:{&quot;name&quot;:&quot;test-cm&quot;}}]</para>
-                    /// </summary>
                     [NameInMap("EnvFrom")]
                     [Validation(Required=false)]
                     public string EnvFrom { get; set; }
@@ -729,7 +692,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The information about the image.</para>
+            /// <para>The image information.</para>
             /// </summary>
             [NameInMap("ImageInfo")]
             [Validation(Required=false)]
@@ -743,7 +706,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string ImageUrl { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the image repository.</para>
+                /// <para>The ID of the region where the image is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -773,7 +736,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the image repository belongs.</para>
+                /// <para>The namespace of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edas-server****-user</para>
@@ -783,7 +746,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RepoNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The source type of the image repository.</para>
+                /// <para>The type of the source of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALI_HUB</para>
@@ -812,7 +775,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public GetK8sApplicationResponseBodyApplcationLatestVersion LatestVersion { get; set; }
             public class GetK8sApplicationResponseBodyApplcationLatestVersion : TeaModel {
                 /// <summary>
-                /// <para>The version of the deployment package.</para>
+                /// <para>The version number of the deployment package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20200720</para>
@@ -822,7 +785,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string PackageVersion { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</para>
+                /// <para>The URL of the deployment package. This parameter is required for applications that are deployed using a FatJar or WAR package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></para>
@@ -832,7 +795,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Url { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</para>
+                /// <para>The URL of the deployment package. This parameter is required for applications that are deployed using a FatJar or WAR package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></para>
@@ -846,7 +809,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -856,7 +819,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -866,7 +829,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1053-08e4-47a5-b2ab-5c0323de7b5a</para>

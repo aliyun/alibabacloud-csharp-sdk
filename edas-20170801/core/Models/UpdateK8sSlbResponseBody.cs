@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateK8sSlbResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the change process.</para>
+        /// <para>The ID of the change order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9a1dcdee-<b><b>-</b></b>-ad37-cbf9dc91fba9</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

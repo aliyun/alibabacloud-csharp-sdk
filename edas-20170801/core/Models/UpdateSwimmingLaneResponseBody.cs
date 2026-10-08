@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateSwimmingLaneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateSwimmingLaneResponseBodyData Data { get; set; }
         public class UpdateSwimmingLaneResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The rule of the lane.</para>
+            /// <para>The rule of the swimming lane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:true,\&quot;path\&quot;:\&quot;/traffictest\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;testheadervalue\&quot;,\&quot;name\&quot;:\&quot;testheader\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;testheadervalue\&quot;}]}]&quot;</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string EntryRule { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lane group.</para>
+            /// <para>The ID of the swimming lane group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>171</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lane.</para>
+            /// <para>The ID of the swimming lane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>321</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the lane.</para>
+            /// <para>The name of the swimming lane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-swimlane</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The list of associations between the lane and the related application.</para>
+            /// <para>A list of relationships between applications and the swimming lane.</para>
             /// </summary>
             [NameInMap("SwimmingLaneAppRelationShipList")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the lane.</para>
+                /// <para>The ID of the swimming lane.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>321</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// <para>The tag of the lane.</para>
+            /// <para>The tag of the swimming lane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2cb6b8a</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6CB46AEA-309C-5041-9EC7-FCF4478F****</para>

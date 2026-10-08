@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The import status of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The cluster is imported.</description></item>
-            /// <item><description>2: The cluster fails to be imported.</description></item>
-            /// <item><description>3: The cluster is being imported.</description></item>
-            /// <item><description>4: The cluster is deleted.</description></item>
-            /// <item><description>0: The cluster is not imported.</description></item>
+            /// <item><description><para>1: The cluster is imported.</para>
+            /// </description></item>
+            /// <item><description><para>2: The cluster fails to be imported.</para>
+            /// </description></item>
+            /// <item><description><para>3: The cluster is being imported.</para>
+            /// </description></item>
+            /// <item><description><para>4: The cluster is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>0: The cluster is not imported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,12 +61,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: regular Docker cluster</description></item>
-            /// <item><description>1: Swarm cluster</description></item>
-            /// <item><description>2: Elastic Compute Service (ECS) cluster</description></item>
-            /// <item><description>3: self-managed Kubernetes cluster in EDAS</description></item>
-            /// <item><description>4: cluster in which Pandora automatically registers applications</description></item>
-            /// <item><description>5: ACK cluster</description></item>
+            /// <item><description><para>0: regular Docker cluster</para>
+            /// </description></item>
+            /// <item><description><para>1: Swarm cluster</para>
+            /// </description></item>
+            /// <item><description><para>2: Elastic Compute Service (ECS) cluster</para>
+            /// </description></item>
+            /// <item><description><para>3: self-managed Kubernetes cluster in EDAS</para>
+            /// </description></item>
+            /// <item><description><para>4: cluster in which Pandora automatically registers applications</para>
+            /// </description></item>
+            /// <item><description><para>5: ACK cluster</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,8 +165,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The network type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: classic network</description></item>
-            /// <item><description>2: virtual private cloud (VPC)</description></item>
+            /// <item><description><para>1: classic network</para>
+            /// </description></item>
+            /// <item><description><para>2: virtual private cloud (VPC)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,10 +191,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The overcommit ratio supported by a Docker cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: 1:1, which means that resources are not overcommitted.</description></item>
-            /// <item><description>2: 1:2, which means that resources are overcommitted by 1:2.</description></item>
-            /// <item><description>4: 1:4, which means that resources are overcommitted by 1:4.</description></item>
-            /// <item><description>8: 1:8, which means that resources are overcommitted by 1:8.</description></item>
+            /// <item><description><para>1: 1:1, which means that resources are not overcommitted.</para>
+            /// </description></item>
+            /// <item><description><para>2: 1:2, which means that resources are overcommitted by 1:2.</para>
+            /// </description></item>
+            /// <item><description><para>4: 1:4, which means that resources are overcommitted by 1:4.</para>
+            /// </description></item>
+            /// <item><description><para>8: 1:8, which means that resources are overcommitted by 1:8.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

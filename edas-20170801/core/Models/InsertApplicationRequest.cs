@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_) and must start with a letter. The name can be up to 36 characters in length.</para>
+        /// <para>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_). It must start with a letter and can be up to 36 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>The build package number of EDAS Container. This parameter is required if you create a High-Speed Service Framework (HSF) application. You can query the build package number by using one of the following methods:</para>
+        /// <para>The build package number of EDAS-Container. This parameter is required when you create a High-speed Service Framework (HSF) application. You can obtain the build package number in one of the following ways:</para>
         /// <list type="bullet">
-        /// <item><description>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</description></item>
-        /// <item><description>Obtain the value in the <b>Build package number</b> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic.</description></item>
+        /// <item><description><para>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</para>
+        /// </description></item>
+        /// <item><description><para>Obtain the build package number from the <b>Build Package Number</b> column in the <a href="https://help.aliyun.com/document_detail/92614.html">Container versions</a> table.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? BuildPackId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS cluster in which you want to create the application. If you specify an ID, the application is created in the specified ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.</para>
+        /// <para>The ID of the ECS cluster. Specify this parameter to create the application in a specific ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13136119-f384-4f50-b76e-xxxxxxxxxxx</para>
@@ -45,16 +47,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see <a href="https://help.aliyun.com/document_detail/97502.html">ListComponents</a>.</para>
-        /// <para>This parameter is required if the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</para>
-        /// <para>Valid values for common application components:</para>
+        /// <para>The ID of the application component. You can call the ListComponents operation to query the component ID. For more information, see <a href="https://help.aliyun.com/document_detail/97502.html">ListComponents</a>.</para>
+        /// <para>This parameter is required if the application runs in an Apache Tomcat container (for Dubbo applications that are deployed in a WAR package) or a standard Java application runtime environment (for Spring Boot or Spring Cloud applications that are deployed in a JAR package).</para>
+        /// <para>The following application component IDs are commonly used:</para>
         /// <list type="bullet">
-        /// <item><description>4: Apache Tomcat 7.0.91</description></item>
-        /// <item><description>7: Apache Tomcat 8.5.42</description></item>
-        /// <item><description>5: OpenJDK 1.8.x</description></item>
-        /// <item><description>6: OpenJDK 1.7.x</description></item>
+        /// <item><description><para>4: Apache Tomcat 7.0.91</para>
+        /// </description></item>
+        /// <item><description><para>7: Apache Tomcat 8.5.42</para>
+        /// </description></item>
+        /// <item><description><para>5: OpenJDK 1.8.x</para>
+        /// </description></item>
+        /// <item><description><para>6: OpenJDK 1.7.x</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by EDAS, for example, aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</para>
+        /// <para>To set this parameter, you must update the Java or Python software development kit (SDK) to version 2.57.3 or later. If you do not use an EDAS SDK, such as aliyun-python-sdk-core, aliyun-java-sdk-core, or Alibaba Cloud CLI, you can set this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ComponentIds { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores that can be used by the application container in a Swarm cluster. \<em>\<em>This parameter is deprecated.\</em>\</em></para>
+        /// <para>\<em>\</em>(Deprecated)\<em>\</em> The number of CPU cores for the application container in a Swarm cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The value of <c>ecu_id</c> of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of <c>ecu_id</c> with commas (,). You can call the ListScaleOutEcu operation to query the value of <c>ecu_id</c>. For more information, see <a href="https://help.aliyun.com/document_detail/149371.html">ListScaleOutEcu</a>.</para>
+        /// <para>The \<c>ecu_id\\</c> of the ECS instance to which you want to scale out the application. The \<c>ecu_id\\</c> is the unique ID of an ECS instance that is imported to EDAS. To specify multiple \<c>ecu_id\\</c>s, separate them with commas (,). You can call the ListScaleOutEcu operation to query the \<c>ecu_id\\</c>. For more information, see <a href="https://help.aliyun.com/document_detail/149371.html">ListScaleOutEcu</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>07bd417a-b863-477d-<b><b>-</b></b>********</para>
@@ -96,8 +102,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable the port health check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enable the port health check.</description></item>
-        /// <item><description><b>false</b>: does not enable the port health check.</description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,10 +116,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? EnablePortCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the URL health check. Valid values:</para>
+        /// <para>Specifies whether to enable the health check URL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the URL health check.</description></item>
-        /// <item><description><b>false</b>: does not enable the URL health check.</description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +142,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string HealthCheckUrl { get; set; }
 
         /// <summary>
-        /// <para>The script to mount. Set the value in the JSON format. Example: <c>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;postdeleteInstanceDataOnScaleIn&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestopInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststopInstance&quot;,&quot;script&quot;:&quot;&quot;}]</c></para>
+        /// <para>The configuration of the mounted script. The value is a JSON string. Example:
+        /// <c>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;postdeleteInstanceDataOnScaleIn&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestopInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststopInstance&quot;,&quot;script&quot;:&quot;&quot;}]</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;}]</para>
@@ -142,7 +153,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Hooks { get; set; }
 
         /// <summary>
-        /// <para>The version of the Java Development Kit (JDK) used to deploy the application. **This parameter is deprecated.</para>
+        /// <para><b>(Deprecated)</b> The version of the Java Development Kit (JDK) that the application uses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -162,10 +173,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string JvmOptions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose <b>Resource Management</b> &gt; <b>Microservice Namespaces</b> in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</para>
+        /// <para>The ID of the microservices namespace. In the EDAS console, choose <b>Resource Management</b> &gt; <b>Microservices Namespace</b> in the navigation pane on the left to view the ID of the microservices namespace. You can also call the ListUserDefineRegion operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required if the cluster you specify is not deployed in the default microservices namespace. Otherwise, the message <c>application regionId is different with cluster regionId!</c> appears.</description></item>
-        /// <item><description>If the cluster you specify is deployed in the default microservices namespace, you do not need to specify this parameter. Set this parameter to the ID of the microservices namespace in which the cluster you specify is deployed.</description></item>
+        /// <item><description><para>If the specified cluster is not in the default microservices namespace, you must specify this parameter. Otherwise, the \<c>application regionId is different with cluster regionId!\\</c> error is reported.</para>
+        /// </description></item>
+        /// <item><description><para>If the cluster is in the default microservices namespace, you do not need to specify this parameter. The microservices namespace of the application must be the same as the microservices namespace of the specified cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,7 +199,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? MaxHeapSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the permanent generation heap memory. Unit: MB.</para>
+        /// <para>The size of the permanent generation memory. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -196,7 +209,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? MaxPermSize { get; set; }
 
         /// <summary>
-        /// <para>The memory size that can be used by the application container in a Swarm cluster. \<em>\<em>This parameter is deprecated.\</em>\</em></para>
+        /// <para>\<em>\</em>(Deprecated)\<em>\</em> The memory size for the application container in a Swarm cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -216,7 +229,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? MinHeapSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the application deployment package. Valid values: war and jar.</para>
+        /// <para>The format of the application deployment package. Valid values: war and jar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>war</para>
@@ -226,7 +239,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The reserved port for the application. This parameter is deprecated.</para>
+        /// <para>\<em>\</em>(Deprecated)\<em>\</em> The reserved port of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8090</para>
@@ -246,7 +259,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The version of Apache Tomcat. **This parameter is deprecated.</para>
+        /// <para><b>(Deprecated)</b> The version of Apache Tomcat.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

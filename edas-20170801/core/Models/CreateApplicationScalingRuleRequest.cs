@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class CreateApplicationScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplicationlink</a>.</para>
+        /// <para>The application ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Configure custom elastic behavior, refer to the example for specific data structure.</para>
+        /// <para>The configuration for custom scaling behaviors. For more information about the data structure, see the example.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -53,10 +53,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingBehaviour { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the auto scaling policy. Valid values:</para>
+        /// <para>Specifies whether to enable the Auto Scaling rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the auto scaling policy.</description></item>
-        /// <item><description><b>false</b>: disables the auto scaling policy.</description></item>
+        /// <item><description><para><b>true</b>: enables the rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables the rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleMetric { get; set; }
 
         /// <summary>
-        /// <para>The name of the auto scaling policy. The name must start with a lowercase letter, and can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters in length.</para>
+        /// <para>The name of the Auto Scaling rule. The name must start with a lowercase letter. It can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu-trigger</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleTimer { get; set; }
 
         /// <summary>
-        /// <para>The trigger policy for the auto scaling policy. Set the value in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional information about request parameters.</para>
+        /// <para>The trigger policy. Set this parameter to a JSON string of the ScalingRuleTriggerDTO object. For more information about the format, see Additional information about request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ScalingRuleTriggerDTO{......}</para>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingRuleTrigger { get; set; }
 
         /// <summary>
-        /// <para>The type of the auto scaling policy. Set the value to <b>trigger</b>.</para>
+        /// <para>The type of the Auto Scaling rule. Only the <b>trigger</b> type is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trigger</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <para>The type of the logging service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Log Service</para>
+            /// <para>SLS log service</para>
             /// </summary>
             [NameInMap("ConsumerSide")]
             [Validation(Required=false)]
@@ -96,8 +96,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The source of logs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Standard output: stdout.log</description></item>
-            /// <item><description>File log: the directory that stores logs</description></item>
+            /// <item><description><para>Standard output: stdout.log</para>
+            /// </description></item>
+            /// <item><description><para>File log: the directory that stores logs</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

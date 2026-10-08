@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of data that is collected by Log Service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>file: the file type</description></item>
-        /// <item><description>stdout: the standard output type</description></item>
+        /// <item><description><para>file: the file type</para>
+        /// </description></item>
+        /// <item><description><para>stdout: the standard output type</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

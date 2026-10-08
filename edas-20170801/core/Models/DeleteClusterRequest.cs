@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the cluster ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</description></item>
-        /// <item><description>1: specifies the ID of the ACK cluster.</description></item>
+        /// <item><description><para>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</para>
+        /// </description></item>
+        /// <item><description><para>1: specifies the ID of the ACK cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

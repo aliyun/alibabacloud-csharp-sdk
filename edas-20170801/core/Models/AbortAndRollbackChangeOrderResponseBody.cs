@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AbortAndRollbackChangeOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the change process.</para>
+        /// <para>The information about the change order.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AbortAndRollbackChangeOrderResponseBodyData Data { get; set; }
         public class AbortAndRollbackChangeOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the change process.</para>
+            /// <para>The ID of the change order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4f40e616-cdcd-4250-a018-efd459******</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The error code that is returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace.</para>
+        /// <para>The ID of the call chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210f07bf1640239405712621******</para>

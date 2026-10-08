@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The namespaces.</para>
-        /// </summary>
         [NameInMap("RegionEntityList")]
         [Validation(Required=false)]
         public QueryMigrateRegionListResponseBodyRegionEntityList RegionEntityList { get; set; }
@@ -40,22 +37,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<QueryMigrateRegionListResponseBodyRegionEntityListRegionEntity> RegionEntity { get; set; }
             public class QueryMigrateRegionListResponseBodyRegionEntityListRegionEntity : TeaModel {
-                /// <summary>
-                /// <para>The name of the namespace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Beta</para>
-                /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]
                 public string RegionName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the namespace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-beijing:beta</para>
-                /// </summary>
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }

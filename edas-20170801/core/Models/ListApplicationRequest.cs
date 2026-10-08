@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The application IDs.</para>
+        /// <para>The list of application IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. Specify this parameter if you want to filter applications by application name.</para>
+        /// <para>Filters the application list by application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testapp</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. Specify this parameter if you want to filter applications by cluster.</para>
+        /// <para>Filters the application list by cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c37aec2a-bcca-4ec1-<b><b>-</b></b>********</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The number of the page to return in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. Specify this parameter if you want to filter applications by namespace.</para>
+        /// <para>Filters the application list by microservices namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string LogicalRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace that you use in the exact search to filter applications.</para>
+        /// <para>Filters applications by exact match of the microservices namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string LogicalRegionIdFilter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. Specify this parameter if you want to filter applications by resource group.</para>
+        /// <para>Filters the application list by resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek24j4s4b*****</para>

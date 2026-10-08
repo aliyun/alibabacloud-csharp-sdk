@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to remove all existing tags from the specified resources. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: removes all existing tags from the specified resources.</description></item>
-        /// <item><description><b>false</b>: does not remove all existing tags from the specified resources.</description></item>
+        /// <item><description><para><b>true</b>: removes all existing tags from the specified resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not remove all existing tags from the specified resources.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>All existing tags of a resource are removed only if the <b>tagKeys</b> parameter is left empty and the <b>DeleteAll</b> parameter is set to true.</para>
@@ -51,8 +53,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>application</b>: Enterprise Distributed Application Service (EDAS) application</description></item>
-        /// <item><description><b>cluster</b>: EDAS cluster</description></item>
+        /// <item><description><para><b>application</b>: Enterprise Distributed Application Service (EDAS) application</para>
+        /// </description></item>
+        /// <item><description><para><b>cluster</b>: EDAS cluster</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

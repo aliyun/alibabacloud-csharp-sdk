@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to release the next batch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: releases the next batch.</description></item>
-        /// <item><description>false: does not release the next batch.</description></item>
+        /// <item><description><para>true: releases the next batch.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not release the next batch.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

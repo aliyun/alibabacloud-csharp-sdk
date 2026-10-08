@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ConvertK8sResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</para>
+        /// <para>The ID of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource that is used. Set the value to deployment.</para>
+        /// <para>The resource type. Only deployment is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

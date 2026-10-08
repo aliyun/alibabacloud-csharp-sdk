@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Indicates whether the resources are synchronized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The resources are synchronized.</description></item>
-        /// <item><description><b>false</b>: The resources fail to be synchronized.</description></item>
+        /// <item><description><para><b>true</b>: The resources are synchronized.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The resources fail to be synchronized.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

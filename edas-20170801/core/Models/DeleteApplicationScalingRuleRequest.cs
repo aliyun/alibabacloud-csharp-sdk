@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteApplicationScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>The ID of the application. Call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the auto scaling policy.</para>
+        /// <para>The name of the scaling rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu-trigger</para>

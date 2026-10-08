@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether remote debugging is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Remote debugging is enabled.</description></item>
-            /// <item><description>false: Remote debugging is disabled.</description></item>
+            /// <item><description><para>true: Remote debugging is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Remote debugging is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,8 +95,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The ID of the namespace.</para>
             /// <list type="bullet">
-            /// <item><description>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:tdy218.</description></item>
-            /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</description></item>
+            /// <item><description><para>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:tdy218.</para>
+            /// </description></item>
+            /// <item><description><para>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

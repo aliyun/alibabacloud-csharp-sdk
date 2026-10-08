@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class BindSlbRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EDAS application.</para>
+        /// <para>The ID of the Enterprise Distributed Application Service (EDAS) application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The listener port for the SLB instance.</para>
+        /// <para>The listener port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -53,10 +53,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlbIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the SLB instance. Valid values:</para>
+        /// <para>The network type of the SLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>internet: Internet-facing SLB instance</description></item>
-        /// <item><description>intranet: internal-facing SLB instance</description></item>
+        /// <item><description><para>internet: an Internet-facing instance.</para>
+        /// </description></item>
+        /// <item><description><para>intranet: an internal-facing instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

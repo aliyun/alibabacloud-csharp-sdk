@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the Kubernetes cluster. Valid values:</para>
+        /// <para>The type of the Kubernetes cluster:</para>
         /// <list type="bullet">
-        /// <item><description>5: ACK cluster</description></item>
-        /// <item><description>7: self-managed Kubernetes cluster</description></item>
+        /// <item><description><para>5: an ACK cluster.</para>
+        /// </description></item>
+        /// <item><description><para>7: a self-managed Kubernetes cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The number of the page to return for a paged query. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 1000.</para>
+        /// <para>The number of entries to return on each page for a paged query. The default value is 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,10 +57,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string RegionTag { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the cluster. Valid values:</para>
+        /// <para>The subtype of the cluster:</para>
         /// <list type="bullet">
-        /// <item><description>Ask: Serverless Kubernetes cluster</description></item>
-        /// <item><description>ManagedKubernetes: ACK cluster</description></item>
+        /// <item><description><para>Ask: an ASK cluster.</para>
+        /// </description></item>
+        /// <item><description><para>ManagedKubernetes: an ACK cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

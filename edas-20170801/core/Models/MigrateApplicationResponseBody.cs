@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
-    public class RetryChangeOrderTaskResponseBody : TeaModel {
+    public class MigrateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the API call or a POP error code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Information about the retry.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>success retry task</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
-        /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,14 +30,23 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4823-bhjf-23u4-eiufh</para>
+        /// <para>The API information.</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("data")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public MigrateApplicationResponseBodyData Data { get; set; }
+        public class MigrateApplicationResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The migration ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a3de82d7-83a4-4cca-8d1e-63f87651ce78</para>
+            /// </summary>
+            [NameInMap("migrationId")]
+            [Validation(Required=false)]
+            public string MigrationId { get; set; }
+
+        }
 
     }
 

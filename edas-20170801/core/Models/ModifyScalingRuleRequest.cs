@@ -44,8 +44,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The relationship among the conditions that trigger a scale-in.</para>
         /// <list type="bullet">
-        /// <item><description>OR: one of the conditions</description></item>
-        /// <item><description>AND: all conditions</description></item>
+        /// <item><description><para>OR: one of the conditions</para>
+        /// </description></item>
+        /// <item><description><para>AND: all conditions</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,8 +80,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to allow scale-ins.</para>
         /// <list type="bullet">
-        /// <item><description>true: allows scale-ins.</description></item>
-        /// <item><description>false: does not allow scale-ins.</description></item>
+        /// <item><description><para>true: allows scale-ins.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not allow scale-ins.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,8 +146,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The multi-zone scaling policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIORITY: The vSwitch that is first selected has the highest priority.</description></item>
-        /// <item><description>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</description></item>
+        /// <item><description><para>PRIORITY: The vSwitch that is first selected has the highest priority.</para>
+        /// </description></item>
+        /// <item><description><para>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,8 +172,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The relationship among the conditions that trigger a scale-out.</para>
         /// <list type="bullet">
-        /// <item><description>OR: one of the conditions</description></item>
-        /// <item><description>AND: all conditions</description></item>
+        /// <item><description><para>OR: one of the conditions</para>
+        /// </description></item>
+        /// <item><description><para>AND: all conditions</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -250,8 +258,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The source of the instance to be added during a scale-out. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NEW: elastic resources</description></item>
-        /// <item><description>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</description></item>
+        /// <item><description><para>NEW: elastic resources</para>
+        /// </description></item>
+        /// <item><description><para>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</para>
+        /// </description></item>
         /// </list>
         /// <para>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</para>
         /// 
@@ -265,8 +275,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The instance handling mode during a scale-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>release: When a scale-in is performed, instances that are no longer used are released.</description></item>
-        /// <item><description>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</description></item>
+        /// <item><description><para>release: When a scale-in is performed, instances that are no longer used are released.</para>
+        /// </description></item>
+        /// <item><description><para>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

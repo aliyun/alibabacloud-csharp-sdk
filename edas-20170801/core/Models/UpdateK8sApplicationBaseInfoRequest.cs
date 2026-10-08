@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <para>The owner of the application. The value can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Tom</para>
+        /// <para>John Doe</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]

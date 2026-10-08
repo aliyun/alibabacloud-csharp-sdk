@@ -23,12 +23,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the namespace.</para>
         /// <list type="bullet">
-        /// <item><description>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:tdy218.</description></item>
-        /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</description></item>
+        /// <item><description><para>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:tdy218.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing or cn-beijing:tdy218</para>
+        /// <para>Cn-beijing or cn-beijing:tdy218</para>
         /// </summary>
         [NameInMap("LogicalRegionId")]
         [Validation(Required=false)]

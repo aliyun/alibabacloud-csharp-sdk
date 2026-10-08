@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetSecureTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the namespace, such as cn-beijing or cn-beijing:prod````.</para>
+        /// <para>The ID of the namespace, such as cn-beijing or cn-beijing:prod\<c>\\</c>\<c>\\</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

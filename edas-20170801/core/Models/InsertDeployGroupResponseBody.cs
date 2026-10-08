@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The version of the deployment package for the application.</para>
             /// <list type="bullet">
-            /// <item><description>If the application is deployed, a string of random numbers is returned.</description></item>
-            /// <item><description>If the application is not deployed, the return value is empty.</description></item>
+            /// <item><description><para>If the application is deployed, a string of random numbers is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the application is not deployed, the return value is empty.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,9 +85,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The type of the instance group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: the default group.</description></item>
-            /// <item><description>1: a group for which canary traffic management is not enabled.</description></item>
-            /// <item><description>2: a group for which canary traffic management is enabled.</description></item>
+            /// <item><description><para>0: the default group.</para>
+            /// </description></item>
+            /// <item><description><para>1: a group for which canary traffic management is not enabled.</para>
+            /// </description></item>
+            /// <item><description><para>2: a group for which canary traffic management is enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,8 +113,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The version of the deployment package that was used to deploy an application in the instance group.</para>
             /// <list type="bullet">
-            /// <item><description>If an application is deployed in the instance group, a string of random numbers is returned.</description></item>
-            /// <item><description>If no application is deployed in the instance group, the return value is empty.</description></item>
+            /// <item><description><para>If an application is deployed in the instance group, a string of random numbers is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If no application is deployed in the instance group, the return value is empty.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

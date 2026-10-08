@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to return the information about the node in which the pod resides.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: returns the information about the node in which the pod resides</description></item>
-        /// <item><description><c>false</c>: does not return the information about the node in which the pod resides</description></item>
+        /// <item><description><para><c>true</c>: returns the information about the node in which the pod resides</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: does not return the information about the node in which the pod resides</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

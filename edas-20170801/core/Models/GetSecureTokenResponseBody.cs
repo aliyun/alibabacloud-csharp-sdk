@@ -139,8 +139,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The type of the Microservices Engine (MSE) registry.</para>
             /// <list type="bullet">
-            /// <item><description>default: the shared registry of EDAS</description></item>
-            /// <item><description>exclusive_mse: MSE Nacos registry</description></item>
+            /// <item><description><para>default: the shared registry of EDAS</para>
+            /// </description></item>
+            /// <item><description><para>exclusive_mse: MSE Nacos registry</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

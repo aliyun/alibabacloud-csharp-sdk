@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The data of the Secret. The value must be a JSON array that contains the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Key: Secret key</description></item>
-        /// <item><description>Value: Secret value</description></item>
+        /// <item><description><para>Key: Secret key</para>
+        /// </description></item>
+        /// <item><description><para>Value: Secret value</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,8 +88,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the Secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Opaque: user-defined data type</description></item>
-        /// <item><description>kubernetes.io/tls: Transport Layer Security (TLS) certificate type</description></item>
+        /// <item><description><para>Opaque: user-defined data type</para>
+        /// </description></item>
+        /// <item><description><para>kubernetes.io/tls: Transport Layer Security (TLS) certificate type</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

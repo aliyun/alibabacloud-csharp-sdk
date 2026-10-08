@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the namespace.</para>
         /// <list type="bullet">
-        /// <item><description>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: <c>cn-beijing:test</c>.</description></item>
-        /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: <c>cn-beijing</c>.</description></item>
+        /// <item><description><para>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: <c>cn-beijing:test</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of the default namespace is in the <c>region ID</c> format. Example: <c>cn-beijing</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

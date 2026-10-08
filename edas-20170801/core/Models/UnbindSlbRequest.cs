@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the configured listeners. Valid values:</para>
+        /// <para>Specifies whether to delete the listener.</para>
         /// <list type="bullet">
-        /// <item><description>true: removes the configured listeners.</description></item>
-        /// <item><description>false: does not remove the configured listeners.</description></item>
+        /// <item><description><para>true: Delete the listener.</para>
+        /// </description></item>
+        /// <item><description><para>false: Do not delete the listener.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,10 +48,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlbId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the SLB instance. Valid values:</para>
+        /// <para>The network type of the SLB instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b>: Internet-facing SLB instance</description></item>
-        /// <item><description><b>intranet</b>: internal-facing SLB instance</description></item>
+        /// <item><description><para><b>internet</b>: an internet-facing instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>intranet</b>: an internal-facing instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

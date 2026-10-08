@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable remote debugging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables remote debugging.</description></item>
-        /// <item><description>false: disables remote debugging.</description></item>
+        /// <item><description><para>true: enables remote debugging.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables remote debugging.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +69,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the namespace.</para>
         /// <list type="bullet">
-        /// <item><description>The ID of a custom namespace is in the <c>Region ID:Namespace identifier</c> format. Example: cn-beijing:tdy218.</description></item>
-        /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</description></item>
+        /// <item><description><para>The ID of a custom namespace is in the <c>Region ID:Namespace identifier</c> format. Example: cn-beijing:tdy218.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,8 +86,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the registry.</para>
         /// <list type="bullet">
-        /// <item><description>default: the shared registry of Enterprise Distributed Application Service (EDAS)</description></item>
-        /// <item><description>exclusive_mse: a Microservices Engine (MSE) registry</description></item>
+        /// <item><description><para>default: the shared registry of Enterprise Distributed Application Service (EDAS)</para>
+        /// </description></item>
+        /// <item><description><para>exclusive_mse: a Microservices Engine (MSE) registry</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

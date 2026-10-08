@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AbortAndRollbackChangeOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the change process.</para>
+        /// <para>The ID of the change order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

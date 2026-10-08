@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>application</b>: Enterprise Distributed Application Service (EDAS) application</description></item>
-        /// <item><description><b>cluster</b>: EDAS cluster</description></item>
+        /// <item><description><para><b>application</b>: Enterprise Distributed Application Service (EDAS) application</para>
+        /// </description></item>
+        /// <item><description><para><b>cluster</b>: EDAS cluster</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,10 +51,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The key-value pairs. When you set this parameter, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>You can add up to 20 tags to a resource.</description></item>
-        /// <item><description>The tag key cannot start with <b>aliyun</b> or <b>acs:</b>. It cannot contain <b>http://</b> or <b>https://</b>.</description></item>
-        /// <item><description>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</description></item>
-        /// <item><description>Set this parameter to a JSON array.</description></item>
+        /// <item><description><para>You can add up to 20 tags to a resource.</para>
+        /// </description></item>
+        /// <item><description><para>The tag key cannot start with <b>aliyun</b> or <b>acs:</b>. It cannot contain <b>http\://</b> or <b>https\://</b>.</para>
+        /// </description></item>
+        /// <item><description><para>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</para>
+        /// </description></item>
+        /// <item><description><para>Set this parameter to a JSON array.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

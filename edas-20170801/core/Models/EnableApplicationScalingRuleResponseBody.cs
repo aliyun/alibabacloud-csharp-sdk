@@ -127,8 +127,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>Indicates whether the auto scaling policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The auto scaling policy is enabled.</description></item>
-            /// <item><description><b>false</b>: The auto scaling policy is disabled.</description></item>
+            /// <item><description><para><b>true</b>: The auto scaling policy is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The auto scaling policy is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

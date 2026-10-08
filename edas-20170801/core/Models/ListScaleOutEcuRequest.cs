@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the application. Specify this parameter if you want to query the available ECUs in the cluster where the application is deployed.</para>
         /// <remarks>
-        /// <para> Specify at least one of the ClusterId and AppId parameters as the query parameter.</para>
+        /// <para>Specify at least one of the ClusterId and AppId parameters as the query parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,8 +68,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The ID of the namespace.</para>
         /// <list type="bullet">
-        /// <item><description>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:test.</description></item>
-        /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</description></item>
+        /// <item><description><para>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: cn-beijing:test.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of the default namespace is in the <c>region ID</c> format. Example: cn-beijing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

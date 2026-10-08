@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListSlbRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the IP addresses. Valid values:</para>
+        /// <para>The address type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Internet: Users can connect to the SLB instance over the Internet.</description></item>
-        /// <item><description>Intranet: Users can connect to the SLB instance over the internal network.</description></item>
+        /// <item><description>Internet: public address.</description></item>
+        /// <item><description>Intranet: private network address.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The type of the SLB instance. Valid values:</para>
+        /// <para>The SLB type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>clb: Classic Load Balancer (CLB)</description></item>
-        /// <item><description>alb: Application Load Balancer (ALB)</description></item>
+        /// <item><description>clb: classic load balancing.</description></item>
+        /// <item><description>alb: application load balancing.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string SlbType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1f90rfybszjogyw****</para>
