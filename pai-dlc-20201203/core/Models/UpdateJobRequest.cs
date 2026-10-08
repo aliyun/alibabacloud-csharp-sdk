@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateJobRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</para>
+        /// <para>The visibility of the node can only be expanded, not reduced. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: visible to all users in the workspace.</description></item>
+        /// <item><description>PUBLIC: Visible to everyone in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The job specification definition.</para>
+        /// <para>The node specifications.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job. Valid values: 1 to 9.</para>
+        /// <para>The priority of the node. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description>1: the lowest priority.</description></item>
-        /// <item><description>9: the highest priority.</description></item>
+        /// <item><description>1: lowest priority.</description></item>
+        /// <item><description>9: highest priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
