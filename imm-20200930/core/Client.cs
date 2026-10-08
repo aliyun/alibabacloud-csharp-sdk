@@ -22,25 +22,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-beijing-gov-1", "imm-vpc.cn-beijing-gov-1.aliyuncs.com"},
-                {"us-west-1", "imm.us-west-1.aliyuncs.com"},
-                {"us-east-1", "imm.us-east-1.aliyuncs.com"},
-                {"eu-west-1", "imm.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "imm.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "imm.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "imm.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "imm.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "imm.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "imm.cn-qingdao.aliyuncs.com"},
-                {"cn-north-2-gov-1", "imm.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-hongkong", "imm.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "imm.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "imm.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "imm.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "imm.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-5", "imm.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-2", "imm.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "imm.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "imm.ap-south-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("imm", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -810,7 +791,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face clusters.</para>
+        /// <para>Retrieves person clusters and their information in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -866,7 +847,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face clusters.</para>
+        /// <para>Retrieves person clusters and their information in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -922,7 +903,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face clusters.</para>
+        /// <para>Retrieves person clusters and their information in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -940,7 +921,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face clusters.</para>
+        /// <para>Retrieves person clusters and their information in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -958,15 +939,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// <para>Retrieves the metadata of multiple indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the example. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1031,15 +1012,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// <para>Retrieves the metadata of multiple indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the example. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1104,15 +1085,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// <para>Retrieves the metadata of multiple indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the example. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1131,15 +1112,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// <para>Retrieves the metadata of multiple indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the example. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1958,21 +1939,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves semantically similar documents. The operation is designed for multi-turn conversations and can process message input in historical conversations. The operation returns results that are highly related to the current conversation based on an in-depth understanding of contextual content. It provides consistent and efficient information retrieval in multi-turn conversations.</para>
+        /// <para>Retrieves semantically similar documents for multi-turn conversation scenarios by processing message inputs that include conversation history. By deeply parsing context information, this operation ensures that the retrieval results are highly relevant to the current conversation and provides consistent and efficient information retrieval services for complex interactive environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/zh/imm/product-overview/billable-items?spm=openapi-amp.newDocPublishment.0.0.1ecd281fi27Zgk">价格</a>。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-createbinding?spm=a2c4g.11186623.0.0.a3d76f44xJrOnF">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-indexfilemeta?spm=a2c4g.11186623.help-menu-search-62354.d_0">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta?spm=a2c4g.11186623.help-menu-62354.d_5_2_4_2_1_1.f1d86f44iBs3QZ">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/zh/imm/user-guide/workflow-templates-and-operators?spm=a2c4g.11186623.0.0.a3d775abr3hDFp">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请使用钉钉搜索钉钉群号 21714099 加入钉钉群进行反馈。</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billable-items">pricing</a> of Intelligent Media Management before you call this operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using the binding method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createbinding">CreateBinding</a>) or the active indexing method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-indexfilemeta">IndexFileMeta</a> or <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Based on different <a href="https://www.alibabacloud.com/help/en/imm/user-guide/workflow-templates-and-operators">workflow template configurations</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, search for the DingTalk group number 21714099 in DingTalk to join the group and provide feedback.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>历史对话长度最长限制为 100，包括用户消息和助手消息。</description></item>
-        /// <item><description>每条消息长度不超过 1000 个汉字。</description></item>
+        /// <item><description>The maximum length of the conversation history is 100, including user messages and assistant messages.</description></item>
+        /// <item><description>The length of each message cannot exceed 1,000 Chinese characters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2043,21 +2024,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves semantically similar documents. The operation is designed for multi-turn conversations and can process message input in historical conversations. The operation returns results that are highly related to the current conversation based on an in-depth understanding of contextual content. It provides consistent and efficient information retrieval in multi-turn conversations.</para>
+        /// <para>Retrieves semantically similar documents for multi-turn conversation scenarios by processing message inputs that include conversation history. By deeply parsing context information, this operation ensures that the retrieval results are highly relevant to the current conversation and provides consistent and efficient information retrieval services for complex interactive environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/zh/imm/product-overview/billable-items?spm=openapi-amp.newDocPublishment.0.0.1ecd281fi27Zgk">价格</a>。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-createbinding?spm=a2c4g.11186623.0.0.a3d76f44xJrOnF">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-indexfilemeta?spm=a2c4g.11186623.help-menu-search-62354.d_0">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta?spm=a2c4g.11186623.help-menu-62354.d_5_2_4_2_1_1.f1d86f44iBs3QZ">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/zh/imm/user-guide/workflow-templates-and-operators?spm=a2c4g.11186623.0.0.a3d775abr3hDFp">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请使用钉钉搜索钉钉群号 21714099 加入钉钉群进行反馈。</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billable-items">pricing</a> of Intelligent Media Management before you call this operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using the binding method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createbinding">CreateBinding</a>) or the active indexing method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-indexfilemeta">IndexFileMeta</a> or <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Based on different <a href="https://www.alibabacloud.com/help/en/imm/user-guide/workflow-templates-and-operators">workflow template configurations</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, search for the DingTalk group number 21714099 in DingTalk to join the group and provide feedback.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>历史对话长度最长限制为 100，包括用户消息和助手消息。</description></item>
-        /// <item><description>每条消息长度不超过 1000 个汉字。</description></item>
+        /// <item><description>The maximum length of the conversation history is 100, including user messages and assistant messages.</description></item>
+        /// <item><description>The length of each message cannot exceed 1,000 Chinese characters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2128,21 +2109,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves semantically similar documents. The operation is designed for multi-turn conversations and can process message input in historical conversations. The operation returns results that are highly related to the current conversation based on an in-depth understanding of contextual content. It provides consistent and efficient information retrieval in multi-turn conversations.</para>
+        /// <para>Retrieves semantically similar documents for multi-turn conversation scenarios by processing message inputs that include conversation history. By deeply parsing context information, this operation ensures that the retrieval results are highly relevant to the current conversation and provides consistent and efficient information retrieval services for complex interactive environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/zh/imm/product-overview/billable-items?spm=openapi-amp.newDocPublishment.0.0.1ecd281fi27Zgk">价格</a>。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-createbinding?spm=a2c4g.11186623.0.0.a3d76f44xJrOnF">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-indexfilemeta?spm=a2c4g.11186623.help-menu-search-62354.d_0">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta?spm=a2c4g.11186623.help-menu-62354.d_5_2_4_2_1_1.f1d86f44iBs3QZ">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/zh/imm/user-guide/workflow-templates-and-operators?spm=a2c4g.11186623.0.0.a3d775abr3hDFp">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请使用钉钉搜索钉钉群号 21714099 加入钉钉群进行反馈。</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billable-items">pricing</a> of Intelligent Media Management before you call this operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using the binding method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createbinding">CreateBinding</a>) or the active indexing method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-indexfilemeta">IndexFileMeta</a> or <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Based on different <a href="https://www.alibabacloud.com/help/en/imm/user-guide/workflow-templates-and-operators">workflow template configurations</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, search for the DingTalk group number 21714099 in DingTalk to join the group and provide feedback.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>历史对话长度最长限制为 100，包括用户消息和助手消息。</description></item>
-        /// <item><description>每条消息长度不超过 1000 个汉字。</description></item>
+        /// <item><description>The maximum length of the conversation history is 100, including user messages and assistant messages.</description></item>
+        /// <item><description>The length of each message cannot exceed 1,000 Chinese characters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2161,21 +2142,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves semantically similar documents. The operation is designed for multi-turn conversations and can process message input in historical conversations. The operation returns results that are highly related to the current conversation based on an in-depth understanding of contextual content. It provides consistent and efficient information retrieval in multi-turn conversations.</para>
+        /// <para>Retrieves semantically similar documents for multi-turn conversation scenarios by processing message inputs that include conversation history. By deeply parsing context information, this operation ensures that the retrieval results are highly relevant to the current conversation and provides consistent and efficient information retrieval services for complex interactive environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/zh/imm/product-overview/billable-items?spm=openapi-amp.newDocPublishment.0.0.1ecd281fi27Zgk">价格</a>。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-createbinding?spm=a2c4g.11186623.0.0.a3d76f44xJrOnF">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-indexfilemeta?spm=a2c4g.11186623.help-menu-search-62354.d_0">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/zh/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta?spm=a2c4g.11186623.help-menu-62354.d_5_2_4_2_1_1.f1d86f44iBs3QZ">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/zh/imm/user-guide/workflow-templates-and-operators?spm=a2c4g.11186623.0.0.a3d775abr3hDFp">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请使用钉钉搜索钉钉群号 21714099 加入钉钉群进行反馈。</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billable-items">pricing</a> of Intelligent Media Management before you call this operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using the binding method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createbinding">CreateBinding</a>) or the active indexing method (<a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-indexfilemeta">IndexFileMeta</a> or <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-batchindexfilemeta">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Based on different <a href="https://www.alibabacloud.com/help/en/imm/user-guide/workflow-templates-and-operators">workflow template configurations</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, search for the DingTalk group number 21714099 in DingTalk to join the group and provide feedback.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>历史对话长度最长限制为 100，包括用户消息和助手消息。</description></item>
-        /// <item><description>每条消息长度不超过 1000 个汉字。</description></item>
+        /// <item><description>The maximum length of the conversation history is 100, including user messages and assistant messages.</description></item>
+        /// <item><description>The length of each message cannot exceed 1,000 Chinese characters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2858,18 +2839,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</para>
+        /// <para>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</b>
+        /// <notice>Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b><remarks>
-        /// <para>Notice: The completion time of asynchronous tasks is not guaranteed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>File format: Only point cloud files in the PCD format are supported.</description></item>
-        /// <item><description>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <c>TaskId</c>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</description></item>
+        /// <item><description>File format limit: Only point cloud files in PCD format are supported.</description></item>
+        /// <item><description>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <c>TaskId</c> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2982,18 +2961,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</para>
+        /// <para>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</b>
+        /// <notice>Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b><remarks>
-        /// <para>Notice: The completion time of asynchronous tasks is not guaranteed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>File format: Only point cloud files in the PCD format are supported.</description></item>
-        /// <item><description>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <c>TaskId</c>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</description></item>
+        /// <item><description>File format limit: Only point cloud files in PCD format are supported.</description></item>
+        /// <item><description>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <c>TaskId</c> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3106,18 +3083,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</para>
+        /// <para>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</b>
+        /// <notice>Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b><remarks>
-        /// <para>Notice: The completion time of asynchronous tasks is not guaranteed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>File format: Only point cloud files in the PCD format are supported.</description></item>
-        /// <item><description>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <c>TaskId</c>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</description></item>
+        /// <item><description>File format limit: Only point cloud files in PCD format are supported.</description></item>
+        /// <item><description>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <c>TaskId</c> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3136,18 +3111,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</para>
+        /// <para>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</b>
+        /// <notice>Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b><remarks>
-        /// <para>Notice: The completion time of asynchronous tasks is not guaranteed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>File format: Only point cloud files in the PCD format are supported.</description></item>
-        /// <item><description>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <c>TaskId</c>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</description></item>
+        /// <item><description>File format limit: Only point cloud files in PCD format are supported.</description></item>
+        /// <item><description>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <c>TaskId</c> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3408,10 +3381,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Dataset names must be unique within the same project.</description></item>
-        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
-        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>The dataset name must be unique within a project.</description></item>
+        /// <item><description>The number of datasets that you can create is limited. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the limit.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3502,10 +3475,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Dataset names must be unique within the same project.</description></item>
-        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
-        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>The dataset name must be unique within a project.</description></item>
+        /// <item><description>The number of datasets that you can create is limited. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the limit.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3596,10 +3569,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Dataset names must be unique within the same project.</description></item>
-        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
-        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>The dataset name must be unique within a project.</description></item>
+        /// <item><description>The number of datasets that you can create is limited. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the limit.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3624,10 +3597,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Dataset names must be unique within the same project.</description></item>
-        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
-        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>The dataset name must be unique within a project.</description></item>
+        /// <item><description>The number of datasets that you can create is limited. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the limit.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5176,9 +5149,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</b> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</description></item>
-        /// <item><description>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
-        /// <para>Notice: Asynchronous tasks do not guarantee timeliness..</para>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and</b> <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">pricing</a> <b>of Intelligent Media Management (IMM). Fees are charged for highlight extraction and media processing.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that an available project exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
+        /// <para>Notice: Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5301,9 +5274,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</b> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</description></item>
-        /// <item><description>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
-        /// <para>Notice: Asynchronous tasks do not guarantee timeliness..</para>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and</b> <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">pricing</a> <b>of Intelligent Media Management (IMM). Fees are charged for highlight extraction and media processing.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that an available project exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
+        /// <para>Notice: Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5426,9 +5399,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</b> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</description></item>
-        /// <item><description>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
-        /// <para>Notice: Asynchronous tasks do not guarantee timeliness..</para>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and</b> <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">pricing</a> <b>of Intelligent Media Management (IMM). Fees are charged for highlight extraction and media processing.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that an available project exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
+        /// <para>Notice: Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5455,9 +5428,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</b> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</description></item>
-        /// <item><description>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
-        /// <para>Notice: Asynchronous tasks do not guarantee timeliness..</para>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and</b> <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">pricing</a> <b>of Intelligent Media Management (IMM). Fees are charged for highlight extraction and media processing.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that an available project exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<remarks>
+        /// <para>Notice: Asynchronous tasks do not guarantee timeliness.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7523,10 +7496,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Project names must be unique within the same region.</para>
+        /// <para>The project name must be unique within a region.</para>
         /// <list type="bullet">
-        /// <item><description>The number of projects that can be created is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for DingTalk group 88490020073 to join the group and submit a request.</description></item>
-        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources:<list type="bullet">
+        /// <item><description>The number of projects you can create is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for the DingTalk group number 88490020073 in DingTalk to join the group and apply for an increase.</description></item>
+        /// <item><description>After you create a project, you can continue to create other Intelligent Media Management (IMM) resources:<list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
@@ -7626,10 +7599,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Project names must be unique within the same region.</para>
+        /// <para>The project name must be unique within a region.</para>
         /// <list type="bullet">
-        /// <item><description>The number of projects that can be created is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for DingTalk group 88490020073 to join the group and submit a request.</description></item>
-        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources:<list type="bullet">
+        /// <item><description>The number of projects you can create is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for the DingTalk group number 88490020073 in DingTalk to join the group and apply for an increase.</description></item>
+        /// <item><description>After you create a project, you can continue to create other Intelligent Media Management (IMM) resources:<list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
@@ -7729,10 +7702,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Project names must be unique within the same region.</para>
+        /// <para>The project name must be unique within a region.</para>
         /// <list type="bullet">
-        /// <item><description>The number of projects that can be created is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for DingTalk group 88490020073 to join the group and submit a request.</description></item>
-        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources:<list type="bullet">
+        /// <item><description>The number of projects you can create is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for the DingTalk group number 88490020073 in DingTalk to join the group and apply for an increase.</description></item>
+        /// <item><description>After you create a project, you can continue to create other Intelligent Media Management (IMM) resources:<list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
@@ -7762,10 +7735,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Project names must be unique within the same region.</para>
+        /// <para>The project name must be unique within a region.</para>
         /// <list type="bullet">
-        /// <item><description>The number of projects that can be created is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for DingTalk group 88490020073 to join the group and submit a request.</description></item>
-        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources:<list type="bullet">
+        /// <item><description>The number of projects you can create is limited. By default, you can create up to 100 projects. To increase the quota, submit a ticket or search for the DingTalk group number 88490020073 in DingTalk to join the group and apply for an increase.</description></item>
+        /// <item><description>After you create a project, you can continue to create other Intelligent Media Management (IMM) resources:<list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
@@ -12090,14 +12063,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// <para>Retrieves the metadata of a media file, including media format information and media stream information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12154,14 +12127,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// <para>Retrieves the metadata of a media file, including media format information and media stream information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12218,14 +12191,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// <para>Retrieves the metadata of a media file, including media format information and media stream information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12244,14 +12217,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// <para>Retrieves the metadata of a media file, including media format information and media stream information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12846,16 +12819,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// <para>Queries the extracted file metadata, including fields such as the file name, tags, path, and custom tags. The metadata of a file is returned if the value of at least one field in the file metadata matches the specified string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
-        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
+        /// <item><description>For the fields that participate in the search, refer to the <a href="https://help.aliyun.com/document_detail/2743991.html">list of supported fields and operators</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12932,16 +12905,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// <para>Queries the extracted file metadata, including fields such as the file name, tags, path, and custom tags. The metadata of a file is returned if the value of at least one field in the file metadata matches the specified string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
-        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
+        /// <item><description>For the fields that participate in the search, refer to the <a href="https://help.aliyun.com/document_detail/2743991.html">list of supported fields and operators</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13018,16 +12991,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// <para>Queries the extracted file metadata, including fields such as the file name, tags, path, and custom tags. The metadata of a file is returned if the value of at least one field in the file metadata matches the specified string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
-        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
+        /// <item><description>For the fields that participate in the search, refer to the <a href="https://help.aliyun.com/document_detail/2743991.html">list of supported fields and operators</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13046,16 +13019,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// <para>Queries the extracted file metadata, including fields such as the file name, tags, path, and custom tags. The metadata of a file is returned if the value of at least one field in the file metadata matches the specified string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
-        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
+        /// <item><description>For the fields that participate in the search, refer to the <a href="https://help.aliyun.com/document_detail/2743991.html">list of supported fields and operators</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13074,32 +13047,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</para>
+        /// <para>Creates a just-in-time transcoding playlist that generates an M3U8 file from a video file, enables instant playback after playlist generation, and performs on-demand transcoding based on playback progress. Compared with offline transcoding, this significantly reduces transcoding wait time and greatly lowers transcoding and storage costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</b></para>
-        /// </description></item>
-        /// <item><description><para>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</para>
-        /// </description></item>
-        /// <item><description><para>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</para>
-        /// <remarks>
-        /// <para>Notice: 
-        /// The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description><para>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</para>
-        /// </description></item>
-        /// <item><description><para>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</para>
-        /// </description></item>
-        /// <item><description><para>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</para>
-        /// </description></item>
-        /// <item><description><para>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</para>
-        /// </description></item>
+        /// <item><description><b>Before using this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before invoking this operation, make sure that an active project exists in the current region. For details, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+        /// <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain a video stream.</notice></description></item>
+        /// <item><description>This operation requires the source video to have a minimum duration of approximately 0.x seconds, which varies depending on the output frame rate.</description></item>
+        /// <item><description>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</description></item>
+        /// <item><description>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameter to obtain the transcoding task result through message notifications.</description></item>
+        /// <item><description>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13208,32 +13170,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</para>
+        /// <para>Creates a just-in-time transcoding playlist that generates an M3U8 file from a video file, enables instant playback after playlist generation, and performs on-demand transcoding based on playback progress. Compared with offline transcoding, this significantly reduces transcoding wait time and greatly lowers transcoding and storage costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</b></para>
-        /// </description></item>
-        /// <item><description><para>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</para>
-        /// </description></item>
-        /// <item><description><para>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</para>
-        /// <remarks>
-        /// <para>Notice: 
-        /// The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description><para>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</para>
-        /// </description></item>
-        /// <item><description><para>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</para>
-        /// </description></item>
-        /// <item><description><para>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</para>
-        /// </description></item>
-        /// <item><description><para>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</para>
-        /// </description></item>
+        /// <item><description><b>Before using this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before invoking this operation, make sure that an active project exists in the current region. For details, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+        /// <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain a video stream.</notice></description></item>
+        /// <item><description>This operation requires the source video to have a minimum duration of approximately 0.x seconds, which varies depending on the output frame rate.</description></item>
+        /// <item><description>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</description></item>
+        /// <item><description>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameter to obtain the transcoding task result through message notifications.</description></item>
+        /// <item><description>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13342,32 +13293,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</para>
+        /// <para>Creates a just-in-time transcoding playlist that generates an M3U8 file from a video file, enables instant playback after playlist generation, and performs on-demand transcoding based on playback progress. Compared with offline transcoding, this significantly reduces transcoding wait time and greatly lowers transcoding and storage costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</b></para>
-        /// </description></item>
-        /// <item><description><para>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</para>
-        /// </description></item>
-        /// <item><description><para>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</para>
-        /// <remarks>
-        /// <para>Notice: 
-        /// The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description><para>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</para>
-        /// </description></item>
-        /// <item><description><para>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</para>
-        /// </description></item>
-        /// <item><description><para>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</para>
-        /// </description></item>
-        /// <item><description><para>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</para>
-        /// </description></item>
+        /// <item><description><b>Before using this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before invoking this operation, make sure that an active project exists in the current region. For details, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+        /// <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain a video stream.</notice></description></item>
+        /// <item><description>This operation requires the source video to have a minimum duration of approximately 0.x seconds, which varies depending on the output frame rate.</description></item>
+        /// <item><description>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</description></item>
+        /// <item><description>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameter to obtain the transcoding task result through message notifications.</description></item>
+        /// <item><description>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13386,32 +13326,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</para>
+        /// <para>Creates a just-in-time transcoding playlist that generates an M3U8 file from a video file, enables instant playback after playlist generation, and performs on-demand transcoding based on playback progress. Compared with offline transcoding, this significantly reduces transcoding wait time and greatly lowers transcoding and storage costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para><b>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</b></para>
-        /// </description></item>
-        /// <item><description><para>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</para>
-        /// </description></item>
-        /// <item><description><para>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</para>
-        /// <remarks>
-        /// <para>Notice: 
-        /// The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description><para>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</para>
-        /// </description></item>
-        /// <item><description><para>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</para>
-        /// </description></item>
-        /// <item><description><para>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</para>
-        /// </description></item>
-        /// <item><description><para>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</para>
-        /// </description></item>
+        /// <item><description><b>Before using this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</b></description></item>
+        /// <item><description>Before invoking this operation, make sure that an active project exists in the current region. For details, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+        /// <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain a video stream.</notice></description></item>
+        /// <item><description>This operation requires the source video to have a minimum duration of approximately 0.x seconds, which varies depending on the output frame rate.</description></item>
+        /// <item><description>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</description></item>
+        /// <item><description>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameter to obtain the transcoding task result through message notifications.</description></item>
+        /// <item><description>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14290,14 +14219,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a dataset.</para>
+        /// <para>Queries the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>You can obtain real-time file statistics information when you query dataset information. This feature is enabled through parameter settings. For more details, see the request parameters section.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14348,14 +14277,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a dataset.</para>
+        /// <para>Queries the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>You can obtain real-time file statistics information when you query dataset information. This feature is enabled through parameter settings. For more details, see the request parameters section.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14406,14 +14335,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a dataset.</para>
+        /// <para>Queries the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>You can obtain real-time file statistics information when you query dataset information. This feature is enabled through parameter settings. For more details, see the request parameters section.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14432,14 +14361,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a dataset.</para>
+        /// <para>Queries the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>You can obtain real-time file statistics information when you query dataset information. This feature is enabled through parameter settings. For more details, see the request parameters section.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14458,14 +14387,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// <para>Retrieves the result of a blind watermark extraction task for an image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <c>TaskId</c> of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14516,14 +14445,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// <para>Retrieves the result of a blind watermark extraction task for an image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <c>TaskId</c> of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14574,14 +14503,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// <para>Retrieves the result of a blind watermark extraction task for an image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <c>TaskId</c> of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14600,14 +14529,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// <para>Retrieves the result of a blind watermark extraction task for an image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <c>TaskId</c> of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14626,14 +14555,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// <para>Retrieves the basic information of a face group, including the creation time, number of photos, and group cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14684,14 +14613,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// <para>Retrieves the basic information of a face group, including the creation time, number of photos, and group cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14742,14 +14671,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// <para>Retrieves the basic information of a face group, including the creation time, number of photos, and group cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14768,14 +14697,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// <para>Retrieves the basic information of a face group, including the creation time, number of photos, and group cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14794,15 +14723,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// <para>Retrieves the metadata of indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. The categories and content of the retrieved file metadata may vary from the example based on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14863,15 +14792,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// <para>Retrieves the metadata of indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. The categories and content of the retrieved file metadata may vary from the example based on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14932,15 +14861,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// <para>Retrieves the metadata of indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. The categories and content of the retrieved file metadata may vary from the example based on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14959,15 +14888,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// <para>Retrieves the metadata of indexed files in a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed the files into a dataset by using the binding method (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or the active indexing method (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The response is only an example. The categories and content of the retrieved file metadata may vary from the example based on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15274,14 +15203,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about a specified project, including basic information, datasets, and file-related statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports obtaining real-time file statistics information, which is enabled through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
-        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
+        /// <para>Notice: File statistics are supported only for datasets created before December 20, 2025.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15328,14 +15257,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about a specified project, including basic information, datasets, and file-related statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports obtaining real-time file statistics information, which is enabled through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
-        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
+        /// <para>Notice: File statistics are supported only for datasets created before December 20, 2025.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15382,14 +15311,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about a specified project, including basic information, datasets, and file-related statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports obtaining real-time file statistics information, which is enabled through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
-        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
+        /// <para>Notice: File statistics are supported only for datasets created before December 20, 2025.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15408,14 +15337,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about a specified project, including basic information, datasets, and file-related statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports obtaining real-time file statistics information, which is enabled through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
-        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
+        /// <para>Notice: File statistics are supported only for datasets created before December 20, 2025.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15434,15 +15363,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a story.</para>
+        /// <para>Retrieves the information about a story.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before you call this operation, make sure that you have generated album stories by calling the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15493,15 +15422,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a story.</para>
+        /// <para>Retrieves the information about a story.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before you call this operation, make sure that you have generated album stories by calling the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15552,15 +15481,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a story.</para>
+        /// <para>Retrieves the information about a story.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before you call this operation, make sure that you have generated album stories by calling the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15579,15 +15508,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a story.</para>
+        /// <para>Retrieves the information about a story.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before you call this operation, make sure that you have generated album stories by calling the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16946,7 +16875,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// <para>Queries a list of datasets. You can filter the list by specifying a prefix for the dataset name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17000,7 +16929,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// <para>Queries a list of datasets. You can filter the list by specifying a prefix for the dataset name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17054,7 +16983,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// <para>Queries a list of datasets. You can filter the list by specifying a prefix for the dataset name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17072,7 +17001,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// <para>Queries a list of datasets. You can filter the list by specifying a prefix for the dataset name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17090,12 +17019,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about all projects, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about all projects, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Paging is supported for viewing returned data. When performing a paged query for the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of returned entries.</para>
+        /// <para>Supports paginated data retrieval. Paged query the first page, set MaxResults to limit the number of returned entries. The NextToken value in the response serves as the token for querying subsequent pages. Paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17155,12 +17084,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about all projects, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about all projects, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Paging is supported for viewing returned data. When performing a paged query for the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of returned entries.</para>
+        /// <para>Supports paginated data retrieval. Paged query the first page, set MaxResults to limit the number of returned entries. The NextToken value in the response serves as the token for querying subsequent pages. Paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17220,12 +17149,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about all projects, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about all projects, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Paging is supported for viewing returned data. When performing a paged query for the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of returned entries.</para>
+        /// <para>Supports paginated data retrieval. Paged query the first page, set MaxResults to limit the number of returned entries. The NextToken value in the response serves as the token for querying subsequent pages. Paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17243,12 +17172,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about all projects, including basic information and statistics information related to datasets and files.</para>
+        /// <para>Queries the information about all projects, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Paging is supported for viewing returned data. When performing a paged query for the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of returned entries.</para>
+        /// <para>Supports paginated data retrieval. Paged query the first page, set MaxResults to limit the number of returned entries. The NextToken value in the response serves as the token for querying subsequent pages. Paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17802,14 +17731,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face groups based on given conditions.</para>
+        /// <para>Queries figure clustering and its information based on a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17898,14 +17827,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face groups based on given conditions.</para>
+        /// <para>Queries figure clustering and its information based on a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17994,14 +17923,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face groups based on given conditions.</para>
+        /// <para>Queries figure clustering and its information based on a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18020,14 +17949,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries face groups based on given conditions.</para>
+        /// <para>Queries figure clustering and its information based on a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before you call this operation, make sure that you have grouped all faces in the dataset (<a href="~~CreateDataset~~">CreateDataset</a>) by creating a face clustering task (<a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18562,15 +18491,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries stories based on the specified conditions.</para>
+        /// <para>Retrieves stories and their information by using a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before calling this operation, make sure that you have generated album stories by using the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18691,15 +18620,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries stories based on the specified conditions.</para>
+        /// <para>Retrieves stories and their information by using a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before calling this operation, make sure that you have generated album stories by using the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18820,15 +18749,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries stories based on the specified conditions.</para>
+        /// <para>Retrieves stories and their information by using a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before calling this operation, make sure that you have generated album stories by using the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18847,15 +18776,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries stories based on the specified conditions.</para>
+        /// <para>Retrieves stories and their information by using a conditional query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></description></item>
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>Before calling this operation, make sure that you have generated album stories by using the <a href="https://help.aliyun.com/document_detail/478193.html">Create a story</a> or <a href="https://help.aliyun.com/document_detail/478196.html">Create a custom story</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19726,31 +19655,31 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// <para>Performs semantic searches on metadata in a dataset by using natural language input.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><b>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/document_detail/477042.html">价格</a></b>。该接口每次请求，会产生语义理解费用和查询费用两种计费项各一次。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请加入钉钉群进行反馈，钉钉群号请参见<a href="https://help.aliyun.com/document_detail/84454.html">联系我们</a>。</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b> Each request to this operation incurs one semantic understanding fee and one query fee.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have indexed files into a dataset by binding (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>每次查询最多返回 100 个文件信息。</description></item>
-        /// <item><description>不支持翻页查询。</description></item>
-        /// <item><description>自然语言理解不保证完全准确。</description></item>
-        /// <item><description>该功能在美国（硅谷），美国（弗吉尼亚）地域下不支持。</description></item>
+        /// <item><description>A maximum of 100 file records are returned for each query.</description></item>
+        /// <item><description>Paged queries are not supported.</description></item>
+        /// <item><description>Natural language understanding is not guaranteed to be completely accurate.</description></item>
+        /// <item><description>This feature is not supported in the US (Silicon Valley) and US (Virginia) regions.</description></item>
         /// </list>
-        /// <h3>使用方式</h3>
-        /// <para>使用自然语言关键词对数据集内的文件进行搜索查询。目前支持理解的关键信息包括标签（Labels.LabelName）、时间（ProduceTime）和地点（Address.AddressLine）等。例如，以<c>2023 年杭州的风景</c>为条件进行查询，会被智能拆分为如下三个条件，并查找出同时满足这些条件的文件：</para>
+        /// <h3>Usage</h3>
+        /// <para>Use natural language keywords to search for files in a dataset. Currently, the supported key information includes labels (Labels.LabelName), time (ProduceTime), and locations (Address.AddressLine). For example, if you use <c>scenery in Hangzhou in 2023</c> as the query condition, it is intelligently split into the following three conditions to find files that meet all these conditions:</para>
         /// <list type="bullet">
-        /// <item><description>ProduceTime：2023 年 1 月 1 日零点起到 2023 年 12 月 31 日结束止</description></item>
-        /// <item><description>Address.AddressLine：包含<c>杭州</c>关键词</description></item>
-        /// <item><description>Labels.LabelName：包含<c>风景</c>标签
-        /// 配合<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>，当模板中包含<c>ImageEmbeddingExtraction</c>算子时，该搜索请求会提供基于图片内容的搜索，即您输入的<c>Query</c>内容会同时被理解为图片内包含的内容，从而实现对图片的智能检索。</description></item>
+        /// <item><description>ProduceTime: From 00:00:00 on January 1, 2023 to 23:59:59 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: Contains the keyword <c>Hangzhou</c>.</description></item>
+        /// <item><description>Labels.LabelName: Contains the <c>scenery</c> label.
+        /// In combination with the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, when the template includes the <c>ImageEmbeddingExtraction</c> operator, the search request provides content-based image search. This means the <c>Query</c> content you enter is also understood as the content contained in the image, thereby implementing intelligent image retrieval.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19831,31 +19760,31 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// <para>Performs semantic searches on metadata in a dataset by using natural language input.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><b>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/document_detail/477042.html">价格</a></b>。该接口每次请求，会产生语义理解费用和查询费用两种计费项各一次。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请加入钉钉群进行反馈，钉钉群号请参见<a href="https://help.aliyun.com/document_detail/84454.html">联系我们</a>。</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b> Each request to this operation incurs one semantic understanding fee and one query fee.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have indexed files into a dataset by binding (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>每次查询最多返回 100 个文件信息。</description></item>
-        /// <item><description>不支持翻页查询。</description></item>
-        /// <item><description>自然语言理解不保证完全准确。</description></item>
-        /// <item><description>该功能在美国（硅谷），美国（弗吉尼亚）地域下不支持。</description></item>
+        /// <item><description>A maximum of 100 file records are returned for each query.</description></item>
+        /// <item><description>Paged queries are not supported.</description></item>
+        /// <item><description>Natural language understanding is not guaranteed to be completely accurate.</description></item>
+        /// <item><description>This feature is not supported in the US (Silicon Valley) and US (Virginia) regions.</description></item>
         /// </list>
-        /// <h3>使用方式</h3>
-        /// <para>使用自然语言关键词对数据集内的文件进行搜索查询。目前支持理解的关键信息包括标签（Labels.LabelName）、时间（ProduceTime）和地点（Address.AddressLine）等。例如，以<c>2023 年杭州的风景</c>为条件进行查询，会被智能拆分为如下三个条件，并查找出同时满足这些条件的文件：</para>
+        /// <h3>Usage</h3>
+        /// <para>Use natural language keywords to search for files in a dataset. Currently, the supported key information includes labels (Labels.LabelName), time (ProduceTime), and locations (Address.AddressLine). For example, if you use <c>scenery in Hangzhou in 2023</c> as the query condition, it is intelligently split into the following three conditions to find files that meet all these conditions:</para>
         /// <list type="bullet">
-        /// <item><description>ProduceTime：2023 年 1 月 1 日零点起到 2023 年 12 月 31 日结束止</description></item>
-        /// <item><description>Address.AddressLine：包含<c>杭州</c>关键词</description></item>
-        /// <item><description>Labels.LabelName：包含<c>风景</c>标签
-        /// 配合<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>，当模板中包含<c>ImageEmbeddingExtraction</c>算子时，该搜索请求会提供基于图片内容的搜索，即您输入的<c>Query</c>内容会同时被理解为图片内包含的内容，从而实现对图片的智能检索。</description></item>
+        /// <item><description>ProduceTime: From 00:00:00 on January 1, 2023 to 23:59:59 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: Contains the keyword <c>Hangzhou</c>.</description></item>
+        /// <item><description>Labels.LabelName: Contains the <c>scenery</c> label.
+        /// In combination with the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, when the template includes the <c>ImageEmbeddingExtraction</c> operator, the search request provides content-based image search. This means the <c>Query</c> content you enter is also understood as the content contained in the image, thereby implementing intelligent image retrieval.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19936,31 +19865,31 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// <para>Performs semantic searches on metadata in a dataset by using natural language input.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><b>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/document_detail/477042.html">价格</a></b>。该接口每次请求，会产生语义理解费用和查询费用两种计费项各一次。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请加入钉钉群进行反馈，钉钉群号请参见<a href="https://help.aliyun.com/document_detail/84454.html">联系我们</a>。</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b> Each request to this operation incurs one semantic understanding fee and one query fee.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have indexed files into a dataset by binding (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>每次查询最多返回 100 个文件信息。</description></item>
-        /// <item><description>不支持翻页查询。</description></item>
-        /// <item><description>自然语言理解不保证完全准确。</description></item>
-        /// <item><description>该功能在美国（硅谷），美国（弗吉尼亚）地域下不支持。</description></item>
+        /// <item><description>A maximum of 100 file records are returned for each query.</description></item>
+        /// <item><description>Paged queries are not supported.</description></item>
+        /// <item><description>Natural language understanding is not guaranteed to be completely accurate.</description></item>
+        /// <item><description>This feature is not supported in the US (Silicon Valley) and US (Virginia) regions.</description></item>
         /// </list>
-        /// <h3>使用方式</h3>
-        /// <para>使用自然语言关键词对数据集内的文件进行搜索查询。目前支持理解的关键信息包括标签（Labels.LabelName）、时间（ProduceTime）和地点（Address.AddressLine）等。例如，以<c>2023 年杭州的风景</c>为条件进行查询，会被智能拆分为如下三个条件，并查找出同时满足这些条件的文件：</para>
+        /// <h3>Usage</h3>
+        /// <para>Use natural language keywords to search for files in a dataset. Currently, the supported key information includes labels (Labels.LabelName), time (ProduceTime), and locations (Address.AddressLine). For example, if you use <c>scenery in Hangzhou in 2023</c> as the query condition, it is intelligently split into the following three conditions to find files that meet all these conditions:</para>
         /// <list type="bullet">
-        /// <item><description>ProduceTime：2023 年 1 月 1 日零点起到 2023 年 12 月 31 日结束止</description></item>
-        /// <item><description>Address.AddressLine：包含<c>杭州</c>关键词</description></item>
-        /// <item><description>Labels.LabelName：包含<c>风景</c>标签
-        /// 配合<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>，当模板中包含<c>ImageEmbeddingExtraction</c>算子时，该搜索请求会提供基于图片内容的搜索，即您输入的<c>Query</c>内容会同时被理解为图片内包含的内容，从而实现对图片的智能检索。</description></item>
+        /// <item><description>ProduceTime: From 00:00:00 on January 1, 2023 to 23:59:59 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: Contains the keyword <c>Hangzhou</c>.</description></item>
+        /// <item><description>Labels.LabelName: Contains the <c>scenery</c> label.
+        /// In combination with the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, when the template includes the <c>ImageEmbeddingExtraction</c> operator, the search request provides content-based image search. This means the <c>Query</c> content you enter is also understood as the content contained in the image, thereby implementing intelligent image retrieval.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19979,31 +19908,31 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// <para>Performs semantic searches on metadata in a dataset by using natural language input.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><b>请确保在使用该接口前，已充分了解智能媒体管理产品的收费方式和<a href="https://help.aliyun.com/document_detail/477042.html">价格</a></b>。该接口每次请求，会产生语义理解费用和查询费用两种计费项各一次。</description></item>
-        /// <item><description>调用该接口前，请确保您已通过绑定方式（ <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> ）或者主动索引（ <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> 或者 <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> ）方式将文件索引到数据集（Dataset）中。</description></item>
-        /// <item><description>返回结果仅为示例，根据<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>不同，获取到的文件元数据信息的类别和包含的内容均有可能与示例不同。如果有疑问，请加入钉钉群进行反馈，钉钉群号请参见<a href="https://help.aliyun.com/document_detail/84454.html">联系我们</a>。</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b> Each request to this operation incurs one semantic understanding fee and one query fee.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have indexed files into a dataset by binding (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are for reference only. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the retrieved file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</description></item>
         /// </list>
-        /// <h3>使用限制</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>每次查询最多返回 100 个文件信息。</description></item>
-        /// <item><description>不支持翻页查询。</description></item>
-        /// <item><description>自然语言理解不保证完全准确。</description></item>
-        /// <item><description>该功能在美国（硅谷），美国（弗吉尼亚）地域下不支持。</description></item>
+        /// <item><description>A maximum of 100 file records are returned for each query.</description></item>
+        /// <item><description>Paged queries are not supported.</description></item>
+        /// <item><description>Natural language understanding is not guaranteed to be completely accurate.</description></item>
+        /// <item><description>This feature is not supported in the US (Silicon Valley) and US (Virginia) regions.</description></item>
         /// </list>
-        /// <h3>使用方式</h3>
-        /// <para>使用自然语言关键词对数据集内的文件进行搜索查询。目前支持理解的关键信息包括标签（Labels.LabelName）、时间（ProduceTime）和地点（Address.AddressLine）等。例如，以<c>2023 年杭州的风景</c>为条件进行查询，会被智能拆分为如下三个条件，并查找出同时满足这些条件的文件：</para>
+        /// <h3>Usage</h3>
+        /// <para>Use natural language keywords to search for files in a dataset. Currently, the supported key information includes labels (Labels.LabelName), time (ProduceTime), and locations (Address.AddressLine). For example, if you use <c>scenery in Hangzhou in 2023</c> as the query condition, it is intelligently split into the following three conditions to find files that meet all these conditions:</para>
         /// <list type="bullet">
-        /// <item><description>ProduceTime：2023 年 1 月 1 日零点起到 2023 年 12 月 31 日结束止</description></item>
-        /// <item><description>Address.AddressLine：包含<c>杭州</c>关键词</description></item>
-        /// <item><description>Labels.LabelName：包含<c>风景</c>标签
-        /// 配合<a href="https://help.aliyun.com/document_detail/466304.html">工作流模板配置</a>，当模板中包含<c>ImageEmbeddingExtraction</c>算子时，该搜索请求会提供基于图片内容的搜索，即您输入的<c>Query</c>内容会同时被理解为图片内包含的内容，从而实现对图片的智能检索。</description></item>
+        /// <item><description>ProduceTime: From 00:00:00 on January 1, 2023 to 23:59:59 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: Contains the keyword <c>Hangzhou</c>.</description></item>
+        /// <item><description>Labels.LabelName: Contains the <c>scenery</c> label.
+        /// In combination with the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, when the template includes the <c>ImageEmbeddingExtraction</c> operator, the search request provides content-based image search. This means the <c>Query</c> content you enter is also understood as the content contained in the image, thereby implementing intelligent image retrieval.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20022,38 +19951,42 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// <para>Queries and aggregates files in a dataset, and supports logical expressions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are only examples. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.
         /// <b>Limits</b></description></item>
-        /// <item><description>Each query returns information about up to 100 files.</description></item>
-        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
-        /// <item><description>A subquery supports up to 100 conditions.</description></item>
-        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
-        /// <b>Example query conditions</b></description></item>
-        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
-        /// {
+        /// <item><description>Each query returns a maximum of 100 files.</description></item>
+        /// <item><description>Each query returns a maximum of 2,000 pieces of aggregation statistics information.</description></item>
+        /// <item><description>A maximum of 100 subquery conditions are supported.</description></item>
+        /// <item><description>A maximum nesting depth of 5 levels is supported for subqueries.
+        /// <b>Query condition examples</b></description></item>
+        /// <item><description>To search for JPEG images with a size greater than 1,000 pixels, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
         ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
-        ///   &quot;Value&quot;:&quot;1000&quot;,
-        ///   &quot;Operation&quot;:&quot;gt&quot;
-        /// }
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///       &quot;Value&quot;:&quot;1000&quot;,
+        ///       &quot;Operation&quot;:&quot;gt&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
-        /// }</description></item>
-        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
-        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for all files in <c>oss://examplebucket/path/</c> that contain the <c>TV</c> or <c>Speaker</c> tag and are larger than 10 MB, specify the Query parameter as follows:<remarks>
+        /// <para>Here, <c>TV</c> and <c>Speaker</c> are different tags of the same file and exist as two independent objects in the <c>Labels</c> field. Note the difference between this and the next example.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20078,7 +20011,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         },
         ///         {
         ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
-        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Value&quot;: &quot;Speaker&quot;,
         ///           &quot;Operation&quot;: &quot;eq&quot;
         ///         }
         ///       ],
@@ -20090,9 +20023,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
-        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
-        /// {
+        /// <item><description>To exclude files that contain face information of a male older than 36 years, specify the Query parameter as follows:<remarks>
+        /// <para>Unlike the previous example, this requires a single face to meet both conditions: older than 36 years and male. This is different from a requirement where an image contains multiple faces, one of which is male and another is older than 36 years. In this request, you must use a <c>nested</c> query to ensure that the conditions are met within the same element.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
         ///     &quot;Operation&quot;: &quot;not&quot;,
         ///     &quot;SubQueries&quot;: [{
         ///         &quot;Operation&quot;: &quot;nested&quot;,
@@ -20109,28 +20045,31 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///             }]
         ///         }]
         ///     }]
-        /// }</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
-        /// {
-        ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
         /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for JPEG images that have both custom tags and system tags, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;:[
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
         /// }
-        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
-        /// </list>
+        /// </c></pre>
+        /// <para>Based on the preceding search conditions, you can also use aggregation operations to collect statistics and analyze different data. For example, you can calculate the total size, count, average, or extreme values of all files that meet the search conditions, or collect statistics on the size distribution of all images that meet the search conditions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20222,38 +20161,42 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// <para>Queries and aggregates files in a dataset, and supports logical expressions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are only examples. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.
         /// <b>Limits</b></description></item>
-        /// <item><description>Each query returns information about up to 100 files.</description></item>
-        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
-        /// <item><description>A subquery supports up to 100 conditions.</description></item>
-        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
-        /// <b>Example query conditions</b></description></item>
-        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
-        /// {
+        /// <item><description>Each query returns a maximum of 100 files.</description></item>
+        /// <item><description>Each query returns a maximum of 2,000 pieces of aggregation statistics information.</description></item>
+        /// <item><description>A maximum of 100 subquery conditions are supported.</description></item>
+        /// <item><description>A maximum nesting depth of 5 levels is supported for subqueries.
+        /// <b>Query condition examples</b></description></item>
+        /// <item><description>To search for JPEG images with a size greater than 1,000 pixels, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
         ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
-        ///   &quot;Value&quot;:&quot;1000&quot;,
-        ///   &quot;Operation&quot;:&quot;gt&quot;
-        /// }
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///       &quot;Value&quot;:&quot;1000&quot;,
+        ///       &quot;Operation&quot;:&quot;gt&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
-        /// }</description></item>
-        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
-        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for all files in <c>oss://examplebucket/path/</c> that contain the <c>TV</c> or <c>Speaker</c> tag and are larger than 10 MB, specify the Query parameter as follows:<remarks>
+        /// <para>Here, <c>TV</c> and <c>Speaker</c> are different tags of the same file and exist as two independent objects in the <c>Labels</c> field. Note the difference between this and the next example.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20278,7 +20221,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         },
         ///         {
         ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
-        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Value&quot;: &quot;Speaker&quot;,
         ///           &quot;Operation&quot;: &quot;eq&quot;
         ///         }
         ///       ],
@@ -20290,9 +20233,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
-        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
-        /// {
+        /// <item><description>To exclude files that contain face information of a male older than 36 years, specify the Query parameter as follows:<remarks>
+        /// <para>Unlike the previous example, this requires a single face to meet both conditions: older than 36 years and male. This is different from a requirement where an image contains multiple faces, one of which is male and another is older than 36 years. In this request, you must use a <c>nested</c> query to ensure that the conditions are met within the same element.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
         ///     &quot;Operation&quot;: &quot;not&quot;,
         ///     &quot;SubQueries&quot;: [{
         ///         &quot;Operation&quot;: &quot;nested&quot;,
@@ -20309,28 +20255,31 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///             }]
         ///         }]
         ///     }]
-        /// }</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
-        /// {
-        ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
         /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for JPEG images that have both custom tags and system tags, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;:[
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
         /// }
-        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
-        /// </list>
+        /// </c></pre>
+        /// <para>Based on the preceding search conditions, you can also use aggregation operations to collect statistics and analyze different data. For example, you can calculate the total size, count, average, or extreme values of all files that meet the search conditions, or collect statistics on the size distribution of all images that meet the search conditions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20422,38 +20371,42 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// <para>Queries and aggregates files in a dataset, and supports logical expressions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are only examples. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.
         /// <b>Limits</b></description></item>
-        /// <item><description>Each query returns information about up to 100 files.</description></item>
-        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
-        /// <item><description>A subquery supports up to 100 conditions.</description></item>
-        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
-        /// <b>Example query conditions</b></description></item>
-        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
-        /// {
+        /// <item><description>Each query returns a maximum of 100 files.</description></item>
+        /// <item><description>Each query returns a maximum of 2,000 pieces of aggregation statistics information.</description></item>
+        /// <item><description>A maximum of 100 subquery conditions are supported.</description></item>
+        /// <item><description>A maximum nesting depth of 5 levels is supported for subqueries.
+        /// <b>Query condition examples</b></description></item>
+        /// <item><description>To search for JPEG images with a size greater than 1,000 pixels, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
         ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
-        ///   &quot;Value&quot;:&quot;1000&quot;,
-        ///   &quot;Operation&quot;:&quot;gt&quot;
-        /// }
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///       &quot;Value&quot;:&quot;1000&quot;,
+        ///       &quot;Operation&quot;:&quot;gt&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
-        /// }</description></item>
-        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
-        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for all files in <c>oss://examplebucket/path/</c> that contain the <c>TV</c> or <c>Speaker</c> tag and are larger than 10 MB, specify the Query parameter as follows:<remarks>
+        /// <para>Here, <c>TV</c> and <c>Speaker</c> are different tags of the same file and exist as two independent objects in the <c>Labels</c> field. Note the difference between this and the next example.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20478,7 +20431,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         },
         ///         {
         ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
-        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Value&quot;: &quot;Speaker&quot;,
         ///           &quot;Operation&quot;: &quot;eq&quot;
         ///         }
         ///       ],
@@ -20490,9 +20443,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
-        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
-        /// {
+        /// <item><description>To exclude files that contain face information of a male older than 36 years, specify the Query parameter as follows:<remarks>
+        /// <para>Unlike the previous example, this requires a single face to meet both conditions: older than 36 years and male. This is different from a requirement where an image contains multiple faces, one of which is male and another is older than 36 years. In this request, you must use a <c>nested</c> query to ensure that the conditions are met within the same element.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
         ///     &quot;Operation&quot;: &quot;not&quot;,
         ///     &quot;SubQueries&quot;: [{
         ///         &quot;Operation&quot;: &quot;nested&quot;,
@@ -20509,28 +20465,31 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///             }]
         ///         }]
         ///     }]
-        /// }</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
-        /// {
-        ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
         /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for JPEG images that have both custom tags and system tags, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;:[
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
         /// }
-        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
-        /// </list>
+        /// </c></pre>
+        /// <para>Based on the preceding search conditions, you can also use aggregation operations to collect statistics and analyze different data. For example, you can calculate the total size, count, average, or extreme values of all files that meet the search conditions, or collect statistics on the size distribution of all images that meet the search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20548,38 +20507,42 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// <para>Queries and aggregates files in a dataset, and supports logical expressions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
-        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you have indexed files into a dataset by using bindings (<a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>) or active indexing (<a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>).</description></item>
+        /// <item><description>The returned results are only examples. Depending on the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configuration</a>, the categories and content of the obtained file metadata may differ from the examples. If you have any questions, join the DingTalk group for feedback. For the DingTalk group ID, refer to <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.
         /// <b>Limits</b></description></item>
-        /// <item><description>Each query returns information about up to 100 files.</description></item>
-        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
-        /// <item><description>A subquery supports up to 100 conditions.</description></item>
-        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
-        /// <b>Example query conditions</b></description></item>
-        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
-        /// {
+        /// <item><description>Each query returns a maximum of 100 files.</description></item>
+        /// <item><description>Each query returns a maximum of 2,000 pieces of aggregation statistics information.</description></item>
+        /// <item><description>A maximum of 100 subquery conditions are supported.</description></item>
+        /// <item><description>A maximum nesting depth of 5 levels is supported for subqueries.
+        /// <b>Query condition examples</b></description></item>
+        /// <item><description>To search for JPEG images with a size greater than 1,000 pixels, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
         ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
-        ///   &quot;Value&quot;:&quot;1000&quot;,
-        ///   &quot;Operation&quot;:&quot;gt&quot;
-        /// }
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///       &quot;Value&quot;:&quot;1000&quot;,
+        ///       &quot;Operation&quot;:&quot;gt&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
-        /// }</description></item>
-        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
-        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for all files in <c>oss://examplebucket/path/</c> that contain the <c>TV</c> or <c>Speaker</c> tag and are larger than 10 MB, specify the Query parameter as follows:<remarks>
+        /// <para>Here, <c>TV</c> and <c>Speaker</c> are different tags of the same file and exist as two independent objects in the <c>Labels</c> field. Note the difference between this and the next example.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20604,7 +20567,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         },
         ///         {
         ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
-        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Value&quot;: &quot;Speaker&quot;,
         ///           &quot;Operation&quot;: &quot;eq&quot;
         ///         }
         ///       ],
@@ -20616,9 +20579,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///         
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
-        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
-        /// {
+        /// <item><description>To exclude files that contain face information of a male older than 36 years, specify the Query parameter as follows:<remarks>
+        /// <para>Unlike the previous example, this requires a single face to meet both conditions: older than 36 years and male. This is different from a requirement where an image contains multiple faces, one of which is male and another is older than 36 years. In this request, you must use a <c>nested</c> query to ensure that the conditions are met within the same element.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
         ///     &quot;Operation&quot;: &quot;not&quot;,
         ///     &quot;SubQueries&quot;: [{
         ///         &quot;Operation&quot;: &quot;nested&quot;,
@@ -20635,28 +20601,31 @@ namespace AlibabaCloud.SDK.Imm20200930
         ///             }]
         ///         }]
         ///     }]
-        /// }</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
-        /// {
-        ///   &quot;SubQueries&quot;:[
-        /// {
-        ///   &quot;Field&quot;:&quot;ContentType&quot;,
-        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
-        ///   &quot;Operation&quot;:&quot;eq&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
-        /// },<br>{
-        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
-        ///   &quot;Operation&quot;:&quot;exist&quot;
         /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>To search for JPEG images that have both custom tags and system tags, specify the Query parameter as follows:</description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;:[
+        ///     {
+        ///       &quot;Field&quot;:&quot;ContentType&quot;,
+        ///       &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///       &quot;Operation&quot;:&quot;eq&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     },         
+        ///     {
+        ///       &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///       &quot;Operation&quot;:&quot;exist&quot;
+        ///     }
         ///   ],
         ///   &quot;Operation&quot;:&quot;and&quot;
         /// }
-        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
-        /// </list>
+        /// </c></pre>
+        /// <para>Based on the preceding search conditions, you can also use aggregation operations to collect statistics and analyze different data. For example, you can calculate the total size, count, average, or extreme values of all files that meet the search conditions, or collect statistics on the size distribution of all images that meet the search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21188,10 +21157,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>When you update a dataset, make sure that the dataset is created. For more information about how to create a dataset, see the request parameter description.</description></item>
+        /// <item><description>When you update a dataset, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>The dataset update does not take effect immediately. It takes up to 5 minutes for the update to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21282,10 +21251,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>When you update a dataset, make sure that the dataset is created. For more information about how to create a dataset, see the request parameter description.</description></item>
+        /// <item><description>When you update a dataset, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>The dataset update does not take effect immediately. It takes up to 5 minutes for the update to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21376,10 +21345,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>When you update a dataset, make sure that the dataset is created. For more information about how to create a dataset, see the request parameter description.</description></item>
+        /// <item><description>When you update a dataset, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>The dataset update does not take effect immediately. It takes up to 5 minutes for the update to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21404,10 +21373,10 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
-        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management</b>.</description></item>
+        /// <item><description>When you update a dataset, make sure that the dataset is created. For more information about how to create a dataset, see the request parameter description.</description></item>
+        /// <item><description>When you update a dataset, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>The dataset update does not take effect immediately. It takes up to 5 minutes for the update to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21998,15 +21967,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a created project.</para>
+        /// <para>Updates the information of an existing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before updating project information, make sure the project has been created. To create a project, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When updating project information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>Project updates do not take effect immediately. Wait up to 5 minutes for the updates to take effect.</description></item>
+        /// <item><description>When updating project information, ensure that the project has been successfully created. For more information about creating a project, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When updating project information, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>Project updates do not take effect immediately. It may take up to 5 minutes for the updates to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22095,15 +22064,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a created project.</para>
+        /// <para>Updates the information of an existing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before updating project information, make sure the project has been created. To create a project, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When updating project information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>Project updates do not take effect immediately. Wait up to 5 minutes for the updates to take effect.</description></item>
+        /// <item><description>When updating project information, ensure that the project has been successfully created. For more information about creating a project, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When updating project information, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>Project updates do not take effect immediately. It may take up to 5 minutes for the updates to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22192,15 +22161,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a created project.</para>
+        /// <para>Updates the information of an existing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before updating project information, make sure the project has been created. To create a project, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When updating project information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>Project updates do not take effect immediately. Wait up to 5 minutes for the updates to take effect.</description></item>
+        /// <item><description>When updating project information, ensure that the project has been successfully created. For more information about creating a project, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When updating project information, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>Project updates do not take effect immediately. It may take up to 5 minutes for the updates to take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22219,15 +22188,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a created project.</para>
+        /// <para>Updates the information of an existing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before updating project information, make sure the project has been created. To create a project, refer to the request parameter descriptions.</description></item>
-        /// <item><description>When updating project information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
-        /// <item><description>Project updates do not take effect immediately. Wait up to 5 minutes for the updates to take effect.</description></item>
+        /// <item><description>When updating project information, ensure that the project has been successfully created. For more information about creating a project, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When updating project information, you only need to specify the fields that you want to update. Unspecified fields remain unchanged.</description></item>
+        /// <item><description>Project updates do not take effect immediately. It may take up to 5 minutes for the updates to take effect.</description></item>
         /// </list>
         /// </description>
         /// 

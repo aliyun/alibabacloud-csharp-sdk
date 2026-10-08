@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships per dataset. Default value: 100000000000.</para>
+        /// <para>The maximum number of metadata relations per dataset. Default value: 100000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</para>
+        /// <para>The maximum total size of files per dataset. If the limit is exceeded, no more indexes can be added. Default value: 90000000000000000. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxTotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>The dataset name. The name must be unique within the same project. The following naming rules apply:</para>
+        /// <para>The name of the dataset. The name must be unique within a project. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 1 to 128 characters in length.</description></item>
         /// <item><description>The name can contain only letters, digits, hyphens (-), and underscores (_).</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dataset. The description can be 1 to 256 characters in length. Default value: empty.</para>
+        /// <para>The description of the dataset. The description must be 1 to 256 characters in length. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</para>
+        /// <para>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Official:ImageManagement</para>

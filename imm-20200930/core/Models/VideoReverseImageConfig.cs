@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class VideoReverseImageConfig : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable the feature.</para>
+        /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }

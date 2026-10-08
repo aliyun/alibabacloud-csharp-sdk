@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetFigureClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset name.<a href="~~CreateDataset~~"></a></para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, see <a href="~~CreateDataset~~">CreateDataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the face clustering task. You can obtain the ID from the face clustering information returned after you call the <a href="~~QueryFigureClusters~~">QueryFigureClusters</a> operation.</para>
+        /// <para>The object ID of the clustering group. You can obtain the object ID from the face group information returned by <a href="~~QueryFigureClusters~~">QueryFigureClusters</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The project name.<a href="~~CreateProject~~"></a></para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="~~CreateProject~~">CreateProject</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

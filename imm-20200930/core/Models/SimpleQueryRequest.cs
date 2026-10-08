@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SimpleQueryRequest : TeaModel {
         /// <summary>
-        /// <para>The aggregations.</para>
+        /// <para>The list of aggregation field information.</para>
         /// <remarks>
-        /// <para> If you perform an aggregate query, the aggregation returned in the response contains only statistical results, not the actual metadata.</para>
+        /// <para>Notice: When you use an aggregation query, only the aggregation results are returned, and the list of matched metadata is not returned.</notice></para>
         /// </remarks>
         /// </summary>
         [NameInMap("Aggregations")]
@@ -30,17 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Field { get; set; }
 
             /// <summary>
-            /// <para>The operator.</para>
-            /// <para>Enumerated values:</para>
-            /// <list type="bullet">
-            /// <item><description>average: calculates the average number.</description></item>
-            /// <item><description>min: finds the minimum value.</description></item>
-            /// <item><description>max: finds the maximum value.</description></item>
-            /// <item><description>count: counts the number of results.</description></item>
-            /// <item><description>distinct: counts the number of distinct results.</description></item>
-            /// <item><description>sum: calculates the sum of all matching results..</description></item>
-            /// <item><description>group: counts the number of results by group. The results are sorted by the count number in descending order.</description></item>
-            /// </list>
+            /// <para>The operator for the aggregation field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sum</para>
@@ -52,7 +42,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,9 +54,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the Aggregations parameter is not specified, this parameter specifies the maximum number of files that can be returned. Valid values: 1 to 100.</description></item>
-        /// <item><description>If the Aggregations parameter is specified, this parameter specifies the maximum number of aggregation groups that can be returned. Valid values: 0 to 2000.</description></item>
-        /// <item><description>If you do not specify this parameter or set the parameter to 0, the default value of 100 is used.</description></item>
+        /// <item><description><para>When you perform a query for files without specifying the Aggregations parameter, this parameter specifies the maximum number of files to return. Valid values: 0 to 100.</para>
+        /// </description></item>
+        /// <item><description><para>When you specify the Aggregations parameter for aggregation statistics, this parameter specifies the maximum number of groups to return. Valid values: 0 to 2000.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter or set it to 0, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,9 +70,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</para>
-        /// <para>The next call to the operation returns results lexicographically after the NextToken parameter value.</para>
-        /// <para>You do not need to specify this parameter in your initial request.</para>
+        /// <para>The token used for pagination when the total number of files exceeds the value of MaxResults.</para>
+        /// <para>The list of files is returned in lexicographical order starting from NextToken.</para>
+        /// <para>Set this parameter to empty when you call this operation for the first time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</para>
@@ -89,17 +82,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sort order of the sort fields. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>asc: sorts the results in ascending order.</para>
+        /// <item><description><para>asc: ascending order</para>
         /// </description></item>
-        /// <item><description><para>desc: sorts the results in descending order. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para>You can specify multiple sort orders that are separated by commas. Example: asc,desc.</para>
-        /// </description></item>
-        /// <item><description><para>The number of elements in the Order parameter must be less than or equal to the number of elements in the Sort parameter. For example, if the value of the Sort parameter is Size,Filename, you can set the Order parameter to desc,asc.</para>
-        /// </description></item>
-        /// <item><description><para>If the number of sort orders is less than the number of sort fields, the sort fields for which no sorting orders are explicitly specified use the asc order by default. For example, if you set Sort to Size,Filename and Order to asc, the Filename field defaults to the value of asc.</para>
+        /// <item><description><para>desc: descending order (default)</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can separate multiple sort orders with commas (,), for example, asc,desc.</description></item>
+        /// <item><description>The number of sort orders cannot exceed the number of sort fields. That is, the number of elements in the Order parameter must be less than or equal to the number of elements in the Sort parameter. For example, if Sort is set to Size,Filename, Order can be set to &quot;asc,desc&quot;.</description></item>
+        /// <item><description>If the number of sort orders is less than the number of sort fields, the default sort order for the unspecified fields is desc. For example, if Sort is set to Size,Filename and Order is set to asc, the default sort order for Filename is desc, which means descending order.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -111,7 +105,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,24 +116,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The query conditions.</para>
+        /// <para>The simple query conditions. Click the link on the left to view details.</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public SimpleQuery Query { get; set; }
 
         /// <summary>
-        /// <para>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</para>
+        /// <para>The list of sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you specify multiple sort fields, separate them with commas (,), as in Size,Filename.</para>
-        /// </description></item>
-        /// <item><description><para>You can specify up to five sort fields.</para>
-        /// </description></item>
-        /// <item><description><para>The order of the sort fields determines their precedence in the sorting process.</para>
-        /// </description></item>
+        /// <item><description>You can separate multiple sort fields with commas (,), for example, Size,Filename.</description></item>
+        /// <item><description>You can specify a maximum of 5 sort fields.</description></item>
+        /// <item><description>The order of the sort fields determines the sorting priority.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Size,Filename</para>
@@ -149,18 +140,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The fields that you want to include in the response. You can use this parameter to reduce the size of the response.</para>
-        /// <para>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields.</para>
+        /// <para>Specifies the specific fields to return instead of all existing metadata fields. This can be used to reduce the size of the returned struct.</para>
+        /// <para>If you do not specify this parameter or leave it empty, all fields are returned.</para>
         /// </summary>
         [NameInMap("WithFields")]
         [Validation(Required=false)]
         public List<string> WithFields { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the total number of hits. Valid values:</para>
+        /// <para>Specifies whether to return the total number of matched records. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The TotalHits field is not returned.</description></item>
+        /// <item><description>false: The TotalHits field is returned.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>

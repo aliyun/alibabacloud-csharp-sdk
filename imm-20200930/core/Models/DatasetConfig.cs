@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public InsightsConfig Insights { get; set; }
 
+        /// <summary>
+        /// <para>The reverse image search configuration.</para>
+        /// </summary>
         [NameInMap("ReverseImage")]
         [Validation(Required=false)]
         public ReverseImageConfig ReverseImage { get; set; }

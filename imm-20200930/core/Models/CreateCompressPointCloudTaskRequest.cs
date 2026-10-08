@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateCompressPointCloudTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the compression algorithm. Valid values:</para>
+        /// <para>The compression algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>octree: octree</para>
         /// </description></item>
@@ -27,24 +27,24 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CompressMethod { get; set; }
 
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
-        /// <para>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access other entity resources</a>.</para>
+        /// <para><b>Leave this parameter empty unless you have special requirements.</b></para>
+        /// <para>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
-        /// <para>The parameters for K-d tree compression.</para>
+        /// <para>The K-d tree compression parameters.</para>
         /// </summary>
         [NameInMap("KdtreeOption")]
         [Validation(Required=false)]
         public KdtreeOption KdtreeOption { get; set; }
 
         /// <summary>
-        /// <para>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
+        /// <para>The message notification configuration. For more information, click Notification. For information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// <remarks>
-        /// <para>Intelligent Media Management API callbacks do not support specifying a webhook address. Use MNS instead.</para>
+        /// <para>Intelligent Media Management does not support specifying a callback URL for API call callbacks. Use Message Service (MNS) instead.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
@@ -52,18 +52,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The parameters for Octree compression.</para>
+        /// <para>The octree compression parameters.</para>
         /// </summary>
         [NameInMap("OctreeOption")]
         [Validation(Required=false)]
         public OctreeOption OctreeOption { get; set; }
 
         /// <summary>
-        /// <para>The PCD property fields to compress and the compression order. After compression, the data is decompressed in this order.</para>
+        /// <para>The PCD attribute fields that participate in compression and the compression order. After compression, data is decompressed in this order.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you use Octree compression from the Point Cloud Library (PCL), only [&quot;xyz&quot;] is supported.</para>
+        /// <item><description><para>If you use PCL library octree compression, [&quot;xyz&quot;] is supported.</para>
         /// </description></item>
-        /// <item><description><para>If you use K-d tree compression from the Draco library, [&quot;xyz&quot;] or [&quot;xyz&quot;, &quot;intensity&quot;] is supported.</para>
+        /// <item><description><para>If you use Draco library K-d tree compression, [&quot;xyz&quot;] or [&quot;xyz&quot;, &quot;intensity&quot;] is supported.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<string> PointCloudFields { get; set; }
 
         /// <summary>
-        /// <para>The format of the point cloud file. Only the PCD format is supported. The default value is pcd.</para>
+        /// <para>The point cloud file format. Only PCD format is supported. Default value: pcd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcd</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string PointCloudFileFormat { get; set; }
 
         /// <summary>
-        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The OSS URI of the point cloud file.</para>
-        /// <para>The URI must be in the format oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket in the same region as the project. ${Object} is the full path of the file, including the file name extension.</para>
+        /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where <c>${Bucket}</c> is the name of an OSS bucket in the same region as the current project, and <c>${Object}</c> is the full path of the file including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>Custom tags to search for and filter asynchronous tasks.</para>
+        /// <para>The custom tags that are used to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;LabelKey&quot;: &quot;Value&quot;}</para>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the output file after compression.</para>
-        /// <para>The URI must be in the format oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket in the same region as the project. ${Object} is the full path of the file, including the file name extension.</para>
+        /// <para>The OSS URI of the compressed output file.</para>
+        /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where <c>${Bucket}</c> is the name of an OSS bucket in the same region as the current project, and <c>${Object}</c> is the full path of the file including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>Custom information that is returned in the asynchronous notification message. You can use this information to associate notification messages in your system. The maximum length is 2048 bytes.</para>
+        /// <para>The custom information, which is returned in asynchronous message notifications to help you associate message notifications within your system. Maximum length: 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

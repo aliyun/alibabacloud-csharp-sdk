@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectMediaMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The addresses.</para>
-        /// <para>This parameter is returned only when address information is detected.</para>
+        /// <para>The geolocation detection results of the video.</para>
+        /// <para>This parameter has a value only when the video contains geolocation information.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Artist { get; set; }
 
         /// <summary>
-        /// <para>The audio streams.</para>
+        /// <para>The array of audio streams.</para>
         /// </summary>
         [NameInMap("AudioStreams")]
         [Validation(Required=false)]
         public List<AudioStream> AudioStreams { get; set; }
 
         /// <summary>
-        /// <para>The bitrate. Unit: bit/s.</para>
+        /// <para>The bitrate of the media file, in bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13164131</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Composer { get; set; }
 
         /// <summary>
-        /// <para>The total duration of the video. Unit: seconds.</para>
+        /// <para>The total duration of the video, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15.263000</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public double? Duration { get; set; }
 
         /// <summary>
-        /// <para>The full format name.</para>
+        /// <para>The full name of the format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QuickTime / MOV</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FormatLongName { get; set; }
 
         /// <summary>
-        /// <para>The abbreviated format name.</para>
+        /// <para>The format name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mov,mp4,m4a,3gp,3g2,mj2</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FormatName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content. For more information, see the ISO 639-2 Alpha-3 codes for the representation of names of languages.</para>
+        /// <para>The language used in the video. The value follows the ISO 639-2 standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eng</para>
@@ -115,7 +115,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The coordinate pair of the central point. The coordinate pair consists of latitude and longitude values. This parameter value must be in the &quot;latitude,longitude&quot; format. Valid values of the latitude: [-90,+90]. Valid values of the longitude: [-180,+180].</para>
+        /// <para>The central geographic coordinate point, which is a latitude and longitude value.
+        /// The format is latitude,longitude, with latitude first and longitude second. The latitude range is [-90,+90] and the longitude range is [-180,+180]. Example: 35.8,-45.91.</para>
         /// 
         /// <b>Example:</b>
         /// <para>+120.029003,+30.283095</para>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Performer { get; set; }
 
         /// <summary>
-        /// <para>The time of recording. For more information about the time formats, see the RFC3339 Nano standard.</para>
+        /// <para>The time when the video was recorded. The value follows the RFC 3339 Nano standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-24T02:39:57Z</para>
@@ -165,7 +166,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The size of the media object. Unit: bytes.</para>
+        /// <para>The size of the media file, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25115517</para>
@@ -175,7 +176,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The initial playback time.</para>
+        /// <para>The start playback time of the media, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.000000</para>
@@ -195,14 +196,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? StreamCount { get; set; }
 
         /// <summary>
-        /// <para>The subtitle streams.</para>
+        /// <para>The array of subtitle streams.</para>
         /// </summary>
         [NameInMap("Subtitles")]
         [Validation(Required=false)]
         public List<SubtitleStream> Subtitles { get; set; }
 
         /// <summary>
-        /// <para>The title of the media object.</para>
+        /// <para>The title of the media file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -212,7 +213,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The video height in pixels.</para>
+        /// <para>The height of the video frame in the media file, in pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1920</para>
@@ -222,14 +223,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? VideoHeight { get; set; }
 
         /// <summary>
-        /// <para>The video streams.</para>
+        /// <para>The array of video streams.</para>
         /// </summary>
         [NameInMap("VideoStreams")]
         [Validation(Required=false)]
         public List<VideoStream> VideoStreams { get; set; }
 
         /// <summary>
-        /// <para>The video width in pixels.</para>
+        /// <para>The width of the video frame in the media file, in pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1080</para>

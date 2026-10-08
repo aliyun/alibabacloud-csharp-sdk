@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class PersonReferenceConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable person referencing. Set to <c>true</c> to enable this feature. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to enable character reference configuration. Default value: false.</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]

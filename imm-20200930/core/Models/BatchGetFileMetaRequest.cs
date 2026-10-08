@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchGetFileMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, refer to <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information about how to obtain the project name, refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The array of object URIs. You can specify up to 100 object URIs in an array.</para>
+        /// <para>The list of file URIs. A maximum of 100 URIs are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("URIs")]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<string> URIs { get; set; }
 
         /// <summary>
-        /// <para>The fields to return. If you specify this parameter, only specified metadata fields are returned. You can use this parameter to control the size of the response.</para>
-        /// <para>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields.</para>
+        /// <para>The list of fields to be returned. If you specify this parameter, only the values of the specified fields are returned, instead of all existing metadata fields. This parameter can be used to reduce the size of the returned struct.</para>
+        /// <para>If you do not specify this parameter or leave it empty, all fields are returned.</para>
         /// </summary>
         [NameInMap("WithFields")]
         [Validation(Required=false)]

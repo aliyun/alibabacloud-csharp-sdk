@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>Animation frame rate, in frames per second</para>
+            /// <para>FrameRate</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? Height { get; set; }
 
             /// <summary>
-            /// <para>Time interval between animation frames, in seconds</para>
+            /// <para>Interval</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? Interval { get; set; }
 
             /// <summary>
-            /// <para>Total number of animation frames to generate</para>
+            /// <para>Number</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Number { get; set; }
 
             /// <summary>
-            /// <para>Scaling method</para>
+            /// <para>ScaleType</para>
             /// 
             /// <b>Example:</b>
             /// <para>crop</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The URI of the animation.</para>
+            /// <para>URI</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string URI { get; set; }
 
             /// <summary>
-            /// <para>Output width, in pixels</para>
+            /// <para>Width</para>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<TargetImageSnapshots> Snapshots { get; set; }
         public class TargetImageSnapshots : TeaModel {
             /// <summary>
-            /// <para>Image format</para>
+            /// <para>Format</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>Output height, in pixels</para>
+            /// <para>Height</para>
             /// 
             /// <b>Example:</b>
             /// <para>960</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? Height { get; set; }
 
             /// <summary>
-            /// <para>Time interval between snapshots, in seconds</para>
+            /// <para>Interval</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the snapshot.</para>
+            /// <para>Number</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Number { get; set; }
 
             /// <summary>
-            /// <para>Scaling method</para>
+            /// <para>ScaleType</para>
             /// 
             /// <b>Example:</b>
             /// <para>crop</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string ScaleType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the snapshot.</para>
+            /// <para>StartTime</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Threshold { get; set; }
 
             /// <summary>
-            /// <para>OSS URI where snapshots are stored</para>
+            /// <para>URI</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string URI { get; set; }
 
             /// <summary>
-            /// <para>The width of the snapshot.</para>
+            /// <para>Width</para>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<TargetImageSprites> Sprites { get; set; }
         public class TargetImageSprites : TeaModel {
             /// <summary>
-            /// <para>Image format</para>
+            /// <para>Format</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>Time interval between sprites, in seconds</para>
+            /// <para>Interval</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? Interval { get; set; }
 
             /// <summary>
-            /// <para>Margin around the sprite grid, in pixels</para>
+            /// <para>Margin</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>Total number of sprites to generate</para>
+            /// <para>Number</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Number { get; set; }
 
             /// <summary>
-            /// <para>Padding between sprite tiles, in pixels</para>
+            /// <para>Pad</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Pad { get; set; }
 
             /// <summary>
-            /// <para>Output height after scaling, in pixels</para>
+            /// <para>ScaleHeight</para>
             /// 
             /// <b>Example:</b>
             /// <para>960</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public float? ScaleHeight { get; set; }
 
             /// <summary>
-            /// <para>Scaling method</para>
+            /// <para>ScaleType</para>
             /// 
             /// <b>Example:</b>
             /// <para>crop</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string ScaleType { get; set; }
 
             /// <summary>
-            /// <para>Output width after scaling, in pixels</para>
+            /// <para>ScaleWidth</para>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Threshold { get; set; }
 
             /// <summary>
-            /// <para>Height of each sprite tile, in pixels</para>
+            /// <para>TileHeight</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? TileHeight { get; set; }
 
             /// <summary>
-            /// <para>Width of each sprite tile, in pixels</para>
+            /// <para>TileWidth</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>

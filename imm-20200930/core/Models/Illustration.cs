@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<float?> NormalizedBox { get; set; }
 
         /// <summary>
-        /// <para>The page number on which the image is located.</para>
+        /// <para>The page number where the image is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://test-bucket/test-object</para>
+        /// <para>oss://examplebucket/sampleobject.jpg</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

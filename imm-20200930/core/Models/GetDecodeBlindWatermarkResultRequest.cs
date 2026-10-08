@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetDecodeBlindWatermarkResultRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can obtain the ID of the task from the response of the CreateDecodeBlindWatermarkTask operation.</para>
+        /// <para>The task ID. You can obtain the task ID from the response parameters of the blind watermark extraction task creation operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
-        /// <list type="bullet">
-        /// <item><description>Set the value to DecodeBlindWatermark.</description></item>
-        /// </list>
+        /// <para>The task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

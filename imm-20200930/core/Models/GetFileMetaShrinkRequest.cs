@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetFileMetaShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, refer to <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information about how to obtain the project name, refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The URI of the file. Make sure that the file is indexed\<em>\</em>\<em>\</em>.</para>
-        /// <para>Specify the OSS URI in the oss\://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
-        /// <para>Specify the URI of the file in Photo and Drive Service in the pds\://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</para>
+        /// <para>The URI of the file. Make sure that the file has been <b>indexed</b>.</para>
+        /// <para>The OSS URI format is oss://${Bucket}/${Object}, where <c>${Bucket}</c> is the name of the OSS bucket that resides in the same region as the current project, and <c>${Object}</c> is the full path of the file including the file name extension.</para>
+        /// <para>The PDS URI format is pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string URI { get; set; }
 
         /// <summary>
-        /// <para>The metadata fields that you want to include in the response. You can use this parameter to reduce the size of the response.</para>
-        /// <para>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields of the file.</para>
+        /// <para>Specifies the specific fields to return, instead of all existing metadata fields. You can use this parameter to reduce the size of the returned struct.</para>
+        /// <para>If you do not specify this parameter or leave it empty, all fields are returned.</para>
         /// </summary>
         [NameInMap("WithFields")]
         [Validation(Required=false)]

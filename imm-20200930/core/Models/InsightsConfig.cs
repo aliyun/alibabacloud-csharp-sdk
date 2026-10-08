@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class InsightsConfig : TeaModel {
+        /// <summary>
+        /// <para>The image content-aware configuration.</para>
+        /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public ImageInsightsConfig Image { get; set; }

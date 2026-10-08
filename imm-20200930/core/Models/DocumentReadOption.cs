@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentReadOption : TeaModel {
         /// <summary>
-        /// <para>Configuration for extracting keywords from the document.</para>
+        /// <para>The document intensive reading keyword extraction options.</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public DocumentReadKeywordOption Keyword { get; set; }
 
         /// <summary>
-        /// <para>Configuration for the text-to-speech (TTS) narrator.</para>
+        /// <para>The document intensive reading guide options.</para>
         /// </summary>
         [NameInMap("Narrator")]
         [Validation(Required=false)]
         public DocumentReadNarratorOption Narrator { get; set; }
 
         /// <summary>
-        /// <para>Configuration for the question-answering (Q\&amp;A) feature, which answers questions based on the document\&quot;s content.</para>
+        /// <para>The document intensive reading question guide options.</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]
         public DocumentReadQuestionOption Question { get; set; }
 
         /// <summary>
-        /// <para>Configuration for generating a document summary.</para>
+        /// <para>The document intensive reading summary options.</para>
         /// </summary>
         [NameInMap("Summary")]
         [Validation(Required=false)]

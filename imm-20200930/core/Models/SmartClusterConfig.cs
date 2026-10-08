@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SmartClusterConfig : TeaModel {
+        /// <summary>
+        /// <para>The figure clustering configuration.</para>
+        /// </summary>
         [NameInMap("Figure")]
         [Validation(Required=false)]
         public FigureClusterConfig Figure { get; set; }

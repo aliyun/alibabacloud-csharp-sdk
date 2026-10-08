@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateVideoPlaylistRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
-        /// <para>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
+        /// <para><b>Leave this parameter empty unless you have special requirements.</b></para>
+        /// <para>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The OSS URI of the Master Playlist.</para>
-        /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file with the .m3u8 file name extension.</para>
+        /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file with the &quot;.m3u8&quot; extension.</para>
         /// <remarks>
-        /// <para>If the playlist has subtitle inputs or multiple target outputs, MasterURI is required. The subtitle URI or target URI must be in the same directory as or a subdirectory of the directory specified by MasterURI.</para>
+        /// <para>If the playlist has subtitle input or multiple Target outputs, MasterURI is required. The subtitle URI or Target URI must be in the same directory as or a subdirectory of MasterURI.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,19 +32,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string MasterURI { get; set; }
 
         /// <summary>
-        /// <para>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
+        /// <para>The message notification configuration. Click Notification for details. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The policy to overwrite an existing Media Playlist. Valid values:</para>
+        /// <para>The overwrite policy when the Media Playlist already exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>overwrite (default): Overwrites the existing Media Playlist.</para>
-        /// </description></item>
-        /// <item><description><para>skip-existing: Skips the generation and retains the existing Media Playlist.</para>
-        /// </description></item>
+        /// <item><description>overwrite (default): Overwrites the existing Media Playlist.</description></item>
+        /// <item><description>skip-existing: Skips generation and retains the existing Media Playlist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OverwritePolicy { get; set; }
 
         /// <summary>
-        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,15 +64,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The duration for which the playlist is generated. Unit: seconds (s). Valid values:</para>
+        /// <para>The duration for generating the playlist. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0 (default) or empty: continues to the end of the source video.</para>
+        /// <item><description><para>0 (default) or empty: continues until the end of the source video.</para>
         /// </description></item>
-        /// <item><description><para>Greater than 0: lasts for the specified duration from the start time.</para>
+        /// <item><description><para>Greater than 0: continues for the specified duration from the start time of the playlist generation.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the specified duration extends beyond the end of the source video, the default value is used.</para>
+        /// <para>If the time point corresponding to the specified parameter exceeds the end of the source video, the default value is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? SourceDuration { get; set; }
 
         /// <summary>
-        /// <para>The start time for generating the playlist. Unit: seconds (s). Valid values:</para>
+        /// <para>The start time for generating the playlist. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>0 (default) or empty: starts from the beginning of the source video.</para>
         /// </description></item>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can set this parameter together with the <b>SourceDuration</b> parameter to generate a playlist for a specific part of the source video.</para>
+        /// <para>You can use this parameter together with <b>SourceDuration</b> to generate a playlist for a specific portion of the source video.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,14 +102,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? SourceStartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of subtitles to add. The default value is empty. You can add up to two subtitles.</para>
+        /// <para>The list of subtitles to add. Default value: empty. Maximum number of subtitles: 2.</para>
         /// </summary>
         [NameInMap("SourceSubtitles")]
         [Validation(Required=false)]
         public List<GenerateVideoPlaylistRequestSourceSubtitles> SourceSubtitles { get; set; }
         public class GenerateVideoPlaylistRequestSourceSubtitles : TeaModel {
             /// <summary>
-            /// <para>The language of the subtitle. The value must comply with the ISO 639-2 standard. The default value is empty.</para>
+            /// <para>The subtitle language. The standard is ISO 639-2. Default value: empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eng</para>
@@ -121,10 +119,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The OSS URI of the subtitle file to embed.</para>
-            /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file.</para>
+            /// <para>The OSS URI of the subtitle to embed.</para>
+            /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file.</para>
             /// <remarks>
-            /// <para>The <b>MasterURI</b> parameter must not be empty. The OSS URI of the subtitle file to embed, <c>oss://${Bucket}/${Object}</c>, must be in the same directory as or a subdirectory of the directory specified by <b>MasterURI</b>.</para>
+            /// <para>The <b>MasterURI</b> parameter must not be empty, and the OSS URI <c>oss://${Bucket}/${Object}</c> of the subtitle to embed must be in the same directory as or a subdirectory of the <b>MasterURI</b> parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -139,9 +137,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The OSS URI of the video.</para>
-        /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</para>
+        /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same area (Region) as the current project, and ${Object} is the full path of the file including the file name extension.</para>
         /// <remarks>
-        /// <para>Only OSS Standard storage buckets are supported. Buckets with hotlink protection whitelists are not supported.</para>
+        /// <para>Only OSS buckets with Standard storage class are supported.
+        /// Buckets with hotlink protection whitelist access settings are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -153,7 +152,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use tags to control the lifecycle of OSS files.</para>
+        /// <para>The OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to add to the generated TS files. You can use tags to control the lifecycle of OSS files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
@@ -163,9 +162,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>An array of live transcoding playlists. The maximum array length is 6. Each target corresponds to a maximum of one video Media Playlist and one or more subtitle Media Playlists.</para>
+        /// <para>The array of just-in-time transcoding playlists. Maximum array length: 6. Each Target corresponds to at most one video Media Playlist and one or more subtitle Media Playlists.</para>
         /// <remarks>
-        /// <para>If you configure more than one target, the <b>MasterURI</b> parameter must not be empty.</para>
+        /// <para>If more than one Target is configured, the <b>MasterURI</b> parameter must not be empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -174,9 +173,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<GenerateVideoPlaylistRequestTargets> Targets { get; set; }
         public class GenerateVideoPlaylistRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The parameter settings for audio processing. An empty value (default) disables audio processing. The output TS file will not contain an audio stream.</para>
+            /// <para>The audio processing parameter settings. An empty value (default) indicates that audio processing is disabled and the output TS files do not contain an audio stream.</para>
             /// <remarks>
-            /// <para>The Audio and Subtitle fields within the same target are mutually exclusive. If the Audio field is set, the Subtitle field is ignored. You can set both Audio and Video. Audio specifies the audio information in the output video. You can also set only Audio to generate only audio information.</para>
+            /// <para>The Audio and Subtitle fields within the same Target are mutually exclusive. If the Audio field is set, the Subtitle field is ignored. Audio and Video can be set simultaneously, where Audio represents the audio information in the output video. You can also set only Audio to generate audio-only output.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Audio")]
@@ -184,7 +183,23 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public TargetAudio Audio { get; set; }
 
             /// <summary>
-            /// <para>The playback duration of a single TS file. Unit: seconds (s). Default value: 10. Value range: [5, 15].</para>
+            /// <para>The HLS segment container type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ts (default)</para>
+            /// </description></item>
+            /// <item><description><para>mp4</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ts</para>
+            /// </summary>
+            [NameInMap("Container")]
+            [Validation(Required=false)]
+            public string Container { get; set; }
+
+            /// <summary>
+            /// <para>The playback duration of a single TS file. Unit: seconds. Default value: 10. Valid values: [5, 15].</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -194,24 +209,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>An array of durations for the initial transcoded TS files. The maximum array length is 6. The default value is empty. This parameter is independent of the <b>Duration</b> parameter.</para>
+            /// <para>The array of initial transcoding TS file durations. Maximum array length: 6. Default value: empty. This parameter is independent of the <b>Duration</b> parameter.</para>
             /// </summary>
             [NameInMap("InitialSegments")]
             [Validation(Required=false)]
             public List<float?> InitialSegments { get; set; }
 
             /// <summary>
-            /// <para>The initial transcoding duration. Unit: seconds (s). Default value: 30.</para>
+            /// <para>The initial transcoding duration. Unit: seconds. Default value: 30.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set this parameter to 0, pre-transcoding is not performed.</para>
-            /// </description></item>
-            /// <item><description><para>If you set this parameter to a value less than 0 or a value that exceeds the source video length, the entire video is initially transcoded.</para>
-            /// </description></item>
-            /// <item><description><para>If the specified duration ends in the middle of a TS file, transcoding continues to the end of that TS file.</para>
-            /// </description></item>
+            /// <item><description>If the value is 0, no pre-transcoding is performed.</description></item>
+            /// <item><description>If the value is less than 0 or exceeds the source video length, the entire video is initially transcoded.</description></item>
+            /// <item><description>If the specified duration falls in the middle of a TS file, transcoding continues until the end of that TS file.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is mainly used to reduce the waiting time for the first playback and improve the user experience. To replace a traditional VOD scenario, you can try initially transcoding the entire video.</para>
+            /// <para>This parameter is mainly used to reduce the wait time for initial video playback and improve the playback experience. If you want to replace traditional VOD business scenarios, try initially transcoding the entire video.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -222,9 +234,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public float? InitialTranscode { get; set; }
 
             /// <summary>
-            /// <para>The parameter settings for subtitle processing.</para>
+            /// <para>The subtitle processing parameter settings.</para>
             /// <remarks>
-            /// <para>The Subtitle field is mutually exclusive with the Video and Audio fields within the same target. Subtitles can be generated only when the Subtitle field is set independently.</para>
+            /// <para>The Subtitle field is mutually exclusive with the Video or Audio fields within the same Target. Subtitles are generated only when Subtitle is set alone.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Subtitle")]
@@ -232,9 +244,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public TargetSubtitle Subtitle { get; set; }
 
             /// <summary>
-            /// <para>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use OSS tags to control the lifecycle of OSS files.</para>
+            /// <para>The OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to add to the generated TS files. You can use OSS tags to control the lifecycle of OSS files.</para>
             /// <remarks>
-            /// <para>The tags for the current target are the union of the tags defined at this level and the tags defined at the parent level. If a tag has the same name, the value at the current level is used.</para>
+            /// <para>The tag values at this level are merged with the Tags defined at the parent level to form the tag values for the current Target. If a tag with the same name exists, the value at this level takes precedence.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Tags")]
@@ -242,9 +254,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public Dictionary<string, string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The number of TS files to transcode ahead when live transcoding is triggered. By default, 2 minutes of video is transcoded ahead.</para>
+            /// <para>The number of TS files to transcode ahead when just-in-time transcoding is triggered. By default, 2 minutes of video is transcoded ahead.</para>
             /// <list type="bullet">
-            /// <item><description>Example: If <b>Duration</b> is 10, the default value of <b>TranscodeAhead</b> is 12. You can specify this parameter to control the number of asynchronous forward transcodes. The value must be in the range of [10, 30].</description></item>
+            /// <item><description>Example: If <b>Duration</b> is 10, the default value of <b>TranscodeAhead</b> is 12. You can specify this parameter to control the number of asynchronous ahead-of-time transcoding files. Valid values: [10, 30].</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,13 +267,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? TranscodeAhead { get; set; }
 
             /// <summary>
-            /// <para>The OSS URI prefix for the output files of live transcoding. The output files include M3U8 files and TS files.</para>
-            /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the prefix of the full path of the file, without the file name extension.</para>
+            /// <para>The OSS URI prefix of the just-in-time transcoding output files, including M3U8 files and TS files.</para>
+            /// <para>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path prefix of the file without the file name extension.</para>
             /// <list type="bullet">
-            /// <item><description>Example: If URI is oss\://test-bucket/test-object/output-video, one oss\://test-bucket/test-object/output-video.m3u8 file and multiple oss\://test-bucket/test-object/output-video-${token}-${index}.ts files are generated. ${token} is a unique string generated based on the transcoding parameters and is included in the API response. ${index} is the sequence number of the generated TS file, starting from 0.</description></item>
+            /// <item><description>Example: If URI is oss://test-bucket/test-object/output-video, an oss://test-bucket/test-object/output-video.m3u8 file and multiple oss://test-bucket/test-object/output-video-${token}-${index}.ts files are generated. ${token} is a unique character string generated based on the transcoding parameters and is included in the API response. ${index} is the ordinal number of the TS file starting from 0.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the <b>MasterURI</b> parameter is not empty, the URI must be in the same directory as or a subdirectory of the directory specified by <b>MasterURI</b>.</para>
+            /// <para>If the <b>MasterURI</b> parameter is not empty, the URI must be in the same directory as or a subdirectory of the <b>MasterURI</b> parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -272,9 +284,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string URI { get; set; }
 
             /// <summary>
-            /// <para>The parameter settings for video processing. An empty value (default) disables video processing. The output TS file will not contain a video stream.</para>
+            /// <para>The video processing parameter settings. An empty value (default) indicates that video processing is disabled and the output TS files do not contain a video stream.</para>
             /// <remarks>
-            /// <para>The Video and Subtitle fields within the same target are mutually exclusive. If the Video field is set, the Subtitle field is ignored.</para>
+            /// <para>The Video and Subtitle fields within the same Target are mutually exclusive. If the Video field is set, the Subtitle field is ignored.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Video")]
@@ -284,7 +296,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your services. The maximum length is 2,048 bytes.</para>
+        /// <para>The custom information that is returned in asynchronous message notifications, which helps you associate message notifications within your system. Maximum length: 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetStoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the story.</para>
+        /// <para>The detailed information about the story.</para>
         /// </summary>
         [NameInMap("Story")]
         [Validation(Required=false)]

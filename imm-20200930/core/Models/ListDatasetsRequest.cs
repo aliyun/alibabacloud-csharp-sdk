@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListDatasetsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of datasets to return. Valid values: 0 to 200.</para>
-        /// <para>If this parameter is left empty or set to 0, 100 datasets are returned.</para>
+        /// <para>The maximum number of datasets to return. Valid values: 0 to 200. If you do not specify this parameter or set it to 0, the default value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,9 +21,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The pagination token.</para>
-        /// <para>If the total number of datasets is greater than the value of MaxResults, you must specify this parameter. The list is returned in lexicographic order starting from the value of NextToken.</para>
+        /// <para>If the total number of datasets exceeds the value of MaxResults, this token is used for pagination. The list of dataset information is returned in lexicographical order starting from NextToken.</para>
         /// <remarks>
-        /// <para> The first time you call this operation in a query, set this parameter to null.</para>
+        /// <para>When you call this operation for the first time in a query, leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +34,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The dataset prefix.</para>
+        /// <para>The prefix of the dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

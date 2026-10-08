@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class FigureClusterConfig : TeaModel {
         /// <summary>
-        /// <para>Whether to automatically group similar figures into clusters.</para>
+        /// <para>Specifies whether to allow IMM to perform classification tasks on files in the dataset. Default value: False.</para>
         /// </summary>
         [NameInMap("AutoClustering")]
         [Validation(Required=false)]
         public bool? AutoClustering { get; set; }
 
         /// <summary>
-        /// <para>Whether to automatically generate metadata for each cluster, such as a representative cover image.</para>
+        /// <para>Indicates whether IMM is allowed to perform automatic creation of new groups. Default value: False.</para>
         /// </summary>
         [NameInMap("AutoGenerate")]
         [Validation(Required=false)]
         public bool? AutoGenerate { get; set; }
 
         /// <summary>
-        /// <para>An array of strings specifying the clustering strategies to use.</para>
+        /// <para>The features supported by figure clustering.</para>
         /// </summary>
         [NameInMap("EnabledFeatures")]
         [Validation(Required=false)]
         public List<string> EnabledFeatures { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of figures required to form a cluster.</para>
+        /// <para>The minimum threshold for the number of entities when automatic generation of new groups is allowed. Default value: 3.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("MinEntityCount")]
         [Validation(Required=false)]

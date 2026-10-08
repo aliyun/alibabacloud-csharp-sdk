@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Channels { get; set; }
 
             /// <summary>
-            /// <para>The token generated for the audio Media Playlist. You can use this parameter to construct the URI of the generated TS file.</para>
+            /// <para>The token generated for the audio Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>affe0c6042f09722fec95a21b8b******</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<GenerateVideoPlaylistResponseBodySubtitlePlaylist> SubtitlePlaylist { get; set; }
         public class GenerateVideoPlaylistResponseBodySubtitlePlaylist : TeaModel {
             /// <summary>
-            /// <para>The sequence number of the subtitle stream, starting from 0.</para>
+            /// <para>The subtitle stream number, starting from 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The language of the subtitle stream.</para>
             /// <remarks>
-            /// <para>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, this parameter is empty.</para>
+            /// <para>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, an empty value is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The token generated for the subtitle Media Playlist. You can use this parameter to construct the URI of the generated subtitle file.</para>
+            /// <para>The token generated for the subtitle Media Playlist. You can use this parameter to construct the addresses of the generated subtitle files.</para>
             /// <remarks>
-            /// <para>You can use the returned token value to construct the URI of the transcoded subtitle file. The format is oss\://${Bucket}/${Object}-${Token}_${Index}.ts. oss\://${Bucket}/${Object} is the subtitle URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the subtitle.</para>
+            /// <para>Based on the returned Token value, you can construct the addresses of the transcoded subtitle files. The format is: oss://${Bucket}/${Object}-${Token}_${Index}.ts, where oss://${Bucket}/${Object} is the Subtitle URI from the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the subtitle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -171,9 +171,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>The token generated for the video Media Playlist. You can use this parameter to construct the URI of the generated TS file.</para>
+            /// <para>The token generated for the video Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</para>
             /// <remarks>
-            /// <para>You can use the returned token value to construct the URI of the transcoded TS file. The format is oss\://${Bucket}/${Object}-${Token}-${Index}.ts. oss\://${Bucket}/${Object} is the target URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the TS file.</para>
+            /// <para>Based on the returned Token value, you can construct the addresses of the transcoded TS files. The format is: oss://${Bucket}/${Object}-${Token}-${Index}.ts, where oss://${Bucket}/${Object} is the Target URI from the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the TS file.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

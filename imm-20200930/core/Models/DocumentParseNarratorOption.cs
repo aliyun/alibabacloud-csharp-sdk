@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentParseNarratorOption : TeaModel {
         /// <summary>
-        /// <para>The summary of the document.</para>
+        /// <para>The article reading guide.</para>
         /// </summary>
         [NameInMap("Narrate")]
         [Validation(Required=false)]

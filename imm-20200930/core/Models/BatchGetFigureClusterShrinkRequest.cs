@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The cluster IDs.</para>
+        /// <para>The array of group object IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectIds")]

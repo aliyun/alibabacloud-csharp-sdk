@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class QueryStoriesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The time range in which stories were created.</para>
+        /// <para>The creation time range of the story.</para>
         /// </summary>
         [NameInMap("CreateTimeRange")]
         [Validation(Required=false)]
         public string CreateTimeRangeShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom labels in key-value pairs.</para>
+        /// <para>The custom label key-value pairs. Only stories that match the specified label pairs are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key=value</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CustomLabels { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The name of the dataset. For more information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the face clusters.</para>
+        /// <para>The IDs of the figure clusters.</para>
         /// </summary>
         [NameInMap("FigureClusterIds")]
         [Validation(Required=false)]
         public string FigureClusterIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries to return in a single call. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If you do not specify this token in the next request, results are returned from the beginning.</para>
+        /// <para>The pagination token. If this parameter is left empty, the query starts from the beginning. To query the next page, set this parameter to the NextToken value returned in the previous call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the story.</para>
+        /// <para>The ID of the story object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id1</para>
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>asc: in ascending order.</para>
+        /// <item><description><para>asc: Ascending order.</para>
         /// </description></item>
-        /// <item><description><para>desc: in descending order.</para>
+        /// <item><description><para>desc: Descending order.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,15 +102,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Valid values:</para>
+        /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateTime: sorts by story creation time.</para>
+        /// <item><description><para>CreateTime: Sorts by story creation time.</para>
         /// </description></item>
-        /// <item><description><para>StoryName: sorts by story name.</para>
+        /// <item><description><para>StoryName: Sorts by story name.</para>
         /// </description></item>
-        /// <item><description><para>StoryStartTime: sorts by story start time.</para>
+        /// <item><description><para>StoryStartTime: Sorts by story start time.</para>
         /// </description></item>
-        /// <item><description><para>StoryEndTime: sorts by story end time.</para>
+        /// <item><description><para>StoryEndTime: Sorts by story end time.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The time range for the creation time of the last photo or video in the story.</para>
+        /// <para>The end time range of the photos or videos in the story.</para>
         /// </summary>
         [NameInMap("StoryEndTimeRange")]
         [Validation(Required=false)]
@@ -139,14 +139,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StoryName { get; set; }
 
         /// <summary>
-        /// <para>The time range for the creation time of the first photo or video in the story.</para>
+        /// <para>The start time range of the photos or videos in the story.</para>
         /// </summary>
         [NameInMap("StoryStartTimeRange")]
         [Validation(Required=false)]
         public string StoryStartTimeRangeShrink { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</para>
+        /// <para>The subtype of the story. For valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SeasonHighlights</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StorySubType { get; set; }
 
         /// <summary>
-        /// <para>The type of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</para>
+        /// <para>The type of the story. For valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TimeMemory</para>
@@ -168,9 +168,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>Specifies whether to return empty stories. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (The default value)</para>
+        /// <item><description><para>true: Returns empty stories. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Does not return empty stories.</para>
         /// </description></item>
         /// </list>
         /// 

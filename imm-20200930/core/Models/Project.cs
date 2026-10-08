@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The workflow template ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Official:ImageManagement</para>
+        /// <para>DefaultId</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

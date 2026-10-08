@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The centric score of the tag. This indicates whether the tag is the main subject in the image. The value ranges from 0 to 1. A higher value indicates higher confidence that the tag is the main subject of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.877</para>
+        /// <para>0.7319999933242798</para>
         /// </summary>
         [NameInMap("CentricScore")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The tag confidence level. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.95</para>
+        /// <para>0.9891784601980591</para>
         /// </summary>
         [NameInMap("LabelConfidence")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The tag level. Valid values are 1, 2, and 3, representing first-level, second-level, and third-level tags, respectively.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("LabelLevel")]
         [Validation(Required=false)]

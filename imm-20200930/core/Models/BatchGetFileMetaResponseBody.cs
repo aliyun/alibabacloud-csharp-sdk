@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchGetFileMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metadata returned.</para>
+        /// <para>The file metadata.</para>
         /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]

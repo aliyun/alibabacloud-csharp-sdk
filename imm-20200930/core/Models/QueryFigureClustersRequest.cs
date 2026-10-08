@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class QueryFigureClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The time range within which the face group was created.</para>
+        /// <para>The time range during which the face clusters were created.</para>
         /// </summary>
         [NameInMap("CreateTimeRange")]
         [Validation(Required=false)]
         public TimeRange CreateTimeRange { get; set; }
 
         /// <summary>
-        /// <para>The custom labels, which can be used as query conditions.</para>
+        /// <para>The query conditions for custom labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key=value</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CustomLabels { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 0 to 100. Default value: 100.</para>
+        /// <para>The maximum number of data records to return in this call. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. If this parameter is left empty or set to None, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCkltYWdlQ291bnQQARgBIr0ECgkABAAAAAAAAAAKrwQDKgIAADFTMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjMzMjNhNjY2OTY3NzU3MjY1MmQ2MzZjNzU3Mzc0NjU3MjNhNDM2Yzc1NzM3NDY1NzIyZDYxNjUzOTY0MzQzMzMxNjEyZDM3MzQ2NTY2MmQzNDM5Mzc2MjJkMzg2MjMxMzUyZDM0MzUzOTM1MzYzNzYxMzQ2NDM2MzE2Ni5TMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjM*****</para>
@@ -59,13 +59,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The sort order. Default value: asc.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>asc: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>desc: descending order.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -75,7 +68,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,28 +79,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The sort field. If you leave this parameter empty, the group ID is used as the sort field.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ImageCount: the number of images.</para>
-        /// </description></item>
-        /// <item><description><para>VideoCount: the number of videos.</para>
-        /// </description></item>
-        /// <item><description><para>ProjectName: the name of the project.</para>
-        /// </description></item>
-        /// <item><description><para>DatasetName: the name of the dataset.</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime: the point in time when the group is created.</para>
-        /// </description></item>
-        /// <item><description><para>UpdateTime: the most recent point in time when the group is updated.</para>
-        /// </description></item>
-        /// <item><description><para>Gender: the gender.</para>
-        /// </description></item>
-        /// <item><description><para>FaceCount: the number of faces.</para>
-        /// </description></item>
-        /// <item><description><para>GroupName: the name of the group.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The field used for sorting. By default, this parameter is left empty, which indicates that the results are sorted by cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ImageCount</para>
@@ -117,14 +89,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The time range within which the face group was last updated.</para>
+        /// <para>The time range during which the face clusters were updated.</para>
         /// </summary>
         [NameInMap("UpdateTimeRange")]
         [Validation(Required=false)]
         public TimeRange UpdateTimeRange { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the total number of face groups that match the current query conditions. Default value: false.</para>
+        /// <para>Specifies whether to return the total number of face clusters that meet the current query conditions. Default value: false, which indicates that the total number of clusters is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

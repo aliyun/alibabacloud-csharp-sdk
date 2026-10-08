@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class FuzzyQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The files.</para>
+        /// <para>The list of file information.</para>
         /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public List<File> Files { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
-        /// <para>It can be used in the next request to retrieve a new page of results.</para>
-        /// <para>If NextToken is empty, no next page exists.</para>
+        /// <para>The token used for pagination when the total number of files exceeds the value of MaxResults.</para>
+        /// <para>When you list file information next time, set NextToken to this value to return the remaining results.</para>
+        /// <para>This parameter is returned only when not all files are returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of hits.</para>
+        /// <para>The number of matched records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

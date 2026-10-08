@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The datasets.</para>
+        /// <para>The list of dataset information.</para>
         /// </summary>
         [NameInMap("Datasets")]
         [Validation(Required=false)]
         public List<Dataset> Datasets { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If the total number of datasets is greater than the value of MaxResults, you must specify this parameter. This parameter has a value only if not all the datasets that meet the conditions are returned.</para>
-        /// <para>Pass this value as the value of NextToken in the next call to query subsequent datasets.</para>
+        /// <para>The pagination token. If the total number of datasets exceeds the value of MaxResults, this token is used for pagination. This parameter is returned only when not all matching datasets are returned.</para>
+        /// <para>Pass this value as NextToken in the next request to return the remaining datasets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678:immtest:dataset002</para>

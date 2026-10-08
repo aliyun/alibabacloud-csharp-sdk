@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateHighlightTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The China authorization configuration. <b>Leave this parameter empty unless you have specific requirements.</b>.</para>
+        /// <para>The chained authorization configuration. <b>Leave this parameter empty unless otherwise required.</b></para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
@@ -33,10 +33,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The highlight recognition mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Scene: scene and frame recognition.</para>
-        /// </description></item>
-        /// <item><description><para>Average (default): average slice recognition.</para>
-        /// </description></item>
+        /// <item><description>Scene: scene and frame recognition</description></item>
+        /// <item><description>Average: average clip recognition
+        /// Default value: Average.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +46,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The message notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</para>
+        /// <para>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OutputShrink { get; set; }
 
         /// <summary>
-        /// <para>The project name.</para>
+        /// <para>The name of the project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,8 +72,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The list of media resources to process.
-        /// A maximum of 10 videos are supported.</para>
+        /// <para>The list of media resources to be processed. You can specify up to 10 videos.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Sources")]
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom tags used to search for and filter asynchronous tasks.</para>
+        /// <para>The custom tags used to search and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:&quot;val1&quot;}</para>
@@ -94,12 +92,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The processing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Retrieval: highlight extraction.</para>
-        /// </description></item>
-        /// <item><description><para>Concat: video composition.</para>
-        /// </description></item>
-        /// <item><description><para>Compose: one-click video creation.</para>
-        /// </description></item>
+        /// <item><description>Retrieval: highlight extraction</description></item>
+        /// <item><description>Concat: video composition</description></item>
+        /// <item><description>Compose: one-click video creation</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

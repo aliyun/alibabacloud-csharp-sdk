@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchGetFigureClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The clusters.</para>
+        /// <para>The list of figure clusters.</para>
         /// </summary>
         [NameInMap("FigureClusters")]
         [Validation(Required=false)]
         public List<FigureCluster> FigureClusters { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA995EFD-083D-4F40-BE8A-BDF75FFF****</para>

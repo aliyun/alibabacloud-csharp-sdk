@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The BCP 47 language code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zh-Hans</para>
+        /// <para>zh-hans</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

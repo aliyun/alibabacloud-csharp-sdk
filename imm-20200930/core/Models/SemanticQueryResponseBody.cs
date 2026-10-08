@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SemanticQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The files.</para>
+        /// <para>The list of files.</para>
         /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public List<File> Files { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</para>
