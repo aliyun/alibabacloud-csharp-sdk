@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForReserveDropListDomainResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B7AB5469-5E38-4AA9-A920-C65B7A9C8E6E</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</para>
         /// </summary>

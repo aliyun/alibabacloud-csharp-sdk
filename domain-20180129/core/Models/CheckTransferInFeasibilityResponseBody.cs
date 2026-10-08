@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CheckTransferInFeasibilityResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the domain name can be transferred in. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The domain name can be transferred in.</description></item>
+        /// <item><description><b>false</b>: The domain name cannot be transferred in.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? CanTransfer { get; set; }
 
         /// <summary>
+        /// <para>The error code returned when the domain name cannot be transferred in.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CheckTransferResult.DomainTransferProhibited</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error description returned when the domain name cannot be transferred in.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This domain name is in transfer prohibited status, so it cannot be transferred. You can contact your original registrar to change its status.</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The product ID of the domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2a</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// <para>The unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FC0D6B89-2353-4D64-BD80-6606A7DBD7C1</para>
         /// </summary>

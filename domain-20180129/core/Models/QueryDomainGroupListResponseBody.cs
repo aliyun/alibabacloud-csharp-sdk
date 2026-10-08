@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80011ABC-F573-4795-B0E8-377BFBBA3422</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryLocalEnsAssociationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ENS address recorded in the Alibaba Cloud system.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3ECD5439-39A2-477D-9A19-64FCA1F77EEB</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Address { get; set; }
 
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0x1234567890123456789012345678901234567890</para>
         /// </summary>

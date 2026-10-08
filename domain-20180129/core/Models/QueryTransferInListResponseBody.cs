@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTransferInListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the current domain name list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -114,6 +116,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether a next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -122,6 +126,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
+        /// <para>The paging size of the domain name list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -130,6 +136,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether a previous page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -138,6 +146,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? PrePage { get; set; }
 
         /// <summary>
+        /// <para>The unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</para>
         /// </summary>
@@ -146,6 +156,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>
@@ -154,6 +166,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TotalItemNum { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

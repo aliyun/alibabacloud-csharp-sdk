@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ResendEmailVerificationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of failed verification email sends.</para>
+        /// </summary>
         [NameInMap("FailList")]
         [Validation(Required=false)]
         public List<ResendEmailVerificationResponseBodyFailList> FailList { get; set; }
         public class ResendEmailVerificationResponseBodyFailList : TeaModel {
             /// <summary>
+            /// <para>Return code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SendTokenQuotaExceeded</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Verified mailbox.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>Return message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The maximum number of attempts allowed to send the email verification link is exceeded.</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0EA54E99-DB48-4CE3-A099-6ED8E451B8AC</para>
         /// </summary>
@@ -47,11 +58,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of successfully sent verification emails.</para>
+        /// </summary>
         [NameInMap("SuccessList")]
         [Validation(Required=false)]
         public List<ResendEmailVerificationResponseBodySuccessList> SuccessList { get; set; }
         public class ResendEmailVerificationResponseBodySuccessList : TeaModel {
             /// <summary>
+            /// <para>Return code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Verified mailbox.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>Return message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>

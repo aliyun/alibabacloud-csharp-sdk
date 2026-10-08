@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CreateIntlFixedPriceDomainOrderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned object.</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CreateIntlFixedPriceDomainOrderResponseBodyModule Module { get; set; }
         public class CreateIntlFixedPriceDomainOrderResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The order number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>31199295f2074ce895645d386cb2****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string OrderNo { get; set; }
 
             /// <summary>
+            /// <para>The transaction price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100.00</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public long? PayPrice { get; set; }
 
             /// <summary>
+            /// <para>The payment URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>https://</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E879DC07-38EE-4408-9F33-73B30CD965CD</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class BatchFuzzyMatchDomainSensitiveWordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C560A803-B975-481D-A66B-A4395EA863A1</para>
         /// </summary>

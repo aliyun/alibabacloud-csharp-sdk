@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</para>
         /// </summary>

@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         /// <summary>
         /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>参数错误</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

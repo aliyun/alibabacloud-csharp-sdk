@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Domain20180129
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "central";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "domain-intl.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("domain", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +43,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认任务结果</para>
+        /// <para>Invoke AcknowledgeTaskResult to confirm the task detail result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AcknowledgeTaskResultRequest
@@ -89,8 +98,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认任务结果</para>
+        /// <para>Invoke AcknowledgeTaskResult to confirm the task detail result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AcknowledgeTaskResultRequest
@@ -139,8 +153,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认任务结果</para>
+        /// <para>Invoke AcknowledgeTaskResult to confirm the task detail result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AcknowledgeTaskResultRequest
@@ -157,8 +176,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认任务结果</para>
+        /// <para>Invoke AcknowledgeTaskResult to confirm the task detail result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AcknowledgeTaskResultRequest
@@ -175,7 +199,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行批量模糊匹配</para>
+        /// <para>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -225,7 +249,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行批量模糊匹配</para>
+        /// <para>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -275,7 +299,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行批量模糊匹配</para>
+        /// <para>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -293,7 +317,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行批量模糊匹配</para>
+        /// <para>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -455,7 +479,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核</para>
+        /// <para>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +525,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核</para>
+        /// <para>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -547,7 +571,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核</para>
+        /// <para>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,7 +589,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核</para>
+        /// <para>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,6 +605,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CancelOperationAuditWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelQualificationVerificationRequest
         /// </param>
@@ -630,6 +659,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CancelQualificationVerificationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelQualificationVerificationRequest
         /// </param>
@@ -679,6 +713,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CancelQualificationVerificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelQualificationVerificationRequest
         /// </param>
@@ -692,6 +731,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CancelQualificationVerificationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelQualificationVerificationRequest
         /// </param>
@@ -705,6 +749,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CancelQualificationVerificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CancelTask to cancel an ongoing job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -750,6 +799,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CancelTask to cancel an ongoing job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -795,6 +849,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CancelTask to cancel an ongoing job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -808,6 +867,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CancelTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CancelTask to cancel an ongoing job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -823,7 +887,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChangeResourceGroup</para>
+        /// <para>Modify the resource group to which a domain name belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -881,7 +945,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChangeResourceGroup</para>
+        /// <para>Modify the resource group to which a domain name belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -939,7 +1003,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChangeResourceGroup</para>
+        /// <para>Modify the resource group to which a domain name belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -957,7 +1021,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChangeResourceGroup</para>
+        /// <para>Modify the resource group to which a domain name belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -975,8 +1039,16 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a domain name can be registered.</para>
+        /// <para>Invoke the CheckDomain API to check whether a domain name can be registered.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</para>
+        /// <remarks>
+        /// <para>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckDomainRequest
@@ -1033,8 +1105,16 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a domain name can be registered.</para>
+        /// <para>Invoke the CheckDomain API to check whether a domain name can be registered.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</para>
+        /// <remarks>
+        /// <para>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckDomainRequest
@@ -1091,8 +1171,16 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a domain name can be registered.</para>
+        /// <para>Invoke the CheckDomain API to check whether a domain name can be registered.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</para>
+        /// <remarks>
+        /// <para>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckDomainRequest
@@ -1109,8 +1197,16 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a domain name can be registered.</para>
+        /// <para>Invoke the CheckDomain API to check whether a domain name can be registered.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</para>
+        /// <remarks>
+        /// <para>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckDomainRequest
@@ -1125,6 +1221,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CheckDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the trademark keyword key based on the provided domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainSunriseClaimRequest
         /// </param>
@@ -1170,6 +1271,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckDomainSunriseClaimResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the trademark keyword key based on the provided domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainSunriseClaimRequest
         /// </param>
@@ -1215,6 +1321,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckDomainSunriseClaimResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the trademark keyword key based on the provided domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainSunriseClaimRequest
         /// </param>
@@ -1228,6 +1339,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CheckDomainSunriseClaimWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the trademark keyword key based on the provided domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainSunriseClaimRequest
         /// </param>
@@ -1243,7 +1359,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1285,7 +1401,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1443,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1345,7 +1461,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1361,6 +1477,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CheckIntlFixPriceDomainStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the maximum number of years for which a domain name can be purchased or renewed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckMaxYearOfServerLockRequest
         /// </param>
@@ -1410,6 +1531,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckMaxYearOfServerLockResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the maximum number of years for which a domain name can be purchased or renewed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckMaxYearOfServerLockRequest
         /// </param>
@@ -1459,6 +1585,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckMaxYearOfServerLockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the maximum number of years for which a domain name can be purchased or renewed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckMaxYearOfServerLockRequest
         /// </param>
@@ -1472,6 +1603,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CheckMaxYearOfServerLockWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the maximum number of years for which a domain name can be purchased or renewed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckMaxYearOfServerLockRequest
         /// </param>
@@ -1485,6 +1621,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CheckMaxYearOfServerLockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the domain name has a registry lock service request with the <b>Processing</b> status at the domain name registry.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckProcessingServerLockApplyRequest
         /// </param>
@@ -1534,6 +1675,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckProcessingServerLockApplyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the domain name has a registry lock service request with the <b>Processing</b> status at the domain name registry.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckProcessingServerLockApplyRequest
         /// </param>
@@ -1583,6 +1729,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckProcessingServerLockApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the domain name has a registry lock service request with the <b>Processing</b> status at the domain name registry.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckProcessingServerLockApplyRequest
         /// </param>
@@ -1596,6 +1747,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CheckProcessingServerLockApplyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the domain name has a registry lock service request with the <b>Processing</b> status at the domain name registry.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckProcessingServerLockApplyRequest
         /// </param>
@@ -1609,6 +1765,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CheckProcessingServerLockApplyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckTransferInFeasibilityRequest
         /// </param>
@@ -1658,6 +1819,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckTransferInFeasibilityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckTransferInFeasibilityRequest
         /// </param>
@@ -1707,6 +1873,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckTransferInFeasibilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckTransferInFeasibilityRequest
         /// </param>
@@ -1720,6 +1891,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CheckTransferInFeasibilityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckTransferInFeasibilityRequest
         /// </param>
@@ -1733,6 +1909,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await CheckTransferInFeasibilityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Directly confirm the transfer-in mailbox.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfirmTransferInEmailRequest
         /// </param>
@@ -1782,6 +1968,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ConfirmTransferInEmailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Directly confirm the transfer-in mailbox.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfirmTransferInEmailRequest
         /// </param>
@@ -1831,6 +2027,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ConfirmTransferInEmailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Directly confirm the transfer-in mailbox.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfirmTransferInEmailRequest
         /// </param>
@@ -1844,6 +2050,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return ConfirmTransferInEmailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Directly confirm the transfer-in mailbox.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfirmTransferInEmailRequest
         /// </param>
@@ -1859,7 +2075,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1917,7 +2133,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1975,7 +2191,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1993,7 +2209,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
+        /// <para>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2011,7 +2227,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除联系人模板</para>
+        /// <para>Batch delete domain contact templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2057,7 +2273,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除联系人模板</para>
+        /// <para>Batch delete domain contact templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2103,7 +2319,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除联系人模板</para>
+        /// <para>Batch delete domain contact templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2121,7 +2337,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除联系人模板</para>
+        /// <para>Batch delete domain contact templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2139,7 +2355,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名分组</para>
+        /// <para>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2189,7 +2405,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名分组</para>
+        /// <para>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2239,7 +2455,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名分组</para>
+        /// <para>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2257,7 +2473,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名分组</para>
+        /// <para>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2275,8 +2491,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除邮箱验证</para>
+        /// <para>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If you want to use the email address again after deletion, you must complete email verification again.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEmailVerificationRequest
@@ -2325,8 +2548,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除邮箱验证</para>
+        /// <para>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If you want to use the email address again after deletion, you must complete email verification again.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEmailVerificationRequest
@@ -2375,8 +2605,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除邮箱验证</para>
+        /// <para>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If you want to use the email address again after deletion, you must complete email verification again.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEmailVerificationRequest
@@ -2393,8 +2630,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除邮箱验证</para>
+        /// <para>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If you want to use the email address again after deletion, you must complete email verification again.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEmailVerificationRequest
@@ -2411,8 +2655,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人模板</para>
+        /// <para>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRegistrantProfileRequest
@@ -2461,8 +2712,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人模板</para>
+        /// <para>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRegistrantProfileRequest
@@ -2511,8 +2769,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人模板</para>
+        /// <para>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRegistrantProfileRequest
@@ -2529,8 +2794,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人模板</para>
+        /// <para>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRegistrantProfileRequest
@@ -2547,7 +2819,143 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消域名特殊业务流程</para>
+        /// <para>Retrieves information from the domain name knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DomainKnowledgeRetrieveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DomainKnowledgeRetrieveResponse
+        /// </returns>
+        public DomainKnowledgeRetrieveResponse DomainKnowledgeRetrieveWithOptions(DomainKnowledgeRetrieveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalTopN))
+            {
+                query["GlobalTopN"] = request.GlobalTopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DomainKnowledgeRetrieve",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DomainKnowledgeRetrieveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information from the domain name knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DomainKnowledgeRetrieveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DomainKnowledgeRetrieveResponse
+        /// </returns>
+        public async Task<DomainKnowledgeRetrieveResponse> DomainKnowledgeRetrieveWithOptionsAsync(DomainKnowledgeRetrieveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalTopN))
+            {
+                query["GlobalTopN"] = request.GlobalTopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DomainKnowledgeRetrieve",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DomainKnowledgeRetrieveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information from the domain name knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DomainKnowledgeRetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DomainKnowledgeRetrieveResponse
+        /// </returns>
+        public DomainKnowledgeRetrieveResponse DomainKnowledgeRetrieve(DomainKnowledgeRetrieveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DomainKnowledgeRetrieveWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information from the domain name knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DomainKnowledgeRetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DomainKnowledgeRetrieveResponse
+        /// </returns>
+        public async Task<DomainKnowledgeRetrieveResponse> DomainKnowledgeRetrieveAsync(DomainKnowledgeRetrieveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DomainKnowledgeRetrieveWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancel the special business process for a domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2595,7 +3003,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消域名特殊业务流程</para>
+        /// <para>Cancel the special business process for a domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2643,7 +3051,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消域名特殊业务流程</para>
+        /// <para>Cancel the special business process for a domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2661,7 +3069,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消域名特殊业务流程</para>
+        /// <para>Cancel the special business process for a domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2815,7 +3223,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行模糊匹配</para>
+        /// <para>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2865,7 +3273,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行模糊匹配</para>
+        /// <para>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2915,7 +3323,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行模糊匹配</para>
+        /// <para>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2933,7 +3341,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键字进行模糊匹配</para>
+        /// <para>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3069,6 +3477,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await GetIntlFixPriceDomainListUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOperationOssUploadPolicyRequest
         /// </param>
@@ -3110,6 +3523,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<GetOperationOssUploadPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOperationOssUploadPolicyRequest
         /// </param>
@@ -3151,6 +3569,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<GetOperationOssUploadPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOperationOssUploadPolicyRequest
         /// </param>
@@ -3164,6 +3587,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return GetOperationOssUploadPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOperationOssUploadPolicyRequest
         /// </param>
@@ -3177,6 +3605,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await GetOperationOssUploadPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualificationUploadPolicyRequest
         /// </param>
@@ -3218,6 +3651,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<GetQualificationUploadPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualificationUploadPolicyRequest
         /// </param>
@@ -3259,6 +3697,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<GetQualificationUploadPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualificationUploadPolicyRequest
         /// </param>
@@ -3272,6 +3715,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return GetQualificationUploadPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualificationUploadPolicyRequest
         /// </param>
@@ -3285,6 +3733,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await GetQualificationUploadPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the ListEmailVerification API to query the email verification list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListEmailVerificationRequest
         /// </param>
@@ -3350,6 +3803,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ListEmailVerificationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the ListEmailVerification API to query the email verification list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListEmailVerificationRequest
         /// </param>
@@ -3415,6 +3873,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ListEmailVerificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the ListEmailVerification API to query the email verification list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListEmailVerificationRequest
         /// </param>
@@ -3428,6 +3891,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return ListEmailVerificationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the ListEmailVerification API to query the email verification list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListEmailVerificationRequest
         /// </param>
@@ -3657,6 +4125,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await ListServerLockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call <c>LookupTmchNotice</c> to look up a trademark term from the TMCH by passing it as the <c>key</c>.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LookupTmchNoticeRequest
         /// </param>
@@ -3702,6 +4175,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<LookupTmchNoticeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call <c>LookupTmchNotice</c> to look up a trademark term from the TMCH by passing it as the <c>key</c>.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LookupTmchNoticeRequest
         /// </param>
@@ -3747,6 +4225,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<LookupTmchNoticeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call <c>LookupTmchNotice</c> to look up a trademark term from the TMCH by passing it as the <c>key</c>.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LookupTmchNoticeRequest
         /// </param>
@@ -3760,6 +4243,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return LookupTmchNoticeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call <c>LookupTmchNotice</c> to look up a trademark term from the TMCH by passing it as the <c>key</c>.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LookupTmchNoticeRequest
         /// </param>
@@ -3773,6 +4261,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await LookupTmchNoticeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PollTaskResultRequest
         /// </param>
@@ -3838,6 +4336,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<PollTaskResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PollTaskResultRequest
         /// </param>
@@ -3903,6 +4411,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<PollTaskResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PollTaskResultRequest
         /// </param>
@@ -3916,6 +4434,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return PollTaskResultWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PollTaskResultRequest
         /// </param>
@@ -3931,8 +4459,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for domain names by using the advanced search feature.</para>
+        /// <para>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <b>5000</b> entries are displayed. If the result reaches <b>5000</b> entries, narrow your search scope.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAdvancedDomainListRequest
@@ -4085,8 +4618,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for domain names by using the advanced search feature.</para>
+        /// <para>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <b>5000</b> entries are displayed. If the result reaches <b>5000</b> entries, narrow your search scope.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAdvancedDomainListRequest
@@ -4239,8 +4777,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for domain names by using the advanced search feature.</para>
+        /// <para>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <b>5000</b> entries are displayed. If the result reaches <b>5000</b> entries, narrow your search scope.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAdvancedDomainListRequest
@@ -4257,8 +4800,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for domain names by using the advanced search feature.</para>
+        /// <para>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <b>5000</b> entries are displayed. If the result reaches <b>5000</b> entries, narrow your search scope.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAdvancedDomainListRequest
@@ -4273,6 +4821,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryAdvancedDomainListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryArtExtension API to query Art extension information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryArtExtensionRequest
         /// </param>
@@ -4318,6 +4871,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryArtExtensionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryArtExtension API to query Art extension information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryArtExtensionRequest
         /// </param>
@@ -4363,6 +4921,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryArtExtensionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryArtExtension API to query Art extension information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryArtExtensionRequest
         /// </param>
@@ -4376,6 +4939,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryArtExtensionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryArtExtension API to query Art extension information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryArtExtensionRequest
         /// </param>
@@ -4391,7 +4959,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operations logs of a domain name.</para>
+        /// <para>Call QueryChangeLogList to get a paginated list of the operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4457,7 +5025,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operations logs of a domain name.</para>
+        /// <para>Call QueryChangeLogList to get a paginated list of the operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4523,7 +5091,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operations logs of a domain name.</para>
+        /// <para>Call QueryChangeLogList to get a paginated list of the operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4541,7 +5109,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operations logs of a domain name.</para>
+        /// <para>Call QueryChangeLogList to get a paginated list of the operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4557,6 +5125,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryChangeLogListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryContactInfo to query domain contact information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryContactInfoRequest
         /// </param>
@@ -4606,6 +5179,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryContactInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryContactInfo to query domain contact information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryContactInfoRequest
         /// </param>
@@ -4655,6 +5233,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryContactInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryContactInfo to query domain contact information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryContactInfoRequest
         /// </param>
@@ -4668,6 +5251,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryContactInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryContactInfo to query domain contact information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryContactInfoRequest
         /// </param>
@@ -4681,6 +5269,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryContactInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDSRecord to query the DS records of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDSRecordRequest
         /// </param>
@@ -4726,6 +5319,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDSRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDSRecord to query the DS records of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDSRecordRequest
         /// </param>
@@ -4771,6 +5369,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDSRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDSRecord to query the DS records of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDSRecordRequest
         /// </param>
@@ -4784,6 +5387,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDSRecordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDSRecord to query the DS records of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDSRecordRequest
         /// </param>
@@ -4797,6 +5405,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryDSRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS host for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDnsHostRequest
         /// </param>
@@ -4842,6 +5455,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDnsHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS host for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDnsHostRequest
         /// </param>
@@ -4887,6 +5505,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDnsHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS host for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDnsHostRequest
         /// </param>
@@ -4900,6 +5523,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDnsHostWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS host for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDnsHostRequest
         /// </param>
@@ -4913,6 +5541,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryDnsHostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainAdminDivisionRequest
         /// </param>
@@ -4954,6 +5587,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainAdminDivisionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainAdminDivisionRequest
         /// </param>
@@ -4995,6 +5633,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainAdminDivisionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainAdminDivisionRequest
         /// </param>
@@ -5008,6 +5651,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDomainAdminDivisionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainAdminDivisionRequest
         /// </param>
@@ -5023,7 +5671,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Call <c>QueryDomainByDomainName</c> to retrieve information about a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5073,7 +5721,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Call <c>QueryDomainByDomainName</c> to retrieve information about a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5123,7 +5771,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Call <c>QueryDomainByDomainName</c> to retrieve information about a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5141,7 +5789,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Call <c>QueryDomainByDomainName</c> to retrieve information about a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5159,7 +5807,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
+        /// <para>Call <c>QueryDomainByInstanceId</c> to retrieve the basic information of a domain name by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5209,7 +5857,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
+        /// <para>Call <c>QueryDomainByInstanceId</c> to retrieve the basic information of a domain name by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5259,7 +5907,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
+        /// <para>Call <c>QueryDomainByInstanceId</c> to retrieve the basic information of a domain name by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5277,7 +5925,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
+        /// <para>Call <c>QueryDomainByInstanceId</c> to retrieve the basic information of a domain name by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5295,7 +5943,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain name groups.</para>
+        /// <para>Queries a list of domain groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5357,7 +6005,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain name groups.</para>
+        /// <para>Queries a list of domain groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5419,7 +6067,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain name groups.</para>
+        /// <para>Queries a list of domain groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5437,7 +6085,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain name groups.</para>
+        /// <para>Queries a list of domain groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5455,7 +6103,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain names within your Alibaba Cloud account by page.</para>
+        /// <para>Returns a paginated list of domain names in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +6221,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain names within your Alibaba Cloud account by page.</para>
+        /// <para>Returns a paginated list of domain names in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5691,7 +6339,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain names within your Alibaba Cloud account by page.</para>
+        /// <para>Returns a paginated list of domain names in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5709,7 +6357,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain names within your Alibaba Cloud account by page.</para>
+        /// <para>Returns a paginated list of domain names in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5725,6 +6373,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryDomainListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainRealNameVerificationInfoRequest
         /// </param>
@@ -5774,6 +6427,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainRealNameVerificationInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainRealNameVerificationInfoRequest
         /// </param>
@@ -5823,6 +6481,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainRealNameVerificationInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainRealNameVerificationInfoRequest
         /// </param>
@@ -5836,6 +6499,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDomainRealNameVerificationInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainRealNameVerificationInfoRequest
         /// </param>
@@ -5991,7 +6659,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名特殊业务详情</para>
+        /// <para>Query domain name special business details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6039,7 +6707,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名特殊业务详情</para>
+        /// <para>Query domain name special business details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6087,7 +6755,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名特殊业务详情</para>
+        /// <para>Query domain name special business details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6105,7 +6773,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名特殊业务详情</para>
+        /// <para>Query domain name special business details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6123,7 +6791,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过域名查询域名特殊业务详情</para>
+        /// <para>Query domain special business details by domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6175,7 +6843,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过域名查询域名特殊业务详情</para>
+        /// <para>Query domain special business details by domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6227,7 +6895,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过域名查询域名特殊业务详情</para>
+        /// <para>Query domain special business details by domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6245,7 +6913,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过域名查询域名特殊业务详情</para>
+        /// <para>Query domain special business details by domain name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6261,6 +6929,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryDomainSpecialBizInfoByDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available domain name suffixes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainSuffixRequest
         /// </param>
@@ -6302,6 +6975,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainSuffixResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available domain name suffixes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainSuffixRequest
         /// </param>
@@ -6343,6 +7021,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainSuffixResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available domain name suffixes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainSuffixRequest
         /// </param>
@@ -6356,6 +7039,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDomainSuffixWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available domain name suffixes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainSuffixRequest
         /// </param>
@@ -6371,7 +7059,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询邮箱验证状态</para>
+        /// <para>Invoke the QueryEmailVerification API to query the email verification result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6421,7 +7109,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询邮箱验证状态</para>
+        /// <para>Invoke the QueryEmailVerification API to query the email verification result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6471,7 +7159,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询邮箱验证状态</para>
+        /// <para>Invoke the QueryEmailVerification API to query the email verification result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6489,7 +7177,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询邮箱验证状态</para>
+        /// <para>Invoke the QueryEmailVerification API to query the email verification result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6505,6 +7193,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryEmailVerificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryEnsAssociationRequest
         /// </param>
@@ -6550,6 +7243,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryEnsAssociationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryEnsAssociationRequest
         /// </param>
@@ -6595,6 +7293,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryEnsAssociationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryEnsAssociationRequest
         /// </param>
@@ -6608,6 +7311,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryEnsAssociationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryEnsAssociationRequest
         /// </param>
@@ -6621,6 +7329,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryEnsAssociationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for real-name verification (including naming review) failure for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForDomainRealNameVerificationRequest
         /// </param>
@@ -6670,6 +7383,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailReasonForDomainRealNameVerificationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for real-name verification (including naming review) failure for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForDomainRealNameVerificationRequest
         /// </param>
@@ -6719,6 +7437,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailReasonForDomainRealNameVerificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for real-name verification (including naming review) failure for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForDomainRealNameVerificationRequest
         /// </param>
@@ -6732,6 +7455,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryFailReasonForDomainRealNameVerificationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for real-name verification (including naming review) failure for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForDomainRealNameVerificationRequest
         /// </param>
@@ -6745,6 +7473,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryFailReasonForDomainRealNameVerificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForRegistrantProfileRealNameVerificationRequest
         /// </param>
@@ -6790,6 +7523,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailReasonForRegistrantProfileRealNameVerificationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForRegistrantProfileRealNameVerificationRequest
         /// </param>
@@ -6835,6 +7573,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailReasonForRegistrantProfileRealNameVerificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForRegistrantProfileRealNameVerificationRequest
         /// </param>
@@ -6848,6 +7591,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryFailReasonForRegistrantProfileRealNameVerificationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailReasonForRegistrantProfileRealNameVerificationRequest
         /// </param>
@@ -6861,6 +7609,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryFailReasonForRegistrantProfileRealNameVerificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailingReasonListForQualificationRequest
         /// </param>
@@ -6914,6 +7667,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailingReasonListForQualificationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailingReasonListForQualificationRequest
         /// </param>
@@ -6967,6 +7725,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryFailingReasonListForQualificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailingReasonListForQualificationRequest
         /// </param>
@@ -6980,6 +7743,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryFailingReasonListForQualificationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryFailingReasonListForQualificationRequest
         /// </param>
@@ -6995,7 +7763,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
+        /// <para>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7049,7 +7817,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
+        /// <para>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7103,7 +7871,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
+        /// <para>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7121,7 +7889,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
+        /// <para>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7137,6 +7905,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryIntlFixedPriceOrderListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryLocalEnsAssociationRequest
         /// </param>
@@ -7182,6 +7955,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryLocalEnsAssociationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryLocalEnsAssociationRequest
         /// </param>
@@ -7227,6 +8005,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryLocalEnsAssociationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryLocalEnsAssociationRequest
         /// </param>
@@ -7240,6 +8023,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryLocalEnsAssociationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryLocalEnsAssociationRequest
         /// </param>
@@ -7253,6 +8041,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryLocalEnsAssociationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoDetailRequest
         /// </param>
@@ -7294,6 +8087,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryOperationAuditInfoDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoDetailRequest
         /// </param>
@@ -7335,6 +8133,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryOperationAuditInfoDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoDetailRequest
         /// </param>
@@ -7348,6 +8151,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryOperationAuditInfoDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoDetailRequest
         /// </param>
@@ -7361,6 +8169,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryOperationAuditInfoDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoListRequest
         /// </param>
@@ -7418,6 +8231,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryOperationAuditInfoListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoListRequest
         /// </param>
@@ -7475,6 +8293,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryOperationAuditInfoListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoListRequest
         /// </param>
@@ -7488,6 +8311,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryOperationAuditInfoListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryOperationAuditInfoListRequest
         /// </param>
@@ -7501,6 +8329,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryOperationAuditInfoListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryQualificationDetailRequest
         /// </param>
@@ -7550,6 +8383,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryQualificationDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryQualificationDetailRequest
         /// </param>
@@ -7599,6 +8437,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryQualificationDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryQualificationDetailRequest
         /// </param>
@@ -7612,6 +8455,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryQualificationDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryQualificationDetailRequest
         /// </param>
@@ -7625,6 +8473,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryQualificationDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfileRealNameVerificationInfoRequest
         /// </param>
@@ -7674,6 +8527,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryRegistrantProfileRealNameVerificationInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfileRealNameVerificationInfoRequest
         /// </param>
@@ -7723,6 +8581,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryRegistrantProfileRealNameVerificationInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfileRealNameVerificationInfoRequest
         /// </param>
@@ -7736,6 +8599,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryRegistrantProfileRealNameVerificationInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfileRealNameVerificationInfoRequest
         /// </param>
@@ -7751,15 +8619,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// <para>Queries the domain name registrant profiles under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <para>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</para>
         /// <list type="bullet">
-        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
-        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</description></item>
+        /// <item><description>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7850,15 +8718,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// <para>Queries the domain name registrant profiles under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <para>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</para>
         /// <list type="bullet">
-        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
-        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</description></item>
+        /// <item><description>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7949,15 +8817,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// <para>Queries the domain name registrant profiles under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <para>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</para>
         /// <list type="bullet">
-        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
-        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</description></item>
+        /// <item><description>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7976,15 +8844,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// <para>Queries the domain name registrant profiles under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <para>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</para>
         /// <list type="bullet">
-        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
-        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</description></item>
+        /// <item><description>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8001,6 +8869,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryRegistrantProfilesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the registry lock details of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryServerLockRequest
         /// </param>
@@ -8046,6 +8919,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryServerLockResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the registry lock details of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryServerLockRequest
         /// </param>
@@ -8091,6 +8969,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryServerLockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the registry lock details of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryServerLockRequest
         /// </param>
@@ -8104,6 +8987,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryServerLockWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the registry lock details of a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryServerLockRequest
         /// </param>
@@ -8117,6 +9005,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryServerLockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailHistoryRequest
         /// </param>
@@ -8182,6 +9075,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskDetailHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailHistoryRequest
         /// </param>
@@ -8247,6 +9145,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskDetailHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailHistoryRequest
         /// </param>
@@ -8260,6 +9163,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTaskDetailHistoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailHistoryRequest
         /// </param>
@@ -8275,7 +9183,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// <para>Queries the details list of a specified domain name task by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8345,7 +9253,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// <para>Queries the details list of a specified domain name task by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,7 +9323,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// <para>Queries the details list of a specified domain name task by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8433,7 +9341,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// <para>Queries the details list of a specified domain name task by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8449,6 +9357,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTaskDetailListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskInfoHistoryRequest
         /// </param>
@@ -8510,6 +9423,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskInfoHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskInfoHistoryRequest
         /// </param>
@@ -8571,6 +9489,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskInfoHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskInfoHistoryRequest
         /// </param>
@@ -8584,6 +9507,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTaskInfoHistoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskInfoHistoryRequest
         /// </param>
@@ -8599,7 +9527,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain name tasks under your account by page.</para>
+        /// <para>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8661,7 +9589,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain name tasks under your account by page.</para>
+        /// <para>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8723,7 +9651,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain name tasks under your account by page.</para>
+        /// <para>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8741,7 +9669,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain name tasks under your account by page.</para>
+        /// <para>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8757,6 +9685,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTaskListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInByInstanceIdRequest
         /// </param>
@@ -8802,6 +9735,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferInByInstanceIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInByInstanceIdRequest
         /// </param>
@@ -8847,6 +9785,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferInByInstanceIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInByInstanceIdRequest
         /// </param>
@@ -8860,6 +9803,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTransferInByInstanceIdWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInByInstanceIdRequest
         /// </param>
@@ -8875,7 +9823,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// <para>Invoke QueryTransferInList to query the domain name transfer-in list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8945,7 +9893,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// <para>Invoke QueryTransferInList to query the domain name transfer-in list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9015,7 +9963,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// <para>Invoke QueryTransferInList to query the domain name transfer-in list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9033,7 +9981,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// <para>Invoke QueryTransferInList to query the domain name transfer-in list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9049,6 +9997,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTransferInListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferOutInfo to query domain name transfer-out information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferOutInfoRequest
         /// </param>
@@ -9094,6 +10047,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferOutInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferOutInfo to query domain name transfer-out information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferOutInfoRequest
         /// </param>
@@ -9139,6 +10097,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferOutInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferOutInfo to query domain name transfer-out information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferOutInfoRequest
         /// </param>
@@ -9152,6 +10115,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTransferOutInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryTransferOutInfo to query domain name transfer-out information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferOutInfoRequest
         /// </param>
@@ -9167,8 +10135,19 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板实名资料</para>
+        /// <para>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </description></item>
+        /// <item><description>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<remarks>
+        /// <para>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <b>method</b> parameter of the request object to <b>POST</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegistrantProfileRealNameVerificationRequest
@@ -9231,8 +10210,19 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板实名资料</para>
+        /// <para>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </description></item>
+        /// <item><description>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<remarks>
+        /// <para>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <b>method</b> parameter of the request object to <b>POST</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegistrantProfileRealNameVerificationRequest
@@ -9295,8 +10285,19 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板实名资料</para>
+        /// <para>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </description></item>
+        /// <item><description>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<remarks>
+        /// <para>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <b>method</b> parameter of the request object to <b>POST</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegistrantProfileRealNameVerificationRequest
@@ -9313,8 +10314,19 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板实名资料</para>
+        /// <para>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </description></item>
+        /// <item><description>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<remarks>
+        /// <para>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <b>method</b> parameter of the request object to <b>POST</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegistrantProfileRealNameVerificationRequest
@@ -9331,7 +10343,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送验证邮件</para>
+        /// <para>Invoke the ResendEmailVerification API to resend the verification email.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9381,7 +10393,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送验证邮件</para>
+        /// <para>Invoke the ResendEmailVerification API to resend the verification email.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9431,7 +10443,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送验证邮件</para>
+        /// <para>Invoke the ResendEmailVerification API to resend the verification email.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9449,7 +10461,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送验证邮件</para>
+        /// <para>Invoke the ResendEmailVerification API to resend the verification email.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9467,7 +10479,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置资质审核状态</para>
+        /// <para>Reset the qualification verification status for .restaurant and .trademark domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9517,7 +10529,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置资质审核状态</para>
+        /// <para>Reset the qualification verification status for .restaurant and .trademark domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9567,7 +10579,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置资质审核状态</para>
+        /// <para>Reset the qualification verification status for .restaurant and .trademark domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9585,7 +10597,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置资质审核状态</para>
+        /// <para>Reset the qualification verification status for .restaurant and .trademark domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9603,7 +10615,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量保存域名备注信息</para>
+        /// <para>Invoke SaveBatchDomainRemark to batch save domain name remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9657,7 +10669,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量保存域名备注信息</para>
+        /// <para>Invoke SaveBatchDomainRemark to batch save domain name remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9711,7 +10723,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量保存域名备注信息</para>
+        /// <para>Invoke SaveBatchDomainRemark to batch save domain name remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9729,7 +10741,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量保存域名备注信息</para>
+        /// <para>Invoke SaveBatchDomainRemark to batch save domain name remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9747,8 +10759,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量申请域名快速转出</para>
+        /// <para>Submits a batch task to quickly transfer out domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
@@ -9797,8 +10814,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量申请域名快速转出</para>
+        /// <para>Submits a batch task to quickly transfer out domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
@@ -9847,8 +10869,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量申请域名快速转出</para>
+        /// <para>Submits a batch task to quickly transfer out domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
@@ -9865,8 +10892,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量申请域名快速转出</para>
+        /// <para>Submits a batch task to quickly transfer out domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
@@ -9883,8 +10915,24 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to register multiple domain names at a time.</para>
+        /// <para>Submits a batch domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+        /// To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total number of domain names registered per week cannot exceed 100,000.</description></item>
+        /// <item><description>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The request parameter format for the <b>SaveBatchTaskForCreatingOrderActivate</b> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+        /// To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderActivateRequest
@@ -9949,8 +10997,24 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to register multiple domain names at a time.</para>
+        /// <para>Submits a batch domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+        /// To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total number of domain names registered per week cannot exceed 100,000.</description></item>
+        /// <item><description>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The request parameter format for the <b>SaveBatchTaskForCreatingOrderActivate</b> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+        /// To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderActivateRequest
@@ -10015,8 +11079,24 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to register multiple domain names at a time.</para>
+        /// <para>Submits a batch domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+        /// To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total number of domain names registered per week cannot exceed 100,000.</description></item>
+        /// <item><description>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The request parameter format for the <b>SaveBatchTaskForCreatingOrderActivate</b> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+        /// To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderActivateRequest
@@ -10033,8 +11113,24 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to register multiple domain names at a time.</para>
+        /// <para>Submits a batch domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+        /// To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total number of domain names registered per week cannot exceed 100,000.</description></item>
+        /// <item><description>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The request parameter format for the <b>SaveBatchTaskForCreatingOrderActivate</b> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+        /// To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderActivateRequest
@@ -10049,6 +11145,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveBatchTaskForCreatingOrderActivateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -10110,6 +11216,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForCreatingOrderRedeemResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -10171,6 +11287,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForCreatingOrderRedeemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -10184,6 +11310,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveBatchTaskForCreatingOrderRedeemWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -10199,8 +11335,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-续费订单</para>
+        /// <para>Submits a batch domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRenewRequest
@@ -10265,8 +11406,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-续费订单</para>
+        /// <para>Submits a batch domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRenewRequest
@@ -10331,8 +11477,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-续费订单</para>
+        /// <para>Submits a batch domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRenewRequest
@@ -10349,8 +11500,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-续费订单</para>
+        /// <para>Submits a batch domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderRenewRequest
@@ -10365,6 +11521,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveBatchTaskForCreatingOrderRenewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderTransferRequest
         /// </param>
@@ -10426,6 +11592,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForCreatingOrderTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderTransferRequest
         /// </param>
@@ -10487,6 +11663,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForCreatingOrderTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderTransferRequest
         /// </param>
@@ -10500,6 +11686,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveBatchTaskForCreatingOrderTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForCreatingOrderTransferRequest
         /// </param>
@@ -10515,8 +11711,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForDomainNameProxyServiceRequest
@@ -10573,8 +11774,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForDomainNameProxyServiceRequest
@@ -10631,8 +11837,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForDomainNameProxyServiceRequest
@@ -10649,8 +11860,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForDomainNameProxyServiceRequest
@@ -10815,8 +12031,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改dns</para>
+        /// <para>Submits a batch task to modify the DNS servers for the specified domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForModifyingDomainDnsRequest
@@ -10873,8 +12094,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改dns</para>
+        /// <para>Submits a batch task to modify the DNS servers for the specified domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForModifyingDomainDnsRequest
@@ -10931,8 +12157,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改dns</para>
+        /// <para>Submits a batch task to modify the DNS servers for the specified domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForModifyingDomainDnsRequest
@@ -10949,8 +12180,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改dns</para>
+        /// <para>Submits a batch task to modify the DNS servers for the specified domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForModifyingDomainDnsRequest
@@ -10967,8 +12203,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
+        /// <para>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
@@ -11013,8 +12254,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
+        /// <para>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
@@ -11059,8 +12305,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
+        /// <para>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
@@ -11077,8 +12328,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
+        /// <para>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
@@ -11095,8 +12351,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
+        /// <para>Submits a batch transfer-out task for multiple domain names using their authorization codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. After submitting the task, call <c>QueryTaskDetailList</c> to check its status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferOutByAuthorizationCodeRequest
@@ -11137,8 +12398,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
+        /// <para>Submits a batch transfer-out task for multiple domain names using their authorization codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. After submitting the task, call <c>QueryTaskDetailList</c> to check its status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferOutByAuthorizationCodeRequest
@@ -11179,8 +12445,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
+        /// <para>Submits a batch transfer-out task for multiple domain names using their authorization codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. After submitting the task, call <c>QueryTaskDetailList</c> to check its status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferOutByAuthorizationCodeRequest
@@ -11197,8 +12468,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
+        /// <para>Submits a batch transfer-out task for multiple domain names using their authorization codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. After submitting the task, call <c>QueryTaskDetailList</c> to check its status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferOutByAuthorizationCodeRequest
@@ -11215,8 +12491,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭禁止转移锁</para>
+        /// <para>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferProhibitionLockRequest
@@ -11269,8 +12550,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭禁止转移锁</para>
+        /// <para>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferProhibitionLockRequest
@@ -11323,8 +12609,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭禁止转移锁</para>
+        /// <para>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferProhibitionLockRequest
@@ -11341,8 +12632,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-开启/关闭禁止转移锁</para>
+        /// <para>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForTransferProhibitionLockRequest
@@ -11357,6 +12653,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveBatchTaskForTransferProhibitionLockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdateProhibitionLockRequest
         /// </param>
@@ -11406,6 +12712,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForUpdateProhibitionLockResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdateProhibitionLockRequest
         /// </param>
@@ -11455,6 +12771,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForUpdateProhibitionLockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdateProhibitionLockRequest
         /// </param>
@@ -11468,6 +12794,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveBatchTaskForUpdateProhibitionLockWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdateProhibitionLockRequest
         /// </param>
@@ -11483,8 +12819,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用联系人信息修改联系人的批量任务</para>
+        /// <para>Submit a domain information modification job with new contact information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByNewContactRequest
@@ -11609,8 +12950,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用联系人信息修改联系人的批量任务</para>
+        /// <para>Submit a domain information modification job with new contact information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByNewContactRequest
@@ -11735,8 +13081,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用联系人信息修改联系人的批量任务</para>
+        /// <para>Submit a domain information modification job with new contact information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByNewContactRequest
@@ -11753,8 +13104,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用联系人信息修改联系人的批量任务</para>
+        /// <para>Submit a domain information modification job with new contact information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByNewContactRequest
@@ -11771,8 +13127,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用模板修改联系人的批量任务</para>
+        /// <para>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
@@ -11833,8 +13194,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用模板修改联系人的批量任务</para>
+        /// <para>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
@@ -11895,8 +13261,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用模板修改联系人的批量任务</para>
+        /// <para>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
@@ -11913,8 +13284,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用模板修改联系人的批量任务</para>
+        /// <para>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
@@ -11931,7 +13307,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建/更新域名分组</para>
+        /// <para>Invoke the SaveDomainGroup API to create or update a domain name group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11985,7 +13361,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建/更新域名分组</para>
+        /// <para>Invoke the SaveDomainGroup API to create or update a domain name group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12039,7 +13415,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建/更新域名分组</para>
+        /// <para>Invoke the SaveDomainGroup API to create or update a domain name group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12057,7 +13433,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建/更新域名分组</para>
+        /// <para>Invoke the SaveDomainGroup API to create or update a domain name group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12075,8 +13451,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板</para>
+        /// <para>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveRegistrantProfileRequest
@@ -12201,8 +13582,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板</para>
+        /// <para>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveRegistrantProfileRequest
@@ -12327,8 +13713,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板</para>
+        /// <para>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveRegistrantProfileRequest
@@ -12345,8 +13736,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板</para>
+        /// <para>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveRegistrantProfileRequest
@@ -12363,7 +13759,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板和凭据</para>
+        /// <para>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12497,7 +13893,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板和凭据</para>
+        /// <para>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12631,7 +14027,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板和凭据</para>
+        /// <para>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12649,7 +14045,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存联系人模板和凭据</para>
+        /// <para>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12667,8 +14063,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForAddingDSRecordRequest
@@ -12733,8 +14134,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForAddingDSRecordRequest
@@ -12799,8 +14205,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForAddingDSRecordRequest
@@ -12817,8 +14228,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForAddingDSRecordRequest
@@ -12835,8 +14251,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请域名快速转出</para>
+        /// <para>Submits a task for a quick transfer-out of a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
@@ -12885,8 +14306,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请域名快速转出</para>
+        /// <para>Submits a task for a quick transfer-out of a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
@@ -12935,8 +14361,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请域名快速转出</para>
+        /// <para>Submits a task for a quick transfer-out of a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
@@ -12953,8 +14384,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请域名快速转出</para>
+        /// <para>Submits a task for a quick transfer-out of a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
@@ -13105,6 +14541,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveSingleTaskForApprovingTransferOutWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit a job to attach an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForAssociatingEnsRequest
         /// </param>
@@ -13154,6 +14600,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForAssociatingEnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit a job to attach an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForAssociatingEnsRequest
         /// </param>
@@ -13203,6 +14659,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForAssociatingEnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit a job to attach an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForAssociatingEnsRequest
         /// </param>
@@ -13216,6 +14682,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveSingleTaskForAssociatingEnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit a job to attach an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForAssociatingEnsRequest
         /// </param>
@@ -13229,6 +14705,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveSingleTaskForAssociatingEnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferInRequest
         /// </param>
@@ -13274,6 +14760,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCancelingTransferInResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferInRequest
         /// </param>
@@ -13319,6 +14815,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCancelingTransferInResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferInRequest
         /// </param>
@@ -13332,6 +14838,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveSingleTaskForCancelingTransferInWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferInRequest
         /// </param>
@@ -13347,8 +14863,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消转出</para>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferOutRequest
@@ -13397,8 +14918,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消转出</para>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferOutRequest
@@ -13447,8 +14973,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消转出</para>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferOutRequest
@@ -13465,8 +14996,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消转出</para>
+        /// <para>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCancelingTransferOutRequest
@@ -13483,8 +15019,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存创建dns服务器的任务请求</para>
+        /// <para>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingDnsHostRequest
@@ -13541,8 +15082,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存创建dns服务器的任务请求</para>
+        /// <para>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingDnsHostRequest
@@ -13599,8 +15145,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存创建dns服务器的任务请求</para>
+        /// <para>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingDnsHostRequest
@@ -13617,8 +15168,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存创建dns服务器的任务请求</para>
+        /// <para>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingDnsHostRequest
@@ -13635,8 +15191,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-注册订单</para>
+        /// <para>Submits a domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+        /// To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderActivateRequest
@@ -13691,6 +15254,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDomainProxy))
             {
                 query["EnableDomainProxy"] = request.EnableDomainProxy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedPunycode))
+            {
+                query["ExpectedPunycode"] = request.ExpectedPunycode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -13805,8 +15372,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-注册订单</para>
+        /// <para>Submits a domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+        /// To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderActivateRequest
@@ -13861,6 +15435,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDomainProxy))
             {
                 query["EnableDomainProxy"] = request.EnableDomainProxy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedPunycode))
+            {
+                query["ExpectedPunycode"] = request.ExpectedPunycode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -13975,8 +15553,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-注册订单</para>
+        /// <para>Submits a domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+        /// To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderActivateRequest
@@ -13993,8 +15578,15 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-注册订单</para>
+        /// <para>Submits a domain name registration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+        /// To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderActivateRequest
@@ -14009,6 +15601,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveSingleTaskForCreatingOrderActivateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -14074,6 +15676,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCreatingOrderRedeemResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -14139,6 +15751,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCreatingOrderRedeemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -14152,6 +15774,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveSingleTaskForCreatingOrderRedeemWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRedeemRequest
         /// </param>
@@ -14167,8 +15799,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-续费订单</para>
+        /// <para>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRenewRequest
@@ -14245,8 +15882,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-续费订单</para>
+        /// <para>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRenewRequest
@@ -14323,8 +15965,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-续费订单</para>
+        /// <para>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRenewRequest
@@ -14341,8 +15988,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-续费订单</para>
+        /// <para>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderRenewRequest
@@ -14357,6 +16009,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveSingleTaskForCreatingOrderRenewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderTransferRequest
         /// </param>
@@ -14430,6 +16092,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCreatingOrderTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderTransferRequest
         /// </param>
@@ -14503,6 +16175,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForCreatingOrderTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderTransferRequest
         /// </param>
@@ -14516,6 +16198,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveSingleTaskForCreatingOrderTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForCreatingOrderTransferRequest
         /// </param>
@@ -14531,8 +16223,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDSRecordRequest
@@ -14585,8 +16282,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDSRecordRequest
@@ -14639,8 +16341,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDSRecordRequest
@@ -14657,8 +16364,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除dnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDSRecordRequest
@@ -14675,8 +16387,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNS HOST任务</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDnsHostRequest
@@ -14729,8 +16446,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNS HOST任务</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDnsHostRequest
@@ -14783,8 +16505,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNS HOST任务</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDnsHostRequest
@@ -14801,8 +16528,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNS HOST任务</para>
+        /// <para>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDeletingDnsHostRequest
@@ -14817,6 +16549,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveSingleTaskForDeletingDnsHostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForDisassociatingEnsRequest
         /// </param>
@@ -14862,6 +16604,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForDisassociatingEnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForDisassociatingEnsRequest
         /// </param>
@@ -14907,6 +16659,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveSingleTaskForDisassociatingEnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForDisassociatingEnsRequest
         /// </param>
@@ -14920,6 +16682,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveSingleTaskForDisassociatingEnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SaveSingleTaskForDisassociatingEnsRequest
         /// </param>
@@ -14935,8 +16707,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDomainNameProxyServiceRequest
@@ -14989,8 +16766,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDomainNameProxyServiceRequest
@@ -15043,8 +16825,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDomainNameProxyServiceRequest
@@ -15061,8 +16848,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭whois隐私保护锁</para>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForDomainNameProxyServiceRequest
@@ -15215,8 +17007,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DnsSec记录</para>
+        /// <para>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDSRecordRequest
@@ -15281,8 +17078,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DnsSec记录</para>
+        /// <para>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDSRecordRequest
@@ -15347,8 +17149,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DnsSec记录</para>
+        /// <para>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDSRecordRequest
@@ -15365,8 +17172,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DnsSec记录</para>
+        /// <para>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDSRecordRequest
@@ -15383,8 +17195,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDnsHostRequest
@@ -15441,8 +17258,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDnsHostRequest
@@ -15499,8 +17321,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDnsHostRequest
@@ -15517,8 +17344,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForModifyingDnsHostRequest
@@ -15535,8 +17367,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送转移码</para>
+        /// <para>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
@@ -15585,8 +17422,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送转移码</para>
+        /// <para>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
@@ -15635,8 +17477,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送转移码</para>
+        /// <para>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
@@ -15653,8 +17500,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送转移码</para>
+        /// <para>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
@@ -15815,8 +17667,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存art扩展信息任务</para>
+        /// <para>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSaveArtExtensionRequest
@@ -15901,8 +17758,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存art扩展信息任务</para>
+        /// <para>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSaveArtExtensionRequest
@@ -15987,8 +17849,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存art扩展信息任务</para>
+        /// <para>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSaveArtExtensionRequest
@@ -16005,8 +17872,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存art扩展信息任务</para>
+        /// <para>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSaveArtExtensionRequest
@@ -16023,8 +17895,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步DnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDSRecordRequest
@@ -16073,8 +17950,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步DnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDSRecordRequest
@@ -16123,8 +18005,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步DnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDSRecordRequest
@@ -16141,8 +18028,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步DnsSec记录</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDSRecordRequest
@@ -16159,8 +18051,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存同步dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDnsHostRequest
@@ -16209,8 +18106,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存同步dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDnsHostRequest
@@ -16259,8 +18161,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存同步dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDnsHostRequest
@@ -16277,8 +18184,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存同步dns服务器的任务请求</para>
+        /// <para>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForSynchronizingDnsHostRequest
@@ -16443,8 +18355,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭禁止转移锁</para>
+        /// <para>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferProhibitionLockRequest
@@ -16497,8 +18414,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭禁止转移锁</para>
+        /// <para>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferProhibitionLockRequest
@@ -16551,8 +18473,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭禁止转移锁</para>
+        /// <para>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferProhibitionLockRequest
@@ -16569,8 +18496,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭禁止转移锁</para>
+        /// <para>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferProhibitionLockRequest
@@ -16587,8 +18519,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭信息安全锁</para>
+        /// <para>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdateProhibitionLockRequest
@@ -16641,8 +18578,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭信息安全锁</para>
+        /// <para>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdateProhibitionLockRequest
@@ -16695,8 +18637,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭信息安全锁</para>
+        /// <para>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdateProhibitionLockRequest
@@ -16713,8 +18660,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个任务-开启/关闭信息安全锁</para>
+        /// <para>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdateProhibitionLockRequest
@@ -16731,8 +18683,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改联系人的任务</para>
+        /// <para>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdatingContactInfoRequest
@@ -16797,8 +18754,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改联系人的任务</para>
+        /// <para>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdatingContactInfoRequest
@@ -16863,8 +18825,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改联系人的任务</para>
+        /// <para>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdatingContactInfoRequest
@@ -16881,8 +18848,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存修改联系人的任务</para>
+        /// <para>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForUpdatingContactInfoRequest
@@ -16899,8 +18871,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存删除域名的任务</para>
+        /// <para>Submit a domain deletion job. Only whitelist users can access this API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForSubmittingDomainDeleteRequest
@@ -16949,8 +18926,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存删除域名的任务</para>
+        /// <para>Submit a domain deletion job. Only whitelist users can access this API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForSubmittingDomainDeleteRequest
@@ -16999,8 +18981,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存删除域名的任务</para>
+        /// <para>Submit a domain deletion job. Only whitelist users can access this API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForSubmittingDomainDeleteRequest
@@ -17017,8 +19004,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存删除域名的任务</para>
+        /// <para>Submit a domain deletion job. Only whitelist users can access this API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForSubmittingDomainDeleteRequest
@@ -17035,7 +19027,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交域名资料</para>
+        /// <para>Submits real-name verification information for one or more domain names in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17099,7 +19091,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交域名资料</para>
+        /// <para>Submits real-name verification information for one or more domain names in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17163,7 +19155,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交域名资料</para>
+        /// <para>Submits real-name verification information for one or more domain names in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17181,7 +19173,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交域名资料</para>
+        /// <para>Submits real-name verification information for one or more domain names in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17199,7 +19191,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板保存域名的实名认证信息</para>
+        /// <para>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17257,7 +19249,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板保存域名的实名认证信息</para>
+        /// <para>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17315,7 +19307,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板保存域名的实名认证信息</para>
+        /// <para>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17333,7 +19325,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板保存域名的实名认证信息</para>
+        /// <para>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17351,8 +19343,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据联系人信息批量修改注册联系人信息</para>
+        /// <para>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
@@ -17487,8 +19484,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据联系人信息批量修改注册联系人信息</para>
+        /// <para>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
@@ -17623,8 +19625,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据联系人信息批量修改注册联系人信息</para>
+        /// <para>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
@@ -17641,8 +19648,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据联系人信息批量修改注册联系人信息</para>
+        /// <para>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
@@ -17659,8 +19671,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板批量修改注册联系人</para>
+        /// <para>Submits a task to update registrant information using a registrant profile ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
@@ -17717,8 +19734,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板批量修改注册联系人</para>
+        /// <para>Submits a task to update registrant information using a registrant profile ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
@@ -17775,8 +19797,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板批量修改注册联系人</para>
+        /// <para>Submits a task to update registrant information using a registrant profile ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
@@ -17793,8 +19820,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据模板批量修改注册联系人</para>
+        /// <para>Submits a task to update registrant information using a registrant profile ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
@@ -18127,7 +20159,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认模板</para>
+        /// <para>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18173,7 +20205,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认模板</para>
+        /// <para>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18219,7 +20251,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认模板</para>
+        /// <para>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18237,7 +20269,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认模板</para>
+        /// <para>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18255,8 +20287,14 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名设置自动续费</para>
+        /// <para>Sets or cancels auto-renewal for a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only domain names registered on the China site (aliyun.com).
+        /// <b>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetupDomainAutoRenewRequest
@@ -18301,8 +20339,14 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名设置自动续费</para>
+        /// <para>Sets or cancels auto-renewal for a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only domain names registered on the China site (aliyun.com).
+        /// <b>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetupDomainAutoRenewRequest
@@ -18347,8 +20391,14 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名设置自动续费</para>
+        /// <para>Sets or cancels auto-renewal for a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only domain names registered on the China site (aliyun.com).
+        /// <b>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetupDomainAutoRenewRequest
@@ -18365,8 +20415,14 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名设置自动续费</para>
+        /// <para>Sets or cancels auto-renewal for a domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only domain names registered on the China site (aliyun.com).
+        /// <b>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetupDomainAutoRenewRequest
@@ -18383,7 +20439,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名特殊业务提交资料</para>
+        /// <para>Submit documentation for special domain name services</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18439,7 +20495,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名特殊业务提交资料</para>
+        /// <para>Submit documentation for special domain name services</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18495,7 +20551,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名特殊业务提交资料</para>
+        /// <para>Submit documentation for special domain name services</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18513,7 +20569,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名特殊业务提交资料</para>
+        /// <para>Submit documentation for special domain name services</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18531,8 +20587,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交邮箱验证</para>
+        /// <para>Invoke the SubmitEmailVerification API to send an email verification message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitEmailVerificationRequest
@@ -18585,8 +20646,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交邮箱验证</para>
+        /// <para>Invoke the SubmitEmailVerification API to send an email verification message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitEmailVerificationRequest
@@ -18639,8 +20705,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交邮箱验证</para>
+        /// <para>Invoke the SubmitEmailVerification API to send an email verification message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitEmailVerificationRequest
@@ -18657,8 +20728,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交邮箱验证</para>
+        /// <para>Invoke the SubmitEmailVerification API to send an email verification message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitEmailVerificationRequest
@@ -18675,7 +20751,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交申请信息</para>
+        /// <para>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18733,7 +20809,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交申请信息</para>
+        /// <para>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18791,7 +20867,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交申请信息</para>
+        /// <para>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18809,7 +20885,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交申请信息</para>
+        /// <para>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18827,7 +20903,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交证件资料</para>
+        /// <para>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18885,7 +20961,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交证件资料</para>
+        /// <para>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18943,7 +21019,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交证件资料</para>
+        /// <para>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18961,7 +21037,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交证件资料</para>
+        /// <para>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18977,6 +21053,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SubmitOperationCredentialsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInCheckMailTokenRequest
         /// </param>
@@ -19022,6 +21103,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInCheckMailTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInCheckMailTokenRequest
         /// </param>
@@ -19067,6 +21153,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInCheckMailTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInCheckMailTokenRequest
         /// </param>
@@ -19080,6 +21171,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TransferInCheckMailTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInCheckMailTokenRequest
         /// </param>
@@ -19093,6 +21189,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await TransferInCheckMailTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInReenterTransferAuthorizationCodeRequest
         /// </param>
@@ -19142,6 +21243,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInReenterTransferAuthorizationCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInReenterTransferAuthorizationCodeRequest
         /// </param>
@@ -19191,6 +21297,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInReenterTransferAuthorizationCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInReenterTransferAuthorizationCodeRequest
         /// </param>
@@ -19204,6 +21315,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TransferInReenterTransferAuthorizationCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInReenterTransferAuthorizationCodeRequest
         /// </param>
@@ -19217,6 +21333,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await TransferInReenterTransferAuthorizationCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TransferInRefetchWhoisEmailRequest
         /// </param>
@@ -19262,6 +21388,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInRefetchWhoisEmailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TransferInRefetchWhoisEmailRequest
         /// </param>
@@ -19307,6 +21443,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInRefetchWhoisEmailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TransferInRefetchWhoisEmailRequest
         /// </param>
@@ -19320,6 +21466,16 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TransferInRefetchWhoisEmailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TransferInRefetchWhoisEmailRequest
         /// </param>
@@ -19333,6 +21489,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await TransferInRefetchWhoisEmailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInResendMailTokenRequest
         /// </param>
@@ -19378,6 +21539,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInResendMailTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInResendMailTokenRequest
         /// </param>
@@ -19423,6 +21589,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<TransferInResendMailTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInResendMailTokenRequest
         /// </param>
@@ -19436,6 +21607,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TransferInResendMailTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInResendMailTokenRequest
         /// </param>
@@ -19451,7 +21627,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向分组设置域名</para>
+        /// <para>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19519,7 +21695,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向分组设置域名</para>
+        /// <para>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19587,7 +21763,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向分组设置域名</para>
+        /// <para>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19605,7 +21781,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向分组设置域名</para>
+        /// <para>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19623,7 +21799,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验联系人信息</para>
+        /// <para>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19741,7 +21917,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验联系人信息</para>
+        /// <para>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19859,7 +22035,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验联系人信息</para>
+        /// <para>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19877,7 +22053,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验联系人信息</para>
+        /// <para>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19895,7 +22071,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证邮箱Token</para>
+        /// <para>Invoke the VerifyEmail API to submit email verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19945,7 +22121,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证邮箱Token</para>
+        /// <para>Invoke the VerifyEmail API to submit email verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19995,7 +22171,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证邮箱Token</para>
+        /// <para>Invoke the VerifyEmail API to submit email verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20013,7 +22189,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证邮箱Token</para>
+        /// <para>Invoke the VerifyEmail API to submit email verification.</para>
         /// </summary>
         /// 
         /// <param name="request">

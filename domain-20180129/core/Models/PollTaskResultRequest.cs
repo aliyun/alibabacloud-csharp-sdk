@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class PollTaskResultRequest : TeaModel {
         /// <summary>
+        /// <para>Domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Domain instance ID.</para>
+        /// <para>The system automatically generates this after the information template is created successfully. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the information template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>S20181T0WLI85212</para>
         /// </summary>
@@ -26,6 +31,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Language of error messages returned by the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// <para>Default value is <b>en</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -34,6 +46,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +57,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size. Maximum value is <b>1000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Job number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75addb07-28a3-450e-b5ec-test</para>
         /// </summary>
@@ -62,6 +78,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string TaskNo { get; set; }
 
         /// <summary>
+        /// <para>Task result status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b>: Succeeded.</description></item>
+        /// <item><description><b>3</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -70,6 +92,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TaskResultStatus { get; set; }
 
         /// <summary>
+        /// <para>User IP address. It can be set to <b>127.0.0.1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

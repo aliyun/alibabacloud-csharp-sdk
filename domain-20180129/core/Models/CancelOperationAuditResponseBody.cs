@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CancelOperationAuditResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9KFCF6F8-243C-40EC-8035-4B12KKFD7D90</para>
         /// </summary>

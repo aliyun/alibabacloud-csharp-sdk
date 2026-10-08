@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SubmitOperationCredentialsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFCF6F8-243C-40EC-8035-4B12FEFX7D98</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainByDomainNameResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status of the privacy protection service for .cn domain names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UN_SUPPORT</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// <para>The ID of the domain name group. You can call the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation to query the ID of the domain name group.</para>
+        /// <para>The ID of the domain group. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -38,7 +40,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? DomainGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the domain name group.</para>
+        /// <para>The name of the domain group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试分组</para>
         /// </summary>
         [NameInMap("DomainGroupName")]
         [Validation(Required=false)]
@@ -55,7 +60,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether privacy protection is enabled for the domain name.</para>
+        /// <para>Indicates whether privacy protection is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -65,12 +70,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? DomainNameProxyService { get; set; }
 
         /// <summary>
-        /// <para>The status of name auditing for the domain name. Valid values:</para>
+        /// <para>The status of the domain name review. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONAUDIT</b>: The name auditing for the domain name is not performed.</description></item>
-        /// <item><description><b>SUCCEED</b>: The name auditing for the domain name is successful.</description></item>
-        /// <item><description><b>FAILED</b>: The name auditing for the domain name fails.</description></item>
-        /// <item><description><b>AUDITING</b>: The name auditing for the domain name is in progress.</description></item>
+        /// <item><description><para><b>NONAUDIT</b>: Not reviewed.</para>
+        /// </description></item>
+        /// <item><description><para><b>SUCCEED</b>: Successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILED</b>: Failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>AUDITING</b>: In review.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,9 +92,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         /// <summary>
         /// <para>The status of the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: The domain name needs to be renewed.</description></item>
-        /// <item><description>2: The domain name needs to be redeemed.</description></item>
-        /// <item><description>3: The domain name is normal.</description></item>
+        /// <item><description><para><b>1</b>: Renewal required.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Redemption required.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Active.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,9 +110,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         /// <summary>
         /// <para>The type of the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>New gTLD</description></item>
-        /// <item><description>gTLD</description></item>
-        /// <item><description>ccTLD</description></item>
+        /// <item><description><para>New gTLD</para>
+        /// </description></item>
+        /// <item><description><para>gTLD</para>
+        /// </description></item>
+        /// <item><description><para>ccTLD</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +126,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The email address of the domain name registrant.</para>
+        /// <para>The registrant\&quot;s email.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -121,7 +136,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the domain name is in the ClientHold state.</para>
+        /// <para>Indicates whether the domain name has a <c>clientHold</c> status due to email verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -131,10 +146,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? EmailVerificationClientHold { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the email address passes verification. Valid values:</para>
+        /// <para>The email verification status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The email address fails the verification.</description></item>
-        /// <item><description><b>1</b>: The email address passes the verification.</description></item>
+        /// <item><description><para><b>0</b>: Not verified.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Verified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +162,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? EmailVerificationStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of days from the expiration date of the domain name to the current date.</para>
+        /// <para>The number of days until the expiration date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>356</para>
@@ -155,7 +172,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? ExpirationCurrDateDiff { get; set; }
 
         /// <summary>
-        /// <para>The expiration date.</para>
+        /// <para>The expiration date of the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-12-07 17:02:13</para>
@@ -165,7 +182,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string ExpirationDate { get; set; }
 
         /// <summary>
-        /// <para>The timestamp generated when the domain name expired.</para>
+        /// <para>The timestamp of the expiration date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1625111915000</para>
@@ -175,10 +192,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? ExpirationDateLong { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the domain name expires. Valid values:</para>
+        /// <para>The expiration status of the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The domain name does not expire.</description></item>
-        /// <item><description><b>2</b>: The domain name expires.</description></item>
+        /// <item><description><para><b>1</b>: The domain name has not expired.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: The domain name has expired.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,7 +218,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the domain name is a premium domain name.</para>
+        /// <para>Indicates whether the domain name is a premium domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -209,6 +228,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? Premium { get; set; }
 
         /// <summary>
+        /// <para>The status of the privacy protection service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UN_SUPPORT</para>
         /// </summary>
@@ -217,12 +238,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string PrivacyServiceStatus { get; set; }
 
         /// <summary>
-        /// <para>The status of real-name verification for the domain name. Valid values:</para>
+        /// <para>The real-name verification status of the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONAUDIT</b>: The real-name verification is not performed.</description></item>
-        /// <item><description><b>SUCCEED</b>: The real-name verification is successful.</description></item>
-        /// <item><description><b>FAILED</b>: The real-name verification fails.</description></item>
-        /// <item><description><b>AUDITING</b>: The real-name verification is in progress.</description></item>
+        /// <item><description><para><b>NONAUDIT</b>: Not verified.</para>
+        /// </description></item>
+        /// <item><description><para><b>SUCCEED</b>: Successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILED</b>: Failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>AUDITING</b>: In review.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,7 +258,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RealNameStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the contact.</para>
+        /// <para>The name of the individual registrant or the contact person for an organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test litm</para>
@@ -243,7 +268,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RegistrantName { get; set; }
 
         /// <summary>
-        /// <para>The registrant of the domain name.</para>
+        /// <para>The name of the registrant organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test litm</para>
@@ -253,10 +278,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RegistrantOrganization { get; set; }
 
         /// <summary>
-        /// <para>The type of contact who registers the domain name. Valid values:</para>
+        /// <para>The type of the registrant. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: individual.</description></item>
-        /// <item><description><b>2</b>: enterprise.</description></item>
+        /// <item><description><para><b>1</b>: Individual.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -267,10 +294,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RegistrantType { get; set; }
 
         /// <summary>
-        /// <para>The status of the information about the domain name registrant. Valid values:</para>
+        /// <para>The status of registrant information updates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PENDING</b>: The information about the domain name registrant is being modified.</description></item>
-        /// <item><description><b>NORMAL</b>: normal.</description></item>
+        /// <item><description><para><b>PENDING</b>: The registrant information is being updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>NORMAL</b>: No update is in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -280,12 +309,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RegistrantUpdatingStatus { get; set; }
 
+        /// <summary>
+        /// <para>The registrar of the domain name.</para>
+        /// </summary>
         [NameInMap("Registrar")]
         [Validation(Required=false)]
         public string Registrar { get; set; }
 
         /// <summary>
-        /// <para>The time when the domain name was registered.</para>
+        /// <para>The registration date of the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-07 17:02:13</para>
@@ -295,7 +327,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RegistrationDate { get; set; }
 
         /// <summary>
-        /// <para>The timestamp generated when the domain name was registered.</para>
+        /// <para>The timestamp of the registration date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1584675448000</para>
@@ -305,14 +337,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? RegistrationDateLong { get; set; }
 
         /// <summary>
-        /// <para>The remarks on the domain name.</para>
+        /// <para>The user-provided remark for the domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试备注</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44101664-3E70-4F0E-89E5-CCB74BF*****</para>
@@ -331,6 +366,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags attached to the domain name.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public QueryDomainByDomainNameResponseBodyTag Tag { get; set; }
@@ -352,10 +390,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// <para>The transfer status of the domain name. Valid values:</para>
+        /// <para>The status of the domain transfer out. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: The domain name is normal.</description></item>
-        /// <item><description><b>PENDING</b>: The domain name is being transferred out from Alibaba Cloud.</description></item>
+        /// <item><description><para><b>NORMAL</b>: The domain name is not being transferred out.</para>
+        /// </description></item>
+        /// <item><description><para><b>PENDING</b>: The domain name is being transferred out from HiChina.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -366,11 +406,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string TransferOutStatus { get; set; }
 
         /// <summary>
-        /// <para>The status of the transfer lock for the domain name. Valid values:</para>
+        /// <para>The status of the domain transfer lock. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE_SETTING</b>: No transfer lock is configured.</description></item>
-        /// <item><description><b>OPEN</b>: The transfer lock is enabled.</description></item>
-        /// <item><description><b>CLOSE</b>: The transfer lock is disabled.</description></item>
+        /// <item><description><para><b>NONE_SETTING</b>: Not set.</para>
+        /// </description></item>
+        /// <item><description><para><b>OPEN</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -381,11 +424,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string TransferProhibitionLock { get; set; }
 
         /// <summary>
-        /// <para>The status of the security lock for the domain name. Valid values:</para>
+        /// <para>The status of the domain name security lock. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE_SETTING</b>: No security lock is configured.</description></item>
-        /// <item><description><b>OPEN</b>: The security lock is enabled.</description></item>
-        /// <item><description><b>CLOSE</b>: The security lock is disabled.</description></item>
+        /// <item><description><para><b>NONE_SETTING</b>: Not set.</para>
+        /// </description></item>
+        /// <item><description><para><b>OPEN</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -396,7 +442,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string UpdateProhibitionLock { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121000000****</para>
@@ -406,14 +452,20 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The Chinese name of the domain name contact.</para>
+        /// <para>The name of the contact person in Chinese.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>王先生</para>
         /// </summary>
         [NameInMap("ZhRegistrantName")]
         [Validation(Required=false)]
         public string ZhRegistrantName { get; set; }
 
         /// <summary>
-        /// <para>The Chinese name of the domain name registrant.</para>
+        /// <para>The name of the registrant in Chinese.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>王先生</para>
         /// </summary>
         [NameInMap("ZhRegistrantOrganization")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteContactTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4D73432C-7600-4779-ACBB-C3B5CA145D32</para>
         /// </summary>

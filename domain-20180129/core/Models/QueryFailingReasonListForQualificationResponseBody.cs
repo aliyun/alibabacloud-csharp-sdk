@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryFailingReasonListForQualificationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of domain name qualification verification failures.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryFailingReasonListForQualificationResponseBodyData> Data { get; set; }
         public class QueryFailingReasonListForQualificationResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Review date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2017-03-17 11:08:02</para>
             /// </summary>
@@ -21,6 +26,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public string Date { get; set; }
 
+            /// <summary>
+            /// <para>Reason for domain name qualification verification failure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>证件审核不通过</para>
+            /// </summary>
             [NameInMap("FailReason")]
             [Validation(Required=false)]
             public string FailReason { get; set; }
@@ -28,6 +39,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFCF6F8-243C-****-8035-4B12FEFD7D48</para>
         /// </summary>

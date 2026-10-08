@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class TransferInRefetchWhoisEmailResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</para>
         /// </summary>

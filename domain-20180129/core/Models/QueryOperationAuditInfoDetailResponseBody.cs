@@ -9,11 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryOperationAuditInfoDetailResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Review information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;regType&quot;:1,&quot;registrantName&quot;:&quot;张三&quot;,&quot;telephone&quot;:&quot;1390123****&quot;,&quot;account&quot;:&quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,&quot;reason&quot;:1,&quot;remark&quot;:&quot;账号丢失&quot;}</para>
+        /// </summary>
         [NameInMap("AuditInfo")]
         [Validation(Required=false)]
         public string AuditInfo { get; set; }
 
         /// <summary>
+        /// <para>Review Status. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Pending supplementary information.  </description></item>
+        /// <item><description><b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>: Under review.  </description></item>
+        /// <item><description><b>5</b>: Review failed.  </description></item>
+        /// <item><description><b>6</b>: Review succeeded.  </description></item>
+        /// <item><description><b>7</b>: Review canceled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +37,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? AuditStatus { get; set; }
 
         /// <summary>
+        /// <para>Review Type. Valid value:  </para>
+        /// <para><b>1</b>: Offline domain name transfer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -29,11 +47,19 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public int? AuditType { get; set; }
 
+        /// <summary>
+        /// <para>Name of the reviewed business.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com等域名线下转移</para>
+        /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
         public string BusinessName { get; set; }
 
         /// <summary>
+        /// <para>Record creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1581919010100</para>
         /// </summary>
@@ -42,6 +68,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>Domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com,aliyundoc.com</para>
         /// </summary>
@@ -50,6 +78,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Review record ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -57,11 +87,19 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>Review remark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>审核通过</para>
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFCF6F8-243C-40EC-8035-4B12FEFD7D1L</para>
         /// </summary>
@@ -70,6 +108,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Record update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1581919010101</para>
         /// </summary>

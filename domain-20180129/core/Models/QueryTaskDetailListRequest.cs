@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the domain name.</para>
+        /// <para>The domain name instance ID.</para>
+        /// <remarks>
+        /// <para>You can call &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/442021.html">QueryDomainByDomainName</a>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/121704.html">QueryDomainByDomainName</a> to query the domain name instance ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>S20179H1BBI9test</para>
@@ -30,10 +33,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the error message to return if the request fails. Valid value:</para>
+        /// <para>The language of the error message returned by the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// <para>Default value: <b>en</b>.</para>
         /// 
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>1000</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>1000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task number. This is the TaskNo value returned by a successfully executed task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,12 +81,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string TaskNo { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid value:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: waiting for execution</description></item>
-        /// <item><description><b>1</b>: being executed</description></item>
-        /// <item><description><b>2</b>: successful</description></item>
-        /// <item><description><b>3</b>: failed</description></item>
+        /// <item><description><b>0</b>: Waiting to be executed.</description></item>
+        /// <item><description><b>1</b>: Executing.</description></item>
+        /// <item><description><b>2</b>: Successful.</description></item>
+        /// <item><description><b>3</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client. Set the value to <b>127.0.0.1</b>.</para>
+        /// <para>The user IP address. You can set this parameter to <b>127.0.0.1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.0</para>

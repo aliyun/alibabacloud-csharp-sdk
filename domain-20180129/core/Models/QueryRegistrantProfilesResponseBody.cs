@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryRegistrantProfilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? CurrentPageNum { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page. Valid values:</para>
+        /// <para>Indicates whether there is a next page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Default value: <b>0</b>. Maximum value: <b>5000</b>.</para>
+        /// <para>The number of records per page. Default value: <b>0</b>. Maximum value: <b>5000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is preceded by a page. Valid values:</para>
+        /// <para>Indicates whether there is a previous page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,9 +192,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// <remarks>
-        /// <para> This parameter indicates the total number of queried registrant profiles. If multiple registrant profiles are queried, the information about these profiles is returned in sequence by profile.</para>
+        /// <para>The total number of records refers to the number of registrant profiles returned by the query. When there are multiple registrant profiles, the next profile is displayed after the previous one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TotalItemNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

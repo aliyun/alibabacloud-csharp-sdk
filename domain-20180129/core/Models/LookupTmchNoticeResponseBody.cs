@@ -184,6 +184,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>The TMCH notification ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>586608000000</para>
         /// </summary>
@@ -192,6 +194,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The trademark label.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>noted</para>
         /// </summary>
@@ -200,6 +204,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Label { get; set; }
 
         /// <summary>
+        /// <para>The end time of the trademark notice.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-10-15T00:00:00.0Z</para>
         /// </summary>
@@ -208,6 +214,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string NotAfter { get; set; }
 
         /// <summary>
+        /// <para>The start time of the trademark notice.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-10-13T00:00:00.0Z</para>
         /// </summary>
@@ -216,6 +224,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string NotBefore { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01C10C8E-0468-468C-BCD9-E709BDD0AE8F</para>
         /// </summary>

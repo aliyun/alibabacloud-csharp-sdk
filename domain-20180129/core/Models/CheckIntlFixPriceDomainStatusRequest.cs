@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CheckIntlFixPriceDomainStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>appp16.com</para>
         /// </summary>

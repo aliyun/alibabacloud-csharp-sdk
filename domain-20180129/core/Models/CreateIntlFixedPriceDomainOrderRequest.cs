@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CreateIntlFixedPriceDomainOrderRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false (default): manual payment.</para>
+        /// </description></item>
+        /// <item><description><para>true: automatic payment.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>The contact ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13350500</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? ContactId { get; set; }
 
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>appp16.com</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The expected price.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58.00</para>
         /// </summary>

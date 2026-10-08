@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForUpdateProhibitionLockResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F51977F9-2B40-462B-BCCD-CF5BB1E9DB56</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. You can use this ID to query the task details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d3babb0a-c939-4c25-8c65-c47b65f5492a</para>
         /// </summary>

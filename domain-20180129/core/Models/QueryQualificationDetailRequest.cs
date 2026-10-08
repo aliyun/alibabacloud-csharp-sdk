@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryQualificationDetailRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The language of the error message returned by the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -28,6 +36,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>API type for qualification verification. Fixed value: <b>knet</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string QualificationType { get; set; }
 
         /// <summary>
+        /// <para>User IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

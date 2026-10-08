@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForAssociatingEnsRequest : TeaModel {
         /// <summary>
+        /// <para>ENS address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Address { get; set; }
 
         /// <summary>
+        /// <para>Domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Language of the error message returned by the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// <para>Default value: <b>en</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>User IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

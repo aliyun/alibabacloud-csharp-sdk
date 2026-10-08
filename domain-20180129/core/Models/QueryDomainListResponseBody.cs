@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether a next page is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of domain names per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is preceded by a page.</para>
+        /// <para>Indicates whether a previous page is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? PrePage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7AB5469-5E38-4AA9-A920-C65B7A9C8E6E</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names returned.</para>
+        /// <para>The total number of domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TotalItemNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

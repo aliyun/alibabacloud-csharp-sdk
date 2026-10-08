@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryServerLockRequest : TeaModel {
         /// <summary>
+        /// <para>Domain instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>S20181*****85212</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Language of error messages returned by the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>User IP address. You can set it to <b>127.0.0.1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchDomainRemarkResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4189E320-961E-4786-8E15-0000</para>
         /// </summary>

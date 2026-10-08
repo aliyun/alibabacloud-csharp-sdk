@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EDC28FEC-6BE0-4583-95BC-test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Job number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>880f1579-be51-4dd3-a69d-test</para>
         /// </summary>

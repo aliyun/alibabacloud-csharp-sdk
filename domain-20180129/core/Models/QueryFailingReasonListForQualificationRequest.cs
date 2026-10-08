@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryFailingReasonListForQualificationRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Language of error messages returned by the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese  </description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -28,6 +36,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Number of records to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? Limit { get; set; }
 
         /// <summary>
+        /// <para>Qualification verification API type. Fixed value: <b>knet</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string QualificationType { get; set; }
 
         /// <summary>
+        /// <para>User IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

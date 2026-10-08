@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTaskListRequest : TeaModel {
         /// <summary>
+        /// <para>Start time of the creation date range for the query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC. Currently, queries are supported only by day.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? BeginCreateTime { get; set; }
 
         /// <summary>
+        /// <para>End time of the creation date range for the query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC. Currently, queries are supported only by day.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
         /// </summary>
@@ -26,6 +30,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? EndCreateTime { get; set; }
 
         /// <summary>
+        /// <para>Language for API error messages. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.  </description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// <para>Default value: <b>en</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -34,6 +45,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Page number for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +56,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>User IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

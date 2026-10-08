@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteEmailVerificationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of email addresses for which deletion failed.</para>
+        /// </summary>
         [NameInMap("FailList")]
         [Validation(Required=false)]
         public List<DeleteEmailVerificationResponseBodyFailList> FailList { get; set; }
         public class DeleteEmailVerificationResponseBodyFailList : TeaModel {
             /// <summary>
+            /// <para>Returned code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ParameterIllegall</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Email address for which deletion failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>Message returned upon failure to delete the email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Parameter error</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7A3D0E4A-0D4B-4BD0-90D7-A61DF8DD26AE</para>
         /// </summary>
@@ -47,11 +58,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of successfully deleted email addresses.</para>
+        /// </summary>
         [NameInMap("SuccessList")]
         [Validation(Required=false)]
         public List<DeleteEmailVerificationResponseBodySuccessList> SuccessList { get; set; }
         public class DeleteEmailVerificationResponseBodySuccessList : TeaModel {
             /// <summary>
+            /// <para>Returned code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Email address that was successfully deleted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>Message returned upon successful deletion of the email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>

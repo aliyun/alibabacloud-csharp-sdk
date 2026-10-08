@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTaskInfoHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>Start time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? BeginCreateTime { get; set; }
 
         /// <summary>
+        /// <para>Cursor for creation date (technical parameter).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? CreateTimeCursor { get; set; }
 
         /// <summary>
+        /// <para>End time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
         /// </summary>
@@ -34,6 +40,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? EndCreateTime { get; set; }
 
         /// <summary>
+        /// <para>Language for API error messages. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese  </description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// <para>Default value is <b>en</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -42,6 +55,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Job cursor; pass in the job number from the corresponding page cursor during pagination (technical parameter).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aa634d3f-927e-4d17-9d2c-test</para>
         /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string TaskNoCursor { get; set; }
 
         /// <summary>
+        /// <para>User IP address, which can be set to <b>127.0.0.1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTaskListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +84,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether a next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -90,6 +94,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -98,6 +104,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether there is a previous page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -106,6 +114,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? PrePage { get; set; }
 
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8D7D294A-8E99-481F-B64C-017EFC793059</para>
         /// </summary>
@@ -114,6 +124,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43</para>
         /// </summary>
@@ -122,6 +134,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TotalItemNum { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>

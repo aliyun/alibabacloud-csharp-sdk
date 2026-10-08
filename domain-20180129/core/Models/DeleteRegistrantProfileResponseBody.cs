@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteRegistrantProfileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C50E41A0-09F1-4491-8DB8-AF55BD2D0CC8</para>
         /// </summary>

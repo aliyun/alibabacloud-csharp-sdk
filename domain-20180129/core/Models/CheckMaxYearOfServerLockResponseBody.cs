@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CheckMaxYearOfServerLockResponseBody : TeaModel {
         /// <summary>
+        /// <para>Maximum number of years that can be purchased.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? MaxYear { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFCF6F8-243C-****-8035-4B12FEFD7D48</para>
         /// </summary>

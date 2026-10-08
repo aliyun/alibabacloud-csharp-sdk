@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryChangeLogListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether a next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether a previous page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -82,6 +90,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? PrePage { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2DEDFF32-7827-46B1-BE90-3DB8ABD91A58</para>
         /// </summary>
@@ -90,6 +100,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The API returns a maximum of 1,000 recent records per query, regardless of the specified page size. If your query matches more than 1,000 records, <b>ResultLimit</b> is <b>true</b>. To retrieve all results, narrow the time range and query again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -98,6 +110,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? ResultLimit { get; set; }
 
         /// <summary>
+        /// <para>The total number of items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -106,6 +120,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? TotalItemNum { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

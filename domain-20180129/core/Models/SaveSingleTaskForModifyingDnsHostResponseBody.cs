@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForModifyingDnsHostResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0F1B3547-BE50-4206-8F78-9540FFB85BC1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Job number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e9b8e8b4-7334-4548-9cec-c30b6891f292</para>
         /// </summary>

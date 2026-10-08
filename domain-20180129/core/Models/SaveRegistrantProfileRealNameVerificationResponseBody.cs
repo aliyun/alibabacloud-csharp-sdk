@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveRegistrantProfileRealNameVerificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the retrieved information template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? RegistrantProfileId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4D73432C-7600-****-ACBB-C3B5CA145D32</para>
         /// </summary>

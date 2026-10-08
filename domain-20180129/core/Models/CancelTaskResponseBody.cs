@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CancelTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>010E55C9-C64C-4C85-9BB2-7C225ADA6C86</para>
         /// </summary>

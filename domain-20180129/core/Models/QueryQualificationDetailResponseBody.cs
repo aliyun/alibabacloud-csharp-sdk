@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryQualificationDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>Review Status. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description>0: Information pending completion.  </description></item>
+        /// <item><description>1, 2, 3, 4: Under review.  </description></item>
+        /// <item><description>5: Review failed.  </description></item>
+        /// <item><description>6: Review succeeded.  </description></item>
+        /// <item><description>7: Review canceled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFCF6F8-243C-****-8035-4B12FEFD7D48</para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Business trail ID for qualification verification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>943a1662898a****0acbdbeca91</para>
         /// </summary>

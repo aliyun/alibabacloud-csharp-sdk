@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTaskDetailListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether a next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is preceded by a page.</para>
+        /// <para>Indicates whether a previous page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

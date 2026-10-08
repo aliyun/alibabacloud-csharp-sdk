@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         /// <summary>
         /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>参数错误</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -96,6 +99,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public class QueryDomainSpecialBizDetailResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The review information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>审核通过</para>
             /// </summary>
             [NameInMap("AuditMsg")]
             [Validation(Required=false)]
@@ -103,6 +109,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
             /// <summary>
             /// <para>The business name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GOV.CN域名注册(test003.cn)</para>
             /// </summary>
             [NameInMap("BizName")]
             [Validation(Required=false)]
@@ -177,6 +186,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 /// <summary>
                 /// <para>The city.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>鞍山市</para>
                 /// </summary>
                 [NameInMap("CCity")]
                 [Validation(Required=false)]
@@ -184,6 +196,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 /// <summary>
                 /// <para>The organization name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>河北易迪管道制造有限公司</para>
                 /// </summary>
                 [NameInMap("CCompany")]
                 [Validation(Required=false)]
@@ -201,6 +216,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 /// <summary>
                 /// <para>The contact name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>佟大伟</para>
                 /// </summary>
                 [NameInMap("CName")]
                 [Validation(Required=false)]
@@ -208,6 +226,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 /// <summary>
                 /// <para>The province.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>辽宁</para>
                 /// </summary>
                 [NameInMap("CProvince")]
                 [Validation(Required=false)]
@@ -215,6 +236,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 /// <summary>
                 /// <para>The address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>铁西区新开街59-4号</para>
                 /// </summary>
                 [NameInMap("CVenu")]
                 [Validation(Required=false)]
@@ -654,6 +678,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
             /// <summary>
             /// <para>The description of business status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>信息审核成功</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]

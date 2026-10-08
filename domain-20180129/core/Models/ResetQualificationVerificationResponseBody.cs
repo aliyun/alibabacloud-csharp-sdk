@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ResetQualificationVerificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D6CB3623-4726-4947-AC2B-2C6E673B447C</para>
         /// </summary>

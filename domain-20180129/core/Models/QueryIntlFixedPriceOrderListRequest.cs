@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryIntlFixedPriceOrderListRequest : TeaModel {
         /// <summary>
+        /// <para>The business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T2024061115213700****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The order status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>

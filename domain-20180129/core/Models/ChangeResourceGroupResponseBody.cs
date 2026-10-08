@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Operation result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The operation succeeded.</description></item>
+        /// <item><description><b>false</b>: The operation failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

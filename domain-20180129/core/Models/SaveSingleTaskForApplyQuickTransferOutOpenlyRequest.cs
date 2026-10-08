@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The language of the returned error message. Valid values: zh (Chinese) and en (English). The default is en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s client IP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

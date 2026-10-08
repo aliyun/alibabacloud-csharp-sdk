@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class VerifyEmailResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FD3AD289-83EE-4E32-803A-CF1B3A8EEE64</para>
         /// </summary>

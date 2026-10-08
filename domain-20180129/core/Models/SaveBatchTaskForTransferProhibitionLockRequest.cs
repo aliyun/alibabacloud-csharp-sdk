@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForTransferProhibitionLockRequest : TeaModel {
         /// <summary>
+        /// <para>The domain names for which you want to enable or disable the transfer prohibition lock.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public List<string> DomainName { get; set; }
 
         /// <summary>
+        /// <para>The language of the error message that is returned if the request fails. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: <b>en</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -28,6 +38,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable or disable the transfer prohibition lock. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enable the transfer prohibition lock.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable the transfer prohibition lock.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +55,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? Status { get; set; }
 
         /// <summary>
+        /// <para>The client IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SetupDomainAutoRenewRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The operation type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

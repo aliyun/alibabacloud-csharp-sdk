@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CheckDomainResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the domain name can be registered. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Registrable.  </description></item>
+        /// <item><description><b>3</b>: Pre-registration.  </description></item>
+        /// <item><description><b>4</b>: Deletion reservation available.  </description></item>
+        /// <item><description><b>0</b>: Not registrable.  </description></item>
+        /// <item><description><b>-1</b>: Abnormal.  </description></item>
+        /// <item><description><b>-2</b>: Registration paused.  </description></item>
+        /// <item><description><b>-3</b>: Blacklisted.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +29,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Avail { get; set; }
 
         /// <summary>
+        /// <para>The queried domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test**.xin</para>
         /// </summary>
@@ -26,6 +39,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether dynamic pricing is enabled. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.  </description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +53,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? DynamicCheck { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the domain name is a premium term. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.  </description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +67,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Premium { get; set; }
 
         /// <summary>
+        /// <para>Registration price for premium domain names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1286</para>
         /// </summary>
@@ -50,6 +77,11 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? Price { get; set; }
 
         /// <summary>
+        /// <para>The reason for non-registrability returned by the domain name registry.  </para>
+        /// <remarks>
+        /// <para>The reason may vary depending on the domain name registry.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>In use</para>
         /// </summary>
@@ -58,6 +90,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>Unique request access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BA7A4FD4-EB9A-4A20-BB0C-9AEB15634DC1</para>
         /// </summary>

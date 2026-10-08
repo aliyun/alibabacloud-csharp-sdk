@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The language of the error message to return if the request fails. Valid values:</para>
+        /// <para>The language of the error message that is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>en</b>.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The IP address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>

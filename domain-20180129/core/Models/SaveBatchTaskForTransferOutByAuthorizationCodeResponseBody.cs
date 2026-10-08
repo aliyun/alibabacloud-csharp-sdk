@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForTransferOutByAuthorizationCodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E2598CAF-DBFE-494E-95EF-B42A33C178AA</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the batch transfer-out task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</para>
         /// </summary>

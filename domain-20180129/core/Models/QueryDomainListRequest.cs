@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public bool? AutoRenewEnabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the domain name registrant.</para>
+        /// <para>The name of the domain owner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Guangzhou Jinye Renewable Resources Recycling Co., Ltd</para>
+        /// <para>广州金烨再生资源回收有限公司</para>
         /// </summary>
         [NameInMap("Ccompany")]
         [Validation(Required=false)]
@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Dns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name group.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the domain group. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the domain group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainGroupId { get; set; }
 
         /// <summary>
-        /// <para>The domain name. You can search for the domain name in the domain name list.</para>
+        /// <para>The domain name to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.com</para>
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</para>
+        /// <para>The end of the expiration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? EndExpirationDate { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</para>
+        /// <para>The end of the registration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
@@ -68,12 +69,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? EndRegistrationDate { get; set; }
 
         /// <summary>
-        /// <para>The language of the error message to return if the request fails. Valid values:</para>
+        /// <para>The language for API error messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>en</b>.</para>
+        /// <para>The default value is <b>en</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -83,13 +86,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order of the information based on which the domain names are sorted, such as the registration date and expiration date. Valid values:</para>
+        /// <para>The sort order for the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASC</b>: ascending order</description></item>
-        /// <item><description><b>DESC</b>: descending order</description></item>
+        /// <item><description><para><b>ASC</b>: Ascending.</para>
+        /// </description></item>
+        /// <item><description><para><b>DESC</b>: Descending.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If this parameter is not specified, the default value <b>DESC</b> is used.</para>
+        /// <para>The default value is <b>DESC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,13 +105,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string OrderByType { get; set; }
 
         /// <summary>
-        /// <para>The field that you use to sort the domain names. Valid values:</para>
+        /// <para>The field to use for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RegistrationDate</b>: registration date</description></item>
-        /// <item><description><b>ExpirationDate</b>: expiration date</description></item>
+        /// <item><description><para><b>RegistrationDate</b>: Sorts by registration date.</para>
+        /// </description></item>
+        /// <item><description><para><b>ExpirationDate</b>: Sorts by expiration date.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If this parameter is not specified, the domain names are sorted by the time when they were added to the database.</para>
+        /// <para>By default, the results are sorted by the time they were added to the system.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +124,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string OrderKeyType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for the paginated results.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +135,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,11 +146,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the domain name. Valid values:</para>
+        /// <para>The domain type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>New gTLD</b>: new generic top-level domain names</description></item>
-        /// <item><description><b>gTLD</b>: generic top-level domain names</description></item>
-        /// <item><description><b>ccTLD</b>: country code top-level domain names</description></item>
+        /// <item><description><para><b>New gTLD</b>: new generic top-level domain.</para>
+        /// </description></item>
+        /// <item><description><para><b>gTLD</b>: generic top-level domain.</para>
+        /// </description></item>
+        /// <item><description><para><b>ccTLD</b>: country-code top-level domain.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,10 +164,12 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string ProductDomainType { get; set; }
 
         /// <summary>
-        /// <para>The category of the domain names that you want to query. Valid values:</para>
+        /// <para>The type of list to return. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: the domain names that need to be renewed</description></item>
-        /// <item><description><b>2</b>: the domain names that need to be redeemed</description></item>
+        /// <item><description><para><b>1</b>: Domain names that require urgent renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Domain names that require urgent redemption.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</para>
+        /// <para>The start of the expiration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
@@ -192,7 +204,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? StartExpirationDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</para>
+        /// <para>The start of the registration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
@@ -202,27 +214,27 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? StartRegistrationDate { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<QueryDomainListRequestTag> Tag { get; set; }
         public class QueryDomainListRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag to add to the resource.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testKey</para>
+            /// <para>备注</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag to add to the resource.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testValue</para>
+            /// <para>标签1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -231,7 +243,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// <para>The IP address of the client. Set the value to <b>127.0.0.1</b>.</para>
+        /// <para>The user\&quot;s client IP address. You can set this parameter to <b>127.0.0.1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>

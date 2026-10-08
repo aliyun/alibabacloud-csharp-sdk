@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ConfirmTransferInEmailRequest : TeaModel {
         /// <summary>
+        /// <para>Domain name list</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public List<string> DomainName { get; set; }
 
         /// <summary>
+        /// <para>Mailbox</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>Language of the error message returned by the API. Valid enumeration values: zh (Chinese); en (English). Default value is en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>User IP</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SubmitOperationAuditInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The system-generated record ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DKCF6F8-243C-40EC-8035-4B12FEFD7C22</para>
         /// </summary>
