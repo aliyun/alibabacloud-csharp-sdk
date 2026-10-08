@@ -1069,6 +1069,142 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return await FindGuestTicketRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动签到</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosCheckInRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosCheckInResponse
+        /// </returns>
+        public MosCheckInResponse MosCheckInWithOptions(MosCheckInRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
+            {
+                body["ActivityId"] = request.ActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParam))
+            {
+                body["ExtParam"] = request.ExtParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QrCode))
+            {
+                body["QrCode"] = request.QrCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MosCheckIn",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MosCheckInResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动签到</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosCheckInRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosCheckInResponse
+        /// </returns>
+        public async Task<MosCheckInResponse> MosCheckInWithOptionsAsync(MosCheckInRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
+            {
+                body["ActivityId"] = request.ActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParam))
+            {
+                body["ExtParam"] = request.ExtParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QrCode))
+            {
+                body["QrCode"] = request.QrCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MosCheckIn",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MosCheckInResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动签到</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosCheckInRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosCheckInResponse
+        /// </returns>
+        public MosCheckInResponse MosCheckIn(MosCheckInRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MosCheckInWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动签到</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosCheckInRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosCheckInResponse
+        /// </returns>
+        public async Task<MosCheckInResponse> MosCheckInAsync(MosCheckInRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MosCheckInWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryAllActivityInfoRequest
         /// </param>
