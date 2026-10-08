@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateRowPermissionRequestCreateRowPermissionCommand CreateRowPermissionCommand { get; set; }
         public class CreateRowPermissionRequestCreateRowPermissionCommand : TeaModel {
             /// <summary>
-            /// <para>The mapping fields.</para>
+            /// <para>The mapping columns.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("MappingColumns")]
@@ -26,17 +26,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateRowPermissionRequestCreateRowPermissionCommandMappingColumns> MappingColumns { get; set; }
             public class CreateRowPermissionRequestCreateRowPermissionCommandMappingColumns : TeaModel {
                 /// <summary>
-                /// <para>The description of the mapping field.</para>
+                /// <para>The description of the mapping column.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Controls the business ID field.</para>
+                /// <para>Control the business ID field</para>
                 /// </summary>
                 [NameInMap("ColumnDesc")]
                 [Validation(Required=false)]
                 public string ColumnDesc { get; set; }
 
                 /// <summary>
-                /// <para>The name of the mapping field.</para>
+                /// <para>The name of the mapping column.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the mapping field.</para>
+                /// <para>The type of the mapping column.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description of the row-level permission.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Control business data.</para>
+            /// <para>Manage business data</para>
             /// </summary>
             [NameInMap("RowPermissionDesc")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>BusinessControl.</para>
+            /// <para>Business control</para>
             /// </summary>
             [NameInMap("RowPermissionName")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<CreateRowPermissionRequestCreateRowPermissionCommandRulesExpressions> Expressions { get; set; }
                 public class CreateRowPermissionRequestCreateRowPermissionCommandRulesExpressions : TeaModel {
                     /// <summary>
-                    /// <para>The name of the mapping field.</para>
+                    /// <para>The name of the mapping column.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the rule is deleted.</para>
+                /// <para>Specifies whether to delete the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>MiddlePlatform.</para>
+                /// <para>Mid-end</para>
                 /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateRowPermissionRequestCreateRowPermissionCommandTables> Tables { get; set; }
             public class CreateRowPermissionRequestCreateRowPermissionCommandTables : TeaModel {
                 /// <summary>
-                /// <para>The field of the table.</para>
+                /// <para>The table column.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the mapping field.</para>
+                /// <para>The name of the mapping column.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -289,6 +289,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

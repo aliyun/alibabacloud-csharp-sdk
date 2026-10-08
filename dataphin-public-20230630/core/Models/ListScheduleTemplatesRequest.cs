@@ -8,29 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class ListTablesRequest : TeaModel {
+    public class ListScheduleTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("ListQuery")]
+        [NameInMap("ListScheduleTemplatesCommand")]
         [Validation(Required=false)]
-        public ListTablesRequestListQuery ListQuery { get; set; }
-        public class ListTablesRequestListQuery : TeaModel {
+        public ListScheduleTemplatesRequestListScheduleTemplatesCommand ListScheduleTemplatesCommand { get; set; }
+        public class ListScheduleTemplatesRequestListScheduleTemplatesCommand : TeaModel {
             /// <summary>
-            /// <para>The asset catalog, such as the project name or business unit name.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>LD_test01_dev</para>
-            /// </summary>
-            [NameInMap("Catalog")]
-            [Validation(Required=false)]
-            public string Catalog { get; set; }
-
-            /// <summary>
-            /// <para>The keyword for searching. Table names are supported.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>小时</para>
             /// </summary>
             [NameInMap("Keyword")]
             [Validation(Required=false)]
@@ -38,40 +26,31 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>30012011</para>
-            /// </summary>
-            [NameInMap("OwnerId")]
-            [Validation(Required=false)]
-            public string OwnerId { get; set; }
-
-            /// <summary>
-            /// <para>The page number. Default value: 1.</para>
-            /// 
-            /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
-            [NameInMap("PageNo")]
+            [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public int? PageNo { get; set; }
+            public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
-            [NameInMap("SubTypes")]
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BASE_SCHEDULE_TEMPLATE</para>
+            /// </summary>
+            [NameInMap("ScheduleTemplateType")]
             [Validation(Required=false)]
-            public List<string> SubTypes { get; set; }
+            public string ScheduleTemplateType { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

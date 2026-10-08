@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -45,13 +47,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping> DeptUserMapping { get; set; }
             public class SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping : TeaModel {
                 /// <summary>
-                /// <para>The list of department IDs to which the user belongs. If this parameter is left empty, the user-department affiliation is deleted.</para>
+                /// <para>The list of department IDs to which the user belongs. If this parameter is left empty, the user affiliation is deleted.</para>
                 /// </summary>
                 [NameInMap("DepartmentIdList")]
                 [Validation(Required=false)]
                 public List<string> DepartmentIdList { get; set; }
 
                 /// <summary>
+                /// <para>The user source type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
                 /// </summary>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The user ID in the user system. This value is the unique identifier of the user.</para>
+                /// <para>The user ID in the user system. This is the unique identifier of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

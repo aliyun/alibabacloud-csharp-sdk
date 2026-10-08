@@ -64,6 +64,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetBatchTaskInfoResponseBodyTaskInfo TaskInfo { get; set; }
         public class GetBatchTaskInfoResponseBodyTaskInfo : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>7305621095333696</para>
+            /// </summary>
+            [NameInMap("BaseScheduleTemplateId")]
+            [Validation(Required=false)]
+            public long? BaseScheduleTemplateId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>天级调度模板</para>
+            /// </summary>
+            [NameInMap("BaseScheduleTemplateName")]
+            [Validation(Required=false)]
+            public string BaseScheduleTemplateName { get; set; }
+
+            /// <summary>
             /// <para>The task code.</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +88,142 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("ConditionScheduleEnable")]
+            [Validation(Required=false)]
+            public bool? ConditionScheduleEnable { get; set; }
+
+            [NameInMap("ConditionScheduleParamList")]
+            [Validation(Required=false)]
+            public List<GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList> ConditionScheduleParamList { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>失败重跑</para>
+                /// </summary>
+                [NameInMap("ConditionName")]
+                [Validation(Required=false)]
+                public string ConditionName { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0 30 * * * ?</para>
+                /// </summary>
+                [NameInMap("CronExpression")]
+                [Validation(Required=false)]
+                public string CronExpression { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowScheduleParam")]
+                [Validation(Required=false)]
+                public bool? FollowScheduleParam { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("NodeStatus")]
+                [Validation(Required=false)]
+                public int? NodeStatus { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;type&quot;:&quot;EXPRESSION_GROUP&quot;,&quot;operator&quot;:&quot;or&quot;}</para>
+                /// </summary>
+                [NameInMap("ScheduleConditionJson")]
+                [Validation(Required=false)]
+                public string ScheduleConditionJson { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>00:30</para>
+                /// </summary>
+                [NameInMap("ScheduleTime")]
+                [Validation(Required=false)]
+                public string ScheduleTime { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7305621095333697</para>
+            /// </summary>
+            [NameInMap("ConditionScheduleTemplateId")]
+            [Validation(Required=false)]
+            public long? ConditionScheduleTemplateId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>条件调度模板</para>
+            /// </summary>
+            [NameInMap("ConditionScheduleTemplateName")]
+            [Validation(Required=false)]
+            public string ConditionScheduleTemplateName { get; set; }
+
+            [NameInMap("ContextParamList")]
+            [Validation(Required=false)]
+            public List<GetBatchTaskInfoResponseBodyTaskInfoContextParamList> ContextParamList { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoContextParamList : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
+                public string DefaultValue { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>输出条数</para>
+                /// </summary>
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
+                public string Desc { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cnt</para>
+                /// </summary>
+                [NameInMap("ParamKey")]
+                [Validation(Required=false)]
+                public string ParamKey { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</para>
@@ -181,6 +333,30 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("DataSourceSchema")]
             [Validation(Required=false)]
             public string DataSourceSchema { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/sql/protocolv1/o/xxx</para>
+            /// </summary>
+            [NameInMap("DevHttpPath")]
+            [Validation(Required=false)]
+            public string DevHttpPath { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-def456</para>
+            /// </summary>
+            [NameInMap("DevResourceGroupId")]
+            [Validation(Required=false)]
+            public string DevResourceGroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>默认资源组</para>
+            /// </summary>
+            [NameInMap("DevResourceGroupName")]
+            [Validation(Required=false)]
+            public string DevResourceGroupName { get; set; }
 
             /// <summary>
             /// <para>The user ID of the development owner.</para>
@@ -423,6 +599,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Priority { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>/sql/protocolv1/o/yyy</para>
+            /// </summary>
+            [NameInMap("ProdHttpPath")]
+            [Validation(Required=false)]
+            public string ProdHttpPath { get; set; }
+
+            /// <summary>
             /// <para>The project ID.</para>
             /// 
             /// <b>Example:</b>
@@ -455,6 +639,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Rerunable")]
             [Validation(Required=false)]
             public bool? Rerunable { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-abc123</para>
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>默认资源组</para>
+            /// </summary>
+            [NameInMap("ResourceGroupName")]
+            [Validation(Required=false)]
+            public string ResourceGroupName { get; set; }
 
             /// <summary>
             /// <para>The scheduling period. Valid values:</para>
@@ -521,6 +721,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TaskTagList")]
+            [Validation(Required=false)]
+            public List<string> TaskTagList { get; set; }
 
             /// <summary>
             /// <para>The task type. For more information, refer to the API operation for creating a batch task.</para>
@@ -673,6 +877,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceTableName { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>9999-12-31</para>
+            /// </summary>
+            [NameInMap("ValidEndDate")]
+            [Validation(Required=false)]
+            public string ValidEndDate { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2026-01-01</para>
+            /// </summary>
+            [NameInMap("ValidStartDate")]
+            [Validation(Required=false)]
+            public string ValidStartDate { get; set; }
 
         }
 

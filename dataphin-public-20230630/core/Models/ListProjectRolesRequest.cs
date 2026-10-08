@@ -8,9 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class SyncDepartmentUserShrinkRequest : TeaModel {
+    public class ListProjectRolesRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +20,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -31,12 +28,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The request command.</para>
+        /// <para>项目类型，BASIC-基础模式项目，DEV-开发环境项目，PROD-生产环境项目，TAG-标签平台项目，可选值：BASIC、DEV、PROD、TAG</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEV</para>
         /// </summary>
-        [NameInMap("SyncDepartmentUserCommand")]
+        [NameInMap("ProjectType")]
         [Validation(Required=false)]
-        public string SyncDepartmentUserCommandShrink { get; set; }
+        public string ProjectType { get; set; }
 
     }
 

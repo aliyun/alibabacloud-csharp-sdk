@@ -8,9 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class SyncDepartmentUserShrinkRequest : TeaModel {
+    public class GetCheckConnectivityJobByJobIdRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>129837xxxx</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,22 +30,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
         [NameInMap("OpUserId")]
         [Validation(Required=false)]
         public string OpUserId { get; set; }
-
-        /// <summary>
-        /// <para>The request command.</para>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("SyncDepartmentUserCommand")]
-        [Validation(Required=false)]
-        public string SyncDepartmentUserCommandShrink { get; set; }
 
     }
 

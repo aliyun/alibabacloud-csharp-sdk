@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class SyncDepartmentUserResponseBody : TeaModel {
+    public class StartPipelineIntegratedTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request error code. OK indicates a successful request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -20,18 +18,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response result.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public string Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the backend.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,8 +34,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -50,8 +42,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -60,7 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
