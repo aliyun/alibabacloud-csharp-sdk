@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CodeChecksum { get; set; }
 
         /// <summary>
-        /// <para>The size of the function code package returned by the system. Unit: bytes.</para>
+        /// <para>The size of the function code package returned by the system, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>412</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? CodeSize { get; set; }
 
         /// <summary>
-        /// <para>The CPU specification of the function. Unit: vCPU. The value must be a multiple of 0.05 vCPU. Minimum value: 0.05. Maximum value: 16. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</para>
+        /// <para>The CPU specification of the function, in vCPUs, in multiples of 0.05 vCPU. The minimum value is 0.05 and the maximum value is 16. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The time when the function was created.</para>
+        /// <para>The creation time of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-01T08:15:27Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The custom container runtime configuration. After this parameter is configured, the function can use a custom container image to execute the function. Specify either code or customContainerConfig.</para>
+        /// <para>The custom container runtime configuration. After successful configuration, the function can use a custom container image to execute the function. Either code or customContainerConfig must be specified.</para>
         /// </summary>
         [NameInMap("customContainerConfig")]
         [Validation(Required=false)]
@@ -81,13 +81,11 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable STS token injection. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>None: injects STS tokens in all methods.</description></item>
-        /// <item><description>Env: does not inject STS tokens through environment variables.</description></item>
-        /// <item><description>Request: does not inject STS tokens through requests, including context and headers.</description></item>
-        /// <item><description>All: does not inject STS tokens in any method.</description></item>
-        /// </list>
+        /// <para>Specifies whether to disable STS token injection. Valid values:
+        /// None: Injects STS tokens in all ways.
+        /// Env: Does not inject STS tokens through environment variables.
+        /// Request: Does not inject STS tokens through requests, including context and headers.
+        /// All: Does not inject STS tokens in any way.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Env</para>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to disable the creation of on-demand instances. If this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</para>
+        /// <para>Specifies whether to disable the creation of on-demand instances. When enabled, on-demand instances are not created and only provisioned instances can be used.</para>
         /// </summary>
         [NameInMap("disableOndemand")]
         [Validation(Required=false)]
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? DisableOndemand { get; set; }
 
         /// <summary>
-        /// <para>The disk specification of the function. Unit: MB. Valid values: 512 and 10240.</para>
+        /// <para>The disk specification of the function, in MB. Valid values: 512 and 10240.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>When a sessionAffinity type is set, configure the corresponding affinity settings. For MCP_SSE affinity, populate the MCPSSESessionAffinityConfig configuration. For cookie-based affinity, populate the CookieSessionAffinityConfig configuration. For header field affinity, populate the HeaderFieldSessionAffinityConfig configuration.</para>
+        /// <para>When a sessionAffinity type is set, the corresponding affinity configuration must be specified. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</para>
         /// </summary>
         [NameInMap("enableLongLiving")]
         [Validation(Required=false)]
@@ -127,14 +125,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? EnableLongLiving { get; set; }
 
         /// <summary>
-        /// <para>The environment variables of the function. You can access the configured environment variables in the runtime environment.</para>
+        /// <para>The environment variables of the function, which can be accessed in the runtime environment.</para>
         /// </summary>
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the function.</para>
+        /// <para>The function resource identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:123:functions/functionName</para>
@@ -144,7 +142,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionArn { get; set; }
 
         /// <summary>
-        /// <para>The globally unique ID generated by the system for the function.</para>
+        /// <para>The globally unique ID generated by the system for each function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa715851-1c20-4b89-a8fb-***</para>
@@ -171,7 +169,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public GPUConfig GpuConfig { get; set; }
 
         /// <summary>
-        /// <para>The function entry point. The specific format depends on the runtime.</para>
+        /// <para>The function entry point for execution. The specific format depends on the runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>index.handler</para>
@@ -181,7 +179,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Handler { get; set; }
 
         /// <summary>
-        /// <para>The deferred instance release time.</para>
+        /// <para>The instance deferred release time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -191,7 +189,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// <para>The maximum concurrency per instance.</para>
+        /// <para>The maximum instance concurrency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -215,7 +213,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public InstanceLifecycleConfig InstanceLifecycleConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the function can access the Internet. Default value: true.</para>
+        /// <para>Specifies whether the function is allowed to access the Internet. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -228,6 +226,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public FunctionRestriction InvocationRestriction { get; set; }
 
+        /// <summary>
+        /// <para>The JuiceFs mount configuration.</para>
+        /// </summary>
         [NameInMap("juiceFsConfig")]
         [Validation(Required=false)]
         public JuiceFsConfig JuiceFsConfig { get; set; }
@@ -243,12 +244,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the most recent function update operation. When a function is created, this value is Successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Successful</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>InProgress.</description></item>
-        /// </list>
+        /// <para>The status of the most recent function update operation. When a function is created, this value is Successful. Valid values: Successful, Failed, and InProgress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InProgress</para>
@@ -258,7 +254,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastUpdateStatus { get; set; }
 
         /// <summary>
-        /// <para>The reason that caused the most recent function update operation to have the current status.</para>
+        /// <para>The reason why the most recent function update operation has the current status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The system is currently processing the acceleration optimization for the image.</para>
@@ -268,7 +264,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastUpdateStatusReason { get; set; }
 
         /// <summary>
-        /// <para>The status code of the reason that caused the most recent function update operation to have the current status.</para>
+        /// <para>The status code of the reason why the most recent function update operation has the current status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ImageOptimizing</para>
@@ -285,6 +281,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<FunctionLayer> Layers { get; set; }
 
         /// <summary>
+        /// <para>The function lock information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;lockedBy&quot;:&quot;AgentRun&quot;,&quot;lockedAt&quot;:&quot;2025-04-05T10:00:00Z&quot;,&quot;lockedResources&quot;:[&quot;function&quot;,&quot;trigger&quot;,&quot;version&quot;,&quot;alias&quot;]}</para>
         /// </summary>
@@ -300,7 +298,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public LogConfig LogConfig { get; set; }
 
         /// <summary>
-        /// <para>The memory specification of the function. Unit: MB. The value must be a multiple of 64 MB. Minimum value: 128. Maximum value: 32768 (32 GB). The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</para>
+        /// <para>The memory specification of the function, in MB, in multiples of 64 MB. The minimum value is 128 MB and the maximum value is 32 GB. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -328,21 +326,21 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public OSSMountConfig OssMountConfig { get; set; }
 
         /// <summary>
-        /// <para>The PolarFs configuration. After this parameter is configured, the function can access the specified PolarFs resources.</para>
+        /// <para>The PolarFs configuration. After you configure this parameter, the function can access the specified PolarFs resource.</para>
         /// </summary>
         [NameInMap("polarFsConfig")]
         [Validation(Required=false)]
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The RAM role that the user grants to Function Compute. After this parameter is configured, Function Compute assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role in the function to access specified Alibaba Cloud services such as OSS and OTS.</para>
+        /// <para>The RAM role granted by the user to Function Compute. After this parameter is set, Function Compute assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role in the function to access specified Alibaba Cloud services, such as OSS and OTS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::188077086902****:role/fc-test</para>
@@ -362,7 +360,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Runtime { get; set; }
 
         /// <summary>
-        /// <para>The affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</para>
+        /// <para>The session affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this to MCP_SSE. To use cookie-based affinity, set this to GENERATED_COOKIE. To use header-based affinity, set this to HEADER_FIELD. If not set or set to NONE, no affinity is applied and requests are routed based on the default Function Compute scheduling policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MCP_SSE</para>
@@ -372,7 +370,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionAffinity { get; set; }
 
         /// <summary>
-        /// <para>When a sessionAffinity type is set, configure the corresponding affinity settings. For MCP_SSE affinity, populate the MCPSSESessionAffinityConfig configuration. For cookie-based affinity, populate the CookieSessionAffinityConfig configuration. For header field affinity, populate the HeaderFieldSessionAffinityConfig configuration.</para>
+        /// <para>When a sessionAffinity type is set, the corresponding affinity configuration must be specified. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</para>
@@ -419,7 +417,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the function execution. Unit: seconds. Minimum value: 1. Maximum value: 86400. Default value: 3. The function is terminated if it exceeds this time limit.</para>
+        /// <para>The timeout period for function execution, in seconds. The minimum value is 1, the maximum value is 86400, and the default value is 3. The function is terminated if it exceeds this time limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -429,7 +427,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The Tracing Analysis configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed by internal operations of functions.</para>
+        /// <para>The tracing configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed by internal function operations.</para>
         /// </summary>
         [NameInMap("tracingConfig")]
         [Validation(Required=false)]

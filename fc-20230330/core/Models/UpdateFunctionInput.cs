@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public InputCodeLocation Code { get; set; }
 
         /// <summary>
-        /// <para>The CPU specification of the function. Unit: vCPU. The value must be a multiple of 0.05 vCPU.</para>
+        /// <para>The CPU specification of the function in vCPU. The value must be a multiple of 0.05 vCPU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the custom container runtime. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</para>
+        /// <para>The custom container runtime configuration. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</para>
         /// </summary>
         [NameInMap("customContainerConfig")]
         [Validation(Required=false)]
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <summary>
         /// <para>Specifies whether to disable STS token injection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None: STS tokens are injected in all methods.</description></item>
-        /// <item><description>Env: STS tokens are not injected through environment variables.</description></item>
-        /// <item><description>Request: STS tokens are not injected through requests, including context and headers.</description></item>
-        /// <item><description>All: STS tokens are not injected in any method.</description></item>
+        /// <item><description>None: Injects STS tokens in all methods.</description></item>
+        /// <item><description>Env: Does not inject STS tokens through environment variables.</description></item>
+        /// <item><description>Request: Does not inject STS tokens through requests, including context and headers.</description></item>
+        /// <item><description>All: Does not inject STS tokens in any method.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to disable the creation of on-demand instances. If this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</para>
+        /// <para>Specifies whether to disable the creation of on-demand instances. After this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</para>
         /// </summary>
         [NameInMap("disableOndemand")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? DisableOndemand { get; set; }
 
         /// <summary>
-        /// <para>The disk specification of the function. Unit: MB. Valid values: 512 and 10240.</para>
+        /// <para>The disk specification of the function in MB. Valid values: 512 and 10240.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public GPUConfig GpuConfig { get; set; }
 
         /// <summary>
-        /// <para>The function entry point. The specific format depends on the runtime.</para>
+        /// <para>The function entry point. The specific format is related to the runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>index.handler</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Handler { get; set; }
 
         /// <summary>
-        /// <para>The deferred release time of the instance.</para>
+        /// <para>The delayed release time of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string InstanceIsolationMode { get; set; }
 
         /// <summary>
-        /// <para>The instance lifecycle hook configuration.</para>
+        /// <para>The instance lifecycle hook method configuration.</para>
         /// </summary>
         [NameInMap("instanceLifecycleConfig")]
         [Validation(Required=false)]
@@ -171,12 +171,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? InternetAccess { get; set; }
 
+        /// <summary>
+        /// <para>The JuiceFs mount configuration.</para>
+        /// </summary>
         [NameInMap("juiceFsConfig")]
         [Validation(Required=false)]
         public JuiceFsConfig JuiceFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of layers. Multiple layers are merged in descending order of array index. Files in a layer with a smaller index overwrite files with the same name in a layer with a larger index.</para>
+        /// <para>The list of layers. Multiple layers are merged in descending order of array index. Content from a layer with a smaller index overwrites files with the same name from a layer with a larger index.</para>
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
@@ -190,7 +193,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public LogConfig LogConfig { get; set; }
 
         /// <summary>
-        /// <para>The memory specification of the function. Unit: MB. The value must be a multiple of 64 MB. The memory specification varies based on the function instance type.</para>
+        /// <para>The memory specification of the function in MB. The value must be a multiple of 64 MB. The memory specification varies depending on the function instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -225,7 +228,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Access Management (RAM) role that grants Function Compute the required permissions. Scenarios include: 1. Sending logs generated by the function to your Logstore. 2. Generating temporary access tokens for the function to access other cloud resources during the execute procedure.</para>
+        /// <para>The RAM role that grants Function Compute the required permissions. Scenarios include: 1. Sending logs generated by the function to your Logstore. 2. Generating temporary access tokens for the function to access other cloud resources during the execute procedure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::188077086902****:role/fc-test</para>
@@ -245,7 +248,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Runtime { get; set; }
 
         /// <summary>
-        /// <para>The affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</para>
+        /// <para>The session affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MCP_SSE</para>
@@ -255,7 +258,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionAffinity { get; set; }
 
         /// <summary>
-        /// <para>The affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</para>
+        /// <para>The session affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, populate the MCPSSESessionAffinityConfig configuration. For cookie-based affinity, populate the CookieSessionAffinityConfig configuration. For header field affinity, populate the HeaderFieldSessionAffinityConfig configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</para>
@@ -265,7 +268,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionAffinityConfig { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for function execution. Unit: seconds. Minimum value: 1. Default value: 3. The function is terminated if it exceeds this time limit.</para>
+        /// <para>The timeout period for function execution, in seconds. Minimum value: 1. Default value: 3. The function is terminated if it exceeds this time limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
