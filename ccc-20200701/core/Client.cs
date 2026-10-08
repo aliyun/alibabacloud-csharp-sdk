@@ -3588,12 +3588,12 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>假期工作日检查</para>
+        /// <para>Checks whether the current time is a working hour, considering holidays and special workdays.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// <para>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3639,12 +3639,12 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>假期工作日检查</para>
+        /// <para>Checks whether the current time is a working hour, considering holidays and special workdays.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// <para>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3690,12 +3690,12 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>假期工作日检查</para>
+        /// <para>Checks whether the current time is a working hour, considering holidays and special workdays.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// <para>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3713,12 +3713,12 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>假期工作日检查</para>
+        /// <para>Checks whether the current time is a working hour, considering holidays and special workdays.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// <para>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21012,7 +21012,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
+        /// <para>Retrieves historical data reports for one or more skill groups in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21053,6 +21053,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummarizeByInstanceId))
+            {
+                query["SummarizeByInstanceId"] = request.SummarizeByInstanceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupIdList))
             {
@@ -21080,7 +21084,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
+        /// <para>Retrieves historical data reports for one or more skill groups in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21121,6 +21125,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummarizeByInstanceId))
+            {
+                query["SummarizeByInstanceId"] = request.SummarizeByInstanceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupIdList))
             {
@@ -21148,7 +21156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
+        /// <para>Retrieves historical data reports for one or more skill groups in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21166,7 +21174,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
+        /// <para>Retrieves historical data reports for one or more skill groups in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

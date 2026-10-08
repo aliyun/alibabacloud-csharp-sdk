@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CheckBusinessHoursResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the current time is a working hour.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,14 +40,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>678F7002-CA01-4ABF-A112-585AFBDF3A3B</para>
         /// </summary>

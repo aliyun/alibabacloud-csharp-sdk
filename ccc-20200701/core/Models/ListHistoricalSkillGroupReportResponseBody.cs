@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListHistoricalSkillGroupReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListHistoricalSkillGroupReportResponseBodyData Data { get; set; }
         public class ListHistoricalSkillGroupReportResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of historical data for skill groups.</para>
+            /// <para>The list of historical data for the skill group.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListHistoricalSkillGroupReportResponseBodyDataList> List { get; set; }
             public class ListHistoricalSkillGroupReportResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>Back-to-back metric.</para>
+                /// <para>The back-to-back call metrics.</para>
                 /// </summary>
                 [NameInMap("Back2Back")]
                 [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back Back2Back { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListBack2Back : TeaModel {
                     /// <summary>
-                    /// <para>Agent acknowledgement rate.</para>
+                    /// <para>The agent answer rate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AgentHandleRate { get; set; }
 
                     /// <summary>
-                    /// <para>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because acknowledgement events and answer events may fall into different time ranges, the result may exceed 100% in certain cases.)</para>
+                    /// <para>The answer rate. Calculation formula: CallsAnswered/CallsDialed. The result may exceed 100% in some cases because answer events and response events may fall into different time ranges.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.6</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AnswerRate { get; set; }
 
                     /// <summary>
-                    /// <para>Average customer-side ring time, in seconds.</para>
+                    /// <para>The average ring time on the customer side, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageCustomerRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average ring time, in seconds.</para>
+                    /// <para>The average ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average talk time, in seconds.</para>
+                    /// <para>The average talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Number of answered calls.</para>
+                    /// <para>The number of answered calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAnswered { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls answered by the customer.</para>
+                    /// <para>The number of calls answered by customers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsCustomerAnswered { get; set; }
 
                     /// <summary>
-                    /// <para>Number of dial-up calls.</para>
+                    /// <para>The number of dialed calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsDialed { get; set; }
 
                     /// <summary>
-                    /// <para>Customer answer rate.</para>
+                    /// <para>The customer answer rate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.8</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? CustomerAnswerRate { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum Customer-side ring time, in seconds.</para>
+                    /// <para>The maximum ring time on the customer side, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxCustomerRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum ring time, in seconds.</para>
+                    /// <para>The maximum ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum talk time, in seconds.</para>
+                    /// <para>The maximum talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total Customer-side ring time, in seconds.</para>
+                    /// <para>The total ring time on the customer side, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalCustomerRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total ring time, in seconds.</para>
+                    /// <para>The total ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total talk time, in seconds.</para>
+                    /// <para>The total talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -193,14 +193,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>Inbound metrics.</para>
+                /// <para>The inbound call metrics.</para>
                 /// </summary>
                 [NameInMap("Inbound")]
                 [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListInbound Inbound { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListInbound : TeaModel {
                     /// <summary>
-                    /// <para>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (Because abandonment events and assignment events may fall into different time ranges, the result may exceed 100% in certain cases).</para>
+                    /// <para>The abandon rate. Calculation formula: CallsAbandoned/CallsOffered. The result may exceed 100% in some cases because abandon events and allocation events may fall into different time ranges.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AbandonRate { get; set; }
 
                     /// <summary>
-                    /// <para>Statistics for each channel.</para>
+                    /// <para>The statistical data for each channel.</para>
                     /// </summary>
                     [NameInMap("AccessChannelTypeDetails")]
                     [Validation(Required=false)]
                     public List<ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails> AccessChannelTypeDetails { get; set; }
                     public class ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails : TeaModel {
                         /// <summary>
-                        /// <para>Channel Type.</para>
+                        /// <para>The channel type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Web</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                         public string AccessChannelType { get; set; }
 
                         /// <summary>
-                        /// <para>Quantity of assigned sessions.</para>
+                        /// <para>The number of offered sessions.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     }
 
                     /// <summary>
-                    /// <para>Average abandonment duration, in seconds. Calculation Formula: TotalAbandonTime / CallsAbandoned.</para>
+                    /// <para>The average abandon time, in seconds. Calculation formula: TotalAbandonTime/CallsAbandoned.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageAbandonTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average queue abandonment duration, in seconds. Calculation Formula: TotalAbandonedInQueueTime / CallsAbandonedInQueue.</para>
+                    /// <para>The average abandon time in queue, in seconds. Calculation formula: TotalAbandonedInQueueTime/CallsAbandonedInQueue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageAbandonedInQueueTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average ringing abandonment duration, in seconds. Calculation Formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</para>
+                    /// <para>The average abandon time during ringing, in seconds. Calculation formula: TotalAbandonedInRingTime/CallsAbandonedInRing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageAbandonedInRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average first response time for chat sessions, in seconds.</para>
+                    /// <para>The average first response time for chat sessions, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageFirstResponseTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</para>
+                    /// <para>The average hold time, in seconds. Calculation formula: TotalHoldTime/CallsHold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average response time for chat sessions.</para>
+                    /// <para>The average response time for chat sessions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageResponseTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</para>
+                    /// <para>The average ring time, in seconds. Calculation formula: TotalRingTime/CallsRinged.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</para>
+                    /// <para>The average talk time, in seconds. Calculation formula: TotalTalkTime/CallsHandled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>64</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average wait time, which is the average duration a caller waits before an agent answers the call. Calculation Formula: TotalWaitTime / CallsHandled.</para>
+                    /// <para>The average wait time, which is the average time a caller waits before an agent answers the call. Calculation formula: TotalWaitTime/CallsHandled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageWaitTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average post-processing duration, in seconds. Calculation Formula: TotalWorkTime / CallsHandled.</para>
+                    /// <para>The average after-call work time, in seconds. Calculation formula: TotalWorkTime/CallsHandled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>13</para>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of abandoned calls. Calculation Formula: CallsAbandonedInQueue + CallsAbandonedInRing.</para>
+                    /// <para>The number of abandoned calls. Calculation formula: CallsAbandonedInQueue + CallsAbandonedInRing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAbandoned { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls abandoned in queue, which refers to the number of calls where the customer hung up after entering the queue but before being answered.</para>
+                    /// <para>The number of calls abandoned in queue, which refers to the number of calls hung up by customers while waiting in the queue after entering it.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAbandonedInQueue { get; set; }
 
                     /// <summary>
-                    /// <para>Ring abandonment count, which is the number of calls where the customer hung up while the agent\&quot;s phone was ringing.</para>
+                    /// <para>The number of calls abandoned during ringing, which refers to the number of calls hung up by customers while the agent is ringing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAbandonedInRing { get; set; }
 
                     /// <summary>
-                    /// <para>Transfer-in volume, which refers to the number of calls transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</para>
+                    /// <para>The number of attended transfers in, which refers to the number of calls transferred to this skill group from other skill groups through attended transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAttendedTransferIn { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of attended transfer-out calls, which refers to the number of calls transferred from this skill group to another skill group via consultation. Transfers between agents within the same skill group are not counted.</para>
+                    /// <para>The number of attended transfers out, which refers to the number of calls transferred from this skill group to other skill groups through attended transfers. Transfers between agents within the same skill group are not counted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAttendedTransferOut { get; set; }
 
                     /// <summary>
-                    /// <para>Number of blind transfer-in calls, which refers to the number of calls directly transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</para>
+                    /// <para>The number of blind transfers in, which refers to the number of calls transferred to this skill group from other skill groups through blind transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsBlindTransferIn { get; set; }
 
                     /// <summary>
-                    /// <para>Number of blind transfer-out calls, which refers to the number of calls directly transferred from this skill group to another skill group. Transfers between agents within the same skill group are not counted.</para>
+                    /// <para>The number of blind transfers out, which refers to the number of calls transferred from this skill group to other skill groups through blind transfers. Transfers between agents within the same skill group are not counted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsBlindTransferOut { get; set; }
 
                     /// <summary>
-                    /// <para>Acknowledgement count, which is the number of times agents answered calls. For a single call that enters a queue multiple times, if it is answered by multiple agents after one queue entry, it is counted as one.</para>
+                    /// <para>The number of handled calls, which refers to the number of times agents answer calls. If a call is answered by multiple agents after entering the queue each time, it is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsHandled { get; set; }
 
                     /// <summary>
-                    /// <para>Hold count, which is the number of times calls were placed on hold. Each time a call enters the queue and experiences multiple holds, it counts as one.</para>
+                    /// <para>The number of held calls, which refers to the number of times calls are put on hold. If a call is put on hold multiple times after entering the queue each time, it is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsHold { get; set; }
 
                     /// <summary>
-                    /// <para>Assigned call volume, which is the number of calls assigned to this skill group, including calls assigned through queues and calls assigned via transfers (consultation transfers and direct transfers). Calculation Formula: CallsQueued + CallsBlindTransferIn + CallsAttendedTransferIn.</para>
+                    /// <para>The number of offered calls, which refers to the number of calls assigned to this skill group, including calls assigned through queues and calls assigned through transfers (attended transfers and blind transfers). Calculation formula: CallsQueued + CallsBlindTransferIn + CallsAttendedTransferIn.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsOffered { get; set; }
 
                     /// <summary>
-                    /// <para>Overflow count, which is the number of calls that experienced queue (skill group) overflow. If a single call enters the same queue multiple times, each overflow is counted separately.</para>
+                    /// <para>The number of overflowed calls, which refers to the number of calls that overflow from the queue or skill group. If a call enters the same queue multiple times and overflows each time, each overflow is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsOverflow { get; set; }
 
                     /// <summary>
-                    /// <para>Number of inbound calls entering a queue (skill group). If a single call enters the same queue multiple times, each entry is counted separately.</para>
+                    /// <para>The number of queued calls in inbound scenarios, which refers to the number of calls that enter the queue or skill group. If a call enters the same queue multiple times, each entry is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsQueued { get; set; }
 
                     /// <summary>
-                    /// <para>Queue Failure Quantity, which is the number of calls where the customer hung up after entering the queue but before being answered.</para>
+                    /// <para>The number of failed queue calls, which refers to the number of calls hung up by customers while waiting in the queue after entering it.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsQueuingFailed { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of calls that overflowed from the queue. Queue overflow refers to calls that overflow while queuing in IVR.</para>
+                    /// <para>The number of calls that overflow from the queue, which refers to calls that overflow while waiting in the IVR queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsQueuingOverflow { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls that timed out during the queuing phase.</para>
+                    /// <para>The number of calls that time out during the queuing phase.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsQueuingTimeout { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls that rang to agents. Each time a call enters the queue and is assigned to multiple agents, resulting in ringing, it counts as one.</para>
+                    /// <para>The number of ringing calls, which refers to the number of calls that trigger agent ringing. If a call is assigned to multiple agents and triggers ringing after entering the queue each time, it is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsRinged { get; set; }
 
                     /// <summary>
-                    /// <para>Timeout count, which is the number of calls that experienced queue (skill group) timeout. If a single call enters the same queue multiple times, each timeout is counted separately.</para>
+                    /// <para>The number of timed-out calls, which refers to the number of calls that time out in the queue or skill group. If a call enters the same queue multiple times and times out each time, each timeout is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsTimeout { get; set; }
 
                     /// <summary>
-                    /// <para>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different time ranges, the result may exceed 100% in certain cases).</para>
+                    /// <para>The handle rate. Calculation formula: CallsHandled/CallsOffered. The result may exceed 100% in some cases because handle events and offer events may fall into different time ranges.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? HandleRate { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum abandonment duration, in seconds.</para>
+                    /// <para>The maximum abandon time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -529,7 +529,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxAbandonTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum queue abandonment duration, in seconds.</para>
+                    /// <para>The maximum abandon time in queue, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxAbandonedInQueueTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum ring abandonment duration, in seconds.</para>
+                    /// <para>The maximum abandon time during ringing, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -549,7 +549,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxAbandonedInRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum call hold time, in seconds.</para>
+                    /// <para>The maximum hold time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum ring duration, in seconds.</para>
+                    /// <para>The maximum ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -569,7 +569,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum talk duration, in seconds.</para>
+                    /// <para>The maximum talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum wait time, in seconds.</para>
+                    /// <para>The maximum wait time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>13</para>
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxWaitTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum post-processing duration, in seconds.</para>
+                    /// <para>The maximum after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction index, which is the average of the satisfaction keypress digits (single-digit numbers).</para>
+                    /// <para>The satisfaction index, which is the average value of the satisfaction rating digits.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -609,7 +609,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionIndex { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction rate. Calculation Formula: Count of evaluations marked as satisfied / Count of satisfaction survey responses.</para>
+                    /// <para>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionRate { get; set; }
 
                     /// <summary>
-                    /// <para>Sending Count of satisfaction surveys.</para>
+                    /// <para>The number of satisfaction surveys offered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -629,7 +629,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysOffered { get; set; }
 
                     /// <summary>
-                    /// <para>Count of satisfaction survey responses.</para>
+                    /// <para>The number of satisfaction surveys responded to.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -639,7 +639,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysResponded { get; set; }
 
                     /// <summary>
-                    /// <para>Service level within 15 seconds.</para>
+                    /// <para>The 15-second service level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.7</para>
@@ -649,7 +649,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? ServiceLevel15 { get; set; }
 
                     /// <summary>
-                    /// <para>Service level within 20 seconds: number of calls with wait time less than or equal to 20 seconds divided by CallsQueued.</para>
+                    /// <para>The 20-second service level. Calculation formula: Number of calls with a wait time of less than or equal to 20 seconds / CallsQueued.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -659,7 +659,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? ServiceLevel20 { get; set; }
 
                     /// <summary>
-                    /// <para>Service level within 30 seconds.</para>
+                    /// <para>The 30-second service level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.9</para>
@@ -669,7 +669,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? ServiceLevel30 { get; set; }
 
                     /// <summary>
-                    /// <para>Total abandonment duration, in seconds.</para>
+                    /// <para>The total abandon time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalAbandonTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total queue abandonment duration, in seconds.</para>
+                    /// <para>The total abandon time in queue, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -689,7 +689,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalAbandonedInQueueTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total ring abandonment duration, in seconds.</para>
+                    /// <para>The total abandon time during ringing, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -699,7 +699,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalAbandonedInRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total call hold duration, in seconds.</para>
+                    /// <para>The total hold time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -709,7 +709,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total number of messages sent in chat sessions.</para>
+                    /// <para>The total number of messages sent in chat sessions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalMessagesSent { get; set; }
 
                     /// <summary>
-                    /// <para>Total number of messages sent by agents in chat sessions.</para>
+                    /// <para>The total number of messages sent by agents in chat sessions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9</para>
@@ -729,7 +729,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalMessagesSentByAgent { get; set; }
 
                     /// <summary>
-                    /// <para>Total number of messages sent by the customer in chat sessions.</para>
+                    /// <para>The total number of messages sent by customers in chat sessions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -739,7 +739,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalMessagesSentByCustomer { get; set; }
 
                     /// <summary>
-                    /// <para>Total ringing duration, in seconds.</para>
+                    /// <para>The total ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>32</para>
@@ -749,7 +749,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total talk time, in seconds.</para>
+                    /// <para>The total talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>447</para>
@@ -759,7 +759,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total waiting duration, in seconds.</para>
+                    /// <para>The total wait time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>34</para>
@@ -769,7 +769,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWaitTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total post-processing time, in seconds.</para>
+                    /// <para>The total after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>85</para>
@@ -781,14 +781,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>Outbound metrics.</para>
+                /// <para>The outbound metrics.</para>
                 /// </summary>
                 [NameInMap("Outbound")]
                 [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListOutbound Outbound { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListOutbound : TeaModel {
                     /// <summary>
-                    /// <para>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because the call answering event and the acknowledgement event may fall into different time ranges, the result may exceed 100% in certain cases.)</para>
+                    /// <para>The answer rate. Calculation formula: CallsAnswered/CallsDialed. The result may exceed 100% in some cases because answer events and response events may fall into different time ranges.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -798,7 +798,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AnswerRate { get; set; }
 
                     /// <summary>
-                    /// <para>Average dial-up duration, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</para>
+                    /// <para>The average dialing time in seconds. Formula: TotalDialingTime/CallsDialed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>37</para>
@@ -808,7 +808,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageDialingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</para>
+                    /// <para>The average hold time, in seconds. Calculation formula: TotalHoldTime/CallsHold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -818,7 +818,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</para>
+                    /// <para>The average ring time, in seconds. Calculation formula: TotalRingTime/CallsRinged.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -828,7 +828,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</para>
+                    /// <para>The average talk time in seconds. Formula: TotalTalkTime/CallsAnswered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -838,7 +838,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average post-processing duration per call, in seconds. Calculation Formula: TotalWorkTime / CallsDialed</para>
+                    /// <para>The average after-call work time in seconds. Formula: TotalWorkTime/CallsDialed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -848,7 +848,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Number of answered calls.</para>
+                    /// <para>The number of answered calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -858,7 +858,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAnswered { get; set; }
 
                     /// <summary>
-                    /// <para>Transfer-in volume for consultation, which refers to the number of calls transferred to this skill group from other skill groups for consultation. Transfers between agents within the same skill group are not counted. If an agent joins multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</para>
+                    /// <para>The number of attended transfers in, which refers to the number of calls transferred to this skill group from other skill groups through attended transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -868,7 +868,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAttendedTransferIn { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of attended transfer-out calls, which refers to the number of calls transferred from this skill group to another skill group for consultation. Transfers between agents within the same skill group are not counted.</para>
+                    /// <para>The number of attended transfers out, which refers to the number of calls transferred from this skill group to other skill groups through attended transfers. Transfers between agents within the same skill group are not counted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -878,7 +878,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsAttendedTransferOut { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of direct transfer-in calls, which refers to the number of calls directly transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</para>
+                    /// <para>The number of blind transfers in, which refers to the number of calls transferred to this skill group from other skill groups through blind transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -888,7 +888,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsBlindTransferIn { get; set; }
 
                     /// <summary>
-                    /// <para>Quantity of direct transfer-out calls, which refers to the number of calls directly transferred from this skill group to other skill groups. Transfers between agents within the same skill group are not counted.</para>
+                    /// <para>The number of blind transfers out, which refers to the number of calls transferred from this skill group to other skill groups through blind transfers. Transfers between agents within the same skill group are not counted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -898,7 +898,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsBlindTransferOut { get; set; }
 
                     /// <summary>
-                    /// <para>Number of dialed calls.</para>
+                    /// <para>The number of dialed calls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6</para>
@@ -908,7 +908,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsDialed { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls placed on hold. If a call is placed on hold multiple times before being transfer-out from the current skill group, it counts as one occurrence.</para>
+                    /// <para>The number of calls placed on hold. If a call is placed on hold multiple times before being transferred out of the current skill group, it is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -918,7 +918,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsHold { get; set; }
 
                     /// <summary>
-                    /// <para>Number of calls that rang to agents. Each time a call enters the queue and is assigned to multiple agents, resulting in ringing, it counts as one occurrence.</para>
+                    /// <para>The number of ringing calls, which refers to the number of calls that trigger agent ringing. If a call is assigned to multiple agents and triggers ringing after entering the queue each time, it is counted as one.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -928,7 +928,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? CallsRinged { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum dialing time, in seconds.</para>
+                    /// <para>The maximum dialing time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxDialingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum hold time during calls, in seconds.</para>
+                    /// <para>The maximum hold time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -948,7 +948,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum ring duration, in seconds.</para>
+                    /// <para>The maximum ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -958,7 +958,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum talk time, in seconds.</para>
+                    /// <para>The maximum talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -968,7 +968,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum post-processing duration per call, in seconds.</para>
+                    /// <para>The maximum after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -978,7 +978,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</para>
+                    /// <para>The satisfaction index, which is the average value of the satisfaction rating digits.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -988,7 +988,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionIndex { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction rate. Calculation Formula: Quantity of evaluations marked as satisfied divided by the Count of satisfaction survey responses.</para>
+                    /// <para>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionRate { get; set; }
 
                     /// <summary>
-                    /// <para>Sending Count of satisfaction surveys.</para>
+                    /// <para>The number of satisfaction surveys offered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1008,7 +1008,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysOffered { get; set; }
 
                     /// <summary>
-                    /// <para>Response Count of satisfaction surveys.</para>
+                    /// <para>The number of satisfaction surveys responded to.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1018,7 +1018,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysResponded { get; set; }
 
                     /// <summary>
-                    /// <para>Total dial-up duration, in seconds.</para>
+                    /// <para>The total dialing time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>218</para>
@@ -1028,7 +1028,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalDialingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total call hold duration, in seconds.</para>
+                    /// <para>The total hold time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1038,7 +1038,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total ring duration, in seconds.</para>
+                    /// <para>The total ring time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1048,7 +1048,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalRingTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total talk time, in seconds.</para>
+                    /// <para>The total talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -1058,7 +1058,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total post-processing duration, in seconds.</para>
+                    /// <para>The total after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9</para>
@@ -1070,14 +1070,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>Overall metrics.</para>
+                /// <para>The overall metrics.</para>
                 /// </summary>
                 [NameInMap("Overall")]
                 [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListOverall Overall { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListOverall : TeaModel {
                     /// <summary>
-                    /// <para>Average break duration, in seconds. Calculation Formula: TotalBreakTime / Break Count. Break Count is a non-API statistical field.</para>
+                    /// <para>The average break time in seconds. Formula: TotalBreakTime/Number of breaks. The number of breaks is not a statistical field returned by the API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1087,7 +1087,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageBreakTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / (Inbound CallsHold + Outbound CallsHold).</para>
+                    /// <para>The average hold time in seconds. Formula: TotalHoldTime/(Inbound CallsHold + Outbound CallsHold).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1097,7 +1097,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average ready time, in seconds. Calculation Formula: TotalReadyTime / Count of ready events. The count of ready events is not an API statistics field.</para>
+                    /// <para>The average ready time in seconds. Formula: TotalReadyTime/Number of ready states. The number of ready states is not a statistical field returned by the API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1107,7 +1107,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageReadyTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average talk time, in seconds. Calculation formula: TotalTalkTime / (CallsAnswered + CallsHandled).</para>
+                    /// <para>The average talk time in seconds. Formula: TotalTalkTime/(CallsAnswered + CallsHandled).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1117,7 +1117,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Average post-processing time, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</para>
+                    /// <para>The average after-call work time in seconds. Formula: TotalWorkTime/TotalCalls.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -1127,24 +1127,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? AverageWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>List of break details.</para>
+                    /// <para>The list of break details.</para>
                     /// </summary>
                     [NameInMap("BreakCodeDetailList")]
                     [Validation(Required=false)]
                     public List<ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList> BreakCodeDetailList { get; set; }
                     public class ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList : TeaModel {
                         /// <summary>
-                        /// <para>Break type code.</para>
+                        /// <para>The break type code.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>会议</para>
+                        /// <para>Meeting</para>
                         /// </summary>
                         [NameInMap("BreakCode")]
                         [Validation(Required=false)]
                         public string BreakCode { get; set; }
 
                         /// <summary>
-                        /// <para>Number of occurrences of this break type.</para>
+                        /// <para>The number of occurrences of this break type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -1154,7 +1154,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                         public long? Count { get; set; }
 
                         /// <summary>
-                        /// <para>Total duration of this break type, in seconds.</para>
+                        /// <para>The total duration of this break type in seconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3600</para>
@@ -1166,7 +1166,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     }
 
                     /// <summary>
-                    /// <para>Maximum break duration, in seconds.</para>
+                    /// <para>The maximum break time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -1176,7 +1176,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxBreakTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum call hold duration, in seconds.</para>
+                    /// <para>The maximum hold time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1186,7 +1186,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum ready time, in seconds.</para>
+                    /// <para>The maximum ready time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>19328</para>
@@ -1196,7 +1196,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxReadyTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum talk time, in seconds.</para>
+                    /// <para>The maximum talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1206,7 +1206,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Maximum post-processing duration, in seconds.</para>
+                    /// <para>The maximum after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -1216,7 +1216,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? MaxWorkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Agent occupancy rate. Calculation formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</para>
+                    /// <para>The agent occupancy rate. Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.02332222293912065</para>
@@ -1226,7 +1226,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? OccupancyRate { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</para>
+                    /// <para>The satisfaction index, which is the average value of the satisfaction rating digits.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1236,7 +1236,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionIndex { get; set; }
 
                     /// <summary>
-                    /// <para>Satisfaction rate. Calculation Formula: Number of responses marked as satisfied / Count of satisfaction survey responses.</para>
+                    /// <para>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1246,7 +1246,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public float? SatisfactionRate { get; set; }
 
                     /// <summary>
-                    /// <para>Sending Count of satisfaction surveys.</para>
+                    /// <para>The number of satisfaction surveys offered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1256,7 +1256,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysOffered { get; set; }
 
                     /// <summary>
-                    /// <para>Count of satisfaction survey responses.</para>
+                    /// <para>The number of satisfaction surveys responded to.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1266,7 +1266,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? SatisfactionSurveysResponded { get; set; }
 
                     /// <summary>
-                    /// <para>Total break time, in seconds.</para>
+                    /// <para>The total break time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -1276,7 +1276,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalBreakTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</para>
+                    /// <para>The total number of calls. Formula: CallsOffered + CallsDialed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>13</para>
@@ -1286,7 +1286,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalCalls { get; set; }
 
                     /// <summary>
-                    /// <para>Total hold duration, in seconds.</para>
+                    /// <para>The total hold time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1296,7 +1296,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalHoldTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total logon time, in seconds.<br><em>Note: Excludes offline and short break durations.</em></para>
+                    /// <para>The total logged-in time in seconds.
+                    /// <em>Note: Excludes offline and break time.</em></para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>23218</para>
@@ -1306,7 +1307,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalLoggedInTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total ready time, in seconds.</para>
+                    /// <para>The total ready time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>22428</para>
@@ -1316,7 +1317,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalReadyTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total talk time, in seconds.</para>
+                    /// <para>The total talk time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>449</para>
@@ -1326,7 +1327,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalTalkTime { get; set; }
 
                     /// <summary>
-                    /// <para>Total post-processing duration, in seconds.</para>
+                    /// <para>The total after-call work time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>94</para>
@@ -1338,7 +1339,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>Skill group ID.</para>
+                /// <para>The skill group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup@ccc-test</para>
@@ -1348,7 +1349,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string SkillGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Skill group name.</para>
+                /// <para>The skill group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup</para>
@@ -1360,7 +1361,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>Page number, ranging from 1 to 100.</para>
+            /// <para>The page number. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1370,7 +1371,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Page size, ranging from 1 to 100.</para>
+            /// <para>The number of entries per page. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -1380,7 +1381,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -1392,7 +1393,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -1402,17 +1403,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</para>

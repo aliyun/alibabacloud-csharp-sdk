@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CheckBusinessHoursRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The 13-digit timestamp. If this parameter is not specified, the current time is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1789526665860</para>
         /// </summary>

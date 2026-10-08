@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListHistoricalSkillGroupReportRequest : TeaModel {
         /// <summary>
-        /// <para>End time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses an open interval. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned input time range becomes [11:00:00, 12:00:00), meaning greater than or equal to 11:00:00 and less than 12:00:00.</para>
+        /// <para>The end time of the historical data to retrieve. Specify a UNIX timestamp in milliseconds. This parameter is optional. Default value: the current time. The statistical time precision is in hours. The end time is rounded up to the nearest hour, and the interval is open. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned time range is [11:00:00, 12:00:00), which means greater than or equal to 11:00:00 and less than 12:00:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1532707199000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Media type. The default value is Audio. Other valid values include Chat and Video.</para>
+        /// <para>The media type. Default value: Audio. Valid values: Audio, Chat, and Video.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VIDEO</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>Page number, ranging from 1 to 100.</para>
+        /// <para>The page number. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, ranging from 1 to 100.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>List of skill group IDs to query, provided as a JSON array string. Each array element is a skill group ID. This parameter is optional. The default value is empty, which means all skill groups in the current page are queried.</para>
+        /// <para>The list of skill group IDs to query. The value is a character string in the JSON array format, where each array element is a skill group ID. This parameter is optional. Default value: empty. An empty value indicates that all skill groups in the current paging are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test2&quot;]</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupIdList { get; set; }
 
         /// <summary>
-        /// <para>Start time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is 00:00:00 of the current day. The earliest allowed value is 180 days before the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses a closed interval.</para>
+        /// <para>The start time of the historical data to retrieve. Specify a UNIX timestamp in milliseconds. This parameter is optional. Default value: 00:00:00 on the current day. The earliest allowed time is 180 days before the current time. The statistical time precision is in hours. The start time is rounded down to the nearest hour, and the interval is closed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1532448000000</para>
@@ -81,6 +81,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to aggregate data by instance ID.</para>
+        /// </summary>
+        [NameInMap("SummarizeByInstanceId")]
+        [Validation(Required=false)]
+        public bool? SummarizeByInstanceId { get; set; }
 
     }
 
