@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableFwSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information list of assets that are not synchronized.</para>
+        /// <para>The status information list for assets that are not synchronized.</para>
         /// </summary>
         [NameInMap("AbnormalResourceStatusList")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The message when the asset is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloudfirewall do not sync this ip address: Cloud Firewall has not synchronized this asset IP address.</description></item>
+            /// <item><description>cloudfirewall do not sync this ip address: Cloud Firewall did not synchronize this asset IP address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The status of the asset that is not synchronized. Valid values:</para>
+            /// <para>The status when the asset is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ip_not_sync: The asset is not synchronized.</description></item>
+            /// <item><description>ip_not_sync: the asset is not synchronized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>Indicates that this is a successful dry run response. A value of true indicates that only the dry run was completed and no real changes were made. This field is not returned or is set to false for real calls.</para>
+        /// <para>Indicates whether this response is a dry run success response. A value of true indicates that only the dry run was completed and no actual changes were made. This field is not returned or is set to false for actual calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

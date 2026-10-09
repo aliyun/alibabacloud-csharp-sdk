@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The VPC instance ID used to create a VPC firewall.</para>
+        /// <para>The ID of the VPC for which the virtual private cloud (VPC) firewall is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zefk9fbn8j7v585g****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID of the VPC firewall.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID of the virtual private cloud (VPC) firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

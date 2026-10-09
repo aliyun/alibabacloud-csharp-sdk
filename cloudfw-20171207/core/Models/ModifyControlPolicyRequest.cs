@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The action that the access control policy performs on the traffic that passes through the firewall. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>accept</b>: allows access.</description></item>
-        /// <item><description><b>drop</b>: deny access.</description></item>
+        /// <item><description><b>drop</b>: deny.</description></item>
         /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The application type supported by the access control policy. Valid values:</para>
+        /// <para>The application type supported by the access control policy. The following application types are supported:</para>
         /// <list type="bullet">
         /// <item><description><b>ANY</b></description></item>
         /// <item><description><b>HTTP</b></description></item>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>If <b>DestinationType</b> is set to net, <b>Destination</b> is a destination CIDR block. Example: 1.2.XX.XX/24.</description></item>
         /// <item><description>If <b>DestinationType</b> is set to group, <b>Destination</b> is a destination address book name. Example: db_group.</description></item>
         /// <item><description>If <b>DestinationType</b> is set to domain, <b>Destination</b> is a destination domain name. Example: *.aliyuncs.com.</description></item>
-        /// <item><description>If <b>DestinationType</b> is set to location, <b>Destination</b> is a destination area. For specific area positional encoding, see the subsequent sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to location, <b>Destination</b> is a destination area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,8 +172,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The traffic direction of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound traffic access control</description></item>
-        /// <item><description><b>out</b>: outbound traffic access control</description></item>
+        /// <item><description><b>in</b>: inbound traffic</description></item>
+        /// <item><description><b>out</b>: outbound traffic</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The end time of the Policy Validity Period for the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes later than the start time. Settings for the access control policy validity period.</para>
+        /// <para>The end time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes later than the start time. Settings for the end time.</para>
         /// <remarks>
         /// <para>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</para>
         /// </remarks>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The security protocol type in the access control policy. Valid values:</para>
+        /// <para>The security protocol type in the access control policy. The following protocol types are supported:</para>
         /// <list type="bullet">
         /// <item><description><b>ANY</b></description></item>
         /// <item><description><b>TCP</b></description></item>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para><b>ANY</b> indicates that the policy applies to all protocol types.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, you can configure only the TCP or ANY protocol. If you select TCP, the application can be HTTP, HTTPS, SMTP, SMTPS, or SSL. If you select ANY, the application can only be ANY.</para>
+        /// <para>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, you can set the protocol to TCP or ANY. If you select TCP, the application can be set to HTTP, HTTPS, SMTP, SMTPS, or SSL. If you select ANY, the application can only be set to ANY.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The enabling status of the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The policy is enabled.</description></item>
-        /// <item><description>false: The policy is in shutdown state.</description></item>
+        /// <item><description>false: The policy is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -269,16 +269,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The days of a week or of a month on which the access control policy takes effect. Settings for the Policy Validity Period recurrence days.</para>
+        /// <para>The days of a week or of a month on which the access control policy takes effect. Settings for the Policy Validity Period.</para>
         /// <list type="bullet">
-        /// <item><description>If RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty collection.
+        /// <item><description>If RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty array.
         /// Example: []</description></item>
-        /// <item><description>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+        /// <item><description>If RepeatType is set to Weekly, RepeatDays must not be empty.
         /// Example: [0, 6]<remarks>
         /// <para>If RepeatType is set to Weekly, the values in RepeatDays cannot be repeated.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>If RepeatType is set to <c>Monthly</c>, RepeatDays cannot be empty.
+        /// <item><description>If RepeatType is set to <c>Monthly</c>, RepeatDays must not be empty.
         /// Example: [1, 31]<remarks>
         /// <para>If RepeatType is set to Monthly, the values in RepeatDays cannot be repeated.</para>
         /// </remarks>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <list type="bullet">
         /// <item><description>If <b>SourceType</b> is set to net, <b>Source</b> is a source CIDR block. Example: 1.2.XX.XX/24.</description></item>
         /// <item><description>If <b>SourceType</b> is set to group, <b>Source</b> is a source address book name. Example: db_group.</description></item>
-        /// <item><description>If <b>SourceType</b> is set to location, <b>Source</b> is a source area. For specific area positional encoding, see the subsequent sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
+        /// <item><description>If <b>SourceType</b> is set to location, <b>Source</b> is a source area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the Policy Validity Period for the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time. Settings for the access control policy validity period.</para>
+        /// <para>The start time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time. Settings for the start time.</para>
         /// <remarks>
         /// <para>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</para>
         /// </remarks>

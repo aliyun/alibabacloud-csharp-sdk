@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The deployment mode of the firewall service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrimaryStandby: active/standby mode</description></item>
-        /// <item><description>MultiPrimary: active-active mode</description></item>
+        /// <item><description><b>PrimaryStandby</b>: primary/standby mode.</description></item>
+        /// <item><description><b>MultiPrimary</b>: active-active mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: enabled</description></item>
-        /// <item><description><b>close</b>: disabled</description></item>
+        /// <item><description><b>open</b>: Enabled.</description></item>
+        /// <item><description><b>close</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FwVswitchZoneId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationCidr { get; set; }
 
             /// <summary>
-            /// <para>The next hop address of the original NAT gateway.</para>
+            /// <para>The next hop of the original NAT gateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// <para>The network type of the next hop. Valid values: NatGateway.</para>
+            /// <para>The network type of the next hop. Valid value: NatGateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The route table that contains the default route of the NAT gateway.</para>
+            /// <para>The ID of the route table to which the default route of the NAT gateway belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
+        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable strict mode.</para>
+        /// <para>Specifies whether to enable strict mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Enable strict mode.</description></item>
         /// <item><description>0: Disable strict mode.</description></item>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? StrictMode { get; set; }
 
         /// <summary>
-        /// <para>The VPC-connected instance ID.</para>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -184,14 +184,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the automatic vSwitch mode. Valid values:</para>
+        /// <para>Specifies whether to use the automatic mode for the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatic mode</description></item>
-        /// <item><description><b>false</b>: manual mode<remarks>
-        /// <para>The default value of VswitchAuto is true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>true</b>: automatic mode.</description></item>
+        /// <item><description><b>false</b>: manual mode.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Default value: true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VswitchAuto { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the vSwitch. This parameter is required when the vSwitch is in automatic mode.</para>
+        /// <para>The CIDR block of the vSwitch. This parameter is required when the automatic mode is used for the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VswitchCidr { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. This parameter is required when the vSwitch is in manual mode.</para>
+        /// <para>The ID of the vSwitch. This parameter is required when the manual mode is used for the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1sqg9w******</para>

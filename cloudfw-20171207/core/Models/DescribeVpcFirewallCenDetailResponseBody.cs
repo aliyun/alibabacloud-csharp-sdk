@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallCenDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The connectivity type of the virtual private cloud (VPC) firewall. Valid values: <b>cen</b>, which indicates Cloud Enterprise Network.</para>
+        /// <para>The connection type of the virtual private cloud (VPC) firewall. Valid values: <b>cen</b>, which indicates CEN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen</para>
@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectType { get; set; }
 
         /// <summary>
-        /// <para>The switch status of the virtual private cloud (VPC) firewall. Valid values:</para>
+        /// <para>The status of the virtual private cloud (VPC) firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>opened</b>: Enabled.</para>
+        /// <item><description><para><b>opened</b>: enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>closed</b>: Shutdown.</para>
+        /// <item><description><para><b>closed</b>: shutdown.</para>
         /// </description></item>
-        /// <item><description><para><b>notconfigured</b>: Not configured.</para>
+        /// <item><description><para><b>notconfigured</b>: not configured.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AllowConfiguration { get; set; }
 
             /// <summary>
-            /// <para>The deployment mode of the VPC firewall service. Valid values: <b>PrimaryStandby</b> (active/standby mode) and <b>MultiPrimary</b> (active-active mode).</para>
+            /// <para>The deployment mode of the VPC firewall service. Valid values: <b>PrimaryStandby</b> (primary/standby mode) and <b>MultiPrimary</b> (active-active mode).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrimaryStandby</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string FirewallServiceMode { get; set; }
 
             /// <summary>
-            /// <para>The zone IDs used by the VPC firewall service.</para>
+            /// <para>The list of zone IDs used by the VPC firewall service.</para>
             /// </summary>
             [NameInMap("FirewallServiceZones")]
             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The VPC details.</para>
+        /// <para>The details of the VPC.</para>
         /// </summary>
         [NameInMap("LocalVpc")]
         [Validation(Required=false)]
@@ -181,21 +181,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks protected by the virtual private cloud (VPC) firewall.</para>
+            /// <para>The list of CIDR blocks protected by the virtual private cloud (VPC) firewall.</para>
             /// </summary>
             [NameInMap("DefendCidrList")]
             [Validation(Required=false)]
             public List<string> DefendCidrList { get; set; }
 
             /// <summary>
-            /// <para>The network interface controller (NIC) list.</para>
+            /// <para>The list of elastic network interfaces (ENIs).</para>
             /// </summary>
             [NameInMap("EniList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList> EniList { get; set; }
             public class DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</para>
+                /// <para>The instance ID of the elastic network interface (ENI) in the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-8vbhfosfqv2rff42****</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// <para>The private IP of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</para>
+                /// <para>The private IP address of the elastic network interface (ENI) in the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.XX.XX</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EniPrivateIpAddress { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch ID of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</para>
+                /// <para>The vSwitch ID of the elastic network interface (ENI) in the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-wz9viido7j436b0n1****</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EniVSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID where the elastic network interface (ENI) that serves as the network interface controller (NIC) is active.</para>
+                /// <para>The zone ID of the elastic network interface (ENI).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The ID of the vSwitch specified when the routing mode is manual.</para>
+            /// <para>The ID of the vSwitch specified when the routing mode is set to manual.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-zeq4o875u****</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ManualVSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC instance ID used to create a VPC firewall.</para>
+            /// <para>The ID of the VPC for which the virtual private cloud (VPC) firewall is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zefk9fbn8j7v585g****</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RouteMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the routing mode supports manual mode. Valid values:</para>
+            /// <para>Indicates whether manual routing mode is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Supported.</description></item>
             /// <item><description><b>0</b>: Not supported.</description></item>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SupportManualMode { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the CEN-TR.</para>
+            /// <para>The instance ID of the CEN transit router (CEN-TR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-2zetwxskej633l3u1****</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// <para>The version of the CEN transit router (CEN-TR). Valid values:</para>
+            /// <para>The edition of the CEN transit router (CEN-TR). Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>Basic</b>: Basic Edition.</para>
             /// </description></item>

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the virtual private cloud (VPC) firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>open</b>: enabled.</para>
+        /// <item><description><para><b>open</b>: Enable.</para>
         /// </description></item>
-        /// <item><description><para><b>close</b>: disabled.</para>
+        /// <item><description><para><b>close</b>: Disable.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

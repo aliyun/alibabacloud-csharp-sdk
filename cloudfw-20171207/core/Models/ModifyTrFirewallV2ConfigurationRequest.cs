@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2ConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the VPC firewall. You can call DescribeTrFirewallsV2List to obtain the ID.</para>
         /// <remarks>
-        /// <para>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</para>
+        /// <para>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance name of the VPC firewall.</para>
         /// <remarks>
-        /// <para>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned.</para>
+        /// <para>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

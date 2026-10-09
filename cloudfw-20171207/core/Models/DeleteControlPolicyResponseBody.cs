@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteControlPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the response is for a successful dry run. A value of true indicates that only the precheck is completed and no actual changes are made. This field is not returned or is set to false for actual calls.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

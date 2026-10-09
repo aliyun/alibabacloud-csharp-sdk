@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether this is a successful dry run response. A value of true indicates that only the dry run was completed and no actual modification was performed.</para>
+        /// <para>Indicates whether the request is a dry run. A value of true indicates that only a dry run was performed and no actual modification was made.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

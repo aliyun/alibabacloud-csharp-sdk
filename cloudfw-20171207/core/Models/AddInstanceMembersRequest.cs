@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<AddInstanceMembersRequestMembers> Members { get; set; }
         public class AddInstanceMembersRequestMembers : TeaModel {
             /// <summary>
-            /// <para>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length. You can add up to 20 member accounts.</para>
+            /// <para>The remarks of the Cloud Firewall member account. The value must be 1 to 256 characters in length. You can add up to 20 member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>renewal</para>
