@@ -8,19 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateSupabaseProjectResponseBody : TeaModel {
+    public class UpdateSupabaseVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The associated order ID.</para>
+        /// <para>The target minor version. You can query the supported upgrade versions for the current project by calling GetSupabaseUpdateVersion.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>278880417310796</para>
+        /// <para>20240731</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("MinorVersion")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string MinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The Supabase instance ID.</para>
+        /// <para>The ID of the Supabase project.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>
@@ -30,14 +31,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

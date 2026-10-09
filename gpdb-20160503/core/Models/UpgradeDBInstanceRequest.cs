@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CacheStorageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,6 +57,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The effective period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b> (default): The change takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Immediate</para>
         /// </summary>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -125,7 +131,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
+        /// <para>The performance level (PL) of the disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>pl0</b>: PL0.</description></item>
         /// <item><description><b>pl1</b>: PL1.</description></item>
@@ -142,9 +148,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The number of segment nodes. The supported number of nodes varies based on the instance resource type and instance edition:</para>
         /// <list type="bullet">
-        /// <item><description>Elastic storage mode, High-availability Edition: Valid values: 4 to 512. The value must be a multiple of 4.</description></item>
-        /// <item><description>Elastic storage mode, &lt;props=&quot;china&quot;&gt;Basic Edition (formerly High-performance Edition)&lt;props=&quot;intl&quot;&gt;High-performance Edition: Valid values: 2 to 512. The value must be a multiple of 2.</description></item>
-        /// <item><description>Serverless manual scheduling mode: Valid values: 2 to 512. The value must be a multiple of 2.</description></item>
+        /// <item><description>Elastic storage mode, high-availability edition: valid values are 4 to 512, in increments of 4.</description></item>
+        /// <item><description>Elastic storage mode, &lt;props=&quot;china&quot;&gt;basic edition (formerly high-performance edition)&lt;props=&quot;intl&quot;&gt;high-performance edition: valid values are 2 to 512, in increments of 2.</description></item>
+        /// <item><description>Serverless manual scheduling mode: valid values are 2 to 512, in increments of 2.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -167,15 +173,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><para>Serverless instances:
-        /// The compute resource threshold. Valid values: 8 to 32. The value must be a multiple of 8. Unit: ACU. Default value: 32.</para>
+        /// The compute resource threshold. Valid values: 8 to 32, in increments of 8. Unit: ACU. Default value: 32.</para>
         /// </description></item>
-        /// <item><description><para>Serverless Pro instances: The reserved compute resources. Valid values: 16 to 1024. Unit: ACU. Default value: 16. The step size varies based on the value range:</para>
+        /// <item><description><para>Serverless Pro instances: The reserved compute resources. Valid values: 16 to 1024. Unit: ACU. Default value: 16. The increment rules are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>16 to 32: step size of 4.</description></item>
-        /// <item><description>32 to 64: step size of 8.</description></item>
-        /// <item><description>64 to 128: step size of 16.</description></item>
-        /// <item><description>128 to 256: step size of 32.</description></item>
-        /// <item><description>Greater than 256: step size of 64.<remarks>
+        /// <item><description>Range 16 to 32: increments of 4.</description></item>
+        /// <item><description>Range 32 to 64: increments of 8.</description></item>
+        /// <item><description>Range 64 to 128: increments of 16.</description></item>
+        /// <item><description>Range 128 to 256: increments of 32.</description></item>
+        /// <item><description>Range greater than 256: increments of 64.<remarks>
         /// <para>This parameter is required only for Serverless automatic scheduling mode and Serverless Pro instances.</para>
         /// </remarks>
         /// </description></item>
@@ -191,7 +197,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServerlessResource { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of segment nodes. Unit: GB. Valid values: 50 to &lt;props=&quot;china&quot;&gt;8000&lt;props=&quot;intl&quot;&gt;6000. The value must be a multiple of 50.</para>
+        /// <para>The storage capacity of segment nodes. Unit: GB. Valid values: 50 to &lt;props=&quot;china&quot;&gt;8000&lt;props=&quot;intl&quot;&gt;6000, in increments of 50.</para>
         /// <remarks>
         /// <para>This parameter is supported only for elastic storage mode instances.</para>
         /// </remarks>

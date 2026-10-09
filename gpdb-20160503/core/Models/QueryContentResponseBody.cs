@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryContentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of tokens used during vectorization.</para>
+        /// <para>The number of tokens used for vectorization.</para>
         /// <remarks>
-        /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+        /// <para>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,8 +167,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The operation is successful.</description></item>
-        /// <item><description><b>fail</b>: The operation failed.</description></item>
+        /// <item><description><b>success</b>: Successful.</description></item>
+        /// <item><description><b>fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,16 +179,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The resource usage of this query.</para>
+        /// <para>The resource usage of the current query.</para>
         /// </summary>
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public QueryContentResponseBodyUsage Usage { get; set; }
         public class QueryContentResponseBodyUsage : TeaModel {
             /// <summary>
-            /// <para>The number of entries used during vectorization.</para>
+            /// <para>The number of entries used for vectorization.</para>
             /// <remarks>
-            /// <para>An entry refers to the number of items processed during vectorization of text or images. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</para>
+            /// <para>An entry refers to the number of items processed when text or images are vectorized. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,9 +199,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string EmbeddingEntries { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used during vectorization.</para>
+            /// <para>The number of tokens used for vectorization.</para>
             /// <remarks>
-            /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+            /// <para>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

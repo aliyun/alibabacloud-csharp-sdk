@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSupabaseProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the initial account.</para>
+        /// <para>The initial account password.</para>
         /// <para>Password rules:</para>
         /// <list type="bullet">
         /// <item><description>The password must be 8 to 32 characters in length.</description></item>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</para>
+        /// <para>Specifies whether to enable auto-start and auto-stop. If you do not specify this parameter, the default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -37,7 +37,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</para>
+        /// <para>The backup set ID.</para>
+        /// <remarks>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/3064623.html">ListSupabaseDataBackups</a> to view the IDs of all backup sets under the target Supabase project.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2176307784</para>
+        /// </summary>
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
+        /// <summary>
+        /// <para>The client token. It is used to ensure idempotence and prevent duplicate requests from executing the same operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -47,7 +60,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the cloud disk. If this parameter is not specified, the default value PL0 is used.</para>
+        /// <para>The optional creation parameters. The default value is empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("CreateOptions")]
+        [Validation(Required=false)]
+        public string CreateOptions { get; set; }
+
+        /// <summary>
+        /// <para>The performance level of the cloud disk. If you do not specify this parameter, the default value is PL0.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0</description></item>
@@ -64,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</para>
+        /// <para>The DPI engine version. If you do not specify this parameter, the default value is PG15. PostgreSQL 17 and later versions support the data sandbox (branch) feature.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PG15: PostgreSQL 15.</description></item>
@@ -78,17 +101,23 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the project is the lightweight edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Lightweight")]
         [Validation(Required=false)]
         public bool? Lightweight { get; set; }
 
         /// <summary>
-        /// <para>The billing type. If this parameter is not specified, the default value Free is used.</para>
+        /// <para>The billing method. If you do not specify this parameter, the default value is Free.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Free: Free tier.</description></item>
-        /// <item><description>Postpaid: Pay-as-you-go.</description></item>
-        /// <item><description>Prepaid: Subscription.</description></item>
+        /// <item><description>Free: the free billing method.</description></item>
+        /// <item><description>Postpaid: pay-as-you-go.</description></item>
+        /// <item><description>Prepaid: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +128,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value Month is used.</para>
+        /// <para>The unit of the subscription duration. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is Month.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Month: month.</description></item>
@@ -118,7 +147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Naming rules:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 1 to 128 characters in length.</description></item>
-        /// <item><description>The name can contain letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name can contain only letters, digits, hyphens (-), and underscores (_).</description></item>
         /// <item><description>The name must start with a letter or an underscore (_).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -131,7 +160,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</para>
+        /// <para>The specifications of the Supabase project. The free billing method uses the free specifications. For paid billing methods, the specifications must be consistent with those available in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +171,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectSpec { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Specifies the region in which to create the project.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -152,7 +181,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If this parameter is not specified, the default value 0.0.0.0/0 is used.</para>
+        /// <para>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If you do not specify this parameter, the default value 0.0.0.0/0 is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,7 +192,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</para>
+        /// <para>The ID of the Supabase project to which the backup set belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spb-xxxxxxxx</para>
+        /// </summary>
+        [NameInMap("SrcProjectId")]
+        [Validation(Required=false)]
+        public string SrcProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The storage capacity. Unit: GB. If you do not specify this parameter for a non-free billing method, the default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -172,14 +211,34 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateSupabaseProjectRequestTags> Tags { get; set; }
         public class CreateSupabaseProjectRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key. Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>It cannot be an empty string.</description></item>
+            /// <item><description>It can be up to 128 characters in length.</description></item>
+            /// <item><description>It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-key</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. The value can be an empty string. It can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-value</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -187,7 +246,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</para>
+        /// <para>The subscription duration of the resource. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -219,7 +278,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</para>
+        /// <para>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

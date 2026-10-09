@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateSupabaseProjectResponseBody : TeaModel {
+    public class GetSupabaseUpdateVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The associated order ID.</para>
+        /// <para>The latest upgradable version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>278880417310796</para>
+        /// <para>20240731</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("LatestVersion")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The Supabase instance ID.</para>
+        /// <para>The ID of the Supabase project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The recommended stable version for upgrade.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20240630</para>
+        /// </summary>
+        [NameInMap("StableVersion")]
+        [Validation(Required=false)]
+        public string StableVersion { get; set; }
 
     }
 
