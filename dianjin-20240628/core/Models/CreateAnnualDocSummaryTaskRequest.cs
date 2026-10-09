@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class CreateAnnualDocSummaryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>List of years to analyze</para>
+        /// <para>The list of analysis years.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("anaYears")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<int?> AnaYears { get; set; }
 
         /// <summary>
-        /// <para>List of document information</para>
+        /// <para>The list of document information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("docInfos")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<CreateAnnualDocSummaryTaskRequestDocInfos> DocInfos { get; set; }
         public class CreateAnnualDocSummaryTaskRequestDocInfos : TeaModel {
             /// <summary>
-            /// <para>Document ID</para>
+            /// <para>The document ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string DocId { get; set; }
 
             /// <summary>
-            /// <para>Document year</para>
+            /// <para>The document year.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public int? DocYear { get; set; }
 
             /// <summary>
-            /// <para>End page number</para>
+            /// <para>The end page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public int? EndPage { get; set; }
 
             /// <summary>
-            /// <para>Document library ID</para>
+            /// <para>The document library ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string LibraryId { get; set; }
 
             /// <summary>
-            /// <para>Start page number</para>
+            /// <para>The start page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
-        /// <para>Enable table extraction. Default is true.</para>
+        /// <para>Specifies whether to enable tables. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? EnableTable { get; set; }
 
         /// <summary>
-        /// <para>Instruction</para>
+        /// <para>The instruction.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你是资深的证券研究员，对xx年上市公司进行业绩分析。根据参考信息从如下方面详细分析：</para>
+        /// <para>You are a senior securities researcher conducting performance analysis on listed companies for the year XX. Based on the reference information, provide a detailed analysis covering the following aspects:</para>
         /// <ol>
-        /// <item><description>整体业绩变化情况，包括营收，利润等详细指标变化情况</description></item>
-        /// <item><description>业绩变化情况具体原因，包括各个业务变化情况
-        /// 严格只输出xx年情况。</description></item>
+        /// <item><description>Overall performance changes, including detailed metrics such as revenue and profit.</description></item>
+        /// <item><description>Specific reasons for performance changes, including changes in each business segment.
+        /// Strictly output only the information for the year XX</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("instruction")]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Instruction { get; set; }
 
         /// <summary>
-        /// <para>Model ID</para>
+        /// <para>The model ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

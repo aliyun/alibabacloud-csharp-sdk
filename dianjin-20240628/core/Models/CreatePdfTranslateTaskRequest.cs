@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class CreatePdfTranslateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Document ID</para>
+        /// <para>The document ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,19 +21,19 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DocId { get; set; }
 
         /// <summary>
-        /// <para>Domain knowledge used as reference during translation</para>
+        /// <para>The domain knowledge referenced during translation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>净利润 (Net Profit)
-        /// 英文：Net Profit
-        /// 中文：净利润（通常指扣除所有费用和税后的利润）</para>
+        /// <para>Net Profit
+        /// English: Net Profit
+        /// Chinese: Net profit (typically refers to the profit after deducting all expenses and taxes)</para>
         /// </summary>
         [NameInMap("knowledge")]
         [Validation(Required=false)]
         public string Knowledge { get; set; }
 
         /// <summary>
-        /// <para>Document library ID</para>
+        /// <para>The document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string LibraryId { get; set; }
 
         /// <summary>
-        /// <para>Model ID</para>
+        /// <para>The model ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ModelId { get; set; }
 
         /// <summary>
-        /// <para>Target language. Default is Chinese</para>
+        /// <para>The target language. Default value: Chinese.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中文</para>
+        /// <para>Chinese</para>
         /// </summary>
         [NameInMap("translateTo")]
         [Validation(Required=false)]

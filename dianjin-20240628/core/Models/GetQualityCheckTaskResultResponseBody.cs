@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetQualityCheckTaskResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Processing time, in milliseconds</para>
+        /// <para>The duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetQualityCheckTaskResultResponseBodyData Data { get; set; }
         public class GetQualityCheckTaskResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Original conversation content</para>
+            /// <para>The original conversation content.</para>
             /// </summary>
             [NameInMap("conversationList")]
             [Validation(Required=false)]
             public GetQualityCheckTaskResultResponseBodyDataConversationList ConversationList { get; set; }
             public class GetQualityCheckTaskResultResponseBodyDataConversationList : TeaModel {
                 /// <summary>
-                /// <para>Call type:</para>
+                /// <para>The call type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string CallType { get; set; }
 
                 /// <summary>
-                /// <para>Customer ID</para>
+                /// <para>The customer ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>234234</para>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string CustomerId { get; set; }
 
                 /// <summary>
-                /// <para>Customer name</para>
+                /// <para>The customer name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("customerName")]
                 [Validation(Required=false)]
                 public string CustomerName { get; set; }
 
                 /// <summary>
-                /// <para>Agent ID</para>
+                /// <para>The customer service ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23984763826</para>
@@ -74,24 +74,24 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string CustomerServiceId { get; set; }
 
                 /// <summary>
-                /// <para>Agent name</para>
+                /// <para>The customer service name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>李四</para>
+                /// <para>Li Si</para>
                 /// </summary>
                 [NameInMap("customerServiceName")]
                 [Validation(Required=false)]
                 public string CustomerServiceName { get; set; }
 
                 /// <summary>
-                /// <para>Dialogue details list</para>
+                /// <para>The list of dialogue details.</para>
                 /// </summary>
                 [NameInMap("dialogueList")]
                 [Validation(Required=false)]
                 public List<GetQualityCheckTaskResultResponseBodyDataConversationListDialogueList> DialogueList { get; set; }
                 public class GetQualityCheckTaskResultResponseBodyDataConversationListDialogueList : TeaModel {
                     /// <summary>
-                    /// <para>Start time of this utterance, in milliseconds relative to the start of the conversation</para>
+                    /// <para>The start time of the utterance, as an offset in milliseconds from the start of the conversation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? Begin { get; set; }
 
                     /// <summary>
-                    /// <para>Start time of this utterance</para>
+                    /// <para>The start time of the utterance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024-09-27 11:23:20</para>
@@ -111,17 +111,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string BeginTime { get; set; }
 
                     /// <summary>
-                    /// <para>Dialogue content</para>
+                    /// <para>The specific content of the dialogue.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>您好，我是2001，很高兴为您服务！</para>
+                    /// <para>Hello, this is 2001. How may I help you?</para>
                     /// </summary>
                     [NameInMap("content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>Unique identifier for the dialogue role</para>
+                    /// <para>The unique identifier of the dialogue role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -131,17 +131,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string CustomerId { get; set; }
 
                     /// <summary>
-                    /// <para>Agent ID</para>
+                    /// <para>The customer service ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>李四</para>
+                    /// <para>Li Si</para>
                     /// </summary>
                     [NameInMap("customerServiceId")]
                     [Validation(Required=false)]
                     public string CustomerServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>Agent type</para>
+                    /// <para>The agent type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string CustomerServiceType { get; set; }
 
                     /// <summary>
-                    /// <para>End time of this utterance, in milliseconds relative to the start of the conversation</para>
+                    /// <para>The end time of the utterance, as an offset in milliseconds from the start of the conversation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? End { get; set; }
 
                     /// <summary>
-                    /// <para>Unique identifier for this utterance. Assigned internally</para>
+                    /// <para>The unique identifier of the utterance. This value is assigned internally.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Role</para>
+                    /// <para>The role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>Content type</para>
+                    /// <para>The type of the dialogue content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TEXT</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 }
 
                 /// <summary>
-                /// <para>Conversation time</para>
+                /// <para>The conversation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-27 11:23:20</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             }
 
             /// <summary>
-            /// <para>Task creation time. This is when the task was submitted</para>
+            /// <para>The time when the task was created and submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-27 11:23:20</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>System execution end time</para>
+            /// <para>The time when the system finished execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-27 11:23:20</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string GmtEnd { get; set; }
 
             /// <summary>
-            /// <para>System execution start time</para>
+            /// <para>The time when the system started execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-27 11:23:20</para>
@@ -235,14 +235,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string GmtStart { get; set; }
 
             /// <summary>
-            /// <para>Quality check result set</para>
+            /// <para>The quality check results.</para>
             /// </summary>
             [NameInMap("qualityCheckList")]
             [Validation(Required=false)]
             public List<GetQualityCheckTaskResultResponseBodyDataQualityCheckList> QualityCheckList { get; set; }
             public class GetQualityCheckTaskResultResponseBodyDataQualityCheckList : TeaModel {
                 /// <summary>
-                /// <para>Rule business type</para>
+                /// <para>The business type of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No</para>
@@ -252,17 +252,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string BizType { get; set; }
 
                 /// <summary>
-                /// <para>Reason for passing or failing the quality check</para>
+                /// <para>The explanation for why the check passed or failed.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>暂无</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("checkExplanation")]
                 [Validation(Required=false)]
                 public string CheckExplanation { get; set; }
 
                 /// <summary>
-                /// <para>Whether the quality check passed</para>
+                /// <para>Indicates whether the quality check passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PASSED</para>
@@ -272,17 +272,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string CheckPassed { get; set; }
 
                 /// <summary>
-                /// <para>Description of the quality check process</para>
+                /// <para>The description of the quality check process.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>暂无</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("checkProcess")]
                 [Validation(Required=false)]
                 public string CheckProcess { get; set; }
 
                 /// <summary>
-                /// <para>Whether the rule matched</para>
+                /// <para>Indicates whether the rule was hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HIT</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string Checked { get; set; }
 
                 /// <summary>
-                /// <para>Quality check completion time</para>
+                /// <para>The quality check completion time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-23 14:57:50</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string GmtEnd { get; set; }
 
                 /// <summary>
-                /// <para>Quality check start time</para>
+                /// <para>The quality check start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-23 14:57:50</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string GmtStart { get; set; }
 
                 /// <summary>
-                /// <para>Internal quality check mode</para>
+                /// <para>The internal quality check mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -322,14 +322,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>Original dialogue list</para>
+                /// <para>The original dialogue list.</para>
                 /// </summary>
                 [NameInMap("originDialogue")]
                 [Validation(Required=false)]
                 public List<GetQualityCheckTaskResultResponseBodyDataQualityCheckListOriginDialogue> OriginDialogue { get; set; }
                 public class GetQualityCheckTaskResultResponseBodyDataQualityCheckListOriginDialogue : TeaModel {
                     /// <summary>
-                    /// <para>Start time of this utterance, in milliseconds relative to the start of the conversation</para>
+                    /// <para>The start time of the utterance, as an offset in milliseconds from the start of the conversation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? Begin { get; set; }
 
                     /// <summary>
-                    /// <para>Start time of this utterance</para>
+                    /// <para>The start time of the utterance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024-05-23 14:57:50</para>
@@ -349,17 +349,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string BeginTime { get; set; }
 
                     /// <summary>
-                    /// <para>Dialogue content</para>
+                    /// <para>The specific content of the dialogue.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>您好，我是2001，很高兴为您服务！</para>
+                    /// <para>Hello, this is 2001. How may I help you?</para>
                     /// </summary>
                     [NameInMap("content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>Unique identifier for the dialogue role</para>
+                    /// <para>The unique identifier of the dialogue role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string CustomerId { get; set; }
 
                     /// <summary>
-                    /// <para>Agent ID</para>
+                    /// <para>The customer service ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>23876432</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string CustomerServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>Agent type</para>
+                    /// <para>The agent type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string CustomerServiceType { get; set; }
 
                     /// <summary>
-                    /// <para>End time of this utterance, in milliseconds relative to the start of the conversation</para>
+                    /// <para>The end time of the utterance, as an offset in milliseconds from the start of the conversation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? End { get; set; }
 
                     /// <summary>
-                    /// <para>Unique identifier for this utterance. Assigned internally</para>
+                    /// <para>The unique identifier of the sentence, which is assigned internally.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public int? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Role</para>
+                    /// <para>The role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>Content type</para>
+                    /// <para>The type of the dialogue content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TEXT</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 }
 
                 /// <summary>
-                /// <para>Quality check group ID</para>
+                /// <para>The quality check group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>warning_customers</para>
@@ -441,17 +441,17 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string QualityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Quality check item description</para>
+                /// <para>The quality check item description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>进入检测预警客户流程</para>
+                /// <para>Enter the early-warning customer detection process</para>
                 /// </summary>
                 [NameInMap("ruleDescription")]
                 [Validation(Required=false)]
                 public string RuleDescription { get; set; }
 
                 /// <summary>
-                /// <para>Quality check item ID</para>
+                /// <para>The quality check item ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wcm_start</para>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>Rule direction. 0: negative, 1: positive</para>
+                /// <para>The polarity type of the rule. Valid values: 0: negative. 1: positive.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>Child node</para>
+                /// <para>The child node.</para>
                 /// </summary>
                 [NameInMap("subNodeCol")]
                 [Validation(Required=false)]
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             }
 
             /// <summary>
-            /// <para>Task status</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INIT</para>
@@ -490,7 +490,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703557101831</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
-        /// <para>Data type</para>
+        /// <para>The data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67C7021A-D268-553D-8C15-A087B9604028</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request succeeded</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Timestamp</para>
+        /// <para>The timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 00:00:00</para>
