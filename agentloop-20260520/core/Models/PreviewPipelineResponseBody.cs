@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class PreviewPipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para><c>data</c> is a collection of sample rows (maps within an array) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</para>
+        /// <para>The collection of sample rows for the preview result. Each row is a key-value structure. The array contains only the first N rows, up to 5 rows by default, and does not reflect the complete write plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;status&quot;:&quot;200&quot;,&quot;method&quot;:&quot;POST&quot;}]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public PreviewPipelineResponseBodyMeta Meta { get; set; }
         public class PreviewPipelineResponseBodyMeta : TeaModel {
             /// <summary>
-            /// <para>The aggregation analysis SPL statement.</para>
+            /// <para>The SPL statement for aggregation analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -36,7 +39,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AggQuery { get; set; }
 
             /// <summary>
-            /// <para><c>meta.columnTypes</c> provides the mapping from column names to data types (string / long / double / json).</para>
+            /// <para>The list of data types for each column. This field provides a mapping from column names to data types, such as string, long, double, and json.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;long&quot;,&quot;string&quot;]</para>
             /// </summary>
             [NameInMap("columnTypes")]
             [Validation(Required=false)]
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores consumed.</para>
+            /// <para>The number of consumed CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -63,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The CPU time consumed, in seconds.</para>
+            /// <para>The consumed CPU time in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public double? CpuSec { get; set; }
 
             /// <summary>
-            /// <para>The query duration, in milliseconds.</para>
+            /// <para>The query duration in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -83,14 +89,20 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ElapsedMillisecond { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query is an SQL query.</para>
+            /// <para>Specifies whether an SQL query is used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("hasSQL")]
             [Validation(Required=false)]
             public bool? HasSQL { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether nanosecond-level ordering is enabled.</para>
+            /// <para>Specifies whether nanosecond-level ordering is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isAccurate")]
             [Validation(Required=false)]
@@ -98,13 +110,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <para>The list of result column names.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;status&quot;,&quot;method&quot;,&quot;path&quot;]</para>
             /// </summary>
             [NameInMap("keys")]
             [Validation(Required=false)]
             public List<string> Keys { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of rows that can be returned.</para>
+            /// <para>The maximum number of rows returned in the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -114,7 +129,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Limited { get; set; }
 
             /// <summary>
-            /// <para>The query mode identifier.</para>
+            /// <para>The identifier of the query mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of data bytes processed.</para>
+            /// <para>The number of bytes of processed data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>524288</para>
@@ -144,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ProcessedRows { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is complete.</para>
+            /// <para>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Complete</para>
@@ -154,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The number of raw data bytes scanned.</para>
+            /// <para>The number of bytes of scanned raw data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1048576</para>
@@ -164,14 +179,27 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ScanBytes { get; set; }
 
             /// <summary>
-            /// <para>The type and aggregation information of columns.</para>
+            /// <para>The dataset schema of the final pipeline output. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;status&quot;:{&quot;type&quot;:&quot;long&quot;}}</para>
+            /// </summary>
+            [NameInMap("schema")]
+            [Validation(Required=false)]
+            public Dictionary<string, MetaSchemaValue> Schema { get; set; }
+
+            /// <summary>
+            /// <para>The column types and aggregation information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;column&quot;:&quot;status&quot;,&quot;type&quot;:&quot;long&quot;}]</para>
             /// </summary>
             [NameInMap("terms")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Terms { get; set; }
 
             /// <summary>
-            /// <para>The filter condition SPL statement.</para>
+            /// <para>The SPL statement for the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>status: 200</para>
@@ -183,7 +211,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate the request when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>

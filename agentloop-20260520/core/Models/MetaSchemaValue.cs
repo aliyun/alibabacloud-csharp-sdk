@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
-    public class UpdatePipelineResponseBody : TeaModel {
+    public class MetaSchemaValue : TeaModel {
         /// <summary>
-        /// <para>The request ID, used to locate the request for troubleshooting.</para>
+        /// <para>The dataset field types. Valid values: text, long, double, and json.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
+        /// <para>text</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Type { get; set; }
 
     }
 

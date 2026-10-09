@@ -7745,18 +7745,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</para>
+        /// <para>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
-        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
-        /// <item><description>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7815,18 +7815,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</para>
+        /// <para>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
-        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
-        /// <item><description>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7885,18 +7885,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</para>
+        /// <para>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
-        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
-        /// <item><description>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7916,18 +7916,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</para>
+        /// <para>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
-        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
-        /// <item><description>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
         /// </list>
         /// </description>
         /// 

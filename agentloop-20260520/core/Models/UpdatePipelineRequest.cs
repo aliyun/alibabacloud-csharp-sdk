@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdatePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the pipeline, which helps users understand its purpose.</para>
+        /// <para>The description of the pipeline, which helps business users understand its purpose.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My pipeline</para>
@@ -20,14 +20,39 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The scheduling policy. If provided, the entire scheduling policy is overwritten.</para>
+        /// <para>The scheduling policy. If this parameter is specified, the existing policy is completely overwritten.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</para>
         /// </summary>
         [NameInMap("executePolicy")]
         [Validation(Required=false)]
         public UpdatePipelineRequestExecutePolicy ExecutePolicy { get; set; }
         public class UpdatePipelineRequestExecutePolicy : TeaModel {
             /// <summary>
-            /// <para>The scheduling mode. For example, Scheduled (timed scheduling) or RunOnce (one-time execution).</para>
+            /// <para>The continuous execution configuration. This parameter is used when the type is trace. The processing frequency is a fixed value managed by the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;fromTime&quot;:1735660800}</para>
+            /// </summary>
+            [NameInMap("continuous")]
+            [Validation(Required=false)]
+            public UpdatePipelineRequestExecutePolicyContinuous Continuous { get; set; }
+            public class UpdatePipelineRequestExecutePolicyContinuous : TeaModel {
+                /// <summary>
+                /// <para>The bootstrap start time, specified as a UNIX timestamp in seconds. The precision is the same as that of runOnce or scheduled.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted to seconds. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, the cursor starts from the current time and processes only incremental data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1735660800</para>
+                /// </summary>
+                [NameInMap("fromTime")]
+                [Validation(Required=false)]
+                public long? FromTime { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The scheduling mode. Valid values: RunOnce (single execution), Scheduled (periodic execution), and Continuous (continuous execution, applicable only to trace data sources). For Continuous mode, the processing frequency is a fixed value managed by the server, and data is automatically processed at minute intervals after the trace is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduled</para>
@@ -37,27 +62,30 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The configuration for one-time execution.</para>
+            /// <para>The single execution configuration. This parameter is required only when the mode is set to RunOnce.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</para>
             /// </summary>
             [NameInMap("runOnce")]
             [Validation(Required=false)]
             public UpdatePipelineRequestExecutePolicyRunOnce RunOnce { get; set; }
             public class UpdatePipelineRequestExecutePolicyRunOnce : TeaModel {
                 /// <summary>
-                /// <para>The start time for data processing, in UNIX millisecond timestamp.</para>
+                /// <para>The start time of the data processing window, specified as a UNIX timestamp in seconds. The value must be less than the value of toTime.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1735660800000</para>
+                /// <para>1735660800</para>
                 /// </summary>
                 [NameInMap("fromTime")]
                 [Validation(Required=false)]
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time for data processing, in UNIX millisecond timestamp.</para>
+                /// <para>The end time of the data processing window, specified as a UNIX timestamp in seconds. The value must be greater than the value of fromTime.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1735747200000</para>
+                /// <para>1735747200</para>
                 /// </summary>
                 [NameInMap("toTime")]
                 [Validation(Required=false)]
@@ -66,24 +94,27 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The timed scheduling configuration.</para>
+            /// <para>The periodic scheduling configuration. This parameter is required only when the mode is set to Scheduled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</para>
             /// </summary>
             [NameInMap("scheduled")]
             [Validation(Required=false)]
             public UpdatePipelineRequestExecutePolicyScheduled Scheduled { get; set; }
             public class UpdatePipelineRequestExecutePolicyScheduled : TeaModel {
                 /// <summary>
-                /// <para>The scheduling start time, in UNIX millisecond timestamp.</para>
+                /// <para>The scheduling start time, specified as a UNIX timestamp in seconds. The precision is the same as that of runOnce.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted to seconds.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1735660800000</para>
+                /// <para>1735660800</para>
                 /// </summary>
                 [NameInMap("fromTime")]
                 [Validation(Required=false)]
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling interval. For example, 1h.</para>
+                /// <para>The scheduling interval. Valid values: 1h, 6h, 12h, and 1d.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1h</para>
@@ -97,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline configuration (node orchestration). If specified, the existing pipeline configuration is entirely overwritten.</para>
+        /// <para>The pipeline configuration, which defines node orchestration. If this parameter is specified, the existing configuration is completely overwritten.</para>
         /// </summary>
         [NameInMap("pipeline")]
         [Validation(Required=false)]
@@ -105,13 +136,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public class UpdatePipelineRequestPipeline : TeaModel {
             /// <summary>
             /// <para>The list of nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;id&quot;:&quot;select-fields&quot;,&quot;type&quot;:&quot;project&quot;,&quot;parameters&quot;:{}}]</para>
             /// </summary>
             [NameInMap("nodes")]
             [Validation(Required=false)]
             public List<UpdatePipelineRequestPipelineNodes> Nodes { get; set; }
             public class UpdatePipelineRequestPipelineNodes : TeaModel {
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>node-1</para>
@@ -121,14 +155,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node parameters in key-value format. The parameters vary depending on the node type.</para>
+                /// <para>The parameters of the node. The parameters use a key-value structure and vary based on the node type.</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Parameters { get; set; }
 
                 /// <summary>
-                /// <para>The node type.</para>
+                /// <para>The type of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>transform</para>
@@ -142,21 +176,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline sink (data write destination). If provided, the entire sink configuration is overwritten.</para>
+        /// <para>The pipeline sink (data write destination). Passing this parameter overwrites the entire configuration.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
         public UpdatePipelineRequestSink Sink { get; set; }
         public class UpdatePipelineRequestSink : TeaModel {
             /// <summary>
-            /// <para>The conditional routing configuration. This parameter takes effect only when sink.type is set to condition.</para>
+            /// <para>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</para>
             /// </summary>
             [NameInMap("condition")]
             [Validation(Required=false)]
             public UpdatePipelineRequestSinkCondition Condition { get; set; }
             public class UpdatePipelineRequestSinkCondition : TeaModel {
                 /// <summary>
-                /// <para>The default write destination used when no conditional route is matched.</para>
+                /// <para>The default sink used when no conditional route is matched.</para>
                 /// </summary>
                 [NameInMap("defaultSink")]
                 [Validation(Required=false)]
@@ -221,7 +255,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public List<UpdatePipelineRequestSinkConditionRoutes> Routes { get; set; }
                 public class UpdatePipelineRequestSinkConditionRoutes : TeaModel {
                     /// <summary>
-                    /// <para>The route expression in SPL. Only where, project, and extend are supported.</para>
+                    /// <para>The route expression in Search Processing Language (SPL). Only where, project, and extend are supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -243,7 +277,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The write destination for the route.</para>
+                    /// <para>The sink for the route.</para>
                     /// </summary>
                     [NameInMap("sink")]
                     [Validation(Required=false)]
@@ -295,7 +329,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The destination dataset configuration for the dataset sink. This parameter takes effect only when sink.type is set to dataset.</para>
+            /// <para>The destination dataset configuration for the dataset sink. This parameter is used only when sink.type is set to dataset.</para>
             /// </summary>
             [NameInMap("dataset")]
             [Validation(Required=false)]
@@ -324,7 +358,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The sink type. Valid values: dataset and condition.</para>
+            /// <para>The destination type. Valid values: dataset and condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>condition</para>
@@ -336,14 +370,20 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline data source. If specified, the existing source configuration is entirely overwritten.</para>
+        /// <para>The pipeline data source. Passing this parameter overwrites the entire configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public UpdatePipelineRequestSource Source { get; set; }
         public class UpdatePipelineRequestSource : TeaModel {
             /// <summary>
-            /// <para>The dataset datasource config within the current AgentSpace.</para>
+            /// <para>The dataset datasource config in the current AgentSpace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</para>
             /// </summary>
             [NameInMap("dataset")]
             [Validation(Required=false)]
@@ -360,7 +400,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Dataset { get; set; }
 
                 /// <summary>
-                /// <para>The filter condition for the dataset data.</para>
+                /// <para>The data filter condition for the dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status = \&quot;pending\&quot;</para>
@@ -373,13 +413,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <para>The input fields and their types. This parameter applies to all data source types.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</para>
             /// </summary>
             [NameInMap("inputFields")]
             [Validation(Required=false)]
             public List<UpdatePipelineRequestSourceInputFields> InputFields { get; set; }
             public class UpdatePipelineRequestSourceInputFields : TeaModel {
                 /// <summary>
-                /// <para>The field name.</para>
+                /// <para>The name of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>question</para>
@@ -389,7 +432,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The field type. Valid values: text, long, double, and json.</para>
+                /// <para>The type of the field. Valid values: text, long, double, and json.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -401,7 +444,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The SLS Logstore datasource config.</para>
+            /// <para>The Simple Log Service (SLS) Logstore datasource config.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
@@ -428,7 +474,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The data filtered query statement in SLS query/analysis syntax.</para>
+                /// <para>The filtered query statement in SLS query and analysis syntax.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -442,7 +488,51 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The data source type. Valid values: logstore and dataset.</para>
+            /// <para>The trajectory data configuration. This parameter is optional and takes effect only when type is set to trace. It obtains ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</para>
+            /// </summary>
+            [NameInMap("trajectory")]
+            [Validation(Required=false)]
+            public UpdatePipelineRequestSourceTrajectory Trajectory { get; set; }
+            public class UpdatePipelineRequestSourceTrajectory : TeaModel {
+                /// <summary>
+                /// <para>The trajectory enrichment. It mounts trajectory data into the scrubbing result by trace_id. When writing to a dataset, the data is carried in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</para>
+                /// </summary>
+                [NameInMap("enrich")]
+                [Validation(Required=false)]
+                public UpdatePipelineRequestSourceTrajectoryEnrich Enrich { get; set; }
+                public class UpdatePipelineRequestSourceTrajectoryEnrich : TeaModel {
+                    /// <summary>
+                    /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs a single fixed column agent_trajectory, and this parameter no longer affects the output.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</para>
+                    /// </summary>
+                    [NameInMap("columns")]
+                    [Validation(Required=false)]
+                    public List<string> Columns { get; set; }
+
+                    /// <summary>
+                    /// <para>Specifies whether to enable trajectory enrichment.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The data source type. Valid values: logstore, dataset, and trace. The trace value indicates a trajectory signal-driven processing mode. The validity of the enum values is verified by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>
@@ -454,7 +544,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The idempotency token. A unique string generated by the client to ensure the idempotency of the update operation.</para>
+        /// <para>The idempotency token. It is a unique string generated by the client to ensure the idempotence of the update operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>
