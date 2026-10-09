@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the CA certificates.</para>
+        /// <para>The list of CA certificate details.</para>
         /// </summary>
         [NameInMap("CertificateList")]
         [Validation(Required=false)]
         public List<DescribeCACertificateListResponseBodyCertificateList> CertificateList { get; set; }
         public class DescribeCACertificateListResponseBodyCertificateList : TeaModel {
             /// <summary>
-            /// <para>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665819958000</para>
@@ -27,14 +27,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// <para>The encryption algorithm of the CA certificate. Valid values:</para>
+            /// <para>The encryption algorithm type of the CA certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RSA</b>: RSA algorithm.</para>
-            /// </description></item>
-            /// <item><description><para><b>ECC</b>: ECC algorithm.</para>
-            /// </description></item>
-            /// <item><description><para><b>SM2</b>: SM2 algorithm.</para>
-            /// </description></item>
+            /// <item><description><b>RSA</b>: RSA algorithm.</description></item>
+            /// <item><description><b>ECC</b>: ECC algorithm.</description></item>
+            /// <item><description><b>SM2</b>: SM2 (Chinese national cryptographic) algorithm.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// <para>The alias of the instance.</para>
+            /// <para>The instance alias.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Aliyun_CA</para>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The issuance date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1634283958000</para>
@@ -67,10 +64,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The type of the CA certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ROOT</b>: root CA certificate.</para>
-            /// </description></item>
-            /// <item><description><para><b>SUB_ROOT</b>: intermediate CA certificate.</para>
-            /// </description></item>
+            /// <item><description><b>ROOT</b>: root CA certificate.</description></item>
+            /// <item><description><b>SUB_ROOT</b>: subordinate CA certificate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,8 +86,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The country code of the country where the organization associated with the CA certificate is located.</para>
-            /// <para>For more information about country codes, see the <b>Country codes</b> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</para>
+            /// <para>The country code of the organization associated with the CA certificate.</para>
+            /// <para>For more information about country codes, see the <b>International codes</b> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -102,12 +97,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CountryCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance is a free instance. Valid values:</para>
+            /// <para>Indicates whether the instance is a complimentary instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: no.</para>
-            /// </description></item>
-            /// <item><description><para>1: yes.</para>
-            /// </description></item>
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +161,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Organization { get; set; }
 
             /// <summary>
-            /// <para>The name of the department of the organization associated with the CA certificate.</para>
+            /// <para>The name of the department within the organization associated with the CA certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security</para>
@@ -178,9 +171,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string OrganizationUnit { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the root CA certificate that issued the CA certificate.</para>
+            /// <para>The unique identifier of the root CA certificate that issued this CA certificate.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when <b>CertificateType</b> is <b>SUB_ROOT</b>, which indicates an intermediate CA certificate.</para>
+            /// <para>This parameter is returned only when <b>CertificateType</b> is <b>SUB_ROOT</b> (subordinate CA certificate).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -201,7 +194,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The Subject Alternative Names (SANs) of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -241,7 +234,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SignAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The name of the province or state where the organization associated with the CA certificate is located.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+            /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the CA certificate is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhejiang</para>
@@ -253,10 +247,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The status of the CA certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ISSUE</b>: The certificate is issued.</para>
-            /// </description></item>
-            /// <item><description><para><b>REVOKE</b>: The certificate is revoked.</para>
-            /// </description></item>
+            /// <item><description><b>ISSUE</b>: The certificate is issued normally.</description></item>
+            /// <item><description><b>REVOKE</b>: The certificate has been revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -267,18 +259,13 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The distinguished name (DN) of the CA certificate. The DN indicates the user of the certificate and contains the following information:</para>
+            /// <para>The Distinguished Name (DN) attribute of the CA certificate, which represents the subject of the certificate. It contains the following information:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>C</b>: The country code where the organization is located.</para>
-            /// </description></item>
-            /// <item><description><para><b>O</b>: The name of the organization.</para>
-            /// </description></item>
-            /// <item><description><para><b>OU</b>: The department of the organization.</para>
-            /// </description></item>
-            /// <item><description><para><b>L</b>: The city where the organization is located.</para>
-            /// </description></item>
-            /// <item><description><para><b>CN</b>: The common name or abbreviation of the organization.</para>
-            /// </description></item>
+            /// <item><description><b>C</b>: The country code of the organization.</description></item>
+            /// <item><description><b>O</b>: The name of the organization.</description></item>
+            /// <item><description><b>OU</b>: The department within the organization.</description></item>
+            /// <item><description><b>L</b>: The city where the organization is located.</description></item>
+            /// <item><description><b>CN</b>: The common name or abbreviation of the organization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -291,10 +278,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>Indicates whether the instance is a trial instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: no.</para>
-            /// </description></item>
-            /// <item><description><para>1: yes.</para>
-            /// </description></item>
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -315,7 +300,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string X509Certificate { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the CA certificate in years.</para>
+            /// <para>The validity period of the CA certificate. Unit: years.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -327,7 +312,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -337,7 +322,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of pages returned.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -357,7 +342,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of CA certificates on each page.</para>
+        /// <para>The number of CA certificates per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -367,7 +352,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of root and intermediate CA certificates.</para>
+        /// <para>The total number of root CA certificates and subordinate CA certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

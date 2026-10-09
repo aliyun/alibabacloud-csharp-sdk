@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListCertRequest : TeaModel {
         /// <summary>
-        /// <para>Filters certificates modified after this date.</para>
+        /// <para>The host record bound to the certificate, in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-05-13 12:59:45</para>
+        /// <para>2024-05-13</para>
         /// </summary>
         [NameInMap("AfterDate")]
         [Validation(Required=false)]
         public string AfterDate { get; set; }
 
         /// <summary>
-        /// <para>Filters certificates modified before this date.</para>
+        /// <para>The modification time of the certificate, in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-09-04</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string BeforeDate { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. This is the NextToken value from a previous response. If unspecified, the first page is returned.</para>
+        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1d2db86sca4384811e0b5e8707e68181f</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the intermediate CA that issued the certificate.</para>
+        /// <para>The identifier of the intermediate CA that issued the certificate. You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of a CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>273ae6bb538d538c70c01f81jh2****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ParentIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 50.</para>
+        /// <para>The total size of the certificate. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -90,12 +90,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate. Valid values:</para>
+        /// <para>The certificate status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ISSUE: Active</para>
-        /// </description></item>
-        /// <item><description><para>REVOKE: Revoked</para>
-        /// </description></item>
+        /// <item><description>ISSUE: Normal.</description></item>
+        /// <item><description>REVOKE: Revoked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,12 +106,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SERVER: Server certificate</para>
-        /// </description></item>
-        /// <item><description><para>CLIENT: Client certificate</para>
-        /// </description></item>
-        /// <item><description><para>END_ENTITY: End-entity certificate</para>
-        /// </description></item>
+        /// <item><description>SERVER: server certificate.</description></item>
+        /// <item><description>CLIENT: client certificate.</description></item>
+        /// <item><description>END_ENTITY: end-entity certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

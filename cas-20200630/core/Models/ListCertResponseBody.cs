@@ -20,26 +20,26 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of certificates.</para>
+        /// <para>The data source ID to which the certificates belong.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListCertResponseBodyList> List { get; set; }
         public class ListCertResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the certificate.</para>
+            /// <para>The expiration time of the certificate in UTC/GMT.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-05-13 12:59:45</para>
+            /// <para>Mon Nov 05 16:33:52 CST 2035</para>
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
             public string AfterDate { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The service expiration time of the client certificate, in timestamp format. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both left empty or both specified.</para>
+            /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? AfterTime { get; set; }
 
             /// <summary>
-            /// <para>The public key algorithm.</para>
+            /// <para>The algorithm type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// <para>The alias of the certificate.</para>
+            /// <para>The name of the issued certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -70,19 +70,19 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The issuance time of the certificate.</para>
+            /// <para>The issuance time of the certificate in UTC/GMT.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026-05-19</para>
+            /// <para>Wed Nov 05 16:33:52 CST 2025</para>
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
             public string BeforeDate { get; set; }
 
             /// <summary>
-            /// <para>The issuance time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The issuance time of the client certificate, in timestamp format. The default value is the time when you call this operation. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both left empty or both specified.</para>
+            /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,14 +93,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? BeforeTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the certificate. Valid values:</para>
+            /// <para>The certificate type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>free</c>: Free certificate.</para>
-            /// </description></item>
-            /// <item><description><para><c>cas</c>: Alibaba Cloud Security certificate.</para>
-            /// </description></item>
-            /// <item><description><para><c>upload</c>: A user-uploaded certificate.</para>
-            /// </description></item>
+            /// <item><description>free: free certificate.</description></item>
+            /// <item><description>cas: China Security certificate.</description></item>
+            /// <item><description>upload: custom upload.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +108,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CertificateType { get; set; }
 
             /// <summary>
-            /// <para>The primary domain name of the certificate.</para>
+            /// <para>The primary domain name bound to the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.kfsjn.xyz">www.kfsjn.xyz</a></para>
@@ -121,7 +118,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>A unique, user-defined identifier for the certificate.</para>
+            /// <para>The user-defined identifier, which serves as a unique key.</para>
             /// 
             /// <b>Example:</b>
             /// <para><em><b>b86sca4384811e0b5e8707e68</b></em></para>
@@ -131,7 +128,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CustomIdentifier { get; set; }
 
             /// <summary>
-            /// <para>A JSON string containing extended attributes.</para>
+            /// <para>The extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;appId&quot;:&quot;APP_PFHMIGUHKDUW6S3N7ZL2&quot;}</para>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Extra { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source to which the certificate order belongs.</para>
+            /// <para>The data source ID of the certificate order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1806958</para>
@@ -151,7 +148,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the certificate.</para>
+            /// <para>The certificate identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1ef539a8-1e1f-6b88-8c11-21cf01a203e9</para>
@@ -161,12 +158,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Identifier { get; set; }
 
             /// <summary>
-            /// <para>Specifies if the private key is exportable. Valid values:</para>
+            /// <para>Indicates whether the certificate can be used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: The private key is exportable.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: The private key is not exportable.</para>
-            /// </description></item>
+            /// <item><description>true: The certificate can be used.</description></item>
+            /// <item><description>false: The certificate cannot be used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,7 +172,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public bool? KeyExportable { get; set; }
 
             /// <summary>
-            /// <para>The organization specified in the certificate.</para>
+            /// <para>The organization of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -187,7 +182,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Organization { get; set; }
 
             /// <summary>
-            /// <para>The organizational unit (OU) specified in the certificate.</para>
+            /// <para>The name of the company or organization to which the certificate purchaser belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IT</para>
@@ -207,12 +202,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// <para>The status of the certificate. Valid values:</para>
+            /// <para>The certificate status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ISSUE</c>: Issued.</para>
-            /// </description></item>
-            /// <item><description><para><c>REVOKE</c>: Revoked.</para>
-            /// </description></item>
+            /// <item><description>ISSUE: Normal.</description></item>
+            /// <item><description>REVOKE: Revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +216,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The distinguished name (DN) of the certificate subject.</para>
+            /// <para>The subscription relationship ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SubjectDn</para>
@@ -233,7 +226,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SubjectDn { get; set; }
 
             /// <summary>
-            /// <para>The tags of the certificate.</para>
+            /// <para>The certificate tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -242,7 +235,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -252,7 +245,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A token to retrieve the next page of results. If this value is empty, all results have been returned.</para>
+        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1d2db86sca4384811e0b5e8707e68181f</para>
@@ -262,7 +255,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -272,7 +265,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? PageCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -282,7 +275,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The total size of the certificate. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

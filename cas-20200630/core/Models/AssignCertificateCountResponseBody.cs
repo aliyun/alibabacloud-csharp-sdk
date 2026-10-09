@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class AssignCertificateCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of assigned certificates.</para>
+        /// <para>The number of allocated certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CertCount { get; set; }
 
         /// <summary>
-        /// <para>The number of free certificates for the current year.</para>
+        /// <para>The number of free certificates in the current year.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

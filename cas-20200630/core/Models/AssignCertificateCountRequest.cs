@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class AssignCertificateCountRequest : TeaModel {
         /// <summary>
+        /// <para>The identifier of the CA certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1f0167b4-ee84-XXX-49bc4d39fa68</para>
+        /// </summary>
+        [NameInMap("CaIdentifier")]
+        [Validation(Required=false)]
+        public string CaIdentifier { get; set; }
+
+        /// <summary>
         /// <para>The total number of certificate records.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CertTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The ID of the data source to which the certificate belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33285</para>

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description><b>ECC_512</b>: The signature algorithm is Sha256WithECDSA.</description></item>
         /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
         /// </list>
-        /// <para>The encryption algorithm of the client certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the client certificate must be RSA_1024, RSA_2048, or RSA_4096.</para>
+        /// <para>The encryption algorithm of the client certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the client certificate must be one of RSA_1024, RSA_2048, or RSA_4096.</para>
         /// <remarks>
         /// <para>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the sub-CA certificate.</para>
         /// </remarks>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public bool? AsynchronousFlag { get; set; }
 
         /// <summary>
-        /// <para>The issuance time of the client certificate in UNIX timestamp format. Default value: the time when you call this operation. Unit: seconds.</para>
+        /// <para>The issuance time of the client certificate in UNIX timestamp format. The default value is the time when you call this operation. Unit: seconds.</para>
         /// <remarks>
         /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
         /// </remarks>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.
+        /// <para>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file</a>.
         /// &lt;props=&quot;china&quot;&gt;You can also create a CSR in the SSL Certificates Service console. For more information, see <a href="https://help.aliyun.com/document_detail/313297.html">Create a CSR</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>Specifies whether to include the Certificate Revocation List (CRL) address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: No.</description></item>
-        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         /// <summary>
         /// <para>The name of the city where the certificate organization is located. Chinese characters, English characters, and other characters are supported.
-        /// Default value: the name of the city where the sub-CA certificate organization that issues this certificate is located.</para>
+        /// The default value is the name of the city where the sub-CA certificate organization that issues this certificate is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hangzhou</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description><b>5</b>: ediPartyName (5): Electronic Data Interchange (EDI) party name.</description></item>
         /// <item><description><b>6</b>: uniformResourceIdentifier (6): Uniform Resource Identifier (URI).</description></item>
         /// <item><description><b>7</b>: iPAddress (7): IP address.</description></item>
-        /// <item><description><b>8</b>: registeredID (8): registered ID (object identifier OID).</description></item>
+        /// <item><description><b>8</b>: registeredID (8): registered ID (Object Identifier, OID).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -256,8 +256,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description>otherName (0): other name</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Example: 1.3.6.1.4.1.311.20.2.3 (OID) + <a href="mailto:user@domain.com">user@domain.com</a> (UPN - User Principal Name)</description></item>
-        /// <item><description>Description: A custom extension type that typically consists of a specific OID (object identifier) and a corresponding value. In Windows environments, it is commonly used to store UPN (User Principal Name), such as <a href="mailto:zhangsan@company.com">zhangsan@company.com</a> for smart card logon.</description></item>
+        /// <item><description>Example: 1.3.6.1.4.1.311.20.2.3 (OID) + <a href="mailto:user@domain.com">user@domain.com</a> (UPN, User Principal Name)</description></item>
+        /// <item><description>Description: A custom extension type that typically consists of a specific OID (Object Identifier) and a corresponding value. In Windows environments, it is commonly used to store UPN (User Principal Name), such as <a href="mailto:zhangsan@company.com">zhangsan@company.com</a> for smart card logon.</description></item>
         /// </list>
         /// <ol start="2">
         /// <item><description>rfc822Name (1): RFC 822 name (email address)</description></item>
@@ -281,14 +281,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// </ol>
         /// <list type="bullet">
         /// <item><description>Example: CN=IT Department, OU=Tech, O=Company Ltd, L=Beijing, ST=Beijing, C=CN</description></item>
-        /// <item><description>Description: A standard X.500 distinguished name (DN). It is typically used to explicitly identify the complete hierarchical information of an organization, department, or entity in a certificate. It is commonly found in enterprise internal root certificates or specific government digital certificates.</description></item>
+        /// <item><description>Description: A standard X.500 distinguished name (DN). It is typically used to explicitly identify the full hierarchical information of an organization, department, or entity in a certificate. It is commonly found in enterprise internal root certificates or specific government digital certificates.</description></item>
         /// </list>
         /// <ol start="5">
         /// <item><description>ediPartyName (5): EDI party name</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description>Example: nameAssigner=GlobalTradeOrg, partyName=SupplierA</description></item>
-        /// <item><description>Description: Used specifically in the Electronic Data Interchange (EDI) domain. It identifies a specific party in business message exchanges (such as order and invoice transmissions) and typically includes the assigning organization (nameAssigner) and the party name (partyName).</description></item>
+        /// <item><description>Description: Used specifically in the Electronic Data Interchange (EDI) domain. It identifies a specific party in business message exchanges (such as order and invoice transmissions) and typically includes the name-assigning authority (nameAssigner) and the party name (partyName).</description></item>
         /// </list>
         /// <ol start="6">
         /// <item><description>uniformResourceIdentifier (6): Uniform Resource Identifier (URI)</description></item>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description>Description: Directly binds to a server IP address. It is commonly used for internal systems without domain names, API servers, or specific services that can only be accessed through a public IP address. Note: Public IP certificates typically require strict Organization Validation (OV).</description></item>
         /// </list>
         /// <ol start="8">
-        /// <item><description>registeredID (8): registered ID (object identifier OID)</description></item>
+        /// <item><description>registeredID (8): registered ID (Object Identifier, OID)</description></item>
         /// </ol>
         /// <list type="bullet">
         /// <item><description>Example: 1.2.3.4.55.6.5.99, 2.5.29.17</description></item>
@@ -320,8 +320,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string SanValue { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. Default value: the name of the province, municipality, or autonomous region where the sub-CA certificate organization that issues this certificate is located.
-        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. Default value: the name of the province or state where the sub-CA certificate organization that issues this certificate is located.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the sub-CA certificate organization that issues this certificate is located.
+        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the sub-CA certificate organization that issues this certificate is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zhejiang</para>

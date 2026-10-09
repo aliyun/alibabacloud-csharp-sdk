@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CaIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the China CAS instance.</para>
+        /// <para>The zone ID of the China Application Security (CAS) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1f047318-0815-XXX-f7ceb76b5c0a</para>

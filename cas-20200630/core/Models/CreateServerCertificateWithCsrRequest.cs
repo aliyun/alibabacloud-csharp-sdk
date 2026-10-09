@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateServerCertificateWithCsrRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration time of the server certificate in UNIX timestamp format. Unit: seconds.</para>
+        /// <para>The expiration time of the server certificate in timestamp format. Unit: seconds.</para>
         /// <remarks>
-        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
+        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be set.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public long? AfterTime { get; set; }
 
         /// <summary>
-        /// <para>The key algorithm of the server certificate. The key algorithm is in the <c>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</c> format. Valid values:</para>
+        /// <para>The key algorithm of the server certificate. The key algorithm is in the <c>&lt;encryption algorithm&gt;_&lt;key length&gt;</c> format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>RSA_1024</b>: The signature algorithm is Sha256WithRSA.</description></item>
         /// <item><description><b>RSA_2048</b>: The signature algorithm is Sha256WithRSA.</description></item>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description><b>ECC_512</b>: The signature algorithm is Sha256WithECDSA.</description></item>
         /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
         /// </list>
-        /// <para>The encryption algorithm of the server certificate must be the same as that of the subordinate CA certificate, but the key length can be different. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</para>
+        /// <para>The encryption algorithm of the server certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the subordinate CA certificate.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the sub-CA certificate.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Algorithm { get; set; }
 
         /// <summary>
+        /// <para>The asynchronous processing flag. If the value is &quot;true&quot;, the backend service issues the certificate asynchronously.
+        /// After the request is submitted, you can call the ListClientCertificate operation to obtain the latest certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -54,9 +57,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public bool? AsynchronousFlag { get; set; }
 
         /// <summary>
-        /// <para>The issuance time of the server certificate in UNIX timestamp format. The default value is the time when you call this operation. Unit: seconds.</para>
+        /// <para>The issuance time of the server certificate in timestamp format. The default value is the time when you call this operation. Unit: seconds.</para>
         /// <remarks>
-        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
+        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be set.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The user-defined identifier, which serves as a unique key.</para>
+        /// <para>The custom identifier, which is a unique key.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em><b>e6bb538d538c70c01f81hfd3</b></em>*</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         /// <summary>
         /// <para>The validity period of the server certificate. Unit: days.
-        /// The <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters cannot all be empty. The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified. The following rules apply:</para>
+        /// The <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters cannot all be empty, and the <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be set. The following describes how to set this parameter:</para>
         /// <list type="bullet">
         /// <item><description><para>If you set the <b>Days</b> parameter, you can choose to set or not set the <b>BeforeTime</b> and <b>AfterTime</b> parameters.</para>
         /// </description></item>
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The validity period of the server certificate cannot exceed the validity period of the subordinate CA certificate. You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the validity period of the subordinate CA certificate.</description></item>
+        /// <item><description>The validity period of the server certificate cannot exceed the validity period of the sub-CA certificate. You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to view the validity period of the sub-CA certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,10 +154,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>Specifies whether to include the CRL address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: No. </para>
-        /// </description></item>
-        /// <item><description><para>1: Yes.</para>
-        /// </description></item>
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -167,9 +168,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>Specifies whether to immediately return the digital certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Does not return the certificate. This is the default value.</description></item>
-        /// <item><description><b>1</b>: Returns the certificate.</description></item>
-        /// <item><description><b>2</b>: Returns the certificate and its certificate chain.</description></item>
+        /// <item><description><b>0</b>: does not return the certificate. This is the default value.</description></item>
+        /// <item><description><b>1</b>: returns the certificate.</description></item>
+        /// <item><description><b>2</b>: returns the certificate and its certificate chain.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -181,7 +182,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         /// <summary>
         /// <para>The name of the city where the certificate organization is located. Chinese characters, English characters, and other characters are supported.
-        /// The default value is the name of the city where the organization of the subordinate CA certificate that issues this certificate is located.</para>
+        /// The default value is the name of the city where the organization of the sub-CA certificate that issues this certificate is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hangzhou</para>
@@ -221,9 +222,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string OrganizationUnit { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the subordinate CA certificate that issues this certificate.</para>
+        /// <para>The unique identifier of the sub-CA certificate that issues this certificate.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of the subordinate CA certificate.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of the sub-CA certificate.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -245,8 +246,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the organization of the subordinate CA certificate that issues this certificate is located.
-        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the organization of the subordinate CA certificate that issues this certificate is located.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the organization of the sub-CA certificate that issues this certificate is located.
+        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the organization of the sub-CA certificate that issues this certificate is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zhejiang</para>

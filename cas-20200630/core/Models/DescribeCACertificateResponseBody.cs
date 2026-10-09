@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public DescribeCACertificateResponseBodyCertificate Certificate { get; set; }
         public class DescribeCACertificateResponseBodyCertificate : TeaModel {
             /// <summary>
-            /// <para>The expiration date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration date of the CA certificate. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665819958000</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// <para>The issuance date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The issuance date of the CA certificate. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1634283958000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? CertIssuedCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum validity period for certificates issued by the CA, as specified by the certMaxTime of the CA.</para>
+            /// <para>The maximum validity period for certificates issued by the CA, specified by certMaxTime. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? CertMaxTime { get; set; }
 
             /// <summary>
-            /// <para>The number of remaining certificate quotas that can be allocated.</para>
+            /// <para>The number of remaining certificate quotas available for allocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CertificateType { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the hardware security module (HSM) cluster. (The CA is enabled through an HSM.)</para>
+            /// <para>The identifier of the hardware security module (HSM) cluster. (The CA is enabled by using an HSM.)</para>
             /// 
             /// <b>Example:</b>
             /// <para>XXX-id</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CountryCode { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the CRL, ranging from 1 to 365 days.</para>
+            /// <para>The CRL validity period, ranging from 1 to 365 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? CrlDay { get; set; }
 
             /// <summary>
-            /// <para>The certificate revocation list (CRL) status (enabled or disabled).</para>
+            /// <para>The certificate revocation list (CRL) status (enabling status).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Identifier { get; set; }
 
             /// <summary>
-            /// <para>The issuing authority of the CA. Valid values:</para>
+            /// <para>The issuing CA authority. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>local: private certificate.</description></item>
             /// <item><description>iTrusChina: compliant CA.</description></item>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string IssuerType { get; set; }
 
             /// <summary>
-            /// <para>The key index position in the HSM. (The CA is enabled through an HSM.)</para>
+            /// <para>The key index position in the HSM. (The CA is enabled by using an HSM.)</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? KeySize { get; set; }
 
             /// <summary>
-            /// <para>The name of the city where the organization associated with the CA certificate is located.</para>
+            /// <para>The city where the organization associated with the CA certificate is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -340,8 +340,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SignAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the CA certificate is located.
-            /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the CA certificate is located.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+            /// &lt;props=&quot;intl&quot;&gt;The province or state where the organization associated with the CA certificate is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhejiang</para>
@@ -367,13 +367,13 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The subject attributes of the CA certificate, which include the following information:</para>
             /// <list type="bullet">
-            /// <item><description><b>C</b>: the country code of the organization.</description></item>
-            /// <item><description><b>O</b>: the name of the organization.</description></item>
-            /// <item><description><b>OU</b>: the department of the organization.</description></item>
-            /// <item><description><b>L</b>: the city where the organization is located.
-            /// &lt;props=&quot;china&quot;&gt;- <b>ST</b>: the province, municipality, or autonomous region where the organization is located.
-            /// &lt;props=&quot;intl&quot;&gt;- <b>ST</b>: the province or state where the organization is located.</description></item>
-            /// <item><description><b>CN</b>: the common name or abbreviation of the organization.</description></item>
+            /// <item><description><b>C</b>: The country code of the organization.</description></item>
+            /// <item><description><b>O</b>: The name of the organization.</description></item>
+            /// <item><description><b>OU</b>: The department of the organization.</description></item>
+            /// <item><description><b>L</b>: The city where the organization is located.
+            /// &lt;props=&quot;china&quot;&gt;- <b>ST</b>: The province, municipality, or autonomous region where the organization is located.
+            /// &lt;props=&quot;intl&quot;&gt;- <b>ST</b>: The province or state where the organization is located.</description></item>
+            /// <item><description><b>CN</b>: The common name or abbreviation of the organization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

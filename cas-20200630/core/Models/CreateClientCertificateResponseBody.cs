@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C467B38-3910-447D-87BC-AC049166F216</para>

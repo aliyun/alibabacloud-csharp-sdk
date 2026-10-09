@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string CaInstanceStatus { get; set; }
 
+        /// <summary>
+        /// <para>The CA type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>uploadCA</para>
+        /// </summary>
         [NameInMap("CaType")]
         [Validation(Required=false)]
         public string CaType { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CrlUrl { get; set; }
 
         /// <summary>
-        /// <para>The hash code used to identify whether the CRL contains new revoked certificates.</para>
+        /// <para>The hash code used to identify whether new revoked certificates exist in the CRL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5481d1b1228fXXX40ee70dc8cd</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string HashCode { get; set; }
 
         /// <summary>
-        /// <para>The next update time of the CRL.</para>
+        /// <para>The next update time of the CRL. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1778688000000</para>

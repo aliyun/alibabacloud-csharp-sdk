@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateExternalCACertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the certificate.</para>
+        /// <para>The certificate content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CertificateChain { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the certificate.</para>
+        /// <para>The unique identifier of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</para>

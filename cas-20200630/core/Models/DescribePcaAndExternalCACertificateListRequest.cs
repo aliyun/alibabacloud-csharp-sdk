@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>One or more certificate identifiers, separated by commas.</para>
+        /// <para>The certificate identifiers. Separate multiple identifiers with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaa,bbb</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifiers { get; set; }
 
         /// <summary>
-        /// <para>The keyword for a fuzzy search on the name, domain name, and SAN fields.</para>
+        /// <para>The search keyword. Fuzzy search by name, domain name, or SANs is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. The default value is 50.</para>
+        /// <para>The number of records to display per page. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

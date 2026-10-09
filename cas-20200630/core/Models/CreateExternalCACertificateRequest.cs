@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateExternalCACertificateRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies API parameters that override content from the CSR or add information to the CA certificate.</para>
+        /// <para>Overrides CSR content or adds content to the CA certificate through API parameters.</para>
         /// </summary>
         [NameInMap("ApiPassthrough")]
         [Validation(Required=false)]
         public CreateExternalCACertificateRequestApiPassthrough ApiPassthrough { get; set; }
         public class CreateExternalCACertificateRequestApiPassthrough : TeaModel {
             /// <summary>
-            /// <para>Specifies the extensions for the CA certificate. If specified, these values override the corresponding extensions in the CSR or are added to the CA certificate.</para>
+            /// <para>The CA certificate extensions. If this value is specified, it overrides the extension values in the CSR or adds them to the CA certificate extensions.</para>
             /// </summary>
             [NameInMap("Extensions")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                 public List<string> ExtendedKeyUsages { get; set; }
 
                 /// <summary>
-                /// <para>The certificate path length constraint. For an end-entity CA, set this parameter to 0. A value of 0 indicates the CA will issue end-entity certificates.</para>
+                /// <para>The certificate path length constraint. For an EndEntity CA, this value must be set to 0, which means the current CA certificate is used to issue end entity certificates.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             }
 
             /// <summary>
-            /// <para>The subject information for the CA certificate. If specified, this value overwrites the SubjectDN from the CSR.</para>
+            /// <para>The subject information of the CA certificate. If this value is specified, it overrides the SubjectDN in the CSR.</para>
             /// </summary>
             [NameInMap("Subject")]
             [Validation(Required=false)]
             public CreateExternalCACertificateRequestApiPassthroughSubject Subject { get; set; }
             public class CreateExternalCACertificateRequestApiPassthroughSubject : TeaModel {
                 /// <summary>
-                /// <para>The name of the CA certificate.</para>
+                /// <para>The name of the current CA certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Testing CA</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                 public string CommonName { get; set; }
 
                 /// <summary>
-                /// <para>The two-letter country code (ISO 3166-1).</para>
+                /// <para>The country. Uses the ISO 3166-1 two-letter country code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                 public string Country { get; set; }
 
                 /// <summary>
-                /// <para>The city or region.</para>
+                /// <para>The city or locality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hangzhou</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                 public string Organization { get; set; }
 
                 /// <summary>
-                /// <para>The organizational subdivision, such as a department, team, project group, or branch.</para>
+                /// <para>The organizational unit within the organization, such as a department, team, project group, or branch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cloud Security</para>
@@ -113,12 +113,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         }
 
+        /// <summary>
+        /// <para>The maximum validity period for issued certificates, as specified by the certMaxTime of the CA. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("CertMaxTime")]
         [Validation(Required=false)]
         public int? CertMaxTime { get; set; }
 
         /// <summary>
-        /// <para>The certificate signing request (CSR). The CSR can contain information such as the SubjectDN and custom extensions for the CA certificate. The CA generates the SubjectKeyIdentifier, AuthorityKeyIdentifier, and CRLDistributionPoints extensions, ignoring any corresponding values in the CSR.</para>
+        /// <para>The certificate signing request. The CSR can contain the SubjectDN and custom extensions of the CA certificate. The SubjectKeyIdentifier, AuthorityKeyIdentifier, and CRLDistributionPoints certificate extensions are generated by the CA, and the values in the CSR are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST-----
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external subordinate CA instance.</para>
+        /// <para>The instance ID of the external subordinate CA instance to activate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas_deposit-cn-1234abcd</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -152,14 +158,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the certificate.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateExternalCACertificateRequestTags> Tags { get; set; }
         public class CreateExternalCACertificateRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag\&quot;s key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>database</para>
@@ -169,7 +175,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag\&quot;s value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -181,26 +187,21 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The certificate validity period. You can specify this using either relative or absolute time.</para>
+        /// <para>The certificate validity period. Both relative time and absolute time are supported.</para>
         /// <remarks>
-        /// <para>Relative time: Supported units are year, month, and day.</para>
+        /// <para>Relative time: Supports the units of year, month, and day.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>y - year</para>
-        /// </description></item>
-        /// <item><description><para>m - month</para>
-        /// </description></item>
-        /// <item><description><para>d - day</para>
-        /// </description></item>
+        /// <item><description>Year - y</description></item>
+        /// <item><description>Month - m</description></item>
+        /// <item><description>Day - d</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Absolute time: Use GMT time in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c> format.</para>
+        /// <para>Absolute time: Uses GMT time. Format: <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>To specify only the expiration time, use <c>$NotAfter</c>.</para>
-        /// </description></item>
-        /// <item><description><para>To specify both the start and expiration times, use <c>$NotBefore/$NotAfter</c>.</para>
-        /// </description></item>
+        /// <item><description>Specify the end time - <c>$NotAfter</c></description></item>
+        /// <item><description>Specify the start time and end time - <c>$NotBefore/$NotAfter</c></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
