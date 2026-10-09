@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulListPageRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</para>
+        /// <para>The CVE ID of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2022-44702</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CveId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to display per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+        /// <para>Specifies whether runtime application self-protection (RASP) is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: no.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: yes.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Not supported.</description></item>
+        /// <item><description><b>1</b>: Supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,21 +57,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>远程代码执行漏洞</para>
+        /// <para>Remote code execute vulnerability</para>
         /// </summary>
         [NameInMap("VulNameLike")]
         [Validation(Required=false)]
         public string VulNameLike { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerabilities. Valid values:</para>
+        /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cve</b>: Linux software vulnerability.</para>
-        /// </description></item>
-        /// <item><description><para><b>sys</b>: Windows system vulnerability.</para>
-        /// </description></item>
-        /// <item><description><para><b>app</b>: Application vulnerability that is detected by using web scanner.</para>
-        /// </description></item>
+        /// <item><description>cve: Linux software vulnerability</description></item>
+        /// <item><description>sys: Windows system vulnerability</description></item>
+        /// <item><description>app: application vulnerability</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

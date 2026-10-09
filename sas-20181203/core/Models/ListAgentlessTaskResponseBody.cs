@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListAgentlessTaskResponseBodyList> List { get; set; }
         public class ListAgentlessTaskResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The end timestamp of the task, in milliseconds.</para>
+            /// <para>The end timestamp of the task. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678895999999</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The extended information of the task. For image security fix subtasks, this field returns the selected vulnerability identifiers and the name of the fixed image. The keys include vulnerabilityIds and outputImageName.</para>
+            /// <para>The extended information of the task. For an image security fix subtask, this parameter returns the identifiers of the selected vulnerabilities and the name of the fixed image. The keys include vulnerabilityIds and outputImageName.</para>
             /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The amount of data scanned, in MB.</para>
+            /// <para>The amount of scanned data. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>154.11</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? MeasureSpace { get; set; }
 
             /// <summary>
-            /// <para>The task progress.</para>
+            /// <para>The progress of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The execution progress of the check item.</para>
+            /// <para>The execution progress of each check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;{\&quot;scaVul\&quot;:100,\&quot;binary\&quot;:100,\&quot;baseline\&quot;:100,\&quot;vul\&quot;:100,\&quot;webshell\&quot;:100,\&quot;script\&quot;:100,\&quot;sensitiveInfo\&quot;:100}&quot;</para>
@@ -114,13 +114,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ReportDownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The report status. Valid values:</para>
+            /// <para>The status of the report. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PREPARED</b>: Preparing.</description></item>
-            /// <item><description><b>RUNNING</b>: Running.</description></item>
-            /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
-            /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
-            /// <item><description><b>FAILED</b>: Failed.</description></item>
+            /// <item><description><b>PREPARED</b>: preparing</description></item>
+            /// <item><description><b>RUNNING</b>: running</description></item>
+            /// <item><description><b>SUCCESS</b>: successful</description></item>
+            /// <item><description><b>TIMEOUT</b>: timed out</description></item>
+            /// <item><description><b>FAILED</b>: failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ReportStatus { get; set; }
 
             /// <summary>
-            /// <para>The check result.</para>
+            /// <para>The detection result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp of the task, in milliseconds.</para>
+            /// <para>The start timestamp of the task. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672741657897</para>
@@ -151,12 +151,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The detection status. Valid values:</para>
+            /// <para>The status of the detection task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Detecting.</description></item>
-            /// <item><description><b>2</b>: Completed.</description></item>
-            /// <item><description><b>3</b>: Failed.</description></item>
-            /// <item><description><b>4</b>: Timed out.</description></item>
+            /// <item><description><b>1</b>: running</description></item>
+            /// <item><description><b>2</b>: completed</description></item>
+            /// <item><description><b>3</b>: failed</description></item>
+            /// <item><description><b>4</b>: timed out</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TargetType { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1538****</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListAgentlessTaskResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page in a paged query. This parameter implements paging.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paged query. This parameter implements paging.</para>
+            /// <para>The maximum number of entries to return per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. This ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1A975D03-5F49-5354-B2CB-3918D5DA****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page when using paging.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EventStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when using paging.</para>
+        /// <para>The maximum number of entries to display per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The running status of the machine. Valid values:</para>
+        /// <para>The machine running status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>monitoring</b>: Warning.</description></item>
-        /// <item><description><b>blocking</b>: Blocking.</description></item>
-        /// <item><description><b>studying</b>: Learning.</description></item>
-        /// <item><description><b>study_finish</b>: Learning completed.</description></item>
+        /// <item><description><b>monitoring</b>: warning in progress</description></item>
+        /// <item><description><b>blocking</b>: under control</description></item>
+        /// <item><description><b>studying</b>: learning in progress</description></item>
+        /// <item><description><b>study_finish</b>: learning completed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

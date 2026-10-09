@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ModifyPostPayModuleSwitchRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

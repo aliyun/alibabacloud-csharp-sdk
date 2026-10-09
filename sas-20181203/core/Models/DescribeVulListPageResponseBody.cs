@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeVulListPageResponseBodyData> Data { get; set; }
         public class DescribeVulListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</para>
+            /// <para>The CVE ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2022-42836</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CveId { get; set; }
 
             /// <summary>
-            /// <para>The extended field for Server Guard.</para>
+            /// <para>The Server Guard extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;relatedType\&quot;:[{\&quot;type\&quot;:\&quot;sys\&quot;}]}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExtAegis { get; set; }
 
             /// <summary>
-            /// <para>The primary key ID of the database.</para>
+            /// <para>The primary key ID in the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40586</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vulnerability was detected based on version comparison. Valid values:</para>
+            /// <para>Indicates whether version comparison is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: The vulnerability was detected based on version comparison.</para>
-            /// </description></item>
-            /// <item><description><para>0: The vulnerability was not detected based on version comparison.</para>
-            /// </description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>0: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,12 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsAegis { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</para>
+            /// <para>Indicates whether proof-of-concept (PoC) verification is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: The vulnerability was detected based on POC verification.</para>
-            /// </description></item>
-            /// <item><description><para>0: The vulnerability was not detected based on POC verification.</para>
-            /// </description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>0: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsSas { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vulnerability.</para>
+            /// <para>The ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVD-2018-8218</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OtherId { get; set; }
 
             /// <summary>
-            /// <para>The time when the vulnerability was disclosed.</para>
+            /// <para>The release time in UTC (ISO 8601 format), for example, 2022-12-13T08:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-13T08:00Z</para>
@@ -102,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Windows 终端远程代码执行漏洞</para>
+            /// <para>Windows Terminal remote code execute vulnerability</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4347E985-6E64-467B-96EC-30D4EA9E32FB</para>
@@ -121,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

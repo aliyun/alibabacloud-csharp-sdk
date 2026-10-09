@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

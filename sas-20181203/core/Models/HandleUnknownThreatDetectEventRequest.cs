@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> EventIdList { get; set; }
 
+        /// <summary>
+        /// <para>The handling remarks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Confirmed and handled</para>
+        /// </summary>
         [NameInMap("HandleRemark")]
         [Validation(Required=false)]
         public string HandleRemark { get; set; }

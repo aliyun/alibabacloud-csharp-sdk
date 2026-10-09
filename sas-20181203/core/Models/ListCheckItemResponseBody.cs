@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListCheckItemResponseBodyCheckItems> CheckItems { get; set; }
         public class ListCheckItemResponseBodyCheckItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the check item.</para>
+            /// <para>The check item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>The name of the check item.</para>
+            /// <para>The check item name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPv4 Access Control</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckType { get; set; }
 
             /// <summary>
-            /// <para>The list of custom check configuration information.</para>
+            /// <para>The list of user-defined check configuration information.</para>
             /// </summary>
             [NameInMap("CustomConfigs")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom check configuration.</para>
+                /// <para>The name of the user-defined check configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IPList</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the custom check configuration.</para>
+                /// <para>The display name of the user-defined check configuration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>IP List</para>
+                /// <para>IP list</para>
                 /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The description of the check item.</para>
+            /// <para>The check item description.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public ListCheckItemResponseBodyCheckItemsDescription Description { get; set; }
             public class ListCheckItemResponseBodyCheckItemsDescription : TeaModel {
                 /// <summary>
-                /// <para>The type of the check description property. Valid values:</para>
+                /// <para>The type of the check description attribute. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>text</b>: text</description></item>
                 /// </list>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The text content when the description type of the check item risk is text.</para>
+                /// <para>The text content when the check item risk description type is text.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Checks whether strict access control policies are configured. Requirements: 1. If no blacklists and whitelist are configured, configure a whitelist first. 2. If a blacklist is configured, find the blacklist in the list of access control policies. We recommend that you do not configure an empty blacklist. 3. If a whitelist is configured, find the whitelist in the list of access control policies. We recommend that you do not configure an empty whitelist. Make sure that the whitelist does not contain 0.0.0.0. You can add the following IP addresses to the whitelist: ${IPList}.</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The estimated number of authorizations that the check item will consume.</para>
+            /// <para>The estimated number of licenses that the check item will consume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -151,6 +151,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? EstimatedCount { get; set; }
 
+            /// <summary>
+            /// <para>The estimated number of instances affected by the check item.</para>
+            /// </summary>
             [NameInMap("InstanceEstimatedCount")]
             [Validation(Required=false)]
             public int? InstanceEstimatedCount { get; set; }
@@ -158,29 +161,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The asset subtype of the cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If <b>InstanceType</b> is set to <b>ECS</b>, valid values of this parameter:<list type="bullet">
+            /// <item><description>When <b>InstanceType</b> is set to <b>ECS</b>, valid values are:<list type="bullet">
             /// <item><description><b>INSTANCE</b></description></item>
             /// <item><description><b>DISK</b></description></item>
             /// <item><description><b>SECURITY_GROUP</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>If <b>InstanceType</b> is set to <b>ACR</b>, valid values of this parameter:<list type="bullet">
+            /// <item><description>When <b>InstanceType</b> is set to <b>ACR</b>, valid values are:<list type="bullet">
             /// <item><description><b>REPOSITORY_ENTERPRISE</b></description></item>
             /// <item><description><b>REPOSITORY_PERSON</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>If <b>InstanceType</b> is set to <b>RAM</b>, valid values of this parameter:<list type="bullet">
+            /// <item><description>When <b>InstanceType</b> is set to <b>RAM</b>, valid values are:<list type="bullet">
             /// <item><description><b>ALIAS</b></description></item>
             /// <item><description><b>USER</b></description></item>
             /// <item><description><b>POLICY</b></description></item>
             /// <item><description><b>GROUP</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>If <b>InstanceType</b> is set to <b>WAF</b>, valid values of this parameter:<list type="bullet">
+            /// <item><description>When <b>InstanceType</b> is set to <b>WAF</b>, valid values are:<list type="bullet">
             /// <item><description><b>DOMAIN</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>If <b>InstanceType</b> is set to other values, valid values of this parameter:<list type="bullet">
+            /// <item><description>When <b>InstanceType</b> is set to other values, valid values are:<list type="bullet">
             /// <item><description><b>INSTANCE</b></description></item>
             /// </list>
             /// </description></item>
@@ -198,21 +201,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>ECS</b>: Elastic Compute Service server</description></item>
             /// <item><description><b>SLB</b>: load balancing</description></item>
-            /// <item><description><b>RDS</b>: ApsaraDB RDS database</description></item>
-            /// <item><description><b>MONGODB</b>: ApsaraDB for MongoDB database</description></item>
-            /// <item><description><b>KVSTORE</b>: ApsaraDB for Redis database</description></item>
+            /// <item><description><b>RDS</b>: RDS database</description></item>
+            /// <item><description><b>MONGODB</b>: MongoDB database</description></item>
+            /// <item><description><b>KVSTORE</b>: Redis database</description></item>
             /// <item><description><b>ACR</b>: ACR</description></item>
             /// <item><description><b>CSK</b>: CSK</description></item>
             /// <item><description><b>VPC</b>: VPC</description></item>
             /// <item><description><b>ACTIONTRAIL</b>: ActionTrail</description></item>
             /// <item><description><b>CDN</b>: CDN</description></item>
-            /// <item><description><b>CAS</b>: Certificate Management Service (formerly SSL Certificates)</description></item>
-            /// <item><description><b>RDC</b>: Apsara Devops</description></item>
+            /// <item><description><b>CAS</b>: SSL Certificates Service (formerly Digital Certificate Management Service)</description></item>
+            /// <item><description><b>RDC</b>: Yunxiao</description></item>
             /// <item><description><b>RAM</b>: RAM</description></item>
-            /// <item><description><b>DDOS</b>: distributed deny-of-service</description></item>
+            /// <item><description><b>DDOS</b>: distributed denial of service</description></item>
             /// <item><description><b>WAF</b>: WAF</description></item>
-            /// <item><description><b>OSS</b>: Access Control</description></item>
-            /// <item><description><b>POLARDB</b>: POLARDB</description></item>
+            /// <item><description><b>OSS</b>: access control</description></item>
+            /// <item><description><b>POLARDB</b>: PolarDB</description></item>
             /// <item><description><b>POSTGRESQL</b>: PostgreSQL</description></item>
             /// <item><description><b>MSE</b>: MSE</description></item>
             /// <item><description><b>NAS</b>: NAS</description></item>
@@ -230,9 +233,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HIGH</b>: high</description></item>
-            /// <item><description><b>MEDIUM</b>: medium</description></item>
-            /// <item><description><b>LOW</b>: low</description></item>
+            /// <item><description><b>HIGH</b>: high risk</description></item>
+            /// <item><description><b>MEDIUM</b>: medium risk</description></item>
+            /// <item><description><b>LOW</b>: low risk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +246,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The list of section IDs associated with the check item.</para>
+            /// <para>The list of sections associated with the check item.</para>
             /// </summary>
             [NameInMap("SectionIds")]
             [Validation(Required=false)]
@@ -253,7 +256,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The cloud asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-            /// <item><description><b>1</b>: asset outside the cloud</description></item>
+            /// <item><description><b>1</b>: non-cloud asset</description></item>
             /// <item><description><b>2</b>: IDC asset</description></item>
             /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: other cloud assets</description></item>
             /// <item><description><b>8</b>: simple application server</description></item>
@@ -269,14 +272,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page information in a paged query.</para>
+        /// <para>The page information for a paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListCheckItemResponseBodyPageInfo PageInfo { get; set; }
         public class ListCheckItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page in a paged query.</para>
+            /// <para>The number of entries displayed on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -296,7 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -306,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of query results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>149</para>
@@ -318,7 +321,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. This is a unique identifier generated by Alibaba Cloud for the request. You can use it to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9F4E6157-9600-5588-86B9-38F09067****</para>

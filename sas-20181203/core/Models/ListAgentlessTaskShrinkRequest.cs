@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class ListAgentlessTaskRequest : TeaModel {
+    public class ListAgentlessTaskShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The page number of the current page in a paging query.</para>
         /// 
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </summary>
         [NameInMap("TaskIdList")]
         [Validation(Required=false)]
-        public List<string> TaskIdList { get; set; }
+        public string TaskIdListShrink { get; set; }
 
         /// <summary>
         /// <para>The UUID of the server to query.</para>

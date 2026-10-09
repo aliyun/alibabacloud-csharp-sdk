@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePostPaidBindRelRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically bind new assets. Valid values:</para>
+        /// <para>Specifies whether to automatically bind newly added assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The edition that is automatically bound when new assets are added. Valid values:</para>
+        /// <para>The edition to automatically bind when new assets are added. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBindVersion { get; set; }
 
         /// <summary>
-        /// <para>The binding action parameter.</para>
+        /// <para>The action parameters for the binding operation.</para>
         /// </summary>
         [NameInMap("BindAction")]
         [Validation(Required=false)]
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether to bind all servers. Default value: <b>false</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Bind all servers.</description></item>
-            /// <item><description><b>false</b>: Do not bind all servers.</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FreeType { get; set; }
 
             /// <summary>
-            /// <para>The list of server UUIDs.</para>
+            /// <para>The list of UUIDs of the specified servers.</para>
             /// </summary>
             [NameInMap("UuidList")]
             [Validation(Required=false)]
             public List<string> UuidList { get; set; }
 
             /// <summary>
-            /// <para>The protection edition of Security Center to bind. Valid values:  </para>
+            /// <para>The Security Center protection edition to bind. Valid values:  </para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition </description></item>
             /// <item><description><b>3</b>: Enterprise Edition</description></item>
@@ -95,23 +95,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the cloud service. Valid values:</para>
+        /// <para>The abbreviated name of the cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sas</b>: Security Center</description></item>
+        /// <item><description><b>sas</b>: Security Center.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ProductCode")]
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly upgrade the edition.</para>
+        /// <para>Specifies whether to force an edition upgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

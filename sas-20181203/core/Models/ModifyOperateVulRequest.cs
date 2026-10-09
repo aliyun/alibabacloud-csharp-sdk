@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token used to ensure request idempotence. Use a different token for each request. Only ASCII characters are supported. The value can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The source identifier of the request. Set the value to <b>sas</b>.</para>
+        /// <para>The source identifier of the request. Set this parameter to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -37,8 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The information about the vulnerability to handle. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
         /// <item><description><b>name</b>: The name of the vulnerability.</description></item>
-        /// <item><description><b>uuid</b>: The UUID of the server on which the vulnerability is detected.</description></item>
-        /// <item><description><b>tag</b>: The tag of the vulnerability. Valid values:<list type="bullet">
+        /// <item><description><b>uuid</b>: The UUID of the server that has the vulnerability.</description></item>
+        /// <item><description><b>tag</b>: The label of the vulnerability. Valid values:<list type="bullet">
         /// <item><description><b>oval</b>: Linux software vulnerability</description></item>
         /// <item><description><b>system</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
@@ -46,17 +49,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</para>
+        /// <para>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<list type="bullet">
+        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. Set this parameter only when handling Windows system vulnerabilities. You can ignore this parameter for other vulnerability types. Valid values:<list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</para>
+        /// <para>Batch processing is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,10 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The reason for ignoring the vulnerability.</para>
-        /// <remarks>
-        /// <para>This parameter is required only when the operation type is <b>ignore</b> (that is, <b>OperateType</b> is set to <b>vul_ignore</b>).</para>
-        /// </remarks>
+        /// <para>The reason for ignoring the vulnerability. This parameter is required only when the operation is set to <b>ignore</b> (that is, <b>OperateType</b> is set to <b>vul_ignore</b>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>not operate</para>
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <para>The ID of the Alibaba Cloud account associated with a member account in the resource directory.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
@@ -109,17 +109,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability to handle. Valid values:</para>
+        /// <para>The type of vulnerability to handle. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
-        /// <item><description><b>app</b>: application vulnerability</description></item>
-        /// <item><description><b>sca</b>: software constituency parsing vulnerability</description></item>
+        /// <item><description><b>emg</b>: Emergency vulnerability</description></item>
+        /// <item><description><b>app</b>: Application vulnerability</description></item>
+        /// <item><description><b>sca</b>: Software constituency parsing vulnerability</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Emergency vulnerabilities (emg), application vulnerabilities (app), and software constituency parsing vulnerabilities (sca) do not support the vulnerability fix operation. You cannot execute the fix operation for these types.</para>
+        /// <para>Fix operations are not supported for emergency vulnerabilities (emg), application vulnerabilities (app), or software constituency parsing vulnerabilities (sca). These vulnerability types do not support the execute vulnerability fix operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

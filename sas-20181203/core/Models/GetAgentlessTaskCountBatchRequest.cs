@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetType { get; set; }
 
         /// <summary>
-        /// <para>The list of resource UUIDs to query. The list can contain 1 to 100 elements.</para>
+        /// <para>The list of UUIDs of the resources to query. You can specify 1 to 100 UUIDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

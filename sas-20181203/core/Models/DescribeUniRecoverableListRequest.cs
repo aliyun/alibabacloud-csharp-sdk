@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUniRecoverableListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The number of the page from which query results start to be displayed. Default value: <b>1</b>. This value indicates that the results start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when using paging. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</para>
+        /// <para>The maximum number of entries to display per page in a paged query. The default number of entries per page is 20. If PageSize is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Set PageSize to a non-empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the anti-ransomware backup policy for the database.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

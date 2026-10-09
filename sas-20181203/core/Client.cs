@@ -3593,7 +3593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds processes for intelligent behavior analytics.</para>
+        /// <para>Adds a process to behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3647,7 +3647,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds processes for intelligent behavior analytics.</para>
+        /// <para>Adds a process to behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3701,7 +3701,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds processes for intelligent behavior analytics.</para>
+        /// <para>Adds a process to behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3719,7 +3719,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds processes for intelligent behavior analytics.</para>
+        /// <para>Adds a process to behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14409,8 +14409,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a free trial of Security Center.</para>
+        /// <para>Starts a Security Center trial.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateSasTrialRequest
@@ -14483,8 +14488,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a free trial of Security Center.</para>
+        /// <para>Starts a Security Center trial.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateSasTrialRequest
@@ -14557,8 +14567,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a free trial of Security Center.</para>
+        /// <para>Starts a Security Center trial.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSasTrialRequest
@@ -14575,8 +14590,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a free trial of Security Center.</para>
+        /// <para>Starts a Security Center trial.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSasTrialRequest
@@ -31165,12 +31185,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
+        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31260,12 +31280,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
+        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31355,12 +31375,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
+        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31378,12 +31398,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
+        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59741,7 +59761,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about baseline check policies.</para>
+        /// <para>Queries baseline check policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59795,7 +59815,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about baseline check policies.</para>
+        /// <para>Queries baseline check policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59849,7 +59869,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about baseline check policies.</para>
+        /// <para>Queries baseline check policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59867,7 +59887,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about baseline check policies.</para>
+        /// <para>Queries baseline check policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66341,7 +66361,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vulnerabilities that can be detected.</para>
+        /// <para>Queries the list of vulnerabilities supported for detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66403,7 +66423,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vulnerabilities that can be detected.</para>
+        /// <para>Queries the list of vulnerabilities supported for detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66465,7 +66485,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vulnerabilities that can be detected.</para>
+        /// <para>Queries the list of vulnerabilities supported for detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66483,7 +66503,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vulnerabilities that can be detected.</para>
+        /// <para>Queries the list of vulnerabilities supported for detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74101,12 +74121,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// <para>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74154,12 +74174,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// <para>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74207,12 +74227,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// <para>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74230,12 +74250,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</para>
+        /// <para>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -77337,7 +77357,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</para>
+        /// <para>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77379,7 +77399,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</para>
+        /// <para>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77421,7 +77441,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</para>
+        /// <para>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77439,7 +77459,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</para>
+        /// <para>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -88437,7 +88457,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on intelligent behavior analytics.</para>
+        /// <para>Retrieves behavior analytics statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -88471,7 +88491,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on intelligent behavior analytics.</para>
+        /// <para>Retrieves behavior analytics statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -88505,7 +88525,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on intelligent behavior analytics.</para>
+        /// <para>Retrieves behavior analytics statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -88523,7 +88543,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on intelligent behavior analytics.</para>
+        /// <para>Retrieves behavior analytics statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90229,7 +90249,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles alerting from intelligent behavior analytics.</para>
+        /// <para>Handles alerts for behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90279,7 +90299,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles alerting from intelligent behavior analytics.</para>
+        /// <para>Handles alerts for behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90329,7 +90349,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles alerting from intelligent behavior analytics.</para>
+        /// <para>Handles alerts for behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90347,7 +90367,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles alerting from intelligent behavior analytics.</para>
+        /// <para>Handles alerts for behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -92229,8 +92249,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query agentless detection assets.</para>
+        /// <para>Queries agentless detection assets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of assets for agentless detection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentlessAssetRequest
@@ -92303,8 +92328,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query agentless detection assets.</para>
+        /// <para>Queries agentless detection assets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of assets for agentless detection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentlessAssetRequest
@@ -92377,8 +92407,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query agentless detection assets.</para>
+        /// <para>Queries agentless detection assets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of assets for agentless detection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentlessAssetRequest
@@ -92395,8 +92430,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query agentless detection assets.</para>
+        /// <para>Queries agentless detection assets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of assets for agentless detection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentlessAssetRequest
@@ -93053,10 +93093,10 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of agentless detection tasks.</para>
+        /// <para>Retrieves a list of agentless detection tasks.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListAgentlessTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -93066,9 +93106,15 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// ListAgentlessTaskResponse
         /// </returns>
-        public ListAgentlessTaskResponse ListAgentlessTaskWithOptions(ListAgentlessTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAgentlessTaskResponse ListAgentlessTaskWithOptions(ListAgentlessTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentlessTaskShrinkRequest request = new ListAgentlessTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "TaskIdList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
@@ -93125,6 +93171,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["TaskIdList"] = request.TaskIdListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
@@ -93151,10 +93201,10 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of agentless detection tasks.</para>
+        /// <para>Retrieves a list of agentless detection tasks.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListAgentlessTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -93164,9 +93214,15 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// ListAgentlessTaskResponse
         /// </returns>
-        public async Task<ListAgentlessTaskResponse> ListAgentlessTaskWithOptionsAsync(ListAgentlessTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAgentlessTaskResponse> ListAgentlessTaskWithOptionsAsync(ListAgentlessTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentlessTaskShrinkRequest request = new ListAgentlessTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "TaskIdList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
@@ -93224,6 +93280,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["TaskId"] = request.TaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["TaskIdList"] = request.TaskIdListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["Uuid"] = request.Uuid;
@@ -93249,7 +93309,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of agentless detection tasks.</para>
+        /// <para>Retrieves a list of agentless detection tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93267,7 +93327,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of agentless detection tasks.</para>
+        /// <para>Retrieves a list of agentless detection tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95345,7 +95405,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
+        /// <para>Retrieves the list of check items that support custom configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95399,7 +95459,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
+        /// <para>Retrieves the list of check items that support custom configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95453,7 +95513,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
+        /// <para>Retrieves the list of check items that support custom configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95471,7 +95531,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
+        /// <para>Retrieves the list of check items that support custom configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97337,7 +97397,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of cloud service assets.</para>
+        /// <para>Retrieves the asset list of cloud products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97411,7 +97471,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of cloud service assets.</para>
+        /// <para>Retrieves the asset list of cloud products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97485,7 +97545,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of cloud service assets.</para>
+        /// <para>Retrieves the asset list of cloud products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97503,7 +97563,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of cloud service assets.</para>
+        /// <para>Retrieves the asset list of cloud products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -114653,7 +114713,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs emergency vulnerability detection.</para>
+        /// <para>Runs an emergency vulnerability detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -114715,7 +114775,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs emergency vulnerability detection.</para>
+        /// <para>Runs an emergency vulnerability detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -114777,7 +114837,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs emergency vulnerability detection.</para>
+        /// <para>Runs an emergency vulnerability detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -114795,7 +114855,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs emergency vulnerability detection.</para>
+        /// <para>Runs an emergency vulnerability detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117093,7 +117153,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117163,7 +117223,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117233,7 +117293,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117251,7 +117311,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -122929,7 +122989,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a global switch based on the specified type.</para>
+        /// <para>Sets the global switch based on the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -122991,7 +123051,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a global switch based on the specified type.</para>
+        /// <para>Sets the global switch based on the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -123053,7 +123113,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a global switch based on the specified type.</para>
+        /// <para>Sets the global switch based on the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -123071,7 +123131,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a global switch based on the specified type.</para>
+        /// <para>Sets the global switch based on the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137465,7 +137525,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
+        /// <para>Manages multi-account authorization by editing allocation assignments in the administrator account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137507,7 +137567,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
+        /// <para>Manages multi-account authorization by editing allocation assignments in the administrator account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137549,7 +137609,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
+        /// <para>Manages multi-account authorization by editing allocation assignments in the administrator account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137567,7 +137627,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
+        /// <para>Manages multi-account authorization by editing allocation assignments in the administrator account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138777,7 +138837,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138831,7 +138891,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138885,7 +138945,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138903,7 +138963,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to the specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">

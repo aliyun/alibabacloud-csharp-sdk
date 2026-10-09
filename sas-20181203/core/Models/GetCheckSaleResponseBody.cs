@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSaleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The sales information of cloud service configuration check.</para>
+        /// <para>The sales information for cloud product configuration checks.</para>
         /// </summary>
         [NameInMap("CheckSale")]
         [Validation(Required=false)]
         public GetCheckSaleResponseBodyCheckSale CheckSale { get; set; }
         public class GetCheckSaleResponseBodyCheckSale : TeaModel {
             /// <summary>
-            /// <para>The number of consumed authorized quotas.</para>
+            /// <para>The number of consumed authorized assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -26,24 +26,48 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? ConsumeCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of consumed instance authorized assets for cloud platform configuration checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InstanceConsumeCount")]
             [Validation(Required=false)]
             public long? InstanceConsumeCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of instance resources for cloud platform configuration checks in the most recent billing cycle under the hybrid billing mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InstanceHybridPostLatestCycledResourceCount")]
             [Validation(Required=false)]
             public long? InstanceHybridPostLatestCycledResourceCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of instance authorized assets consumed on a pay-as-you-go basis for cloud platform configuration checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InstancePostConsumeCount")]
             [Validation(Required=false)]
             public long? InstancePostConsumeCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of purchased instance authorized assets for cloud platform configuration checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InstancePurchaseCount")]
             [Validation(Required=false)]
             public long? InstancePurchaseCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released (July 7, 2023). Valid values:</para>
+            /// <para>Indicates whether the user was using the cloud product configuration check feature before the feature became commercially available (July 7, 2023). Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: The user is an existing user.</description></item>
             /// <item><description><b>false</b>: The user is not an existing user.</description></item>
@@ -57,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? LoyalUser { get; set; }
 
             /// <summary>
-            /// <para>The number of purchased authorized quotas.</para>
+            /// <para>The number of purchased authorized assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -69,9 +93,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The sales user type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Full-feature user. The user can use all check items.</description></item>
-            /// <item><description><b>2</b>: Upgrade-required user. The user can use only the check items that were available before the sales feature was released (July 7, 2023).</description></item>
-            /// <item><description><b>3</b>: Purchase-required user. The user cannot use the cloud service configuration check feature.</description></item>
+            /// <item><description><b>1</b>: full-feature user. The user can use all check items.</description></item>
+            /// <item><description><b>2</b>: user who needs to upgrade. The user can only use check items that were available before the feature became commercially available (July 7, 2023).</description></item>
+            /// <item><description><b>3</b>: user who needs to purchase. The user cannot use the cloud product configuration check feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. The China Cloud generates a unique identifier for the request, which can be used for troubleshooting and diagnostics.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>

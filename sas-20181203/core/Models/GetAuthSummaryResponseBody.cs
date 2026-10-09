@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAuthSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether on-demand authorization purchase is allowed during initial purchase. Valid values:</para>
+        /// <para>Specifies whether pay-as-you-go authorization is allowed when purchasing. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Not allowed.</description></item>
         /// <item><description><b>1</b>: Allowed.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AllowPartialBuy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether upgrading to on-demand authorization purchase is allowed during an upgrade. Valid values:</para>
+        /// <para>Specifies whether upgrading to pay-as-you-go authorization is allowed during an upgrade. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Not allowed.</description></item>
         /// <item><description><b>1</b>: Allowed.</description></item>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AllowUpgradePartialBuy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether immediate unbinding of all bound assets is allowed. Valid values:</para>
+        /// <para>Specifies whether immediately unbinding all bound assets is allowed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AllowUserUnbind { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether new subscription assets are automatically bound when the host and container security subscription service is activated. Valid values:</para>
+        /// <para>Specifies whether newly added assets are automatically bound when you activate the subscription-based host and container security service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether cluster nodes require agent version verification. Valid values:</para>
+        /// <para>Specifies whether cluster nodes require machine version verification. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Not required.</description></item>
         /// <item><description><b>1</b>: Required.</description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ClusterNodeCheck { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether all assets are authorized by default. Valid values:</para>
+        /// <para>Specifies whether all assets are authorized by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
@@ -93,18 +93,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? DefaultAuthToAll { get; set; }
 
+        /// <summary>
+        /// <para>The EDR authorization summary information.</para>
+        /// </summary>
         [NameInMap("EdrSummary")]
         [Validation(Required=false)]
         public GetAuthSummaryResponseBodyEdrSummary EdrSummary { get; set; }
         public class GetAuthSummaryResponseBodyEdrSummary : TeaModel {
+            /// <summary>
+            /// <para>The number of EDR authorizations that have been bound.</para>
+            /// </summary>
             [NameInMap("BoundCount")]
             [Validation(Required=false)]
             public string BoundCount { get; set; }
 
+            /// <summary>
+            /// <para>The automatic binding status of hybrid-paid EDR instances.</para>
+            /// </summary>
             [NameInMap("HybridPaidAutoBind")]
             [Validation(Required=false)]
             public string HybridPaidAutoBind { get; set; }
 
+            /// <summary>
+            /// <para>The automatic binding status of pay-as-you-go EDR instances.</para>
+            /// </summary>
             [NameInMap("PostPaidAutoBind")]
             [Validation(Required=false)]
             public string PostPaidAutoBind { get; set; }
@@ -112,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether a pre-bindingasset configuration exists. Pre-binding refers to the asset binding configuration selected in advance during purchase. Valid values:</para>
+        /// <para>Specifies whether a pre-binding asset configuration exists. Pre-binding refers to the asset binding configuration selected in advance at the time of purchase. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Does not exist.</description></item>
         /// <item><description><b>1</b>: Exists.</description></item>
@@ -126,15 +138,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? HasPreBindSetting { get; set; }
 
         /// <summary>
-        /// <para>The highest purchased edition of Security Center. Valid values:</para>
+        /// <para>The highest edition of Security Center that you have purchased. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition.</description></item>
         /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>5</b>: Premium Edition.</description></item>
+        /// <item><description><b>5</b>: Advanced Edition.</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition.</description></item>
         /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// <item><description><b>10</b>: Value-added services only.<remarks>
-        /// <para>If a single edition is purchased, this value indicates the corresponding edition. If multiple editions are purchased, this value indicates the highest sub-edition.</para>
+        /// <para>If you purchased a single edition, this value indicates that edition. If you purchased multiple editions, this value indicates the highest edition among all sub-editions.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -147,10 +159,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HighestVersion { get; set; }
 
         /// <summary>
-        /// <para>The binding validity status. Valid values:</para>
+        /// <para>The binding effective status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: Valid.</description></item>
-        /// <item><description><b>INVALID_NODE_VERSION</b>: Invalid.</description></item>
+        /// <item><description><b>NORMAL</b>: valid.</description></item>
+        /// <item><description><b>INVALID_NODE_VERSION</b>: invalid.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,10 +173,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InvalidBindStatus { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether multiple versions exist. Valid values:</para>
+        /// <para>Specifies whether multiple versions exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No.</description></item>
-        /// <item><description><b>1</b>: Yes.</description></item>
+        /// <item><description><b>0</b>: Does not exist.</description></item>
+        /// <item><description><b>1</b>: Exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetAuthSummaryResponseBodyMachine Machine { get; set; }
         public class GetAuthSummaryResponseBodyMachine : TeaModel {
             /// <summary>
-            /// <para>The number of cores of assets that are bound with authorization.</para>
+            /// <para>The number of cores of assets that are bound to authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -192,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BindCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of bound assets.</para>
+            /// <para>The number of assets that are bound to authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -202,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BindEcsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cores of assets bound with pay-as-you-go authorization.</para>
+            /// <para>The number of cores of assets that are bound to pay-as-you-go authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -212,7 +224,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PostPaidBindCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets bound with pay-as-you-go authorization.</para>
+            /// <para>The number of assets that are bound to pay-as-you-go authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -242,7 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RiskEcsCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of asset cores.</para>
+            /// <para>The total number of cores of all assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -262,7 +274,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalEcsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cores of unbound assets.</para>
+            /// <para>The number of cores of assets that are not bound to authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -272,7 +284,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnBindCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unbound assets.</para>
+            /// <para>The number of assets that are not bound to authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -284,11 +296,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The protection edition of the host and container security pay-as-you-go service. This is the highest protection edition among all bound hosts. Valid values:  </para>
+        /// <para>The highest protection edition among all hosts bound to the pay-as-you-go host and container security service. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition. </description></item>
         /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>5</b>: Premium Edition.</description></item>
+        /// <item><description><b>5</b>: Advanced Edition.</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition.    </description></item>
         /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// </list>
@@ -301,7 +313,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPaidHighestVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic binding of new hosts is enabled for the host and container security pay-as-you-go service. Valid values:</para>
+        /// <para>Specifies whether newly added hosts are automatically bound to the pay-as-you-go host and container security service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -315,11 +327,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPaidHostAutoBind { get; set; }
 
         /// <summary>
-        /// <para>The edition to which new assets are automatically bound for the host and container security pay-as-you-go service. Valid values:</para>
+        /// <para>The edition to which newly added assets are automatically bound under the pay-as-you-go host and container security service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition. </description></item>
         /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>5</b>: Premium Edition.</description></item>
+        /// <item><description><b>5</b>: Advanced Edition.</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition.    </description></item>
         /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// </list>
@@ -332,18 +344,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPaidHostAutoBindVersion { get; set; }
 
         /// <summary>
-        /// <para>The service authorization statistics for the host and container security pay-as-you-go service.</para>
+        /// <para>The service authorization statistics for the pay-as-you-go host and container security service.</para>
         /// </summary>
         [NameInMap("PostPaidVersionSummary")]
         [Validation(Required=false)]
         public List<GetAuthSummaryResponseBodyPostPaidVersionSummary> PostPaidVersionSummary { get; set; }
         public class GetAuthSummaryResponseBodyPostPaidVersionSummary : TeaModel {
             /// <summary>
-            /// <para>The type of authorization consumed during binding. Valid values:</para>
+            /// <para>The type of authorization consumed when binding. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ASSET</b>: consumes authorized asset count.</description></item>
-            /// <item><description><b>CORE</b>: consumes authorized core count.</description></item>
-            /// <item><description><b>ASSET_AND_CORE</b>: consumes both authorized asset count and authorized core count.</description></item>
+            /// <item><description><b>ASSET</b>: consumes authorization units.</description></item>
+            /// <item><description><b>CORE</b>: consumes authorization cores.</description></item>
+            /// <item><description><b>ASSET_AND_CORE</b>: consumes both authorization units and authorization cores.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -353,24 +365,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AuthBindType { get; set; }
 
+            /// <summary>
+            /// <para>The number of free authorization cores.</para>
+            /// </summary>
             [NameInMap("FreeCoreCount")]
             [Validation(Required=false)]
             public int? FreeCoreCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of free authorization units.</para>
+            /// </summary>
             [NameInMap("FreeEcsCount")]
             [Validation(Required=false)]
             public int? FreeEcsCount { get; set; }
 
+            /// <summary>
+            /// <para>The type of free quota.</para>
+            /// </summary>
             [NameInMap("FreeType")]
             [Validation(Required=false)]
             public string FreeType { get; set; }
 
             /// <summary>
-            /// <para>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</para>
+            /// <para>The index of the current edition. A higher value indicates a higher edition. This field is used for sorting. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition. </description></item>
             /// <item><description><b>2</b>: Anti-virus Edition.    </description></item>
-            /// <item><description><b>3</b>: Premium Edition.</description></item>
+            /// <item><description><b>3</b>: Advanced Edition.</description></item>
             /// <item><description><b>4</b>: Enterprise Edition.</description></item>
             /// <item><description><b>5</b>: Ultimate Edition.</description></item>
             /// </list>
@@ -383,9 +404,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Index { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized cores that have been used.</para>
+            /// <para>The number of authorization cores that have been used.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -396,9 +417,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? UsedCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized assets that have been used.</para>
+            /// <para>The number of authorization units that have been used.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -409,11 +430,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? UsedEcsCount { get; set; }
 
             /// <summary>
-            /// <para>The pay-as-you-go edition bound to host assets. Valid values:  </para>
+            /// <para>The pay-as-you-go edition bound to the host asset. Valid values:  </para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition. </description></item>
             /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-            /// <item><description><b>5</b>: Premium Edition.</description></item>
+            /// <item><description><b>5</b>: Advanced Edition.</description></item>
             /// <item><description><b>6</b>: Anti-virus Edition.    </description></item>
             /// <item><description><b>7</b>: Ultimate Edition.</description></item>
             /// </list>
@@ -428,7 +449,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-***-B9270EF46038</para>
@@ -445,11 +466,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<GetAuthSummaryResponseBodyVersionSummary> VersionSummary { get; set; }
         public class GetAuthSummaryResponseBodyVersionSummary : TeaModel {
             /// <summary>
-            /// <para>The type of authorization consumed during binding. Valid values:</para>
+            /// <para>The type of authorization consumed when binding. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ASSET: consumes authorized asset count.</description></item>
-            /// <item><description>CORE: consumes authorized core count.</description></item>
-            /// <item><description>ASSET_AND_CORE: consumes both authorized asset count and authorized core count.</description></item>
+            /// <item><description>ASSET: consumes authorization units.</description></item>
+            /// <item><description>CORE: consumes authorization cores.</description></item>
+            /// <item><description>ASSET_AND_CORE: consumes both authorization units and authorization cores.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -460,11 +481,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthBindType { get; set; }
 
             /// <summary>
-            /// <para>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</para>
+            /// <para>The index of the current edition. A higher value indicates a higher edition. This field is used for sorting. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition. </description></item>
             /// <item><description><b>2</b>: Anti-virus Edition.    </description></item>
-            /// <item><description><b>3</b>: Premium Edition.</description></item>
+            /// <item><description><b>3</b>: Advanced Edition.</description></item>
             /// <item><description><b>4</b>: Enterprise Edition.</description></item>
             /// <item><description><b>5</b>: Ultimate Edition.</description></item>
             /// </list>
@@ -477,9 +498,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Index { get; set; }
 
             /// <summary>
-            /// <para>The total number of authorized cores.</para>
+            /// <para>The total number of authorization cores.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -490,9 +511,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCoreAuthCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of authorized assets for the current edition.</para>
+            /// <para>The total number of authorization units for the current edition.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -503,9 +524,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of authorized assets.</para>
+            /// <para>The total number of authorization units.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -516,9 +537,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalEcsAuthCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unused authorized assets.</para>
+            /// <para>The number of unused authorization units.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -529,9 +550,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnUsedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unused authorized cores.</para>
+            /// <para>The number of unused authorization cores.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -542,9 +563,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnusedCoreAuthCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unused authorized assets.</para>
+            /// <para>The number of unused authorization units.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -555,9 +576,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnusedEcsAuthCount { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized cores that have been used.</para>
+            /// <para>The number of authorization cores that have been used.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -568,9 +589,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UsedCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized assets that have been used.</para>
+            /// <para>The number of authorization units that have been used.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
+            /// <para>This parameter is valid when AuthBindType is set to ASSET or ASSET_AND_CORE.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -581,14 +602,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UsedEcsCount { get; set; }
 
             /// <summary>
-            /// <para>The purchased edition of Security Center. Valid values:  </para>
+            /// <para>The edition of Security Center that you have purchased. Valid values:  </para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition. </description></item>
             /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-            /// <item><description><b>5</b>: Premium Edition.</description></item>
+            /// <item><description><b>5</b>: Advanced Edition.</description></item>
             /// <item><description><b>6</b>: Anti-virus Edition.    </description></item>
             /// <item><description><b>7</b>: Ultimate Edition.   </description></item>
-            /// <item><description><b>8</b>: Multi-version.   </description></item>
+            /// <item><description><b>8</b>: Multiple editions.   </description></item>
             /// <item><description><b>10</b>: Value-added services only.</description></item>
             /// </list>
             /// 

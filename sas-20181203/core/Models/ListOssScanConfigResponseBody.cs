@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListOssScanConfigResponseBodyData> Data { get; set; }
         public class ListOssScanConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether all prefixes are matched.</para>
+            /// <para>Specifies whether all prefixes are matched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -26,10 +26,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? AllKeyPrefix { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to automatically add new buckets to the scan policy. Valid values: 0 (disabled) and 1 (enabled).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AutoAdd")]
             [Validation(Required=false)]
             public int? AutoAdd { get; set; }
 
+            /// <summary>
+            /// <para>The configuration name used when automatically adding buckets.</para>
+            /// </summary>
             [NameInMap("AutoAddConfigName")]
             [Validation(Required=false)]
             public string AutoAddConfigName { get; set; }
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> BucketNameList { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The scan of already decompressed files is not affected.</para>
+            /// <para>The maximum number of files to extract. The minimum value is 1 and the maximum value is 1000. If the maximum number of files is exceeded, the decompression operation stops immediately. Files that have already been extracted are still scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -62,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DecompressMaxFileCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of decompression layers when nested compressed files exist. The minimum value is 1 and the maximum value is 5. When the maximum decompression layer is exceeded, the decompression operation ends immediately. The scan of already decompressed files is not affected.</para>
+            /// <para>The maximum number of decompression layers for nested compressed archives. The minimum value is 1 and the maximum value is 5. If the maximum number of layers is exceeded, the decompression operation stops immediately. Files that have already been extracted are still scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -79,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> DecryptionList { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration is enabled. Valid values:</para>
+            /// <para>Specifies whether the configuration is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Enabled.</description></item>
             /// <item><description><b>0</b>: Disabled.</description></item>
@@ -93,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Enable { get; set; }
 
             /// <summary>
-            /// <para>The scan end time, in the HH:mm:ss format.</para>
+            /// <para>The detection end time in HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>06:00:00</para>
@@ -127,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> KeySuffixList { get; set; }
 
             /// <summary>
-            /// <para>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp in milliseconds. Only files whose last modification time is after this timestamp are scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724301769834</para>
@@ -137,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastModifiedStartTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last update.</para>
+            /// <para>The last update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1698388233883</para>
@@ -157,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether real-time incremental scan is enabled. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime do not take effect.</para>
+            /// <para>Specifies whether real-time incremental detection is enabled. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -167,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? RealTimeIncr { get; set; }
 
             /// <summary>
-            /// <para>The scan days. The number represents the day of the week.</para>
+            /// <para>The scan days. Each number represents a day of the week.</para>
             /// </summary>
             [NameInMap("ScanDayList")]
             [Validation(Required=false)]
@@ -188,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The scan start time, in the HH:mm:ss format.</para>
+            /// <para>The detection start time in HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListOssScanConfigResponseBodyPageInfo PageInfo { get; set; }
         public class ListOssScanConfigResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page in a paged query.</para>
+            /// <para>The current page number for paged queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -217,7 +226,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paged query.</para>
+            /// <para>The maximum number of entries displayed per page for paged queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -239,7 +248,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E10BAF1C-A6C5-51E2-866C-76D5922E****</para>

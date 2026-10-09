@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateCommonOverallConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token used to ensure request idempotence. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -41,9 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether asset configuration is required. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Required.</description></item>
-        /// <item><description><b>false</b>: Not required.<remarks>
-        /// <para>This parameter takes effect only when <b>config</b> is set to <b>on</b>.</para>
+        /// <item><description><b>true</b>: required</description></item>
+        /// <item><description><b>false</b>: not required<remarks>
+        /// <para>This value takes effect only when <b>config</b> is set to <b>on</b>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -68,31 +71,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>kdump_switch</b>: proactive defense optimization</description></item>
-        /// <item><description><b>threat_detect</b>: adaptive threat detection</description></item>
-        /// <item><description><b>suspicious_aggregation</b>: alert association</description></item>
+        /// <item><description><b>kdump_switch</b>: proactive defense optimization experience</description></item>
+        /// <item><description><b>threat_detect</b>: adaptive threat detection capability</description></item>
+        /// <item><description><b>suspicious_aggregation</b>: alert correlation</description></item>
         /// <item><description><b>alidetect</b>: file detection</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_38857</b>: Linux entry service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50858</b>: Linux web service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50859</b>: Linux entry service performs suspicious operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_38857</b>: Linux entry service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50858</b>: Linux web service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50859</b>: Linux entry service executes suspicious operations</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50862</b>: Linux Cloud Assistant advanced protection</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50867</b>: Linux malicious file implantation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50868</b>: Linux suspicious file implantation</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50867</b>: Linux implants malicious files</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50868</b>: Linux implants suspicious files</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_64025</b>: Linux entry service executes commands [enhanced mode]</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51229</b>: Windows browser service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51230</b>: Windows entry service performs suspicious operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51232</b>: Windows system process performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51233</b>: Windows Java service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51234</b>: Windows Office component performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51235</b>: Windows web service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52820</b>: Windows malicious file implantation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52826</b>: Windows entry service performs high-risk operations</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_55251</b>: Windows database service performs high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51229</b>: Windows browser service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51230</b>: Windows entry service executes suspicious operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51232</b>: Windows system process executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51233</b>: Windows Java service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51234</b>: Windows Office component executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51235</b>: Windows web service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52820</b>: Windows implants malicious files</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52826</b>: Windows entry service executes high-risk operations</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_55251</b>: Windows database service executes high-risk operations</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_63725</b>: Windows entry service implants suspicious scripts or binary files</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_3277</b>: Linux suspicious process startup</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50983</b>: Linux obfuscated commands</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50983</b>: Linux obfuscation commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51200</b>: Linux command line downloads and runs malicious files</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_71131</b>: Linux entry service performs suspicious behavior sequence</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_71131</b>: Linux entry service executes suspicious behavior sequences</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51225</b>: Windows PowerShell executes high-risk commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51226</b>: Windows PowerShell executes suspicious commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52821</b>: Windows suspicious process startup</description></item>
@@ -100,33 +103,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57340</b>: Windows command line downloads and runs malicious files</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_39659</b>: Windows sensitive registry key protection</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52816</b>: Windows high-risk account manipulation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54365</b>: Windows creates service auto-start items</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54366</b>: Windows creates high-risk auto-start items</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54367</b>: Windows creates scheduled task auto-start items</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54368</b>: Windows creates registry auto-start items</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54369</b>: Windows creates WMI auto-start items</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50869</b>: Linux privilege escalation to execute high-risk commands</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53272</b>: Linux kernel vulnerability exploitation for privilege escalation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54395</b>: Linux privilege escalation to read or write sensitive files</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57897</b>: Linux suspected privilege escalation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52825</b>: Windows privilege escalation to execute high-risk commands</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54365</b>: Windows creates service auto-start entry</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54366</b>: Windows creates high-risk auto-start entry</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54367</b>: Windows creates scheduled task auto-start entry</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54368</b>: Windows creates registry auto-start entry</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54369</b>: Windows creates WMI auto-start entry</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50869</b>: Linux unauthorized execution of high-risk commands</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53272</b>: Linux privilege escalation via kernel vulnerability</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54395</b>: Linux unauthorized read/write of sensitive files</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57897</b>: Linux suspected privilege escalation behavior</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52825</b>: Windows unauthorized execution of high-risk commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_5507</b>: Linux malicious driver</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50876</b>: Linux anti-security software</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50876</b>: Linux counters security software</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53168</b>: Linux process debugging</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54699</b>: Linux dynamic-link library hijacking</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_62981</b>: Linux security monitoring bypass</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52815</b>: Windows loads high-risk drivers</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52823</b>: Windows runs high-risk ARK tools</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54373</b>: Windows anti-security software</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54374</b>: Windows intrusion trace cleanup</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54265</b>: Linux PAM module hijacking</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54699</b>: Linux hijacks dynamic-link library</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_62981</b>: Linux bypasses security monitoring</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52815</b>: Windows loads high-risk driver</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52823</b>: Windows runs high-risk ARK tool</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54373</b>: Windows counters security software</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54374</b>: Windows clears intrusion traces</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54265</b>: Linux hijacks PAM module</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54953</b>: Linux HashDump attack</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54383</b>: Windows MimiKatz credential theft</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54384</b>: Windows HashDump attack</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50861</b>: Linux information reconnaissance</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52818</b>: Windows information reconnaissance</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54034</b>: Linux internal network scanning</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51228</b>: Windows high-risk lateral movement tools</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50861</b>: Linux information detection</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52818</b>: Windows information detection</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54034</b>: Linux internal network scan</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51228</b>: Windows high-risk lateral movement tool</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50870</b>: Linux reverse shell</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50873</b>: WebShell command execution</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51236</b>: Windows reverse shell</description></item>
@@ -134,10 +137,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50884</b>: Linux suspicious worm script behavior</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50885</b>: Linux malicious script behavior</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51201</b>: Linux ransomware</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51202</b>: Linux suspicious ransomware behavior</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_51202</b>: Linux suspected ransomware behavior</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52827</b>: Windows ransomware</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52828</b>: Windows suspicious ransomware behavior</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52829</b>: Windows system backup deletion behavior</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52828</b>: Windows suspected ransomware behavior</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52829</b>: Windows deletes system backup</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

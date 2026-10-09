@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectMachineResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The number of days the policy has been in effect.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("EffectDays")]
             [Validation(Required=false)]
             public long? EffectDays { get; set; }
@@ -50,16 +56,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// <para>The number of malicious processes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("MaliciousProcessCount")]
             [Validation(Required=false)]
             public long? MaliciousProcessCount { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>The number of normal events.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("NormalEventCount")]
             [Validation(Required=false)]
             [Obsolete]
             public long? NormalEventCount { get; set; }
 
+            /// <summary>
+            /// <para>The plug-in status.</para>
+            /// </summary>
             [NameInMap("PluginStatus")]
             [Validation(Required=false)]
             public string PluginStatus { get; set; }
@@ -74,16 +96,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ProcessCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of recent deviation behaviors.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RecentDeviationBehaviorCount")]
             [Validation(Required=false)]
             public long? RecentDeviationBehaviorCount { get; set; }
 
             /// <summary>
-            /// <para>The running status of the machine. Valid values:</para>
+            /// <para>The machine running status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>monitoring</b>: Warning.</description></item>
-            /// <item><description><b>blocking</b>: Blocking.</description></item>
-            /// <item><description><b>studying</b>: Learning.</description></item>
+            /// <item><description><b>monitoring</b>: warning in progress</description></item>
+            /// <item><description><b>blocking</b>: under control</description></item>
+            /// <item><description><b>studying</b>: learning in progress</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,6 +135,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string StudyMode { get; set; }
 
+            /// <summary>
+            /// <para>The number of remaining learning days.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("StudyRemainDays")]
             [Validation(Required=false)]
             public long? StudyRemainDays { get; set; }
@@ -141,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectMachineResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page when using paging.</para>
+            /// <para>The number of entries displayed on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -151,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page when using paging.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -161,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page when using paging.</para>
+            /// <para>The maximum number of entries to display per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

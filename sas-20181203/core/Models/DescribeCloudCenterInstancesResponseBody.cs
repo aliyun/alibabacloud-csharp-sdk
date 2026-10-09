@@ -17,7 +17,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeCloudCenterInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeCloudCenterInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>Indicates whether security alerts exist on the asset. Valid values:</para>
+            /// <para>Indicates whether the asset has security alerts. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b>: The asset has security alerts.</description></item>
+            /// <item><description><b>NO</b>: The asset has no security alerts.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NO</para>
@@ -28,6 +32,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The application ID.</para>
+            /// <remarks>
+            /// <para>This field is available only when <b>Vendor</b> is set to 9.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -38,6 +45,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The application name.</para>
+            /// <remarks>
+            /// <para>This field is available only when <b>Vendor</b> is set to 9.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>testAppName</para>
@@ -48,6 +58,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The type of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Cloud server.</description></item>
+            /// <item><description><b>1</b>: Load balancing.</description></item>
+            /// <item><description><b>2</b>: NAT gateway.</description></item>
+            /// <item><description><b>3</b>: ApsaraDB RDS database.</description></item>
+            /// <item><description><b>4</b>: ApsaraDB for MongoDB database.</description></item>
+            /// <item><description><b>5</b>: ApsaraDB for Redis database.</description></item>
+            /// <item><description><b>6</b>: Container image.</description></item>
+            /// <item><description><b>7</b>: Container.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetTypeName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the authorization was bound to the asset. Unit: milliseconds.</para>
+            /// <para>The timestamp when the license was bound to the asset, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1627974044000</para>
@@ -77,7 +97,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The authorization version of the asset. Valid values:</para>
+            /// <para>The license version of the asset. Valid values:
+            /// &lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Free Edition</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+            /// <item><description><b>5</b>: Advanced Edition</description></item>
+            /// <item><description><b>3</b>: Enterprise Edition</description></item>
+            /// <item><description><b>7</b>: Ultimate Edition</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Free Edition</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+            /// <item><description><b>5</b>: Advanced</description></item>
+            /// <item><description><b>3</b>: Enterprise Edition</description></item>
+            /// <item><description><b>7</b>: Ultimate Edition</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +123,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// <para>The authorization version name of the asset. Valid values:</para>
+            /// <para>The license version name of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Free Edition</description></item>
+            /// <item><description>Anti-virus Edition</description></item>
+            /// <item><description>Advanced Edition</description></item>
+            /// <item><description>Enterprise Edition</description></item>
+            /// <item><description>Ultimate Edition</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Ultimate Edition</para>
@@ -97,7 +140,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthVersionName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asset is bound to an authorization. Valid values:</para>
+            /// <para>Indicates whether the asset is bound to a license. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The asset is bound to a license.</description></item>
+            /// <item><description><b>false</b>: The asset is not bound to a license.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +154,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the tamper-proofing authorization is bound. Valid values:</para>
+            /// <para>Indicates whether the asset is bound to a tamper-proofing license. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>block</b>: Yes.</description></item>
+            /// <item><description><b>none</b>: No.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>block</para>
@@ -118,6 +169,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The online status of the client on the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b>: Online. The Agent client of the asset is <b>enabled</b>.</description></item>
+            /// <item><description><b>offline</b>: Offline. The Agent client of the asset is <b>disabled</b>.</description></item>
+            /// <item><description><b>pause</b>: Paused. The Agent client of the asset has <b>protection paused</b>.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -128,6 +184,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The sub-status of the client on the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b>: Online. The Agent client of the asset is <b>enabled</b>.</description></item>
+            /// <item><description><b>offline</b>: Offline. The Agent client of the asset is <b>disabled</b>.</description></item>
+            /// <item><description><b>pause</b>: Paused. The Agent client of the asset has <b>protection paused</b>.</description></item>
+            /// <item><description><b>uninstalled</b>: Not installed. The Agent client of the asset is <b>not installed</b>.</description></item>
+            /// <item><description><b>stopped</b>: Server stopped. The Agent client status indicates the <b>server is stopped</b>.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -177,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CpuInfo { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cluster was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the cluster was created, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1607365213000</para>
@@ -186,12 +249,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
+            /// <summary>
+            /// <para>The EDR license version.</para>
+            /// </summary>
             [NameInMap("EdrAuthVersion")]
             [Validation(Required=false)]
             public string EdrAuthVersion { get; set; }
 
             /// <summary>
             /// <para>The exposure status of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Not exposed.</description></item>
+            /// <item><description><b>1</b>: Exposed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -202,6 +272,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>Indicates whether the instance is an Alibaba Cloud asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Alibaba Cloud asset.</description></item>
+            /// <item><description><b>1</b>: Non-Alibaba Cloud asset.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -212,6 +286,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The asset vendor. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ALIYUN</b></description></item>
+            /// <item><description><b>OUT</b></description></item>
+            /// <item><description><b>IDC</b></description></item>
+            /// <item><description><b>Tencent</b></description></item>
+            /// <item><description><b>HUAWEICLOUD</b></description></item>
+            /// <item><description><b>Azure</b></description></item>
+            /// <item><description><b>AWS</b></description></item>
+            /// <item><description><b>ASK</b></description></item>
+            /// <item><description><b>TRIPARTITE</b></description></item>
+            /// <item><description><b>SAE</b></description></item>
+            /// <item><description><b>PAI</b></description></item>
+            /// <item><description><b>google</b></description></item>
+            /// <item><description><b>VOLCENGINE</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ASK</para>
@@ -220,6 +309,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string FlagName { get; set; }
 
+            /// <summary>
+            /// <para>The free quota type.</para>
+            /// </summary>
             [NameInMap("FreeType")]
             [Validation(Required=false)]
             public string FreeType { get; set; }
@@ -245,7 +337,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupTrace { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asset contains containers. Valid values:</para>
+            /// <para>Indicates whether the instance contains containers. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b>: The instance contains containers.</description></item>
+            /// <item><description><b>NO</b>: The instance does not contain containers.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>YES</para>
@@ -279,7 +375,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HealthCheckCount { get; set; }
 
             /// <summary>
-            /// <para>The importance of the asset. Valid values:</para>
+            /// <para>The importance level of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>2</b>: Important asset.</description></item>
+            /// <item><description><b>1</b>: General asset.</description></item>
+            /// <item><description><b>0</b>: Test asset.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -299,7 +400,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yztest-l***</para>
@@ -339,7 +440,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP address list of the system.</para>
+            /// <para>The list of IP addresses of the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.31.XX.XX,172.171.XX.XX</para>
@@ -359,7 +460,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Kernel { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the client last went online. Unit: milliseconds.</para>
+            /// <para>The timestamp of the last time the client came online, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637592907000</para>
@@ -421,7 +522,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OsName { get; set; }
 
             /// <summary>
-            /// <para>The number of pod groups.</para>
+            /// <para>The number of pods.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -431,7 +532,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PodCount { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the protection edition bound to the current asset. Valid values:</para>
+            /// <para>The billing method of the protection edition attached to the current asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Subscription.</description></item>
+            /// <item><description><b>1</b>: Pay-as-you-go.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -441,7 +546,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PostPaidFlag { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The ID of the region to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-cm***-***</para>
@@ -451,7 +556,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The ID of the region where the asset resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hanghzou</para>
@@ -471,9 +576,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>Statistics on risk items of the asset. The value is in JSON format and contains the following fields:</para>
+            /// <para>The statistics of risk items on the asset. The value is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>account</b>: The number of accounts with unusual logons and successful brute-force attacks.</description></item>
+            /// <item><description><b>account</b>: The number of accounts with unusual logons or successful brute-force attacks.</description></item>
             /// <item><description><b>appNum</b>: The number of scanner vulnerabilities.</description></item>
             /// <item><description><b>asapVulCount</b>: The total number of high-priority vulnerabilities.</description></item>
             /// <item><description><b>baselineHigh</b>: The number of high-risk baseline risks.</description></item>
@@ -485,30 +590,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>containerLater</b>: The number of medium-priority container vulnerabilities.</description></item>
             /// <item><description><b>containerNntf</b>: The number of low-priority container vulnerabilities.</description></item>
             /// <item><description><b>containerRemind</b>: The number of container reminder alerts.</description></item>
-            /// <item><description><b>containerSerious</b>: The number of container critical alerts.</description></item>
-            /// <item><description><b>containerSuspicious</b>: The number of container suspicious alerts.</description></item>
-            /// <item><description><b>cveNum</b>: The number of Linux vulnerabilities.</description></item>
+            /// <item><description><b>containerSerious</b>: The number of critical container alerts.</description></item>
+            /// <item><description><b>containerSuspicious</b>: The number of suspicious container alerts.</description></item>
+            /// <item><description><b>cveNum</b>: The number of Linux software vulnerabilities.</description></item>
             /// <item><description><b>emgNum</b>: The number of emergency vulnerabilities.</description></item>
             /// <item><description><b>health</b>: The number of unhandled baseline alerts.</description></item>
-            /// <item><description><b>imageBaselineHigh</b>: The number of high-risk image baseline risks.</description></item>
-            /// <item><description><b>imageBaselineLow</b>: The number of low-risk image baseline risks.</description></item>
-            /// <item><description><b>imageBaselineMedium</b>: The number of medium-risk image baseline risks.</description></item>
-            /// <item><description><b>imageBaselineNum</b>: The total number of image baseline risks.</description></item>
-            /// <item><description><b>imageMaliciousFileRemind</b>: The number of image reminder-level malicious files.</description></item>
-            /// <item><description><b>imageMaliciousFileSerious</b>: The number of image critical-level malicious files.</description></item>
-            /// <item><description><b>imageMaliciousFileSuspicious</b>: The number of image suspicious-level malicious files.</description></item>
-            /// <item><description><b>imageVulAsap</b>: The number of high-priority image vulnerabilities.</description></item>
-            /// <item><description><b>imageVulLater</b>: The number of medium-priority image vulnerabilities.</description></item>
-            /// <item><description><b>imageVulNntf</b>: The number of low-priority image vulnerabilities.</description></item>
+            /// <item><description><b>imageBaselineHigh</b>: The number of high-risk baseline risks in images.</description></item>
+            /// <item><description><b>imageBaselineLow</b>: The number of low-risk baseline risks in images.</description></item>
+            /// <item><description><b>imageBaselineMedium</b>: The number of medium-risk baseline risks in images.</description></item>
+            /// <item><description><b>imageBaselineNum</b>: The total number of baseline risks in images.</description></item>
+            /// <item><description><b>imageMaliciousFileRemind</b>: The number of reminder malicious files in images.</description></item>
+            /// <item><description><b>imageMaliciousFileSerious</b>: The number of critical malicious files in images.</description></item>
+            /// <item><description><b>imageMaliciousFileSuspicious</b>: The number of suspicious malicious files in images.</description></item>
+            /// <item><description><b>imageVulAsap</b>: The number of high-priority vulnerabilities in images.</description></item>
+            /// <item><description><b>imageVulLater</b>: The number of medium-priority vulnerabilities in images.</description></item>
+            /// <item><description><b>imageVulNntf</b>: The number of low-priority vulnerabilities in images.</description></item>
             /// <item><description><b>laterVulCount</b>: The number of medium-priority vulnerabilities.</description></item>
-            /// <item><description><b>newSuspicious</b>: The number of alerts.</description></item>
+            /// <item><description><b>newSuspicious</b>: The number of alerting events.</description></item>
             /// <item><description><b>nntfVulCount</b>: The number of low-priority vulnerabilities.</description></item>
             /// <item><description><b>remindNum</b>: The number of reminder alerts.</description></item>
-            /// <item><description><b>scaNum</b>: The number of software composition analysis vulnerabilities.</description></item>
+            /// <item><description><b>scaNum</b>: The number of software constituency parsing vulnerabilities.</description></item>
             /// <item><description><b>seriousNum</b>: The number of critical alerts.</description></item>
             /// <item><description><b>suspNum</b>: The number of suspicious alerts.</description></item>
-            /// <item><description><b>suspicious</b>: The total number of alerts.</description></item>
-            /// <item><description><b>sysNum</b>: The number of Windows vulnerabilities.</description></item>
+            /// <item><description><b>suspicious</b>: The total number of alerting events.</description></item>
+            /// <item><description><b>sysNum</b>: The number of Windows system vulnerabilities.</description></item>
             /// <item><description><b>trojan</b>: The number of trojans.</description></item>
             /// <item><description><b>uuid</b>: The UUID of the asset.</description></item>
             /// <item><description><b>vul</b>: The number of vulnerabilities.</description></item>
@@ -565,6 +670,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>Indicates whether the asset has security risks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b>: The asset has security risks.</description></item>
+            /// <item><description><b>NO</b>: The asset has no security risks.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NO</para>
@@ -596,8 +705,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Running</b>: Running.</description></item>
-            /// <item><description><b>notRunning</b>: Stopped.</description></item>
+            /// <item><description><b>Running</b>: The instance is running.</description></item>
+            /// <item><description><b>notRunning</b>: The instance is stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -628,7 +737,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TagId { get; set; }
 
             /// <summary>
-            /// <para>The custom tags of the Lingjun node. This field is returned only when the machine is a Lingjun machine.</para>
+            /// <para>The custom tags of Lingjun nodes. This field returns a value only when the instance is a Lingjun instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app:test,type:lingjun</para>
@@ -651,9 +760,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Alibaba Cloud asset.</description></item>
-            /// <item><description><b>1</b>: Non-cloud asset.</description></item>
+            /// <item><description><b>1</b>: Off-cloud asset.</description></item>
             /// <item><description><b>2</b>: IDC asset.</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>, <b>14</b>, <b>16</b>: Third-party cloud asset.</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>, <b>14</b>, <b>16</b>: Other cloud assets.</description></item>
             /// <item><description><b>8</b>: Lightweight asset.</description></item>
             /// <item><description><b>9</b>: SAE.</description></item>
             /// <item><description><b>10</b>: PAI.</description></item>
@@ -667,7 +776,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Vendor { get; set; }
 
             /// <summary>
-            /// <para>The service provider name of the asset.</para>
+            /// <para>The service provider name of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ALIYUN</b>: Alibaba Cloud.</description></item>
+            /// <item><description><b>OUT</b>: Off-cloud asset.</description></item>
+            /// <item><description><b>IDC</b>: IDC.</description></item>
+            /// <item><description><b>TENCENT</b>: Other cloud.</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: Other cloud.</description></item>
+            /// <item><description><b>Microsoft</b>: Other cloud.</description></item>
+            /// <item><description><b>AWS</b>: Other cloud.</description></item>
+            /// <item><description><b>TRIPARTITE</b>: Lightweight server.</description></item>
+            /// <item><description><b>SAE</b>: SAE.</description></item>
+            /// <item><description><b>PAI</b>: PAI.</description></item>
+            /// <item><description><b>VOLCENGINE</b>: Other cloud.</description></item>
+            /// <item><description><b>google</b>: Other cloud.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>IDC</para>
@@ -717,7 +840,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? VulCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether vulnerabilities exist on the instance. Valid values:</para>
+            /// <para>Indicates whether the instance has vulnerabilities. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b>: The instance has vulnerabilities.</description></item>
+            /// <item><description><b>NO</b>: The instance has no vulnerabilities.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>YES</para>
@@ -746,7 +873,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paging query.</para>
+            /// <para>The current page number in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -756,7 +883,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The value of NextToken returned when the NextToken-based pagination method is used.</para>
+            /// <para>The NextToken value returned when NextToken-based pagination is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -766,7 +893,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of assets displayed per page in a paging query. Default value: <b>20</b>, which indicates that 20 asset records are displayed per page.</para>
+            /// <para>The number of assets displayed per page in a paged query. Default value: <b>20</b>. This means 20 assets are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -788,7 +915,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique identifier for each request. You can use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32A73759-4C0F-4801-BE98-901223ACEE9A</para>
@@ -798,10 +925,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result status of the API call. Valid values:</para>
+        /// <para>The result of the API call. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The API call was successful.</description></item>
-        /// <item><description><b>false</b>: The API call failed.</description></item>
+        /// <item><description><b>true</b>: The call succeeded.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

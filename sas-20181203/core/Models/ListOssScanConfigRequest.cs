@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOssScanConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The current page number for paged queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to display on each page for paged queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

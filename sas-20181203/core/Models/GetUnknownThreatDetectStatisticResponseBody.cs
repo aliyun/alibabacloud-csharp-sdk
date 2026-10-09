@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public GetUnknownThreatDetectStatisticResponseBodyData Data { get; set; }
         public class GetUnknownThreatDetectStatisticResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The number of servers that have blocking events.</para>
+            /// </summary>
             [NameInMap("BlockEventMachineCount")]
             [Validation(Required=false)]
             public int? BlockEventMachineCount { get; set; }
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MachineCount { get; set; }
 
             /// <summary>
-            /// <para>The number of servers in warning status.</para>
+            /// <para>The number of servers in warning mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? OpenMachineCount { get; set; }
 
             /// <summary>
-            /// <para>The number of servers in learning status.</para>
+            /// <para>The number of servers in the learning state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

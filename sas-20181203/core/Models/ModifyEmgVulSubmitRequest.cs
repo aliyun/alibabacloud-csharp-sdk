@@ -10,24 +10,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyEmgVulSubmitRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: executes the request normally. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,9 +54,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the resource directory (Alibaba Cloud account).</para>
+        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,10 +67,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform vulnerability detection. Valid values:</para>
+        /// <para>Specifies whether to run vulnerability detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: Perform vulnerability detection.</description></item>
-        /// <item><description><b>no</b>: Do not perform vulnerability detection.</description></item>
+        /// <item><description><para><b>yes</b>: Run.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Do not run.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

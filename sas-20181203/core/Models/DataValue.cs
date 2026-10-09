@@ -10,24 +10,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DataValue : TeaModel {
         /// <summary>
-        /// <para>The number of risky hosts.</para>
+        /// <para>The total number of baseline check items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("RiskMachine")]
+        [NameInMap("BaselineCheckCount")]
         [Validation(Required=false)]
-        public int? RiskMachine { get; set; }
+        public int? BaselineCheckCount { get; set; }
 
         /// <summary>
-        /// <para>The number of scanned hosts.</para>
+        /// <para>The total number of system vulnerability items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("ScanMachine")]
+        [NameInMap("CveVulCount")]
         [Validation(Required=false)]
-        public int? ScanMachine { get; set; }
+        public int? CveVulCount { get; set; }
+
+        /// <summary>
+        /// <para>The estimated detection volume in GB. This field is not currently returned by the batch statistics operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("EstimateUsedSize")]
+        [Validation(Required=false)]
+        public long? EstimateUsedSize { get; set; }
+
+        /// <summary>
+        /// <para>The timestamp of the last scan time, in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1682577532318</para>
+        /// </summary>
+        [NameInMap("LastTaskTime")]
+        [Validation(Required=false)]
+        public long? LastTaskTime { get; set; }
 
         /// <summary>
         /// <para>The total number of malicious sample files.</para>
@@ -40,34 +60,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MaliciousFile { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerability risks.</para>
+        /// <para>The number of vulnerable servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("Vulnerability")]
+        [NameInMap("RiskMachine")]
         [Validation(Required=false)]
-        public int? Vulnerability { get; set; }
-
-        /// <summary>
-        /// <para>The timestamp of the last scan time. Unit: milliseconds.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1682577532318</para>
-        /// </summary>
-        [NameInMap("LastTaskTime")]
-        [Validation(Required=false)]
-        public long? LastTaskTime { get; set; }
-
-        /// <summary>
-        /// <para>The total number of baseline check items.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("BaselineCheckCount")]
-        [Validation(Required=false)]
-        public int? BaselineCheckCount { get; set; }
+        public int? RiskMachine { get; set; }
 
         /// <summary>
         /// <para>The total number of application vulnerabilities.</para>
@@ -80,24 +80,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ScaVulCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of system vulnerabilities.</para>
+        /// <para>The number of scanned servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("CveVulCount")]
+        [NameInMap("ScanMachine")]
         [Validation(Required=false)]
-        public int? CveVulCount { get; set; }
-
-        /// <summary>
-        /// <para>The total number of Windows system vulnerabilities.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("SysVulCount")]
-        [Validation(Required=false)]
-        public int? SysVulCount { get; set; }
+        public int? ScanMachine { get; set; }
 
         /// <summary>
         /// <para>The total number of sensitive files.</para>
@@ -110,14 +100,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SensitiveFileCount { get; set; }
 
         /// <summary>
-        /// <para>The estimated detection volume. Unit: GB. This field is not returned by the batch statistics operation.</para>
+        /// <para>The total number of Windows system vulnerability items.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("EstimateUsedSize")]
+        [NameInMap("SysVulCount")]
         [Validation(Required=false)]
-        public long? EstimateUsedSize { get; set; }
+        public int? SysVulCount { get; set; }
+
+        /// <summary>
+        /// <para>The number of vulnerability risks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Vulnerability")]
+        [Validation(Required=false)]
+        public int? Vulnerability { get; set; }
 
         /// <summary>
         /// <para>The number of Linux software vulnerabilities.</para>

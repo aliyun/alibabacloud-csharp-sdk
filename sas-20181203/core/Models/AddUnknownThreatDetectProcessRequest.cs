@@ -10,12 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddUnknownThreatDetectProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The list of specified event IDs.</para>
+        /// <para>The list of event IDs.</para>
         /// </summary>
         [NameInMap("EventIdList")]
         [Validation(Required=false)]
         public List<long?> EventIdList { get; set; }
 
+        /// <summary>
+        /// <para>The handling remarks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Confirmed</para>
+        /// </summary>
         [NameInMap("HandleRemark")]
         [Validation(Required=false)]
         public string HandleRemark { get; set; }
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The process path.</para>
+            /// <para>The path of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/bin/rm</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The list of asset UUIDs for which processes are to be added.</para>
+        /// <para>The list of asset UUIDs for which the process is to be added.</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]
