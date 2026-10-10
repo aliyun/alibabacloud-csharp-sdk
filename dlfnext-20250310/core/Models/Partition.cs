@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Partition : TeaModel {
         /// <summary>
-        /// <para>The time when the partition was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1747120676378</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The creator of the partition.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the process is complete.</para>
+        /// <para>Indicates whether the tagging is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? FileSizeInBytes { get; set; }
 
         /// <summary>
-        /// <para>The time when the latest file was created.</para>
+        /// <para>The creation time of the latest file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741701564261</para>
@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? LastFileCreationTime { get; set; }
 
+        /// <summary>
+        /// <para>The extension options.</para>
+        /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public Dictionary<string, object> Spec { get; set; }
 
         /// <summary>
-        /// <para>The status of the storage class conversion.</para>
+        /// <para>The storage type conversion status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETE</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string StorageAction { get; set; }
 
         /// <summary>
-        /// <para>The storage class conversion time.</para>
+        /// <para>The storage type conversion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1758189669915</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? StorageActionTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? TotalBuckets { get; set; }
 
         /// <summary>
-        /// <para>The time when the partition was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the partition.</para>
+        /// <para>The updater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>

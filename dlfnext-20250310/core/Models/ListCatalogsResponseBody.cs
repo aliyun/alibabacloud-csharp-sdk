@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListCatalogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of catalogs.</para>
+        /// <para>The list of catalogs.</para>
         /// </summary>
         [NameInMap("catalogs")]
         [Validation(Required=false)]
         public List<Catalog> Catalogs { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</para>
+        /// <para>The pagination token used to retrieve the next page of results. A null value indicates that the current query has reached the last page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>A list of subscription computing resources.</para>
+        /// <para>The list of subscription compute resources.</para>
         /// </summary>
         [NameInMap("prepayResource")]
         [Validation(Required=false)]

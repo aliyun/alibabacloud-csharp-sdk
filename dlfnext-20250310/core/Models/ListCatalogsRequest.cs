@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListCatalogsRequest : TeaModel {
         /// <summary>
-        /// <para>The pattern of the catalog name.</para>
+        /// <para>The catalog name pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mi</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CatalogNamePattern { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</para>
+        /// <para>The pagination token used to retrieve the next page of results. If the response does not include a token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

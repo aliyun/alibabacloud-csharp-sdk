@@ -1,3 +1,7 @@
+2026-10-10 Version: 1.12.0
+- Support API UntagResources.
+
+
 2026-09-16 Version: 1.11.2
 - Generated csharp 2025-03-10 for DlfNext.
 

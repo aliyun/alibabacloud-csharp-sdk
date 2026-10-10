@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Customer A.</para>
+        /// <para>客户A。</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
