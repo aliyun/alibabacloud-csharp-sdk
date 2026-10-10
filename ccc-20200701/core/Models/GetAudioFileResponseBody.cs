@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetAudioFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Audio file data.</para>
+        /// <para>The audio file data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAudioFileResponseBodyData Data { get; set; }
         public class GetAudioFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Audio file name.</para>
+            /// <para>The name of the audio file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-file.wav</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AudioFileName { get; set; }
 
             /// <summary>
-            /// <para>Audio resource ID, the UUID of the audio file.</para>
+            /// <para>The audio resource ID, which is the unique identifier of the audio file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c1a06b46-302a-4c6e-928b-a43c0df485cf</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AudioResourceId { get; set; }
 
             /// <summary>
-            /// <para>Creation Time of the audio resource.</para>
+            /// <para>The time when the audio resource was created. The format is YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Display name of the audio.</para>
+            /// <para>The display name of the audio file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>欢迎语</para>
+            /// <para>Welcome message</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Key of the audio resource file in OSS.</para>
+            /// <para>The key of the audio resource file in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccc-test/test-file.wav</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string OssFileKey { get; set; }
 
             /// <summary>
-            /// <para>Last Updated At of the audio resource.</para>
+            /// <para>The time when the audio resource was last modified. The format is YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -109,17 +109,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEE26562-D921-5CB2-AE49-E4C45A42D432</para>

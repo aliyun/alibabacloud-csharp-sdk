@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public GetTicketResponseBodyData Data { get; set; }
         public class GetTicketResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the assignee.</para>
+            /// <para>The assignee ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent1@ccc-test</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Assignee { get; set; }
 
             /// <summary>
-            /// <para>The name of the assignee.</para>
+            /// <para>The assignee name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>坐席A</para>
+            /// <para>Agent A</para>
             /// </summary>
             [NameInMap("AssigneeName")]
             [Validation(Required=false)]
@@ -57,22 +57,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ticket category.</para>
+            /// <para>The ticket category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>售后类目</para>
+            /// <para>After-sales category</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The reason for closing the ticket.</para>
+            /// <para>The reason for closing the ticket. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Completed</para>
-            /// </description></item>
-            /// <item><description><para>Terminated</para>
-            /// </description></item>
+            /// <item><description>Completed: Completed.</description></item>
+            /// <item><description>Terminated: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,27 +81,27 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CloseCode { get; set; }
 
             /// <summary>
-            /// <para>The comment.</para>
+            /// <para>The handling comments.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The fields of the ticket.</para>
+            /// <para>The ticket field information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;productName&quot;:&quot;商品A&quot;}</para>
+            /// <para>{&quot;productName&quot;:&quot;Product A&quot;}</para>
             /// </summary>
             [NameInMap("Context")]
             [Validation(Required=false)]
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The time when the ticket was created.</para>
+            /// <para>The time when the ticket was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620259200000</para>
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>The creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>creator@ccc-test</para>
@@ -123,17 +121,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The name of the creator.</para>
+            /// <para>The creator name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>坐席B</para>
+            /// <para>Agent B</para>
             /// </summary>
             [NameInMap("CreatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the current node.</para>
+            /// <para>The current node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>912f0b78-6639-4a93-ae18-0d832885c27e</para>
@@ -143,17 +141,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CurrentTaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the current node.</para>
+            /// <para>The current node name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节点1</para>
+            /// <para>Node 1</para>
             /// </summary>
             [NameInMap("CurrentTaskName")]
             [Validation(Required=false)]
             public string CurrentTaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the current node started.</para>
+            /// <para>The start time of the current node. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1693793208075</para>
@@ -163,7 +161,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public long? CurrentTaskStartTime { get; set; }
 
             /// <summary>
-            /// <para>The customer ID. This is the customer ID in the customer profile of Cloud Contact Center.</para>
+            /// <para>The customer ID in the customer profile of Cloud Call Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4223-86d0-6bd187905-891798749</para>
@@ -173,7 +171,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CustomerId { get; set; }
 
             /// <summary>
-            /// <para>The time when the ticket processing was completed.</para>
+            /// <para>The completion time of ticket processing. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687846259999</para>
@@ -203,14 +201,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The source of the ticket.</para>
+            /// <para>The ticket source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AUDIO: Voice service.</para>
-            /// </description></item>
-            /// <item><description><para>CHAT: Web service.</para>
-            /// </description></item>
-            /// <item><description><para>Console: Created in the ticket console.</para>
-            /// </description></item>
+            /// <item><description>AUDIO: Voice service.</description></item>
+            /// <item><description>CHAT: Online service.</description></item>
+            /// <item><description>Console: Created from the ticket console.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +216,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The time when the ticket processing started.</para>
+            /// <para>The start time of ticket processing. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620259200000</para>
@@ -231,16 +226,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The ticket status.</para>
+            /// <para>The ticket status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Processing</para>
-            /// </description></item>
-            /// <item><description><para>Withdrawal</para>
-            /// </description></item>
-            /// <item><description><para>Rejected</para>
-            /// </description></item>
-            /// <item><description><para>Closed</para>
-            /// </description></item>
+            /// <item><description>Processing: Processing.</description></item>
+            /// <item><description>Withdrawal: Withdrawn.</description></item>
+            /// <item><description>Rejected: Rejected.</description></item>
+            /// <item><description>Closed: Closed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,7 +252,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The version of the ticket template.</para>
+            /// <para>The ticket template version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -284,14 +275,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             /// <para>The ticket title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>售后工单</para>
+            /// <para>After-sales ticket</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The time of the last update.</para>
+            /// <para>The time of the last update. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1693793208075</para>
@@ -316,14 +307,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of incorrect parameters.</para>
+        /// <para>The list of error parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

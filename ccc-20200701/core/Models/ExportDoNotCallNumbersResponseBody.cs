@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The OSS download link for the exported file. The link is valid for 24 hours.</para>
+        /// <para>The data, which is the OSS download URL for the export result. The URL is valid for 24 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://<b><b>.oss-cn-shanghai.aliyuncs.com/ccc-test/blacklist.xlsx?Expires=3294624578&amp;OSSAccessKeyId=</b></b>&amp;Signature=****</para>
@@ -43,14 +43,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The list of error parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;ParameterName&quot;]</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

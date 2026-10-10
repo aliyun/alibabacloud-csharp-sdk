@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class EnableSchemaPropertyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The operation is not allowed. User state (READY) does not meet expectations (OFFLINE).</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Response parameters.</para>
+        /// <para>The response elements.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2778FA12-EDD6-42AA-9B15-AF855072E5E5</para>

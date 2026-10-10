@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DisableSchemaPropertyRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Field name</para>
+        /// <para>The name of the field.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string PropertyName { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2263B273-AC1B-44EB-BA98-87F2322C6780</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Schema ID</para>
+        /// <para>schema id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

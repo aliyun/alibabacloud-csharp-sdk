@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data, which is the same as the workflow ID.</para>
+        /// <para>The data. The content is the same as the workflow ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ca2b084-6f0a-454b-9851-29768a9a5832</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

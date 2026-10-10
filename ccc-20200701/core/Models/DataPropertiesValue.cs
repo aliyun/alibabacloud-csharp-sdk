@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>姓名</para>
+        /// <para>Name</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The regular expression that is used for validation.</para>
+        /// <para>The regular expression validation rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>^</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Pattern { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned if the value does not match the regular expression.</para>
+        /// <para>The error message for regular expression validation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>不是有效的email地址</para>
+        /// <para>Not a valid email address</para>
         /// </summary>
         [NameInMap("PatternErrorMessage")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? MaxLength { get; set; }
 
         /// <summary>
-        /// <para>The minimum value.</para>
+        /// <para>The minimum numeric value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public double? Minimum { get; set; }
 
         /// <summary>
-        /// <para>The maximum value.</para>
+        /// <para>The maximum numeric value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? ReadOnly { get; set; }
 
         /// <summary>
-        /// <para>The type of the editor.</para>
+        /// <para>The editor type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>textbox</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string EditorType { get; set; }
 
         /// <summary>
-        /// <para>The extended properties.</para>
+        /// <para>The extended attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Attributes { get; set; }
 
         /// <summary>
-        /// <para>The display order.</para>
+        /// <para>The display order in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// <para>The time when the field was created.</para>
+        /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.S.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-14 10:48:43.0</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the field was last updated.</para>
+        /// <para>The update time. Format: YYYY-MM-DD HH:mm:ss.S.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-14 10:48:43.0</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? UpdatedTime { get; set; }
 
         /// <summary>
-        /// <para>Creator</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tom</para>

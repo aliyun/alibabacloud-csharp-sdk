@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DeleteDocumentsRequest : TeaModel {
         /// <summary>
-        /// <para>A list of document IDs.</para>
+        /// <para>The list of document IDs.</para>
         /// </summary>
         [NameInMap("DocumentIds")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The schema ID.</para>
+        /// <para>schema id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

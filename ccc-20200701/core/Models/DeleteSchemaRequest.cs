@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The schema ID.</para>
+        /// <para>schema id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

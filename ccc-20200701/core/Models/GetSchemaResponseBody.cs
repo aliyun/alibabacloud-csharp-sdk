@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSchemaResponseBodyData Data { get; set; }
         public class GetSchemaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the schema was created.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the schema is deleted.</para>
+            /// <para>Indicates whether the data is deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户profile</para>
+            /// <para>Customer profile</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the schema.</para>
+            /// <para>schema id</para>
             /// 
             /// <b>Example:</b>
             /// <para>profile</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5e0964fd-951c-4e45-b518-d09d4d2db8ca</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public Dictionary<string, DataPropertiesValue> Properties { get; set; }
 
             /// <summary>
-            /// <para>The time when the schema was last modified.</para>
+            /// <para>The last modification time. Format: YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19D09CCC-F298-4124-849A-AFA217819011</para>

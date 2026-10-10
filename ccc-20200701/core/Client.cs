@@ -1322,6 +1322,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddPhoneNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a property to the schema of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// AddSchemaPropertyRequest
         /// </param>
@@ -1377,6 +1382,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a property to the schema of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// AddSchemaPropertyRequest
         /// </param>
@@ -1432,6 +1442,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a property to the schema of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSchemaPropertyRequest
         /// </param>
@@ -1445,6 +1460,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddSchemaPropertyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a property to the schema of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSchemaPropertyRequest
         /// </param>
@@ -2200,7 +2220,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
+        /// <para>Appends outbound call cases to a specified predictive outbound campaign under an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2258,7 +2278,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
+        /// <para>Appends outbound call cases to a specified predictive outbound campaign under an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2316,7 +2336,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
+        /// <para>Appends outbound call cases to a specified predictive outbound campaign under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2334,7 +2354,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
+        /// <para>Appends outbound call cases to a specified predictive outbound campaign under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2356,12 +2376,12 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
+        /// <para>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// <para>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2429,12 +2449,12 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
+        /// <para>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// <para>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2502,12 +2522,12 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
+        /// <para>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// <para>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2531,12 +2551,12 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
+        /// <para>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// <para>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5194,6 +5214,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for chat message media files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateChatMediaUrlRequest
         /// </param>
@@ -5239,6 +5264,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateChatMediaUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for chat message media files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateChatMediaUrlRequest
         /// </param>
@@ -5284,6 +5314,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for chat message media files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateChatMediaUrlRequest
         /// </param>
@@ -5297,6 +5332,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateChatMediaUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for chat message media files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateChatMediaUrlRequest
         /// </param>
@@ -5766,6 +5806,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a schema in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateSchemaRequest
         /// </param>
@@ -5825,6 +5870,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateSchemaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a schema in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateSchemaRequest
         /// </param>
@@ -5884,6 +5934,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a schema in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchemaRequest
         /// </param>
@@ -5897,6 +5952,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateSchemaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a schema in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchemaRequest
         /// </param>
@@ -6724,7 +6784,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified contact flow.</para>
+        /// <para>Deletes a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6774,7 +6834,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified contact flow.</para>
+        /// <para>Deletes a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6824,7 +6884,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified contact flow.</para>
+        /// <para>Deletes a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6842,7 +6902,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified contact flow.</para>
+        /// <para>Deletes a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6986,6 +7046,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteCustomCallTaggingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a single document from a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentRequest
         /// </param>
@@ -7035,6 +7100,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteDocumentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a single document from a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentRequest
         /// </param>
@@ -7084,6 +7154,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a single document from a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentRequest
         /// </param>
@@ -7097,6 +7172,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteDocumentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a single document from a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentRequest
         /// </param>
@@ -7110,6 +7190,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteDocumentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes documents from a specified instance in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DeleteDocumentsRequest
         /// </param>
@@ -7165,6 +7250,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes documents from a specified instance in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DeleteDocumentsRequest
         /// </param>
@@ -7220,6 +7310,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes documents from a specified instance in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentsRequest
         /// </param>
@@ -7233,6 +7328,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteDocumentsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes documents from a specified instance in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDocumentsRequest
         /// </param>
@@ -7246,6 +7346,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteDocumentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified Cloud Call Center instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -7283,6 +7388,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified Cloud Call Center instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -7320,6 +7430,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified Cloud Call Center instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -7333,6 +7448,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified Cloud Call Center instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -7346,6 +7466,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a schema from the specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaRequest
         /// </param>
@@ -7391,6 +7516,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSchemaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a schema from the specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaRequest
         /// </param>
@@ -7436,6 +7566,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a schema from the specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaRequest
         /// </param>
@@ -7449,6 +7584,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteSchemaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a schema from the specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaRequest
         /// </param>
@@ -7462,6 +7602,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteSchemaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaPropertyRequest
         /// </param>
@@ -7511,6 +7656,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaPropertyRequest
         /// </param>
@@ -7560,6 +7710,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaPropertyRequest
         /// </param>
@@ -7573,6 +7728,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteSchemaPropertyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchemaPropertyRequest
         /// </param>
@@ -7978,6 +8138,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteTicketTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a field in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSchemaPropertyRequest
         /// </param>
@@ -8027,6 +8192,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DisableSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a field in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSchemaPropertyRequest
         /// </param>
@@ -8076,6 +8246,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DisableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a field in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSchemaPropertyRequest
         /// </param>
@@ -8089,6 +8264,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DisableSchemaPropertyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a field in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSchemaPropertyRequest
         /// </param>
@@ -8366,6 +8546,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DiscardEditingContactFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSchemaPropertyRequest
         /// </param>
@@ -8415,6 +8600,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EnableSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSchemaPropertyRequest
         /// </param>
@@ -8464,6 +8654,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EnableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSchemaPropertyRequest
         /// </param>
@@ -8477,6 +8672,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return EnableSchemaPropertyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a property in a specified schema.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSchemaPropertyRequest
         /// </param>
@@ -8754,6 +8954,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await EndConferenceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports the IVR contact flow of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportContactFlowRequest
         /// </param>
@@ -8799,6 +9004,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ExportContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports the IVR contact flow of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportContactFlowRequest
         /// </param>
@@ -8844,6 +9054,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ExportContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports the IVR contact flow of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportContactFlowRequest
         /// </param>
@@ -8857,6 +9072,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ExportContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports the IVR contact flow of a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportContactFlowRequest
         /// </param>
@@ -9016,7 +9236,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
+        /// <para>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9066,7 +9286,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
+        /// <para>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9116,7 +9336,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
+        /// <para>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9134,7 +9354,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
+        /// <para>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9408,7 +9628,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
+        /// <para>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9454,7 +9674,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
+        /// <para>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9500,7 +9720,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
+        /// <para>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9518,7 +9738,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
+        /// <para>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9792,7 +10012,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
+        /// <para>Retrieves the details of a call specified by call ID for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9838,7 +10058,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
+        /// <para>Retrieves the details of a call specified by call ID for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9884,7 +10104,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
+        /// <para>Retrieves the details of a call specified by call ID for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9902,7 +10122,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
+        /// <para>Retrieves the details of a call specified by call ID for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10174,6 +10394,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetCaseFileUploadUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the access URL for a media file in a chat message.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatMediaUrlRequest
         /// </param>
@@ -10219,6 +10444,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetChatMediaUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the access URL for a media file in a chat message.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatMediaUrlRequest
         /// </param>
@@ -10264,6 +10494,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the access URL for a media file in a chat message.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatMediaUrlRequest
         /// </param>
@@ -10277,6 +10512,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetChatMediaUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the access URL for a media file in a chat message.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatMediaUrlRequest
         /// </param>
@@ -10412,7 +10652,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a specified contact flow.</para>
+        /// <para>Retrieves a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10462,7 +10702,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a specified contact flow.</para>
+        /// <para>Retrieves a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10512,7 +10752,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a specified contact flow.</para>
+        /// <para>Retrieves a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10530,7 +10770,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a specified contact flow.</para>
+        /// <para>Retrieves a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10938,6 +11178,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetDoNotCallFileUploadParametersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload parameters required to import a document.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDocumentUploadParametersRequest
         /// </param>
@@ -10983,6 +11228,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetDocumentUploadParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload parameters required to import a document.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDocumentUploadParametersRequest
         /// </param>
@@ -11028,6 +11278,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetDocumentUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload parameters required to import a document.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDocumentUploadParametersRequest
         /// </param>
@@ -11041,6 +11296,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetDocumentUploadParametersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload parameters required to import a document.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDocumentUploadParametersRequest
         /// </param>
@@ -11584,7 +11844,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
+        /// <para>Queries the details of a Cloud Call Center instance based on the specified instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11626,7 +11886,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
+        /// <para>Queries the details of a Cloud Call Center instance based on the specified instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11668,7 +11928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
+        /// <para>Queries the details of a Cloud Call Center instance based on the specified instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11686,7 +11946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
+        /// <para>Queries the details of a Cloud Call Center instance based on the specified instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12742,6 +13002,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetRealtimeInstanceStatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema and its field definitions in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSchemaRequest
         /// </param>
@@ -12787,6 +13052,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetSchemaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema and its field definitions in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSchemaRequest
         /// </param>
@@ -12832,6 +13102,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema and its field definitions in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSchemaRequest
         /// </param>
@@ -12845,6 +13120,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetSchemaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema and its field definitions in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSchemaRequest
         /// </param>
@@ -13116,7 +13396,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific ticket.</para>
+        /// <para>Queries the details of a specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13162,7 +13442,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific ticket.</para>
+        /// <para>Queries the details of a specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13208,7 +13488,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific ticket.</para>
+        /// <para>Queries the details of a specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13226,7 +13506,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific ticket.</para>
+        /// <para>Queries the details of a specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20496,6 +20776,170 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFlashSmsTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFunctionMetasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionMetasResponse
+        /// </returns>
+        public ListFunctionMetasResponse ListFunctionMetasWithOptions(ListFunctionMetasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasHttpTrigger))
+            {
+                query["HasHttpTrigger"] = request.HasHttpTrigger;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFunctionMetas",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFunctionMetasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFunctionMetasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionMetasResponse
+        /// </returns>
+        public async Task<ListFunctionMetasResponse> ListFunctionMetasWithOptionsAsync(ListFunctionMetasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasHttpTrigger))
+            {
+                query["HasHttpTrigger"] = request.HasHttpTrigger;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFunctionMetas",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFunctionMetasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFunctionMetasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionMetasResponse
+        /// </returns>
+        public ListFunctionMetasResponse ListFunctionMetas(ListFunctionMetasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFunctionMetasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFunctionMetasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionMetasResponse
+        /// </returns>
+        public async Task<ListFunctionMetasResponse> ListFunctionMetasAsync(ListFunctionMetasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFunctionMetasWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ContactFlowId { get; set; }
 
             /// <summary>
-            /// <para>The time when the contact flow draft was created.</para>
+            /// <para>The time when the contact flow draft was created. The format is YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>IVR content.</para>
+            /// <para>The IVR content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;activities&quot;:[{&quot;type&quot;:&quot;INCOMING_CALL&quot;,&quot;id&quot;:&quot;e98f0d47&quot;,&quot;name&quot;:&quot;开始&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:263,&quot;y&quot;:164}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;2d3ad2c2&quot;,&quot;edgeId&quot;:&quot;41f7dbd0&quot;}],&quot;nodeIndex&quot;:0},{&quot;type&quot;:&quot;HANGUP&quot;,&quot;id&quot;:&quot;bd4f37e2&quot;,&quot;name&quot;:&quot;挂机&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:765,&quot;y&quot;:185}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:null}],&quot;nodeIndex&quot;:999},{&quot;type&quot;:&quot;PLAY_SAY&quot;,&quot;id&quot;:&quot;2d3ad2c2&quot;,&quot;name&quot;:&quot;放音&quot;,&quot;properties&quot;:{&quot;say&quot;:&quot;您好，欢迎来到云联络中心。&quot;,&quot;audioResourceId&quot;:&quot;&quot;,&quot;position&quot;:{&quot;x&quot;:485.5,&quot;y&quot;:153.5},&quot;audioType&quot;:&quot;tts&quot;,&quot;audioInterrupt&quot;:false},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;bd4f37e2&quot;,&quot;edgeId&quot;:&quot;e1af4f1f&quot;}],&quot;nodeIndex&quot;:1}],&quot;description&quot;:&quot;&quot;}</para>
+            /// <para>{&quot;activities&quot;:[{&quot;type&quot;:&quot;INCOMING_CALL&quot;,&quot;id&quot;:&quot;e98f0d47&quot;,&quot;name&quot;:&quot;Start&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:263,&quot;y&quot;:164}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;2d3ad2c2&quot;,&quot;edgeId&quot;:&quot;41f7dbd0&quot;}],&quot;nodeIndex&quot;:0},{&quot;type&quot;:&quot;HANGUP&quot;,&quot;id&quot;:&quot;bd4f37e2&quot;,&quot;name&quot;:&quot;Hang up&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:765,&quot;y&quot;:185}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:null}],&quot;nodeIndex&quot;:999},{&quot;type&quot;:&quot;PLAY_SAY&quot;,&quot;id&quot;:&quot;2d3ad2c2&quot;,&quot;name&quot;:&quot;Play audio&quot;,&quot;properties&quot;:{&quot;say&quot;:&quot;Hello, welcome to Cloud Call Center.&quot;,&quot;audioResourceId&quot;:&quot;&quot;,&quot;position&quot;:{&quot;x&quot;:485.5,&quot;y&quot;:153.5},&quot;audioType&quot;:&quot;tts&quot;,&quot;audioInterrupt&quot;:false},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;bd4f37e2&quot;,&quot;edgeId&quot;:&quot;e1af4f1f&quot;}],&quot;nodeIndex&quot;:1}],&quot;description&quot;:&quot;&quot;}</para>
             /// </summary>
             [NameInMap("Definition")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The draft ID. This is the ID of the editable draft version for the current contact flow.</para>
+            /// <para>The draft ID, which is the ID of the editable draft version corresponding to the current contact flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>566399d7-5558-447c-a72f-9be2768b6a82</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DraftId { get; set; }
 
             /// <summary>
-            /// <para>The agent login name of the current editor of this draft.</para>
+            /// <para>The logon name of the agent currently editing this draft.</para>
             /// 
             /// <b>Example:</b>
             /// <para>editor-xxx</para>
@@ -100,16 +100,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             /// <para>The IVR name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>欢迎语</para>
+            /// <para>Greeting</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the contact flow is published.
-            /// True: Published
-            /// False: Not published</para>
+            /// <para>Specifies whether the contact flow is published. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>True: Published.</description></item>
+            /// <item><description>False: Not published.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -119,10 +121,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? Published { get; set; }
 
             /// <summary>
-            /// <para>The flow type:<br>
-            /// MAIN_FLOW (main flow)<br>
-            /// SUB_FLOW (child flow)<br>
-            /// SURVEY_FLOW (survey flow)<br><br><br></para>
+            /// <para>The flow type. Valid values:   </para>
+            /// <list type="bullet">
+            /// <item><description>MAIN_FLOW: main flow  </description></item>
+            /// <item><description>SUB_FLOW: sub-flow  </description></item>
+            /// <item><description>SURVEY_FLOW: satisfaction survey flow</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MAIN_FLOW</para>
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the contact flow was last updated.</para>
+            /// <para>The time of the last modification. The format is YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

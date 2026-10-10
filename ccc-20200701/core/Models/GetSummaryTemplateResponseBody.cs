@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The user who edited the template.</para>
+            /// <para>The template editor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>editor-xxx@ccc-test</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试模板</para>
+            /// <para>Test template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public bool? Array { get; set; }
 
                 /// <summary>
-                /// <para>The extended properties.</para>
+                /// <para>The extended attributes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Attributes { get; set; }
 
                 /// <summary>
-                /// <para>The time when the field was created.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1717664210000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The user who created the field.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cretor-xxx@ccc-test</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The description of the field.</para>
+                /// <para>The field description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Description-xxxx</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public int? DisplayOrder { get; set; }
 
                 /// <summary>
-                /// <para>The type of the editor.</para>
+                /// <para>The editor type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>textbox</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public int? MaxLength { get; set; }
 
                 /// <summary>
-                /// <para>The maximum value of the number.</para>
+                /// <para>The maximum numeric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public int? MinLength { get; set; }
 
                 /// <summary>
-                /// <para>The minimum value of the number.</para>
+                /// <para>The minimum numeric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public double? Minimum { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field.</para>
+                /// <para>The field name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Name-A</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The validation rule that is specified by a regular expression.</para>
+                /// <para>The regular expression validation rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>^</para>
@@ -234,10 +234,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Pattern { get; set; }
 
                 /// <summary>
-                /// <para>The error message that is returned when the regular expression fails to pass the validation.</para>
+                /// <para>The error message for regular expression validation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>不是有效的email地址</para>
+                /// <para>Not a valid email address</para>
                 /// </summary>
                 [NameInMap("PatternErrorMessage")]
                 [Validation(Required=false)]
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public bool? System { get; set; }
 
                 /// <summary>
-                /// <para>The time when the field was last updated.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1717664210000</para>
@@ -286,12 +286,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>The status code.</para>
+            /// <para>The status code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled: The template is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>Disabled: The template is disabled.</para>
-            /// </description></item>
+            /// <item><description>Enabled: Enabled.</description></item>
+            /// <item><description>Disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -327,7 +325,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information about error parameters.</para>
+        /// <para>The error parameter information.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

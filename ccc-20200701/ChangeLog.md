@@ -1,3 +1,7 @@
+2026-10-10 Version: 2.43.0
+- Support API ListFunctionMetas.
+
+
 2026-10-08 Version: 2.42.1
 - Update API ListHistoricalSkillGroupReport: add request parameters SummarizeByInstanceId.
 

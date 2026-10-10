@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>The list of dynamic response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;ParameterName&quot;]</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

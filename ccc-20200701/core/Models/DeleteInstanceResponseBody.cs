@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delete task.</para>
+        /// <para>The returned result, which is the ID of the deletion task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b7feb007-994a-497f-8934-2f0c6f89867c</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

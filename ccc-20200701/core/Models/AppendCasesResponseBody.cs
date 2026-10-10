@@ -19,18 +19,30 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of processing results for appending outbound call cases.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<AppendCasesResponseBodyData> Data { get; set; }
         public class AppendCasesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The custom variables of the contact, represented as a JSON string.</para>
+            /// </summary>
             [NameInMap("CustomVariables")]
             [Validation(Required=false)]
             public string CustomVariables { get; set; }
 
+            /// <summary>
+            /// <para>The phone number of the contact.</para>
+            /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
+            /// <summary>
+            /// <para>The unique identifier of the contact in the customer\&quot;s business system.</para>
+            /// </summary>
             [NameInMap("ReferenceId")]
             [Validation(Required=false)]
             public string ReferenceId { get; set; }
@@ -51,7 +63,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

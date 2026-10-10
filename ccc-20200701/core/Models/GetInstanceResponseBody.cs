@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public List<GetInstanceResponseBodyDataAdminList> AdminList { get; set; }
             public class GetInstanceResponseBodyDataAdminList : TeaModel {
                 /// <summary>
-                /// <para>The name of the administrator.</para>
+                /// <para>The display name of the administrator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>管理员</para>
+                /// <para>Administrator</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The mailbox.</para>
+                /// <para>The email address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The agent\&quot;s extension number.</para>
+                /// <para>The extension number of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8032****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The agent\&quot;s logon name.</para>
+                /// <para>The logon name of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string LoginName { get; set; }
 
                 /// <summary>
-                /// <para>The agent\&quot;s personal phone number.</para>
+                /// <para>The personal phone number of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1382114****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Mobile { get; set; }
 
                 /// <summary>
-                /// <para>The role ID. The format is: Role\@Instance ID.</para>
+                /// <para>The role ID, in the format of Role@Instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Admin@ccc-test</para>
@@ -135,6 +135,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            /// <summary>
+            /// <para>The agent type used by the instance.</para>
+            /// </summary>
             [NameInMap("AgentType")]
             [Validation(Required=false)]
             public string AgentType { get; set; }
@@ -149,14 +152,29 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string AliyunUid { get; set; }
 
+            /// <summary>
+            /// <para>The chatbot business unit associated with the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;UnitId&quot;:0,&quot;UnitKey&quot;:&quot;&quot;}</para>
+            /// </summary>
             [NameInMap("ChatbotBusinessUnit")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyDataChatbotBusinessUnit ChatbotBusinessUnit { get; set; }
             public class GetInstanceResponseBodyDataChatbotBusinessUnit : TeaModel {
+                /// <summary>
+                /// <para>The ID of the chatbot business unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("UnitId")]
                 [Validation(Required=false)]
                 public long? UnitId { get; set; }
 
+                /// <summary>
+                /// <para>The identifier of the chatbot business unit.</para>
+                /// </summary>
                 [NameInMap("UnitKey")]
                 [Validation(Required=false)]
                 public string UnitKey { get; set; }
@@ -164,7 +182,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>The URL of the Cloud Contact Center instance homepage. This URL is formed by combining the base URL of Cloud Contact Center and the instance ID.</para>
+            /// <para>The URL of the Cloud Call Center instance. This URL is used to access the homepage of the instance and consists of a specific Cloud Call Center URL and the instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></para>
@@ -177,14 +195,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云联络中心的测试实例。</para>
+            /// <para>Test instance of Cloud Call Center</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the instance. It is globally unique.</para>
+            /// <para>The globally unique domain name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
@@ -207,21 +225,21 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试实例</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of numbers.</para>
+            /// <para>The list of phone numbers.</para>
             /// </summary>
             [NameInMap("NumberList")]
             [Validation(Required=false)]
             public List<GetInstanceResponseBodyDataNumberList> NumberList { get; set; }
             public class GetInstanceResponseBodyDataNumberList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the number is active.</para>
+                /// <para>Indicates whether the phone number is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -231,10 +249,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public bool? Active { get; set; }
 
                 /// <summary>
-                /// <para>The city where the number is registered.</para>
+                /// <para>The city to which the phone number belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>乐山</para>
+                /// <para>Leshan</para>
                 /// </summary>
                 [NameInMap("City")]
                 [Validation(Required=false)]
@@ -271,17 +289,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Number { get; set; }
 
                 /// <summary>
-                /// <para>The province where the number is registered.</para>
+                /// <para>The province to which the phone number belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>四川</para>
+                /// <para>Sichuan</para>
                 /// </summary>
                 [NameInMap("Province")]
                 [Validation(Required=false)]
                 public string Province { get; set; }
 
                 /// <summary>
-                /// <para>The list of skill groups associated with the number.</para>
+                /// <para>The list of skill groups associated with the phone number.</para>
                 /// </summary>
                 [NameInMap("SkillGroups")]
                 [Validation(Required=false)]
@@ -291,7 +309,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     /// <para>The description of the skill group.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>云联络中心的测试技能组。</para>
+                    /// <para>Test skill group of Cloud Call Center</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -301,7 +319,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     /// <para>The display name of the skill group.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试技能组</para>
+                    /// <para>Test skill group</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -318,7 +336,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the skill group.</para>
+                    /// <para>The skill group name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>skillgroup</para>
@@ -360,7 +378,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>The purpose of the number.</para>
+                /// <para>The usage of the phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Bidirection</para>
@@ -370,7 +388,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Usage { get; set; }
 
                 /// <summary>
-                /// <para>The agent ID. If this parameter is not empty, the number is a personal outbound number for the agent.</para>
+                /// <para>The agent ID. If this parameter is not empty, the phone number is a personal outbound phone number of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent@ccc-test</para>
@@ -407,7 +425,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

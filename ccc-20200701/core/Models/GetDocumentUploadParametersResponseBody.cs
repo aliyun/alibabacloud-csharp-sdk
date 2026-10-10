@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetDocumentUploadParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDocumentUploadParametersResponseBodyData Data { get; set; }
         public class GetDocumentUploadParametersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AccessKeyId used for signing</para>
+            /// <para>The AccessKey ID used for signing.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>Expired At</para>
+            /// <para>The expiration time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1647313420</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>OSS file path</para>
+            /// <para>The OSS file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccc-test/blacklist.xlsx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>OSS host</para>
+            /// <para>oss host</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>Signature policy</para>
+            /// <para>The signature policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Permit</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>Signature</para>
+            /// <para>The signature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zi31STIMtIfa/UN2l+6lww****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -99,24 +99,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Response parameters.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9FBA26B0-462B-4D77-B78F-AF35560DBC71</para>

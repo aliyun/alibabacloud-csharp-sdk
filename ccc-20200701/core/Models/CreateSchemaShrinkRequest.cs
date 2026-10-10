@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The schema ID.</para>
+        /// <para>schema id</para>
         /// 
         /// <b>Example:</b>
         /// <para>profile</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of fields.</para>
+        /// <para>The list of properties.</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]

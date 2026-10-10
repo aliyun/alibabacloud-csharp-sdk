@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class GetChatMediaUrlRequest : TeaModel {
+    public class ListFunctionMetasRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("HasHttpTrigger")]
+        [Validation(Required=false)]
+        public bool? HasHttpTrigger { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,25 +28,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>media id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>$iAHNCNQCo3dhdgMGBAAFAAbaACOEAaQhIEeoAqpjjBl42N6o_kg7A88AAAGRIRRuBgTOACrxHgcACM8AAAGRIYJLBQ</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("MediaId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string MediaId { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8707EB29-BAED-4302-B999-40BA61877437</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageSize { get; set; }
 
     }
 

@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>坐席小王</para>
+                /// <para>Agent Wang</para>
                 /// </summary>
                 [NameInMap("AgentName")]
                 [Validation(Required=false)]
                 public string AgentName { get; set; }
 
                 /// <summary>
-                /// <para>The sequence of events.</para>
+                /// <para>The event sequence.</para>
                 /// </summary>
                 [NameInMap("EventSequence")]
                 [Validation(Required=false)]
                 public List<GetCallDetailRecordResponseBodyDataAgentEventsEventSequence> EventSequence { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAgentEventsEventSequence : TeaModel {
                     /// <summary>
-                    /// <para>The event duration, in seconds.</para>
+                    /// <para>The duration of the event, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Event { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</para>
+                    /// <para>The timestamp when the event occurred. The time is formatted as a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1604639129000</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>The IDs of the agents who are involved in the call. Multiple IDs are separated by commas.</para>
+            /// <para>The list of agent IDs. This indicates the agents that the call passed through. Multiple values are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent1@ccc-test,agent2@ccc-test</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AgentIds { get; set; }
 
             /// <summary>
-            /// <para>The names of the agents who are involved in the call. Multiple names are separated by commas.</para>
+            /// <para>The list of agent names. This indicates the agents that the call passed through. Multiple values are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent1,agent2</para>
@@ -124,96 +124,228 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string AgentNames { get; set; }
 
+            /// <summary>
+            /// <para>The intelligent analysis report of the call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProblemSolving&quot;:{&quot;Success&quot;:true,&quot;Solved&quot;:true}}</para>
+            /// </summary>
             [NameInMap("AnalyticsReport")]
             [Validation(Required=false)]
             public GetCallDetailRecordResponseBodyDataAnalyticsReport AnalyticsReport { get; set; }
             public class GetCallDetailRecordResponseBodyDataAnalyticsReport : TeaModel {
+                /// <summary>
+                /// <para>The analysis result of customer emotion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Success&quot;:true,&quot;Type&quot;:&quot;Neutral&quot;,&quot;Confidence&quot;:50}</para>
+                /// </summary>
                 [NameInMap("Emotion")]
                 [Validation(Required=false)]
                 public GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion Emotion { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAnalyticsReportEmotion : TeaModel {
+                    /// <summary>
+                    /// <para>The confidence level of customer emotion recognition.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>50</para>
+                    /// </summary>
                     [NameInMap("Confidence")]
                     [Validation(Required=false)]
                     public int? Confidence { get; set; }
 
+                    /// <summary>
+                    /// <para>The remark for customer emotion analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>No emotion change detected in the customer</para>
+                    /// </summary>
                     [NameInMap("Remark")]
                     [Validation(Required=false)]
                     public string Remark { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the emotion analysis task is executed successfully.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Success")]
                     [Validation(Required=false)]
                     public bool? Success { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the emotion analysis task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0ff07fe35670423089dbdf12766d962f</para>
+                    /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
+                    /// <summary>
+                    /// <para>The customer emotion type identified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Neutral</para>
+                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The analysis result of problem resolution.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Success&quot;:true,&quot;Solved&quot;:true,&quot;Problem&quot;:&quot;Alert issue&quot;}</para>
+                /// </summary>
                 [NameInMap("ProblemSolving")]
                 [Validation(Required=false)]
                 public GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving ProblemSolving { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAnalyticsReportProblemSolving : TeaModel {
+                    /// <summary>
+                    /// <para>The customer problem identified by the analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Alert issue</para>
+                    /// </summary>
                     [NameInMap("Problem")]
                     [Validation(Required=false)]
                     public string Problem { get; set; }
 
+                    /// <summary>
+                    /// <para>The Solutions generated by the analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The enrichment service automatically closes the original alert</para>
+                    /// </summary>
                     [NameInMap("Solution")]
                     [Validation(Required=false)]
                     public string Solution { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the customer problem is resolved.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Solved")]
                     [Validation(Required=false)]
                     public bool? Solved { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the problem resolution analysis task is executed successfully.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Success")]
                     [Validation(Required=false)]
                     public bool? Success { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the problem resolution analysis task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0ff07fe35670423089dbdf12766d962f</para>
+                    /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The analysis result of customer satisfaction.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Success&quot;:true,&quot;SatisfactionDescription&quot;:&quot;Satisfied&quot;}</para>
+                /// </summary>
                 [NameInMap("Satisfaction")]
                 [Validation(Required=false)]
                 public GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction Satisfaction { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAnalyticsReportSatisfaction : TeaModel {
+                    /// <summary>
+                    /// <para>The remark for customer satisfaction analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The customer expressed satisfaction</para>
+                    /// </summary>
                     [NameInMap("Remark")]
                     [Validation(Required=false)]
                     public string Remark { get; set; }
 
+                    /// <summary>
+                    /// <para>The description of the customer satisfaction analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Satisfied</para>
+                    /// </summary>
                     [NameInMap("SatisfactionDescription")]
                     [Validation(Required=false)]
                     public string SatisfactionDescription { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the satisfaction analysis task is executed successfully.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Success")]
                     [Validation(Required=false)]
                     public bool? Success { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the satisfaction analysis task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cb67479ce28243b28ff39948feaa0806</para>
+                    /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The analysis result of to-do items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Success&quot;:true,&quot;Tasks&quot;:[&quot;Follow-up&quot;]}</para>
+                /// </summary>
                 [NameInMap("TodoList")]
                 [Validation(Required=false)]
                 public GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList TodoList { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAnalyticsReportTodoList : TeaModel {
+                    /// <summary>
+                    /// <para>Indicates whether the to-do item analysis task is executed successfully.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Success")]
                     [Validation(Required=false)]
                     public bool? Success { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the to-do item analysis task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cb67479ce28243b28ff39948feaa0806</para>
+                    /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of to-do items generated by the analysis.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>[&quot;Follow-up&quot;]</para>
+                    /// </summary>
                     [NameInMap("Tasks")]
                     [Validation(Required=false)]
                     public List<string> Tasks { get; set; }
@@ -222,6 +354,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the intelligent analysis report is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AnalyticsReportReady")]
             [Validation(Required=false)]
             public bool? AnalyticsReportReady { get; set; }
@@ -247,20 +385,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CalledNumber { get; set; }
 
             /// <summary>
-            /// <para>The location of the called number.</para>
+            /// <para>The location information of the called number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>河北省-唐山</para>
+            /// <para>Hebei Province-Tangshan</para>
             /// </summary>
             [NameInMap("CalleeLocation")]
             [Validation(Required=false)]
             public string CalleeLocation { get; set; }
 
             /// <summary>
-            /// <para>The location of the calling number.</para>
+            /// <para>The location information of the calling number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>山东省-淄博</para>
+            /// <para>Shandong Province-Zibo</para>
             /// </summary>
             [NameInMap("CallerLocation")]
             [Validation(Required=false)]
@@ -277,7 +415,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CallingNumber { get; set; }
 
             /// <summary>
-            /// <para>The reason why the call ended. Note: The \<c>Voicemail\\</c>, \<c>QueuingFailed\\</c>, \<c>QueuingTimeout\\</c>, \<c>QueuingOverflow\\</c>, and \<c>IVRException\\</c> reasons are returned only if you configure the hang-up reason node. If you do not configure this node and the IVR flow does not include a module to transfer the call to an agent, the default reason is \<c>AbandonedInIVR\\</c>.</para>
+            /// <para>The reason why the call ended. Note: Disconnect reasons such as voice mail, transfer to agent failure, queue timeout, queue overflow, and IVR exception are displayed only if the customer configures a disconnect reason node. If the node is not configured and the IVR does not contain a transfer to agent module, the disconnect reason defaults to IVR abandoned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -314,7 +452,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public List<GetCallDetailRecordResponseBodyDataCustomerEvents> CustomerEvents { get; set; }
             public class GetCallDetailRecordResponseBodyDataCustomerEvents : TeaModel {
                 /// <summary>
-                /// <para>The customer ID. This is usually the customer\&quot;s phone number.</para>
+                /// <para>The customer ID, which is usually the customer phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1332315****</para>
@@ -324,7 +462,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string CustomerId { get; set; }
 
                 /// <summary>
-                /// <para>The sequence of events.</para>
+                /// <para>The event sequence.</para>
                 /// </summary>
                 [NameInMap("EventSequence")]
                 [Validation(Required=false)]
@@ -341,7 +479,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Event { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</para>
+                    /// <para>The timestamp when the event occurred. The time is formatted as a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1532458000000</para>
@@ -355,7 +493,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>The state of the early media. An exception occurred during the early media phase, which is when the customer is being called. An exception at this stage can cause the call to fail. This parameter provides possible reasons for the connection failure based on an analysis of the early media state.</para>
+            /// <para>The early media state. This refers to an exception that occurs during the early media phase, which is usually the phase of calling the customer. An exception in this phase causes the call to fail. Therefore, this state indicates the possible reason for the unanswered call based on the analysis of the early media state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotConnected</para>
@@ -365,7 +503,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string EarlyMediaState { get; set; }
 
             /// <summary>
-            /// <para>The time when the call was connected. This parameter is empty if the call was not connected. The value is a UNIX timestamp, in milliseconds.</para>
+            /// <para>The time when the call was established. If the call was not established, this value is empty. The time is formatted as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1532458000000</para>
@@ -392,7 +530,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public List<GetCallDetailRecordResponseBodyDataIvrEvents> IvrEvents { get; set; }
             public class GetCallDetailRecordResponseBodyDataIvrEvents : TeaModel {
                 /// <summary>
-                /// <para>The sequence of events.</para>
+                /// <para>The event sequence.</para>
                 /// </summary>
                 [NameInMap("EventSequence")]
                 [Validation(Required=false)]
@@ -409,7 +547,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Event { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</para>
+                    /// <para>The timestamp when the event occurred. The time is formatted as a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1604639129000</para>
@@ -421,7 +559,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the IVR contact flow.</para>
+                /// <para>The IVR contact flow ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</para>
@@ -431,7 +569,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string FlowId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the contact flow.</para>
+                /// <para>The contact flow type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MAIN_FLOW</para>
@@ -442,6 +580,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            /// <summary>
+            /// <para>The reason for disconnection when transferring to an external line.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NoAnswer</para>
+            /// </summary>
             [NameInMap("OutsideNumberReleaseReason")]
             [Validation(Required=false)]
             public string OutsideNumberReleaseReason { get; set; }
@@ -454,7 +598,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public List<GetCallDetailRecordResponseBodyDataQueueEvents> QueueEvents { get; set; }
             public class GetCallDetailRecordResponseBodyDataQueueEvents : TeaModel {
                 /// <summary>
-                /// <para>The sequence of events.</para>
+                /// <para>The event sequence.</para>
                 /// </summary>
                 [NameInMap("EventSequence")]
                 [Validation(Required=false)]
@@ -471,7 +615,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Event { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</para>
+                    /// <para>The timestamp when the event occurred. The time is formatted as a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1604639129000</para>
@@ -493,7 +637,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string FlowId { get; set; }
 
                 /// <summary>
-                /// <para>The queue ID. If the call is routed to a skill group, this is the skill group ID. If the call is routed to an agent, this is the agent ID.</para>
+                /// <para>The queue ID. If the queue is a skill group queue, this is the skill group ID. If the queue is an agent personal queue, this is the agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup@ccc-test</para>
@@ -506,7 +650,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 /// <para>The queue name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试技能组</para>
+                /// <para>Test skill group</para>
                 /// </summary>
                 [NameInMap("QueueName")]
                 [Validation(Required=false)]
@@ -525,7 +669,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the recording was generated. A value of \<c>false\\</c> is returned if the call was not connected.</para>
+            /// <para>Indicates whether the recording has been generated. If the call has not been established, false is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -535,7 +679,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? RecordingReady { get; set; }
 
             /// <summary>
-            /// <para>The release initiator.</para>
+            /// <para>The party that disconnected the call.
+            /// [_single.resp.200.props.Data.ReleaseInitiator.enum.agent ]The agent.
+            /// [_single.resp.200.props.Data.ReleaseInitiator.enum.customer ]The customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer</para>
@@ -545,7 +691,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ReleaseInitiator { get; set; }
 
             /// <summary>
-            /// <para>The reason why the call ended. The value is usually the SIP code followed by a text description.</para>
+            /// <para>The reason why the call ended. This is usually in the format of a SIP code followed by a text description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200 - OK</para>
@@ -555,7 +701,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ReleaseReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the call ended. This is the time when the last party of the call hangs up. The value is a UNIX timestamp, in milliseconds.</para>
+            /// <para>The end time of the call. This is the time when the last participant in the call hung up. The time is formatted as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1532458000000</para>
@@ -565,7 +711,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public long? ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The satisfaction score. The value and its meaning are defined by you.</para>
+            /// <para>The satisfaction survey result. The values and meanings of the satisfaction survey are customized by the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -575,7 +721,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? Satisfaction { get; set; }
 
             /// <summary>
-            /// <para>The channel through which the satisfaction survey was initiated.</para>
+            /// <para>The channel used to initiate the satisfaction survey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IVR</para>
@@ -585,7 +731,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string SatisfactionSurveyChannel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a satisfaction survey was initiated.</para>
+            /// <para>Indicates whether a satisfaction survey was sent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -595,7 +741,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? SatisfactionSurveyOffered { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the skill groups to which the agents involved in the call belong. Multiple IDs are separated by commas.</para>
+            /// <para>The IDs of the skill groups to which the agents participating in the call belong. Multiple skill group IDs are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>skillgroup@ccc-test</para>
@@ -605,17 +751,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string SkillGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The names of the skill groups to which the agents involved in the call belong. Multiple names are separated by commas.</para>
+            /// <para>The names of the skill groups to which the agents participating in the call belong. Multiple skill group names are separated by commas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试技能组</para>
+            /// <para>Test skill group</para>
             /// </summary>
             [NameInMap("SkillGroupNames")]
             [Validation(Required=false)]
             public string SkillGroupNames { get; set; }
 
             /// <summary>
-            /// <para>The time when the call started. For an inbound call, this is the time when the call enters the IVR. For an outbound call, this is the time when the call is initiated. The value is a UNIX timestamp, in milliseconds.</para>
+            /// <para>The start time of the call. For inbound calls, the time is calculated from when the call enters the IVR. For outbound calls, the time is calculated from when the call starts to connect. The time is formatted as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1532458000000</para>
@@ -640,7 +786,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

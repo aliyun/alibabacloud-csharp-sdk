@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The field name.</para>
+        /// <para>The property name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The schema ID.</para>
+        /// <para>schema id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

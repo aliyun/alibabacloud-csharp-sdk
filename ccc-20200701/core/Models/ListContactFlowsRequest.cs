@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>A keyword to search for in the names or descriptions of IVR flows.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>默认流程</para>
         /// </summary>
         [NameInMap("SearchPattern")]
         [Validation(Required=false)]
