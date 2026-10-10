@@ -6356,6 +6356,144 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Renews member API keys in bulk in authorization management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBatchRenewMemberApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBatchRenewMemberApiKeysResponse
+        /// </returns>
+        public ModelRouterBatchRenewMemberApiKeysResponse ModelRouterBatchRenewMemberApiKeysWithOptions(string id, ModelRouterBatchRenewMemberApiKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                body["userIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterBatchRenewMemberApiKeys",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/member-apikeys/renew",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterBatchRenewMemberApiKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews member API keys in bulk in authorization management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBatchRenewMemberApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBatchRenewMemberApiKeysResponse
+        /// </returns>
+        public async Task<ModelRouterBatchRenewMemberApiKeysResponse> ModelRouterBatchRenewMemberApiKeysWithOptionsAsync(string id, ModelRouterBatchRenewMemberApiKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                body["userIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterBatchRenewMemberApiKeys",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/member-apikeys/renew",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterBatchRenewMemberApiKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews member API keys in bulk in authorization management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBatchRenewMemberApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBatchRenewMemberApiKeysResponse
+        /// </returns>
+        public ModelRouterBatchRenewMemberApiKeysResponse ModelRouterBatchRenewMemberApiKeys(string id, ModelRouterBatchRenewMemberApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterBatchRenewMemberApiKeysWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews member API keys in bulk in authorization management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBatchRenewMemberApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBatchRenewMemberApiKeysResponse
+        /// </returns>
+        public async Task<ModelRouterBatchRenewMemberApiKeysResponse> ModelRouterBatchRenewMemberApiKeysAsync(string id, ModelRouterBatchRenewMemberApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterBatchRenewMemberApiKeysWithOptionsAsync(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Batch resets member authorizations to inherit under a department in organization management.</para>
         /// </summary>
         /// 
@@ -17738,6 +17876,136 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryUserListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manages authorization and renews an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterRenewApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterRenewApiKeyResponse
+        /// </returns>
+        public ModelRouterRenewApiKeyResponse ModelRouterRenewApiKeyWithOptions(string id, ModelRouterRenewApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterRenewApiKey",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/renew",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterRenewApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manages authorization and renews an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterRenewApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterRenewApiKeyResponse
+        /// </returns>
+        public async Task<ModelRouterRenewApiKeyResponse> ModelRouterRenewApiKeyWithOptionsAsync(string id, ModelRouterRenewApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterRenewApiKey",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/renew",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterRenewApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manages authorization and renews an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterRenewApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterRenewApiKeyResponse
+        /// </returns>
+        public ModelRouterRenewApiKeyResponse ModelRouterRenewApiKey(string id, ModelRouterRenewApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterRenewApiKeyWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manages authorization and renews an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterRenewApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterRenewApiKeyResponse
+        /// </returns>
+        public async Task<ModelRouterRenewApiKeyResponse> ModelRouterRenewApiKeyAsync(string id, ModelRouterRenewApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterRenewApiKeyWithOptionsAsync(id, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

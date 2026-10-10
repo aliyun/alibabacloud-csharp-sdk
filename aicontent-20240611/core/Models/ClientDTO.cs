@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>My customer</para>
+        /// <para>My Customer</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

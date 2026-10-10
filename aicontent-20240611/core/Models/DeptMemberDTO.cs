@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>John Smith</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

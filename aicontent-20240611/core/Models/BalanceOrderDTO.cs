@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Administrator manual recharge</para>
+        /// <para>Manual top-up by administrator</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]

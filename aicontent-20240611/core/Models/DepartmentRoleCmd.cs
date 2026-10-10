@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class DepartmentRoleCmd : TeaModel {
         /// <summary>
+        /// <para>The department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The role code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>member</para>
         /// </summary>
