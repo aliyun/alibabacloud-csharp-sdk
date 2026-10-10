@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("includeInactive")]
+        [Validation(Required=false)]
+        public bool? IncludeInactive { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of returned results (similarity Top-N).</para>
         /// 
         /// <b>Example:</b>
@@ -59,6 +67,44 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("retrievalOption")]
         [Validation(Required=false)]
         public string RetrievalOption { get; set; }
+
+        [NameInMap("scope")]
+        [Validation(Required=false)]
+        public SearchContextRequestScope Scope { get; set; }
+        public class SearchContextRequestScope : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sales-copilot</para>
+            /// </summary>
+            [NameInMap("agentId")]
+            [Validation(Required=false)]
+            public string AgentId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>crm-service</para>
+            /// </summary>
+            [NameInMap("appId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>run-001</para>
+            /// </summary>
+            [NameInMap("runId")]
+            [Validation(Required=false)]
+            public string RunId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>u-10001</para>
+            /// </summary>
+            [NameInMap("userId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</para>

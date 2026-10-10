@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("strategyVersion")]
+        [Validation(Required=false)]
+        public int? StrategyVersion { get; set; }
+
     }
 
 }

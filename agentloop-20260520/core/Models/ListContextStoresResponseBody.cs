@@ -118,6 +118,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> ServiceNames { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>trajectory</para>
+            /// </summary>
+            [NameInMap("sourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
+
+            /// <summary>
             /// <para>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</para>
             /// 
             /// <b>Example:</b>
@@ -126,6 +134,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>upsert</para>
+            /// </summary>
+            [NameInMap("storageMode")]
+            [Validation(Required=false)]
+            public string StorageMode { get; set; }
 
             /// <summary>
             /// <para>The time when the context store was last updated, in ISO 8601 UTC format.</para>

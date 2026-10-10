@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>trajectory</para>
+        /// </summary>
+        [NameInMap("sourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
     }
 
 }

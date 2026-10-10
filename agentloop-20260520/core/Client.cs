@@ -2368,9 +2368,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         public DeleteContextStoreResponse DeleteContextStoreWithOptions(string agentSpace, string contextStoreName, DeleteContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOutputDataset))
+            {
+                query["deleteOutputDataset"] = request.DeleteOutputDataset;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2408,9 +2414,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         public async Task<DeleteContextStoreResponse> DeleteContextStoreWithOptionsAsync(string agentSpace, string contextStoreName, DeleteContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOutputDataset))
+            {
+                query["deleteOutputDataset"] = request.DeleteOutputDataset;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5939,6 +5951,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5996,6 +6012,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8239,6 +8259,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["formatted"] = request.Formatted;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeInactive))
+            {
+                body["includeInactive"] = request.IncludeInactive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 body["limit"] = request.Limit;
@@ -8250,6 +8274,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrievalOption))
             {
                 body["retrievalOption"] = request.RetrievalOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
@@ -8305,6 +8333,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["formatted"] = request.Formatted;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeInactive))
+            {
+                body["includeInactive"] = request.IncludeInactive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 body["limit"] = request.Limit;
@@ -8316,6 +8348,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrievalOption))
             {
                 body["retrievalOption"] = request.RetrievalOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
@@ -8661,7 +8697,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a context store.</para>
+        /// <para>Updates the context store configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8686,6 +8722,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeNote))
+            {
+                body["changeNote"] = request.ChangeNote;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 body["config"] = request.Config;
@@ -8725,7 +8765,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a context store.</para>
+        /// <para>Updates the context store configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8750,6 +8790,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeNote))
+            {
+                body["changeNote"] = request.ChangeNote;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 body["config"] = request.Config;
@@ -8789,7 +8833,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a context store.</para>
+        /// <para>Updates the context store configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8808,7 +8852,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a context store.</para>
+        /// <para>Updates the context store configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class SearchContextResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ok</para>
+        /// </summary>
+        [NameInMap("auditStatus")]
+        [Validation(Required=false)]
+        public string AuditStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0190f1c2-7d3e-7a1b-9c4d-2e5f6a7b8c9d</para>
+        /// </summary>
+        [NameInMap("recallEventId")]
+        [Validation(Required=false)]
+        public string RecallEventId { get; set; }
+
+        /// <summary>
         /// <para>The request ID. You can use this ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
