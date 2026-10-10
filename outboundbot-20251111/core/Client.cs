@@ -5426,6 +5426,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
                 request.ScriptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScriptIds, "ScriptIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuilderType))
+            {
+                body["BuilderType"] = request.BuilderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -5433,6 +5437,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NluEngine))
+            {
+                body["NluEngine"] = request.NluEngine;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5494,6 +5502,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
                 request.ScriptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScriptIds, "ScriptIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuilderType))
+            {
+                body["BuilderType"] = request.BuilderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -5501,6 +5513,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NluEngine))
+            {
+                body["NluEngine"] = request.NluEngine;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

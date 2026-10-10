@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ScriptProfileShrink { get; set; }
 
         /// <summary>
-        /// <para>The TTS configuration.</para>
+        /// <para>The Text-to-Speech (TTS) configuration.</para>
         /// </summary>
         [NameInMap("SynthesizerConfig")]
         [Validation(Required=false)]
         public string SynthesizerConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ASR configuration.</para>
+        /// <para>The Automatic Speech Recognition (ASR) configuration.</para>
         /// </summary>
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]

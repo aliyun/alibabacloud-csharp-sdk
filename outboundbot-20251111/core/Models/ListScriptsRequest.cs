@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListScriptsRequest : TeaModel {
         /// <summary>
+        /// <para>The chatbot builder type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LITE</para>
+        /// </summary>
+        [NameInMap("BuilderType")]
+        [Validation(Required=false)]
+        public string BuilderType { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
@@ -20,14 +30,24 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The scenario name.</para>
+        /// <para>The script name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Satisfaction Survey</para>
+        /// <para>Satisfaction survey</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The NLU engine type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BEEBOT</para>
+        /// </summary>
+        [NameInMap("NluEngine")]
+        [Validation(Required=false)]
+        public string NluEngine { get; set; }
 
         /// <summary>
         /// <para>The page number, starting from 1.</para>
@@ -40,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only published scenarios.</para>
+        /// <para>Specifies whether to return only published scripts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public bool? PublishOnly { get; set; }
 
         /// <summary>
-        /// <para>The list of scenario IDs.</para>
+        /// <para>The list of script IDs.</para>
         /// </summary>
         [NameInMap("ScriptIds")]
         [Validation(Required=false)]

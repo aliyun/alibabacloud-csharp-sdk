@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,12 +47,32 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data list.</para>
+            /// <para>The list of scripts.</para>
             /// </summary>
             [NameInMap("Scripts")]
             [Validation(Required=false)]
             public List<ListScriptsResponseBodyDataScripts> Scripts { get; set; }
             public class ListScriptsResponseBodyDataScripts : TeaModel {
+                /// <summary>
+                /// <para>The chatbot builder type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>LITE</para>
+                /// </summary>
+                [NameInMap("BuilderType")]
+                [Validation(Required=false)]
+                public string BuilderType { get; set; }
+
+                /// <summary>
+                /// <para>The chatbot instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>chatbot-cn-AmVJnFZRmb</para>
+                /// </summary>
+                [NameInMap("ChatbotId")]
+                [Validation(Required=false)]
+                public string ChatbotId { get; set; }
+
                 /// <summary>
                 /// <para>The concurrency.</para>
                 /// 
@@ -64,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? Concurrency { get; set; }
 
                 /// <summary>
-                /// <para>The creation time, in millisecond-level timestamp.</para>
+                /// <para>The creation time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -97,7 +117,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Satisfaction Survey</para>
+                /// <para>Satisfaction survey</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -124,7 +144,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string NluEngine { get; set; }
 
                 /// <summary>
-                /// <para>The phone number bound to the scenario.</para>
+                /// <para>The phone number bound to the script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01057316547</para>
@@ -144,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string PublishedVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The scenario ID.</para>
+                /// <para>The script ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -154,7 +174,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
-                /// <para>The scenario status.</para>
+                /// <para>The script status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PUBLISHED</para>
@@ -164,7 +184,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time, in millisecond-level timestamp.</para>
+                /// <para>The update time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -176,7 +196,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The total number of records that match the conditions.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -225,7 +245,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
