@@ -2782,12 +2782,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>采集飞书群聊到协作空间</para>
+        /// <para>Collects Lark group chat data into a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// <para>The trusted platform user serves as a Lark connector user. After workspace authentication is passed, data is collected asynchronously. The frontend queries the details to check the actual status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2877,12 +2877,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>采集飞书群聊到协作空间</para>
+        /// <para>Collects Lark group chat data into a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// <para>The trusted platform user serves as a Lark connector user. After workspace authentication is passed, data is collected asynchronously. The frontend queries the details to check the actual status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2972,12 +2972,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>采集飞书群聊到协作空间</para>
+        /// <para>Collects Lark group chat data into a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// <para>The trusted platform user serves as a Lark connector user. After workspace authentication is passed, data is collected asynchronously. The frontend queries the details to check the actual status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2996,12 +2996,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>采集飞书群聊到协作空间</para>
+        /// <para>Collects Lark group chat data into a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// <para>The trusted platform user serves as a Lark connector user. After workspace authentication is passed, data is collected asynchronously. The frontend queries the details to check the actual status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3274,12 +3274,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传本地文件到协作空间</para>
+        /// <para>Uploads a local file to a collaborative share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// <para>First use getSourceUploadSignature to complete the local file PUT operation, then submit the fileRecordId of SOURCE/OSS for the current tenant. The file path and name are read by the server, fixed as FILE/LOCAL/GROUP. Valid members can write to the physical directory of the space. If directoryId is omitted or set to root, the space root directory is used. The creation result is returned. To check the subsequent parsing status, perform a query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3351,12 +3351,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传本地文件到协作空间</para>
+        /// <para>Uploads a local file to a collaborative share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// <para>First use getSourceUploadSignature to complete the local file PUT operation, then submit the fileRecordId of SOURCE/OSS for the current tenant. The file path and name are read by the server, fixed as FILE/LOCAL/GROUP. Valid members can write to the physical directory of the space. If directoryId is omitted or set to root, the space root directory is used. The creation result is returned. To check the subsequent parsing status, perform a query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3428,12 +3428,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传本地文件到协作空间</para>
+        /// <para>Uploads a local file to a collaborative share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// <para>First use getSourceUploadSignature to complete the local file PUT operation, then submit the fileRecordId of SOURCE/OSS for the current tenant. The file path and name are read by the server, fixed as FILE/LOCAL/GROUP. Valid members can write to the physical directory of the space. If directoryId is omitted or set to root, the space root directory is used. The creation result is returned. To check the subsequent parsing status, perform a query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3452,12 +3452,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传本地文件到协作空间</para>
+        /// <para>Uploads a local file to a collaborative share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// <para>First use getSourceUploadSignature to complete the local file PUT operation, then submit the fileRecordId of SOURCE/OSS for the current tenant. The file path and name are read by the server, fixed as FILE/LOCAL/GROUP. Valid members can write to the physical directory of the space. If directoryId is omitted or set to root, the space root directory is used. The creation result is returned. To check the subsequent parsing status, perform a query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3694,12 +3694,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传纯文本到协作空间</para>
+        /// <para>Uploads plain text to a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3771,12 +3771,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传纯文本到协作空间</para>
+        /// <para>Uploads plain text to a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3848,12 +3848,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传纯文本到协作空间</para>
+        /// <para>Uploads plain text to a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3872,12 +3872,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传纯文本到协作空间</para>
+        /// <para>Uploads plain text to a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12138,12 +12138,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协作空间资料详情</para>
+        /// <para>Retrieves the details of a resource in a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// <para>Queries the details of a specified resource visible in a space in read-only mode. Unauthorized and invalid references are denied, and the space folder is not initialized.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12199,12 +12199,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协作空间资料详情</para>
+        /// <para>Retrieves the details of a resource in a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// <para>Queries the details of a specified resource visible in a space in read-only mode. Unauthorized and invalid references are denied, and the space folder is not initialized.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12260,12 +12260,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协作空间资料详情</para>
+        /// <para>Retrieves the details of a resource in a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// <para>Queries the details of a specified resource visible in a space in read-only mode. Unauthorized and invalid references are denied, and the space folder is not initialized.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12284,12 +12284,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协作空间资料详情</para>
+        /// <para>Retrieves the details of a resource in a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// <para>Queries the details of a specified resource visible in a space in read-only mode. Unauthorized and invalid references are denied, and the space folder is not initialized.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21890,12 +21890,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动协作空间资料</para>
+        /// <para>Moves a resource within a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// <para>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21959,12 +21959,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动协作空间资料</para>
+        /// <para>Moves a resource within a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// <para>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22028,12 +22028,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动协作空间资料</para>
+        /// <para>Moves a resource within a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// <para>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22052,12 +22052,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动协作空间资料</para>
+        /// <para>Moves a resource within a collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// <para>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24902,12 +24902,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析协作空间资料</para>
+        /// <para>Re-parses a resource in a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// <para>Valid members who are creators or storage management administrators can re-parse physical resources. Referenced resources are read-only. The operation is asynchronous by default. The forceSync parameter only waits for completion and does not force a re-fetch. If an online document has not changed, the operation may return immediately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24967,12 +24967,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析协作空间资料</para>
+        /// <para>Re-parses a resource in a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// <para>Valid members who are creators or storage management administrators can re-parse physical resources. Referenced resources are read-only. The operation is asynchronous by default. The forceSync parameter only waits for completion and does not force a re-fetch. If an online document has not changed, the operation may return immediately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25032,12 +25032,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析协作空间资料</para>
+        /// <para>Re-parses a resource in a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// <para>Valid members who are creators or storage management administrators can re-parse physical resources. Referenced resources are read-only. The operation is asynchronous by default. The forceSync parameter only waits for completion and does not force a re-fetch. If an online document has not changed, the operation may return immediately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25056,12 +25056,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析协作空间资料</para>
+        /// <para>Re-parses a resource in a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// <para>Valid members who are creators or storage management administrators can re-parse physical resources. Referenced resources are read-only. The operation is asynchronous by default. The forceSync parameter only waits for completion and does not force a re-fetch. If an online document has not changed, the operation may return immediately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25270,12 +25270,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换协作空间资料文件</para>
+        /// <para>Replaces a file in the workspace resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// <para>Valid members who are creators or storage management administrators can replace physical GROUP resources. References are read-only. Upload the new file first and then commit the upload result. Only FILE type is supported. The SourceID is retained and parse is triggered, which is asynchronous by default. A no-op result may occur after a write operation, returning an execute error instead of a not-found error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25351,12 +25351,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换协作空间资料文件</para>
+        /// <para>Replaces a file in the workspace resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// <para>Valid members who are creators or storage management administrators can replace physical GROUP resources. References are read-only. Upload the new file first and then commit the upload result. Only FILE type is supported. The SourceID is retained and parse is triggered, which is asynchronous by default. A no-op result may occur after a write operation, returning an execute error instead of a not-found error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25432,12 +25432,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换协作空间资料文件</para>
+        /// <para>Replaces a file in the workspace resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// <para>Valid members who are creators or storage management administrators can replace physical GROUP resources. References are read-only. Upload the new file first and then commit the upload result. Only FILE type is supported. The SourceID is retained and parse is triggered, which is asynchronous by default. A no-op result may occur after a write operation, returning an execute error instead of a not-found error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25456,12 +25456,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换协作空间资料文件</para>
+        /// <para>Replaces a file in the workspace resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// <para>Valid members who are creators or storage management administrators can replace physical GROUP resources. References are read-only. Upload the new file first and then commit the upload result. Only FILE type is supported. The SourceID is retained and parse is triggered, which is asynchronous by default. A no-op result may occur after a write operation, returning an execute error instead of a not-found error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31832,12 +31832,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改协作空间资料正文</para>
+        /// <para>Modifies the body content of a collaborative share resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31901,12 +31901,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改协作空间资料正文</para>
+        /// <para>Modifies the body content of a collaborative share resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31970,12 +31970,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改协作空间资料正文</para>
+        /// <para>Modifies the body content of a collaborative share resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31994,12 +31994,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改协作空间资料正文</para>
+        /// <para>Modifies the body content of a collaborative share resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">

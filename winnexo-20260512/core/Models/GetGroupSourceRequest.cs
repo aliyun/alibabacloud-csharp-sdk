@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetGroupSourceRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The project group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>空间内可读的资料ID，支持有效引用资料</para>
+        /// <para>The ID of the personal FILE data source to be replaced. The ID is unique within the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

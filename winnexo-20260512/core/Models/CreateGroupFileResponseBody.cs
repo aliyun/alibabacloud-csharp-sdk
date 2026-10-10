@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码，成功为200</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>解析并绑定的真实目录ID</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>创建时间，ISO8601格式</para>
+        /// <para>The creation timestamp of the customer group, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>协作空间ID</para>
+        /// <para>The project group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Provider处理后的实际资料名称</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>项目资料</para>
+        /// <para>Project Files</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E68654BD-F7BA-5837-8686-5645D739A47C</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资料范围，固定GROUP</para>
+        /// <para>The permission scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>新建资料ID</para>
+        /// <para>The source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -100,7 +100,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>实际资料状态；RUNNING表示处理中，FAILED表示创建处理失败</para>
+        /// <para>The signing status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CREATED: Created but not signed.</description></item>
+        /// <item><description>SUCCESS: Signed successfully.</description></item>
+        /// <item><description>STOP: Terminated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupTextRequest : TeaModel {
         /// <summary>
-        /// <para>资料描述</para>
+        /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>当前空间物理目录ID；省略/root使用空间根，首次可能初始化根目录；引用目录不可写</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The project group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,18 +41,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>资料显示名；最终名称沿用Provider规则</para>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>项目资料</para>
+        /// <para>ProjectResources</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>资料标签，JSON字符串列表</para>
+        /// <para>The source tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>纯文本正文，不能全为空白；Provider沿用去首尾空白规则</para>
+        /// <para>The message content for text messages.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

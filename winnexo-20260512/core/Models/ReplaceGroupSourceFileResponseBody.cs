@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceGroupSourceFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>替换后的文件 OSS 地址</para>
+        /// <para>The OSS persistent storage path of the replacement file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://example/new.txt</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>替换后的文件访问 URL</para>
+        /// <para>The OSS persistent storage path of the replacement file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/new.txt">https://example.com/new.txt</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>替换后的文件记录 ID</para>
+        /// <para>The file record ID of the replacement file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>file_example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>操作后的资料名称，沿用已有名称维护规则</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>项目资料</para>
+        /// <para>Project resources</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E68654BD-F7BA-5837-8686-5645D739A47C</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资料 ID；替换、编辑、重新解析均保持该 ID</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source_example</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>资料类型</para>
+        /// <para>The data source type. The value is fixed as FILE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -100,7 +100,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>当前资料状态；RUNNING 表示处理中，异步受理不代表解析完成</para>
+        /// <para>The data source status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Online.</description></item>
+        /// <item><description><b>0</b>: Offline.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

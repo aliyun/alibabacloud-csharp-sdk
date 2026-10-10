@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateGroupSourceContentRequest : TeaModel {
         /// <summary>
-        /// <para>更新后的完整正文，可为空字符串；TEXT 存储时去首尾空白；支持 TEXT/本地 txt、md FILE，已有 skip_parse 资料沿用免解析与本地文件扩展名规则</para>
+        /// <para>The returned content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>更新后的正文</para>
+        /// <para>Updated body content</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>是否等待解析完成；默认 false 异步受理，true 同步等待，网关超时 300000ms</para>
+        /// <para>Specifies whether to force synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ForceSync { get; set; }
 
         /// <summary>
-        /// <para>资料所属协作空间 ID</para>
+        /// <para>The project group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>当前空间物理 GROUP 资料 ID；引用资料只读</para>
+        /// <para>The original project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

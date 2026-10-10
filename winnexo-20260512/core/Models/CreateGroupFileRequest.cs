@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupFileRequest : TeaModel {
         /// <summary>
-        /// <para>资料描述</para>
+        /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>当前空间物理目录ID；省略/root使用空间根，首次可能初始化根目录；引用目录不可写</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>当前用户在当前租户上传的SOURCE/OSS文件记录ID；须先完成文件PUT</para>
+        /// <para>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The project group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,18 +52,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>资料显示名；最终名称沿用Provider规则</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>项目资料</para>
+        /// <para>Project Files</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>资料标签，JSON字符串列表</para>
+        /// <para>The source tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MoveGroupResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码，成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The collaboration space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_example</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>移动前的目录 ID</para>
+        /// <para>The directory ID before the move.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>移动的资料 ID，移动前后保持不变</para>
+        /// <para>The ID of the moved resource. This value remains unchanged before and after the move.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>移动后的目录 ID</para>
+        /// <para>The directory ID after the move.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

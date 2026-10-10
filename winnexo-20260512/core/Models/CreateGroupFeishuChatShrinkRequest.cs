@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupFeishuChatShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>飞书群聊ID，以oc_开头，需当前用户有权读取</para>
+        /// <para>The DingTalk group chat session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>资料描述</para>
+        /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>空间物理目录ID；省略/root使用空间根，首次可能初始化根目录</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The project group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>历史起始时间，YYYY-MM-DD或YYYY-MM-DD HH:MM:SS；省略读取全部可见历史</para>
+        /// <para>The start time for historical messages. The value must be in the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format. If this parameter is not specified, all visible historical messages are retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-01</para>
@@ -62,17 +62,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string HistoryStartTime { get; set; }
 
         /// <summary>
-        /// <para>分析指令</para>
+        /// <para>The meeting notes content (optional). The notes are used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>重点识别客户诉求与待办</para>
+        /// <para>Focus on identifying customer demands and to-do items</para>
         /// </summary>
         [NameInMap("notes")]
         [Validation(Required=false)]
         public string Notes { get; set; }
 
         /// <summary>
-        /// <para>运营对象名称，用于来源追溯</para>
+        /// <para>The digital employee name (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -82,17 +82,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>资料标签JSON字符串列表</para>
+        /// <para>The source tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;重点&quot;,&quot;文件&quot;]</para>
+        /// <para>[&quot;Key&quot;,&quot;File&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>Source级同步配置</para>
+        /// <para>The feature update frequency.</para>
         /// </summary>
         [NameInMap("updateFrequency")]
         [Validation(Required=false)]
