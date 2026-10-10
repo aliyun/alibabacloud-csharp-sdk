@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public ImageBatchModerationResponseBodyData Data { get; set; }
         public class ImageBatchModerationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data ID of the moderated object.</para>
+            /// <para>The data ID of the moderation object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26769ada6e264e7ba9aa048241e12be9</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string ManualTaskId { get; set; }
 
             /// <summary>
-            /// <para>An array of results for the image moderation. The results contain parameters such as threat labels and confidence scores.</para>
+            /// <para>The array of parameter results, such as risk labels and confidence scores, for image detection.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ImageBatchModerationResponseBodyDataResult> Result { get; set; }
             public class ImageBatchModerationResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The confidence score. The value ranges from 0 to 100, with two decimal places. Some labels do not have a confidence score.</para>
+                /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places. Some labels do not have a confidence score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>81.22</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>未检测出风险</para>
+                /// <para>No risk detected</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The label returned after the image content moderation. An image may have multiple labels and scores.</para>
+                /// <para>The label returned after image content detection. Multiple labels and scores may be detected for the same image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>violent_explosion</para>
@@ -86,28 +86,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The detailed moderation results for each detection service. This is an array.</para>
+            /// <para>The array of parameter results, such as risk labels and confidence scores, for image detection of each service.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<ImageBatchModerationResponseBodyDataResults> Results { get; set; }
             public class ImageBatchModerationResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>Additional reference information for the image.</para>
+                /// <para>The auxiliary reference information for the image.</para>
                 /// </summary>
                 [NameInMap("Ext")]
                 [Validation(Required=false)]
                 public ImageBatchModerationResponseBodyDataResultsExt Ext { get; set; }
                 public class ImageBatchModerationResponseBodyDataResultsExt : TeaModel {
                     /// <summary>
-                    /// <para>A list of hits in custom image libraries.</para>
+                    /// <para>The list of hits in custom image libraries.</para>
                     /// </summary>
                     [NameInMap("CustomImage")]
                     [Validation(Required=false)]
                     public List<ImageBatchModerationResponseBodyDataResultsExtCustomImage> CustomImage { get; set; }
                     public class ImageBatchModerationResponseBodyDataResultsExtCustomImage : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the hit custom image.</para>
+                        /// <para>The ID of the matched custom image.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1965304870002</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string LibId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the hit custom image library.</para>
+                        /// <para>The name of the matched custom image library.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>白名单</para>
+                        /// <para>Whitelist</para>
                         /// </summary>
                         [NameInMap("LibName")]
                         [Validation(Required=false)]
@@ -139,14 +139,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>Logo information.</para>
+                    /// <para>The logo information.</para>
                     /// </summary>
                     [NameInMap("LogoData")]
                     [Validation(Required=false)]
                     public ImageBatchModerationResponseBodyDataResultsExtLogoData LogoData { get; set; }
                     public class ImageBatchModerationResponseBodyDataResultsExtLogoData : TeaModel {
                         /// <summary>
-                        /// <para>The location of the recognized object.</para>
+                        /// <para>The location information of the logo.</para>
                         /// </summary>
                         [NameInMap("Location")]
                         [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public int? W { get; set; }
 
                             /// <summary>
-                            /// <para>The x-coordinate of the upper-left corner of the area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                            /// <para>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>11</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public int? X { get; set; }
 
                             /// <summary>
-                            /// <para>The y-coordinate of the upper-left corner of the area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                            /// <para>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>22</para>
@@ -195,14 +195,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>Identity information.</para>
+                        /// <para>The logo information.</para>
                         /// </summary>
                         [NameInMap("Logo")]
                         [Validation(Required=false)]
                         public List<ImageBatchModerationResponseBodyDataResultsExtLogoDataLogo> Logo { get; set; }
                         public class ImageBatchModerationResponseBodyDataResultsExtLogoDataLogo : TeaModel {
                             /// <summary>
-                            /// <para>The confidence score. The value ranges from 0 to 100, with two decimal places.</para>
+                            /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>99.1</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public float? Confidence { get; set; }
 
                             /// <summary>
-                            /// <para>The category of the logo.</para>
+                            /// <para>The logo category.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>logo_sns</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public string Label { get; set; }
 
                             /// <summary>
-                            /// <para>The name of the logo.</para>
+                            /// <para>The logo name.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>阿里云</para>
+                            /// <para>Alibaba Cloud</para>
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
@@ -236,14 +236,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>A list of public figures.</para>
+                    /// <para>The list of public figures.</para>
                     /// </summary>
                     [NameInMap("PublicFigure")]
                     [Validation(Required=false)]
                     public List<ImageBatchModerationResponseBodyDataResultsExtPublicFigure> PublicFigure { get; set; }
                     public class ImageBatchModerationResponseBodyDataResultsExtPublicFigure : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the recognized public figure.</para>
+                        /// <para>The ID of the recognized figure.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>12324222</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string FigureId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the recognized public figure.</para>
+                        /// <para>The name of the recognized figure.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xxxxx</para>
@@ -263,14 +263,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string FigureName { get; set; }
 
                         /// <summary>
-                        /// <para>The location of the recognized object.</para>
+                        /// <para>The location information of the logo.</para>
                         /// </summary>
                         [NameInMap("Location")]
                         [Validation(Required=false)]
                         public List<ImageBatchModerationResponseBodyDataResultsExtPublicFigureLocation> Location { get; set; }
                         public class ImageBatchModerationResponseBodyDataResultsExtPublicFigureLocation : TeaModel {
                             /// <summary>
-                            /// <para>The height of the area, in pixels.</para>
+                            /// <para>The height of the text area, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>440</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public int? H { get; set; }
 
                             /// <summary>
-                            /// <para>The width of the area, in pixels.</para>
+                            /// <para>The width of the text area, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>330</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public int? W { get; set; }
 
                             /// <summary>
-                            /// <para>The x-coordinate of the upper-left corner of the area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                            /// <para>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>11</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public int? X { get; set; }
 
                             /// <summary>
-                            /// <para>The y-coordinate of the upper-left corner of the area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                            /// <para>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>22</para>
@@ -314,24 +314,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>The text detected in the image.</para>
+                    /// <para>The text information detected in the image.</para>
                     /// </summary>
                     [NameInMap("TextInImage")]
                     [Validation(Required=false)]
                     public ImageBatchModerationResponseBodyDataResultsExtTextInImage TextInImage { get; set; }
                     public class ImageBatchModerationResponseBodyDataResultsExtTextInImage : TeaModel {
                         /// <summary>
-                        /// <para>If a custom text library is hit, the ID and name of the library, and the hit keywords are returned.</para>
+                        /// <para>The custom library ID, custom library name, and custom words returned when a custom text library is matched.</para>
                         /// </summary>
                         [NameInMap("CustomText")]
                         [Validation(Required=false)]
                         public List<ImageBatchModerationResponseBodyDataResultsExtTextInImageCustomText> CustomText { get; set; }
                         public class ImageBatchModerationResponseBodyDataResultsExtTextInImageCustomText : TeaModel {
                             /// <summary>
-                            /// <para>The custom keywords. Separate multiple keywords with a comma.</para>
+                            /// <para>The custom words. Separate multiple words with commas.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>自定义词1,自定义词2</para>
+                            /// <para>Custom word 1,Custom word 2</para>
                             /// </summary>
                             [NameInMap("KeyWords")]
                             [Validation(Required=false)]
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <para>The name of the custom library.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>自定义库1</para>
+                            /// <para>Custom library 1</para>
                             /// </summary>
                             [NameInMap("LibName")]
                             [Validation(Required=false)]
@@ -360,14 +360,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The information for each line of text recognized in the image.</para>
+                        /// <para>The text information of each line recognized in the image.</para>
                         /// </summary>
                         [NameInMap("OcrResult")]
                         [Validation(Required=false)]
                         public List<ImageBatchModerationResponseBodyDataResultsExtTextInImageOcrResult> OcrResult { get; set; }
                         public class ImageBatchModerationResponseBodyDataResultsExtTextInImageOcrResult : TeaModel {
                             /// <summary>
-                            /// <para>The coordinates of the text line.</para>
+                            /// <para>The coordinate information of the text line.</para>
                             /// </summary>
                             [NameInMap("Location")]
                             [Validation(Required=false)]
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public int? W { get; set; }
 
                                 /// <summary>
-                                /// <para>The x-coordinate of the upper-left corner of the text area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                                /// <para>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>11</para>
@@ -404,7 +404,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public int? X { get; set; }
 
                                 /// <summary>
-                                /// <para>The y-coordinate of the upper-left corner of the text area, in pixels. The origin (0,0) is the upper-left corner of the image.</para>
+                                /// <para>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the coordinate origin, in pixels.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>22</para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             }
 
                             /// <summary>
-                            /// <para>The text.</para>
+                            /// <para>The text information.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>abcd</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The detected risk keywords.</para>
+                        /// <para>The matched risk keywords.</para>
                         /// </summary>
                         [NameInMap("RiskWord")]
                         [Validation(Required=false)]
@@ -439,14 +439,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The results of the image detection, including threat labels and confidence scores. This is an array.</para>
+                /// <para>The array of parameter results, such as risk labels and confidence scores, for image detection.</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<ImageBatchModerationResponseBodyDataResultsResult> Result { get; set; }
                 public class ImageBatchModerationResponseBodyDataResultsResult : TeaModel {
                     /// <summary>
-                    /// <para>The confidence score. The value ranges from 0 to 100, with two decimal places. Some labels do not have a confidence score.</para>
+                    /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places. Some labels do not have a confidence score.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>81.22</para>
@@ -459,14 +459,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>未检测出风险</para>
+                    /// <para>No risk detected</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The label returned after the image content moderation. An image may have multiple labels and scores.</para>
+                    /// <para>The label returned after image content detection. Multiple labels and scores may be detected for the same image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>violent_explosion</para>
@@ -488,7 +488,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The detection service supported by Image Moderation Pro.</para>
+                /// <para>The detection service supported by Image Moderation Enhanced Edition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>baselineCheck</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. Alibaba Cloud generates this ID for each request. Use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</para>

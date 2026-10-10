@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ImageBatchModerationRequest : TeaModel {
         /// <summary>
-        /// <para>The detection services supported by Image Moderation Pro. Separate multiple services with commas. Valid values:</para>
+        /// <para>The detection types supported by Image Moderation Enhanced Edition. Separate multiple values with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>baselineCheck: General baseline check</para>
-        /// </description></item>
-        /// <item><description><para>baselineCheck_pro: General baseline check (Professional Edition)</para>
-        /// </description></item>
-        /// <item><description><para>tonalityImprove: Content administration check</para>
-        /// </description></item>
-        /// <item><description><para>aigcCheck: AIGC image check</para>
-        /// </description></item>
+        /// <item><description>baselineCheck: general baseline check</description></item>
+        /// <item><description>baselineCheck_pro: general baseline check professional edition</description></item>
+        /// <item><description>tonalityImprove: content governance detection</description></item>
+        /// <item><description>aigcCheck: AIGC image detection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the content to moderate.</para>
+        /// <para>The parameter set for the content moderation object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

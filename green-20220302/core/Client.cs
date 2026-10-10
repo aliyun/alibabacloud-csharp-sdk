@@ -1185,7 +1185,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Invocation of Images</para>
+        /// <para>Invokes image moderation in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1231,7 +1231,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Invocation of Images</para>
+        /// <para>Invokes image moderation in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1277,7 +1277,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Invocation of Images</para>
+        /// <para>Invokes image moderation in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1295,7 +1295,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Invocation of Images</para>
+        /// <para>Invokes image moderation in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1313,16 +1313,16 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image moderation</para>
+        /// <para>Moderates images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <para>Before calling this API operation, complete the following tasks:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
-        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1369,16 +1369,16 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image moderation</para>
+        /// <para>Moderates images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <para>Before calling this API operation, complete the following tasks:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
-        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1425,16 +1425,16 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image moderation</para>
+        /// <para>Moderates images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <para>Before calling this API operation, complete the following tasks:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
-        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1453,16 +1453,16 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image moderation</para>
+        /// <para>Moderates images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <para>Before calling this API operation, complete the following tasks:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
-        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
