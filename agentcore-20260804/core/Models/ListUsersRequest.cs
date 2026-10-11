@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for exact match by username.</para>
+        /// <para>The filter condition for exact match on the username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-01</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for fuzzy match by username. The value can be up to 128 characters in length.</para>
+        /// <para>The filter condition for fuzzy match on the username. The value can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The cursor for querying the next page. Do not specify this parameter in the first call. In subsequent calls, specify the nextToken value returned in the previous call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dXNlci1vZmZzZXQ6MTA</para>
