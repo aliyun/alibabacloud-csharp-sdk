@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The filter condition for exact match on the email address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></para>
+        /// </summary>
+        [NameInMap("email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for exact match on the username.</para>
+        /// <para>The filter condition for exact match on the user name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-01</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for fuzzy match on the username. The value can be up to 128 characters in length.</para>
+        /// <para>The filter condition for fuzzy match on the user name. The value can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

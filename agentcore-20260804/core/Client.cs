@@ -14027,7 +14027,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14047,6 +14047,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["email"] = request.Email;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -14085,7 +14089,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14105,6 +14109,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["email"] = request.Email;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -14143,7 +14151,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14162,7 +14170,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</para>
         /// </summary>
         /// 
         /// <param name="request">

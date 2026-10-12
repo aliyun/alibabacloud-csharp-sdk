@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The user list.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The authentication method of the user. A value of password indicates that the user is authenticated by using the local password of the workspace. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+            /// <para>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</para>
+            /// <para>The creation time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</para>
+            /// <para>The user name. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-01</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The note of the user. The note can be up to 1,024 characters in length.</para>
+            /// <para>The user remarks. The remarks can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent operations team member</para>
+            /// <para>Member of the agent operations team</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</para>
+            /// <para>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification. The time is displayed in UTC and follows the RFC 3339 format.</para>
+            /// <para>The last modification time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect in the current query.</para>
+        /// <para>The maximum number of records per page that takes effect in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. If the request fails, an error description is returned.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. If no next page exists, this parameter is empty.</para>
+        /// <para>The cursor for the next page. This parameter is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dXNlci1vZmZzZXQ6MTA</para>
