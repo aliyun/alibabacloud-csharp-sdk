@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The plug-in alias.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>OAuth2 认证</para>
+                /// <para>OAuth2 Authentication</para>
                 /// </summary>
                 [NameInMap("alias")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The plug-in description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>基于 OAuth2 实现身份认证和鉴权。</para>
+                /// <para>Implements identity authentication and authorization based on OAuth2</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]

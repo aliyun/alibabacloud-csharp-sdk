@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for full match search. Case-insensitive.</para>
+        /// <para>The keyword for full match search. The search is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>

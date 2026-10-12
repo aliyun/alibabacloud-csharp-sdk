@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The KMS key configuration.</para>
+        /// <para>The KMS key configuration information.</para>
         /// </summary>
         [NameInMap("kmsConfig")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SecretData { get; set; }
 
         /// <summary>
-        /// <para>The source of the key.</para>
+        /// <para>The key source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KMS</para>

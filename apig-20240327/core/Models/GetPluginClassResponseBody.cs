@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The Wasm plug-in programming language.</para>
+            /// <para>The programming language of the Wasm plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TinyGo</para>

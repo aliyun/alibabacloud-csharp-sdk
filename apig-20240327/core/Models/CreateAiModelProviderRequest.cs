@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The model provider identifier.</para>
+        /// <para>The identifier of the model provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

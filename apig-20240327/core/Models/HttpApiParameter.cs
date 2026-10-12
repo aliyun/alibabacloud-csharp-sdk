@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DefaultValue { get; set; }
 
         /// <summary>
-        /// <para>The parameter description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The example description.</para>
+        /// <para>User ID</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The sample value of the parameter.</para>
+        /// <para>The example value of the parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExampleValue { get; set; }
 
         /// <summary>
-        /// <para>The parameter name.</para>
+        /// <para>The name of the parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the parameter is required.</para>
+        /// <para>Indicates whether the parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -61,14 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Required { get; set; }
 
         /// <summary>
-        /// <para>The parameter type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Integer</description></item>
-        /// <item><description>Number</description></item>
-        /// <item><description>String</description></item>
-        /// <item><description>Boolean</description></item>
-        /// </list>
+        /// <para>The type of the parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

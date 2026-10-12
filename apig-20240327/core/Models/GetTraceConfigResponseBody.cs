@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>Indicates whether Tracing Analysis is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled.</description></item>
-            /// <item><description>false: shutdown.</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

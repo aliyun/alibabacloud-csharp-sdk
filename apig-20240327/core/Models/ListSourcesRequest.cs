@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID used to filter results. This parameter is also used for RAM authentication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-xxxx</para>
         /// </summary>
@@ -48,12 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type by which you want to query sources.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>K8S</description></item>
-        /// <item><description>MSE_NACOS</description></item>
-        /// </list>
+        /// <para>The source type used to filter the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MSE_NACOS</para>

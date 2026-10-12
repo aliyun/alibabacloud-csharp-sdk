@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>每秒限流100次</para>
+        /// <para>Rate limited to 100 requests per second</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

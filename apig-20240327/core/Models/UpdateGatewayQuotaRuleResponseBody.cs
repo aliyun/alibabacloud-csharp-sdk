@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer subject. Valid values: day (daily), week (weekly), month (monthly).</para>
+                    /// <para>The period type of the existing conflicting rule on the consumer subject. Valid values: day (daily), week (weekly), and month (monthly).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer subject. Valid values: calendar (calendar period) and epoch (custom period).</para>
+                    /// <para>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates a calendar-period rule. A value of epoch indicates a custom-period rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether this is a dry run.</para>
+            /// <para>Indicates whether the request is a dry run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

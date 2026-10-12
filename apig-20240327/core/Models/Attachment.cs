@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The environment to which the mounted resource belongs. If the environment ID is *, the mounted resource of the policy is not associated with any environment.</para>
+        /// <para>The environment to which the mounted resource belongs. If the environment ID is returned as *, the mounted resource of the policy is not associated with any environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cq7l5s5lhtgi6qasrdc0</para>

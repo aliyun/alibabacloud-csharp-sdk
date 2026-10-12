@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DetachAndDeletePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The policy association ID.</para>
+        /// <para>The policy attachment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pr-cq7l5s5lhtgi6qasrdc0</para>

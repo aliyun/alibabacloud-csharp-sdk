@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiInfoByName : TeaModel {
         /// <summary>
+        /// <para>The gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-xx</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The API type.</para>
+        /// <para>The type of the HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable versioning.</para>
+        /// <para>Indicates whether version management is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? VersionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The information about the versioned API.</para>
+        /// <para>The versioned API version information.</para>
         /// </summary>
         [NameInMap("versionedHttpApis")]
         [Validation(Required=false)]

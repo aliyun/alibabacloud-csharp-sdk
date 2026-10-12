@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class LabelDetail : TeaModel {
         /// <summary>
-        /// <para>The label key</para>
+        /// <para>The label key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>version</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The list of available values for this label</para>
+        /// <para>The list of label values.</para>
         /// </summary>
         [NameInMap("values")]
         [Validation(Required=false)]

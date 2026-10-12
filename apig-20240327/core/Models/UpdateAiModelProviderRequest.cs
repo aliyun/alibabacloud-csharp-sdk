@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Qwen Cloud / Alibaba Cloud Bailian.</para>
+        /// <para>Qwen Cloud / Alibaba Cloud Bailian</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is specified, all bindings are cleared. Duplicate and empty values are normalized.</para>
+        /// <para>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is passed, all bindings are cleared. Duplicate and empty values are normalized.</para>
         /// </summary>
         [NameInMap("serviceIds")]
         [Validation(Required=false)]

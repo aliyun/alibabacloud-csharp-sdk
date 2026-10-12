@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> PortRanges { get; set; }
 
         /// <summary>
-        /// <para>The security group ID. This parameter is required. The specified security group must be different from the security group associated with the gateway. Otherwise, an error is returned.</para>
+        /// <para>The security group ID. This parameter is required. The specified security group must be different from the security group that is associated with the gateway. Otherwise, an error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-wz929kxhcdp****</para>

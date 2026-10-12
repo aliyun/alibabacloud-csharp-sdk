@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListGatewayFeaturesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayFeaturesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The runtime constraints calculated based on the current gateway form. Only returned for certain features.</para>
+                /// <para>The runtime constraints calculated based on the current gateway form. Only returned for specific features.</para>
                 /// </summary>
                 [NameInMap("constraints")]
                 [Validation(Required=false)]
                 public ListGatewayFeaturesResponseBodyDataItemsConstraints Constraints { get; set; }
                 public class ListGatewayFeaturesResponseBodyDataItemsConstraints : TeaModel {
                     /// <summary>
-                    /// <para>The maximum body collection size per request in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</para>
+                    /// <para>The maximum body collection size per request, in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5120</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Applies to request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</para>
+                    /// <para>Applies to the request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The parameter group. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Telemetry: observability-related parameter.</description></item>
-                    /// <item><description>Engine: engine-related parameter.</description></item>
+                    /// <item><description>Telemetry: An observability parameter.</description></item>
+                    /// <item><description>Engine: An engine parameter.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -106,10 +106,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The input type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Trigger: toggle.</description></item>
-                    /// <item><description>Input: text input.</description></item>
-                    /// <item><description>SingleSelect: single-select.</description></item>
-                    /// <item><description>MultiSelect: multi-select.</description></item>
+                    /// <item><description>Trigger: Toggle.</description></item>
+                    /// <item><description>Input: Text input.</description></item>
+                    /// <item><description>SingleSelect: Single-select.</description></item>
+                    /// <item><description>MultiSelect: Multi-select.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions> ValueOptions { get; set; }
                     public class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions : TeaModel {
                         /// <summary>
-                        /// <para>The key used to pass the parameter.</para>
+                        /// <para>The pass parameter key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>KEEP_UNCHANGED</para>

@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -298,10 +298,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -345,10 +345,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group for gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group for gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group for gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group for gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -653,7 +653,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes consumer authorization rules in batches.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +699,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes consumer authorization rules in batches.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,7 +745,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes consumer authorization rules in batches.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -764,7 +764,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes consumer authorization rules in batches.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出HTTP API</para>
+        /// <para>Batch exports HTTP APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -845,7 +845,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出HTTP API</para>
+        /// <para>Batch exports HTTP APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -907,7 +907,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出HTTP API</para>
+        /// <para>Batch exports HTTP APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -926,7 +926,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出HTTP API</para>
+        /// <para>Batch exports HTTP APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -945,7 +945,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入HTTP API</para>
+        /// <para>Imports HTTP APIs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1027,7 +1027,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入HTTP API</para>
+        /// <para>Imports HTTP APIs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1109,7 +1109,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入HTTP API</para>
+        /// <para>Imports HTTP APIs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1128,7 +1128,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入HTTP API</para>
+        /// <para>Imports HTTP APIs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1277,7 +1277,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新消费者鉴权</para>
+        /// <para>Updates HTTP API operations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1331,7 +1331,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新消费者鉴权</para>
+        /// <para>Updates HTTP API operations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1385,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新消费者鉴权</para>
+        /// <para>Updates HTTP API operations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1404,7 +1404,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新消费者鉴权</para>
+        /// <para>Updates HTTP API operations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1577,13 +1577,131 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the activation status of the API management service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommodityStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommodityStatusResponse
+        /// </returns>
+        public CheckCommodityStatusResponse CheckCommodityStatusWithOptions(CheckCommodityStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckCommodityStatus",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sales/commodity-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckCommodityStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the activation status of the API management service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommodityStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommodityStatusResponse
+        /// </returns>
+        public async Task<CheckCommodityStatusResponse> CheckCommodityStatusWithOptionsAsync(CheckCommodityStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckCommodityStatus",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sales/commodity-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckCommodityStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the activation status of the API management service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommodityStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommodityStatusResponse
+        /// </returns>
+        public CheckCommodityStatusResponse CheckCommodityStatus(CheckCommodityStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CheckCommodityStatusWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the activation status of the API management service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommodityStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommodityStatusResponse
+        /// </returns>
+        public async Task<CheckCommodityStatusResponse> CheckCommodityStatusAsync(CheckCommodityStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CheckCommodityStatusWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an AI model card.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
-        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1658,8 +1776,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
-        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1734,8 +1852,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
-        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1759,8 +1877,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
-        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2131,7 +2249,153 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer.</para>
+        /// <para>Creates a HiMarket chat session with a specified conversation type and associated products, and returns the ID of the newly created session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatSessionResponse
+        /// </returns>
+        public CreateChatSessionResponse CreateChatSessionWithOptions(CreateChatSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Products))
+            {
+                body["products"] = request.Products;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TalkType))
+            {
+                body["talkType"] = request.TalkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatSession",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/sessions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a HiMarket chat session with a specified conversation type and associated products, and returns the ID of the newly created session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatSessionResponse
+        /// </returns>
+        public async Task<CreateChatSessionResponse> CreateChatSessionWithOptionsAsync(CreateChatSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Products))
+            {
+                body["products"] = request.Products;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TalkType))
+            {
+                body["talkType"] = request.TalkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatSession",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/sessions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a HiMarket chat session with a specified conversation type and associated products, and returns the ID of the newly created session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatSessionResponse
+        /// </returns>
+        public CreateChatSessionResponse CreateChatSession(CreateChatSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateChatSessionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a HiMarket chat session with a specified conversation type and associated products, and returns the ID of the newly created session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatSessionResponse
+        /// </returns>
+        public async Task<CreateChatSessionResponse> CreateChatSessionAsync(CreateChatSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateChatSessionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2211,7 +2475,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer.</para>
+        /// <para>Creates an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2291,7 +2555,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer.</para>
+        /// <para>Creates an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2310,7 +2574,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer.</para>
+        /// <para>Creates an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2496,12 +2760,12 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
         /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
-        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
         /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
-        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
-        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2552,12 +2816,12 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
         /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
-        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
         /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
-        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
-        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2608,12 +2872,12 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
         /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
-        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
         /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
-        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
-        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2637,12 +2901,12 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
         /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
-        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
         /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
-        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
-        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2811,6 +3075,144 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateConsumerGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a HiMarket developer account and returns the ID of the new developer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeveloperRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeveloperResponse
+        /// </returns>
+        public CreateDeveloperResponse CreateDeveloperWithOptions(CreateDeveloperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeveloper",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/developers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeveloperResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a HiMarket developer account and returns the ID of the new developer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeveloperRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeveloperResponse
+        /// </returns>
+        public async Task<CreateDeveloperResponse> CreateDeveloperWithOptionsAsync(CreateDeveloperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeveloper",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/developers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeveloperResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a HiMarket developer account and returns the ID of the new developer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeveloperRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeveloperResponse
+        /// </returns>
+        public CreateDeveloperResponse CreateDeveloper(CreateDeveloperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDeveloperWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a HiMarket developer account and returns the ID of the new developer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeveloperRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeveloperResponse
+        /// </returns>
+        public async Task<CreateDeveloperResponse> CreateDeveloperAsync(CreateDeveloperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDeveloperWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4083,12 +4485,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API版本</para>
+        /// <para>Creates an API version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接口支持创建多个服务。</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4134,12 +4536,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API版本</para>
+        /// <para>Creates an API version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接口支持创建多个服务。</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4185,12 +4587,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API版本</para>
+        /// <para>Creates an API version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接口支持创建多个服务。</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4209,12 +4611,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API版本</para>
+        /// <para>Creates an API version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接口支持创建多个服务。</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4467,7 +4869,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建迁移任务</para>
+        /// <para>Creates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4541,7 +4943,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建迁移任务</para>
+        /// <para>Creates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4615,7 +5017,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建迁移任务</para>
+        /// <para>Creates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4634,7 +5036,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建迁移任务</para>
+        /// <para>Creates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5435,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建插件webide工作空间</para>
+        /// <para>Creates a WebIDE workspace for a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5091,7 +5493,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建插件webide工作空间</para>
+        /// <para>Creates a WebIDE workspace for a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5149,7 +5551,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建插件webide工作空间</para>
+        /// <para>Creates a WebIDE workspace for a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5168,7 +5570,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建插件webide工作空间</para>
+        /// <para>Creates a WebIDE workspace for a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5341,7 +5743,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy resource mount.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5403,7 +5805,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy resource mount.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5465,7 +5867,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy resource mount.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5484,7 +5886,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy resource mount.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5503,7 +5905,291 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建风险检查任务</para>
+        /// <para>Creates a product category for an API product and returns the ID and name of the new category upon success.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductCategoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductCategoryResponse
+        /// </returns>
+        public CreateProductCategoryResponse CreateProductCategoryWithOptions(CreateProductCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProductCategory",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/product-categories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProductCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a product category for an API product and returns the ID and name of the new category upon success.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductCategoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductCategoryResponse
+        /// </returns>
+        public async Task<CreateProductCategoryResponse> CreateProductCategoryWithOptionsAsync(CreateProductCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProductCategory",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/product-categories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProductCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a product category for an API product and returns the ID and name of the new category upon success.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductCategoryResponse
+        /// </returns>
+        public CreateProductCategoryResponse CreateProductCategory(CreateProductCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateProductCategoryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a product category for an API product and returns the ID and name of the new category upon success.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductCategoryResponse
+        /// </returns>
+        public async Task<CreateProductCategoryResponse> CreateProductCategoryAsync(CreateProductCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateProductCategoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. The association result can be queried by GetProductRef and removed by DeleteProductRef at the same path.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductRefResponse
+        /// </returns>
+        public CreateProductRefResponse CreateProductRefWithOptions(string productId, CreateProductRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApigRefConfig))
+            {
+                body["apigRefConfig"] = request.ApigRefConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProductRef",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/ref",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProductRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. The association result can be queried by GetProductRef and removed by DeleteProductRef at the same path.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductRefResponse
+        /// </returns>
+        public async Task<CreateProductRefResponse> CreateProductRefWithOptionsAsync(string productId, CreateProductRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApigRefConfig))
+            {
+                body["apigRefConfig"] = request.ApigRefConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProductRef",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/ref",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProductRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. The association result can be queried by GetProductRef and removed by DeleteProductRef at the same path.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductRefResponse
+        /// </returns>
+        public CreateProductRefResponse CreateProductRef(string productId, CreateProductRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateProductRefWithOptions(productId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. The association result can be queried by GetProductRef and removed by DeleteProductRef at the same path.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProductRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProductRefResponse
+        /// </returns>
+        public async Task<CreateProductRefResponse> CreateProductRefAsync(string productId, CreateProductRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateProductRefWithOptionsAsync(productId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a risk check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5543,7 +6229,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建风险检查任务</para>
+        /// <para>Creates a risk check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,7 +6269,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建风险检查任务</para>
+        /// <para>Creates a risk check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5602,7 +6288,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建风险检查任务</para>
+        /// <para>Creates a risk check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6118,6 +6804,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a source.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSourceRequest
         /// </param>
@@ -6179,6 +6870,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Creates a source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSourceRequest
@@ -6242,6 +6938,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a source.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSourceRequest
         /// </param>
@@ -6260,6 +6961,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Creates a source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSourceRequest
@@ -6513,7 +7219,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer.</para>
+        /// <para>Deletes a consumer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6549,7 +7255,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer.</para>
+        /// <para>Deletes a consumer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6585,7 +7291,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer.</para>
+        /// <para>Deletes a consumer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6600,7 +7306,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer.</para>
+        /// <para>Deletes a consumer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7165,12 +7871,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule for a gateway.</para>
+        /// <para>Deletes a quota throttling rule from a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7210,12 +7916,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule for a gateway.</para>
+        /// <para>Deletes a quota throttling rule from a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7255,12 +7961,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule for a gateway.</para>
+        /// <para>Deletes a quota throttling rule from a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7279,12 +7985,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule for a gateway.</para>
+        /// <para>Deletes a quota throttling rule from a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7303,7 +8009,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a security group rule from a gateway.</para>
+        /// <para>Deletes a gateway security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7349,7 +8055,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a security group rule from a gateway.</para>
+        /// <para>Deletes a gateway security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7395,7 +8101,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a security group rule from a gateway.</para>
+        /// <para>Deletes a gateway security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7414,7 +8120,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a security group rule from a gateway.</para>
+        /// <para>Deletes a gateway security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7571,7 +8277,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified operation.</para>
+        /// <para>Deletes a specified API operation.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7607,7 +8313,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified operation.</para>
+        /// <para>Deletes a specified API operation.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7643,7 +8349,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified operation.</para>
+        /// <para>Deletes a specified API operation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7658,7 +8364,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified operation.</para>
+        /// <para>Deletes a specified API operation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7877,7 +8583,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除迁移任务</para>
+        /// <para>Deletes a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7917,7 +8623,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除迁移任务</para>
+        /// <para>Deletes a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7957,7 +8663,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除迁移任务</para>
+        /// <para>Deletes a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7976,7 +8682,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除迁移任务</para>
+        /// <para>Deletes a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8097,7 +8803,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeletePluginClass</para>
+        /// <para>Deletes a custom plugin class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8137,7 +8843,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeletePluginClass</para>
+        /// <para>Deletes a custom plugin class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8177,7 +8883,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeletePluginClass</para>
+        /// <para>Deletes a custom plugin class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8196,7 +8902,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeletePluginClass</para>
+        /// <para>Deletes a custom plugin class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,6 +9121,478 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeletePolicyAttachmentWithOptionsAsync(policyAttachmentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified HiMarket developer portal by portal ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePortalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePortalResponse
+        /// </returns>
+        public DeletePortalResponse DeletePortalWithOptions(string portalId, DeletePortalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePortal",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/portals/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(portalId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePortalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified HiMarket developer portal by portal ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePortalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePortalResponse
+        /// </returns>
+        public async Task<DeletePortalResponse> DeletePortalWithOptionsAsync(string portalId, DeletePortalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePortal",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/portals/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(portalId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePortalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified HiMarket developer portal by portal ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePortalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePortalResponse
+        /// </returns>
+        public DeletePortalResponse DeletePortal(string portalId, DeletePortalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeletePortalWithOptions(portalId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified HiMarket developer portal by portal ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePortalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePortalResponse
+        /// </returns>
+        public async Task<DeletePortalResponse> DeletePortalAsync(string portalId, DeletePortalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeletePortalWithOptionsAsync(portalId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified API product by API product ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductResponse
+        /// </returns>
+        public DeleteProductResponse DeleteProductWithOptions(string productId, DeleteProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProduct",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified API product by API product ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductResponse
+        /// </returns>
+        public async Task<DeleteProductResponse> DeleteProductWithOptionsAsync(string productId, DeleteProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProduct",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified API product by API product ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductResponse
+        /// </returns>
+        public DeleteProductResponse DeleteProduct(string productId, DeleteProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteProductWithOptions(productId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified API product by API product ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductResponse
+        /// </returns>
+        public async Task<DeleteProductResponse> DeleteProductAsync(string productId, DeleteProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteProductWithOptionsAsync(productId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified product category by product category ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductCategoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductCategoryResponse
+        /// </returns>
+        public DeleteProductCategoryResponse DeleteProductCategoryWithOptions(string categoryId, DeleteProductCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProductCategory",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/product-categories/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(categoryId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified product category by product category ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductCategoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductCategoryResponse
+        /// </returns>
+        public async Task<DeleteProductCategoryResponse> DeleteProductCategoryWithOptionsAsync(string categoryId, DeleteProductCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProductCategory",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/product-categories/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(categoryId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified product category by product category ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductCategoryResponse
+        /// </returns>
+        public DeleteProductCategoryResponse DeleteProductCategory(string categoryId, DeleteProductCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteProductCategoryWithOptions(categoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified product category by product category ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductCategoryResponse
+        /// </returns>
+        public async Task<DeleteProductCategoryResponse> DeleteProductCategoryAsync(string categoryId, DeleteProductCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteProductCategoryWithOptionsAsync(categoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates an API product from an API by API product ID. This association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductRefResponse
+        /// </returns>
+        public DeleteProductRefResponse DeleteProductRefWithOptions(string productId, DeleteProductRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProductRef",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/ref",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates an API product from an API by API product ID. This association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductRefResponse
+        /// </returns>
+        public async Task<DeleteProductRefResponse> DeleteProductRefWithOptionsAsync(string productId, DeleteProductRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProductRef",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/ref",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProductRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates an API product from an API by API product ID. This association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductRefResponse
+        /// </returns>
+        public DeleteProductRefResponse DeleteProductRef(string productId, DeleteProductRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteProductRefWithOptions(productId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates an API product from an API by API product ID. This association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProductRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProductRefResponse
+        /// </returns>
+        public async Task<DeleteProductRefResponse> DeleteProductRefAsync(string productId, DeleteProductRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteProductRefWithOptionsAsync(productId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8850,6 +10028,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeployHttpApiRequest
         /// </param>
@@ -8903,6 +10086,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployHttpApiRequest
@@ -8958,6 +10146,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeployHttpApiRequest
         /// </param>
@@ -8976,6 +10169,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployHttpApiRequest
@@ -8998,7 +10196,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// <para>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -9039,7 +10237,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// <para>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -9080,7 +10278,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// <para>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
         /// </description>
         /// 
         /// <returns>
@@ -9100,7 +10298,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// <para>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
         /// </description>
         /// 
         /// <returns>
@@ -9245,7 +10443,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates and deletes a policy.</para>
+        /// <para>Detaches and deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9291,7 +10489,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates and deletes a policy.</para>
+        /// <para>Detaches and deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9337,7 +10535,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates and deletes a policy.</para>
+        /// <para>Detaches and deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9356,7 +10554,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates and deletes a policy.</para>
+        /// <para>Detaches and deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9757,7 +10955,275 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务</para>
+        /// <para>Queries the effective field collection configurations for an HTTP API across each URI of the request in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and whether the configuration is derived from a field template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldConfigResponse
+        /// </returns>
+        public GetApiPathFieldConfigResponse GetApiPathFieldConfigWithOptions(GetApiPathFieldConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpApiId))
+            {
+                query["httpApiId"] = request.HttpApiId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPathFieldConfig",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/api-path-fields/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPathFieldConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective field collection configurations for an HTTP API across each URI of the request in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and whether the configuration is derived from a field template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldConfigResponse
+        /// </returns>
+        public async Task<GetApiPathFieldConfigResponse> GetApiPathFieldConfigWithOptionsAsync(GetApiPathFieldConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpApiId))
+            {
+                query["httpApiId"] = request.HttpApiId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPathFieldConfig",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/api-path-fields/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPathFieldConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective field collection configurations for an HTTP API across each URI of the request in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and whether the configuration is derived from a field template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldConfigResponse
+        /// </returns>
+        public GetApiPathFieldConfigResponse GetApiPathFieldConfig(GetApiPathFieldConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetApiPathFieldConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective field collection configurations for an HTTP API across each URI of the request in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and whether the configuration is derived from a field template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldConfigResponse
+        /// </returns>
+        public async Task<GetApiPathFieldConfigResponse> GetApiPathFieldConfigAsync(GetApiPathFieldConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetApiPathFieldConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldTemplateResponse
+        /// </returns>
+        public GetApiPathFieldTemplateResponse GetApiPathFieldTemplateWithOptions(GetApiPathFieldTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPathFieldTemplate",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/api-path-fields/template",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPathFieldTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldTemplateResponse
+        /// </returns>
+        public async Task<GetApiPathFieldTemplateResponse> GetApiPathFieldTemplateWithOptionsAsync(GetApiPathFieldTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPathFieldTemplate",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/api-path-fields/template",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPathFieldTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldTemplateResponse
+        /// </returns>
+        public GetApiPathFieldTemplateResponse GetApiPathFieldTemplate(GetApiPathFieldTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetApiPathFieldTemplateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPathFieldTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPathFieldTemplateResponse
+        /// </returns>
+        public async Task<GetApiPathFieldTemplateResponse> GetApiPathFieldTemplateAsync(GetApiPathFieldTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetApiPathFieldTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a batch export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9797,7 +11263,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务</para>
+        /// <para>Queries a batch export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9837,7 +11303,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务</para>
+        /// <para>Queries a batch export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9856,7 +11322,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务</para>
+        /// <para>Queries a batch export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9875,7 +11341,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量操作任务</para>
+        /// <para>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9915,7 +11381,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量操作任务</para>
+        /// <para>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9955,7 +11421,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量操作任务</para>
+        /// <para>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9974,7 +11440,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量操作任务</para>
+        /// <para>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10521,6 +11987,124 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeveloperRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeveloperResponse
+        /// </returns>
+        public GetDeveloperResponse GetDeveloperWithOptions(GetDeveloperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeveloper",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/developers/profile",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeveloperResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeveloperRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeveloperResponse
+        /// </returns>
+        public async Task<GetDeveloperResponse> GetDeveloperWithOptionsAsync(GetDeveloperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeveloper",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/developers/profile",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeveloperResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeveloperRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeveloperResponse
+        /// </returns>
+        public GetDeveloperResponse GetDeveloper(GetDeveloperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDeveloperWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeveloperRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeveloperResponse
+        /// </returns>
+        public async Task<GetDeveloperResponse> GetDeveloperAsync(GetDeveloperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDeveloperWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a domain name.</para>
         /// </summary>
         /// 
@@ -10915,7 +12499,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关弹性策略</para>
+        /// <para>Retrieves the elastic scaling rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10955,7 +12539,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关弹性策略</para>
+        /// <para>Retrieves the elastic scaling rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10995,7 +12579,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关弹性策略</para>
+        /// <para>Retrieves the elastic scaling rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11014,7 +12598,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关弹性策略</para>
+        /// <para>Retrieves the elastic scaling rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11207,13 +12791,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
-        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
+        /// <para>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
+        /// Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11275,13 +12859,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
-        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
+        /// <para>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
+        /// Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11343,13 +12927,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
-        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
+        /// <para>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
+        /// Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11368,13 +12952,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
-        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
+        /// <para>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
+        /// Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11393,12 +12977,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关资源配额与用量</para>
+        /// <para>Queries the resource quotas and usage of a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// <para>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11438,12 +13022,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关资源配额与用量</para>
+        /// <para>Queries the resource quotas and usage of a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// <para>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11483,12 +13067,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关资源配额与用量</para>
+        /// <para>Queries the resource quotas and usage of a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// <para>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11507,12 +13091,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关资源配额与用量</para>
+        /// <para>Queries the resource quotas and usage of a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// <para>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11531,7 +13115,243 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of an HTTP API.</para>
+        /// <para>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is the primary consumer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerResponse
+        /// </returns>
+        public GetHiMarketConsumerResponse GetHiMarketConsumerWithOptions(string consumerId, GetHiMarketConsumerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHiMarketConsumer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHiMarketConsumerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is the primary consumer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerResponse
+        /// </returns>
+        public async Task<GetHiMarketConsumerResponse> GetHiMarketConsumerWithOptionsAsync(string consumerId, GetHiMarketConsumerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHiMarketConsumer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHiMarketConsumerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is the primary consumer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerResponse
+        /// </returns>
+        public GetHiMarketConsumerResponse GetHiMarketConsumer(string consumerId, GetHiMarketConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetHiMarketConsumerWithOptions(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is the primary consumer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerResponse
+        /// </returns>
+        public async Task<GetHiMarketConsumerResponse> GetHiMarketConsumerAsync(string consumerId, GetHiMarketConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetHiMarketConsumerWithOptionsAsync(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credential information of a HiMarket consumer by consumer ID. The response includes API key and HMAC credential configurations. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerCredentialResponse
+        /// </returns>
+        public GetHiMarketConsumerCredentialResponse GetHiMarketConsumerCredentialWithOptions(string consumerId, GetHiMarketConsumerCredentialRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHiMarketConsumerCredential",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId) + "/credentials",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHiMarketConsumerCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credential information of a HiMarket consumer by consumer ID. The response includes API key and HMAC credential configurations. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerCredentialResponse
+        /// </returns>
+        public async Task<GetHiMarketConsumerCredentialResponse> GetHiMarketConsumerCredentialWithOptionsAsync(string consumerId, GetHiMarketConsumerCredentialRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHiMarketConsumerCredential",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/himarket/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId) + "/credentials",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHiMarketConsumerCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credential information of a HiMarket consumer by consumer ID. The response includes API key and HMAC credential configurations. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerCredentialResponse
+        /// </returns>
+        public GetHiMarketConsumerCredentialResponse GetHiMarketConsumerCredential(string consumerId, GetHiMarketConsumerCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetHiMarketConsumerCredentialWithOptions(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credential information of a HiMarket consumer by consumer ID. The response includes API key and HMAC credential configurations. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHiMarketConsumerCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHiMarketConsumerCredentialResponse
+        /// </returns>
+        public async Task<GetHiMarketConsumerCredentialResponse> GetHiMarketConsumerCredentialAsync(string consumerId, GetHiMarketConsumerCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetHiMarketConsumerCredentialWithOptionsAsync(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11577,7 +13397,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of an HTTP API.</para>
+        /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11623,7 +13443,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of an HTTP API.</para>
+        /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11642,7 +13462,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of an HTTP API.</para>
+        /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11870,7 +13690,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -11911,7 +13731,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -11952,7 +13772,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11972,7 +13792,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11987,7 +13807,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务中的命名空间和服务映射</para>
+        /// <para>Retrieves the namespaced services for a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12027,7 +13847,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务中的命名空间和服务映射</para>
+        /// <para>Retrieves the namespaced services for a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12067,7 +13887,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务中的命名空间和服务映射</para>
+        /// <para>Retrieves the namespaced services for a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12086,7 +13906,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务中的命名空间和服务映射</para>
+        /// <para>Retrieves the namespaced services for a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12105,7 +13925,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务详情</para>
+        /// <para>Retrieves a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12145,7 +13965,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务详情</para>
+        /// <para>Retrieves a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12185,7 +14005,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务详情</para>
+        /// <para>Retrieves a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12204,7 +14024,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务详情</para>
+        /// <para>Retrieves a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12443,7 +14263,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件webide工作空间</para>
+        /// <para>Queries the WebIDE workspace of a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12483,7 +14303,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件webide工作空间</para>
+        /// <para>Queries the WebIDE workspace of a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12523,7 +14343,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件webide工作空间</para>
+        /// <para>Queries the WebIDE workspace of a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12542,7 +14362,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件webide工作空间</para>
+        /// <para>Queries the WebIDE workspace of a plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12765,7 +14585,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves resource overview information.</para>
+        /// <para>Retrieves the resource overview information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12811,7 +14631,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves resource overview information.</para>
+        /// <para>Retrieves the resource overview information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12857,7 +14677,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves resource overview information.</para>
+        /// <para>Retrieves the resource overview information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12876,7 +14696,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves resource overview information.</para>
+        /// <para>Retrieves the resource overview information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12895,7 +14715,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取风险项通知配置</para>
+        /// <para>Retrieves the notification configuration for a risk item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12941,7 +14761,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取风险项通知配置</para>
+        /// <para>Retrieves the notification configuration for a risk item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12987,7 +14807,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取风险项通知配置</para>
+        /// <para>Retrieves the notification configuration for a risk item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13006,7 +14826,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取风险项通知配置</para>
+        /// <para>Retrieves the notification configuration for a risk item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13147,7 +14967,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the value of a key.</para>
+        /// <para>Retrieves the value of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13188,7 +15008,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the value of a key.</para>
+        /// <para>Retrieves the value of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13229,7 +15049,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the value of a key.</para>
+        /// <para>Retrieves the value of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13249,7 +15069,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the value of a key.</para>
+        /// <para>Retrieves the value of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13269,7 +15089,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets service details.</para>
+        /// <para>Retrieves the details of a service.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13305,7 +15125,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets service details.</para>
+        /// <para>Retrieves the details of a service.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13341,7 +15161,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets service details.</para>
+        /// <para>Retrieves the details of a service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13356,7 +15176,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets service details.</para>
+        /// <para>Retrieves the details of a service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13603,7 +15423,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13701,7 +15521,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13799,7 +15619,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13818,7 +15638,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13975,7 +15795,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AIAgent</para>
+        /// <para>Calls an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14037,7 +15857,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AIAgent</para>
+        /// <para>Calls an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14099,7 +15919,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AIAgent</para>
+        /// <para>Calls an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14118,7 +15938,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AIAgent</para>
+        /// <para>Calls an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14137,7 +15957,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI model cards.</para>
+        /// <para>Queries a list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14195,7 +16015,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI model cards.</para>
+        /// <para>Queries a list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14253,7 +16073,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI model cards.</para>
+        /// <para>Queries a list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14272,7 +16092,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI model cards.</para>
+        /// <para>Queries a list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14445,7 +16265,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务列表</para>
+        /// <para>Queries a list of batch export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14519,7 +16339,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务列表</para>
+        /// <para>Queries a list of batch export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14593,7 +16413,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务列表</para>
+        /// <para>Queries a list of batch export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14612,7 +16432,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量导出任务列表</para>
+        /// <para>Queries a list of batch export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14631,7 +16451,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumer authorization rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14685,7 +16505,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumer authorization rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14739,7 +16559,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumer authorization rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14758,7 +16578,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumer authorization rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14923,12 +16743,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组配额限流规则列表</para>
+        /// <para>Queries the list of quota throttling rules for a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// <para>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14986,12 +16806,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组配额限流规则列表</para>
+        /// <para>Queries the list of quota throttling rules for a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// <para>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15049,12 +16869,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组配额限流规则列表</para>
+        /// <para>Queries the list of quota throttling rules for a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// <para>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15073,12 +16893,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组配额限流规则列表</para>
+        /// <para>Queries the list of quota throttling rules for a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// <para>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15405,7 +17225,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumers.</para>
+        /// <para>Retrieves a list of API consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15463,7 +17283,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumers.</para>
+        /// <para>Retrieves a list of API consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15521,7 +17341,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumers.</para>
+        /// <para>Retrieves a list of API consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15540,7 +17360,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of consumers.</para>
+        /// <para>Retrieves a list of API consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16129,7 +17949,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups of an instance that can be used for authorization.</para>
+        /// <para>Queries the list of security groups that can be authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16175,7 +17995,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups of an instance that can be used for authorization.</para>
+        /// <para>Queries the list of security groups that can be authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16221,7 +18041,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups of an instance that can be used for authorization.</para>
+        /// <para>Queries the list of security groups that can be authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16240,7 +18060,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups of an instance that can be used for authorization.</para>
+        /// <para>Queries the list of security groups that can be authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16259,7 +18079,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security group rules of an instance that are in effect.</para>
+        /// <para>Queries the list of security group rules authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16299,7 +18119,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security group rules of an instance that are in effect.</para>
+        /// <para>Queries the list of security group rules authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16339,7 +18159,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security group rules of an instance that are in effect.</para>
+        /// <para>Queries the list of security group rules authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16358,7 +18178,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security group rules of an instance that are in effect.</para>
+        /// <para>Queries the list of security group rules authorized for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16377,7 +18197,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关的错误访问日志</para>
+        /// <para>Lists gateway error access logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16447,7 +18267,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关的错误访问日志</para>
+        /// <para>Lists gateway error access logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16517,7 +18337,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关的错误访问日志</para>
+        /// <para>Lists gateway error access logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16536,7 +18356,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关的错误访问日志</para>
+        /// <para>Lists gateway error access logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16657,7 +18477,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关负载均衡器列表</para>
+        /// <para>Retrieves the list of load balancers for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16723,7 +18543,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关负载均衡器列表</para>
+        /// <para>Retrieves the list of load balancers for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16789,7 +18609,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关负载均衡器列表</para>
+        /// <para>Retrieves the list of load balancers for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16808,7 +18628,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关负载均衡器列表</para>
+        /// <para>Retrieves the list of load balancers for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17215,7 +19035,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGlobalPolicies</para>
+        /// <para>Retrieves global policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +19129,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGlobalPolicies</para>
+        /// <para>Retrieves global policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17403,7 +19223,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGlobalPolicies</para>
+        /// <para>Retrieves global policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17422,7 +19242,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGlobalPolicies</para>
+        /// <para>Retrieves global policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17441,7 +19261,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of API operations.</para>
+        /// <para>Retrieves a list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17535,7 +19355,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of API operations.</para>
+        /// <para>Retrieves a list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17629,7 +19449,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of API operations.</para>
+        /// <para>Retrieves a list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17648,7 +19468,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of API operations.</para>
+        /// <para>Retrieves a list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18167,7 +19987,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstallableGateways</para>
+        /// <para>Retrieves gateways on which a plugin can be installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18221,7 +20041,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstallableGateways</para>
+        /// <para>Retrieves gateways on which a plugin can be installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18275,7 +20095,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstallableGateways</para>
+        /// <para>Retrieves gateways on which a plugin can be installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18294,7 +20114,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstallableGateways</para>
+        /// <para>Retrieves gateways on which a plugin can be installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18313,7 +20133,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Kubernetes (K8s) clusters that can be added as sources.</para>
+        /// <para>Queries the list of clusters that can be added as Kubernetes sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18359,7 +20179,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Kubernetes (K8s) clusters that can be added as sources.</para>
+        /// <para>Queries the list of clusters that can be added as Kubernetes sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18405,7 +20225,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Kubernetes (K8s) clusters that can be added as sources.</para>
+        /// <para>Queries the list of clusters that can be added as Kubernetes sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18424,7 +20244,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Kubernetes (K8s) clusters that can be added as sources.</para>
+        /// <para>Queries the list of clusters that can be added as Kubernetes sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18443,7 +20263,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of MCP servers.</para>
+        /// <para>Retrieves a list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18518,7 +20338,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of MCP servers.</para>
+        /// <para>Retrieves a list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18593,7 +20413,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of MCP servers.</para>
+        /// <para>Retrieves a list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18617,7 +20437,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of MCP servers.</para>
+        /// <para>Retrieves a list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18641,7 +20461,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务列表</para>
+        /// <para>Lists migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18691,7 +20511,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务列表</para>
+        /// <para>Lists migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18741,7 +20561,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务列表</para>
+        /// <para>Lists migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18760,7 +20580,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取迁移任务列表</para>
+        /// <para>Lists migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18779,7 +20599,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MSE Nacos instances that can be added as sources.</para>
+        /// <para>Queries the list of instances that can be added as Nacos sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18819,7 +20639,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MSE Nacos instances that can be added as sources.</para>
+        /// <para>Queries the list of instances that can be added as Nacos sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18859,7 +20679,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MSE Nacos instances that can be added as sources.</para>
+        /// <para>Queries the list of instances that can be added as Nacos sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18878,7 +20698,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MSE Nacos instances that can be added as sources.</para>
+        /// <para>Queries the list of instances that can be added as Nacos sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18897,7 +20717,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plug-in mount list.</para>
+        /// <para>Retrieves the list of plug-in mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18975,7 +20795,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plug-in mount list.</para>
+        /// <para>Retrieves the list of plug-in mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19053,7 +20873,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plug-in mount list.</para>
+        /// <para>Retrieves the list of plug-in mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19072,7 +20892,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plug-in mount list.</para>
+        /// <para>Retrieves the list of plug-in mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19321,7 +21141,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义插件托管在云效上的仓库列表和组织信息</para>
+        /// <para>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19361,7 +21181,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义插件托管在云效上的仓库列表和组织信息</para>
+        /// <para>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19401,7 +21221,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义插件托管在云效上的仓库列表和组织信息</para>
+        /// <para>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19420,7 +21240,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义插件托管在云效上的仓库列表和组织信息</para>
+        /// <para>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19439,7 +21259,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户插件webide工作空间列表</para>
+        /// <para>Retrieves the list of plugin WebIDE workspaces for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19485,7 +21305,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户插件webide工作空间列表</para>
+        /// <para>Retrieves the list of plugin WebIDE workspaces for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19531,7 +21351,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户插件webide工作空间列表</para>
+        /// <para>Retrieves the list of plugin WebIDE workspaces for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19550,7 +21370,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户插件webide工作空间列表</para>
+        /// <para>Retrieves the list of plugin WebIDE workspaces for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19569,7 +21389,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of plugins.</para>
+        /// <para>Retrieves a list of plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19651,7 +21471,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of plugins.</para>
+        /// <para>Retrieves a list of plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19733,7 +21553,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of plugins.</para>
+        /// <para>Retrieves a list of plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19752,7 +21572,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of plugins.</para>
+        /// <para>Retrieves a list of plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20119,7 +21939,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险检测结果</para>
+        /// <para>Queries risk detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20177,7 +21997,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险检测结果</para>
+        /// <para>Queries risk detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20235,7 +22055,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险检测结果</para>
+        /// <para>Queries risk detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20254,7 +22074,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险检测结果</para>
+        /// <para>Queries risk detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20278,7 +22098,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20333,7 +22153,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20388,7 +22208,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20412,7 +22232,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20783,7 +22603,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sources.</para>
+        /// <para>Retrieves a list of sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20845,7 +22665,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sources.</para>
+        /// <para>Retrieves a list of sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20907,7 +22727,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sources.</para>
+        /// <para>Retrieves a list of sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20926,7 +22746,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sources.</para>
+        /// <para>Retrieves a list of sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21099,7 +22919,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已同步的MCP Server列表</para>
+        /// <para>Lists MCP servers that are pending synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21153,7 +22973,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已同步的MCP Server列表</para>
+        /// <para>Lists MCP servers that are pending synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21207,7 +23027,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已同步的MCP Server列表</para>
+        /// <para>Lists MCP servers that are pending synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21226,7 +23046,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已同步的MCP Server列表</para>
+        /// <para>Lists MCP servers that are pending synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21245,7 +23065,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource labels.</para>
+        /// <para>Retrieves a list of resource tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21313,7 +23133,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource labels.</para>
+        /// <para>Retrieves a list of resource tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21381,7 +23201,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource labels.</para>
+        /// <para>Retrieves a list of resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21400,7 +23220,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource labels.</para>
+        /// <para>Retrieves a list of resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21419,7 +23239,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21465,7 +23285,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21511,7 +23331,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21530,7 +23350,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21783,7 +23603,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新插件托管仓库的oauth code</para>
+        /// <para>Refreshes the OAuth code for the plugin-managed repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21829,7 +23649,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新插件托管仓库的oauth code</para>
+        /// <para>Refreshes the OAuth code for the plugin-managed repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21875,7 +23695,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新插件托管仓库的oauth code</para>
+        /// <para>Refreshes the OAuth code for the plugin-managed repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21894,7 +23714,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新插件托管仓库的oauth code</para>
+        /// <para>Refreshes the OAuth code for the plugin-managed repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22033,11 +23853,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Confirm and submit the request.</description></item>
+        /// <item><description>Submit the request after confirmation.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -22141,11 +23961,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Confirm and submit the request.</description></item>
+        /// <item><description>Submit the request after confirmation.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -22249,11 +24069,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Confirm and submit the request.</description></item>
+        /// <item><description>Submit the request after confirmation.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -22302,11 +24122,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Confirm and submit the request.</description></item>
+        /// <item><description>Submit the request after confirmation.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -22439,7 +24259,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件工作空间运行流水线</para>
+        /// <para>Runs a pipeline in a plug-in workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22479,7 +24299,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件工作空间运行流水线</para>
+        /// <para>Runs a pipeline in a plug-in workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22519,7 +24339,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件工作空间运行流水线</para>
+        /// <para>Runs a pipeline in a plug-in workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22538,7 +24358,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件工作空间运行流水线</para>
+        /// <para>Runs a pipeline in a plug-in workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22865,7 +24685,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the publication of an MCP server.</para>
+        /// <para>Cancels the publishing of an MCP server.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -22901,7 +24721,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the publication of an MCP server.</para>
+        /// <para>Cancels the publishing of an MCP server.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -22937,7 +24757,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the publication of an MCP server.</para>
+        /// <para>Cancels the publishing of an MCP server.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -22952,7 +24772,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the publication of an MCP server.</para>
+        /// <para>Cancels the publishing of an MCP server.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -23883,7 +25703,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者授权规则</para>
+        /// <para>Updates an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23929,7 +25749,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者授权规则</para>
+        /// <para>Updates an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23975,7 +25795,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者授权规则</para>
+        /// <para>Updates an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23994,7 +25814,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者授权规则</para>
+        /// <para>Updates an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24180,7 +26000,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24239,7 +26059,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24298,7 +26118,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24322,7 +26142,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24484,7 +26304,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type allow you to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24575,7 +26395,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type allow you to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24666,7 +26486,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type allow you to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24690,7 +26510,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type allow you to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24871,7 +26691,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关弹性策略</para>
+        /// <para>Updates the elastic policy of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24917,7 +26737,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关弹性策略</para>
+        /// <para>Updates the elastic policy of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24963,7 +26783,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关弹性策略</para>
+        /// <para>Updates the elastic policy of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24982,7 +26802,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关弹性策略</para>
+        /// <para>Updates the elastic policy of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25131,7 +26951,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关负载均衡器</para>
+        /// <para>Updates a Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25185,7 +27005,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关负载均衡器</para>
+        /// <para>Updates a Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25239,7 +27059,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关负载均衡器</para>
+        /// <para>Updates a Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25258,7 +27078,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关负载均衡器</para>
+        /// <para>Updates a Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25277,8 +27097,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关运维时间</para>
+        /// <para>Modifies the O&amp;M window of a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayMaintenancePeriodRequest
@@ -25323,8 +27148,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关运维时间</para>
+        /// <para>Modifies the O&amp;M window of a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayMaintenancePeriodRequest
@@ -25369,8 +27199,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关运维时间</para>
+        /// <para>Modifies the O&amp;M window of a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayMaintenancePeriodRequest
@@ -25388,8 +27223,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关运维时间</para>
+        /// <para>Modifies the O&amp;M window of a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayMaintenancePeriodRequest
@@ -25568,7 +27408,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <description>
         /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
@@ -25579,13 +27419,13 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25670,7 +27510,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <description>
         /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
@@ -25681,13 +27521,13 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25772,7 +27612,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <description>
         /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
@@ -25783,13 +27623,13 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25819,7 +27659,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <description>
         /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
@@ -25830,13 +27670,13 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -26576,7 +28416,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26671,7 +28511,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26766,7 +28606,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26790,7 +28630,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26809,7 +28649,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新迁移任务</para>
+        /// <para>Updates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26883,7 +28723,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新迁移任务</para>
+        /// <para>Updates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26957,7 +28797,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新迁移任务</para>
+        /// <para>Updates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26976,7 +28816,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新迁移任务</para>
+        /// <para>Updates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26995,7 +28835,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改网关网络访问类型</para>
+        /// <para>Changes the network access type of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27041,7 +28881,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改网关网络访问类型</para>
+        /// <para>Changes the network access type of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27087,7 +28927,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改网关网络访问类型</para>
+        /// <para>Changes the network access type of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27106,7 +28946,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改网关网络访问类型</para>
+        /// <para>Changes the network access type of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27417,7 +29257,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新风险项通知配置</para>
+        /// <para>Updates the notification configuration for risk items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27467,7 +29307,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新风险项通知配置</para>
+        /// <para>Updates the notification configuration for risk items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27517,7 +29357,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新风险项通知配置</para>
+        /// <para>Updates the notification configuration for risk items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27536,7 +29376,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新风险项通知配置</para>
+        /// <para>Updates the notification configuration for risk items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27555,12 +29395,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a key pair.</para>
+        /// <para>Updates a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type allow you to update the configuration for listening to Ingress.</para>
+        /// <para>Only sources of the <b>container service</b> type allow you to update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27606,12 +29446,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a key pair.</para>
+        /// <para>Updates a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type allow you to update the configuration for listening to Ingress.</para>
+        /// <para>Only sources of the <b>container service</b> type allow you to update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27657,12 +29497,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a key pair.</para>
+        /// <para>Updates a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type allow you to update the configuration for listening to Ingress.</para>
+        /// <para>Only sources of the <b>container service</b> type allow you to update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27681,12 +29521,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a key pair.</para>
+        /// <para>Updates a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type allow you to update the configuration for listening to Ingress.</para>
+        /// <para>Only sources of the <b>container service</b> type allow you to update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28167,7 +30007,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查迁移任务</para>
+        /// <para>Validates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28207,7 +30047,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查迁移任务</para>
+        /// <para>Validates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28247,7 +30087,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查迁移任务</para>
+        /// <para>Validates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28266,7 +30106,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查迁移任务</para>
+        /// <para>Validates a migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">

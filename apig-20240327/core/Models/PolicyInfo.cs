@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class PolicyInfo : TeaModel {
         /// <summary>
-        /// <para>The mount information.</para>
+        /// <para>The list of mount information.</para>
         /// </summary>
         [NameInMap("attachments")]
         [Validation(Required=false)]
@@ -20,35 +20,35 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy class alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>流量控制</para>
+        /// <para>Throttling</para>
         /// </summary>
         [NameInMap("classAlias")]
         [Validation(Required=false)]
         public string ClassAlias { get; set; }
 
         /// <summary>
-        /// <para>The class name supported by the policy. Different policies support different mount points. This parameter is used in combination with AttachResourceType.</para>
+        /// <para>The class name supported by the policy. Different policies support different mount points. This parameter is used together with AttachResourceType. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RateLimit: throttles traffic. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>ConcurrencyLimit: controls concurrency. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>CircuitBreaker: breaks circuits and downgrades traffic. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>HttpRewrite: rewrites HTTP traffic. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>HeaderModify: modifies headers. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>Cors: supports CORS. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>FlowCopy: replicates traffic. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>Timeout: times out requests. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>Retry: retries requests. Supported: HttpApi, Operation, and GatewayRoute.</description></item>
-        /// <item><description>IpAccessControl: implements IP address-based access control. Supported: HttpApi, Operation, GatewayRoute, Domain, and Gateway.</description></item>
-        /// <item><description>DirectResponse: mocks responses. Supported: Operation and GatewayRoute.</description></item>
-        /// <item><description>Redirect: redirects traffic. Supported: GatewayRoute.</description></item>
-        /// <item><description>Fallback: implements fallback. Supported: Operation and GatewayRoute.</description></item>
-        /// <item><description>ServiceTls: implements TLS authentication. Supported: GatewayService.</description></item>
-        /// <item><description>ServiceLb: balances loads. Supported: GatewayService.</description></item>
-        /// <item><description>ServicePortTls: implements service port TLS authentication. Supported: GatewayServicePort.</description></item>
-        /// <item><description>Waf: implements WAF protection. Supported: GatewayRoute and Gateway.</description></item>
-        /// <item><description>JWTAuth: implements global JWT authentication. Supported: Gateway.</description></item>
-        /// <item><description>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</description></item>
-        /// <item><description>ExternalZAuth: implements custom authentication. Supported: Gateway.</description></item>
+        /// <item><description>RateLimit: throttling. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>ConcurrencyLimit: concurrency control. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>CircuitBreaker: circuit breaking. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>HttpRewrite: HTTP rewrite. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>HeaderModify: header modification. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>Cors: cross-origin resource sharing (CORS). Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>FlowCopy: traffic copy. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>Timeout: timeout. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>Retry: retry. Supported for HttpApi, Operation, and GatewayRoute.</description></item>
+        /// <item><description>IpAccessControl: IP access control. Supported for HttpApi, Operation, GatewayRoute, Domain, and Gateway.</description></item>
+        /// <item><description>DirectResponse: mock. Supported for Operation and GatewayRoute.</description></item>
+        /// <item><description>Redirect: redirect. Supported for GatewayRoute.</description></item>
+        /// <item><description>Fallback: fallback. Supported for Operation and GatewayRoute.</description></item>
+        /// <item><description>ServiceTls: service TLS authentication. Supported for GatewayService.</description></item>
+        /// <item><description>ServiceLb: service load balancing. Supported for GatewayService.</description></item>
+        /// <item><description>ServicePortTls: service port TLS authentication. Supported for GatewayServicePort.</description></item>
+        /// <item><description>Waf: WAF protection. Supported for GatewayRoute and Gateway.</description></item>
+        /// <item><description>JWTAuth: JWT global authentication. Supported for Gateway.</description></item>
+        /// <item><description>OIDCAuth: OIDC global authentication. Supported for Gateway.</description></item>
+        /// <item><description>ExternalZAuth: custom authentication. Supported for Gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The policy configurations.</para>
+        /// <para>The policy configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;enable&quot;:false}</para>
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic on which the policy takes effect. Valid values:</para>
+        /// <para>The inbound or outbound direction of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OutBound</description></item>
-        /// <item><description>InBound</description></item>
-        /// <item><description>Both</description></item>
+        /// <item><description>OutBound: outbound.</description></item>
+        /// <item><description>InBound: inbound.</description></item>
+        /// <item><description>Both: both directions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,16 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExecutePriority { get; set; }
 
         /// <summary>
-        /// <para>The execution phase.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PluginStatistic</description></item>
-        /// <item><description>PluginAuthorization</description></item>
-        /// <item><description>PluginPre</description></item>
-        /// <item><description>PluginAuthentication</description></item>
-        /// <item><description>PluginDefault</description></item>
-        /// <item><description>PluginPost</description></item>
-        /// </list>
+        /// <para>The execution stage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PluginPost</para>
@@ -136,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>策略类型</para>
+        /// <para>Policy type</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

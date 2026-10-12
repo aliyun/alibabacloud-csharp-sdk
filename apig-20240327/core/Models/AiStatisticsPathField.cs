@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiStatisticsPathField : TeaModel {
         /// <summary>
-        /// <para>The secondary business category of the field. Optional. Valid values: conversation (conversation content), config (configuration parameters), tools (tool calling), usage (usage statistics), metadata (metadata), choices (candidate results), identity (identity identifier), cache (cache information), media (multimedia content), logprobs (log probabilities), and custom (custom field). Set custom fields to custom.</para>
+        /// <para>The secondary business category of the field. This parameter is optional. Valid values: conversation (conversation content), config (configuration parameters), tools (tool calling), usage (usage statistics), metadata (metadata), choices (candidate results), identity (identity), cache (cache information), media (multimedia content), logprobs (log probabilities), and custom (custom fields). Set custom fields to custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conversation</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string FieldKey { get; set; }
 
         /// <summary>
-        /// <para>The request or response attribution. The backend normalizes this to request or response based on source.</para>
+        /// <para>The request or response attribution. The backend normalizes this to request or response based on the source value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether collection is enabled to create a log record for the corresponding field in AI request logs.</para>
+        /// <para>Indicates whether collection is enabled to include the corresponding field in AI request log records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RecordEnabled { get; set; }
 
         /// <summary>
-        /// <para>The aggregation rule for streaming response fields. Valid values: append, first, and replace. append: appends the matched values from each streaming chunk in sequence. first: retains the first matched value. replace: uses the last matched value. When source is response_streaming_body and rule is not specified, first is used by default. This field is not required for non-streaming scenarios.</para>
+        /// <para>The aggregation rule for streaming response fields. Valid values: append, first, and replace. append: appends the matched values from each streaming chunk in sequence. first: retains the first matched value. replace: uses the last matched value. When source is set to response_streaming_body and rule is not specified, the default value is first. This field is not required for non-streaming scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>append</para>

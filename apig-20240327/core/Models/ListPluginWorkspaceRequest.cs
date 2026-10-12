@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The gateway type used to filter workspaces. Default value: API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AI</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AgentInfo : TeaModel {
         /// <summary>
-        /// <para>The associated resource information for the Agent access capability. Returns null if the Agent access capability is not configured.</para>
+        /// <para>The associated resource information for the agent access capability. If the agent access capability is not configured, null is always returned.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AgentInfoAgentAccess AgentAccess { get; set; }
         public class AgentInfoAgentAccess : TeaModel {
             /// <summary>
-            /// <para>The HTTP API ID associated with the Agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query interfaces.</para>
+            /// <para>The ID of the HTTP API associated with the agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;httpApiId&quot;: &quot;api-abc123&quot; }</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Agent ID。</para>
+        /// <para>The agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Agent type. DashScope (Bailian) allows only Agent access. Dify allows both Agent access and model access. ClaudeCode allows only model access. Custom allows both Agent access and model access.</para>
+        /// <para>The type of the agent. DashScope allows only agent access. Dify allows agent access and model access. ClaudeCode allows only model access. Custom allows agent access and model access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AgentType { get; set; }
 
         /// <summary>
-        /// <para>The list of capabilities that the current Agent type allows to be configured. This field does not indicate that the capabilities are already configured. To determine whether a capability is configured, check whether agentAccess or modelAccess is null.</para>
+        /// <para>The list of capabilities that the current agent type is allowed to configure. This field does not indicate that the capabilities are already configured. To check whether a capability is configured, determine whether agentAccess or modelAccess is null.</para>
         /// </summary>
         [NameInMap("allowedCapabilities")]
         [Validation(Required=false)]
         public List<string> AllowedCapabilities { get; set; }
 
         /// <summary>
-        /// <para>The Agent creation time, in Unix millisecond timestamp.</para>
+        /// <para>The time when the agent was created. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755129600000</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The Agent description.</para>
+        /// <para>The description of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom agent</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The gateway ID to which the Agent belongs. When reading the associated API deployment configuration, select the configuration whose gatewayId matches this value.</para>
+        /// <para>The ID of the gateway to which the agent belongs. When reading the associated API deployment configuration, select the configuration whose gatewayId matches this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway-1</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The associated resource information for the model access capability. Returns null if the model access capability is not configured.</para>
+        /// <para>The associated resource information for the model access capability. If the model access capability is not configured, null is always returned.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AgentInfoModelAccess ModelAccess { get; set; }
         public class AgentInfoModelAccess : TeaModel {
             /// <summary>
-            /// <para>The list of consumer identity bindings maintained by the Agent domain. The Model API ID and the consumer IDs in this list together identify the Agent identity and take effect on all routes of the Model API. Consumer details and their Model API authorization details can be obtained through existing Consumer API and consumer authorization query interfaces.</para>
+            /// <para>The list of consumer identity bindings maintained by the agent domain. The Model API ID and the consumer IDs in the list jointly identify the agent and take effect for all routes of the Model API. You can obtain consumer details and their Model API authorization details by calling existing Consumer API and consumer authorization query operations.</para>
             /// </summary>
             [NameInMap("consumerIds")]
             [Validation(Required=false)]
             public List<string> ConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The Model API ID associated with the model access capability. Model Access does not distinguish routes. The frontend uses this ID to query the Model API basic information and all routes.</para>
+            /// <para>The ID of the Model API associated with the model access capability. Model access does not distinguish between routes. The frontend uses this ID to query the basic information and all routes of the Model API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;modelApiId&quot;: &quot;model-api-1&quot; }</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Agent name.</para>
+        /// <para>The name of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID in which the Agent is saved.</para>
+        /// <para>The ID of the resource group where the agent is saved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Agent status. An Agent that is successfully created and queryable always returns Ready. Internal creation or compensation states are not returned externally.</para>
+        /// <para>The status of the agent. In the current phase, agents that are successfully created and can be queried always return Ready. Internal creation or compensation statuses are not returned externally.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The Agent last update time, in Unix millisecond timestamp.</para>
+        /// <para>The time when the agent was last updated. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755129600000</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Builtin { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in ms.</para>
+        /// <para>The creation time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1726649310593</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Product center staging route</para>
+        /// <para>Pre-release route for the product center</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The environment name alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product center staging environment</para>
+            /// <para>Pre-release environment for the product center</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpRouteEnvironmentInfoGatewayInfo GatewayInfo { get; set; }
             public class HttpRouteEnvironmentInfoGatewayInfo : TeaModel {
                 /// <summary>
-                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</para>
+                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, Unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MultiTenantServerless</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of default second-level domain names of the environment.</para>
+            /// <para>The list of default subdomain names for the environment.</para>
             /// </summary>
             [NameInMap("subDomains")]
             [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Dictionary<string, string> GatewayStatus { get; set; }
 
         /// <summary>
-        /// <para>The route matching rule.</para>
+        /// <para>The route matching rules.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RouteId { get; set; }
 
         /// <summary>
-        /// <para>The update time, in ms.</para>
+        /// <para>The update time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1726819895636</para>

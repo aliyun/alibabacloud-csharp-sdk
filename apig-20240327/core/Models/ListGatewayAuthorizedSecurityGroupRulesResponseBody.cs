@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayAuthorizedSecurityGroupRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListGatewayAuthorizedSecurityGroupRulesResponseBodyData Data { get; set; }
         public class ListGatewayAuthorizedSecurityGroupRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The security group rules.</para>
+            /// <para>The list of security group rules.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The list of authorized CIDR blocks.</para>
+                /// <para>The list of authorized CIDR block addresses.</para>
                 /// </summary>
                 [NameInMap("authCidrs")]
                 [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>商品中心预发网关授权安全组</para>
+                /// <para>Security group authorized by the staging gateway of the product center</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The protocol. Valid values:</para>
+                /// <para>The protocol:</para>
                 /// <list type="bullet">
                 /// <item><description>TCP</description></item>
                 /// </list>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The security group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>商品中心集群安全组</para>
+                /// <para>Product center cluster security group</para>
                 /// </summary>
                 [NameInMap("securityGroupName")]
                 [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>The security rule ID of the cloud-native API gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gsgr-cqadis5lhtgmv***</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecurityGroupRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the source security group.</para>
+                /// <para>The source security group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-bp19akuepfe***</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceSecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1g63b5q2q29***</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

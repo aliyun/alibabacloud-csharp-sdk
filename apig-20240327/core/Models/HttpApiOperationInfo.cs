@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiOperationInfo : TeaModel {
         /// <summary>
-        /// <para>The authentication configurations of the operation.</para>
+        /// <para>The authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
@@ -27,24 +27,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The backend service deployment information of the operation.</para>
+        /// <para>The backend service deployment information for the API operation.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The operation description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A example operation.</para>
+        /// <para>Retrieve user information</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication.</para>
+        /// <para>Indicates whether authentication is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,19 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The HTTP method of the operation.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>TRACE</description></item>
-        /// <item><description>HEAD</description></item>
-        /// <item><description>DELETE</description></item>
-        /// <item><description>POST</description></item>
-        /// <item><description>GET</description></item>
-        /// <item><description>CONNECT</description></item>
-        /// <item><description>OPTIONS</description></item>
-        /// <item><description>PUT</description></item>
-        /// <item><description>PATCH</description></item>
-        /// </list>
+        /// <para>The HTTP method of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GET</para>
@@ -76,14 +64,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The mocked parameters of the operation.</para>
+        /// <para>The mock parameter settings for the API operation.</para>
         /// </summary>
         [NameInMap("mock")]
         [Validation(Required=false)]
         public HttpApiMockContract Mock { get; set; }
 
         /// <summary>
-        /// <para>The operation name.</para>
+        /// <para>The name of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GetUserInfo</para>
@@ -93,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The operation ID.</para>
+        /// <para>The ID of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>op-xxx</para>
@@ -103,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The operation path.</para>
+        /// <para>The path of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/user/123</para>
@@ -113,21 +101,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The request parameters of the operation.</para>
+        /// <para>The request parameter definition of the API operation.</para>
         /// </summary>
         [NameInMap("request")]
         [Validation(Required=false)]
         public HttpApiRequestContract Request { get; set; }
 
         /// <summary>
-        /// <para>The response parameters of the operation.</para>
+        /// <para>The response parameter definition of the API operation.</para>
         /// </summary>
         [NameInMap("response")]
         [Validation(Required=false)]
         public HttpApiResponseContract Response { get; set; }
 
         /// <summary>
-        /// <para>The operation publishing status on the instance.</para>
+        /// <para>The publish status of the API operation on the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Deployed</para>

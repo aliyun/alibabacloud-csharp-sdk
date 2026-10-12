@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiToolSelectionConfig AiToolSelectionConfig { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy is enabled.</para>
+        /// <para>Indicates whether the feature is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The read-only compatible reference. GetHttpApi returns policyId/policyAttachmentId for ModelAPI AiTokenRateLimit. This must be stripped before write path persistence and is not used as a bind/unbind instruction.</para>
+        /// <para>The read-only compatible reference. GetHttpApi returns the policyId and policyAttachmentId for ModelAPI AiTokenRateLimit. This field must be stripped before write-path persistence and is not used as a bind or unbind instruction.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

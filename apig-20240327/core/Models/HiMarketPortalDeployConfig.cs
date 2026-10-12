@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The SAE (Serverless App Engine) deployment configuration.</para>
+        /// <para>The Serverless App Engine (SAE) deployment configuration.</para>
         /// </summary>
         [NameInMap("saeConfig")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string OidcRoleName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of SAE.</para>
+            /// <para>The region ID where SAE is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The OAuth2 client secret. The secret is AES-encrypted when stored.</para>
+        /// <para>The OAuth2 client secret, which is AES-encrypted when stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-client-secret</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The JWKS public key set URI, used for token signature verification.</para>
+        /// <para>The JWKS public key set URI, which is used for token signature verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://idp.example.com/.well-known/jwks.json">https://idp.example.com/.well-known/jwks.json</a></para>

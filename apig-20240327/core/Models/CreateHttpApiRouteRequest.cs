@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The backend service scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SingleService: single service.</description></item>
-            /// <item><description>MultiServiceByRatio: multiple services with ratio-based canary release.</description></item>
-            /// <item><description>Mock: mock service.</description></item>
-            /// <item><description>Redirect: redirect service.</description></item>
+            /// <item><description>SingleService: Single service.</description></item>
+            /// <item><description>MultiServiceByRatio: Multi-service canary release by ratio.</description></item>
+            /// <item><description>Mock: Mock service.</description></item>
+            /// <item><description>Redirect: Redirect service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The Terms of Service. Valid values:</para>
+                /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP.</description></item>
-                /// <item><description>HTTPS.</description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>HTTPS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The service version. This parameter takes effect only in tag-based scenarios.</para>
+                /// <para>The service version. This parameter takes effect only in the by-tag scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -219,11 +219,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? McpStatisticsEnable { get; set; }
 
             /// <summary>
-            /// <para>The Terms of Service. Valid values:</para>
+            /// <para>The service protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP.</description></item>
-            /// <item><description>HTTP.</description></item>
-            /// <item><description>DUBBO.</description></item>
+            /// <item><description>TCP</description></item>
+            /// <item><description>HTTP</description></item>
+            /// <item><description>DUBBO</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiResponseContract : TeaModel {
         /// <summary>
-        /// <para>The content type.</para>
+        /// <para>The response content type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The response definition.</para>
+        /// <para>The response definitions.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -38,17 +38,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Code { get; set; }
 
             /// <summary>
-            /// <para>The response description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a description.</para>
+            /// <para>Normal API response</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The sample value.</para>
+            /// <para>The example value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;result&quot;: &quot;ok&quot;}</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Example { get; set; }
 
             /// <summary>
-            /// <para>The JSON definition description of the response body.</para>
+            /// <para>The JSON schema definition of the response body.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             ///     &quot;properties&quot;: {
             ///         &quot;result&quot;: {
             ///             &quot;type&quot;: &quot;string&quot;,
-            ///             &quot;description&quot;: &quot;This is a description.&quot;
+            ///             &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
             ///         }
             ///     }
             /// }</para>

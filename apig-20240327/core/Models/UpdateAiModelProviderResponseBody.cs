@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The display name of the model provider. The name can be up to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Qwen Cloud / Alibaba Cloud Bailian.</para>
+            /// <para>Qwen Cloud / Alibaba Cloud Bailian</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol type corresponding to the path. The value can be up to 64 characters in length.</para>
+                    /// <para>The protocol type of the path. The value can be up to 64 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>OpenAICompatible</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public UpdateAiModelProviderResponseBodyDataModelCardsCredit Credit { get; set; }
                 public class UpdateAiModelProviderResponseBodyDataModelCardsCredit : TeaModel {
                     /// <summary>
-                    /// <para>The cost of cache-hit tokens, in Credits per million tokens.</para>
+                    /// <para>The cost of cache-hit tokens. Unit: Credits per million tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.5</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? CacheCost { get; set; }
 
                     /// <summary>
-                    /// <para>The cost of input tokens, in Credits per million tokens.</para>
+                    /// <para>The cost of input tokens. Unit: Credits per million tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.5</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? InputCost { get; set; }
 
                     /// <summary>
-                    /// <para>The cost of output tokens, in Credits per million tokens.</para>
+                    /// <para>The cost of output tokens. Unit: Credits per million tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model provider identifier.</para>
+                /// <para>The identifier of the model provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelProvider { get; set; }
 
                 /// <summary>
-                /// <para>The source of the model card. Instance-level model cards return user.</para>
+                /// <para>The source of the model card. user is returned for instance-level model cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceURL { get; set; }
 
                 /// <summary>
-                /// <para>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The last update time of the model card. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-14 18:30:00</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The last update time of the model provider. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-14 18:30:00</para>

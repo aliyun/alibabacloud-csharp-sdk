@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListMcpServersResponseBodyData Data { get; set; }
         public class ListMcpServersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The MCP server list information.</para>
+            /// <para>The list of MCP servers.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// <para>The list of assembled sources. This parameter is required when type is AssemblyMCP.</para>
+                /// <para>The list of assembly sources. This parameter is required when type is AssemblyMCP.</para>
                 /// </summary>
                 [NameInMap("assembledSources")]
                 [Validation(Required=false)]
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Backend Backend { get; set; }
 
                 /// <summary>
-                /// <para>The creation source type. Valid values:</para>
+                /// <para>The creation source type.</para>
                 /// <list type="bullet">
-                /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</description></item>
-                /// <item><description>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</description></item>
-                /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
-                /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</description></item>
-                /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</description></item>
+                /// <item><description>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP.</description></item>
+                /// <item><description>ApiGatewayMcpHosting: Gateway-managed MCP direct proxy.</description></item>
+                /// <item><description>ApiGatewayAssembly: Gateway MCP assembly.</description></item>
+                /// <item><description>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP.</description></item>
+                /// <item><description>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -232,10 +232,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ImportInstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The synced MCP server ID.</para>
+                    /// <para>The ID of the synced MCP server.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The synced MCP server ID</para>
+                    /// <para>The ID of the synced MCP server</para>
                     /// </summary>
                     [NameInMap("importMcpServerId")]
                     [Validation(Required=false)]

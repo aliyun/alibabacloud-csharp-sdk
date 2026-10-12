@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateGatewayMaintenancePeriodRequest : TeaModel {
+        /// <summary>
+        /// <para>The O&amp;M window.</para>
+        /// </summary>
         [NameInMap("maintenancePeriod")]
         [Validation(Required=false)]
         public UpdateGatewayMaintenancePeriodRequestMaintenancePeriod MaintenancePeriod { get; set; }
         public class UpdateGatewayMaintenancePeriodRequestMaintenancePeriod : TeaModel {
             /// <summary>
+            /// <para>The O&amp;M end time (HH:mm).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>02:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The O&amp;M start time (HH:mm).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>02:00</para>
             /// </summary>

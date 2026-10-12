@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The source from which the gateway was created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Console: the console.</description></item>
+            /// <item><description>Console: Console.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The gateway instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Professional: standard instance.</para>
+            /// <item><description><para>Professional: Standard instance.</para>
             /// </description></item>
             /// <item><description><para>Serverless: Serverless instance.</para>
             /// </description></item>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</para>
+            /// <para>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ENTERPRISE: default.</description></item>
             /// <item><description>STANDARD: allowed only for AI multi-tenant V2.</description></item>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>The protocol version. Valid values:</para>
+                /// <para>The IP version. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ipv4: IPv4.</description></item>
                 /// <item><description>ipv6: IPv6.</description></item>
@@ -210,8 +210,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The load balancing address type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Internet: public network.</description></item>
-                /// <item><description>Intranet: private network.</description></item>
+                /// <item><description>Internet: Public network.</description></item>
+                /// <item><description>Intranet: Private network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The load balancing mode of the gateway. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Managed: managed by Cloud-native API Gateway.</description></item>
+                /// <item><description>Managed: Managed by Cloud-native API Gateway.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The gateway specification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>apigw.small.x1: small specification.</description></item>
+            /// <item><description>apigw.small.x1: Small specification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -435,15 +435,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The gateway status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running: The gateway is running.</description></item>
-            /// <item><description>Creating: The gateway is being created.</description></item>
-            /// <item><description>CreateFailed: The gateway failed to be created.</description></item>
-            /// <item><description>Upgrading: The gateway is being upgraded.</description></item>
-            /// <item><description>UpgradeFailed: The gateway failed to be upgraded.</description></item>
-            /// <item><description>Restarting: The gateway is being restarted.</description></item>
-            /// <item><description>RestartFailed: The gateway failed to be restarted.</description></item>
-            /// <item><description>Deleting: The gateway is being released.</description></item>
-            /// <item><description>DeleteFailed: The gateway failed to be released.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Creating: Being created.</description></item>
+            /// <item><description>CreateFailed: Creation failed.</description></item>
+            /// <item><description>Upgrading: Being upgraded.</description></item>
+            /// <item><description>UpgradeFailed: Upgrade failed.</description></item>
+            /// <item><description>Restarting: Being restarted.</description></item>
+            /// <item><description>RestartFailed: Restart failed.</description></item>
+            /// <item><description>Deleting: Being released.</description></item>
+            /// <item><description>DeleteFailed: Release failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</para>
+            /// <para>The target version of the gateway. If this value differs from version, a version upgrade can be performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.2</para>

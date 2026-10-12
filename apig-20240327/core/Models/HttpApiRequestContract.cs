@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiRequestContract : TeaModel {
         /// <summary>
-        /// <para>The body parameters.</para>
+        /// <para>The request body parameter definitions.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The parameter description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a description.</para>
+            /// <para>Body parameter description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The sample value.</para>
+            /// <para>The example value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;result&quot;:&quot;ok&quot;}</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Example { get; set; }
 
             /// <summary>
-            /// <para>The JSON definition description of the request body.</para>
+            /// <para>The JSON schema definition of the request body.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///       &quot;type&quot;: &quot;object&quot;,
-            ///       &quot;required&quot;: [
-            ///           &quot;result&quot;
-            ///       ],
-            ///       &quot;properties&quot;: {
-            ///           &quot;result&quot;: {
-            ///               &quot;type&quot;: &quot;string&quot;,
-            ///               &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
-            ///           }
-            ///       }
-            ///   }</para>
+            ///     &quot;type&quot;: &quot;object&quot;,
+            ///     &quot;required&quot;: [
+            ///         &quot;result&quot;
+            ///     ],
+            ///     &quot;properties&quot;: {
+            ///         &quot;result&quot;: {
+            ///             &quot;type&quot;: &quot;string&quot;,
+            ///             &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
+            ///         }
+            ///     }
+            /// }</para>
             /// </summary>
             [NameInMap("jsonSchema")]
             [Validation(Required=false)]
@@ -70,21 +70,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The request header parameters.</para>
+        /// <para>The request header parameter definitions.</para>
         /// </summary>
         [NameInMap("headerParameters")]
         [Validation(Required=false)]
         public List<HttpApiParameter> HeaderParameters { get; set; }
 
         /// <summary>
-        /// <para>The path parameters.</para>
+        /// <para>The path parameter definitions.</para>
         /// </summary>
         [NameInMap("pathParameters")]
         [Validation(Required=false)]
         public List<HttpApiParameter> PathParameters { get; set; }
 
         /// <summary>
-        /// <para>The query parameters.</para>
+        /// <para>The query parameter definitions.</para>
         /// </summary>
         [NameInMap("queryParameters")]
         [Validation(Required=false)]

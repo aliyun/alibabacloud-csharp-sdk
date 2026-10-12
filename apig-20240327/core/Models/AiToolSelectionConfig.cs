@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiToolSelectionConfig : TeaModel {
         /// <summary>
-        /// <para>The enable conditions configuration. Controls when the overall feature is triggered.</para>
+        /// <para>The enable condition configuration that controls when the overall feature is triggered.</para>
         /// </summary>
         [NameInMap("enableConditions")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</para>
+        /// <para>The query rewrite configuration that rewrites user queries before tool reranking to improve matching precision.</para>
         /// </summary>
         [NameInMap("queryRewriting")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether query rewrite is enabled.</para>
+            /// <para>Indicates whether query rewrite is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string FallbackStrategy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens for rewriting.</para>
+            /// <para>The maximum number of output tokens for the rewriting result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The custom prompt content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>请将以下用户问题改写为...</para>
+                /// <para>Rewrite the following user question as..</para>
                 /// </summary>
                 [NameInMap("customPrompt")]
                 [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AiToolSelectionConfigQueryRewritingTriggerConditions TriggerConditions { get; set; }
             public class AiToolSelectionConfigQueryRewritingTriggerConditions : TeaModel {
                 /// <summary>
-                /// <para>The number of conversation turns after which rewriting is triggered.</para>
+                /// <para>The conversation turn threshold. Rewriting is triggered when the number of conversation turns exceeds this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The tool reranking configuration. Uses a model to rank and filter candidate tools.</para>
+        /// <para>The tool reranking configuration that uses a model to sort and filter candidate tools.</para>
         /// </summary>
         [NameInMap("toolReranking")]
         [Validation(Required=false)]

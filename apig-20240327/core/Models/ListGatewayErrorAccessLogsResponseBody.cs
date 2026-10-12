@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayErrorAccessLogsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of log entries. Each entry is a mapping from field names to field values.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C9BF49BD-3037-5006-B379-656ECBA6F56C</para>

@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? SubjectCount { get; set; }
 
             /// <summary>
-            /// <para>The rule subject type. Valid values: consumer or consumer_group.</para>
+            /// <para>The rule subject type. Valid values: consumer and consumer_group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer_group</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SubjectType { get; set; }
 
             /// <summary>
-            /// <para>The general subject list bound to this rule. Returned only when withSubjects is set to true.</para>
+            /// <para>The list of general subjects bound to this rule. Returned only when withSubjects is set to true.</para>
             /// </summary>
             [NameInMap("subjects")]
             [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The subject type. Valid values: consumer or consumer_group.</para>
+                /// <para>The subject type. Valid values: consumer and consumer_group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer</para>

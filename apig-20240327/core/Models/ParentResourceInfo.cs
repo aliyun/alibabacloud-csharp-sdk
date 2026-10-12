@@ -17,7 +17,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiApiInfo ApiInfo { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values: HttpApi/Operation/GatewayRoute/Gateway/GatewayDomain</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HttpApi</description></item>
+        /// <item><description>Operation</description></item>
+        /// <item><description>GatewayRoute</description></item>
+        /// <item><description>Gateway</description></item>
+        /// <item><description>GatewayDomain</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Gateway</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class TransportCertificateInfo : TeaModel {
         /// <summary>
-        /// <para>The signature/key algorithm.</para>
+        /// <para>The signature or key algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA_2048</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The certificate identifier (certificate ID under the APIG cloud account).</para>
+        /// <para>The certificate identifier (the certificate ID under the APIG Alibaba Cloud account).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert-1（1716***@cn-hangzhou 形态）</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The match status between the certificate and gateway instance domain names.</para>
+        /// <para>The match status between the certificate and the gateway instance domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Matched</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CommonName { get; set; }
 
         /// <summary>
-        /// <para>The set of covered domain names parsed from CN and SAN (deduplicated in lowercase, may contain *. wildcards).</para>
+        /// <para>The set of covered domain names parsed from CN and SAN (lowercase, deduplicated, may contain *. wildcards).</para>
         /// </summary>
         [NameInMap("coveredDomains")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance domain names matched by covered domains (ordered by instance domain name, deduplicated).</para>
+        /// <para>The gateway instance domain names matched by the covered domain names (ordered by instance domain name, deduplicated).</para>
         /// </summary>
         [NameInMap("matchedDomains")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? NotAfterTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The effective period UNIX timestamp (Unix milliseconds, from the certificate beforeDate).</para>
+        /// <para>The effective period UNIX timestamp (milliseconds, from the certificate beforeDate).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1716336000000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? NotBeforeTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The raw SAN string (separated by commas, semicolons, or whitespace. Elements may have a DNS: prefix).</para>
+        /// <para>The raw Subject Alternative Name (SAN) string (separated by commas, semicolons, or whitespace. Elements may have a DNS: prefix).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DNS:*.example.org, DNS:foo.example.net</para>

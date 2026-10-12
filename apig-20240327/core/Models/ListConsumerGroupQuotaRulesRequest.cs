@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupQuotaRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the gateway. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-123456</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by fuzzy match on the rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>daily</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Valid values: 1 to 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

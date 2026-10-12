@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiBackendMatchCondition : TeaModel {
         /// <summary>
-        /// <para>The key of the matching condition.</para>
+        /// <para>The match key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>color</para>
@@ -20,13 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The operator. Exact match, prefix match, and regular expressions are supported.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>equal</description></item>
-        /// <item><description>regex</description></item>
-        /// <item><description>prefix</description></item>
-        /// </list>
+        /// <para>The operator. Three matching methods are supported: exact match, prefix match, and regular expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>equal</para>
@@ -36,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>The match type. Query and Header parameters can be matched.</para>
+        /// <para>The match type. Supports matching by query parameter or header parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Query</para>
@@ -46,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The value of the matching condition.</para>
+        /// <para>The match value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gray</para>

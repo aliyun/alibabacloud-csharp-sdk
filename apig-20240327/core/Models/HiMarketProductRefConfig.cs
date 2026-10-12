@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HiMarketProductRefConfigApigRefConfig ApigRefConfig { get; set; }
         public class HiMarketProductRefConfigApigRefConfig : TeaModel {
             /// <summary>
-            /// <para>The associated Agent API ID.</para>
+            /// <para>The ID of the associated Agent API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AgentApiId { get; set; }
 
             /// <summary>
-            /// <para>The Agent API name.</para>
+            /// <para>The name of the Agent API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent-api</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AgentApiName { get; set; }
 
             /// <summary>
-            /// <para>The associated MCP route ID.</para>
+            /// <para>The ID of the associated MCP route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>route-xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpRouteId { get; set; }
 
             /// <summary>
-            /// <para>The associated MCP Server ID.</para>
+            /// <para>The ID of the associated MCP Server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The MCP Server name.</para>
+            /// <para>The name of the MCP Server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-mcp-server</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerName { get; set; }
 
             /// <summary>
-            /// <para>The associated Model API ID.</para>
+            /// <para>The ID of the associated Model API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-yyy</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelApiId { get; set; }
 
             /// <summary>
-            /// <para>The Model API name.</para>
+            /// <para>The name of the Model API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-model-api</para>

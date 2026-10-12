@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一条网关超时策略</para>
+        /// <para>This is a gateway timeout policy</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Policy Name.</para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

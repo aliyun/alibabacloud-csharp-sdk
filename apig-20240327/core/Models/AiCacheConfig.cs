@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiCacheConfigVectorConfig VectorConfig { get; set; }
         public class AiCacheConfigVectorConfig : TeaModel {
             /// <summary>
-            /// <para>The API key of the vector database.</para>
+            /// <para>The vector database API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-xxx</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CollectionId { get; set; }
 
             /// <summary>
-            /// <para>The service address of the vector database.</para>
+            /// <para>The vector database service address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vdb-xxx.dashvector.aliyuncs.com</para>

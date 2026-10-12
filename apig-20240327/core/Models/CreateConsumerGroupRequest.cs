@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The consumer group description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Used for grouping online API consumers.</para>
+        /// <para>Group for online API callers</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

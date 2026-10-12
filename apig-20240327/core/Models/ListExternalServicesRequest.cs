@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy search by API name.</para>
+        /// <para>Fuzzy match by API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imah</para>

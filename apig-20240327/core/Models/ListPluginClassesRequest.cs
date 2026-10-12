@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The plug-in alias. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OAuth2 认证</para>
+        /// <para>OAuth2 Authentication</para>
         /// </summary>
         [NameInMap("aliasLike")]
         [Validation(Required=false)]

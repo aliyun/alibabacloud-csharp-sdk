@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class PolicyClassInfo : TeaModel {
         /// <summary>
-        /// <para>The template alias.</para>
+        /// <para>The alias of the policy template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rate Limit</para>
+        /// <para>Concurrency Control</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachableResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The template identifier.</para>
+        /// <para>The identifier of the policy template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-cpqm0s94ckt1displ8ng</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClassId { get; set; }
 
         /// <summary>
-        /// <para>A configuration example.</para>
+        /// <para>The configuration example.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConfigExample { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the policy has been deprecated.</para>
+        /// <para>Indicates whether the policy is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Deprecated { get; set; }
 
         /// <summary>
-        /// <para>The template description.</para>
+        /// <para>The detailed description of the policy template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Limits the number of requests per unit of time</para>
+        /// <para>Controls the number of concurrent threads to ensure system stability. Applicable to scenarios where internal application components or downstream dependencies become unstable, such as slow SQL queries or increased response time from downstream applications</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic on which the policy takes effect.</para>
+        /// <para>The direction in which the policy takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InBound</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable logging.</para>
+        /// <para>Indicates whether log recording is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExecutePriority { get; set; }
 
         /// <summary>
-        /// <para>The execution phase.</para>
+        /// <para>The execution stage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POST</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExecuteStage { get; set; }
 
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the policy template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ConcurrencyLimit</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The template version.</para>
+        /// <para>The version of the policy template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

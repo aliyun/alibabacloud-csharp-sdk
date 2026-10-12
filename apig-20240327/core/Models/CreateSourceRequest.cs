@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
     public class CreateSourceRequest : TeaModel {
         /// <summary>
         /// <para>The gateway ID.</para>
+        /// <remarks>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns a 400 InvalidParameter.IsEmpty error.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7l5s5lhtgi6q***</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The Container Service source configuration.</para>
+        /// <para>The container service source configuration.</para>
         /// </summary>
         [NameInMap("k8sSourceConfig")]
         [Validation(Required=false)]
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>预发网关访问安全组</para>
+                /// <para>Staging gateway access security group</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The Container Service cluster ID.</para>
+            /// <para>The container service cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c3fbe6caaaece4062b*****</para>
@@ -106,8 +109,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: Microservices Engine (MSE) Nacos.</description></item>
-        /// <item><description>K8S: Container Service.</description></item>
+        /// <item><description>MSE_NACOS: MSE Nacos.</description></item>
+        /// <item><description>K8S: container service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

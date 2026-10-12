@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayAuthorizableSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListGatewayAuthorizableSecurityGroupsResponseBodyData Data { get; set; }
         public class ListGatewayAuthorizableSecurityGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The security groups.</para>
+            /// <para>The list of security groups.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The security group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>商品中心集群安全组。</para>
+                /// <para>Product Center Cluster Security Group</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the security group. Valid values:</para>
+                /// <para>The security group type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: general security group</description></item>
-                /// <item><description>Enterprise: enterprise security group</description></item>
+                /// <item><description>Normal: Custom security group.</description></item>
+                /// <item><description>Enterprise: Advanced security group.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf61resqa9am***</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

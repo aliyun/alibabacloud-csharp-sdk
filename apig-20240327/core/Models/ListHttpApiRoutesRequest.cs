@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHttpApiRoutesRequest : TeaModel {
         /// <summary>
-        /// <para>The backend service name. You can use this name to filter routes.</para>
+        /// <para>The backend service name. You can use this parameter to filter routes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-svc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendServiceName { get; set; }
 
         /// <summary>
-        /// <para>Filters the API list by a specific consumer authorization rule ID. The response includes only authorized APIs.</para>
+        /// <para>Filters the API list by a specific consumer authorization rule ID. The API list in the response contains only authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether this is a deployment scenario.</para>
+        /// <para>Specifies whether the request is for a deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy match by route name.</para>
+        /// <para>Performs a fuzzy match by route name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid range: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy match by route path.</para>
+        /// <para>Performs a fuzzy match by route path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyInfo { get; set; }
 
         /// <summary>
-        /// <para>Includes the authorization rule list of the specified consumer ID for each route in the response.</para>
+        /// <para>Includes the authorization rule list of the specified consumer ID in each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>Includes the plug-in attachment information of the specified plug-in ID for each route in the response.</para>
+        /// <para>Includes the mount information of the specified plug-in ID in each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

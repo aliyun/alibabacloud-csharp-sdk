@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AkSkIdentityConfig : TeaModel {
         /// <summary>
-        /// <para>Access Key</para>
+        /// <para>The AK configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Ak { get; set; }
 
         /// <summary>
-        /// <para>Generation mode</para>
+        /// <para>The generation mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GenerateMode { get; set; }
 
         /// <summary>
-        /// <para>Secret Key</para>
+        /// <para>The SK configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Sk { get; set; }
 
         /// <summary>
-        /// <para>Identity authentication type</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Jwt</para>

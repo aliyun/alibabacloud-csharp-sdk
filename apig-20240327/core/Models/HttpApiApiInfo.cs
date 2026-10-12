@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiApiInfo : TeaModel {
         /// <summary>
-        /// <para>The list of agent protocols.</para>
+        /// <para>The list of Agent protocols.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The API operation deployment status.</para>
+        /// <para>The API operation publish status.</para>
         /// </summary>
         [NameInMap("deployCntMap")]
         [Validation(Required=false)]
@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether authentication is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The deployment scenario.</para>
+            /// <para>The publish scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SingleService</para>
@@ -110,14 +112,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string BackendType { get; set; }
 
             /// <summary>
-            /// <para>The domain name information published by the user.</para>
+            /// <para>The custom domain information published by the user.</para>
             /// </summary>
             [NameInMap("customDomains")]
             [Validation(Required=false)]
             public List<HttpApiDomainInfo> CustomDomains { get; set; }
 
             /// <summary>
-            /// <para>The deployment status of the API in the current environment.</para>
+            /// <para>The publish status of the API in the current environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deployed</para>
@@ -144,6 +146,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpApiApiInfoEnvironmentsGatewayInfo GatewayInfo { get; set; }
             public class HttpApiApiInfoEnvironmentsGatewayInfo : TeaModel {
                 /// <summary>
+                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MultiTenantServerless</para>
                 /// </summary>
@@ -367,7 +371,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The monitored Ingress Class.</para>
+            /// <para>The Ingress Class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -396,7 +400,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in Ingress Status.</para>
+            /// <para>Specifies whether to update the address in the Ingress Status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -416,7 +420,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The monitored namespace.</para>
+            /// <para>The namespace to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match keyword for the model provider identifier or model name. If left empty, all model cards under the current gateway are queried.</para>
+        /// <para>The keyword for fuzzy match against the model provider identifier or model name. If this parameter is left empty, all model cards under the current gateway are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen</para>

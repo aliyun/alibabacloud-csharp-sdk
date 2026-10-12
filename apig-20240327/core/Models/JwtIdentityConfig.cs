@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Pass { get; set; }
 
             /// <summary>
-            /// <para>The location where the JWT is stored.</para>
+            /// <para>The position where the JWT is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEADER</para>

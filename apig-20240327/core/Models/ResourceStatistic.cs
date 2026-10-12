@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ResourceStatistic : TeaModel {
         /// <summary>
-        /// <para>The number of online resources.</para>
+        /// <para>The online resource count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HttpApi</description></item>
-        /// <item><description>GatewayRoute</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HttpApi</para>

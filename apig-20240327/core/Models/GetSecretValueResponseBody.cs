@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetSecretValueResponseBodyData Data { get; set; }
         public class GetSecretValueResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The key value.</para>
+            /// <para>The secret value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apikey-xxxxxxxx</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayEdition { get; set; }
 
         /// <summary>
-        /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter is allowed only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</para>
+        /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is set to AI and gatewayEdition is set to MultiTenantServerless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayMode { get; set; }
 
         /// <summary>
-        /// <para>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</para>
+        /// <para>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public CreateGatewayRequestLogConfigSls Sls { get; set; }
             public class CreateGatewayRequestLogConfigSls : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable log collection.</para>
+                /// <para>Specifies whether to enable SLS log collection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The gateway name. This parameter is required for all gateway editions.</para>
+        /// <para>The gateway name. This parameter is required for all editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ceshi</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network access configuration. This parameter is required. If not provided, the service returns InvalidParameter.IsEmpty (400).</para>
+        /// <para>The network access configuration. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.IsEmpty (400) error.</para>
         /// </summary>
         [NameInMap("networkAccessConfig")]
         [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID. This parameter is required for all gateway editions.</para>
+        /// <para>The virtual private cloud (VPC) ID. This parameter is required for all editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-zm0x16tomfiat1mk9f6rs</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone configuration. This parameter is required for all gateway editions.</para>
+        /// <para>The zone configuration. This parameter is required for all editions.</para>
         /// </summary>
         [NameInMap("zoneConfig")]
         [Validation(Required=false)]

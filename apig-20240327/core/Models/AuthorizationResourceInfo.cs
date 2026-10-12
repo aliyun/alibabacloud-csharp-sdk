@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AuthorizationResourceInfo : TeaModel {
         /// <summary>
-        /// <para>Environment ID.</para>
+        /// <para>The environment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Parent resource ID.</para>
+        /// <para>The parent resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-cujbijem1hkr4voden8g</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ParentResourceId { get; set; }
 
         /// <summary>
-        /// <para>Resource ID.</para>
+        /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-d0mnu16m1hkgujnkgrcg</para>

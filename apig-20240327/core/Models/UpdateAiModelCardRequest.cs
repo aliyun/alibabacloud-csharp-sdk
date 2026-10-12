@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateAiModelCardRequest : TeaModel {
         /// <summary>
-        /// <para>The list of invocation paths supported by the model. Each item must include both path and type. The list is overwritten as a whole during updates.</para>
+        /// <para>The list of invocation paths supported by the model. Each item must include both path and type. The entire list is overwritten during an update.</para>
         /// </summary>
         [NameInMap("availablePaths")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateAiModelCardRequestCredit Credit { get; set; }
         public class UpdateAiModelCardRequestCredit : TeaModel {
             /// <summary>
-            /// <para>The cache hit token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of cache-hit tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? CacheCost { get; set; }
 
             /// <summary>
-            /// <para>The input token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of input tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? InputCost { get; set; }
 
             /// <summary>
-            /// <para>The output token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of output tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The model name. The name must be unique within the same AI gateway instance and model provider. Maximum length: 256 characters.</para>
+        /// <para>The model name. The name must be unique within the same AI gateway instance and the same model provider. Maximum length: 256 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

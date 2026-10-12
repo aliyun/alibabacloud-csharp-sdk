@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HiMarketAgentConfigAgentAPIConfig AgentAPIConfig { get; set; }
         public class HiMarketAgentConfigAgentAPIConfig : TeaModel {
             /// <summary>
-            /// <para>The list of agent protocols.</para>
+            /// <para>The agent protocol list.</para>
             /// </summary>
             [NameInMap("agentProtocols")]
             [Validation(Required=false)]
             public List<string> AgentProtocols { get; set; }
 
             /// <summary>
-            /// <para>The list of agent API routing configurations.</para>
+            /// <para>The agent API routing configuration list.</para>
             /// </summary>
             [NameInMap("routes")]
             [Validation(Required=false)]

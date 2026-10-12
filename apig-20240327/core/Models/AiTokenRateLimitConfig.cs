@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<AiTokenRateLimitConfigRule> GlobalRules { get; set; }
 
         /// <summary>
-        /// <para>The running status of the plugin.</para>
+        /// <para>The running status of the plug-in.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

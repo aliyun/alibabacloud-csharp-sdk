@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class InvokeAIAgentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,23 +19,33 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public InvokeAIAgentResponseBodyData Data { get; set; }
         public class InvokeAIAgentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The response body of the debug result.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;分析结果...&quot;}}]}</para>
+            /// <para>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;Analysis result...&quot;}}]}</para>
             /// </summary>
             [NameInMap("body")]
             [Validation(Required=false)]
             public string Body { get; set; }
 
+            /// <summary>
+            /// <para>The response headers, such as Content-Type: text/event-stream.</para>
+            /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
+            /// <para>The HTTP status code of the debug result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

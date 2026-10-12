@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> FailedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs skipped because they are not in the consumer group.</para>
+            /// <para>The list of consumer IDs that were skipped because they are not in the consumer group.</para>
             /// </summary>
             [NameInMap("skippedConsumerIds")]
             [Validation(Required=false)]
             public List<string> SkippedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs successfully removed from the consumer group.</para>
+            /// <para>The list of consumer IDs that were successfully removed from the consumer group.</para>
             /// </summary>
             [NameInMap("successConsumerIds")]
             [Validation(Required=false)]

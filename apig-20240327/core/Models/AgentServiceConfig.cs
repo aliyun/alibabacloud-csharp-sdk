@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The custom configuration. Required when provider is set to custom.</para>
+        /// <para>The custom configuration. This parameter is required when provider is set to custom.</para>
         /// </summary>
         [NameInMap("customConfig")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</para>
+        /// <para>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</para>
         /// </summary>
         [NameInMap("dashScopeConfig")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</para>
+        /// <para>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</para>
         /// </summary>
         [NameInMap("difyConfig")]
         [Validation(Required=false)]

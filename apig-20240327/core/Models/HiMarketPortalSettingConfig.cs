@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? AutoApproveSubscriptions { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable username-password authentication (built-in authentication).</para>
+        /// <para>Specifies whether to enable username and password authentication (built-in authentication).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

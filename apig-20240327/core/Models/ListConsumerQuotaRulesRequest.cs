@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The rule name keyword, used for fuzzy match.</para>
+        /// <para>The keyword for the rule name, used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>

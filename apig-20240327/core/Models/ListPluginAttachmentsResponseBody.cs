@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPluginAttachmentsResponseBodyDataItems> Items { get; set; }
             public class ListPluginAttachmentsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, Operation.</para>
+                /// <para>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GatewayRoute</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AttachResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the plug-in is enabled.</para>
+                /// <para>Indicates whether the plug-in is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginAttachmentId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in type information.</para>
+                /// <para>The plug-in class information.</para>
                 /// </summary>
                 [NameInMap("pluginClassInfo")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

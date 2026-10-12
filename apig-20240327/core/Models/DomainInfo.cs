@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DomainInfo : TeaModel {
         /// <summary>
-        /// <para>The certificate identity from SSL Certificates Service.</para>
+        /// <para>The certificate identity in SSL Certificates Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>235556-cn-hangzhou</para>

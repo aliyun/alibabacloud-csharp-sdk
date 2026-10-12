@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListBatchExportTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListBatchExportTasksResponseBodyData Data { get; set; }
         public class ListBatchExportTasksResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of tasks, returned in reverse chronological order with the most recent tasks first.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListBatchExportTasksResponseBodyDataItems> Items { get; set; }
             public class ListBatchExportTasksResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-26T10:00:00Z</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The error message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>some apis failed</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
+                /// <para>The gateway instance ID associated with the task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>gw-xxx</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
+                /// <para>The number of processed items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
                 /// </summary>
@@ -58,6 +74,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? ProcessedCount { get; set; }
 
                 /// <summary>
+                /// <para>The task status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Pending: The task is pending.</description></item>
+                /// <item><description>Running: The task is running.</description></item>
+                /// <item><description>Success: All items succeeded.</description></item>
+                /// <item><description>PartialSuccess: Some items succeeded.</description></item>
+                /// <item><description>Failed: All items failed.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
                 /// </summary>
@@ -66,6 +91,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>task-xxx</para>
                 /// </summary>
@@ -74,6 +101,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
+                /// <para>The task type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BatchExport</para>
                 /// </summary>
@@ -82,6 +111,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TaskType { get; set; }
 
                 /// <summary>
+                /// <para>The total number of tasks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -92,6 +123,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -100,6 +133,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -108,6 +143,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of tasks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -118,6 +155,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of records returned in this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -126,6 +165,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -134,6 +175,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next query. This value is empty when no more results are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>
         /// </summary>
@@ -142,6 +185,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</para>
         /// </summary>

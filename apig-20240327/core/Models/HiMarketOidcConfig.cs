@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the OIDC configuration is enabled.</para>
+        /// <para>Specifies whether to enable the OIDC configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HiMarketOidcConfigIdentityMapping IdentityMapping { get; set; }
         public class HiMarketOidcConfigIdentityMapping : TeaModel {
             /// <summary>
-            /// <para>The custom field mappings.</para>
+            /// <para>The custom field mapping.</para>
             /// </summary>
             [NameInMap("customFields")]
             [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The OIDC provider name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里云IDaaS</para>
+        /// <para>Alibaba Cloud IDaaS</para>
         /// </summary>
         [NameInMap("provider")]
         [Validation(Required=false)]

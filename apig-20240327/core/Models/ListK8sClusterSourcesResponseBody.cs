@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListK8sClusterSourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListK8sClusterSourcesResponseBodyData Data { get; set; }
         public class ListK8sClusterSourcesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of Kubernetes clusters that can be added.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListK8sClusterSourcesResponseBodyDataItems> Items { get; set; }
             public class ListK8sClusterSourcesResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The container service cluster ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>c4a21b3560fad4ec***</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
+                /// <para>The container service cluster name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>itemcenter-dev-cluster</para>
                 /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>043360DA-ED3B-5386-9B7A-D94DECF99A30</para>
         /// </summary>

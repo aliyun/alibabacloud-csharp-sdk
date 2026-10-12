@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The categorization description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AI网关相关产品分类</para>
+        /// <para>Categorization for AI Gateway related products</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The categorization name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AI网关</para>
+        /// <para>AI Gateway</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

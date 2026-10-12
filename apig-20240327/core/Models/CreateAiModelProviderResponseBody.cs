@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The model credits consumption configuration.</para>
+                /// <para>The credits consumption configuration of the model.</para>
                 /// </summary>
                 [NameInMap("credit")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The model capability features.</para>
+                /// <para>The capability features of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;stream&quot;:true,&quot;tools&quot;:true}</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Dictionary<string, object> Features { get; set; }
 
                 /// <summary>
-                /// <para>The gateway instance ID to which the model card belongs.</para>
+                /// <para>The instance ID of the gateway to which the model card belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-ucbx3s2m****</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model provider identifier to which the model card belongs.</para>
+                /// <para>The identifier of the model provider to which the model card belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>openai</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProviderId { get; set; }
 
             /// <summary>
-            /// <para>The model provider identifier.</para>
+            /// <para>The identifier of the model provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openai</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The provider source type.</para>
+            /// <para>The source type of the provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>

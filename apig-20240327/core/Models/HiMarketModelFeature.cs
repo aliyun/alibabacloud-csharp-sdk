@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Streaming { get; set; }
 
         /// <summary>
-        /// <para>The temperature parameter that controls the randomness of generation.</para>
+        /// <para>The temperature parameter that controls the randomness of the generated output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.7</para>

@@ -94,13 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExtractKey { get; set; }
 
                 /// <summary>
-                /// <para>The input parameter location. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ALL_QUERY_PARAMETER: Request parameter.</description></item>
-                /// <item><description>ALL_HEADER: Request header.</description></item>
-                /// <item><description>ALL_PATH: URI of the request.</description></item>
-                /// <item><description>ALL_BODY: Request body.</description></item>
-                /// </list>
+                /// <para>The input parameter location. Valid values: ALL_QUERY_PARAMETER: request parameter. ALL_HEADER: request header. ALL_PATH: URI of the request. ALL_BODY: request body.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL_QUERY_PARAMETER</para>
@@ -122,12 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The header pass-through type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PASS_ALL: Pass through all headers.</description></item>
-            /// <item><description>PASS_NOT: Do not pass through headers.</description></item>
-            /// <item><description>PASS_ASSIGN: Pass through specified headers.</description></item>
-            /// </list>
+            /// <para>The header pass-through type. Valid values: PASS_ALL: passes through all headers. PASS_NOT: does not pass through headers. PASS_ASSIGN: passes through specified parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PASS_NOT</para>

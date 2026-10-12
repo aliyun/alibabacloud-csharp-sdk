@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketHttpRoute : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the route is a built-in route.</para>
+        /// <para>Indicates whether this is a built-in route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ExportHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to export the plug-in configuration.</para>
+        /// <para>Specifies whether to export plug-in configurations.</para>
         /// </summary>
         [NameInMap("extensionConfig")]
         [Validation(Required=false)]
         public ExportHttpApiRequestExtensionConfig ExtensionConfig { get; set; }
         public class ExportHttpApiRequestExtensionConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to export the consumer authorization configuration for operations or routes.</para>
+            /// <para>Specifies whether to export consumer authorization configurations for operations or routes.</para>
             /// </summary>
             [NameInMap("withAuthConfig")]
             [Validation(Required=false)]
             public bool? WithAuthConfig { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to export the authorized consumers.</para>
+            /// <para>Specifies whether to export authorized consumers.</para>
             /// </summary>
             [NameInMap("withAuthConsumer")]
             [Validation(Required=false)]
             public bool? WithAuthConsumer { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to export the plug-in configuration.</para>
+            /// <para>Specifies whether to export plug-in configurations.</para>
             /// </summary>
             [NameInMap("withPlugin")]
             [Validation(Required=false)]
             public bool? WithPlugin { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to export the policy configuration.</para>
+            /// <para>Specifies whether to export policy configurations.</para>
             /// </summary>
             [NameInMap("withPolicy")]
             [Validation(Required=false)]
             public bool? WithPolicy { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to export the backend service.</para>
+            /// <para>Specifies whether to export backend services.</para>
             /// </summary>
             [NameInMap("withService")]
             [Validation(Required=false)]

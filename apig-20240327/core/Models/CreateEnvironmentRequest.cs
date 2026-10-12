@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试环境</para>
+        /// <para>Test environment</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The description of the environment. You can specify information such as the purpose and owner of the environment.</para>
+        /// <para>The description of the environment. You can specify information such as the purpose of the environment and the owner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是xxx的xx项目测试环境</para>
+        /// <para>This is the test environment for the xx project of xxx</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

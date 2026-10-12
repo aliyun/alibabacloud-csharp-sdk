@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetRiskNotificationRequest : TeaModel {
         /// <summary>
+        /// <para>The code of the risk item, such as the code for version risk or capacity risk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

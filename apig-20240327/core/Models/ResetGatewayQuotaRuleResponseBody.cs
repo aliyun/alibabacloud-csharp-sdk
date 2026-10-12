@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ResetGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class ResetGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict hash.</para>
+                /// <para>The hash of the conflict snapshot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The period type of the existing conflicting rule on the subject. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>day: The period of the existing conflicting rule is daily.</description></item>
-                    /// <item><description>week: The period of the existing conflicting rule is weekly.</description></item>
-                    /// <item><description>month: The period of the existing conflicting rule is monthly.</description></item>
+                    /// <item><description>day: daily.</description></item>
+                    /// <item><description>week: weekly.</description></item>
+                    /// <item><description>month: monthly.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -135,8 +135,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The type of the conflicting subject. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>consumer</description></item>
-                    /// <item><description>consumer_group</description></item>
+                    /// <item><description>consumer: consumer.</description></item>
+                    /// <item><description>consumer_group: consumer group.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hello, World!</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

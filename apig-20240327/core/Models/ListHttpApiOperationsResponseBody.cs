@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The API operation list.</para>
+        /// <para>The list of API operations.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListHttpApiOperationsResponseBodyData Data { get; set; }
         public class ListHttpApiOperationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API operation list.</para>
+            /// <para>The list of API operations.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

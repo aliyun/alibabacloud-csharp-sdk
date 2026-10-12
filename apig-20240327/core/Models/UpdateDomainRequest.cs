@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainScope { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS. This parameter is required when the protocol is HTTPS.</para>
+        /// <para>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is set. When the protocol is HTTPS, forceHttps is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The protocol type supported by the domain name.</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: Only HTTP is supported.</description></item>
-        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
+        /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
+        /// <item><description>HTTPS: Only the HTTPS protocol is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

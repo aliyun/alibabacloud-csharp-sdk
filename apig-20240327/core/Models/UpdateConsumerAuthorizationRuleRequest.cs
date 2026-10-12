@@ -17,11 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<AuthorizationResourceInfo> AuthorizationResourceInfos { get; set; }
 
         /// <summary>
-        /// <para>The expiration mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>LongTerm</description></item>
-        /// <item><description>ShortTerm</description></item>
-        /// </list>
+        /// <para>The expiration mode. Valid values: LongTerm and ShortTerm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LongTerm</para>

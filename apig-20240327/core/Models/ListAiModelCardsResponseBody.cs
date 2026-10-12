@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListAiModelCardsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned when the request is successful.</para>
+        /// <para>The response status code. Ok is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListAiModelCardsResponseBodyDataItems> Items { get; set; }
             public class ListAiModelCardsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The list of invocation paths supported by the model. Each item contains both path and type.</para>
+                /// <para>The list of invocation paths supported by the model. Each entry contains both path and type.</para>
                 /// </summary>
                 [NameInMap("availablePaths")]
                 [Validation(Required=false)]
                 public List<ListAiModelCardsResponseBodyDataItemsAvailablePaths> AvailablePaths { get; set; }
                 public class ListAiModelCardsResponseBodyDataItemsAvailablePaths : TeaModel {
                     /// <summary>
-                    /// <para>The model invocation path. The maximum length is 2048 characters.</para>
+                    /// <para>The model invocation path. The value can be up to 2048 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/v1/chat/completions</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol type corresponding to the path. The maximum length is 64 characters.</para>
+                    /// <para>The protocol type of the path. The value can be up to 64 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>OpenAICompatible</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? OutputCost { get; set; }
 
                     /// <summary>
-                    /// <para>The billing type. Currently, only fixed is supported.</para>
+                    /// <para>The billing type. Only fixed is supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>fixed</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The model capability switches. Keys are model capability names supported by the API gateway, and values are Boolean values.</para>
+                /// <para>The model capability switches. The key is the name of a model capability supported by API Gateway, and the value is a Boolean value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</para>
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? MaxTokens { get; set; }
 
                     /// <summary>
-                    /// <para>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</para>
+                    /// <para>The list of input modalities supported by the model. The list contains up to 16 entries, and each entry must not be empty.</para>
                     /// </summary>
                     [NameInMap("supportedInputModalities")]
                     [Validation(Required=false)]
                     public List<string> SupportedInputModalities { get; set; }
 
                     /// <summary>
-                    /// <para>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</para>
+                    /// <para>The list of output modalities supported by the model. The list contains up to 16 entries, and each entry must not be empty.</para>
                     /// </summary>
                     [NameInMap("supportedOutputModalities")]
                     [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelProvider { get; set; }
 
                 /// <summary>
-                /// <para>The source of the model card. For instance-level model cards, user is returned.</para>
+                /// <para>The source of the model card. user is returned for instance-level model cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceURL { get; set; }
 
                 /// <summary>
-                /// <para>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The time when the model card was last updated, in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-14 18:30:00</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message. success is returned when the request is successful.</para>
+        /// <para>The response message. success is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is generated by the system and used to locate this call.</para>
+        /// <para>The request ID, which is generated by the system and used to locate the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public class ListGatewaysResponseBodyDataItems : TeaModel {
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: subscription.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>POSTPAY</para>
@@ -45,6 +49,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 /// <summary>
                 /// <para>The source from which the gateway was created. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Console: the console.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Console</para>
@@ -74,7 +81,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The gateway instance edition.</para>
+                /// <para>The gateway instance edition. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Professional: standard instance.</para>
+                /// </description></item>
+                /// <item><description><para>Serverless: Serverless instance.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless</para>
@@ -119,7 +132,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before the AI gateway was released.</para>
+                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was released.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -129,7 +142,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Legacy { get; set; }
 
                 /// <summary>
-                /// <para>The list of gateway entry addresses.</para>
+                /// <para>The list of gateway ingress addresses.</para>
                 /// </summary>
                 [NameInMap("loadBalancers")]
                 [Validation(Required=false)]
@@ -147,6 +160,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The protocol version. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>ipv4: IPv4.</description></item>
+                    /// <item><description>ipv6: IPv6.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ipv4</para>
@@ -157,6 +174,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The load balancing address type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Internet: public network.</description></item>
+                    /// <item><description>Intranet: private network.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Internet</para>
@@ -166,7 +187,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is the default entry address of the gateway.</para>
+                    /// <para>Indicates whether this is the default ingress address of the gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -201,6 +222,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The load balancing provisioning pattern of the gateway. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Managed: managed by the cloud-native API gateway.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Managed</para>
@@ -227,7 +251,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// <para>The protocol.</para>
+                        /// <para>The protocol. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>TCP.</description></item>
+                        /// <item><description>UDP.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TCP</para>
@@ -239,7 +267,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The status of the load balancing instance.</para>
+                    /// <para>The status of the load balancing instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Ready: active.</description></item>
+                    /// <item><description>NotCreate: No instance is associated.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Ready</para>
@@ -250,6 +282,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The load balancing type of the gateway. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
+                    /// <item><description>CLB: Classic Load Balancer (CLB).</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>NLB</para>
@@ -310,7 +346,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The gateway specification.</para>
+                /// <para>The gateway specification. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>apigw.small.x1: small specification.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>apigw.small.x1</para>
@@ -321,6 +360,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 /// <summary>
                 /// <para>The gateway status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Running: The gateway is running.</description></item>
+                /// <item><description>Creating: The gateway is being created.</description></item>
+                /// <item><description>CreateFailed: The gateway failed to be created.</description></item>
+                /// <item><description>Upgrading: The gateway is being upgraded.</description></item>
+                /// <item><description>UpgradeFailed: The gateway failed to be upgraded.</description></item>
+                /// <item><description>Restarting: The gateway is being restarted.</description></item>
+                /// <item><description>RestartFailed: The gateway failed to be restarted.</description></item>
+                /// <item><description>Deleting: The gateway is being released.</description></item>
+                /// <item><description>DeleteFailed: The gateway failed to be released.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>

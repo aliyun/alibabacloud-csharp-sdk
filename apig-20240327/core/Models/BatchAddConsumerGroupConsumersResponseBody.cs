@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> SkippedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs successfully added to the consumer group.</para>
+            /// <para>The list of consumer IDs that were successfully added to the consumer group.</para>
             /// </summary>
             [NameInMap("successConsumerIds")]
             [Validation(Required=false)]

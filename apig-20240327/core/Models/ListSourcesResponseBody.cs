@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListSourcesResponseBodyDataItems> Items { get; set; }
             public class ListSourcesResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The reason for the association status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Association completed</para>
                 /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AssociationReason { get; set; }
 
                 /// <summary>
+                /// <para>The association status of the source</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ASSOCIATED</para>
                 /// </summary>
@@ -60,14 +64,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The source information when the source type is K8S.</para>
+                /// <para>The container service source information.</para>
                 /// </summary>
                 [NameInMap("k8sSourceInfo")]
                 [Validation(Required=false)]
                 public ListSourcesResponseBodyDataItemsK8sSourceInfo K8sSourceInfo { get; set; }
                 public class ListSourcesResponseBodyDataItemsK8sSourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The cluster ID.</para>
+                    /// <para>The container service cluster ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>c09212180612a42adbed6a940d01d***</para>
@@ -79,14 +83,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The source information when the source type is MSE_NACOS.</para>
+                /// <para>The MSE Nacos source information.</para>
                 /// </summary>
                 [NameInMap("nacosSourceInfo")]
                 [Validation(Required=false)]
                 public ListSourcesResponseBodyDataItemsNacosSourceInfo NacosSourceInfo { get; set; }
                 public class ListSourcesResponseBodyDataItemsNacosSourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The endpoint of the Nacos instance.</para>
+                    /// <para>The access address of the Nacos instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mse-3353***-nacos-ans.mse.aliyuncs.com:8848</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The registry ID.</para>
+                    /// <para>The NACOS registry cluster ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mse-3353***</para>
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The source name. If the source type is K8S, the name is the container cluster name. If the source type is MSE_NACOS, the name is the Nacos instance name.</para>
+                /// <para>The source name. If the source type is container service, the name is the container service cluster name. If the source type is MSE Nacos, the name is the Nacos instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>itemcenter-dev-cluster</para>
@@ -128,6 +132,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The resource group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rg-xxxx</para>
                 /// </summary>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -178,7 +184,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -190,7 +196,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

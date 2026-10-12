@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The REST API deployment configuration. This parameter is required when the HTTP API to be published is a REST API. At least one of revisionId, environment, or gatewayId must be specified to identify the publish target.</para>
+        /// <para>The deployment configuration for a REST API. This parameter is required when the HTTP API to be published is a REST API. At least one of revisionId, environment, or gatewayId must be specified to identify the deployment target.</para>
         /// </summary>
         [NameInMap("restApiConfig")]
         [Validation(Required=false)]
         public DeployHttpApiRequestRestApiConfig RestApiConfig { get; set; }
         public class DeployHttpApiRequestRestApiConfig : TeaModel {
             /// <summary>
-            /// <para>The description of the publish.</para>
+            /// <para>The description of the publish operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User service API publish</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable REST API route compression. If this parameter is omitted or set to false, operations are published individually. If this parameter is set to true, the API is published as a single prefix route. This parameter is ignored for historical revision publishing, which uses the routing mode saved in the historical revision. When set to true, operationDeployments must not be specified because prefix route publishing supports only full publishing.</para>
+            /// <para>Specifies whether to enable REST API route compression. If this parameter is omitted or set to false, operations are published individually. If this parameter is set to true, the API is published as a single prefix route. This parameter is ignored for historical revision publishing, which uses the route mode saved in the historical revision. When this parameter is set to true, operationDeployments must not be specified because prefix route publishing supports only full publishing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
+                /// <para>The API publish scenario. Backend configurations cannot be specified during publish. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SingleService</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
+                /// <para>The existing service configurations. In a single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publish. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> ServiceConfigs { get; set; }
                 public class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs : TeaModel {
                     /// <summary>
-                    /// <para>The match condition configuration for API publishing.</para>
+                    /// <para>The match condition configuration related to API publishing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The service protocol. Valid values:</para>
+                    /// <para>The Terms of Service. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>HTTP.</description></item>
                     /// <item><description>HTTPS.</description></item>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</para>
+                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in ratio-based scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>49</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> OperationIds { get; set; }
 
             /// <summary>
-            /// <para>The historical revision ID. If this parameter is specified, the publish uses the information from the historical revision.</para>
+            /// <para>The historical revision ID. If this parameter is specified, the deployment uses the information from the historical revision.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>
@@ -248,7 +248,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route ID. This parameter is required when publishing a route of an HTTP API. Before deploying with routeId, make sure the target route is associated with a publishable domain name. If the domain name was not configured when the route was created, call UpdateHttpApiRoute to add domainIds.</para>
+        /// <para>The route ID. This parameter is required when you publish a route of an HTTP API. Before deploying with routeId, make sure the target route is associated with a publishable domain name. If the domain name was not configured when the route was created, call UpdateHttpApiRoute to add domainIds.</para>
+        /// <para>A publishable domain name refers to the default subdomain of the environment and does not include custom Dedicated domain names. If the route is associated only with a Dedicated domain name, call UpdateHttpApiRoute to add the domainIds corresponding to the default subdomain of the environment before deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrl***</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiMockContract : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the Mock feature.</para>
+        /// <para>Indicates whether mock is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The response content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mock content.</para>
+        /// <para>Mock test</para>
         /// </summary>
         [NameInMap("responseContent")]
         [Validation(Required=false)]

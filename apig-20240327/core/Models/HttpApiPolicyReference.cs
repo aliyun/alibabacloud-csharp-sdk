@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiPolicyReference : TeaModel {
         /// <summary>
-        /// <para>The policy attachment ID.</para>
+        /// <para>The policy mount ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-3c8ayyy</para>

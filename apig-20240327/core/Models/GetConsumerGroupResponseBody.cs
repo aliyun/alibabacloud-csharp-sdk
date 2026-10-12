@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The consumer group description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used for online API caller grouping.</para>
+            /// <para>Group for online API callers</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The gateway type. Valid values: API or AI.</para>
+            /// <para>The gateway type. Valid values: API and AI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API</para>

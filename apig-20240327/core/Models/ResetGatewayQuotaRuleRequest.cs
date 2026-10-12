@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ResetGatewayQuotaRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The conflict snapshot hash, used to prevent concurrent dirty overwrites when confirming an overwrite. Obtain this value from the response of a previous dryRun=true call.</para>
-        /// <para>You do not need to specify this parameter in the following cases: no conflicts exist, you are performing a dry run (dryRun=true), or you are not confirming an overwrite (overwrite=false).</para>
-        /// <para>When dryRun is set to false and overwrite is set to true, if this parameter is not specified or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. You must perform the dry run again to confirm the new conflicts.</para>
+        /// <para>The conflict snapshot hash, used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response data of a previous dryRun=true call.</para>
+        /// <para>This parameter is not required in the following cases: no conflicts exist, the request is a dry run (dryRun=true), or overwrite is set to false.</para>
+        /// <para>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and does not match, the backend returns accepted=false with a new conflict preview. Perform the dry run again to confirm the new conflicts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow overwriting when conflicts exist. If you allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
+        /// <para>Specifies whether to allow overwriting when conflicts exist. If overwriting is allowed, conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

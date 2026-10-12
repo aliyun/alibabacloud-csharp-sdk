@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the attached resource.</para>
+        /// <para>The ID of the mounted resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-cuip2pum1hksng6oni3g</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the attachment point supported by the policy.</para>
+        /// <para>The type of mount point supported by the policy.</para>
         /// <list type="bullet">
         /// <item><description>HttpApi: HttpApi.</description></item>
         /// <item><description>Operation: Operation of HttpApi.</description></item>
-        /// <item><description>GatewayRoute: gateway route.</description></item>
-        /// <item><description>GatewayService: gateway service.</description></item>
-        /// <item><description>GatewayServicePort: gateway service port.</description></item>
-        /// <item><description>Domain: gateway domain name.</description></item>
-        /// <item><description>Gateway: gateway.</description></item>
+        /// <item><description>GatewayRoute: Gateway route.</description></item>
+        /// <item><description>GatewayService: Gateway service.</description></item>
+        /// <item><description>GatewayServicePort: Gateway service port.</description></item>
+        /// <item><description>Domain: Gateway domain name.</description></item>
+        /// <item><description>Gateway: Gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the response includes built-in AI plugins installed by the system. Default value: false.</para>
+        /// <para>Specifies whether the response includes built-in AI plug-ins installed by the system. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the plugin type used to filter results.</para>
+        /// <para>The ID of the plug-in type used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginClassId { get; set; }
 
         /// <summary>
-        /// <para>The name of the plugin type used to filter results.</para>
+        /// <para>The name of the plug-in type used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key-auth</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginClassName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the response includes the plugin attachment information corresponding to attachResourceId.</para>
+        /// <para>Specifies whether the response includes the plug-in mounting information corresponding to attachResourceId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

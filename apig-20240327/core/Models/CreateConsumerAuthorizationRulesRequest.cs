@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>The expiration mode. Currently only LongTerm is supported.</para>
+            /// <para>The expiration mode. Currently, only LongTerm is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LongTerm</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The resource identifier. Serves as a unique identifier for space reuse by non-standard code sources.</para>
+            /// <para>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</para>
             /// </summary>
             [NameInMap("resourceIdentifier")]
             [Validation(Required=false)]

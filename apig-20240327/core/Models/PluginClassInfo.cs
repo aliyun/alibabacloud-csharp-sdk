@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class PluginClassInfo : TeaModel {
         /// <summary>
-        /// <para>The plugin class alias.</para>
+        /// <para>The alias of the plugin class.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AI安全护栏</para>
+        /// <para>AI Safety Guardrail</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConfigExample { get; set; }
 
         /// <summary>
-        /// <para>The plugin class description.</para>
+        /// <para>The description of the plugin class.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AI请求内容安全检测插件</para>
+        /// <para>AI request content security detection plugin</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The plugin class name.</para>
+        /// <para>The name of the plugin class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-security-guard</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The version description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>初始版本</para>
+        /// <para>Initial version</para>
         /// </summary>
         [NameInMap("versionDescription")]
         [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WasmLanguage { get; set; }
 
         /// <summary>
-        /// <para>The Wasm file download URL.</para>
+        /// <para>The download URL of the Wasm file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://...</para>

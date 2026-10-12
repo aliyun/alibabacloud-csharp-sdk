@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateConsumerResponseBodyData Data { get; set; }
         public class CreateConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumer ID.</para>
+            /// <para>The API consumer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-cvnjramm1hks1r3fmmug</para>

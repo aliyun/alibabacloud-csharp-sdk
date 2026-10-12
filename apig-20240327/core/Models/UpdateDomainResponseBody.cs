@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateDomainResponseBodyData Data { get; set; }
         public class UpdateDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The publish version ID.</para>
+            /// <para>The deployment revision ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxxxx</para>

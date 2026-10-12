@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The consumer description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Online API caller.</para>
+                /// <para>Online API caller</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The time when the consumer joined the consumer group, in Unix millisecond timestamp.</para>
+                /// <para>The time when the consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1715769600000</para>

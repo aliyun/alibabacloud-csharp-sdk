@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The name of the location from which the API key is extracted.</para>
+        /// <para>The name of the location from which the API key is fetched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Apikey</para>

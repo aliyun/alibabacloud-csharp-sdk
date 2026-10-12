@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetRiskNotificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The risk detection result.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetRiskNotificationResponseBodyData Data { get; set; }
         public class GetRiskNotificationResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The gateway ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-xxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the notification for the risk item is muted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? IsMute { get; set; }
 
             /// <summary>
+            /// <para>The code of the risk item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GW_VERSION_EXPIRED</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

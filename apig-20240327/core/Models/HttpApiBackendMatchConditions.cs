@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiBackendMatchConditions : TeaModel {
         /// <summary>
-        /// <para>The configurations of the matching conditions.</para>
+        /// <para>The matching condition configuration.</para>
         /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<HttpApiBackendMatchCondition> Conditions { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the matching condition is the default one.</para>
+        /// <para>Indicates whether this is the default matching condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type corresponding to the path.</para>
+                /// <para>The protocol type of the path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OpenAICompatible</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? OutputCost { get; set; }
 
                 /// <summary>
-                /// <para>The billing type. Currently, fixed is returned.</para>
+                /// <para>The billing type. The current value is fixed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fixed</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProvider { get; set; }
 
             /// <summary>
-            /// <para>The source of the model card. Currently, user is returned.</para>
+            /// <para>The source of the model card. The current value is user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The last update time of the model card, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-14 18:30:00</para>

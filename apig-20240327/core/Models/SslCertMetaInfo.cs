@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The unique certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CertId { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The certificate identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert-123</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The common name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The certificate matching the domain name.</para>
+        /// <para>The certificate matched to the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string KeySize { get; set; }
 
         /// <summary>
-        /// <para>The md5 value.</para>
+        /// <para>The MD5 value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1B2C3D4E5F67890ABCDEF1234567890</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate expires.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890000</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? NotAfterTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate starts to take effect.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890000</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SerialNo { get; set; }
 
         /// <summary>
-        /// <para>The sha2 value.</para>
+        /// <para>The SHA-2 value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1B2C3D4E5F67890ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890</para>

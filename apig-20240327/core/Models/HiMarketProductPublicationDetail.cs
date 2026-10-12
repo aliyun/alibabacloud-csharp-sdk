@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketProductPublicationDetail : TeaModel {
         /// <summary>
-        /// <para>The portal ID.</para>
+        /// <para>Portal ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>portal-xxx</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The portal name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开发者门户</para>
+        /// <para>Developer Portal</para>
         /// </summary>
         [NameInMap("portalName")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AI网关API</para>
+        /// <para>AI Gateway API</para>
         /// </summary>
         [NameInMap("productName")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The product publish ID.</para>
+        /// <para>The product publication ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pub-xxx</para>

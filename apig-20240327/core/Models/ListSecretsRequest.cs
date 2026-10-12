@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSecretsRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type used to filter results. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// <para>The gateway type used for filtering. Valid values: <b>AI</b> and <b>API</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>

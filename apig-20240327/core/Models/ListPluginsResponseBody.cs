@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListPluginsResponseBodyData Data { get; set; }
         public class ListPluginsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The plugin list.</para>
+            /// <para>The list of plug-ins.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListPluginsResponseBodyDataItems> Items { get; set; }
             public class ListPluginsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The plugin attachment information.</para>
+                /// <para>The plug-in mounting information.</para>
                 /// </summary>
                 [NameInMap("attachmentInfo")]
                 [Validation(Required=false)]
                 public ListPluginsResponseBodyDataItemsAttachmentInfo AttachmentInfo { get; set; }
                 public class ListPluginsResponseBodyDataItemsAttachmentInfo : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the plugin is enabled.</para>
+                    /// <para>Indicates whether the plug-in is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The plugin attachment ID.</para>
+                    /// <para>The plug-in mounting ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pa-ct2irn6m1hkreaen0t40</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The plugin type information.</para>
+                /// <para>The plug-in type information.</para>
                 /// </summary>
                 [NameInMap("pluginClassInfo")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The alias.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>基于 Key 限流</para>
+                    /// <para>Key-based throttling</para>
                     /// </summary>
                     [NameInMap("alias")]
                     [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ExecuteStage { get; set; }
 
                     /// <summary>
-                    /// <para>The plugin name.</para>
+                    /// <para>The plug-in name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-rate-limit</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The plugin type ID.</para>
+                    /// <para>The plug-in type ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pls-cqebrgh46ppatmpri</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string PluginClassId { get; set; }
 
                     /// <summary>
-                    /// <para>The plugin source.</para>
+                    /// <para>The plug-in source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HigressOfficial</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The version description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>版本描述</para>
+                    /// <para>Version description</para>
                     /// </summary>
                     [NameInMap("versionDescription")]
                     [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The plugin ID.</para>
+                /// <para>The plug-in ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pl-cvu6r4um1hko3b3ti0a0</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

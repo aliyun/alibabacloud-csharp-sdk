@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class EnvironmentInfo : TeaModel {
         /// <summary>
-        /// <para>The environment alias.</para>
+        /// <para>The alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-env</para>
+        /// <para>Test environment</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the environment is the default environment.</para>
+        /// <para>Indicates whether the environment is the default environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Default { get; set; }
 
         /// <summary>
-        /// <para>The environment descriptiont.</para>
+        /// <para>The environment description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a test environment.</para>
+        /// <para>This is the test environment for the xx project of xxx</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The instance information.</para>
+        /// <para>The gateway information.</para>
         /// </summary>
         [NameInMap("gatewayInfo")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The subdomains.</para>
+        /// <para>The subdomain list.</para>
         /// </summary>
         [NameInMap("subDomainInfos")]
         [Validation(Required=false)]

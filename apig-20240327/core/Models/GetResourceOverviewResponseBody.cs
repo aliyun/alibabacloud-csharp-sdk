@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? PublishedCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of APIs.</para>
+                /// <para>The number of APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? RunningCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of gateway instances.</para>
+                /// <para>The number of gateway instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

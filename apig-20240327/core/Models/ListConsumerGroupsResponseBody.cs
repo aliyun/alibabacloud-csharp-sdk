@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The consumer group description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Used for online API caller grouping.</para>
+                /// <para>Used for grouping online API callers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of consumer groups that match the conditions.</para>
+            /// <para>The total number of consumer groups that match the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

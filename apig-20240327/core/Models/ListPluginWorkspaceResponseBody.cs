@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListPluginWorkspaceResponseBodyData> Data { get; set; }
         public class ListPluginWorkspaceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Codeup organization ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>664f1e2xxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
+            /// <para>The Codeup repository ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345678</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RepoId { get; set; }
 
             /// <summary>
+            /// <para>The repository name (the English ID of the plugin).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-custom-plugin</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RepoName { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID (prefixed with plw-).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>plw-xxxxxxxx</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

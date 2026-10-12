@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? DatabaseNumber { get; set; }
 
         /// <summary>
-        /// <para>The Redis host address.</para>
+        /// <para>The Redis hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-xxx.redis.rds.aliyuncs.com</para>

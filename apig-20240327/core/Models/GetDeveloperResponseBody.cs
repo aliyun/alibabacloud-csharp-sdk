@@ -1,0 +1,93 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.APIG20240327.Models
+{
+    public class GetDeveloperResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ok</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public GetDeveloperResponseBodyData Data { get; set; }
+        public class GetDeveloperResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The developer ID. This ID can be used to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dev-xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("developerId")]
+            [Validation(Required=false)]
+            public string DeveloperId { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the portal to which the developer belongs. This ID can be used to identify the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>portal-xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("portalId")]
+            [Validation(Required=false)]
+            public string PortalId { get; set; }
+
+            /// <summary>
+            /// <para>The developer status. Valid values: PENDING, APPROVED, and REJECTED.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>APPROVED</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The logon username of the developer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>developer-demo</para>
+            /// </summary>
+            [NameInMap("username")]
+            [Validation(Required=false)]
+            public string Username { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>393E2630-DBE7-5221-AB35-9E740675491A</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

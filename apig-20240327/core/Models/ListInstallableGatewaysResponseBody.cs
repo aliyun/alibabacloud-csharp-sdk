@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListInstallableGatewaysResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListInstallableGatewaysResponseBodyData Data { get; set; }
         public class ListInstallableGatewaysResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of gateways.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListInstallableGatewaysResponseBodyDataItems> Items { get; set; }
             public class ListInstallableGatewaysResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The database engine version of the gateway DPI engine.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2.1.10</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
+                /// <para>The gateway ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>gw-xxxx</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
+                /// <para>The gateway status. The value is passed through from the GatewayPhase enumeration, such as Running or Creating.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayPhase { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the plugin can be installed on the gateway.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Installable { get; set; }
 
                 /// <summary>
+                /// <para>The reason why the plugin cannot be installed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>VERSION_NOT_MATCH</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string InstallableFalseReasonType { get; set; }
 
                 /// <summary>
+                /// <para>The version number of another version of the same plugin class that is already installed on the gateway.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string InstalledPluginVersion { get; set; }
 
                 /// <summary>
+                /// <para>The gateway name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>my-gateway</para>
                 /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>43</para>
             /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiPublishRevisionInfo : TeaModel {
         /// <summary>
-        /// <para>The publishing scenario.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SingleService</description></item>
-        /// <item><description>MultiServiceByRatio</description></item>
-        /// <item><description>MultiServiceByContent</description></item>
-        /// <item><description>MultiServiceByTag</description></item>
-        /// <item><description>Mock</description></item>
-        /// </list>
+        /// <para>The API publish scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SingleService</para>
@@ -28,14 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendScene { get; set; }
 
         /// <summary>
-        /// <para>The type of the backend service.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DNS: a DNS domain name</description></item>
-        /// <item><description>Service: an existing service</description></item>
-        /// <item><description>VIP: a fixed IP address</description></item>
-        /// <item><description>CloudProduct: a cloud service</description></item>
-        /// </list>
+        /// <para>The backend type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Service</para>
@@ -45,14 +30,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendType { get; set; }
 
         /// <summary>
-        /// <para>The cloud service configurations.</para>
+        /// <para>The cloud product configuration.</para>
         /// </summary>
         [NameInMap("cloudProductConfig")]
         [Validation(Required=false)]
         public HttpApiPublishRevisionInfoCloudProductConfig CloudProductConfig { get; set; }
         public class HttpApiPublishRevisionInfoCloudProductConfig : TeaModel {
             /// <summary>
-            /// <para>The type of the cloud service.</para>
+            /// <para>The cloud product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FC</para>
@@ -62,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CloudProductType { get; set; }
 
             /// <summary>
-            /// <para>The ACK configurations.</para>
+            /// <para>The container service configuration.</para>
             /// </summary>
             [NameInMap("containerServiceConfigs")]
             [Validation(Required=false)]
             public List<HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs> ContainerServiceConfigs { get; set; }
             public class HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs : TeaModel {
                 /// <summary>
-                /// <para>The associated service ID.</para>
+                /// <para>The ID of the associated service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gs-xxx</para>
@@ -79,14 +64,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The matching conditions.</para>
+                /// <para>The match condition.</para>
                 /// </summary>
                 [NameInMap("match")]
                 [Validation(Required=false)]
                 public HttpApiBackendMatchConditions Match { get; set; }
 
                 /// <summary>
-                /// <para>The K8s service name.</para>
+                /// <para>The Kubernetes service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo-service</para>
@@ -96,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The K8s namespace.</para>
+                /// <para>The Kubernetes service namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -138,14 +123,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The Function Compute configurations.</para>
+            /// <para>The Function Compute (FC) configuration.</para>
             /// </summary>
             [NameInMap("functionConfigs")]
             [Validation(Required=false)]
             public List<HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs> FunctionConfigs { get; set; }
             public class HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs : TeaModel {
                 /// <summary>
-                /// <para>The associated service ID.</para>
+                /// <para>The ID of the associated service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gs-xxx</para>
@@ -155,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The matching conditions.</para>
+                /// <para>The match condition.</para>
                 /// </summary>
                 [NameInMap("match")]
                 [Validation(Required=false)]
@@ -194,14 +179,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The MSE Nacos configurations.</para>
+            /// <para>The MSE Nacos configuration.</para>
             /// </summary>
             [NameInMap("mseNacosConfigs")]
             [Validation(Required=false)]
             public List<HttpApiPublishRevisionInfoCloudProductConfigMseNacosConfigs> MseNacosConfigs { get; set; }
             public class HttpApiPublishRevisionInfoCloudProductConfigMseNacosConfigs : TeaModel {
                 /// <summary>
-                /// <para>The associated service ID.</para>
+                /// <para>The ID of the associated service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gs-xxx</para>
@@ -221,7 +206,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The matching conditions.</para>
+                /// <para>The match condition.</para>
                 /// </summary>
                 [NameInMap("match")]
                 [Validation(Required=false)]
@@ -262,7 +247,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The publishing timestamp.</para>
+        /// <para>The publish timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1718807057927</para>
@@ -272,35 +257,35 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The custom domain names.</para>
+        /// <para>The list of custom domain names.</para>
         /// </summary>
         [NameInMap("customDomains")]
         [Validation(Required=false)]
         public List<HttpApiDomainInfo> CustomDomains { get; set; }
 
         /// <summary>
-        /// <para>The configurations of DNS domain names. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</para>
+        /// <para>The DNS domain name configuration. In the single-service scenario, only one entry can be configured. In the by-ratio or by-content scenario, multiple entries can be configured.</para>
         /// </summary>
         [NameInMap("dnsConfigs")]
         [Validation(Required=false)]
         public List<HttpApiPublishRevisionInfoDnsConfigs> DnsConfigs { get; set; }
         public class HttpApiPublishRevisionInfoDnsConfigs : TeaModel {
             /// <summary>
-            /// <para>The DNS domain names.</para>
+            /// <para>The list of DNS domain names.</para>
             /// </summary>
             [NameInMap("dnsList")]
             [Validation(Required=false)]
             public List<string> DnsList { get; set; }
 
             /// <summary>
-            /// <para>The matching condition. This condition is valid only in content-based routing.</para>
+            /// <para>The match condition. This parameter is valid only in the by-content scenario.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
             public HttpApiBackendMatchConditions Match { get; set; }
 
             /// <summary>
-            /// <para>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</para>
+            /// <para>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -312,7 +297,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The environment information.</para>
+        /// <para>The environment context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -342,14 +327,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The instance information.</para>
+            /// <para>The gateway instance information.</para>
             /// </summary>
             [NameInMap("gatewayInfo")]
             [Validation(Required=false)]
             public HttpApiPublishRevisionInfoEnvironmentInfoGatewayInfo GatewayInfo { get; set; }
             public class HttpApiPublishRevisionInfoEnvironmentInfoGatewayInfo : TeaModel {
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The gateway ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-xxx</para>
@@ -359,10 +344,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The gateway name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Instance 1</para>
+                /// <para>Instance1</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -383,7 +368,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the current version is used.</para>
+        /// <para>Indicates whether this is the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -393,14 +378,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? IsCurrentVersion { get; set; }
 
         /// <summary>
-        /// <para>The operations.</para>
+        /// <para>The list of API operations.</para>
         /// </summary>
         [NameInMap("operations")]
         [Validation(Required=false)]
         public List<HttpApiOperationInfo> Operations { get; set; }
 
         /// <summary>
-        /// <para>The published version.</para>
+        /// <para>The version number of the published API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apr-xxx</para>
@@ -410,7 +395,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RevisionId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</para>
+        /// <para>The existing service configurations. In a single-service scenario, only one entry can be configured. In proportion-based, content-based, or tag-based scenarios, multiple entries can be configured.</para>
         /// </summary>
         [NameInMap("serviceConfigs")]
         [Validation(Required=false)]
@@ -427,7 +412,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayServiceId { get; set; }
 
             /// <summary>
-            /// <para>The matching conditions.</para>
+            /// <para>The match condition.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -464,7 +449,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The service weight.</para>
+            /// <para>The weight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -476,7 +461,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The default domain names of the environment.</para>
+        /// <para>The list of default domain names for the environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx.com</para>
@@ -486,28 +471,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDomainInfo> SubDomains { get; set; }
 
         /// <summary>
-        /// <para>The configurations of fixed IP addresses. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</para>
+        /// <para>The static address configurations. In a single-service scenario, only one entry can be configured. In proportion-based or content-based scenarios, multiple entries can be configured.</para>
         /// </summary>
         [NameInMap("vipConfigs")]
         [Validation(Required=false)]
         public List<HttpApiPublishRevisionInfoVipConfigs> VipConfigs { get; set; }
         public class HttpApiPublishRevisionInfoVipConfigs : TeaModel {
             /// <summary>
-            /// <para>The IP addresses.</para>
+            /// <para>The list of static addresses.</para>
             /// </summary>
             [NameInMap("endpoints")]
             [Validation(Required=false)]
             public List<string> Endpoints { get; set; }
 
             /// <summary>
-            /// <para>The matching condition. This condition is valid only in content-based routing.</para>
+            /// <para>The match condition. This parameter is valid only in the by-content scenario.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
             public HttpApiBackendMatchConditions Match { get; set; }
 
             /// <summary>
-            /// <para>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</para>
+            /// <para>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

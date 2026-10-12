@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketHmacConfig : TeaModel {
         /// <summary>
-        /// <para>The list of credentials.</para>
+        /// <para>The credential list.</para>
         /// </summary>
         [NameInMap("credentials")]
         [Validation(Required=false)]

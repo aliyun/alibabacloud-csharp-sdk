@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The policy configuration content (JSON string).</para>
+        /// <para>The policy configuration content in JSON string format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Fallback when primary route fails</para>
+        /// <para>Fallback when the primary route fails</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The policy name.
-        /// This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance (gatewayId) under the current account. If the name conflicts with an existing policy, a PolicyExisted error is returned. When retrying after receiving this error, you must use a different name. Submitting the same name repeatedly will always fail.
-        /// For other className values (such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy), name is optional and used only for display purposes.</para>
+        /// This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and the name must be unique within the same gateway instance (gatewayId) under the current account. If a policy with the same name already exists, a PolicyExisted error is returned. When retrying after receiving this error, use a different name. Submitting the same name repeatedly will always fail.
+        /// For other className values such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy, this parameter is optional and used only for display purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-fallback-policy</para>

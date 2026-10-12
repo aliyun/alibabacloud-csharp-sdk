@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the subdomain. Valid values: HTTP, HTTPS.</para>
+        /// <para>The protocol type supported by the subdomain. Valid values: HTTP and HTTPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

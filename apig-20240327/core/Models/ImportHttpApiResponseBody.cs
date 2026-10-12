@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Missing response definition</para>
+                    /// <para>The response definition is missing</para>
                     /// </summary>
                     [NameInMap("errorMessage")]
                     [Validation(Required=false)]

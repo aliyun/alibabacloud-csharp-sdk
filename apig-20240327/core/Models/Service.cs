@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The address information, including IP addresses or domain name lists.</para>
+        /// <para>The address information, which is a list of IP addresses or domain names.</para>
         /// </summary>
         [NameInMap("addresses")]
         [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The configuration for removing abnormal instances.</para>
+        /// <para>The outlier detection configuration for removing abnormal instances.</para>
         /// </summary>
         [NameInMap("outlierDetection")]
         [Validation(Required=false)]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> UnhealthyEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was created.</para>
+        /// <para>The time when the service was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725868548440</para>

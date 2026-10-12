@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Searches for an HTTP API by exact name match.</para>
+        /// <para>Searches for an exact match by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>login</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ahr5uil8raz0rq3b</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithIngressInfo { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID. If specified, the response includes plug-in publishing information for the specified plug-in.</para>
+        /// <para>The plug-in ID. If specified, the response includes plug-in publishing information based on this plug-in ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct9qn3um1hktue8dqol0</para>

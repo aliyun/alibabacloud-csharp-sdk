@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListAiModelProvidersResponseBodyDataItems> Items { get; set; }
             public class ListAiModelProvidersResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The list of AI service summaries currently bound to the model provider.</para>
+                /// <para>The list of AI service summaries that are currently bound to the model provider.</para>
                 /// </summary>
                 [NameInMap("boundServices")]
                 [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The display name of the model provider. The value can be up to 128 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Qwen Cloud / Alibaba Cloud Bailian.</para>
+                /// <para>千问云 / 阿里云百炼</para>
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The list of model cards currently associated with the model provider.</para>
+                /// <para>The list of model cards that are currently associated with the model provider.</para>
                 /// </summary>
                 [NameInMap("modelCards")]
                 [Validation(Required=false)]
                 public List<ListAiModelProvidersResponseBodyDataItemsModelCards> ModelCards { get; set; }
                 public class ListAiModelProvidersResponseBodyDataItemsModelCards : TeaModel {
                     /// <summary>
-                    /// <para>The list of invocation paths supported by the model. Each item contains both path and type.</para>
+                    /// <para>The list of invocation paths supported by the model. Each entry contains both path and type.</para>
                     /// </summary>
                     [NameInMap("availablePaths")]
                     [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public float? OutputCost { get; set; }
 
                         /// <summary>
-                        /// <para>The billing type. Currently only fixed is supported.</para>
+                        /// <para>The billing type. Only fixed is supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>fixed</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The model capability switches. Keys are model capability names supported by API Gateway, and values are Boolean values.</para>
+                    /// <para>The model capability switches. The key is the name of a model capability supported by API Gateway, and the value is a Boolean value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</para>
@@ -203,14 +203,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public long? MaxTokens { get; set; }
 
                         /// <summary>
-                        /// <para>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</para>
+                        /// <para>The list of input modalities supported by the model. The list contains up to 16 entries, and each entry cannot be empty.</para>
                         /// </summary>
                         [NameInMap("supportedInputModalities")]
                         [Validation(Required=false)]
                         public List<string> SupportedInputModalities { get; set; }
 
                         /// <summary>
-                        /// <para>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</para>
+                        /// <para>The list of output modalities supported by the model. The list contains up to 16 entries, and each entry cannot be empty.</para>
                         /// </summary>
                         [NameInMap("supportedOutputModalities")]
                         [Validation(Required=false)]
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SourceURL { get; set; }
 
                     /// <summary>
-                    /// <para>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
+                    /// <para>The most recent update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-07-14 18:30:00</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelProviderId { get; set; }
 
                 /// <summary>
-                /// <para>The stable model provider identifier. The value can be up to 128 characters in length.</para>
+                /// <para>The stable identifier of the model provider. The value can be up to 128 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The last update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The most recent update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-14 18:30:00</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of model providers that match the conditions.</para>
+            /// <para>The total number of model providers that match the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

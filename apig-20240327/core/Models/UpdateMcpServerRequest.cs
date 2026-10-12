@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The list of assembled sources. This parameter is required when type is AssemblyMCP.</para>
+        /// <para>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</para>
         /// </summary>
         [NameInMap("assembledSources")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The backend service configuration of the route.</para>
+        /// <para>The backend service configuration of the route. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol. Valid values:</para>
+                /// <para>The Terms of Service. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>TCP</description></item>
-                /// <item><description>HTTP</description></item>
-                /// <item><description>DUBBO</description></item>
+                /// <item><description>TCP.</description></item>
+                /// <item><description>HTTP.</description></item>
+                /// <item><description>DUBBO.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,11 +131,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</description></item>
-        /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
-        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
-        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</description></item>
+        /// <item><description>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.</description></item>
+        /// <item><description>ApiGatewayAssembly: Gateway MCP assembly.</description></item>
+        /// <item><description>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
+        /// <item><description>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,21 +149,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Product center service routing</para>
+        /// <para>商品中心服务路由</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The domain name IDs.</para>
+        /// <para>The domain name ID.</para>
         /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</para>
+        /// <para>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/sse</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExposedUriPath { get; set; }
 
         /// <summary>
-        /// <para>The list of canary release MCP server routing configurations.</para>
+        /// <para>The list of canary release MCP server route configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The service protocol.</para>
+                    /// <para>The Terms of Service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTP</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The route match rules.</para>
+            /// <para>The route match rule.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rules.</para>
+        /// <para>The route match rule. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -340,11 +340,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The MCP server type filter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RealMCP</description></item>
-        /// <item><description>AssemblyMCP</description></item>
-        /// </list>
+        /// <para>The MCP server type filter. Valid values: RealMCP, AssemblyMCP.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination resource group. You can view resource group IDs in the Resource Management console.</para>
+        /// <para>The ID of the destination resource group. You can view the ID in the Resource Management console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzuqyxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The value is case-sensitive and must exactly match one of the valid values.</para>
+        /// <para>The resource type. This parameter is case-sensitive and must exactly match one of the valid values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gateway</para>

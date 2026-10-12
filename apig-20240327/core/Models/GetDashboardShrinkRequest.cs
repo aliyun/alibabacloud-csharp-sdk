@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The name of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: Access log.</description></item>
-        /// <item><description>PLUGIN: Plugin log.</description></item>
+        /// <item><description>LOG: access log.</description></item>
+        /// <item><description>PLUGIN: plugin log.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: Log dashboard.</description></item>
+        /// <item><description>SLS: log dashboard.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>

@@ -31,11 +31,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The protocol.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>HTTP</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

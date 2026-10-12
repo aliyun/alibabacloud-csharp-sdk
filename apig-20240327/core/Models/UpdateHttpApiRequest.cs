@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>The idempotent request identifier. If you call this operation for the same HTTP API with the same clientToken value and request parameters, the result of the first successful call is returned.</para>
+        /// <para>The idempotency token. If you call this operation for the same HTTP API by using the same clientToken value and request parameters, the result of the first successful call is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>update-http-api-client-token-001</para>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The backend service configuration for the route. This parameter is required. You must provide the backend service configuration (including scene and services). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
+        /// <para>The backend service configuration for the route. This parameter is required. You must specify the backend service configuration, including scene and services. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The service ID. The serviceId is the ID of a backend service registered under the gateway. You can call the ListServices operation (with gatewayId specified) to query available service IDs.</para>
+                /// <para>The service ID. The serviceId must be a backend service ID that is registered under the gateway. You can call the ListServices operation (with the gatewayId parameter) to query available service IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>svc-crbgq0dlhtgr***</para>
@@ -131,10 +131,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The creation source type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</description></item>
         /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
         /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
-        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</description></item>
+        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The canary release routing configurations.</para>
+        /// <para>The canary release route configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The route matching rule.</para>
+            /// <para>The route match rule.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rule. When type is set to RealMCP, the match parameter is required and you must provide a route matching rule.</para>
+        /// <para>The route match rule. When type is set to RealMCP, the match parameter is required and you must specify a route match rule.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
+        /// <para>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RealMCP: standard MCP service.</description></item>
+        /// <item><description>RealMCP: a standard MCP service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

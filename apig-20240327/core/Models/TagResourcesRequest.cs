@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The resource IDs. A maximum of 50 subkeys are supported.</para>
+        /// <para>The resource IDs. You can specify up to 50 subkeys.</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type used for the tagging operation. Set this to Gateway.</para>
+        /// <para>The resource type used for the tagging operation. Set this parameter to Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway</para>

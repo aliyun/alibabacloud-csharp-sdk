@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>The format template for reference content. The template must contain at least one %s placeholder.</para>
+        /// <para>The format template for reference content. Must contain at least one %s placeholder.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>参考来源:\n%s</para>
+        /// <para>Reference source:\n%s</para>
         /// </summary>
         [NameInMap("referenceFormat")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiNetworkSearchConfigSearchRewrite SearchRewrite { get; set; }
         public class AiNetworkSearchConfigSearchRewrite : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable search query rewriting.</para>
+            /// <para>Specifies whether to enable search term rewriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of search queries after rewriting.</para>
+            /// <para>The maximum number of search terms after rewriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rewriting service.</para>
+            /// <para>The rewriting service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-xxx</para>

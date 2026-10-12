@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketMcpConfig : TeaModel {
         /// <summary>
-        /// <para>The MCP Server configuration.</para>
+        /// <para>The MCP server configuration.</para>
         /// </summary>
         [NameInMap("mcpServerConfig")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The MCP Server name.</para>
+        /// <para>The MCP server name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-mcp-server</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The MCP tool definitions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;搜索工具\&quot;}]</para>
+        /// <para>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;Search tool\&quot;}]</para>
         /// </summary>
         [NameInMap("tools")]
         [Validation(Required=false)]

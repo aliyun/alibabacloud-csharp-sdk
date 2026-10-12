@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiVersionConfig : TeaModel {
         /// <summary>
-        /// <para>Indicates whether versioning control is enabled.</para>
+        /// <para>Specifies whether versioning control is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The key in the specified header parameter when the header-based versioning scheme is used.</para>
+        /// <para>The key in the specified header parameter when the header versioning scheme is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-version</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string HeaderName { get; set; }
 
         /// <summary>
-        /// <para>The key in the specified query parameter when the query parameter-based versioning scheme is used.</para>
+        /// <para>The key in the specified query parameter when the query versioning scheme is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myVersion</para>
