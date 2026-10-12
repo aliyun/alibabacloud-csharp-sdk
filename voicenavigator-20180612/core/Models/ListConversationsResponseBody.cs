@@ -59,18 +59,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public List<string> DsReportTitles { get; set; }
 
             /// <summary>
-            /// <para>The reason for hanging up. Valid values:
-            ///      1: Normal completion.
-            ///      2: Bot hung up after unrecognized input.
-            ///      3: Hung up due to silence timeout.
-            ///      4: User hung up after unrecognized input.
-            ///      5: User hung up without reason.
-            ///      6: Transferred to human agent due to intent match.
-            ///      7: Transferred to human agent due to unrecognized input.
-            ///      8: No interaction from the user side.
-            ///      9: System exception interruption.
-            ///      10: Transferred to IVR due to intent match.
-            ///      11: Transferred to IVR due to unrecognized input.</para>
+            /// <para>The reason for ending the session. Valid values:</para>
+            /// <ol>
+            /// <item><description>Normal completion.</description></item>
+            /// <item><description>Hangup by the bot after unrecognized input.</description></item>
+            /// <item><description>Hangup due to silence timeout.</description></item>
+            /// <item><description>Hangup by the user after unrecognized input.</description></item>
+            /// <item><description>Hangup by the user without a reason.</description></item>
+            /// <item><description>Transfer to a human agent due to matched intent.</description></item>
+            /// <item><description>Transfer to a human agent after unrecognized input.</description></item>
+            /// <item><description>No interaction from the user.</description></item>
+            /// <item><description>Interruption due to a system exception.</description></item>
+            /// <item><description>Transfer to IVR due to matched intent.</description></item>
+            /// <item><description>Transfer to IVR after unrecognized input.</description></item>
+            /// </ol>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the last playback was completed when the session ended.</para>
+            /// <para>Specifies whether the last prompt was fully played before the session ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public bool? HasLastPlaybackCompleted { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the session was transferred to a human agent.</para>
+            /// <para>Specifies whether the session was transferred to a human agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? Rounds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the session is in a sandbox environment.</para>
+            /// <para>Specifies whether the sandbox mode is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -148,6 +150,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
+
+            /// <summary>
+            /// <para>The text-to-speech (TTS) voice used for the call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cosyvoice-v3-flash:longanyang</para>
+            /// </summary>
+            [NameInMap("Voice")]
+            [Validation(Required=false)]
+            public string Voice { get; set; }
 
         }
 

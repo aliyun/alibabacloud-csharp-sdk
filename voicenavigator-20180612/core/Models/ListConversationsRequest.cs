@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListConversationsRequest : TeaModel {
+        /// <summary>
+        /// <para>The AB test ID.</para>
+        /// </summary>
         [NameInMap("AbTestId")]
         [Validation(Required=false)]
         public string AbTestId { get; set; }
 
         /// <summary>
-        /// <para>The left boundary of the start time range.</para>
+        /// <para>The lower bound of the start time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1638288000000</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeLeftRange { get; set; }
 
         /// <summary>
-        /// <para>The right boundary of the start time range.</para>
+        /// <para>The upper bound of the start time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1637547875311</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? DebugConversation { get; set; }
 
         /// <summary>
-        /// <para>The instance list.</para>
+        /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the session is in a sandbox environment.</para>
+        /// <para>Specifies whether the sandbox mode is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13788914724</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? Result { get; set; }
 
         /// <summary>
-        /// <para>The left boundary of the rounds query range.</para>
+        /// <para>The lower bound of the conversation rounds range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? RoundsLeftRange { get; set; }
 
         /// <summary>
-        /// <para>The right boundary of the rounds query range.</para>
+        /// <para>The upper bound of the conversation rounds range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
