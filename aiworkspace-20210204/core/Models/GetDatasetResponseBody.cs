@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The workspace visibility. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: Only the dataset owner and administrators in the workspace can access the dataset.</description></item>
-        /// <item><description>PUBLIC: All members in the workspace can access the dataset.</description></item>
+        /// <item><description>PRIVATE: Only the dataset owner and administrators within the workspace can access the dataset.</description></item>
+        /// <item><description>PUBLIC: All members of the workspace can access the dataset.</description></item>
         /// <item><description>ROLE_PUBLIC: Only specified workspace roles can access the dataset. For the role list, see AccessibleRoleIdList. The dataset owner and administrators always have access under this condition.</description></item>
         /// </list>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The list of workspace role names that can access the dataset. This field takes effect when Accessibility is ROLE_PUBLIC. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs.</para>
+        /// <para>The list of workspace role names that can access the dataset. This parameter takes effect only when Accessibility is set to ROLE_PUBLIC. Role IDs starting with PAI are basic role IDs, and role IDs starting with role- are custom role IDs.</para>
         /// </summary>
         [NameInMap("AccessibleRoleIdList")]
         [Validation(Required=false)]
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OSS: Alibaba Cloud Object Storage Service (OSS).</description></item>
-        /// <item><description>NAS: Alibaba Cloud Apsara File Storage NAS (NAS).</description></item>
+        /// <item><description>OSS: Object Storage Service (OSS).</description></item>
+        /// <item><description>NAS: Apsara File Storage NAS (NAS).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Data for labeling</para>
+        /// <para>Data for annotation</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time, in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ss.sssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The update time, in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ss.sssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -156,8 +156,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// "region": "${region}",//Region ID<BR>
         /// "fileSystemId": "${file_system_id}", //File system ID<BR>
         /// "path": "${path}", //File system path<BR>
-        /// "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun edition<BR>
-        /// "isVpcMount": boolean, //Whether it is a VPC mount target, specific to Lingjun edition<BR>
+        /// "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun<BR>
+        /// "isVpcMount": boolean, //Specifies whether the mount target is a VPC mount target, specific to Lingjun<BR>
         /// }<BR>
         /// </details>
         /// 
@@ -199,10 +199,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public DatasetVersion LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The permission when the dataset is mounted. Valid values:</para>
+        /// <para>The permission when the dataset is mounted.</para>
         /// <list type="bullet">
         /// <item><description>RO: read-only mount.</description></item>
-        /// <item><description>RW: read-write mount.</description></item>
+        /// <item><description>RW: read/write mount.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MountAccess { get; set; }
 
         /// <summary>
-        /// <para>The list of workspace role names that have read and write permission on the dataset. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs. If the list contains &quot;*&quot;, all roles have read and write permission.</para>
+        /// <para>The list of workspace role names that have read and write permission on the dataset. Role IDs starting with PAI are basic role IDs, and role IDs starting with role- are custom role IDs. If the list contains &quot;*&quot;, all roles have read and write permission.</para>
         /// </summary>
         [NameInMap("MountAccessReadWriteRoleIdList")]
         [Validation(Required=false)]
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The source relationship of the shared dataset. This field is valid only when IsShared is true.</para>
+        /// <para>The source relationship of the shared dataset. This parameter is valid only when IsShared is true.</para>
         /// </summary>
         [NameInMap("SharedFrom")]
         [Validation(Required=false)]
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public GetDatasetResponseBodySharingConfig SharingConfig { get; set; }
         public class GetDatasetResponseBodySharingConfig : TeaModel {
             /// <summary>
-            /// <para>The list of sharing configuration relationships.</para>
+            /// <para>The list of sharing configurations.</para>
             /// </summary>
             [NameInMap("SharedTo")]
             [Validation(Required=false)]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The source dataset ID of the iTag labeling dataset.</para>
+        /// <para>The source dataset ID of the iTAG annotation dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rcdg3wxxxxxhc5jk87</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetId { get; set; }
 
         /// <summary>
-        /// <para>The source dataset version of the labeling dataset.</para>
+        /// <para>The source dataset version of the annotation dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The source ID of the initial version v1. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If SourceType is USER, SourceId can be customized.</description></item>
-        /// <item><description>If SourceType is ITAG, which indicates a dataset generated from iTAG labeling results, SourceId is the iTAG task ID.</description></item>
+        /// <item><description>If SourceType is ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</description></item>
         /// <item><description>If SourceType is PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</description></item>
         /// </list>
         /// 
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The labeling template of the iTag labeling dataset.</para>
+        /// <para>The annotation template of the iTAG annotation dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TextClassification</para>

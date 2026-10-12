@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class Relationship : TeaModel {
         /// <summary>
-        /// <para>A collection of key-value pairs providing additional details about the relationship.</para>
+        /// <para>Attributes</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public Dictionary<string, object> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The channel or system through which the relationship is established.</para>
+        /// <para>The data channel to which the lineage relationship belongs.</para>
         /// </summary>
         [NameInMap("DataChannel")]
         [Validation(Required=false)]
         public string DataChannel { get; set; }
 
         /// <summary>
-        /// <para>The globally unique identifier (GUID) for the relationship.</para>
+        /// <para>The globally unique identifier of the lineage relationship.</para>
         /// </summary>
         [NameInMap("RelationshipGuid")]
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of relationship.</para>
+        /// <para>The type of the lineage relationship.</para>
         /// </summary>
         [NameInMap("RelationshipType")]
         [Validation(Required=false)]

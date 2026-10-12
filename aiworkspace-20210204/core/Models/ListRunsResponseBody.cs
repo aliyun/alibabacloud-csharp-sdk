@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paging token. For the first query, leave this parameter empty. The token for the next page is returned in the response. If the returned token is 0, all results have been returned. You can obtain the token for the next page from the <b>NextPageToken</b> field in the response.</para>
+        /// <para>The pagination token. Pass an empty value for the first page query. The query result returns the token for the next page. A token value of 0 indicates that all data has been retrieved. You can obtain the token for the next page from the NextPageToken field in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<Run> Runs { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the filter criteria. This parameter is optional and may not be returned.</para>
+        /// <para>The total number of records that match the request conditions. This is an optional parameter and may not be returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

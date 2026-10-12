@@ -61,27 +61,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 {"eu-west-1-oxs", "aiworkspace.aliyuncs.com"},
                 {"me-east-1", "aiworkspace.aliyuncs.com"},
                 {"rus-west-1-pop", "aiworkspace.aliyuncs.com"},
-                {"cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou", "aiworkspace.cn-hangzhou.aliyuncs.com"},
                 {"cn-guangzhou", "aiworkspace.cn-guangzhou.aliyuncs.com	"},
-                {"cn-beijing", "aiworkspace.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "aiworkspace.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com"},
-                {"eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"},
-                {"na-south-1", "aiworkspace.na-south-1.aliyuncs.com"},
-                {"us-east-1", "aiworkspace.us-east-1.aliyuncs.com"},
-                {"us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"},
-                {"us-west-1", "aiworkspace.us-west-1.aliyuncs.com"},
-                {"ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("aiworkspace", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1321,6 +1301,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
             {
                 body["Edition"] = request.Edition;
@@ -1470,6 +1454,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
             {
@@ -2246,6 +2234,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Creates a dataset version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a dataset version.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDatasetVersionRequest
         /// </param>
@@ -2282,6 +2275,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportInfo))
             {
@@ -2340,6 +2337,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Creates a dataset version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a dataset version.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDatasetVersionRequest
         /// </param>
@@ -2376,6 +2378,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportInfo))
             {
@@ -2434,6 +2440,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Creates a dataset version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a dataset version.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDatasetVersionRequest
         /// </param>
@@ -2452,6 +2463,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Creates a dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDatasetVersionRequest
@@ -3877,7 +3893,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</para>
+        /// <para>Purchases products. Currently, only pay-as-you-go DataWorks, OSS, PAI, and MaxCompute are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3927,7 +3943,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</para>
+        /// <para>Purchases products. Currently, only pay-as-you-go DataWorks, OSS, PAI, and MaxCompute are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3977,7 +3993,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</para>
+        /// <para>Purchases products. Currently, only pay-as-you-go DataWorks, OSS, PAI, and MaxCompute are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3996,7 +4012,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</para>
+        /// <para>Purchases products. Currently, only pay-as-you-go DataWorks, OSS, PAI, and MaxCompute are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4675,7 +4691,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a workspace role.</para>
+        /// <para>Adds a role to a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4733,7 +4749,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a workspace role.</para>
+        /// <para>Adds a role to a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4791,7 +4807,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a workspace role.</para>
+        /// <para>Adds a role to a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4810,7 +4826,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a workspace role.</para>
+        /// <para>Adds a role to a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8855,7 +8871,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a dataset job.</para>
+        /// <para>Retrieves the configuration of a dataset task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8901,7 +8917,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a dataset job.</para>
+        /// <para>Retrieves the configuration of a dataset task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8947,7 +8963,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a dataset job.</para>
+        /// <para>Retrieves the configuration of a dataset task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8966,7 +8982,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a dataset job.</para>
+        /// <para>Retrieves the configuration of a dataset task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8985,8 +9001,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified dataset version.</para>
+        /// <para>Retrieves the details of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDatasetVersionRequest
@@ -9025,8 +9046,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified dataset version.</para>
+        /// <para>Retrieves the details of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDatasetVersionRequest
@@ -9065,8 +9091,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified dataset version.</para>
+        /// <para>Retrieves the details of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDatasetVersionRequest
@@ -9084,8 +9115,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified dataset version.</para>
+        /// <para>Retrieves the details of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDatasetVersionRequest
@@ -9611,7 +9647,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a member of a workspace.</para>
+        /// <para>Retrieves the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9661,7 +9697,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a member of a workspace.</para>
+        /// <para>Retrieves the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9711,7 +9747,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a member of a workspace.</para>
+        /// <para>Retrieves the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9730,7 +9766,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a member of a workspace.</para>
+        /// <para>Retrieves the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9749,7 +9785,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified model.</para>
+        /// <para>Retrieves the details of a specified model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9789,7 +9825,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified model.</para>
+        /// <para>Retrieves the details of a specified model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9829,7 +9865,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified model.</para>
+        /// <para>Retrieves the details of a specified model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9848,7 +9884,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified model.</para>
+        /// <para>Retrieves the details of a specified model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13029,7 +13065,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of images.</para>
+        /// <para>Retrieves a list of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13119,7 +13155,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of images.</para>
+        /// <para>Retrieves a list of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13209,7 +13245,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of images.</para>
+        /// <para>Retrieves a list of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13228,7 +13264,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of images.</para>
+        /// <para>Retrieves a list of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13247,7 +13283,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists members in a workspace.</para>
+        /// <para>Lists the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13309,7 +13345,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists members in a workspace.</para>
+        /// <para>Lists the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13371,7 +13407,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists members in a workspace.</para>
+        /// <para>Lists the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13390,7 +13426,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists members in a workspace.</para>
+        /// <para>Lists the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15529,12 +15565,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in a specified region.</para>
+        /// <para>Retrieves the list of workspaces in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify different query options by using the option parameter to retrieve different workspace-related information.</para>
+        /// <para>Use the Option parameter to specify different query options and retrieve different workspace-related information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15628,12 +15664,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in a specified region.</para>
+        /// <para>Retrieves the list of workspaces in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify different query options by using the option parameter to retrieve different workspace-related information.</para>
+        /// <para>Use the Option parameter to specify different query options and retrieve different workspace-related information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15727,12 +15763,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in a specified region.</para>
+        /// <para>Retrieves the list of workspaces in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify different query options by using the option parameter to retrieve different workspace-related information.</para>
+        /// <para>Use the Option parameter to specify different query options and retrieve different workspace-related information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15751,12 +15787,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in a specified region.</para>
+        /// <para>Retrieves the list of workspaces in a region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify different query options by using the option parameter to retrieve different workspace-related information.</para>
+        /// <para>Use the Option parameter to specify different query options and retrieve different workspace-related information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18278,6 +18314,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified dataset version.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDatasetVersionRequest
         /// </param>
@@ -18343,6 +18384,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDatasetVersionRequest
@@ -18410,6 +18456,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified dataset version.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDatasetVersionRequest
         /// </param>
@@ -18428,6 +18479,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified dataset version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDatasetVersionRequest

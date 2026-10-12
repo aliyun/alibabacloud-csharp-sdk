@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The image ID. If this parameter is not specified, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</para>
+        /// <para>The image ID. If you do not specify this parameter, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-k83*****cv</para>
@@ -132,7 +132,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The image source ID. When the image source type is Build, the source ID corresponds to the image build ID.</para>
+        /// <para>The image source ID. If the image source type is Build, the source ID corresponds to the image build ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>build-****ks92</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -144,11 +147,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>Import: import.</description></item>
         /// <item><description>Build: generate.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Build</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// <para>The user ID (UID) of the image creator.</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

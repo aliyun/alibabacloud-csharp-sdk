@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListMembersRequest : TeaModel {
         /// <summary>
-        /// <para>Username. Fuzzy match is supported.</para>
+        /// <para>The member name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MemberName { get; set; }
 
         /// <summary>
-        /// <para>Page number. Pages start at 1. Default value: 1.</para>
+        /// <para>The page number of the workspace list. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page. Default value: 20.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,22 +40,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Roles used to filter members. Separate multiple roles with commas (,). Valid values:</para>
+        /// <para>Filters members by role. Separate multiple roles with commas (,).
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PAI.AlgoDeveloper: Algorithm developer</para>
-        /// </description></item>
-        /// <item><description><para>PAI.AlgoOperator: Algorithm O\&amp;M engineer</para>
-        /// </description></item>
-        /// <item><description><para>PAI.LabelManager: Annotation administrator</para>
-        /// </description></item>
-        /// <item><description><para>PAI.MaxComputeDeveloper: MaxCompute developer</para>
-        /// </description></item>
-        /// <item><description><para>PAI.WorkspaceAdmin: Workspace administrator</para>
-        /// </description></item>
-        /// <item><description><para>PAI.WorkspaceGuest: Guest</para>
-        /// </description></item>
-        /// <item><description><para>PAI.WorkspaceOwner: Workspace owner</para>
-        /// </description></item>
+        /// <item><description>PAI.AlgoDeveloper: Algorithm developer.</description></item>
+        /// <item><description>PAI.AlgoOperator: Algorithm O&amp;M.</description></item>
+        /// <item><description>PAI.LabelManager: Labeling administrator.</description></item>
+        /// <item><description>PAI.MaxComputeDeveloper: MaxCompute developer.</description></item>
+        /// <item><description>PAI.WorkspaceAdmin: Administrator.</description></item>
+        /// <item><description>PAI.WorkspaceGuest: Guest.</description></item>
+        /// <item><description>PAI.WorkspaceOwner: Owner.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,6 +60,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Roles { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2788******129</para>
         /// </summary>

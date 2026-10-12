@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateProductOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically pay for all products listed in the Products parameter.</para>
+        /// <para>Specifies whether automatic payment is applied to all products specified in the Products parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enables automatic payment.</para>
-        /// </description></item>
-        /// <item><description><para>false: Disables automatic payment.</para>
-        /// </description></item>
+        /// <item><description>true: automatic payment</description></item>
+        /// <item><description>false: no automatic payment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,19 +24,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The list of products to purchase.</para>
+        /// <para>The list of products to purchase, separated by commas.</para>
         /// </summary>
         [NameInMap("Products")]
         [Validation(Required=false)]
         public List<CreateProductOrdersRequestProducts> Products { get; set; }
         public class CreateProductOrdersRequestProducts : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal.</para>
+            /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Enables auto-renewal.</para>
-            /// </description></item>
-            /// <item><description><para>false: Disables auto-renewal.</para>
-            /// </description></item>
+            /// <item><description>true: Auto-renewal is enabled.</description></item>
+            /// <item><description>false: Auto-renewal is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration. This parameter is used with PricingCycle. Currently, only a value of 1 is supported.</para>
+            /// <para>The purchase duration. This parameter is used together with PricingCycle. Currently, only 1 is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,31 +65,28 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The list of instance properties.</para>
+            /// <para>The list of instance property information.</para>
             /// <list type="bullet">
-            /// <item><description><para>DataWorks_share:
+            /// <item><description>DataWorks_share:
             /// [ {
             /// &quot;Code&quot;: &quot;region&quot;,
             /// &quot;Value&quot;: &quot;cn-shanghai&quot;
             /// }
-            /// ]</para>
-            /// </description></item>
-            /// <item><description><para>OSS_share:
+            /// ]</description></item>
+            /// <item><description>OSS_share:
             /// [ {
             /// &quot;Code&quot;: &quot;commodity_type&quot;,
             /// &quot;Value&quot;: &quot;oss&quot;,
-            /// &quot;Name&quot;: &quot;Object Storage Service&quot;
+            /// &quot;Name&quot;: &quot;Object Storage Service (OSS)&quot;
             /// },
             /// {
             /// &quot;Code&quot;: &quot;ord_time&quot;,
             /// &quot;Value&quot;: &quot;1:Hour&quot;,
-            /// &quot;Name&quot;: &quot;1 Hour&quot;
+            /// &quot;Name&quot;: &quot;1 hour&quot;
             /// }
-            /// ]</para>
-            /// </description></item>
-            /// <item><description><para>PAI_share: None</para>
-            /// </description></item>
-            /// <item><description><para>MaxCompute_share for accounts in mainland China:
+            /// ]</description></item>
+            /// <item><description>PAI_share: None</description></item>
+            /// <item><description>MaxCompute_share for the Chinese site:
             /// [
             /// {
             /// &quot;Code&quot;: &quot;region&quot;,
@@ -107,9 +100,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// &quot;Code&quot;: &quot;ord_time&quot;,
             /// &quot;Value&quot;: &quot;1:Hour&quot;
             /// }
-            /// ]</para>
-            /// </description></item>
-            /// <item><description><para>MaxCompute_share for accounts outside mainland China:
+            /// ]</description></item>
+            /// <item><description>MaxCompute_share for the international site:
             /// [
             /// {
             /// &quot;Code&quot;: &quot;region&quot;,
@@ -119,8 +111,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// &quot;Code&quot;: &quot;ord_time&quot;,
             /// &quot;Value&quot;: &quot;1:Hour&quot;
             /// }
-            /// ]</para>
-            /// </description></item>
+            /// ]</description></item>
             /// </list>
             /// </summary>
             [NameInMap("InstanceProperties")]
@@ -141,7 +132,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 /// <para>The name of the instance property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Object Storage Service</para>
+                /// <para>Object Storage Service (OSS)</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -170,12 +161,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle. The following values are supported:</para>
+            /// <para>The pricing unit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Month: Monthly billing. Only DataWorks_share supports this value.</para>
-            /// </description></item>
-            /// <item><description><para>Hour: Hourly billing. Only OSS_share and MaxCompute_share support this value.</para>
-            /// </description></item>
+            /// <item><description>Month: Monthly pricing. Only DataWorks_share supports this value.</description></item>
+            /// <item><description>Hour: Hourly pricing. Only OSS_share and MaxCompute_share support this value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,16 +175,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string PricingCycle { get; set; }
 
             /// <summary>
-            /// <para>The product code. The following codes are supported:</para>
+            /// <para>The product code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DataWorks_share: The pay-as-you-go DataWorks product.</para>
-            /// </description></item>
-            /// <item><description><para>MaxCompute_share: The pay-as-you-go MaxCompute product.</para>
-            /// </description></item>
-            /// <item><description><para>PAI_share: The pay-as-you-go PAI product.</para>
-            /// </description></item>
-            /// <item><description><para>OSS_share: The pay-as-you-go OSS product.</para>
-            /// </description></item>
+            /// <item><description>DataWorks_share: Pay-as-you-go DataWorks.</description></item>
+            /// <item><description>MaxCompute_share: Pay-as-you-go MaxCompute.</description></item>
+            /// <item><description>PAI_share: Pay-as-you-go PAI.</description></item>
+            /// <item><description>OSS_share: Pay-as-you-go OSS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the image. This parameter is valid only for custom images.</para>
+        /// <para>The visibility of the image. Currently only takes effect for custom images.</para>
         /// <list type="bullet">
-        /// <item><description><para>PUBLIC: The image is public.</para>
-        /// </description></item>
-        /// <item><description><para>PRIVATE: The image is private.</para>
-        /// </description></item>
+        /// <item><description>PUBLIC: Public.</description></item>
+        /// <item><description>PRIVATE: Private.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,51 +23,39 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        /// <summary>
+        /// <para>The image URI.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com/pai-compression/nlp:gpu</para>
+        /// </summary>
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for labels. Separate multiple conditions with commas (,).
-        /// The format for a single filter condition is <c>Key=Value</c>.
-        /// The supported values for Key are:</para>
+        /// <para>The label filter conditions. Separate multiple conditions with commas (,).
+        /// The format of a single filter condition is <c>Key=Value</c>.
+        /// Valid values of Key:</para>
         /// <list type="bullet">
-        /// <item><description><para>system.chipType</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.cudaVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.fromImageId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.fromInstanceId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.id</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.os</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.osVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.resourceType</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.rootImageId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.stage</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.tag</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.type</para>
-        /// </description></item>
-        /// <item><description><para>system.framework</para>
-        /// </description></item>
-        /// <item><description><para>system.origin</para>
-        /// </description></item>
-        /// <item><description><para>system.pythonVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.source</para>
-        /// </description></item>
-        /// <item><description><para>system.supported.dlc</para>
-        /// </description></item>
-        /// <item><description><para>system.supported.dsw</para>
-        /// </description></item>
+        /// <item><description>system.chipType</description></item>
+        /// <item><description>system.dsw.cudaVersion</description></item>
+        /// <item><description>system.dsw.fromImageId</description></item>
+        /// <item><description>system.dsw.fromInstanceId</description></item>
+        /// <item><description>system.dsw.id</description></item>
+        /// <item><description>system.dsw.os</description></item>
+        /// <item><description>system.dsw.osVersion</description></item>
+        /// <item><description>system.dsw.resourceType</description></item>
+        /// <item><description>system.dsw.rootImageId</description></item>
+        /// <item><description>system.dsw.stage</description></item>
+        /// <item><description>system.dsw.tag</description></item>
+        /// <item><description>system.dsw.type</description></item>
+        /// <item><description>system.framework</description></item>
+        /// <item><description>system.origin</description></item>
+        /// <item><description>system.pythonVersion</description></item>
+        /// <item><description>system.source</description></item>
+        /// <item><description>system.supported.dlc</description></item>
+        /// <item><description>system.supported.dsw</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +66,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. Fuzzy search is supported.</para>
+        /// <para>The image name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorflow_2.9</para>
@@ -90,6 +76,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The options. Currently supports ExactMatchName for exact match search on Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ExactMatchName</para>
         /// </summary>
@@ -98,12 +86,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the results of a paged query. This parameter is used with SortBy. The default value is ASC.</para>
+        /// <para>The sort order for the specified sort field in a paged query. Used together with SortBy. Default value: ASC.</para>
         /// <list type="bullet">
-        /// <item><description><para>ASC: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC: descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: Ascending order.</description></item>
+        /// <item><description>DESC: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +100,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the image list. The value starts from 1. The default value is 1.</para>
+        /// <para>The page number of the image list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -124,7 +110,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. The default value is 20.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -134,7 +120,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy search by image name and description.</para>
+        /// <para>Fuzzy searches by image name and description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -144,7 +130,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is used for sorting.</para>
+        /// <para>The sort field for a paged query. Currently, the GmtCreateTime field is used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -156,10 +142,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Includes non-essential information.</para>
-        /// </description></item>
-        /// <item><description><para>false: Does not include non-essential information.</para>
-        /// </description></item>
+        /// <item><description>true: Includes non-essential information.</description></item>
+        /// <item><description>false: Does not include non-essential information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,7 +154,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20******55</para>

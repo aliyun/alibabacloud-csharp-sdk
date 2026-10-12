@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource types and quantity limits that a user can activate within a workspace. This list is returned when Option is set to GetResourceLimits.
-        /// Currently supported resource types include:</para>
+        /// <para>The types and quantity limits of resources that a user can activate within a workspace. This list is returned when Option is set to GetResourceLimits. Currently supported resource types:</para>
         /// <list type="bullet">
         /// <item><description>MaxCompute_share: MaxCompute pay-as-you-go.</description></item>
         /// <item><description>MaxCompute_isolate: MaxCompute subscription.</description></item>
@@ -88,21 +87,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the workspace.</para>
+            /// <para>The workspace display name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>workspace-example</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The list of environments contained in the workspace.</para>
+            /// <para>The list of environments included in the workspace.</para>
             /// </summary>
             [NameInMap("EnvTypes")]
             [Validation(Required=false)]
             public List<string> EnvTypes { get; set; }
 
             /// <summary>
-            /// <para>The extended information. Currently includes TenantId, which indicates the tenant ID.</para>
+            /// <para>The extended information. Currently includes TenantId, which represents the tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;TenantId&quot;: &quot;4286******98&quot;}</para>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public Dictionary<string, object> ExtraInfos { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</para>
+            /// <para>The time when the workspace was created. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the workspace was last modified. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the workspace is the default workspace.</para>
+            /// <para>Indicates whether this is the default workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

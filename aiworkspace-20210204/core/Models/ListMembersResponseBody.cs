@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of workspace members.</para>
+        /// <para>The list of members.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<ListMembersResponseBodyMembers> Members { get; set; }
         public class ListMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>Account name of the member.</para>
+            /// <para>The account name of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testAccount</para>
@@ -27,14 +27,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>Account type. Valid values:</para>
+            /// <para>The account type of the member. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: Alibaba Cloud account</para>
-            /// </description></item>
-            /// <item><description><para>5: RAM user</para>
-            /// </description></item>
-            /// <item><description><para>6: RAM role</para>
-            /// </description></item>
+            /// <item><description>1: Alibaba Cloud account.</description></item>
+            /// <item><description>5: RAM user.</description></item>
+            /// <item><description>6: RAM role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>Display name of the member.</para>
+            /// <para>The display name of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myDisplayName</para>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Time when the member was added, in UTC. Format: ISO 8601.</para>
+            /// <para>The creation time in UTC. The time follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>Member ID.</para>
+            /// <para>The member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14588*****51688039</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>Username of the member.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user1</para>
@@ -85,14 +82,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string MemberName { get; set; }
 
             /// <summary>
-            /// <para>Roles assigned to the member.</para>
+            /// <para>The list of roles.</para>
             /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<string> Roles { get; set; }
 
             /// <summary>
-            /// <para>Alibaba Cloud account ID of the member.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>215139******88039</para>
@@ -114,7 +111,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of members that match the filter criteria.</para>
+        /// <para>The total number of members that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

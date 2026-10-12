@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// <para>The list of IDs of the successfully purchased products.</para>
+        /// </summary>
         [NameInMap("ProductIds")]
         [Validation(Required=false)]
         public List<string> ProductIds { get; set; }

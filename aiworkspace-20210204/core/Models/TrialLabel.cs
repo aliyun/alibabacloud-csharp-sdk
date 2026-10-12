@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class TrialLabel : TeaModel {
         /// <summary>
-        /// <para>The time the label was created, in UTC and following the ISO 8601 standard.</para>
+        /// <para>Create time</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time the label was last modified, in UTC and following the ISO 8601 standard.</para>
+        /// <para>Modified time</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The key of the label.</para>
+        /// <para>Key of Trial Label</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -40,14 +40,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated trial.</para>
+        /// <para>Trial ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trl-v0fw9a0sd8f9af</para>
         /// </summary>
         [NameInMap("TrialId")]
         [Validation(Required=false)]
         public string TrialId { get; set; }
 
         /// <summary>
-        /// <para>The value of the label.</para>
+        /// <para>Value of Trial Label</para>
         /// 
         /// <b>Example:</b>
         /// <para>value</para>

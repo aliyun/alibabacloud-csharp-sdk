@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RoleName { get; set; }
 
         /// <summary>
-        /// <para>The role type. Valid values: custom (custom role). Only custom roles are supported. This is the default value.</para>
+        /// <para>The role type. Valid values: custom: custom role. Only custom roles are supported. This is the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -157,6 +157,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string RoleType { get; set; }
 
+        /// <summary>
+        /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21513926******88039</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

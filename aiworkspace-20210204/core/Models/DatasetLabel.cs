@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetLabel : TeaModel {
         /// <summary>
-        /// <para>The label key, which must be 1 to 128 characters long.</para>
+        /// <para>The key of the dataset label.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>env</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The label value, which can be 0 to 128 characters long.</para>
+        /// <para>The value of the dataset label.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

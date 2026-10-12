@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetImageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes labels.
-        /// Valid values:</para>
+        /// <para>Specifies whether to display optional information. Optional information currently includes Labels.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default): Does not display non-essential information.</para>
-        /// </description></item>
-        /// <item><description><para>true: Displays non-essential information.</para>
-        /// </description></item>
+        /// <item><description>false (default): Optional information is not displayed.</description></item>
+        /// <item><description>true: Optional information is displayed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

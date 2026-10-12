@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data volume.</para>
+        /// <para>The data count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The data source type.</para>
+        /// <para>The data source type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NAS: File Storage NAS.</description></item>
+        /// <item><description>CPFS: Cloud Parallel File Storage.</description></item>
+        /// <item><description>OSS: Object Storage Service (OSS).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The primary resource ID.</para>
+        /// <para>The primary ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-dkdbnnap0g7b6su4yg</para>
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-13T10:22:05.694Z</para>
@@ -81,7 +86,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The last modification time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-13T10:22:05.694Z</para>
@@ -95,9 +100,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <details>
         /// <summary>OSS</summary>
         /// {
-        /// "region": "${region}",//The region ID.
-        /// "bucket": "${bucket}",//The bucket name.
-        /// "path": "${path}" //The file path.
+        /// "region": "${region}",// The region ID
+        /// "bucket": "${bucket}",// The bucket name
+        /// "path": "${path}" // The file path
         /// }
         /// </details>
         /// 
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// 
         /// 
         /// <details>
-        /// <summary>Intelligent computing CPFS</summary>
+        /// <summary>AI CPFS</summary>
         /// Block content
         /// </details>
         /// 
@@ -131,17 +136,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>The resource labels.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The permission when the dataset is mounted. Valid values:</para>
+        /// <para>The permissions when the dataset is mounted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RO: read-only mount</description></item>
-        /// <item><description>RW: read and write mount</description></item>
+        /// <item><description>RO: Read-only mount.</description></item>
+        /// <item><description>RW: Read/write mount.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,7 +157,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MountAccess { get; set; }
 
         /// <summary>
-        /// <para>The extension field.</para>
+        /// <para>The extended fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -164,7 +169,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The property of the dataset.</para>
+        /// <para>The property of the dataset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DIRECTORY: Directory.</description></item>
+        /// <item><description>FILE: File.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -185,7 +194,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The dataset source ID.</para>
+        /// <para>The source ID of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rbvg5wzljzjhc9ks92</para>
@@ -195,7 +204,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The data source type.</para>
+        /// <para>The source type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ENHANCE: Data augmentation.</description></item>
+        /// <item><description>ADDVERSION: Added version.</description></item>
+        /// <item><description>CLEANING: Data cleaning.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -215,6 +229,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Uri { get; set; }
 
+        /// <summary>
+        /// <para>The list of user metric collection endpoints.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Port&quot;:0,&quot;Path&quot;:&quot;&quot;}]</para>
+        /// </summary>
         [NameInMap("UserMetricsEndpoints")]
         [Validation(Required=false)]
         public List<UserMetricsEndpoint> UserMetricsEndpoints { get; set; }

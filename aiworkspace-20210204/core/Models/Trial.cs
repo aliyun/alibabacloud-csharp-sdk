@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>ExperimentId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exp-1zpfthdx******</para>
         /// </summary>
         [NameInMap("ExperimentId")]
         [Validation(Required=false)]
@@ -74,6 +77,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>TrialId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trl-v0fw9a0sd8f9af</para>
         /// </summary>
         [NameInMap("TrialId")]
         [Validation(Required=false)]

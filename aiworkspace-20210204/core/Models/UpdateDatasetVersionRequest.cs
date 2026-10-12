@@ -50,7 +50,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The extended field in JsonString format. When DLC uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</para>
+        /// <para>The extended field in JsonString format.
+        /// When Deep Learning Containers (DLC) uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -61,6 +62,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Options { get; set; }
 
+        /// <summary>
+        /// <para>The list of user metric collection endpoints.</para>
+        /// </summary>
         [NameInMap("UserMetricsEndpoints")]
         [Validation(Required=false)]
         public List<UserMetricsEndpoint> UserMetricsEndpoints { get; set; }

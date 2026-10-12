@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetMemberResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The account type of the member. Valid values: 1: primary account. 5: sub-account. 6: role account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The time when the member was created. The time is in Coordinated Universal Time (UTC) and the format is ISO 8601.</para>
+        /// <para>The creation time in UTC, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>

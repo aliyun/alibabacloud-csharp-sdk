@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of return fields for workspace details. This parameter limits the workspace properties returned in the result.
-        /// Separate multiple properties with commas (,). Currently, only Id is supported, which indicates the workspace ID.</para>
+        /// <para>The list of fields to return in the workspace details. Use this parameter to limit the workspace properties included in the response. Separate multiple properties with commas (,). Currently, only Id (workspace ID) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Fields { get; set; }
 
         /// <summary>
-        /// <para>The comma-separated list of modules. Default value: PAI.</para>
+        /// <para>The comma-separated module list. Default value: PAI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PAI</para>
@@ -31,10 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModuleList { get; set; }
 
         /// <summary>
-        /// <para>The query option. Valid values:</para>
+        /// <para>The query options. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GetWorkspaces (default): retrieves the workspace list. The Workspaces parameter is returned.</description></item>
-        /// <item><description>GetResourceLimits: retrieves resource limits. The ResourceLimits parameter is returned.</description></item>
+        /// <item><description>GetWorkspaces (default): retrieves the workspace list and returns Workspaces.</description></item>
+        /// <item><description>GetResourceLimits: retrieves resource limits and returns ResourceLimits.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
-        /// <para>The sorting order for the specified sorting field during paging. Valid values:</para>
+        /// <para>The sort order applied to the specified sort field in a paged query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ASC (default): ascending order.</description></item>
         /// <item><description>DESC: descending order.</description></item>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 20.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For information about how to view the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. For information about how to view the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwp7rky****</para>
@@ -89,7 +88,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The sorting field for paging. Default value: GmtCreateTime. Valid values:</para>
+        /// <para>The sort field for a paged query. Default value: GmtCreateTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>GmtCreateTime (default): sorts by creation time.</description></item>
         /// <item><description>GmtModifiedTime: sorts by modification time.</description></item>
@@ -105,12 +104,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The workspace status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED: Normal.</description></item>
-        /// <item><description>INITIALIZING: Being initialized.</description></item>
-        /// <item><description>FAILURE: Failed.</description></item>
-        /// <item><description>DISABLED: Manually disabled.</description></item>
-        /// <item><description>FROZEN: Frozen due to overdue payment.</description></item>
-        /// <item><description>UPDATING: Being updated.</description></item>
+        /// <item><description>ENABLED: normal.</description></item>
+        /// <item><description>INITIALIZING: initializing.</description></item>
+        /// <item><description>FAILURE: failed.</description></item>
+        /// <item><description>DISABLED: manually disabled.</description></item>
+        /// <item><description>FROZEN: frozen due to overdue payment.</description></item>
+        /// <item><description>UPDATING: updating.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,10 +130,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display detailed workspace information. Valid values:</para>
+        /// <para>Specifies whether to display workspace details. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not display detailed information.</description></item>
-        /// <item><description>true: displays detailed information.</description></item>
+        /// <item><description>false (default): does not display details.</description></item>
+        /// <item><description>true: displays details.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

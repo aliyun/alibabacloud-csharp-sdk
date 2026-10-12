@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The end time for the file update time query range. The value is a UTC timestamp in ISO 8601 format.</para>
+        /// <para>The start time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string EndFileUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The end time for the tag last update time query range. The value is a UTC timestamp in ISO 8601 format.</para>
+        /// <para>The end time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sorting order for the specified sort field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</para>
+        /// <para>The sorting order for the specified sorting field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ASC: ascending order.</description></item>
         /// <item><description>DESC: descending order.</description></item>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The number of entries per page. If MaxResults is also specified, MaxResults takes precedence.</para>
         /// <remarks>
-        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to perform paging operations.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to perform paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,15 +103,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</para>
+        /// <para>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</para>
         /// </summary>
         [NameInMap("QueryContentTypeIncludeAny")]
         [Validation(Required=false)]
         public List<string> QueryContentTypeIncludeAny { get; set; }
 
         /// <summary>
-        /// <para>The query statement (DSL) is a domain-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence (HAS/NOT HAS), tokenized matching (:), and exact match (=), suitable for advanced retrieve scenarios.
-        /// Generally used for complex advanced conditional retrieve operations.
+        /// <para>The query statement (DSL) is a realm-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence checks (HAS/NOT HAS), token match (:), and exact match (=), which are suitable for advanced retrieve scenarios.
+        /// This parameter is typically used for complex advanced retrieve conditional statements.
         /// <notice>To avoid conflicts, after setting this query statement, do not use it together with other query parameters.</notice></para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string QueryFileName { get; set; }
 
         /// <summary>
-        /// <para>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</para>
+        /// <para>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</para>
         /// </summary>
         [NameInMap("QueryFileTypeIncludeAny")]
         [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The image information for image-to-image search.</para>
         /// <list type="bullet">
-        /// <item><description>Supports a public network access OSS URL in the format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<remarks>
+        /// <item><description>An OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<remarks>
         /// <para>This parameter takes effect only when QueryType is set to VECTOR or MIX.</para>
         /// </remarks>
         /// </description></item>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string QueryImage { get; set; }
 
         /// <summary>
-        /// <para>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If empty, this condition is not applied.</para>
+        /// <para>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If this parameter is empty, this condition is not applied.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when QueryType is set to TAG or MIX.</para>
         /// </remarks>
@@ -175,9 +175,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> QueryTagsExclude { get; set; }
 
         /// <summary>
-        /// <para>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If empty, this condition is not applied. Array values are separated by commas.</para>
+        /// <para>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, QueryText is added to this condition.</para>
+        /// <para>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, the value of QueryText is added to this condition.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("QueryTagsIncludeAll")]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> QueryTagsIncludeAll { get; set; }
 
         /// <summary>
-        /// <para>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</para>
+        /// <para>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when QueryType is set to TAG or MIX.</para>
         /// </remarks>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <list type="bullet">
         /// <item><description>MIX: hybrid retrieve (default).</description></item>
         /// <item><description>TAG: label-only retrieve.</description></item>
-        /// <item><description>VECTOR: vector retrieve only.</description></item>
+        /// <item><description>VECTOR: AISearch-only retrieve.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The video file information for video-based search.</para>
         /// <list type="bullet">
-        /// <item><description>Supports a public network access OSS URL in the format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<remarks>
+        /// <item><description>A video OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<remarks>
         /// <para>This parameter takes effect only when QueryType is set to VECTOR or MIX.</para>
         /// </remarks>
         /// </description></item>
@@ -249,10 +249,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public float? ScoreThreshold { get; set; }
 
         /// <summary>
-        /// <para>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Valid values:</para>
+        /// <para>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Other valid values:</para>
         /// <list type="bullet">
         /// <item><description>FileCreateTime: sorting by file creation time.</description></item>
-        /// <item><description>FileUpdateTime: sorting by file last modification time.</description></item>
+        /// <item><description>FileUpdateTime: sorting by file last modified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start time for the file update time query range. The value is a UTC timestamp in ISO 8601 format.</para>
+        /// <para>The end time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string StartFileUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for the tag last update time query range. The value is a UTC timestamp in ISO 8601 format.</para>
+        /// <para>The start time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -305,9 +305,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>Proportional scaling: p_{percentage}, where percentage specifies the desired scaling ratio. Valid values: [1, 100]. Example: p_50 uses 50% of the original file size as the thumbnail.</description></item>
         /// <item><description>Fixed width with adaptive height: w_{width}, where width specifies the desired image width. Valid values: [1, 16384]. Example: w_200 fixes the image width to 200 pixels and adaptively scales the height.</description></item>
         /// <item><description>Fixed height with adaptive width: h_{height}, where height specifies the desired image height. Valid values: [1, 16384]. Example: h_100 fixes the image height to 100 pixels and adaptively scales the width.</description></item>
-        /// <item><description>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384].</description></item>
-        /// <item><description>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both width and height to 100 pixels with center cropping.</description></item>
-        /// <item><description>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both width and height to 100 pixels.</description></item>
+        /// <item><description>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If this parameter is not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example:</description></item>
+        /// <item><description>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both the width and height to 100 pixels with center cropping.</description></item>
+        /// <item><description>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both the width and height to 100 pixels.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? TopK { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID of the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CodeSourceItem : TeaModel {
         /// <summary>
-        /// <para>The visibility of the code source configuration.</para>
+        /// <para>The visibility of the code configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The clone mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Create a new subdirectory.</description></item>
+        /// <item><description>0: Create a subdirectory.</description></item>
         /// <item><description>1: Tile to the current directory.</description></item>
         /// </list>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeCommit { get; set; }
 
         /// <summary>
-        /// <para>The code repository URL.</para>
+        /// <para>The address of the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</para>
@@ -64,14 +64,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepo { get; set; }
 
         /// <summary>
-        /// <para>The token used as the access code for the code repository.</para>
+        /// <para>The token used to access code in the repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
         /// </summary>
         [NameInMap("CodeRepoAccessToken")]
         [Validation(Required=false)]
         public string CodeRepoAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The username used as the access code for the code repository.</para>
+        /// <para>The username used to access code in the repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepoUserName { get; set; }
 
         /// <summary>
-        /// <para>The code source configuration ID.</para>
+        /// <para>The code configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-202**********</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the code source configuration.</para>
+        /// <para>The name of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCodeSourceName1</para>
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MountPath { get; set; }
 
         /// <summary>
-        /// <para>The creator ID.</para>
+        /// <para>The ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1157290171663117</para>

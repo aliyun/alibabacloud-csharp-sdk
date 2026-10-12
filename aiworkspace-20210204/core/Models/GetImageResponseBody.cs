@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PUBLIC: All members in the current workspace can perform operations on the image.</para>
-        /// </description></item>
-        /// <item><description><para>PRIVATE: Only the creator can perform operations on the image.</para>
-        /// </description></item>
+        /// <item><description>PUBLIC: All members of the current workspace can access the image.</description></item>
+        /// <item><description>PRIVATE: Only the creator can access the image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The description of the image.</para>
+        /// <para>The image description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NLP model compression training image</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the image was created. The time is in UTC and the format is ISO 8601.</para>
+        /// <para>The creation time of the image in UTC, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the image was last modified. The time is in UTC and the format is ISO 8601.</para>
+        /// <para>The modification time of the image in UTC, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image, including the version number.</para>
+        /// <para>The image address, including the version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.******ession/nlp:gpu</para>
@@ -66,8 +64,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageUri { get; set; }
 
         /// <summary>
-        /// <para>A list of image labels. This is an array. Each item in the array contains a Key and a Value field.
-        /// Official images have the following label: the key is system.official and the value is true.</para>
+        /// <para>The list of image labels. This is an array in which each element contains the Key and Value fields.
+        /// Official images have the following label: Key is system.official and Value is true.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp-compression</para>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The size of the image in bytes.</para>
+        /// <para>The image size, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -136,14 +134,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image source.</para>
+        /// <para>The image source ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>build-****ks92</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the image source.</para>
+        /// <para>The image source type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Build</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

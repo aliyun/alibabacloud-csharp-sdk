@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>Key of the label</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>is_evaluation</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>ID of the Run that owns this label</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>run-1qJhzJ2YXgX****</para>
         /// </summary>
         [NameInMap("RunId")]
         [Validation(Required=false)]
@@ -41,6 +47,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>Value of the label</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
