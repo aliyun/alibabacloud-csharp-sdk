@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel NetworkPackageOrderModel { get; set; }
         public class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel : TeaModel {
             /// <summary>
-            /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+            /// <para>The ID of the Internet Shared Bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbwp-uf63gsv8j0ir53*****</para>

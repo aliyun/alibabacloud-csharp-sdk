@@ -10,16 +10,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMetricLastRequest : TeaModel {
         /// <summary>
-        /// <para>For instance-level monitoring, specify a list of Cloud Phone instance IDs.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>For matrix-level monitoring, specify a list of matrix IDs.</para>
+        /// <para>The list of cloud phone instance IDs for instance-level monitoring.
+        /// &lt;props=&quot;china&quot;&gt;The list of matrix IDs for matrix-level monitoring.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The end time for the query.</para>
+        /// <para>The end time for querying the monitoring metric. The time format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-31 11:00:00</para>
@@ -36,8 +35,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The number of monitoring data records to return on each page for a paged query.</para>
-        /// <para>The default value is 1000. This means that 1000 monitoring data records are returned per page.</para>
+        /// <para>The page size of the returned monitoring data, used for paged query.</para>
+        /// <para>Default value: 1000, indicating 1,000 monitoring data entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> MetricNames { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the current read position. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that marks the position from which to start reading. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The statistic period for monitoring data.</para>
+        /// <para>The statistical period for the monitoring data.</para>
         /// <para>Valid values: 60, 900, and 3600.</para>
         /// <para>Unit: seconds.</para>
         /// 
@@ -77,7 +76,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The start time for the query.</para>
+        /// <para>The start time for querying the monitoring metric. The time format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-31 10:00:00</para>

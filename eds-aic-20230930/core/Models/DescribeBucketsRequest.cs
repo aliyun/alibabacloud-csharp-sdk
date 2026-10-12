@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeBucketsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the OSS file.</para>
+        /// <para>The OSS file type.</para>
         /// <remarks>
         /// <para>This parameter is not yet available.</para>
         /// </remarks>

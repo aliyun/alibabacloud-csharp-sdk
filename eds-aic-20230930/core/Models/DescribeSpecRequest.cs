@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The billing method. A value of PrePaid indicates subscription. A value of PostPaid indicates pay-as-you-go.</para>
+        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MatrixSpec { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which to start the query. Leave this parameter empty to query from the beginning.</para>
+        /// <para>The token that specifies the position from which the query starts. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The purchase mode of the cloud phone.</para>
+        /// <para>The purchase mode for cloud phones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>A list of specification IDs.</para>
+        /// <para>The list of specification IDs.</para>
         /// </summary>
         [NameInMap("SpecIds")]
         [Validation(Required=false)]

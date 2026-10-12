@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token to use for the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token that indicates the position up to which the data is retrieved. An empty value indicates that all data has been retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string MaxPhoneCount { get; set; }
 
             /// <summary>
-            /// <para>The memory size in GB.</para>
+            /// <para>The memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string MinPhoneCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances.</para>
+            /// <para>The number of cloud phone instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk, in GB.</para>
+            /// <para>The system cloud disk size. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>

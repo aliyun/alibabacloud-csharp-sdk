@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<DescribeCreditDetailResponseBodyDataDetails> Details { get; set; }
             public class DescribeCreditDetailResponseBodyDataDetails : TeaModel {
                 /// <summary>
-                /// <para>The agent type. This field is populated only when querying by a single agent type.</para>
+                /// <para>The agent type. This field is populated only when you query by a single agent type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloudphone_enterprise</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? CachedTokens { get; set; }
 
                 /// <summary>
-                /// <para>The time when the change occurred.</para>
+                /// <para>The time when the change occurred. The time is in UTC and follows the ISO 8601 standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-30T08:14:02Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The model inference duration, in milliseconds.</para>
+                /// <para>The model inference duration in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? TotalTokens { get; set; }
 
                 /// <summary>
-                /// <para>The response time of the first token, in milliseconds.</para>
+                /// <para>The first token response time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The page number for pagination. Default value: 1.</para>
+            /// <para>The page number. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of detail records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

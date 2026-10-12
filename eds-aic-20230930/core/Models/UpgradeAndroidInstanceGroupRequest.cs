@@ -39,12 +39,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The redirect URL for the payment success page.</para>
+        /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]

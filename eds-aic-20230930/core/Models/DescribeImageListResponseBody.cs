@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeImageListResponseBodyData> Data { get; set; }
         public class DescribeImageListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>117819727354****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-01 10:56:36</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was last modified.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-01 10:56:36</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>An array of tag objects.</para>
+            /// <para>The array of tag objects.</para>
             /// </summary>
             [NameInMap("ImageBizTags")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The image distribution information by region. The key is the region and the value is the distribution information.</para>
+            /// <para>The image distribution region information. The key is the region and the value is the distribution information.</para>
             /// </summary>
             [NameInMap("ImageRegionDistributeMap")]
             [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was published.</para>
+            /// <para>The release time. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25 10:06:45</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. An empty value indicates that all data has been returned.</para>
+        /// <para>The position from which the current call returns the read data. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>

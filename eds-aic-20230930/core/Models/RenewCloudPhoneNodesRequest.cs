@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RenewCloudPhoneNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. The default value is false.</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,23 +30,24 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud phone matrix IDs.</para>
+        /// <para>The list of cloud phone matrix IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
+        /// <summary>
+        /// <para>The redirect URL for the payment success page.</para>
+        /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The <c>PeriodUnit</c> parameter specifies the unit.</para>
+        /// <para>The subscription period. The unit is specified by PeriodUnit.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is <b>Year</b>, the value must be 1.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is <b>Month</b>, the valid values are 1, 2, 3, and 6.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to <b>year</b>, the only valid value is 1.</description></item>
+        /// <item><description>If PeriodUnit is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration.</para>
+        /// <para>The unit of the subscription period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]

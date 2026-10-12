@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMetricTopResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The instance monitoring data.</para>
+        /// <para>The list of instance monitoring results.</para>
         /// </summary>
         [NameInMap("MetricTotalModel")]
         [Validation(Required=false)]
         public List<DescribeMetricTopResponseBodyMetricTotalModel> MetricTotalModel { get; set; }
         public class DescribeMetricTopResponseBodyMetricTotalModel : TeaModel {
             /// <summary>
-            /// <para>For instance-level monitoring, this is the cloud phone instance ID.
-            /// &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, this is the matrix ID.</para>
+            /// <para>For instance-level monitoring, the cloud phone instance ID is returned. 
+            /// &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-fkuit0cmyru4p****</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The monitoring data of metrics.</para>
+            /// <para>The list of metric monitoring results.</para>
             /// </summary>
             [NameInMap("MetricModelList")]
             [Validation(Required=false)]
             public List<DescribeMetricTopResponseBodyMetricTotalModelMetricModelList> MetricModelList { get; set; }
             public class DescribeMetricTopResponseBodyMetricTotalModelMetricModelList : TeaModel {
                 /// <summary>
-                /// <para>The monitoring data points.</para>
+                /// <para>The monitoring statistical data points.</para>
                 /// </summary>
                 [NameInMap("DataPoints")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The average value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>instance_in_traffic\\</c> or \<c>instance_out_traffic\\</c>.</para>
+                    /// <para>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The maximum value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>instance_in_traffic\\</c> or \<c>instance_out_traffic\\</c>.</para>
+                    /// <para>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The minimum value.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>instance_in_traffic\\</c> or \<c>instance_out_traffic\\</c>.</para>
+                    /// <para>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The properties.</para>
+                    /// <para>The property information.</para>
                     /// <remarks>
-                    /// <para>A JSON string that contains the extension properties.</para>
+                    /// <para>The extended property information string in JSON format is returned.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public string Properties { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp of the data point. Unit: milliseconds.</para>
+                    /// <para>The statistical timestamp. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1548777660000</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the metric.</para>
+                /// <para>The name of the monitoring metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instance_in_traffic</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If the results are not fully returned in a single query, this parameter is not empty. You can use this token in a subsequent query to retrieve the next page of results.</para>
+        /// <para>The token for the next query. If a single query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in subsequent queries to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>

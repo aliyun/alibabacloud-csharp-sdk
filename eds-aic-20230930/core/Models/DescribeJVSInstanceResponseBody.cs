@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -41,22 +41,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The credit quota configuration. Subsequent quota configurations overwrite previous configurations.</para>
+            /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</para>
             /// </summary>
             [NameInMap("CreditConfig")]
             [Validation(Required=false)]
             public List<DescribeJVSInstanceResponseBodyDataCreditConfig> CreditConfig { get; set; }
             public class DescribeJVSInstanceResponseBodyDataCreditConfig : TeaModel {
                 /// <summary>
-                /// <para>The quota limit. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: not available for use.</description></item>
-                /// <item><description><remarks>
-                /// <para>0: the quota is configured based on the numeric value.</para>
-                /// </remarks>
-                /// </description></item>
-                /// <item><description>-1: unlimited.</description></item>
-                /// </list>
+                /// <para>The limit value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -66,12 +58,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? CreditLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota period. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>total: The total usage limit.</description></item>
-                /// <item><description>month: Monthly. The quota resets based on the resource activation time as one cycle.</description></item>
-                /// <item><description>day: Daily. The quota resets at 00:00.</description></item>
-                /// </list>
+                /// <para>The limit period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -83,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -143,7 +130,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string JvsPackageId { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -163,7 +150,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The used credits.</para>
+            /// <para>The used credit.</para>
             /// </summary>
             [NameInMap("UsedCredit")]
             [Validation(Required=false)]
@@ -194,7 +181,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of results returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -204,7 +191,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that indicates the current position from which to start reading. An empty value indicates reading from the beginning.</para>
+        /// <para>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud phone instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp-2zecay9ponatdc4m****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud phone instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>defaultInstanceName</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the command execution. You can set the value to the last returned request ID.</para>
+        /// <para>The command execution ID. You can enter the requestId returned by the previous operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The level of the task. A value of 1 specifies a batch task. A value of 2 specifies an instance-level task.</para>
+        /// <para>The task level. A value of 1 indicates a batch task. A value of 2 indicates an instance-level task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Level { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</para>
+        /// <para>The token that specifies the starting position for reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The extension field.</para>
+        /// <para>The extended field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>param</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent task.</para>
+        /// <para>The parent task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-iaej5dkbnmivx****</para>
@@ -90,21 +90,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ParentTaskId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources.</para>
+        /// <para>The list of resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the tasks.</para>
+        /// <para>The list of task IDs.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Processing</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The status of the tasks.</para>
+        /// <para>The list of task statuses.</para>
         /// </summary>
         [NameInMap("TaskStatuses")]
         [Validation(Required=false)]
         public List<string> TaskStatuses { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StartInstance</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The types of the tasks.</para>
+        /// <para>The list of task types.</para>
         /// </summary>
         [NameInMap("TaskTypes")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For example, &quot;200&quot; indicates success.</para>
+        /// <para>For example, &quot;200&quot; indicates success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
-                /// <para>The OSS pre-signed download URL.</para>
+                /// <para>The presigned OSS download URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</para>
@@ -145,17 +145,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The source of the digest. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PROMPT_AUTO: auto-generated.</description></item>
-            /// <item><description>RESULT_AUTO: result refinement.</description></item>
-            /// <item><description>USER: user-edited.</description></item>
+            /// <item><description>PROMPT_AUTO: Automatically generated.</description></item>
+            /// <item><description>RESULT_AUTO: Refined from the result.</description></item>
+            /// <item><description>USER: Edited by the user.</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PROMPT_AUTO</para>
             /// </summary>
             [NameInMap("DigestSource")]
             [Validation(Required=false)]
             public string DigestSource { get; set; }
 
             /// <summary>
-            /// <para>The Mobile node ID.</para>
+            /// <para>The ID of the mobile node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-anzzuho371azi44xr</para>
@@ -179,7 +182,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RunningAt { get; set; }
 
             /// <summary>
-            /// <para>The number of steps executed.</para>
+            /// <para>The number of executed steps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -189,14 +192,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Steps { get; set; }
 
             /// <summary>
-            /// <para>The task digest text, up to 25 characters.</para>
+            /// <para>The task digest text, with a maximum of 25 characters.</para>
             /// </summary>
             [NameInMap("TaskDigest")]
             [Validation(Required=false)]
             public string TaskDigest { get; set; }
 
             /// <summary>
-            /// <para>The task duration. This field is returned only when CurrentStatus is FAILED or COMPLETED.</para>
+            /// <para>The time consumed by the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -206,7 +209,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskDuration { get; set; }
 
             /// <summary>
-            /// <para>The task ID, which is globally unique.</para>
+            /// <para>The globally unique task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-imr0fufqd7cle****</para>
@@ -216,20 +219,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task result in the desired state. This field is returned only when CurrentStatus is COMPLETED or FAILED.</para>
+            /// <para>The node task result (desired state). This field is returned only when CurrentStatus is COMPLETED or FAILED.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Download DingTalk succeeded.</para>
+            /// <para>DingTalk downloaded successfully</para>
             /// </summary>
             [NameInMap("TaskResult")]
             [Validation(Required=false)]
             public string TaskResult { get; set; }
 
             /// <summary>
-            /// <para>The user instruction in natural language. The Agent performs operations based on this instruction.</para>
+            /// <para>The user instruction in natural language based on which the agent performs operations.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Download DingTalk from App Store</para>
+            /// <para>Download DingTalk from the app store</para>
             /// </summary>
             [NameInMap("UserPrompt")]
             [Validation(Required=false)]

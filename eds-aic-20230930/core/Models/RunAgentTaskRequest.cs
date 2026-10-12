@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunAgentTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the Mobile node.</para>
+        /// <para>The ID of the region where the Mobile node resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</para>
+        /// <para>The list of Mobile node IDs. A single request supports up to 100 nodes.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of execution steps for the task. This prevents infinite loops. Valid values: 30 to 1000. Default value: 1000.</para>
+        /// <para>The maximum number of execution steps for the task to prevent infinite loops. Valid values: 50 to 1000. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxSteps")]
         [Validation(Required=false)]
         public int? MaxSteps { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration that carries the runtime parameters (skills) for this task.</para>
+        /// <para>The runtime configuration that contains the runtime parameters such as skills for the current task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Skills&quot;:[&quot;sk-abc&quot;,&quot;sk-def&quot;]}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public RunAgentTaskRequestRunConfig RunConfig { get; set; }
         public class RunAgentTaskRequestRunConfig : TeaModel {
             /// <summary>
-            /// <para>The list of skill IDs. A maximum of 10 skill IDs are supported. Only the first skill is passed through during command delivery. All skills are stored in task_skill_relation for reverse lookup.</para>
+            /// <para>The list of skill IDs. You can specify up to 10 skill IDs. Only the first skill ID is passed through when the command is delivered. All skill IDs are stored in the task_skill_relation table for reverse lookup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;sk-abc&quot;,&quot;sk-def&quot;]</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to write the task artifacts to the user\&quot;s OSS bucket.</para>
+        /// <para>Specifies whether to save the task artifacts to your OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? SaveArtifacts { get; set; }
 
         /// <summary>
-        /// <para>The scheduling plan ID. When specified, the execution record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling dimension through aggregation.</para>
+        /// <para>The ID of the scheduling plan. When specified, the execute record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling aggregation dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sch-260625-pbj2****</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
-        /// <para>An array of target objects. Each element contains an InstanceId and a SessionId.</para>
+        /// <para>The list of targets. Each element is an object that contains an InstanceId and a SessionId.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<RunAgentTaskRequestTargets> Targets { get; set; }
         public class RunAgentTaskRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The Mobile node ID, such as acp-xxx.</para>
+            /// <para>The ID of the Mobile node, such as acp-xxx.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-5hh4a31emkt6u****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The session ID. Tasks with the same session ID share context, such as ses-260702-21b****.</para>
+            /// <para>The session ID. Tasks with the same session ID share the context, such as ses-260702-21b****.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ses-260702-21bh****。</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The task configuration ID. This parameter is used to trigger a task with the specified configuration.</para>
+        /// <para>The ID of the task configuration. This parameter is used to trigger a task with the specified configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tsk-260625-49be****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string TaskConfigId { get; set; }
 
         /// <summary>
-        /// <para>The task timeout period, in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
+        /// <para>The timeout period of the task in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -128,10 +128,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? TimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>The user instruction in natural language. The Agent performs operations based on this instruction.</para>
+        /// <para>The user prompt in natural language. The agent performs operations based on this prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Go to App Store and download DingTalk</para>
+        /// <para>Download DingTalk from the app store</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunSyncCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the command to execute.</para>
+        /// <para>The content of the command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ls</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The encoding of the command content. If you provide a value that is not a valid option, the system uses the default value, <c>PlainText</c>.</para>
+        /// <para>The encoding method of the script content. If the specified value is not within the valid values, the default value <c>PlainText</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PlainText</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>An array of Cloud Phone instance IDs. You can specify up to 50 instances in a single request.</para>
+        /// <para>The list of cloud phone instance IDs. A single request supports up to 50 instances.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The timeout for command execution, in milliseconds. Valid range: 500 to 3000. Default: 1000.</para>
+        /// <para>The wait time in milliseconds. Valid values: 500 to 3000. Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

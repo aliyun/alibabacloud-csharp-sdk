@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCreditPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the credit booster pack.</para>
+        /// <para>The ID of the credit top-up package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crp-bt7e2t4anbq50****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> CreditPackageIds { get; set; }
 
         /// <summary>
-        /// <para>The effective period of the credit booster pack.</para>
+        /// <para>The effective period of the credit top-up package. The time format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-30 00:00:00</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the credit booster pack expires.</para>
+        /// <para>The expiration time of the credit top-up package. The time format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-30 00:00:00</para>

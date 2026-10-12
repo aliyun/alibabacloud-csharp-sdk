@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that no more data exists.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeEdgeMobileAgentPackagesResponseBodyPackages> Packages { get; set; }
         public class DescribeEdgeMobileAgentPackagesResponseBodyPackages : TeaModel {
             /// <summary>
-            /// <para>The device type.</para>
+            /// <para>The device class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BOX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string DeviceClass { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-05 10:04:07</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

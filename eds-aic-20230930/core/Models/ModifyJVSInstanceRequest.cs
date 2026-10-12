@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyJVSInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The target version, such as 2607W1. Set this parameter to latest to automatically resolve to the latest available version.</para>
+        /// <para>The target version of AI Engine, such as 2607W1. You can also set this parameter to latest to automatically resolve to the latest available version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>latest</para>
         /// </summary>
         [NameInMap("AgentVersion")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
-        /// <para>The credit quota configuration. If you submit the configuration multiple times, the latest configuration overwrites the previous one.</para>
+        /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</para>
         /// </summary>
         [NameInMap("CreditConfig")]
         [Validation(Required=false)]
@@ -44,12 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public long? CreditLimit { get; set; }
 
             /// <summary>
-            /// <para>The dimension of the current credit. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>total: Total usage limit.</description></item>
-            /// <item><description>month: Monthly. The quota resets based on the resource activation time cycle.</description></item>
-            /// <item><description>day: Daily. The quota resets at 00:00.</description></item>
-            /// </list>
+            /// <para>The period of the current credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>day</para>
@@ -60,6 +58,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        /// <summary>
+        /// <para>The image ID.</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }

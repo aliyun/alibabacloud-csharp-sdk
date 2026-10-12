@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): generates an order without charging your account.</description></item>
+        /// <item><description><b>true</b>: Enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): Generates an order without deducting payment.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</para>
+        /// <para>If the balance of your payment method is insufficient, set this parameter to false. An unpaid order is generated. You can log on to the WUYING Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PackageAmount { get; set; }
 
         /// <summary>
-        /// <para>The duration for which you want to purchase the resource. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription duration of the purchased resource. The unit is specified by PeriodUnit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -55,11 +55,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the duration for which you want to purchase the resource.</para>
-        /// <para>Valid values:</para>
+        /// <para>The unit of the subscription duration for the purchased resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: month.</description></item>
-        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b>: Month.</description></item>
+        /// <item><description><b>Year</b>: Year.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotional campaign.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

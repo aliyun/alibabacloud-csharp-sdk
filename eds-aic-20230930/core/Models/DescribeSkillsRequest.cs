@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language type. The skill description is returned in this language.</para>
-        /// <para>Valid values:</para>
+        /// <para>The language type. The skill description is returned in the specified language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>en: English.</description></item>
         /// <item><description>zh-CN: Chinese.</description></item>

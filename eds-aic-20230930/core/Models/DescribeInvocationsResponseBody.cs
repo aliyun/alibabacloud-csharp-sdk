@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeInvocationsResponseBodyData> Data { get; set; }
         public class DescribeInvocationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the command finished running.</para>
+            /// <para>The end time of the command execution. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-11 17:45:03</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance where the command was run.</para>
+            /// <para>The instance ID on which the current command is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-uto81vfd8t8z****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the command execution.</para>
+            /// <para>The command execution ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-15775dc8****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InvocationId { get; set; }
 
             /// <summary>
-            /// <para>The status of the command execution.</para>
+            /// <para>The execution status of the command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The time when the command started to run.</para>
+            /// <para>The start time of the command execution. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-11 17:45:03</para>

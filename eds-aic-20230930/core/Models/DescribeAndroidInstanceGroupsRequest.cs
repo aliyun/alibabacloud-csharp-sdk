@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing type.
-        /// [_single.params.ChargeType.enum. PrePaid]subscription</para>
+        /// <para>The billing method.
+        /// [_single.params.ChargeType.enum. PrePaid]Subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -31,22 +31,25 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The list of instance group IDs.</para>
+        /// <para>The IDs of the instance groups.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The instance group name. Fuzzy match is supported.</para>
+        /// <para>The name of the instance group. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Cloud phone</para>
+        /// <para>Cloud Phone</para>
         /// </summary>
         [NameInMap("InstanceGroupName")]
         [Validation(Required=false)]
         public string InstanceGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The instance version. A value of basic indicates a Wuying Cloud Phone instance, and a value of EnterpriseAi indicates a JVS Mobile instance.</para>
+        /// </summary>
         [NameInMap("InstanceVersion")]
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. An empty value indicates reading from the beginning.</para>
+        /// <para>The token that indicates the starting position for the query. If this parameter is left empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-1b77w6xrqfubi****</para>
@@ -101,16 +104,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string SaleMode { get; set; }
 
+        /// <summary>
+        /// <para>The sort field. A value of CreationTime indicates the creation time, and a value of ExpiredTime indicates the expiration time.</para>
+        /// </summary>
         [NameInMap("SortKey")]
         [Validation(Required=false)]
         public string SortKey { get; set; }
 
+        /// <summary>
+        /// <para>The sort order. A value of ASC indicates ascending order, and a value of DESC indicates descending order.</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>The instance group status.</para>
+        /// <para>The status of the instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>
@@ -120,7 +129,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance group. You can bind up to 20 tags to each instance.</para>
+        /// <para>The tags of the instance group. You can add up to 20 tags to each instance.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -129,7 +138,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The tag key. You can specify 1 to 20 tag keys.</para>
             /// <remarks>
-            /// <para>Notice: The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>Notice: A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -142,7 +151,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <remarks>
-            /// <para>Notice: The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Notice: A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

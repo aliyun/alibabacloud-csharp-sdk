@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud phone instances. Call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum instance count limits.</para>
+        /// <para>The number of cloud phone instances. You can call <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> to query the maximum and minimum instance count limits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneCount { get; set; }
 
         /// <summary>
-        /// <para>The device storage size. Valid values: 10 GiB to 4000 GiB. If this parameter is left empty, the current size is retained.</para>
+        /// <para>The device storage size. Valid range: 10 GiB to 4000 GiB. If this parameter is left empty, the original size is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The promotional activity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>
@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        /// <summary>
+        /// <para>The shared storage size. Unit: GiB.</para>
+        /// </summary>
         [NameInMap("ShareDataVolume")]
         [Validation(Required=false)]
         public int? ShareDataVolume { get; set; }

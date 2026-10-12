@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> PackageIds { get; set; }
 
         /// <summary>
-        /// <para>The package specification.</para>
+        /// <para>The package specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>

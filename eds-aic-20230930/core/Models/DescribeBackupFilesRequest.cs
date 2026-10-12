@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Fuzzy match is supported.</para>
+        /// <para>The name of the instance. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp-34pqe4r0kd9kn****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a full device backup.</para>
+        /// <para>Specifies whether the backup is a full-device backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? BackupAll { get; set; }
 
         /// <summary>
-        /// <para>The backup file ID.</para>
+        /// <para>The ID of the backup file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bf-dxrh5jrv0zpb8****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
-        /// <para>The backup file name. Fuzzy match is supported.</para>
+        /// <para>The name of the backup file. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Queries backup files created before the specified time.</para>
+        /// <para>The end time to query backup files. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-20 10:00:00</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The instance group ID.</para>
+        /// <para>The ID of the instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-fxdx91jsfyiy3****</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries per page for a paging query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
+        /// <para>The token that specifies the position from which the query starts. If this parameter is left empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -119,12 +119,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The sales mode. Valid values: Instance (cloud phone instance mode) and Node (cloud phone matrix mode).</para>
+        /// </summary>
         [NameInMap("SaleMode")]
         [Validation(Required=false)]
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>Queries backup files created after the specified time.</para>
+        /// <para>The start time to query backup files. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-23 10:00:00</para>

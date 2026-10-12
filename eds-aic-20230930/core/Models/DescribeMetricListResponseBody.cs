@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The instance monitoring data.</para>
+        /// <para>The list of instance monitoring results.</para>
         /// </summary>
         [NameInMap("MetricTotalModel")]
         [Validation(Required=false)]
         public List<DescribeMetricListResponseBodyMetricTotalModel> MetricTotalModel { get; set; }
         public class DescribeMetricListResponseBodyMetricTotalModel : TeaModel {
             /// <summary>
-            /// <para>For instance-level monitoring, the Cloud Phone instance ID is returned.
+            /// <para>For instance-level monitoring, the cloud phone instance ID is returned. 
             /// &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</para>
             /// 
             /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The monitoring data for metrics.</para>
+            /// <para>The list of metric monitoring results.</para>
             /// </summary>
             [NameInMap("MetricModelList")]
             [Validation(Required=false)]
             public List<DescribeMetricListResponseBodyMetricTotalModelMetricModelList> MetricModelList { get; set; }
             public class DescribeMetricListResponseBodyMetricTotalModelMetricModelList : TeaModel {
                 /// <summary>
-                /// <para>A list of monitoring data points.</para>
+                /// <para>The list of monitoring statistics data points.</para>
                 /// </summary>
                 [NameInMap("DataPoints")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The average value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The maximum value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The minimum value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public double? Minimum { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp of the statistics. Unit: milliseconds.</para>
+                    /// <para>The statistical timestamp. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1548777660000</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The data value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Required</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. If not all results are returned, this parameter is not empty. Use the returned token to query the next page.</para>
+        /// <para>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in subsequent queries to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>

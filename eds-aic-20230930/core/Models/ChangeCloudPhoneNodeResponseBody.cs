@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The dedicated device storage capacity.</para>
+                /// <para>The independent device storage capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>When the matrix uses dedicated device storage, a 64 GiB shared storage space is allocated by default (not modifiable) for storing images and other matrix-wide files. When the matrix uses shared device storage (with the size specified at purchase), this storage space is shared by all instances.</para>
+            /// <para>When the matrix uses independent device storage, 64 GiB of shared storage space is allocated by default (not modifiable) for storing images and other matrix-wide files. When the matrix uses shared device storage (with the size set at purchase), this storage space is shared among all instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

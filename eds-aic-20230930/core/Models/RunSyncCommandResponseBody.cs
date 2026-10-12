@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunSyncCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of objects, where each object contains the execution result for a single instance.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<RunSyncCommandResponseBodyData> Data { get; set; }
         public class RunSyncCommandResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when command execution finished.</para>
+            /// <para>The end time of the command execution. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-11 17:45:03</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance on which the command was executed.</para>
+            /// <para>The instance ID on which the current command is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-uto81vfd8t8z****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The invocation ID.</para>
+            /// <para>The command execution ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-15775dc8****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InvocationId { get; set; }
 
             /// <summary>
-            /// <para>The command execution status.</para>
+            /// <para>The execution status of the command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InvocationStatus { get; set; }
 
             /// <summary>
-            /// <para>The command output.</para>
+            /// <para>The output of the command execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The time when command execution began.</para>
+            /// <para>The start time of the command execution. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>

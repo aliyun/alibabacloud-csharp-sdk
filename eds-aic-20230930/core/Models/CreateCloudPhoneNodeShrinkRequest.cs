@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChannelCookie { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Only subscription is supported.</para>
+        /// <para>The billing method. Only subscription is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud phone matrices to purchase.</para>
+        /// <para>The Quantity of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,10 +112,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
-        /// <remarks>
-        /// <para>To purchase more instance types, <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</para>
-        /// </remarks>
+        /// <para>The instance type. &gt; To purchase more instance types, you can <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac.max</para>
@@ -165,15 +162,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        /// <summary>
+        /// <para>The redirect URL for the payment success page.</para>
+        /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription period of the resource. The unit is specified by <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to <b>year</b>, the value can only be 1.</description></item>
-        /// <item><description>If PeriodUnit is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <b>year</b>, the only valid value is 1.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration.</para>
+        /// <para>The unit of the subscription period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -213,6 +213,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? PhoneDataVolume { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the promotion.</para>
+        /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
@@ -240,7 +243,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The size of the shared device storage. Unit: GiB.</para>
         /// <remarks>
-        /// <para>The minimum value of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</para>
+        /// <para>The minimum size of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -251,7 +254,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ServerShareDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the cloud phone matrix.</para>
+        /// <para>The specification of the cloud phone matrix.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -315,7 +318,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? UpBandwidthLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a template during creation. Set this parameter to <c>Random</c> to use a random template from the template list. Alternatively, specify a template ID to use that template.</para>
+        /// <para>Specifies whether to use a template during creation. If you want to use a random template from the template list, set the value to <c>Random</c>. If you specify a template ID, the specified template is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Random</para>

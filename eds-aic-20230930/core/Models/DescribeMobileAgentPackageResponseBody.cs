@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of package information.</para>
+        /// <para>The list of packages.</para>
         /// </summary>
         [NameInMap("PackageList")]
         [Validation(Required=false)]
         public List<DescribeMobileAgentPackageResponseBodyPackageList> PackageList { get; set; }
         public class DescribeMobileAgentPackageResponseBodyPackageList : TeaModel {
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-30 00:00:00</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PackageId { get; set; }
 
             /// <summary>
-            /// <para>The package specification.</para>
+            /// <para>The package specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>advanced</para>
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PeriodStartTime { get; set; }
 
             /// <summary>
-            /// <para>The labels.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeMobileAgentPackageResponseBodyPackageListTags> Tags { get; set; }
             public class DescribeMobileAgentPackageResponseBodyPackageListTags : TeaModel {
                 /// <summary>
-                /// <para>The label key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The label value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The number of credits that have been used.</para>
+            /// <para>The number of used credits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>

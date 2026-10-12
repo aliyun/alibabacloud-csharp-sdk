@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMetricLastResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of records.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The instance monitoring data.</para>
+        /// <para>The list of instance monitoring results.</para>
         /// </summary>
         [NameInMap("MetricTotalModel")]
         [Validation(Required=false)]
         public List<DescribeMetricLastResponseBodyMetricTotalModel> MetricTotalModel { get; set; }
         public class DescribeMetricLastResponseBodyMetricTotalModel : TeaModel {
             /// <summary>
-            /// <para>For instance-level monitoring, the Cloud Phone instance ID is returned.
-            /// &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</para>
+            /// <para>The cloud phone instance ID returned for instance-level monitoring. 
+            /// &lt;props=&quot;china&quot;&gt;The matrix ID returned for matrix-level monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-fkuit0cmyru4p****</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The monitoring data for metrics.</para>
+            /// <para>The list of metric monitoring results.</para>
             /// </summary>
             [NameInMap("MetricModelList")]
             [Validation(Required=false)]
             public List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelList> MetricModelList { get; set; }
             public class DescribeMetricLastResponseBodyMetricTotalModelMetricModelList : TeaModel {
                 /// <summary>
-                /// <para>The monitoring data points.</para>
+                /// <para>The list of monitoring statistics data points.</para>
                 /// </summary>
                 [NameInMap("DataPoints")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The average value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The maximum value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <summary>
                     /// <para>The minimum value. Unit: %.</para>
                     /// <remarks>
-                    /// <para>The unit is bps when the metric is \<c>bandwidth_package_usage_out\\</c> or \<c>bandwidth_package_usage_in\\</c>.</para>
+                    /// <para>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public double? Minimum { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp of the statistics. Unit: milliseconds.</para>
+                    /// <para>The statistical timestamp. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1548777660000</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the metric.</para>
+                /// <para>The name of the monitoring metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cpu_utilization</para>
@@ -123,9 +123,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>The process monitoring metrics.</para>
+                /// <para>The list of process monitoring metrics.</para>
                 /// <remarks>
-                /// <para>This parameter is returned when the metric is \<c>process_cpu\\</c> or \<c>process_memory\\</c>.</para>
+                /// <para>This parameter is returned when the monitoring metric is process_cpu or process_memory.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("ProcessLastInfos")]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelListProcessLastInfos> ProcessLastInfos { get; set; }
                 public class DescribeMetricLastResponseBodyMetricTotalModelMetricModelListProcessLastInfos : TeaModel {
                     /// <summary>
-                    /// <para>The CPU utilization. Unit: %.</para>
+                    /// <para>The CPU usage. Unit: %.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public List<int?> ProcessIds { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp of the statistics. Unit: milliseconds.</para>
+                    /// <para>The statistical timestamp. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1548777660000</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. If not all results are returned in a single query, the returned NextToken is not empty. You can use the returned NextToken in the next query to query the next page.</para>
+        /// <para>The token for the next query. If a single query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue querying.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>

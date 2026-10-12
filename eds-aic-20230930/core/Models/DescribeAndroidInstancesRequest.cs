@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The application management policy ID.</para>
+        /// <para>The ID of the application control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amp-shigvudbyeuib****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AppManagePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The user ID assigned to the instance, which is the China Wuying convenience account ID.</para>
+        /// <para>The ID of the user assigned to the instance, which is the Wuying convenience user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -47,7 +47,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AuthorizedUserId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition or Matrix Edition).</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where different versions of cloud phones (instance edition and matrix edition) are available for purchase.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where cloud phones are available for purchase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance group ID.</para>
+        /// <para>The ID of the instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-25nt4kk9whjh****</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The instance group name.</para>
+        /// <para>The name of the instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bound key pair.</para>
+        /// <para>The ID of the associated key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kp-5hh431emkpuoi****</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries per page for paging. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -124,7 +125,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
+        /// <para>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -134,7 +135,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The matrix ID.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The matrix ID.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_id</para>
@@ -144,7 +146,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The cloud phone network IDs.</para>
+        /// <para>The ID of the cloud phone network.</para>
         /// </summary>
         [NameInMap("OfficeSiteIds")]
         [Validation(Required=false)]
@@ -171,14 +174,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the public network rate limiting rule groups. These are rate limiting rules for instances in the basic shared network.</para>
+        /// <para>The ID of the public network throttling rule group. This specifies the throttling rules for instances in the basic shared network.</para>
         /// </summary>
         [NameInMap("QosRuleIds")]
         [Validation(Required=false)]
         public List<string> QosRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The sales mode.</para>
+        /// <para>The sale mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -189,6 +192,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The sort key used when querying resources.</para>
+        /// <para>This parameter must be used together with SortType. Valid values: CreationTime and ExpiredTime.</para>
+        /// <para>If you set this parameter to CreationTime, the resources are sorted by creation time. If you set this parameter to ExpiredTime, the resources are sorted by expiration time.</para>
+        /// <para>By default, resources are sorted in descending order of creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -198,7 +204,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SortKey { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Default value: descending order. Valid values:</para>
+        /// <para>The sort order. Default value: DESC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order</description></item>
+        /// <item><description>DESC: descending order</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>

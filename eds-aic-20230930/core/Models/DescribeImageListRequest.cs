@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeImageListRequest : TeaModel {
         /// <summary>
-        /// <para>An array of tag objects.</para>
+        /// <para>The array of tag objects.</para>
         /// </summary>
         [NameInMap("ImageBizTags")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not yet available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -124,6 +124,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The operating system type.</para>
+        /// </summary>
         [NameInMap("SystemType")]
         [Validation(Required=false)]
         public string SystemType { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The credit booster package information.</para>
+        /// <para>The information about the credit boost packages.</para>
         /// </summary>
         [NameInMap("CreditsPackageInfos")]
         [Validation(Required=false)]
         public List<DescribeCreditPackageResponseBodyCreditsPackageInfos> CreditsPackageInfos { get; set; }
         public class DescribeCreditPackageResponseBodyCreditsPackageInfos : TeaModel {
             /// <summary>
-            /// <para>The number of available credits in the current credit booster package.</para>
+            /// <para>The number of available credits in the current credit boost package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the credit booster package.</para>
+            /// <para>The ID of the credit boost package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crp-xagydbhfkah****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreditPackageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the credit booster package.</para>
+            /// <para>The status of the credit boost package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreditPackageStatus { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the credit booster package.</para>
+            /// <para>The effective period of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-30 00:00:00</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The number of consumed credits in the current credit booster package.</para>
+            /// <para>The number of consumed credits in the current credit boost package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExhaustedCredits { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the credit booster package.</para>
+            /// <para>The expiration time of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-30 00:00:00</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of credits in the current credit booster package.</para>
+            /// <para>The total number of credits in the current credit boost package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? IsFirstPurchase { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The list of returned result objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The total number of failed subtasks.</para>
+            /// <para>The total number of failed child tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? FailedChildCount { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The end time of the task. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud phone instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-uto81vfd8t8z****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud phone instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>defaultInstanceName</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The state of the cloud phone instance.</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the command execution.</para>
+            /// <para>The command execution ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InvokeId { get; set; }
 
             /// <summary>
-            /// <para>The level of the task.</para>
+            /// <para>The task level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the task.</para>
+            /// <para>The task parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>param</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Param { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent task.</para>
+            /// <para>The parent task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-41oan3tza16vs****</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ParentTaskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-25nt4kk9whhok****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the task.</para>
+            /// <para>The task execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Success\&quot;: True}</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The total number of the subtasks that are running.</para>
+            /// <para>The total number of running child tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? RunningChildCount { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
+            /// <para>The start time of the task. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of successfully executed subtasks.</para>
+            /// <para>The total number of successful child tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? SuccessChildCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-bp67acfmxazb4p****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The state of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Processing</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>StartInstance</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of subtasks of the current batch task.</para>
+            /// <para>The total number of child tasks for the current batch task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that specifies the starting position for reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

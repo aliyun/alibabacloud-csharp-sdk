@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The error code.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the call fails.</para>
+        /// <para>This parameter is returned only when an error occurs during the API call.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeBucketsResponseBodyData> Data { get; set; }
         public class DescribeBucketsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zydctest</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint that is used to access the bucket.</para>
+            /// <para>The public endpoint used to access the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-cn-hangzhou.aliyuncs.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExtranetEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The time when the bucket was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-15 17:33:59</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint that is used by a same-region ECS instance to access the bucket.</para>
+            /// <para>The internal endpoint used by ECS instances in the same region to access the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string IntranetEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The storage path, such as a path in Hadoop Distributed File System (HDFS) or OSS.</para>
+            /// <para>The storage path, such as HDFS or OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>center</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>The information about the objects in the bucket.</para>
+            /// <para>The information about objects in the bucket.</para>
             /// </summary>
             [NameInMap("OssObjectList")]
             [Validation(Required=false)]
             public List<DescribeBucketsResponseBodyDataOssObjectList> OssObjectList { get; set; }
             public class DescribeBucketsResponseBodyDataOssObjectList : TeaModel {
                 /// <summary>
-                /// <para>The name of the bucket.</para>
+                /// <para>The bucket name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tf-testacceu-central-1ensbucketlifecycle44222</para>
@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The Entity Tag (ETag) is created when an object is generated. It is used to identify the content of an object.</para>
+                /// <para>The ETag (Entity Tag) is created when an object is generated and is used to identify the content of the object.</para>
                 /// <list type="bullet">
-                /// <item><description><para>For an object created by a PutObject request, the ETag value is the MD5 hash of the object content.</para>
+                /// <item><description><para>For an object created by a PutObject request, the ETag is the MD5 hash of the object content.</para>
                 /// </description></item>
-                /// <item><description><para>For an object created by other methods, the ETag value is a unique value generated based on specific calculation rules. It is not the MD5 hash of the object content.</para>
+                /// <item><description><para>For an object created by other methods, the ETag is a unique value generated based on specific calculation rules, but it is not the MD5 hash of the object content.</para>
                 /// </description></item>
-                /// <item><description><para>The ETag value can be used to check if the object content has changed. Do not use the ETag value as the MD5 hash to verify the data integrity of the object.</para>
+                /// <item><description><para>You can use the ETag to check whether the object content has changed. Do not use the ETag as the MD5 hash to verify the data integrity of the object content.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string LastModified { get; set; }
 
                 /// <summary>
-                /// <para>The information about the bucket owner.</para>
+                /// <para>The bucket owner information.</para>
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     /// <para>The name of the bucket owner.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>佳钰</para>
+                    /// <para>Jiayu</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -164,12 +164,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
-                /// <para>The information about database recovery if the database type is MSSQL. The value is a JSON string that contains the following parameters:</para>
+                /// <para>The database restoration information when the restored database type is MSSQL. The value is a JSON string that contains the following fields:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>name</b>: The name of the database.</para>
-                /// </description></item>
-                /// <item><description><para><b>files</b>: The path of the database file.</para>
-                /// </description></item>
+                /// <item><description><b>name</b>: The database name.</description></item>
+                /// <item><description><b>files</b>: The database file path.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,7 +178,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string RestoreInfo { get; set; }
 
                 /// <summary>
-                /// <para>The size of the file. Unit: KB.</para>
+                /// <para>The file size. Unit: KB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
@@ -192,16 +190,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 /// <summary>
                 /// <para>The storage class of the bucket. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Standard (default): Standard</para>
-                /// </description></item>
-                /// <item><description><para>IA: Infrequent Access</para>
-                /// </description></item>
-                /// <item><description><para>Archive: Archive Storage</para>
-                /// </description></item>
-                /// <item><description><para>ColdArchive: Cold Archive</para>
-                /// </description></item>
-                /// <item><description><para>DeepColdArchive: Deep Cold Archive</para>
-                /// </description></item>
+                /// <item><description>Standard: Standard storage (default).</description></item>
+                /// <item><description>IA: Infrequent Access.</description></item>
+                /// <item><description>Archive: Archive.</description></item>
+                /// <item><description>ColdArchive: Cold Archive.</description></item>
+                /// <item><description>DeepColdArchive: Deep Cold Archive.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +205,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// <para>The type of the trigger method.</para>
+                /// <para>The trigger type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>InstanceGroup</para>
@@ -236,7 +229,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The return status code of the request.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -266,7 +259,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the request.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ExpandDataVolumeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. The default value is false.</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,18 +30,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud phone matrices.</para>
+        /// <para>The list of cloud phone matrix IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
+        /// <summary>
+        /// <para>The redirect URL for the payment success page.</para>
+        /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The size of the instance storage. Unit: GiB.</para>
+        /// <para>The size of the device storage for the instance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

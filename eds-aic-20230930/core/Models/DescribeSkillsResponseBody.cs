@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-13 15:40:51</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string IconOssUrl { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that have the skill installed.</para>
+            /// <para>The number of instances on which the skill is installed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? InstalledCount { get; set; }
 
             /// <summary>
-            /// <para>The information about the installed instances.</para>
+            /// <para>The information about the instances on which the skill is installed.</para>
             /// </summary>
             [NameInMap("InstalledInstances")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SkillSource { get; set; }
 
             /// <summary>
-            /// <para>The skill lifecycle status.</para>
+            /// <para>The lifecycle status of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPLOADED</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SkillStatus { get; set; }
 
             /// <summary>
-            /// <para>The source node ID of the skill created from a conversation. This value is empty for user-uploaded skills.</para>
+            /// <para>The source node ID of the skill created from a conversation. This parameter is empty if the skill is uploaded by a user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-bp4du4v74mc7qw8****</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The skill version.</para>
+            /// <para>The skill version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

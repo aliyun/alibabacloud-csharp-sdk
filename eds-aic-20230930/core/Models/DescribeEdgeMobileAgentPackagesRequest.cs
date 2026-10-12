@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeEdgeMobileAgentPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The device type filter. Valid values: BOX, PHONE, PAD, and OTHER.</para>
+        /// <para>The device class filter. Valid values: BOX, PHONE, PAD, and OTHER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BOX</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string LicenseKeys { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first query. For subsequent queries, use the value returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first query. For subsequent queries, obtain the token from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</para>
