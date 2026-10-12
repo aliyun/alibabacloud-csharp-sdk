@@ -5007,7 +5007,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5053,7 +5053,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5099,7 +5099,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5117,7 +5117,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5131,6 +5131,166 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCustomAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomAgentMonitorMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomAgentMonitorMetricsResponse
+        /// </returns>
+        public DescribeCustomAgentMonitorMetricsResponse DescribeCustomAgentMonitorMetricsWithOptions(DescribeCustomAgentMonitorMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["Granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomAgentMonitorMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomAgentMonitorMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomAgentMonitorMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomAgentMonitorMetricsResponse
+        /// </returns>
+        public async Task<DescribeCustomAgentMonitorMetricsResponse> DescribeCustomAgentMonitorMetricsWithOptionsAsync(DescribeCustomAgentMonitorMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["Granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomAgentMonitorMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomAgentMonitorMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomAgentMonitorMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomAgentMonitorMetricsResponse
+        /// </returns>
+        public DescribeCustomAgentMonitorMetricsResponse DescribeCustomAgentMonitorMetrics(DescribeCustomAgentMonitorMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCustomAgentMonitorMetricsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomAgentMonitorMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomAgentMonitorMetricsResponse
+        /// </returns>
+        public async Task<DescribeCustomAgentMonitorMetricsResponse> DescribeCustomAgentMonitorMetricsAsync(DescribeCustomAgentMonitorMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCustomAgentMonitorMetricsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9643,7 +9803,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in a personal space or workspace.</para>
+        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9705,7 +9865,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in a personal space or workspace.</para>
+        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9767,7 +9927,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in a personal space or workspace.</para>
+        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9785,7 +9945,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in a personal space or workspace.</para>
+        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9799,6 +9959,174 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCustomAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomAgentMonitorSessionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomAgentMonitorSessionsResponse
+        /// </returns>
+        public ListCustomAgentMonitorSessionsResponse ListCustomAgentMonitorSessionsWithOptions(ListCustomAgentMonitorSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomAgentMonitorSessions",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomAgentMonitorSessionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomAgentMonitorSessionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomAgentMonitorSessionsResponse
+        /// </returns>
+        public async Task<ListCustomAgentMonitorSessionsResponse> ListCustomAgentMonitorSessionsWithOptionsAsync(ListCustomAgentMonitorSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomAgentMonitorSessions",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomAgentMonitorSessionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomAgentMonitorSessionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomAgentMonitorSessionsResponse
+        /// </returns>
+        public ListCustomAgentMonitorSessionsResponse ListCustomAgentMonitorSessions(ListCustomAgentMonitorSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCustomAgentMonitorSessionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomAgentMonitorSessionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomAgentMonitorSessionsResponse
+        /// </returns>
+        public async Task<ListCustomAgentMonitorSessionsResponse> ListCustomAgentMonitorSessionsAsync(ListCustomAgentMonitorSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCustomAgentMonitorSessionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11295,7 +11623,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11373,7 +11701,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11451,7 +11779,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11469,7 +11797,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13203,7 +13531,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal space or workspace.</para>
+        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13339,7 +13667,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal space or workspace.</para>
+        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13475,7 +13803,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal space or workspace.</para>
+        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13493,7 +13821,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal space or workspace.</para>
+        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">

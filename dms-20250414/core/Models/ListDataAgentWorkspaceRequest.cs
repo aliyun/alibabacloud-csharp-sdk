@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentWorkspaceRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the creator used to search for workspaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>186xxx9947</para>
+        /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the field by which to sort.</para>
+        /// <para>The sort field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspaceTest</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The type of workspace to query.</para>
+        /// <para>The workspace type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

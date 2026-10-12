@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the workspace, in milliseconds (UNIX timestamp).</para>
+                /// <para>The time when the workspace was created. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765960516000</para>
@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
+                /// <summary>
+                /// <para>The name of the workspace creator.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
                 public string CreatorName { get; set; }
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The most recent modification time of the workspace, in milliseconds (UNIX timestamp).</para>
+                /// <para>The time when the workspace was last modified. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765961516000</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The role name of the user in the workspace.</para>
+                /// <para>The name of the user\&quot;s role in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -87,12 +93,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
+                /// <summary>
+                /// <para>The number of running sessions in the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>15</para>
+                /// </summary>
                 [NameInMap("RunningSessionCount")]
                 [Validation(Required=false)]
                 public int? RunningSessionCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of members in the workspace.</para>
+                /// <para>The total number of members in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -101,6 +113,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public long? TotalMember { get; set; }
 
+                /// <summary>
+                /// <para>The total number of sessions in the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30</para>
+                /// </summary>
                 [NameInMap("TotalSessionCount")]
                 [Validation(Required=false)]
                 public int? TotalSessionCount { get; set; }
@@ -200,7 +218,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter is not valid.</para>
@@ -210,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nu use</para>
@@ -220,7 +238,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>

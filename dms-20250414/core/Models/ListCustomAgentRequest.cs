@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query all custom agents in the published state. Default value: false.</para>
+        /// <para>Specifies whether to query all published custom agents. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? QueryAllReleased { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports fuzzy search by custom agent name and description.</para>
+        /// <para>The search keyword. Fuzzy search is supported for custom agent names and descriptions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestAgent</para>
+        /// <para>Test Agent</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
