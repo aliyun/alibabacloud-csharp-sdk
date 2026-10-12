@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to enable DAS Alibaba Cloud Managed Services. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enable.</description></item>
-        /// <item><description><b>false</b>: Disable. Shutdown only turns off the feature but does not unsubscribe from the service. To unsubscribe, go to the unsubscription management page.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled. Note that shutdown only disables the feature, but does not cancel your subscription. To cancel your subscription, go to the Unsubscription Management page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The filter parameter.</para>
             /// <remarks>
-            /// <para>For supported filter parameters and their values, see <b>Supplementary description of request parameters</b>.</para>
+            /// <para>For supported filter parameters and their valid values, see <b>Supplementary description of request parameters</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>The reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select</para>

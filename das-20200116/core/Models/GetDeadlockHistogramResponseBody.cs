@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<GetDeadlockHistogramResponseBodyData> Data { get; set; }
         public class GetDeadlockHistogramResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The end time of the analysis task range.</para>
+            /// <para>The end time of the analysis task range. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729998000000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the analysis task range.</para>
+            /// <para>The start time of the analysis task range. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729994400000</para>
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SUCCESS</b>: The analysis is successful.</description></item>
-            /// <item><description><b>FAILED</b>: The analysis failed or encountered an exception.</description></item>
+            /// <item><description><b>SUCCESS</b>: The analysis was successful.</description></item>
+            /// <item><description><b>FAILED</b>: The analysis is abnormal or failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The full deadlock analysis task ID.</para>
+            /// <para>The ID of the full deadlock analysis task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B6D17591-B48B-4D31-9CD6-1321B394****</para>
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
         /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 

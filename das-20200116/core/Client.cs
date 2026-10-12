@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
+        /// <para>Invokes the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -303,9 +303,9 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
+        /// <item><description>When you use the SDK to call DAS services, specify the region as cn-shanghai.</description></item>
+        /// <item><description>Only database instances with DAS Enterprise Edition enabled support creating offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+        /// For more methods and examples on how to use the Chat interface to interact with the DAS Agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (Chat API integration)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -326,6 +326,10 @@ namespace AlibabaCloud.SDK.DAS20200116
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardedProps))
+            {
+                query["ForwardedProps"] = request.ForwardedProps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
@@ -364,7 +368,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
+        /// <para>Invokes the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -372,9 +376,9 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
+        /// <item><description>When you use the SDK to call DAS services, specify the region as cn-shanghai.</description></item>
+        /// <item><description>Only database instances with DAS Enterprise Edition enabled support creating offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+        /// For more methods and examples on how to use the Chat interface to interact with the DAS Agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (Chat API integration)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -395,6 +399,10 @@ namespace AlibabaCloud.SDK.DAS20200116
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardedProps))
+            {
+                query["ForwardedProps"] = request.ForwardedProps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
@@ -433,7 +441,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
+        /// <para>Invokes the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -441,9 +449,9 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
+        /// <item><description>When you use the SDK to call DAS services, specify the region as cn-shanghai.</description></item>
+        /// <item><description>Only database instances with DAS Enterprise Edition enabled support creating offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+        /// For more methods and examples on how to use the Chat interface to interact with the DAS Agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (Chat API integration)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -462,7 +470,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the asynchronous logic interface for DAS large model capabilities.</para>
+        /// <para>Invokes the asynchronous logic interface for DAS large model capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -470,9 +478,9 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <para>Before you begin:</para>
         /// <list type="bullet">
         /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-        /// For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</description></item>
+        /// <item><description>When you use the SDK to call DAS services, specify the region as cn-shanghai.</description></item>
+        /// <item><description>Only database instances with DAS Enterprise Edition enabled support creating offline tasks. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+        /// For more methods and examples on how to use the Chat interface to interact with the DAS Agent, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (Chat API integration)</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3287,15 +3295,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
+        /// <para>Queries the list of data audit alert logs to facilitate alert search and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When using the SDK to call DAS, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3438,15 +3446,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
+        /// <para>Queries the list of data audit alert logs to facilitate alert search and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When using the SDK to call DAS, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3589,15 +3597,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
+        /// <para>Queries the list of data audit alert logs to facilitate alert search and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When using the SDK to call DAS, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3616,15 +3624,15 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit alert log list for alert search and alert handling.</para>
+        /// <para>Queries the list of data audit alert logs to facilitate alert search and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of the Alibaba Cloud or DAS SDK.</description></item>
-        /// <item><description>When you call DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>When using the Alibaba Cloud or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When using the SDK to call DAS, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13455,17 +13463,17 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</para>
+        /// <para>Queries the trend of deadlock counts based on full deadlock analysis of error logs within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-        /// Before you begin:</para>
+        /// <para>This operation queries the number of deadlocks based on full deadlock analysis within a specified time range. Database Autonomy Service (DAS) periodically analyzes error logs, parses deadlock information, and calculates the trend of deadlock counts. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+        /// Before you invoke this operation, ensure that the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</description></item>
-        /// <item><description>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you invoke DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is ApsaraDB RDS for MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> is activated.</description></item>
+        /// <item><description>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13524,17 +13532,17 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</para>
+        /// <para>Queries the trend of deadlock counts based on full deadlock analysis of error logs within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-        /// Before you begin:</para>
+        /// <para>This operation queries the number of deadlocks based on full deadlock analysis within a specified time range. Database Autonomy Service (DAS) periodically analyzes error logs, parses deadlock information, and calculates the trend of deadlock counts. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+        /// Before you invoke this operation, ensure that the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</description></item>
-        /// <item><description>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you invoke DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is ApsaraDB RDS for MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> is activated.</description></item>
+        /// <item><description>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13593,17 +13601,17 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</para>
+        /// <para>Queries the trend of deadlock counts based on full deadlock analysis of error logs within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-        /// Before you begin:</para>
+        /// <para>This operation queries the number of deadlocks based on full deadlock analysis within a specified time range. Database Autonomy Service (DAS) periodically analyzes error logs, parses deadlock information, and calculates the trend of deadlock counts. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+        /// Before you invoke this operation, ensure that the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</description></item>
-        /// <item><description>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you invoke DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is ApsaraDB RDS for MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> is activated.</description></item>
+        /// <item><description>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13622,17 +13630,17 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</para>
+        /// <para>Queries the trend of deadlock counts based on full deadlock analysis of error logs within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-        /// Before you begin:</para>
+        /// <para>This operation queries the number of deadlocks based on full deadlock analysis within a specified time range. Database Autonomy Service (DAS) periodically analyzes error logs, parses deadlock information, and calculates the trend of deadlock counts. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+        /// Before you invoke this operation, ensure that the following prerequisites are met:</para>
         /// <list type="bullet">
-        /// <item><description>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</description></item>
-        /// <item><description>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</description></item>
-        /// <item><description>When you invoke DAS by using the SDK, set the region to cn-shanghai.</description></item>
+        /// <item><description>The target database engine is ApsaraDB RDS for MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> is activated.</description></item>
+        /// <item><description>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</description></item>
+        /// <item><description>When you use an SDK to invoke DAS, set the region to cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14924,14 +14932,14 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported.
-        /// Before you begin:</para>
+        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform regular inspections on target instances and generate reports. Currently, only daily reports are supported.
+        /// To use this operation, the following prerequisites must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Activate DAS Agent and ensure that the Agent is still within its validity period.</description></item>
-        /// <item><description>Enable the daily report feature on the DAS Agent configuration page.</description></item>
+        /// <item><description>You have activated DAS Agent and the agent is still within its validity period.</description></item>
+        /// <item><description>You have enabled the daily report feature on the DAS Agent configuration page.</description></item>
         /// <item><description>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</description></item>
-        /// <item><description>Use DAS SDK 1.0.3 or later.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to ap-southeast-1.</description></item>
+        /// <item><description>The version of the DAS SDK is 1.0.3 or later.</description></item>
+        /// <item><description>When calling DAS services by using the SDK, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14997,14 +15005,14 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported.
-        /// Before you begin:</para>
+        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform regular inspections on target instances and generate reports. Currently, only daily reports are supported.
+        /// To use this operation, the following prerequisites must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Activate DAS Agent and ensure that the Agent is still within its validity period.</description></item>
-        /// <item><description>Enable the daily report feature on the DAS Agent configuration page.</description></item>
+        /// <item><description>You have activated DAS Agent and the agent is still within its validity period.</description></item>
+        /// <item><description>You have enabled the daily report feature on the DAS Agent configuration page.</description></item>
         /// <item><description>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</description></item>
-        /// <item><description>Use DAS SDK 1.0.3 or later.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to ap-southeast-1.</description></item>
+        /// <item><description>The version of the DAS SDK is 1.0.3 or later.</description></item>
+        /// <item><description>When calling DAS services by using the SDK, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15070,14 +15078,14 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported.
-        /// Before you begin:</para>
+        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform regular inspections on target instances and generate reports. Currently, only daily reports are supported.
+        /// To use this operation, the following prerequisites must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Activate DAS Agent and ensure that the Agent is still within its validity period.</description></item>
-        /// <item><description>Enable the daily report feature on the DAS Agent configuration page.</description></item>
+        /// <item><description>You have activated DAS Agent and the agent is still within its validity period.</description></item>
+        /// <item><description>You have enabled the daily report feature on the DAS Agent configuration page.</description></item>
         /// <item><description>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</description></item>
-        /// <item><description>Use DAS SDK 1.0.3 or later.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to ap-southeast-1.</description></item>
+        /// <item><description>The version of the DAS SDK is 1.0.3 or later.</description></item>
+        /// <item><description>When calling DAS services by using the SDK, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15101,14 +15109,14 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported.
-        /// Before you begin:</para>
+        /// <para>Enabling the O&amp;M report feature of DAS Agent allows the system to perform regular inspections on target instances and generate reports. Currently, only daily reports are supported.
+        /// To use this operation, the following prerequisites must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Activate DAS Agent and ensure that the Agent is still within its validity period.</description></item>
-        /// <item><description>Enable the daily report feature on the DAS Agent configuration page.</description></item>
+        /// <item><description>You have activated DAS Agent and the agent is still within its validity period.</description></item>
+        /// <item><description>You have enabled the daily report feature on the DAS Agent configuration page.</description></item>
         /// <item><description>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</description></item>
-        /// <item><description>Use DAS SDK 1.0.3 or later.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to ap-southeast-1.</description></item>
+        /// <item><description>The version of the DAS SDK is 1.0.3 or later.</description></item>
+        /// <item><description>When calling DAS services by using the SDK, specify the region as cn-shanghai.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21071,16 +21079,16 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration item of Alibaba Cloud Managed Services.</para>
+        /// <para>Modifies the configuration items of Alibaba Cloud Managed Services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this API operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of Alibaba Cloud SDK or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</description></item>
+        /// <item><description>When you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>By default, this API operation enables the latest supported version. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21133,16 +21141,16 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration item of Alibaba Cloud Managed Services.</para>
+        /// <para>Modifies the configuration items of Alibaba Cloud Managed Services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this API operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of Alibaba Cloud SDK or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</description></item>
+        /// <item><description>When you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>By default, this API operation enables the latest supported version. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21195,16 +21203,16 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration item of Alibaba Cloud Managed Services.</para>
+        /// <para>Modifies the configuration items of Alibaba Cloud Managed Services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this API operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of Alibaba Cloud SDK or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</description></item>
+        /// <item><description>When you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>By default, this API operation enables the latest supported version. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21223,16 +21231,16 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration item of Alibaba Cloud Managed Services.</para>
+        /// <para>Modifies the configuration items of Alibaba Cloud Managed Services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>To use this API operation, you must meet the following prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>Use the latest version of Alibaba Cloud SDK or DAS SDK.</description></item>
-        /// <item><description>When calling DAS by using the SDK, set the region to cn-shanghai.</description></item>
-        /// <item><description>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
+        /// <item><description>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</description></item>
+        /// <item><description>When you use an SDK to call DAS, you must set the region to cn-shanghai.</description></item>
+        /// <item><description>By default, this API operation enables the latest supported version. For the databases and regions supported by each edition of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</description></item>
         /// </list>
         /// </description>
         /// 

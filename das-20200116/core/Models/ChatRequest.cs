@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ChatRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID used for the service. This parameter is optional. You can specify an agent generated after DAS Agent is enabled or an agent that you manually created. If this parameter is not specified, the default agent is used.</para>
+        /// <para>Optional. The agent ID used for the service. You can specify the agent generated after enabling the DAS Agent or a manually created agent. If not specified, the default agent is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-472T0DxtmjIxxxxx</para>
@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public string AgentId { get; set; }
+
+        /// <summary>
+        /// <para>The forwarded properties.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;enableInteractiveTools&quot;:true}</para>
+        /// </summary>
+        [NameInMap("ForwardedProps")]
+        [Validation(Required=false)]
+        public string ForwardedProps { get; set; }
 
         /// <summary>
         /// <para>The message.</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Resume { get; set; }
 
         /// <summary>
-        /// <para>The session ID in UUID string format. This parameter is optional. If this parameter is not specified, a new session is created by default. To maintain context across conversations, use the same session ID.</para>
+        /// <para>Optional. The session ID, which is a UUID string. If not specified, a new session is created by default. The same session ID must be maintained for contextual conversations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</para>

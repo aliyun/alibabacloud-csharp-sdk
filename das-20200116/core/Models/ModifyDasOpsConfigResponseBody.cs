@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public ModifyDasOpsConfigResponseBodyData Data { get; set; }
         public class ModifyDasOpsConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The payment method.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prepay</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Managed Services instance ID.</para>
+            /// <para>The instance ID of Alibaba Cloud Managed Services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-2zelo5v5u0678jx04</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CommodityInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether DAS Economy Edition is enabled.</para>
+            /// <para>Indicates whether the DAS Economy Edition is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? EcoEnable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud Managed Services feature is enabled (including DAS Economy Edition).</para>
+            /// <para>Indicates whether the Alibaba Cloud Managed Services feature (including DAS Economy Edition) is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? OpsEnable { get; set; }
 
             /// <summary>
-            /// <para>The order ID.</para>
+            /// <para>The ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>285412912420536</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time of Alibaba Cloud Managed Services. The format is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672531200000</para>
@@ -104,16 +104,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: Pending scheduling.</description></item>
+            /// <item><description><b>INIT</b>: Pending.</description></item>
             /// <item><description><b>RUNNING</b>: Running.</description></item>
             /// <item><description><b>FAILED</b>: Failed.</description></item>
             /// <item><description><b>CANCELED</b>: Canceled.</description></item>
             /// <item><description><b>COMPLETED</b>: Completed.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>When the task is in the <b>COMPLETED</b> state, you can view the task result.</para>
+            /// <para>When the task is in the <b>COMPLETED</b> state, you can view the task results.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -148,8 +148,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

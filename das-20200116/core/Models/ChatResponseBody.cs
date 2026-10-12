@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the content is incremental.</para>
+        /// <para>Specifies whether the content is incremental.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Delta { get; set; }
 
         /// <summary>
-        /// <para>The step type of STEP_STARTED, such as task.</para>
+        /// <para>The step type for STEP_STARTED, such as task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The display name of the sub-agent for STEP_STARTED.</para>
+        /// <para>The display name of the child agent for STEP_STARTED.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SQL Performance Diagnostics</para>
+        /// <para>SQL performance diagnostics</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// <para>The step status of STEP_FINISHED, such as completed.</para>
+        /// <para>The step status for STEP_FINISHED, such as completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>completed</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string StepStatus { get; set; }
 
         /// <summary>
-        /// <para>The callback utility class.</para>
+        /// <para>The callback tool class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
-        /// <para>The error that occurred during tool invocation.</para>
+        /// <para>The error that occurred when invoking the tool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>error</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ToolCallError { get; set; }
 
         /// <summary>
-        /// <para>The tool invocation ID.</para>
+        /// <para>The tool call ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>call_edf9cdb69e0e4c9796a6a5a6</para>

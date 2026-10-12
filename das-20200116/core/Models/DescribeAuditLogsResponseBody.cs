@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The client IP addresses in the SQL log records.</para>
+        /// <para>The IP addresses of the clients in the SQL log records.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAuditLogsResponseBodyItems> Items { get; set; }
         public class DescribeAuditLogsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The client IP address in the query.</para>
+            /// <para>The IP address of the client in the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.104.16.251</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The client port number in the query.</para>
+            /// <para>The port number of the client in the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>53815</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// <para>The alert time, in milliseconds.</para>
+            /// <para>The alert time. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1536751124000</para>
@@ -107,11 +107,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? EffectRow { get; set; }
 
             /// <summary>
-            /// <para>The execution status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: failed.</description></item>
-            /// <item><description>1: succeeded.</description></item>
-            /// </list>
+            /// <para>The execution status. Valid values: 0: Failed. 1: Successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +117,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? ExecuteStatus { get; set; }
 
             /// <summary>
-            /// <para>The execution duration, in milliseconds.</para>
+            /// <para>The execution duration. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751870592000</para>
@@ -151,7 +147,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? InWhiteList { get; set; }
 
             /// <summary>
-            /// <para>The audit status of the instance.</para>
+            /// <para>The instance audit status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -182,8 +178,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             /// <summary>
             /// <para>The network type. Valid values:</para>
-            /// <para><b>default</b> (default): non-Alibaba Cloud service.</para>
-            /// <para><b>aliyun</b>: Alibaba Cloud service.</para>
+            /// <para><b>default</b>: Non-Alibaba Cloud services. This is the default value.</para>
+            /// <para><b>aliyun</b>: Alibaba Cloud services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun</para>
@@ -203,7 +199,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string LogSource { get; set; }
 
             /// <summary>
-            /// <para>The log execution time.</para>
+            /// <para>The log execution time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751870592000</para>
@@ -233,7 +229,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string OperateType { get; set; }
 
             /// <summary>
-            /// <para>The key of the OSS storage object.</para>
+            /// <para>The key of the OSS object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>N.A</para>
@@ -253,7 +249,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string PackageName { get; set; }
 
             /// <summary>
-            /// <para>The name of the product to which the data asset belongs. Valid values: RDS, PolarDB, PolarDB-X 2.0, and others.</para>
+            /// <para>The name of the product to which the data asset belongs. Valid values include RDS, PolarDB, and PolarDB-X 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -263,7 +259,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID that corresponds to the product name to which the data object belongs. Valid values:</para>
+            /// <para>The ID of the product to which the data object belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>3: ADB-MYSQL</description></item>
             /// <item><description>5: RDS</description></item>
@@ -292,7 +288,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RuleCategory { get; set; }
 
             /// <summary>
-            /// <para>The audit policy ID.</para>
+            /// <para>The audit rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9953411</para>
@@ -302,7 +298,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the audit policy.</para>
+            /// <para>The name of the audit rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -322,7 +318,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SqlText { get; set; }
 
             /// <summary>
-            /// <para>The table name used in the query.</para>
+            /// <para>The name of the table used in the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>it_table</para>
@@ -354,9 +350,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: low.</description></item>
-            /// <item><description><b>2</b>: medium.</description></item>
-            /// <item><description><b>3</b>: high.</description></item>
+            /// <item><description><b>1</b>: Low risk.</description></item>
+            /// <item><description><b>2</b>: Medium risk.</description></item>
+            /// <item><description><b>3</b>: High risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -369,9 +365,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The risk level name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Low.</description></item>
-            /// <item><description>Medium.</description></item>
-            /// <item><description>High.</description></item>
+            /// <item><description>Low risk.</description></item>
+            /// <item><description>Medium risk.</description></item>
+            /// <item><description>High risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -384,7 +380,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The page size for the paged query. This value indicates the number of records per page for paging.</para>
+        /// <para>The number of entries per page in the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

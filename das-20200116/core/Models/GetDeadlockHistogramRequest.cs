@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDeadlockHistogramRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The format is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the query. The format is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></para>
+        /// <para>Notice: This field is of the Long type. Precision loss may occur during serialization or deserialization. Ensure that the value does not exceed 9007199254740991.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>For PolarDB for MySQL instances, you must specify the node ID.</para>
+        /// <para>For a PolarDB for MySQL instance, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,12 +48,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The format is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the query. The format is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The start time can be at most 7 days earlier than the end time.</para>
+        /// <para>The start time cannot be more than 7 days earlier than the end time.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></para>
+        /// <para>Notice: This field is of the Long type. Precision loss may occur during serialization or deserialization. Ensure that the value does not exceed 9007199254740991.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
