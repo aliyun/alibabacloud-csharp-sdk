@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results. Omit this for the first request. For subsequent requests, set this to the <c>NextToken</c> from the previous response.</para>
+        /// <para>The pagination token. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The search keyword for a fuzzy match on Skill names.</para>
+        /// <para>The search keyword for fuzzy matching by skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analysis</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Q { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by visibility level. You can specify multiple values.</para>
+        /// <para>The visibility levels used to filter results. Multiple values can be specified.</para>
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

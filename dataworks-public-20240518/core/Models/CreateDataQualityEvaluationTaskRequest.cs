@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityEvaluationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If DataQualityRule.Id is not specified, a new rule is created based on the other fields and associated with the new quality monitoring task.</para>
+        /// <para>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If it is not specified, a new rule is created by using other fields and associated with the new quality monitoring task.</para>
         /// </summary>
         [NameInMap("DataQualityRules")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfig CheckingConfig { get; set; }
             public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfig : TeaModel {
                 /// <summary>
-                /// <para>The expression that specifies how to query reference samples. Some threshold types require querying reference samples and then aggregating the values of the reference samples to derive the threshold for comparison.</para>
+                /// <para>The expression that represents the query method for reference samples. Some types of thresholds require querying reference samples and aggregating their values to obtain the threshold for comparison.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;bizdate&quot;: [&quot;-1&quot;]}</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
                         /// <summary>
-                        /// <para>The threshold expression.</para>
-                        /// <para>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</para>
+                        /// <para>The threshold expression. </para>
+                        /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</description></item>
-                        /// <item><description>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                        /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
+                        /// <para>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>The comparison operator.</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>&gt;</description></item>
-                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>\&gt;</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
                         /// <item><description>!=</description></item>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
                         /// <summary>
-                        /// <para>The threshold expression.</para>
-                        /// <para>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</para>
+                        /// <para>The threshold expression. </para>
+                        /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</description></item>
-                        /// <item><description>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                        /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
+                        /// <para>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>The comparison operator.</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>&gt;</description></item>
-                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>\&gt;</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
                         /// <item><description>!=</description></item>
@@ -150,21 +150,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The threshold settings for normal warnings.</para>
+                    /// <para>The threshold settings for common warnings.</para>
                     /// </summary>
                     [NameInMap("Warned")]
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
                         /// <summary>
-                        /// <para>The threshold expression.</para>
-                        /// <para>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</para>
+                        /// <para>The threshold expression. </para>
+                        /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</description></item>
-                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</description></item>
-                        /// <item><description>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                        /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
+                        /// <para>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>The comparison operator.</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>&gt;</description></item>
-                        /// <item><description>&gt;=</description></item>
+                        /// <item><description>\&gt;</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
                         /// <item><description>!=</description></item>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The threshold calculation method.</para>
+                /// <para>The threshold calculation method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Fixed</description></item>
                 /// <item><description>Fluctation</description></item>
@@ -246,14 +246,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The list of error handlers for quality rule verification issues.</para>
+            /// <para>The list of error handlers for quality rule verification.</para>
             /// </summary>
             [NameInMap("ErrorHandlers")]
             [Validation(Required=false)]
             public List<CreateDataQualityEvaluationTaskRequestDataQualityRulesErrorHandlers> ErrorHandlers { get; set; }
             public class CreateDataQualityEvaluationTaskRequestDataQualityRulesErrorHandlers : TeaModel {
                 /// <summary>
-                /// <para>The SQL statement specified by the user to filter problematic data. This is required for custom SQL rules.</para>
+                /// <para>The SQL statement specified by the user to filter problematic data if the rule is a custom SQL rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT * FROM ods_api_log WHERE status = \&quot;Error\&quot;;</para>
@@ -263,9 +263,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ErrorDataFilter { get; set; }
 
                 /// <summary>
-                /// <para>The handler type:</para>
+                /// <para>The handler type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SaveErrorData: Retains problematic data.</description></item>
+                /// <item><description>SaveErrorData: Retain problematic data.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -307,21 +307,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The name of the sampling metric. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Count: the number of table rows.</description></item>
-                /// <item><description>Min: the minimum value of the field.</description></item>
-                /// <item><description>Max: the maximum value of the field.</description></item>
-                /// <item><description>Avg: the average value of the field.</description></item>
-                /// <item><description>DistinctCount: the number of distinct values in the field.</description></item>
-                /// <item><description>DistinctPercent: the ratio of distinct values in the field to the total number of rows.</description></item>
-                /// <item><description>DuplicatedCount: the number of duplicate values in the field.</description></item>
-                /// <item><description>DuplicatedPercent: the ratio of duplicate values in the field to the total number of rows.</description></item>
-                /// <item><description>TableSize: the table size.</description></item>
-                /// <item><description>NullValueCount: the number of rows where the field is null.</description></item>
-                /// <item><description>NullValuePercent: the ratio of rows where the field is null.</description></item>
-                /// <item><description>GroupCount: the count of rows for each value after aggregation by field value.</description></item>
-                /// <item><description>CountNotIn: the number of rows that do not match the enumerated values.</description></item>
-                /// <item><description>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</description></item>
-                /// <item><description>UserDefinedSql: sample collection through a custom SQL statement.</description></item>
+                /// <item><description>Count: The number of rows in the table.</description></item>
+                /// <item><description>Min: The minimum value of the field.</description></item>
+                /// <item><description>Max: The maximum value of the field.</description></item>
+                /// <item><description>Avg: The average value of the field.</description></item>
+                /// <item><description>DistinctCount: The number of unique values in the field.</description></item>
+                /// <item><description>DistinctPercent: The ratio of the number of unique values in the field to the number of data rows.</description></item>
+                /// <item><description>DuplicatedCount: The number of duplicate values in the field.</description></item>
+                /// <item><description>DuplicatedPercent: The ratio of the number of duplicate values in the field to the number of data rows.</description></item>
+                /// <item><description>TableSize: The size of the table.</description></item>
+                /// <item><description>NullValueCount: The number of rows where the field is null.</description></item>
+                /// <item><description>NullValuePercent: The ratio of rows where the field is null.</description></item>
+                /// <item><description>GroupCount: The number of data rows corresponding to each value after aggregation by field value.</description></item>
+                /// <item><description>CountNotIn: The number of rows that do not match the enumerated values.</description></item>
+                /// <item><description>CountDistinctNotIn: The number of unique values that do not match the enumerated values.</description></item>
+                /// <item><description>UserDefinedSql: Sample collection by using custom SQL statements.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string MetricParameters { get; set; }
 
                 /// <summary>
-                /// <para>The filter condition used to perform secondary filtering on data that is not of interest during sampling. The maximum length is 16,777,215 characters.</para>
+                /// <para>The conditions for secondary filtering of irrelevant data during sampling. The maximum length is 16,777,215 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status != \&quot;Succeeded\&quot;</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SamplingFilter { get; set; }
 
                 /// <summary>
-                /// <para>The runtime parameter setting statements that are executed before the sampling statement. The maximum length is 1,000 characters. Currently, only MaxCompute is supported.</para>
+                /// <para>The runtime parameter setting statements inserted before the sampling statements are executed. The maximum length is 1,000 characters. Only MaxCompute is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.sql.type.system.odps2=True,odps.sql.hive.compatible=True</para>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The severity level of the rule for the business (corresponding to strong or weak rules on the page). Valid values:</para>
+            /// <para>The severity level of the rule for the business, which corresponds to strong and weak rules on the page. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Normal</description></item>
             /// <item><description>High</description></item>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</para>
+        /// <para>The ID of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the data quality monitor task.</para>
+        /// <para>The description of the data quality monitoring task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAPI create a data quality monitoring test</para>
@@ -411,17 +411,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The callback settings.</para>
+        /// <para>The hook settings.</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
         public List<CreateDataQualityEvaluationTaskRequestHooks> Hooks { get; set; }
         public class CreateDataQualityEvaluationTaskRequestHooks : TeaModel {
             /// <summary>
-            /// <para>The hook trigger condition. When this condition is met, the hook action is triggered. Only two types of conditional expressions are supported:</para>
+            /// <para>The trigger condition for the hook. When this condition is met, the hook action is triggered. Two conditional expressions are supported:</para>
             /// <ol>
-            /// <item><description>Specify a single combination of rule severity type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. This means that if any executed rule with a severity of High has a check result of Critical, the condition is met.</description></item>
-            /// <item><description>Specify multiple combinations of rule severity type and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. This means that the condition is met if any executed rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The enumerated values of severity in the conditional expression are consistent with those of severity in DataQualityRule, and the enumerated values of status are consistent with those of status in DataQualityResult.</description></item>
+            /// <item><description>Specify only one group of rule severity and check status. Example: <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the condition is met.</description></item>
+            /// <item><description>Specify multiple groups of rule severity and check status. Example: <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the check result of a rule with the Normal severity is Critical, or the check result of a rule with the Normal severity is Error, the condition is met. The valid values of severity in the conditional expression are the same as those in DataQualityRule, and the valid values of status are the same as those in DataQualityResult.</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -432,9 +432,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The hook type. Currently, only one type is supported:</para>
+            /// <para>The hook type. Only one type is supported:</para>
             /// <list type="bullet">
-            /// <item><description>BlockTaskInstance: Blocks the scheduling task from continuing to run. If the data quality monitor is triggered by a scheduling task, Hook.Condition is evaluated after quality monitoring completes to determine whether the scheduling task is blocked from continuing.</description></item>
+            /// <item><description>BlockTaskInstance: blocks the scheduled task from continuing to run. If the data quality monitoring task is triggered by a scheduled task, the system determines whether to block the scheduled task based on Hook.Condition after the data quality monitoring task is completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The name of the data quality monitor task.</para>
+        /// <para>The name of the data quality monitoring task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -465,9 +465,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDataQualityEvaluationTaskRequestNotifications Notifications { get; set; }
         public class CreateDataQualityEvaluationTaskRequestNotifications : TeaModel {
             /// <summary>
-            /// <para>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two types of conditional expressions are supported:</para>
-            /// <para>Specify a single combination of rule severity type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. This means that among the executed rules, if a rule with severity High has a check result of Critical, the condition is met.
-            /// Specify multiple combinations of rule severity type and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. This means that among the executed rules, if a rule with severity High has a check result of Critical, or a rule with severity Normal has a check result of Critical, or a rule with severity Normal has a check result of Error, the condition is met. The enumeration values of severity in the conditional expression are consistent with the severity enumeration in DataQualityRule, and the enumeration values of status are consistent with the status enumeration in DataQualityResult.</para>
+            /// <para>The trigger condition for notifications. When this condition is met, a message notification is triggered. Two conditional expressions are supported:</para>
+            /// <para>Specify only one group of rule severity and check status. Example: <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the condition is met.
+            /// Specify multiple groups of rule severity and check status. Example: <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the check result of a rule with the Normal severity is Critical, or the check result of a rule with the Normal severity is Error, the condition is met. The valid values of severity in the conditional expression are the same as those in DataQualityRule, and the valid values of status are the same as those in DataQualityResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</para>
@@ -507,9 +507,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationReceivers> NotificationReceivers { get; set; }
                 public class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationReceivers : TeaModel {
                     /// <summary>
-                    /// <para>The additional parameter settings for sending alerts. The value is in JSON format. The following keys are supported:</para>
+                    /// <para>The additional parameter settings in JSON format when an alert is sent. Supported keys:</para>
                     /// <list type="bullet">
-                    /// <item><description>atAll: Specifies whether to mention all members in the group when sending DingTalk alerts. This setting takes effect when ReceiverType is DingdingUrl.</description></item>
+                    /// <item><description>atAll: specifies whether to @all in the group when sending a DingTalk alert. This key takes effect only when ReceiverType is set to DingdingUrl.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -520,13 +520,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Extension { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the alert recipient.</para>
+                    /// <para>The type of the alert recipient. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>WebhookUrl: Custom webhook URL.</description></item>
-                    /// <item><description>FeishuUrl: Lark alert URL.</description></item>
-                    /// <item><description>DingdingUrl: DingTalk alert URL.</description></item>
-                    /// <item><description>WeixinUrl: WeCom alert URL.</description></item>
-                    /// <item><description>AliUid: Alibaba Cloud user ID.</description></item>
+                    /// <item><description>WebhookUrl: custom webhook URL</description></item>
+                    /// <item><description>FeishuUrl: Lark alert URL</description></item>
+                    /// <item><description>DingdingUrl: DingTalk alert URL</description></item>
+                    /// <item><description>WeixinUrl: WeCom alert URL</description></item>
+                    /// <item><description>AliUid: Alibaba Cloud user ID</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -550,7 +550,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
+        /// <para>This parameter is used to determine the DataWorks workspace used to invoke this API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -561,10 +562,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</para>
+        /// <para>The extension configurations in JSON string format. This parameter takes effect only for EMR data quality monitoring tasks.</para>
         /// <list type="bullet">
-        /// <item><description>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</description></item>
-        /// <item><description>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</description></item>
+        /// <item><description>queue: the YARN queue used to execute EMR data validation. Default value: the queue configured for the project.</description></item>
+        /// <item><description>sqlEngine: the SQL engine used to execute EMR data validation. Valid values:<list type="bullet">
+        /// <item><description>HIVE_SQL</description></item>
+        /// <item><description>SPARK_SQL</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -575,7 +580,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeConf { get; set; }
 
         /// <summary>
-        /// <para>The monitored object of the data quality monitor.</para>
+        /// <para>The monitored object for the data quality monitoring task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Target")]
@@ -583,7 +588,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDataQualityEvaluationTaskRequestTarget Target { get; set; }
         public class CreateDataQualityEvaluationTaskRequestTarget : TeaModel {
             /// <summary>
-            /// <para>The type of the database to which the table belongs. Valid values:</para>
+            /// <para>The database type of the table. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>maxcompute</description></item>
             /// <item><description>hologres</description></item>
@@ -603,7 +608,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The partition settings of the partitioned table.</para>
+            /// <para>The partition settings for the partitioned table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pt=$[yyyymmdd-1]</para>
@@ -626,24 +631,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The trigger configuration of the data quality check task.</para>
+        /// <para>The trigger configuration for the data quality check task.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]
         public CreateDataQualityEvaluationTaskRequestTrigger Trigger { get; set; }
         public class CreateDataQualityEvaluationTaskRequestTrigger : TeaModel {
             /// <summary>
-            /// <para>The list of scheduling task IDs. This parameter is valid only when Type is set to ByScheduledTaskInstance.</para>
+            /// <para>The list of scheduled task IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</para>
             /// </summary>
             [NameInMap("TaskIds")]
             [Validation(Required=false)]
             public List<long?> TaskIds { get; set; }
 
             /// <summary>
-            /// <para>The trigger type for quality monitoring. Valid values:</para>
+            /// <para>The trigger type for the data quality monitoring task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ByManual: manual trigger. This is the default value.</description></item>
-            /// <item><description>ByScheduledTaskInstance: triggered by an associated scheduled task instance.</description></item>
+            /// <item><description>ByManual: triggered manually. This is the default value.</description></item>
+            /// <item><description>ByScheduledTaskInstance: triggered by an associated scheduled task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

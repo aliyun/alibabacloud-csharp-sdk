@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the certificate file.</para>
+        /// <para>The ID of the certificate file, which is the unique identifier of the certificate file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the certificate file belongs.</para>
+        /// <para>The ID of the project to which the certificate file belongs. You can also call the ListProjects operation to query the workspace ID under the current tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

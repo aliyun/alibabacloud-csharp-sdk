@@ -10,19 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteDataSourceSharedRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>64B-587A-8CED-969E1973887FXXX-TT</para>
+        /// <para>64B-587A-8CED-969E1973887F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the sharing rule was deleted. Valid values:
-        /// -true: The sharing rule was deleted.
-        /// -false: The sharing rule failed to be deleted.</para>
+        /// <para>Indicates whether the data source sharing rule was deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

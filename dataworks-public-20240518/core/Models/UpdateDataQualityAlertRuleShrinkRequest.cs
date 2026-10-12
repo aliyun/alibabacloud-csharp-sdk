@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>The alert rule ID.</para>
+        /// <para>The ID of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105412</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The ID of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The monitoring target of the data quality monitoring alert rule.</para>
+        /// <para>The target of the data quality monitoring alert rule.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

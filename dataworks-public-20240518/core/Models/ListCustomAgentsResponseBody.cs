@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCustomAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paging information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListCustomAgentsResponseBodyPagingInfoAgents> Agents { get; set; }
             public class ListCustomAgentsResponseBodyPagingInfoAgents : TeaModel {
                 /// <summary>
-                /// <para>The ID of the user who created the agent.</para>
+                /// <para><b>The creator ID.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -34,27 +34,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>A description of the custom agent.</para>
+                /// <para><b>The description.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Data analysis assistant</para>
+                /// <para>Data analytics assistant</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the custom agent.</para>
+                /// <para><b>The display name.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>My assistant</para>
+                /// <para>My Assistant</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the agent was created, provided in milliseconds since the Unix epoch.</para>
+                /// <para><b>The creation time (UNIX timestamp in milliseconds).</b></para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the agent was last modified, provided in milliseconds since the Unix epoch.</para>
+                /// <para><b>The last modification time (UNIX timestamp in milliseconds).</b></para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string GmtModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who last modified the agent.</para>
+                /// <para><b>The last modifier ID.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifierId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom agent.</para>
+                /// <para><b>The agent name.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The visibility level of the custom agent.</para>
+                /// <para><b>The visibility level.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TENANT</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token to retrieve the next page of results. This parameter is empty when there are no more results to return.</para>
+            /// <para>The token for the next page. An empty value indicates that the last page is reached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the filter criteria.</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

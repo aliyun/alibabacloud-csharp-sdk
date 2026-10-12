@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production</description></item>
-        /// <item><description>Dev: development</description></item>
+        /// <item><description>Prod: production.</description></item>
+        /// <item><description>Dev: development.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<ExecuteAdhocWorkflowInstanceRequestTasks> Tasks { get; set; }
         public class ExecuteAdhocWorkflowInstanceRequestTasks : TeaModel {
             /// <summary>
-            /// <para>The client unique code of the task, which is used to uniquely identify a task.</para>
+            /// <para>The client unique code of the task, which uniquely identifies the task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ExecuteAdhocWorkflowInstanceRequestTasksDataSource DataSource { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksDataSource : TeaModel {
                 /// <summary>
-                /// <para>The data source name.</para>
+                /// <para>The name of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql_test</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ExecuteAdhocWorkflowInstanceRequestTasksDependencies> Dependencies { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksDependencies : TeaModel {
                 /// <summary>
-                /// <para>The output identifier of the upstream task.</para>
+                /// <para>The output identifier of the upstream task. Required when DependencyType is set to Normal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pre.odps_sql_demo_0</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The variable value. Specify the value in the format of <c>Upstream task Output:Upstream task output variable name</c>.</para>
+                    /// <para>The variable value. Specify it in the <c>Upstream task Output:upstream task output variable name</c> format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>upstream_task_output:key1</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs> TaskOutputs { get; set; }
                 public class ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs : TeaModel {
                     /// <summary>
-                    /// <para>The output identifier.</para>
+                    /// <para>The output identifier. Example: pre.odps_sql_demo_0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pre.odps_sql_demo_0</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The runtime environment configuration, such as resource group information.</para>
+            /// <para>The runtime environment configurations, such as the resource group information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuntimeResource")]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource RuntimeResource { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource : TeaModel {
                 /// <summary>
-                /// <para>The compute unit (CU) consumption configured for the task.</para>
+                /// <para>The CU consumption configured for task execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.25</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cu { get; set; }
 
                 /// <summary>
-                /// <para>The image ID configured for the task.</para>
+                /// <para>The ID of the image configured for task execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxx</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the schedule resource group configured for the task.</para>
+                /// <para>The identifier of the scheduling resource group configured for task execution.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The script information for running the task.</para>
+            /// <para>The script information.</para>
             /// </summary>
             [NameInMap("Script")]
             [Validation(Required=false)]
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The timeout period for task execution. Unit: seconds.</para>
+            /// <para>The timeout period for task execution, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>

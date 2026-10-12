@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The connection properties of the data source, including the endpoint, access identity, and environment context. The envType property is a member of this object and specifies the data source environment. Valid values:</para>
+        /// <para>The specific connection configuration of the data source, including the endpoint, access identity, and environment context. The envType property of this object specifies the data source environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev: development environment.</description></item>
-        /// <item><description>Prod: production environment.</description></item>
+        /// <item><description>Dev: Development environment.</description></item>
+        /// <item><description>Prod: Production environment.</description></item>
         /// </list>
-        /// <para>Different data source types have different property specifications under different connection patterns (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection properties ConnectionProperties</a>.</para>
+        /// <para>Different data source types have different property specifications in different configuration patterns (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">ConnectionProperties</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionProperties { get; set; }
 
         /// <summary>
-        /// <para>The connection mode of the data source. Different types have different subtypes with different parameter constraints. For example, a MySQL data source supports the following modes:</para>
+        /// <para>The category in which the data source is added. Different data source types have different subtypes and parameter constraints. For example, a MySQL data source supports the following modes:</para>
         /// <list type="bullet">
-        /// <item><description>InstanceMode (instance mode)</description></item>
-        /// <item><description>UrlMode (connection string mode)</description></item>
+        /// <item><description>InstanceMode: Instance mode.</description></item>
+        /// <item><description>UrlMode: Connection string mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source. The name can contain letters, digits, and underscores (_), and cannot start with a digit or underscore. The name can be up to 255 characters in length.</para>
+        /// <para>The name of the data source. The name can contain letters, digits, and underscores (_), and cannot start with a digit or an underscore. The name can be up to 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
-        /// <para>This parameter specifies the DataWorks workspace for this API call.</para>
+        /// <para>This parameter specifies the DataWorks workspace used for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. More than 70 data source types are supported. For more information about the enumerated data source types, refer to References: <a href="https://help.aliyun.com/document_detail/2852465.html">Data source type list</a>.</para>
+        /// <para>The type of the data source. More than 70 data source types are supported. References: <a href="https://help.aliyun.com/document_detail/2852465.html">Data source types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

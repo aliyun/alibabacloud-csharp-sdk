@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateComputeResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The specific connection configuration of the computing resource, including the connection address, access identity, and environment information. The environment type (EnvType) of the computing resource is a member attribute of this object, including DEV (development environment) and PROD (production environment). The value is not case-sensitive.</para>
+        /// <para>The specific connection configuration information of the compute resource, including the endpoint, access identity, and environment context. The EnvType property of the compute resource environment is a member attribute of this object. Valid values include DEV (development environment) and PROD (production environment). The value is case-insensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionProperties { get; set; }
 
         /// <summary>
-        /// <para>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode (instance mode) and UrlMode (connection string mode).</para>
+        /// <para>The category of the added compute resource. Different types have different subtypes, which correspond to different parameter schema constraints. Examples: InstanceMode for instance mode and UrlMode for connection string mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceMode</para>
@@ -39,17 +39,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionPropertiesMode { get; set; }
 
         /// <summary>
-        /// <para>The description of the computing resource. The maximum length is 3000 characters.</para>
+        /// <para>The description of the compute resource. The description can be up to 3,000 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Table level description</para>
+        /// <para>Hierarchical description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the computing resource.</para>
+        /// <para>The compute resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

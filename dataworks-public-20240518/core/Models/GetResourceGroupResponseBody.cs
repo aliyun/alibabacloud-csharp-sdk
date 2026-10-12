@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The detailed information of the resource group.</para>
+        /// <para>The resource group details.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The creation time, represented as a 64-bit timestamp.</para>
+            /// <para>The creation time, which is a 64-bit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1727055811000</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The ID of the default VPC bound to the resource group.</para>
+            /// <para>The ID of the default VPC associated with the general resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefaultVpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the default vSwitch bound to the resource group.</para>
+            /// <para>The ID of the default vSwitch associated with the general resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the resource group.</para>
+            /// <para>The remarks for the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create a common resource group for common tasks</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonV2: new-version general-purpose resource group.</description></item>
+            /// <item><description>CommonV2: general resource group V2.</description></item>
             /// <item><description>ExclusiveDataIntegration: exclusive data integration resource group.</description></item>
             /// <item><description>ExclusiveScheduler: exclusive scheduling resource group.</description></item>
             /// <item><description>ExclusiveDataService: exclusive data service resource group.</description></item>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ResourceGroupType { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the resource group.</para>
+            /// <para>The resource group specification.</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
@@ -205,17 +205,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The status of the resource group. Valid values:</para>
+            /// <para>The status of the queried resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: normal (running/in service).</description></item>
+            /// <item><description>Normal: normal (running or in service).</description></item>
             /// <item><description>Stop: frozen (expired).</description></item>
-            /// <item><description>Deleted: deleted (released/destroyed).</description></item>
-            /// <item><description>Creating: being created.</description></item>
+            /// <item><description>Deleted: deleted (released or destroyed).</description></item>
+            /// <item><description>Creating: creating.</description></item>
             /// <item><description>CreateFailed: creation failed.</description></item>
-            /// <item><description>Updating: being updated (scaling out/scaling in/specification change in progress).</description></item>
-            /// <item><description>UpdateFailed: update failed (scale-out failed/upgrade failed).</description></item>
-            /// <item><description>Deleting: being deleted (being released/being destroyed).</description></item>
-            /// <item><description>DeleteFailed: deletion failed (release failed/destruction failed).</description></item>
+            /// <item><description>Updating: updating (scaling in, scaling out, or changing specifications).</description></item>
+            /// <item><description>UpdateFailed: update failed (scale-in failed or upgrade failed).</description></item>
+            /// <item><description>Deleting: deleting (releasing or destroying).</description></item>
+            /// <item><description>DeleteFailed: deletion failed (release failed or destruction failed).</description></item>
             /// <item><description>Timeout: operation timed out.</description></item>
             /// <item><description>Freezed: frozen.</description></item>
             /// <item><description>Starting: starting.</description></item>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

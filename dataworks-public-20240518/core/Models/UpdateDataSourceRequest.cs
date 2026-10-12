@@ -10,14 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</para>
+        /// <para>The specific connection configuration of the data source, including the endpoint, access identity, and environment context. The EnvType property of the data source environment is a member attribute of this object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
+        /// <item><description>Dev: development environment.</description></item>
+        /// <item><description>Prod: production environment.</description></item>
         /// </list>
-        /// <para>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</para>
+        /// <para>Different types of data sources have different attribute specifications in different configuration patterns (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Connection properties</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionProperties { get; set; }
 
         /// <summary>
-        /// <para>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</para>
+        /// <para>The category used to add the data source. Different types have different subtypes and corresponding parameter constraints. Examples:</para>
         /// <list type="bullet">
-        /// <item><description><para>InstanceMode: instance mode</para>
-        /// </description></item>
-        /// <item><description><para>UrlMode: connection string mode</para>
-        /// </description></item>
+        /// <item><description>InstanceMode: instance mode.</description></item>
+        /// <item><description>UrlMode: connection string mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConnectionPropertiesMode { get; set; }
 
         /// <summary>
-        /// <para>The description of the data source. The description cannot exceed 3,000 characters in length.</para>
+        /// <para>The description of the data source. The description can be up to 3,000 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The data source ID.</para>
+        /// <para>The unique identifier of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

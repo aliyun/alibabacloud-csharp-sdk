@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ReplyAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The JSON-RPC response. Returns Result on success or Error on protocol errors.</para>
+        /// <para>The JSON-RPC response. Returns Result on success and Error on protocol errors.</para>
         /// </summary>
         [NameInMap("JsonRpcResponse")]
         [Validation(Required=false)]
         public ReplyAgentSessionResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ReplyAgentSessionResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The JSON-RPC fault information. For example, DAEMON_PERMISSION_UNAVAILABLE is returned when the daemon reply feature is not enabled.</para>
+            /// <para>The JSON-RPC fault message. For example, DAEMON_PERMISSION_UNAVAILABLE is returned when the daemon reply feature is not enabled.</para>
             /// </summary>
             [NameInMap("Error")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The JSON-RPC correlation ID for this reply request.</para>
+            /// <para>The JSON-RPC correlation ID for the current reply request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>reply-rpc-001</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The reply processing result. This only indicates whether the reply was accepted, not whether the original task has completed.</para>
+            /// <para>The reply processing result. It only indicates whether the current reply is accepted, and does not indicate that the original task execution is completed.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public ReplyAgentSessionResponseBodyJsonRpcResponseResult Result { get; set; }
             public class ReplyAgentSessionResponseBodyJsonRpcResponseResult : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the daemon accepted the reply. A value of true indicates that the daemon accepted the reply. A value of false indicates that the reply was not accepted. Possible reasons include an unknown request, an already processed request, an expired request, or a nonexistent session. You cannot determine the specific reason from this value.</para>
+                /// <para>Indicates whether the daemon accepts the current reply. A value of true indicates that the reply is accepted. A value of false indicates that the reply is not accepted, which may be because the request is unknown, already processed, expired, or the session does not exist. The specific cause cannot be distinguished based on this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The response time. This is a UNIX timestamp, in milliseconds.</para>
+            /// <para>The response time. It is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1789549200000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID for this call, which can be used for troubleshooting.</para>
+        /// <para>The request ID for the current call, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>

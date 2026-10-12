@@ -30,23 +30,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The unique identifier of the general resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
+        /// <para>Serverless_res_group_524257424564736_6831777003****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The fields used for sorting. Fields such as scheduled time and start time are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The sort fields. Supports fields such as scheduled time and start time. The format is sort field + sort order (Desc/Asc), where Asc can be omitted. Valid values for sort fields:</para>
         /// <list type="bullet">
-        /// <item><description>Id (Desc/Asc): the network ID</description></item>
-        /// <item><description>Status (Desc/Asc): the network status</description></item>
-        /// <item><description>CreateUser (Desc/Asc): the user who created the network</description></item>
-        /// <item><description>CreateTime (Desc/Asc): the time when the network was created</description></item>
+        /// <item><description>Id (Desc/Asc): Network ID</description></item>
+        /// <item><description>Status (Desc/Asc): Network status</description></item>
+        /// <item><description>CreateUser (Desc/Asc): Creator</description></item>
+        /// <item><description>CreateTime (Desc/Asc): Creation time</description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc.</para>
         /// 

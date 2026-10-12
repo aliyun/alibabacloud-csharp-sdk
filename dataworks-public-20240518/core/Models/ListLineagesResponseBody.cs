@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paging result.</para>
+        /// <para>The pagination result.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListLineagesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListLineagesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The lineage information list.</para>
+            /// <para>The list of lineage information.</para>
             /// </summary>
             [NameInMap("Lineages")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned data, used for pagination.</para>
+            /// <para>The page number of the returned data, which is used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size. Default value: 10.</para>
+            /// <para>The number of entries per page. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

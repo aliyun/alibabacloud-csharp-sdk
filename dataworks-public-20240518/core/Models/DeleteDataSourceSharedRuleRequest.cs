@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteDataSourceSharedRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The sharing rule ID.</para>
+        /// <para>The ID of the data source sharing rule. You can call the ListDataSourceSharedRules operation to query existing sharing rules and their IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

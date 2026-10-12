@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineagesRequest : TeaModel {
         /// <summary>
-        /// <para>The destination entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</para>
+        /// <para>The destination entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlf-table::catalog_id:database_name::table_name</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? NeedAttachRelationship { get; set; }
 
         /// <summary>
-        /// <para>The sort direction. Default value: Asc. Valid values:</para>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order.</description></item>
-        /// <item><description>Desc: descending order.</description></item>
+        /// <item><description>Asc: ascending order</description></item>
+        /// <item><description>Desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RecentDays { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Default value: Name, which sorts by lineage entity name.</para>
+        /// <para>The sort field. Default value: Name. The entities are sorted by lineage entity name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Name</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The source entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</para>
+        /// <para>The source entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>

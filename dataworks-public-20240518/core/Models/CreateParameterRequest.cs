@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the parameter.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个测试参数</para>
+        /// <para>This is a test parameter</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The parameter name. It must be unique within the workspace, be prefixed with <c>workspace.</c>, and not exceed 255 characters. The part of the name after the prefix must start with a letter and can contain only letters, digits, and underscores (_).</para>
+        /// <para>The name of the parameter. It must be unique within the workspace. It must start with &quot;workspace.&quot;. The subsequent content must start with a letter and can contain only letters, underscores, and digits. The total length of the name cannot exceed 255 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. This parameter is required when <c>Scope</c> is set to <c>Project</c>.</para>
+        /// <para>The workspace ID. This parameter is required when Scope is set to Project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The value configurations for the parameter. A configuration for the production environment is required. If you provide duplicate configurations for an environment, only the first one is used.</para>
+        /// <para>The parameter value configurations. This parameter is required for the production environment. If duplicate environment configurations exist in the array, the subsequent configurations do not take effect.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Properties")]
@@ -61,12 +61,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<CreateParameterRequestProperties> Properties { get; set; }
         public class CreateParameterRequestProperties : TeaModel {
             /// <summary>
-            /// <para>The environment.</para>
+            /// <para>The project environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Prod</c>: production environment</para>
-            /// </description></item>
-            /// <item><description><para><c>Dev</c>: development environment</para>
-            /// </description></item>
+            /// <item><description>Prod: production.</description></item>
+            /// <item><description>Dev: development.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter. The value can contain Chinese characters, letters, digits, and the following special characters: /, :, ., [, ], ,, \, \&quot;, &quot;, _, =, ?, space, carriage return, line feed, +, -, \*, %, &amp;, @, !, $, #, {, and }.</para>
+            /// <para>The parameter value. Only Chinese characters, letters, digits, and specific special characters are allowed, such as /, :, ., [, ], ,, \, \&quot;, &quot;, _, =, ?, space, carriage return, line feed, +, -, *, %, &amp;, @, !, $, #, {, and }.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value123</para>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The scope of the parameter. The default value is <c>Project</c>. No other values are currently supported.</para>
+        /// <para>The scope of the parameter. Default value: Project. Other types are currently not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Project</para>
@@ -99,14 +97,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The type of the parameter.</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PlainConstant</c>: plaintext constant.</para>
-        /// </description></item>
-        /// <item><description><para><c>SecretConstant</c>: secret constant.</para>
-        /// </description></item>
-        /// <item><description><para><c>Variable</c>: variable.</para>
-        /// </description></item>
+        /// <item><description>PlainConstant: plaintext constant.</description></item>
+        /// <item><description>SecretConstant: ciphertext constant.</description></item>
+        /// <item><description>Variable: variable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

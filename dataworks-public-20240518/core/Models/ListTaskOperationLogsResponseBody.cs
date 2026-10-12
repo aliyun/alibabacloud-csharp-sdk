@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The object type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Task: node</description></item>
-                /// <item><description>TaskInstance: node instance</description></item>
+                /// <item><description>Task: task.</description></item>
+                /// <item><description>TaskInstance: task instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? OperationSeq { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node on which the operation was performed.</para>
+                /// <para>The ID of the operated task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node instance on which the operation was performed.</para>
+                /// <para>The ID of the operated task instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? TaskInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The account ID of the user who performed the operation.</para>
+                /// <para>The account ID of the operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>

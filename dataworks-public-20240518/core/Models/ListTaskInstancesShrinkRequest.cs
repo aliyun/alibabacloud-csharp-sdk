@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</para>
+        /// <para>The business date. Typically, this is 00:00:00 of the day before the scheduled time of the periodic instance, in the format of a millisecond-level timestamp, such as 1743350400000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The filter. The value is in JSON format. Multiple filter conditions are combined with AND logic. Currently supported fields: <c>startedTimeStart, startedTimeEnd, finishedTimeStart, finishedTimeEnd, createTimeStart, createTimeEnd</c></para>
+        /// <para>The filter conditions in JSON format. Multiple filter conditions are combined with the AND logical operator. Supported fields: <c>startedTimeStart</c>, <c>startedTimeEnd</c>, <c>finishedTimeStart</c>, <c>finishedTimeEnd</c>, <c>createTimeStart</c>, and <c>createTimeEnd</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If an instance has been rerun, specifying this parameter returns the historical information including reruns. You can use RunNumber to distinguish each historical record.</para>
+        /// <para>The task instance ID. A task instance may be rerun. If you specify this parameter, the response includes historical rerun records, which are distinguished by RunNumber.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs. You can use this parameter to query multiple instances in a batch.</para>
+        /// <para>The task instance IDs. You can specify multiple task instance IDs to query task instances in batches.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the node owner.</para>
+        /// <para>The account ID of the task owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production.</description></item>
-        /// <item><description>Dev: development.</description></item>
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The schedule resource information. Specify the identifier of the schedule resource group.</para>
+        /// <para>The resource group information. Specify the identifier of the scheduling resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeResource { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Supports fields such as scheduled time and start time. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values:</para>
+        /// <para>The sort field. Fields such as scheduled time and start time are supported. The format is \&quot;Sort field + Sort order (Desc/Asc)\&quot;, where Asc can be omitted. Valid values for the sort field:</para>
         /// <list type="bullet">
         /// <item><description><para><c>TriggerTime (Desc/Asc)</c></para>
         /// </description></item>
@@ -143,14 +143,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. Valid values:</para>
+        /// <para>The status of the task instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>NotRun</c>: not run.</description></item>
-        /// <item><description><c>Running</c>: running.</description></item>
-        /// <item><description><c>Failure</c>: failed.</description></item>
-        /// <item><description><c>Success</c>: succeeded.</description></item>
-        /// <item><description><c>WaitTime</c>: waiting for the scheduled time.</description></item>
-        /// <item><description><c>WaitResource</c>: waiting for resources.</description></item>
+        /// <item><description><c>NotRun</c>: not run</description></item>
+        /// <item><description><c>Running</c>: running</description></item>
+        /// <item><description><c>Failure</c>: failed</description></item>
+        /// <item><description><c>Success</c>: successful</description></item>
+        /// <item><description><c>WaitTime</c>: waiting for scheduled time</description></item>
+        /// <item><description><c>WaitResource</c>: waiting for resources</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the corresponding node.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The list of node IDs. You can use this parameter to query instances of multiple nodes in a batch.</para>
+        /// <para>The task IDs. You can specify multiple task IDs to query task instances in batches.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public string TaskIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the corresponding node. Fuzzy match is supported.</para>
+        /// <para>The task name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL node</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The node type. For the TaskType values of each node, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</para>
+        /// <para>The task type. For the valid values of TaskType for each node, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ODPS_SQL</para>
@@ -198,11 +198,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The run mode at the time of triggering. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</para>
+        /// <para>The run mode upon triggering. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pause: paused.</description></item>
-        /// <item><description>Skip: dry run.</description></item>
-        /// <item><description>Normal: normal run.</description></item>
+        /// <item><description>Pause: pause</description></item>
+        /// <item><description>Skip: dry run</description></item>
+        /// <item><description>Normal: normal run</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,8 +215,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduler: triggered by periodic scheduling.</description></item>
-        /// <item><description>Manual: manually triggered.</description></item>
+        /// <item><description>Scheduler: periodic scheduling</description></item>
+        /// <item><description>Manual: manual</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TriggerType { get; set; }
 
         /// <summary>
-        /// <para>The unified workflow instance ID. All instances within the same business date under a single trigger share the same value for this field.</para>
+        /// <para>The unified workflow instance ID. This value is the same for all task instances within a specific business date under a single trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? UnifiedWorkflowInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to which the instance belongs.</para>
+        /// <para>The ID of the associated workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow instance to which the instance belongs.</para>
+        /// <para>The ID of the associated workflow instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance to which the instance belongs. Valid values:</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SmokeTest: test.</description></item>
-        /// <item><description>Manual: manual node.</description></item>
-        /// <item><description>SupplementData: data backfill.</description></item>
-        /// <item><description>ManualWorkflow: manual workflow.</description></item>
-        /// <item><description>Normal: periodic scheduling.</description></item>
-        /// <item><description>TriggerWorkflow: trigger-based workflow.</description></item>
+        /// <item><description>SmokeTest: test</description></item>
+        /// <item><description>Manual: manual task</description></item>
+        /// <item><description>SupplementData: data backfill</description></item>
+        /// <item><description>ManualWorkflow: manual workflow</description></item>
+        /// <item><description>Normal: periodic scheduling</description></item>
+        /// <item><description>TriggerWorkflow: triggered workflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

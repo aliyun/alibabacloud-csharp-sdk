@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataAssetTagRequest : TeaModel {
         /// <summary>
-        /// <para>The label description.</para>
+        /// <para>The tag description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The label key.</para>
+        /// <para>The tag key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The list of label administrators.</para>
+        /// <para>The list of tag administrators.</para>
         /// </summary>
         [NameInMap("Managers")]
         [Validation(Required=false)]
         public List<string> Managers { get; set; }
 
         /// <summary>
-        /// <para>The label value type. Valid values:</para>
+        /// <para>The tag value type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Boolean</description></item>
         /// <item><description>Int</description></item>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ValueType { get; set; }
 
         /// <summary>
-        /// <para>The list of label values.</para>
+        /// <para>The list of tag values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

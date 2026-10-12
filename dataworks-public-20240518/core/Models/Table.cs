@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class Table : TeaModel {
         /// <summary>
-        /// <para>The business metadata related to DataWorks, including usage instructions, tags, categories, upstream production nodes, and extended information.</para>
+        /// <para>The business metadata related to DataWorks, including the instructions, tags, categories, upstream output tasks, and extension information.</para>
         /// </summary>
         [NameInMap("BusinessMetadata")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test category</para>
+                /// <para>测试类目</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The parent category ID. This parameter can be empty.</para>
+                /// <para>The parent category ID. This field can be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CATEGORY.123</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The custom attribute values, where key is the custom attribute identifier and value is the list of attribute values.</para>
+            /// <para>The custom attribute values, where the key is the custom attribute identifier and the value is the list of attribute values.</para>
             /// </summary>
             [NameInMap("CustomAttributes")]
             [Validation(Required=false)]
             public Dictionary<string, List<string>> CustomAttributes { get; set; }
 
             /// <summary>
-            /// <para>The extension information. Currently only supported for MaxCompute type.</para>
+            /// <para>The extension information. This parameter is currently supported only for the MaxCompute type.</para>
             /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// <para>The favorite count.</para>
+                /// <para>The number of times added to favorites.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The read count.</para>
+                /// <para>The number of reads.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ReadCount { get; set; }
 
                 /// <summary>
-                /// <para>The view count.</para>
+                /// <para>The number of views.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The usage instructions.</para>
+            /// <para>The instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <h2>Usage instructions</h2>
+            /// <h2>Instructions</h2>
             /// </summary>
             [NameInMap("Readme")]
             [Validation(Required=false)]
@@ -168,14 +168,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The list of upstream nodes.</para>
+            /// <para>The list of upstream output tasks.</para>
             /// </summary>
             [NameInMap("UpstreamTasks")]
             [Validation(Required=false)]
             public List<TableBusinessMetadataUpstreamTasks> UpstreamTasks { get; set; }
             public class TableBusinessMetadataUpstreamTasks : TeaModel {
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The node name.</para>
+                /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_task</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in millisecond-level timestamp.</para>
+        /// <para>The creation time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736852168000</para>
@@ -220,28 +220,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
-        /// <para>The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}</c>. Use an empty character as a placeholder for levels that do not exist.</para>
+        /// <para>The format is <c>${EntityType}:${Instance ID or URL-encoded URL}:${Data catalog identifier}:${Database name}:${Schema name}:${Table name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
         /// <remarks>
-        /// <para>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</para>
+        /// <para>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For the MaxCompute type, the database name is the MaxCompute project name. Projects with the three-level model enabled must provide the schema name. For projects without the three-level model enabled, use an empty string as a placeholder for the schema name.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</para>
+        /// <para>For the StarRocks type, the data catalog identifier is the catalog name. For the DLF type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder. </para>
         /// </remarks>
-        /// <para>The following examples show the ID formats for common types:</para>
+        /// <para>The ID formats for several common types are as follows: </para>
         /// <para><c>maxcompute-table:::project_name:[schema_name]:table_name</c></para>
         /// <para><c>dlf-table::catalog_id:database_name::table_name</c></para>
         /// <para><c>hms-table:instance_id::database_name::table_name</c></para>
         /// <para><c>holo-table:instance_id::database_name:schema_name:table_name</c></para>
         /// <para><c>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</c></para>
         /// <remarks>
-        /// <para>Where  </para>
-        /// <para><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.  </para>
-        /// <para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </para>
-        /// <para><c>catalog_id</c>: The DLF catalog ID.  </para>
-        /// <para><c>project_name</c>: The MaxCompute project name.  </para>
-        /// <para><c>database_name</c>: The database name.  </para>
-        /// <para><c>schema_name</c>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.  </para>
-        /// <para><c>table_name</c>: The table name.</para>
+        /// <para>Where:<br><c>instance_id</c>: The instance ID, which is required when the data source is registered in instance mode.<br><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string, which is required when the data source is registered in connection string mode.<br><c>catalog_id</c>: The DLF catalog ID.<br><c>project_name</c>: The MaxCompute project name.<br><c>database_name</c>: The database name.<br><c>schema_name</c>: The schema name. For the MaxCompute type, this is required only when the three-level model is enabled for the project. If it is not enabled, use an empty string as a placeholder.<br><c>table_name</c>: The table name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -252,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The modification time, in millisecond-level timestamp.</para>
+        /// <para>The modification time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736852168000</para>
@@ -272,32 +265,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The parent-level metadata entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
+        /// <para>The ID of the parent metadata entity. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For types that support schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the three-layer model to be enabled for the project</c>), ParentMetaEntityId is the database schema to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</c>. Use an empty character as a placeholder for levels that do not exist.</description></item>
-        /// <item><description>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <c>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</c>. Use an empty character as a placeholder for levels that do not exist.</description></item>
+        /// <item><description><para>For types that support schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</c>, where the MaxCompute type requires the three-level model to be enabled for the project), <c>ParentMetaEntityId</c> is the database schema to which the table belongs. The format is <c>${EntityType}:${Instance ID or URL-encoded URL}:${Data catalog identifier}:${Database name}:${Schema name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
+        /// </description></item>
+        /// <item><description><para>For other types, <c>ParentMetaEntityId</c> is the database to which the table belongs. The format is <c>${EntityType}:${Instance ID or URL-encoded URL}:${Data catalog identifier}:${Database name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</para>
+        /// <para>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For the MaxCompute type, the database name is the MaxCompute project name.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</para>
+        /// <para>For the StarRocks type, the data catalog identifier is the catalog name. For the DLF type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</para>
         /// </remarks>
-        /// <para>The following examples show the ParentMetaEntityId formats for common types:</para>
+        /// <para>The <c>ParentMetaEntityId</c> formats for several common types are as follows:</para>
         /// <para><c>maxcompute-project:::project_name</c></para>
-        /// <para><c>maxcompute-schema:::project_name:schema_name</c> (only when the three-layer model is enabled for the project)</para>
+        /// <para><c>maxcompute-schema:::project_name:schema_name</c> (Only when the three-level model is enabled for the project)</para>
         /// <para><c>dlf-database::catalog_id:database_name</c></para>
         /// <para><c>hms-database:instance_id::database_name</c></para>
         /// <para><c>holo-schema:instance_id::database_name:schema_name</c></para>
         /// <para><c>mysql-database:(instance_id|encoded_jdbc_url)::database_name</c></para>
         /// <remarks>
-        /// <para>Where  </para>
-        /// <para><c>instance_id</c>: The instance ID. This is required when the data source is registered in instance mode.  </para>
-        /// <para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </para>
-        /// <para><c>catalog_id</c>: The DLF catalog ID.  </para>
-        /// <para><c>project_name</c>: The MaxCompute project name.  </para>
-        /// <para><c>database_name</c>: The database name.  </para>
-        /// <para><c>schema_name</c>: The schema name.</para>
+        /// <para>Where:<br><c>instance_id</c>: The instance ID, which is required when the data source is registered in instance mode.<br><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string, which is required when the data source is registered in connection string mode.<br><c>catalog_id</c>: The DLF catalog ID.<br><c>project_name</c>: The MaxCompute project name.<br><c>database_name</c>: The database name.<br><c>schema_name</c>: The schema name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -308,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentMetaEntityId { get; set; }
 
         /// <summary>
-        /// <para>The list of partition keys. This is empty for non-partitioned tables.</para>
+        /// <para>The list of partition keys. This parameter is empty for non-partitioned tables.</para>
         /// </summary>
         [NameInMap("PartitionKeys")]
         [Validation(Required=false)]
@@ -336,7 +325,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public TableTechnicalMetadata TechnicalMetadata { get; set; }
         public class TableTechnicalMetadata : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the table is compressed.</para>
+            /// <para>Specifies whether the table is compressed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -393,7 +382,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public Dictionary<string, string> Parameters { get; set; }
 
             /// <summary>
-            /// <para>The class used by SerDe.</para>
+            /// <para>The class used for SerDe.</para>
             /// 
             /// <b>Example:</b>
             /// <para>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</para>

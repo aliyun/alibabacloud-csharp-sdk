@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<CreateResourceGroupRequestAliyunResourceTags> AliyunResourceTags { get; set; }
         public class CreateResourceGroupRequestAliyunResourceTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether auto-renewal is enabled.</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// </summary>
         [NameInMap("AutoRenewEnabled")]
         [Validation(Required=false)]
         public bool? AutoRenewEnabled { get; set; }
 
         /// <summary>
-        /// <para>The client idempotency token that is used to ensure the idempotence of the create resource group operation.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the common resource group. The name must start with a letter and can contain letters, digits, and underscores (_), up to 128 characters.</para>
+        /// <para>The name of the general-purpose resource group. It must start with a letter and can contain letters, digits, and underscores (_). It can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The payment duration.</para>
+        /// <para>The billing duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,11 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>The unit of the payment duration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month: monthly subscription.</description></item>
-        /// <item><description>Year: yearly subscription.</description></item>
-        /// </list>
+        /// <para>The unit of the billing duration. Month indicates months, and Year indicates years.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -102,11 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The payment type of the resource group. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// </list>
+        /// <para>The billing method of the resource group. PrePaid indicates subscription, and PostPaid indicates pay-as-you-go.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the common resource group. The remarks can contain letters, Chinese characters, digits, and underscores (_), up to 128 characters.</para>
+        /// <para>The remark of the general-purpose resource group. It can contain letters, Chinese characters, digits, and underscores (_). It can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Create a serverless resource group for common tasks</para>
@@ -127,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The resource group specification, in CUs. This parameter is required when the payment type is PrePaid.</para>
+        /// <para>The specifications of the resource group. Unit: CU. This parameter is required when the billing method of the resource group is PrePaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -137,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Spec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to associate by default.</para>
+        /// <para>The ID of the default VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to associate by default.</para>
+        /// <para>The ID of the default vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateWorkflowInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to run the workflow instance immediately after creation. Default value: true.</para>
+        /// <para>Specifies whether to run the instance immediately after it is created. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? AutoStartEnabled { get; set; }
 
         /// <summary>
-        /// <para>The reason for creating the workflow instance.</para>
+        /// <para>The reason for creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create for test</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production</description></item>
-        /// <item><description>Dev: development</description></item>
+        /// <item><description>Prod: production.</description></item>
+        /// <item><description>Dev: development.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tag creation policy. Valid values:</para>
+        /// <para>The tag creation policy.</para>
         /// <list type="bullet">
-        /// <item><description>Append: append mode. New tags are appended to the existing tags inherited from the manual workflow.</description></item>
-        /// <item><description>Overwrite: overwrite mode. Existing tags of the manual workflow are not inherited. Tags are created directly.</description></item>
+        /// <item><description>Append: Append mode. Inherits existing tags from the manual business process and appends new tags.</description></item>
+        /// <item><description>Overwrite: Overwrite mode. Does not inherit existing tags from the manual business process and directly creates tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TagCreationPolicy { get; set; }
 
         /// <summary>
-        /// <para>The list of node labels.</para>
+        /// <para>The list of task tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The node parameters used to set parameters for specific nodes. The value is in JSON format. The key is the node ID, and the value format refers to the node script parameter (the Task.Script.Parameter field in the GetTask response).</para>
+        /// <para>The task parameters. You can use this parameter to set parameters for specific tasks. The value is in JSON format. The key is the task ID. For the format of the value, refer to the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -116,11 +116,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: data backfill. The method for specifying RootTaskIds and IncludeTaskIds varies based on the data backfill pattern. For more information, see the DefaultRunProperties.Mode parameter description.</description></item>
-        /// <item><description>ManualWorkflow: manual workflow. Set WorkflowId to the ID of the manual workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual workflow is used.</description></item>
-        /// <item><description>Manual: manual node. Only RootTaskIds is required, which specifies the list of manual nodes to run.</description></item>
-        /// <item><description>SmokeTest: smoke test. Only RootTaskIds is required, which specifies the list of test nodes to run.</description></item>
-        /// <item><description>TriggerWorkflow: trigger-based workflow. Set WorkflowId to the ID of the trigger-based workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</description></item>
+        /// <item><description>SupplementData: data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill pattern. For more information, see the parameter description of DefaultRunProperties.Mode.</description></item>
+        /// <item><description>ManualWorkflow: manual workflow. You must set WorkflowId to the ID of the manual workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual workflow is used.</description></item>
+        /// <item><description>Manual: manual task. You only need to specify RootTaskIds, which is the list of manual tasks to be run.</description></item>
+        /// <item><description>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</description></item>
+        /// <item><description>TriggerWorkflow: trigger-based workflow. You must set WorkflowId to the ID of the trigger-based workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to which the instance belongs. The WorkflowId for periodic nodes is 1.</para>
+        /// <para>The ID of the workflow to which the task belongs. The WorkflowId of a periodic task is always 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters. This parameter takes effect when a unique workflow is specified (<c>WorkflowId != 1</c>). For periodic workflows and trigger-based workflows, the format is key=value, and the priority is lower than node parameters. For manual workflows, the format is JSON, and the priority is higher than node parameters.</para>
+        /// <para>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or a trigger-based workflow, the format is key=value, and the priority is lower than that of task parameters. For a manual workflow, the format is JSON, and the priority is higher than that of task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;key=value&quot; format:

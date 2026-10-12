@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListNetworksResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNetworksResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The network resources of the serverless resource group.</para>
+            /// <para>The list of detailed information about the network resources in the general resource group.</para>
             /// </summary>
             [NameInMap("NetworkList")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who creates the network resource.</para>
+                /// <para>The ID of the user who created the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11075500042XXXXX</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The network ID.</para>
+                /// <para>The ID of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the serverless resource group.</para>
+                /// <para>The unique identifier of the general resource group to which the network resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The security group ID.</para>
+                /// <para>The security group ID of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-2ze13vamugr7jenXXXXX</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the network resource. Valid values: Pending: waiting; Creating: being created; Running: running normally; Deleting: being deleted; Deleted: deleted.</para>
+                /// <para>The current status of the network resource. A value of Pending indicates that the resource is waiting. A value of Creating indicates that the resource is being created. A value of Running indicates that the resource is running normally. A value of Deleting indicates that the resource is being deleted. A value of Deleted indicates that the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC).</para>
+                /// <para>The VPC ID of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The VSwitch ID.</para>
+                /// <para>The vSwitch ID of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the conditions.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. It is used to locate logs and troubleshoot problems.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

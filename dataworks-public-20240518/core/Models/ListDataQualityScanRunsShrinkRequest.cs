@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityScanRunsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The earliest start time of a data quality scan run to include in the results. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The earliest start time of the data quality monitoring run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The latest start time of a data quality scan run to include in the results. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The latest start time of the data quality monitoring run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data quality scan.</para>
+        /// <para>The data quality monitoring ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityScanId { get; set; }
 
         /// <summary>
-        /// <para>An object with advanced filter conditions. The following parameters are supported:</para>
+        /// <para>The extension query filter. The following filter parameters are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>TaskInstanceId</c>: The ID of the task instance.</para>
-        /// </description></item>
-        /// <item><description><para><c>RunNumber</c>: The run number of the instance.</para>
-        /// </description></item>
+        /// <item><description>TaskInstanceId: the scheduled task instance ID.</description></item>
+        /// <item><description>RunNumber: the number of times the instance has run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -90,12 +88,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The sort field and order for the results. The format is <c>FieldName Order</c>. The default order is ascending (Asc). Supported fields:</para>
+        /// <para>The list of sort fields. Fields such as modification time and creation time are supported. The format is &quot;SortField+SortOrder(Desc/Asc)&quot;. The default value is Asc, which can be omitted. Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>Id (Desc/Asc)</para>
-        /// </description></item>
+        /// <item><description>CreateTime (Desc/Asc)</description></item>
+        /// <item><description>Id (Desc/Asc)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,18 +102,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The status of the data quality scan run. Valid values:</para>
+        /// <para>The status of the data quality check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pass</para>
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// </description></item>
-        /// <item><description><para>Error</para>
-        /// </description></item>
-        /// <item><description><para>Fail</para>
-        /// </description></item>
-        /// <item><description><para>Warn</para>
-        /// </description></item>
+        /// <item><description>Pass</description></item>
+        /// <item><description>Running</description></item>
+        /// <item><description>Error</description></item>
+        /// <item><description>Fail</description></item>
+        /// <item><description>Warn</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

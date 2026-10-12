@@ -1,3 +1,6 @@
+2026-10-12 Version: 6.9.3
+- Generated csharp 2024-05-18 for dataworks-public.
+
 2026-10-08 Version: 6.9.2
 - Update API ListTaskOperationLogs: add response parameters Body.PagingInfo.OperationLogs.$.ObjectType.
 - Update API ListTaskOperationLogs: add response parameters Body.PagingInfo.OperationLogs.$.TaskInstanceId.

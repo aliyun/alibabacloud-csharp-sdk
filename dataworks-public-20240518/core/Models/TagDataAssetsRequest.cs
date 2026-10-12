@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class TagDataAssetsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable lineage-based automatic backtracking.</para>
+        /// <para>Specifies whether to enable automatic data lineage backtracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? AutoTraceEnabled { get; set; }
 
         /// <summary>
-        /// <para>The data asset IDs.</para>
+        /// <para>The list of unique IDs of the data assets. You can call the ListDataAssets operation to query the IDs of data assets to which tags can be attached.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DataAssetIds")]
@@ -28,7 +28,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> DataAssetIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</para>
+        /// <para>The data asset type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DataWorks table (ACS::DataWorks::Table)</description></item>
+        /// <item><description>DataWorks scheduled task (ACS::DataWorks::Task)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,12 +43,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DataAssetType { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
+        /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
+        /// <item><description>Dev (development environment)</description></item>
+        /// <item><description>Prod (production environment)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to data assets.</para>
+        /// <para>The list of data asset tags to attach.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]

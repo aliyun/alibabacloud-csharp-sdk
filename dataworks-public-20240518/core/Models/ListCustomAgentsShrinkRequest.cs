@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCustomAgentsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return on a single page.</para>
+        /// <para>The maximum number of entries to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Omit this parameter for the first request. For subsequent requests, use the <c>NextToken</c> value from the previous response to retrieve the next page.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the <c>NextToken</c> value returned from the previous query to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The search keyword for a fuzzy match by agent name.</para>
+        /// <para>The search keyword used to perform a fuzzy match on agent names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analysis</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Q { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by visibility level. You can specify multiple levels.</para>
+        /// <para>The visibility levels used to filter results. You can specify multiple values.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

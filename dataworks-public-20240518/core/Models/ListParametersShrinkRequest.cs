@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListParametersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of parameter IDs.</para>
+        /// <para>The list of parameter IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }
 
         /// <summary>
-        /// <para>A list of parameter names.</para>
+        /// <para>The list of parameter names.</para>
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. Call the ListProjects operation to get the workspace ID.</para>
+        /// <para>The ID of the workspace. You can call the ListProjects operation to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the parameter. The default value is Project. Other values are not supported.</para>
+        /// <para>The scope of the parameter. Default value: Project. Other types are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Project</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The list of fields to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</para>
+        /// <para>The list of fields by which to sort the results. Supported fields include modification time and creation time. The format is &quot;SortField+SortOrder(Desc/Asc)&quot;. You can omit Asc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ModifyTime (Desc/Asc)</description></item>
         /// <item><description>CreateTime (Desc/Asc)</description></item>
@@ -89,14 +89,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The type of the parameter. Valid values:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PlainConstant: A plaintext constant.</para>
-        /// </description></item>
-        /// <item><description><para>SecretConstant: A secret constant.</para>
-        /// </description></item>
-        /// <item><description><para>Variable: A variable.</para>
-        /// </description></item>
+        /// <item><description>PlainConstant: plaintext constant.</description></item>
+        /// <item><description>SecretConstant: ciphertext constant.</description></item>
+        /// <item><description>Variable: variable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

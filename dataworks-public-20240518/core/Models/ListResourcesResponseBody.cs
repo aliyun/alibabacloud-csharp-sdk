@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListResourcesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListResourcesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the request, used for pagination.</para>
+            /// <para>The number of the page to return.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of resources returned by the query.</para>
+            /// <para>The resources returned by the query.</para>
             /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the file resource.</para>
                 /// <remarks>
-                /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</b>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</para>
+                /// <para>Notice: Before SDK 8.0.0, this field is of the Long type. In SDK 8.0.0 and later, this field is of the String type. <b>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</b>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -143,9 +143,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListResourcesResponseBodyPagingInfoResourcesScript Script { get; set; }
                 public class ListResourcesResponseBodyPagingInfoResourcesScript : TeaModel {
                     /// <summary>
-                    /// <para>The script ID.</para>
+                    /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</b>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</para>
+                    /// <para>Notice: Before SDK 8.0.0, this field is of the Long type. In SDK 8.0.0 and later, this field is of the String type. <b>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</b>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The source path of the file resource. This field is empty when the type is Local.</para>
+                /// <para>The source path of the file resource. This parameter is empty when the type is local.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</para>
@@ -197,11 +197,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The source storage type of the file resource.</para>
-                /// <para>Valid values:</para>
+                /// <para>The source storage type of the file resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Local: local storage.</description></item>
-                /// <item><description>Oss: Object Storage Service.</description></item>
+                /// <item><description>Local: local storage</description></item>
+                /// <item><description>Oss: Object Storage Service (OSS)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The target storage path of the file resource.</para>
+                /// <para>The destination storage path of the file resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</para>
@@ -222,12 +221,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string TargetPath { get; set; }
 
                 /// <summary>
-                /// <para>The target storage type of the file resource.</para>
-                /// <para>Valid values:</para>
+                /// <para>The destination storage type of the file resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Gateway: gateway.</description></item>
-                /// <item><description>Oss: Object Storage Service.</description></item>
-                /// <item><description>Hdfs: HDFS file storage system.</description></item>
+                /// <item><description>Gateway: gateway</description></item>
+                /// <item><description>Oss: Object Storage Service (OSS)</description></item>
+                /// <item><description>Hdfs: Hadoop Distributed File System (HDFS)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -238,8 +236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string TargetType { get; set; }
 
                 /// <summary>
-                /// <para>The resource file type.</para>
-                /// <para>Valid values:</para>
+                /// <para>The type of the resource. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Python</description></item>
                 /// <item><description>Jar</description></item>
@@ -257,7 +254,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries that meet the filter conditions.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131</para>
@@ -269,7 +266,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of this request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99EBE7CF-69C0-5089-BE3E-79563C31XXXX</para>

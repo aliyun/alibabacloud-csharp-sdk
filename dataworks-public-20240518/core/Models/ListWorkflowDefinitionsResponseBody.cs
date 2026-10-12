@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListWorkflowDefinitionsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListWorkflowDefinitionsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The number of the page to return.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the conditions.</para>
+            /// <para>The total number of entries that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>227</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The workflows.</para>
+            /// <para>The list of queried workflows.</para>
             /// </summary>
             [NameInMap("WorkflowDefinitions")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Description</para>
+                /// <para>The description of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Workflow description</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the workflow.</para>
                 /// <remarks>
-                /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <b>This change does not affect the normal use of the SDK. The parameter is still returned based on the type defined in the SDK</b>. However, if you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Owner</para>
+                /// <para>The owner of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</para>
+                    /// <para>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <b>This change does not affect the normal use of the SDK. The parameter is still returned based on the type defined in the SDK</b>. However, if you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The script path.</para>
+                    /// <para>The path of the script.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>XX/OpenAPI_test/workflow_test/OpenAPI_test_workflow_Demo</para>
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>Runtime</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime Runtime { get; set; }
                     public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>Command</para>
+                        /// <para>The command.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>WORKFLOW</para>
@@ -179,13 +179,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the workflow.</para>
-                /// <para>Valid values:</para>
+                /// <para>The type of the workflow. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>CycleWorkflow</para>
-                /// </description></item>
-                /// <item><description><para>ManualWorkflow</para>
-                /// </description></item>
+                /// <item><description>CycleWorkflow</description></item>
+                /// <item><description>ManualWorkflow</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C3ED0C5-ABAB-55E1-854B-DAC02B11XXXX</para>

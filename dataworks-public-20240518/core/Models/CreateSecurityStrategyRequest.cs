@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateSecurityStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</para>
+        /// <para>The idempotency parameter. This parameter is used to prevent duplicate operations caused by multiple calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The content of the strategy. This value is constrained by the <c>SecurityStrategySchema</c>.</para>
+        /// <para>The policy content. The content is constrained by SecurityStrategySchema.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Content")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateSecurityStrategyRequestContent Content { get; set; }
         public class CreateSecurityStrategyRequestContent : TeaModel {
             /// <summary>
-            /// <para>The control scope. This corresponds to the <c>controlDwScope</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The control scope. This is the name of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tenant</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ControlDwScope { get; set; }
 
             /// <summary>
-            /// <para>The control module. This corresponds to the <c>controlModule</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The control module. This is the controlModule of the SecurityStrategySchema associated with the current policy.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ControlModule { get; set; }
 
             /// <summary>
-            /// <para>The control submodule. This corresponds to the <c>controlSubModule</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The control submodule. This is the controlSubModule of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyCatalog</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ControlSubModule { get; set; }
 
             /// <summary>
-            /// <para>A list of controllers.</para>
-            /// <para><b>Note:</b> Valid controllers depend on the selected schema. For more information, see the controller definitions and the list of controllers for each schema.</para>
+            /// <para>The list of control items.</para>
+            /// <para>Note: Valid control items depend on the selected schema. Refer to the controller definitions and the control item list for each schema.</para>
             /// </summary>
             [NameInMap("Controllers")]
             [Validation(Required=false)]
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public object BasicEditionDefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>The valid value interval for Basic Edition, in the format <c>[min, max]</c>.</para>
+                /// <para>The valid value range for Basic Edition, in the format of [min, max].</para>
                 /// </summary>
                 [NameInMap("BasicEditionIntervalValue")]
                 [Validation(Required=false)]
                 public List<int?> BasicEditionIntervalValue { get; set; }
 
                 /// <summary>
-                /// <para>The controller identifier. For valid values, see the list of controllers for each schema.</para>
+                /// <para>The identifier of the control item. For valid values, refer to the control item list for each schema.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>viewCount</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Controller { get; set; }
 
                 /// <summary>
-                /// <para>The value type. Valid values: <c>Boolean</c>, <c>Integer</c>, <c>Long</c>, and <c>String</c>.</para>
+                /// <para>The value type. Valid values: Boolean, Integer, Long, and String.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Integer</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>查询结果-单次展示记录值上限</para>
+                /// <para>Query results - Maximum number of records displayed per query</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DisplayNameEn { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable this controller.</para>
+                /// <para>Specifies whether to enable the control item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public object EnterpriseEditionDefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>The valid value interval for Enterprise Edition, in the format <c>[min, max]</c>.</para>
+                /// <para>The valid value range for Enterprise Edition, in the format of [min, max].</para>
                 /// </summary>
                 [NameInMap("EnterpriseEditionIntervalValue")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public object ProfessionalEditionDefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>The valid value interval for Professional Edition, in the format <c>[min, max]</c>.</para>
+                /// <para>The valid value range for Professional Edition, in the format of [min, max].</para>
                 /// </summary>
                 [NameInMap("ProfessionalEditionIntervalValue")]
                 [Validation(Required=false)]
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public object StandardEditionDefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>The valid value interval for Standard Edition, in the format <c>[min, max]</c>.</para>
+                /// <para>The valid value range for Standard Edition, in the format of [min, max].</para>
                 /// </summary>
                 [NameInMap("StandardEditionIntervalValue")]
                 [Validation(Required=false)]
                 public List<int?> StandardEditionIntervalValue { get; set; }
 
                 /// <summary>
-                /// <para>The user-configured value. The type of this value depends on the <c>ControllerValueType</c> parameter.</para>
+                /// <para>The user-configured value. The type depends on <c>ControllerValueType</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -197,17 +197,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The <c>displayName</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The display name of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析</para>
+            /// <para>Data analysis</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The <c>displayNameEn</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The English display name of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Data Analysis</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DisplayNameEn { get; set; }
 
             /// <summary>
-            /// <para>The <c>name</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The name of the SecurityStrategySchema associated with the current policy.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The <c>systemPolicyDisplayName</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The name of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default system generate data query policy</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SystemPolicyDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The <c>systemPolicyName</c> property of the <c>SecurityStrategySchema</c> associated with the current strategy.</para>
+            /// <para>The name of the SecurityStrategySchema associated with the current policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para><b>The control scope. Valid values: Workspace and Tenant.</b></para>
+        /// <para>The control scope.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlDwScope { get; set; }
 
         /// <summary>
-        /// <para><b>Control module</b></para>
+        /// <para>The control module.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlModule { get; set; }
 
         /// <summary>
-        /// <para><b>Control submodule</b></para>
+        /// <para>The control submodule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCatalog</para>
@@ -282,28 +282,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlSubModule { get; set; }
 
         /// <summary>
-        /// <para><b>Strategy description</b></para>
+        /// <para>The description of the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>控制数据分析模块的查询结果安全行为</para>
+        /// <para>Controls the security behavior of query results in the data analysis module</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para><b>Strategy name</b></para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认数据分析策略</para>
+        /// <para>Default data analysis policy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para><b>Schema template name</b></para>
+        /// <para>The name of the schema template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>A list of associated workspace IDs.</para>
+        /// <para>The list of associated workspace IDs.</para>
         /// </summary>
         [NameInMap("Workspaces")]
         [Validation(Required=false)]

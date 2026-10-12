@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information of the batch operation. The structure is a map in which instance IDs are used as keys and result information is used as values.</para>
+        /// <para>The result information of the batch operation. The structure is a map where the task instance ID is the key and the result information is the value.</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

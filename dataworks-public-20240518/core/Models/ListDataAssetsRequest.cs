@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CategoryUuid { get; set; }
 
         /// <summary>
-        /// <para>The list of unique data asset IDs.</para>
+        /// <para>The list of unique IDs of the data assets.</para>
         /// </summary>
         [NameInMap("DataAssetIds")]
         [Validation(Required=false)]
         public List<string> DataAssetIds { get; set; }
 
         /// <summary>
-        /// <para>The Asset Type of the data asset. Valid values:</para>
+        /// <para>The asset type of the data asset.</para>
         /// <list type="bullet">
-        /// <item><description><para>ACS::DataWorks::Table: data table.</para>
+        /// <item><description><para>DataWorks table (ACS::DataWorks::Table)</para>
         /// </description></item>
-        /// <item><description><para>ACS::DataWorks::Task: scheduling node.</para>
+        /// <item><description><para>DataWorks scheduled task (ACS::DataWorks::Task)</para>
         /// </description></item>
         /// </list>
         /// 
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev: development environment.</description></item>
-        /// <item><description>Prod: production environment.</description></item>
+        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod: production environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the asset. Fuzzy search by name is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AssetDomainName</para>
+        /// <para>Asset domain name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags associated with data assets. Tags are used as query filters:</para>
+        /// <para>The list of tags associated with the data assets. This parameter is used to filter query results based on tags:</para>
         /// <list type="bullet">
-        /// <item><description>Multiple values have an OR relationship. For example, <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c> queries data assets that contain any one of the specified tags.</description></item>
-        /// <item><description>If this parameter is not specified or is left empty, no tag-based filtering is applied.</description></item>
+        /// <item><description>Multiple values are evaluated with an OR logical operator. For example, if you specify <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c>, the system queries data assets that contain at least one of the specified tags.</description></item>
+        /// <item><description>If this parameter is not specified or is left empty, no tag-based filtering is performed.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Tags")]
@@ -118,8 +118,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<ListDataAssetsRequestTags> Tags { get; set; }
         public class ListDataAssetsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The custom tag key specified by the user.</para>
-            /// <para>The tag key can be up to 64 characters in length, cannot start with <c>dw:</c>, and supports only Chinese characters, letters, digits, and the following special characters: <c>-@#*&lt;&gt;|[]()+=&amp;%$!~</c>.</para>
+            /// <para>The custom tag key entered by the user.</para>
+            /// <para>The key can be up to 64 characters in length. It cannot start with <c>dw:</c> and can contain only letters, digits, and the following special characters: <c>-@#*&lt;&gt;|[]()+=&amp;%$!~</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>

@@ -17,14 +17,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListDataQualityScanRunsResponseBodyPageInfo PageInfo { get; set; }
         public class ListDataQualityScanRunsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The list of data quality scan runs.</para>
+            /// <para>The list of data quality monitoring run records.</para>
             /// </summary>
             [NameInMap("DataQualityScanRuns")]
             [Validation(Required=false)]
             public List<ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRuns> DataQualityScanRuns { get; set; }
             public class ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRuns : TeaModel {
                 /// <summary>
-                /// <para>The start time of the data quality scan run.</para>
+                /// <para>The start time of the data quality monitoring run.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -34,7 +35,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the data quality scan run.</para>
+                /// <para>The end time of the data quality monitoring run.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data quality scan run.</para>
+                /// <para>The ID of the data quality monitoring run record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3155</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The parameters used for the run.</para>
+                /// <para>The parameter settings used during the actual run.</para>
                 /// </summary>
                 [NameInMap("Parameters")]
                 [Validation(Required=false)]
@@ -83,18 +85,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the data quality scan run. Valid values:</para>
+                /// <para>The current run status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pass</para>
-                /// </description></item>
-                /// <item><description><para>Running</para>
-                /// </description></item>
-                /// <item><description><para>Error</para>
-                /// </description></item>
-                /// <item><description><para>Warn</para>
-                /// </description></item>
-                /// <item><description><para>Fail</para>
-                /// </description></item>
+                /// <item><description>Pass</description></item>
+                /// <item><description>Running</description></item>
+                /// <item><description>Error</description></item>
+                /// <item><description>Warn</description></item>
+                /// <item><description>Fail</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number. The default value is 1.</para>
+            /// <para>The page number. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. The default value is 10.</para>
+            /// <para>The number of entries per page. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

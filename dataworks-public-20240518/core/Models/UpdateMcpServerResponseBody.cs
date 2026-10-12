@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMcpServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The MCP Server details.</para>
+        /// <para>The details of the MCP server.</para>
         /// </summary>
         [NameInMap("McpServer")]
         [Validation(Required=false)]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public class UpdateMcpServerResponseBodyMcpServer : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The value is a 13-digit number, for example, <c>1780555634000</c>.</para>
+            /// <para>The value is a 13-digit number, such as <c>1780555634000</c>.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in millisecond-level timestamp.</para>
+            /// <para><b>The last modification time as a millisecond timestamp.</b></para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The MCP Server name.</para>
+            /// <para><b>The name of the MCP server.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>my-mcp-server</para>

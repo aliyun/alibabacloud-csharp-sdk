@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The image visibility. Valid values:</para>
+        /// <para>The visibility of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: visible to all users.</description></item>
-        /// <item><description>Private: visible only to the creator.</description></item>
+        /// <item><description>Public: The image is visible to all users.</description></item>
+        /// <item><description>Private: The image is visible only to the creator.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</para>
+        /// <para>The ID of the virtual private cloud (VPC) associated with the ACR instance. This parameter is required if you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-xxx</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AcrAssociatedVpcId { get; set; }
 
         /// <summary>
-        /// <para>The ACR instance ID. This parameter is required when referencing an ACR image.</para>
+        /// <para>The ACR instance ID. This parameter is required if you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acr_instance_id</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The image build configuration.</para>
+        /// <para>The build configuration of the image.</para>
         /// </summary>
         [NameInMap("BuildConfig")]
         [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string BuildType { get; set; }
 
             /// <summary>
-            /// <para>The list of pre-installation scripts.</para>
+            /// <para>The list of pre-installation execution scripts.</para>
             /// </summary>
             [NameInMap("PackageInstallationScripts")]
             [Validation(Required=false)]
             public List<CreateImageRequestBuildConfigPackageInstallationScripts> PackageInstallationScripts { get; set; }
             public class CreateImageRequestBuildConfigPackageInstallationScripts : TeaModel {
                 /// <summary>
-                /// <para>The script content. If the content consists of package names, separate them with commas (,).</para>
+                /// <para>The content of the script. If the content is a list of installation package names, separate the names with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>requests</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The script type.</para>
+                /// <para>The type of the script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Python3</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The client idempotency token.</para>
+        /// <para>The client token that is used to ensure idempotence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The image description, up to 128 characters.</para>
+        /// <para>The description of the image. The description can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create by xxxx</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the image to MaxCompute. Specify this parameter when referencing an ACR image. Default value: false.</para>
+        /// <para>Specifies whether to synchronize the image to MaxCompute. Specify this parameter when you reference an ACR image. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? EnableSyncMaxCompute { get; set; }
 
         /// <summary>
-        /// <para>The image URI. This parameter is required when referencing an ACR image.</para>
+        /// <para>The URI of the image. This parameter is required if you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ImageUri { get; set; }
 
         /// <summary>
-        /// <para>The image name, which can contain lowercase letters, digits, and underscores (_), up to 128 characters.</para>
+        /// <para>The name of the image. The name can contain lowercase letters, digits, and underscores (_), and can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</para>
+        /// <para>The namespace of the image. If you reference a DataWorks official image, set this parameter to DataWorks Default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The image ID from the image provider. This parameter is required when referencing a DataWorks official image.</para>
+        /// <para>The ID of the image provided by the image provider. This parameter is required if you reference a DataWorks official image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System_shell_20251201</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProviderImageId { get; set; }
 
         /// <summary>
-        /// <para>The image reference type. Valid values:</para>
+        /// <para>The reference data type of the image. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ACR: ACR image repository.</description></item>
         /// <item><description>DataWorks: DataWorks official image.</description></item>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProviderType { get; set; }
 
         /// <summary>
-        /// <para>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</para>
+        /// <para>The name of the image repository. If you reference a DataWorks official image, set this parameter to DataWorks Default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RepositoryName { get; set; }
 
         /// <summary>
-        /// <para>The image sub-purpose.</para>
+        /// <para>The sub-purpose of the image.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Supported")]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateImageRequestSupported Supported { get; set; }
         public class CreateImageRequestSupported : TeaModel {
             /// <summary>
-            /// <para>The image sub-module. Valid values:</para>
+            /// <para>The sub-module of the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Scheduler: Data Studio.</description></item>
             /// </list>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Module { get; set; }
 
             /// <summary>
-            /// <para>The list of supported node types.</para>
+            /// <para>The list of task types supported by the image.</para>
             /// </summary>
             [NameInMap("TaskTypes")]
             [Validation(Required=false)]

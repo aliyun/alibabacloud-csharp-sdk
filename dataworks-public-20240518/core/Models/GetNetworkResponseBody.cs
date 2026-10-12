@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the network resource.</para>
+        /// <para>The details of the network resource.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who creates the network resource.</para>
+            /// <para>The ID of the user who created the network resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11075500042XXXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The network ID.</para>
+            /// <para>The ID of the network resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the serverless resource group.</para>
+            /// <para>The ID of the resource group to which the network resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The security group ID of the network resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2ze13vamugr7jenXXXXX</para>
@@ -67,18 +67,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the network resource. Valid values:</para>
+            /// <para>The current status of the network resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The network resource is waiting to be created.</para>
-            /// </description></item>
-            /// <item><description><para>Creating: The network resource is being created.</para>
-            /// </description></item>
-            /// <item><description><para>Running: The network resource is running as expected.</para>
-            /// </description></item>
-            /// <item><description><para>Deleting: The network resource is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: The network resource is deleted.</para>
-            /// </description></item>
+            /// <item><description>Pending: The resource is pending.</description></item>
+            /// <item><description>Creating: The resource is being created.</description></item>
+            /// <item><description>Running: The resource is running.</description></item>
+            /// <item><description>Deleting: The resource is being deleted.</description></item>
+            /// <item><description>Deleted: The resource is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The VPC ID of the network resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -99,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The VSwitch ID.</para>
+            /// <para>The vSwitch ID of the network resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -111,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use the ID to query logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The test process ID.</para>
+        /// <para>The ID of the test process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

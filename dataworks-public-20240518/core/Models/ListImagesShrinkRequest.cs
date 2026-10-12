@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListImagesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The accessibility:</para>
+        /// <para>The accessibility of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Public: Visible to all members.</para>
-        /// </description></item>
-        /// <item><description><para>Private: Visible only to the creator.</para>
-        /// </description></item>
+        /// <item><description>Public: The image is visible to all users.</description></item>
+        /// <item><description>Private: The image is visible only to the creator.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The image name, used for fuzzy search.</para>
+        /// <para>The image name used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,27 +68,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of image provider types.</para>
+        /// <para>The list of image reference data types.</para>
         /// </summary>
         [NameInMap("ProviderTypes")]
         [Validation(Required=false)]
         public string ProviderTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to search all images.</para>
+        /// <para>Specifies whether to search for all images.</para>
         /// </summary>
         [NameInMap("SearchAll")]
         [Validation(Required=false)]
         public bool? SearchAll { get; set; }
 
         /// <summary>
-        /// <para>The list of sort fields. You can sort by scheduled time, start time, and other fields. The format is &quot;SortField+SortOrder(Desc/Asc)&quot;, where Asc is the default and can be omitted. Valid values of sort fields:</para>
+        /// <para>The list of sort fields. Fields such as scheduled time and start time are supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values for sort fields:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateTime (Desc/Asc): The creation time.</para>
-        /// </description></item>
-        /// <item><description><para>Name (Desc/Asc): The image name.
-        /// Default value: CreateTime Asc.</para>
-        /// </description></item>
+        /// <item><description>CreateTime (Desc/Asc): creation time.</description></item>
+        /// <item><description>Name (Desc/Asc): image name.
+        /// Default value: CreateTime Asc.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The list of image publish stages to query.</para>
+        /// <para>The list of image publishing stages to query.</para>
         /// </summary>
         [NameInMap("Stages")]
         [Validation(Required=false)]

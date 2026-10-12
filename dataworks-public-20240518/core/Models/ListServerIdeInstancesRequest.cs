@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListServerIdeInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for fuzzy match by instance ID or instance name.</para>
+        /// <para>The keyword used to match the instance ID or instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>notebook_dev</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of entries to return for a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first request.</para>
+        /// <para>The pagination token used to continue the query. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESG****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the user who owns the instance. Used to filter instances by owner.</para>
+        /// <para>The account ID of the user that owns the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20933221576142****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RelatedUserId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks resource group identifier. You can specify a numeric resource group ID or a full identifier in the format of Serverless_res_group_{tenantId}_{resgId}.</para>
+        /// <para>The DataWorks resource group identifier. You can use the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Serverless_res_group_123456789012345_9876543210****</para>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance subtype. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PERSONAL_DEV: personal development environment.</description></item>
-        /// <item><description>DATA_AGENT: Data Agent.</description></item>
+        /// <item><description>PERSONAL_DEV: personal development environment</description></item>
+        /// <item><description>DATA_AGENT: Data Agent</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

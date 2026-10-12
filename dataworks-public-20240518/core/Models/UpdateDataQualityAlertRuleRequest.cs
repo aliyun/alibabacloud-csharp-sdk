@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>The alert rule ID.</para>
+        /// <para>The ID of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105412</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateDataQualityAlertRuleRequestNotification Notification { get; set; }
         public class UpdateDataQualityAlertRuleRequestNotification : TeaModel {
             /// <summary>
-            /// <para>The list of notification channels. You can set both Email and Sms at the same time. In other cases, only one channel can be specified.</para>
+            /// <para>The list of notification channels. You can configure both Email and Sms simultaneously. For other cases, only one channel can be configured.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Channels")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateDataQualityAlertRuleRequestNotificationReceivers> Receivers { get; set; }
             public class UpdateDataQualityAlertRuleRequestNotificationReceivers : TeaModel {
                 /// <summary>
-                /// <para>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <c>{&quot;atAll&quot;:true}</c> to @ all members.</para>
+                /// <para>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <c>{&quot;atAll&quot;:true}</c> to mention all members.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;atAll&quot;:true}</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Extension { get; set; }
 
                 /// <summary>
-                /// <para>The alerting accept object type. Valid values:</para>
+                /// <para>The type of the alert recipient.</para>
                 /// <list type="bullet">
                 /// <item><description>AliUid</description></item>
                 /// <item><description>WebhookUrl</description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ReceiverType { get; set; }
 
                 /// <summary>
-                /// <para>The values of the alert recipients.</para>
+                /// <para>The value of the alert recipient.</para>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The ID of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The monitoring target of the data quality monitoring alert rule.</para>
+        /// <para>The target of the data quality monitoring alert rule.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public UpdateDataQualityAlertRuleRequestTarget Target { get; set; }
         public class UpdateDataQualityAlertRuleRequestTarget : TeaModel {
             /// <summary>
-            /// <para>The list of monitoring target IDs. Currently, only one ID can be specified.</para>
+            /// <para>The list of monitored target IDs. Currently, only one ID is supported.</para>
             /// </summary>
             [NameInMap("Ids")]
             [Validation(Required=false)]

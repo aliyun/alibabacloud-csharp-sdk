@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetTaskInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the task instance.</para>
+        /// <para>The details of the task instance.</para>
         /// </summary>
         [NameInMap("TaskInstance")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? BaselineId { get; set; }
 
             /// <summary>
-            /// <para>The business date.</para>
+            /// <para>The business date. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The data source information associated with the instance.</para>
+            /// <para>The information about the data source associated with the instance.</para>
             /// </summary>
             [NameInMap("DataSource")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The completion time.</para>
+            /// <para>The completion time. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? FinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the node instance.</para>
+            /// <para>The unique identifier of the task instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -140,12 +140,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type. Valid values:</para>
+                    /// <para>The type of the variable. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant.</description></item>
-                    /// <item><description>PassThrough: output of a parameter node.</description></item>
-                    /// <item><description>System: variable.</description></item>
-                    /// <item><description>NodeOutput: script output.</description></item>
+                    /// <item><description>Constant: The variable is a constant.</description></item>
+                    /// <item><description>PassThrough: The variable is the output of a parameter node.</description></item>
+                    /// <item><description>System: The variable is a system variable.</description></item>
+                    /// <item><description>NodeOutput: The variable is the script output.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the user who modified the instance.</para>
+            /// <para>The account ID of the user who updated the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// <para>The type of the most recent operation on the instance.</para>
+            /// <para>The type of the latest operation on the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TriggerDqc</para>
@@ -243,12 +243,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type. Valid values:</para>
+                    /// <para>The type of the variable. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant.</description></item>
-                    /// <item><description>PassThrough: output of a parameter node.</description></item>
-                    /// <item><description>System: variable.</description></item>
-                    /// <item><description>NodeOutput: script output.</description></item>
+                    /// <item><description>Constant: The variable is a constant.</description></item>
+                    /// <item><description>PassThrough: The variable is the output of a parameter node.</description></item>
+                    /// <item><description>System: The variable is a system variable.</description></item>
+                    /// <item><description>NodeOutput: The variable is the script output.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The account ID of the node owner.</para>
+            /// <para>The account ID of the task owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The period number. Indicates which scheduling cycle of the day the task instance is in.</para>
+            /// <para>The period number. This indicates the sequence of the execution cycle for the task instance on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PeriodNumber { get; set; }
 
             /// <summary>
-            /// <para>The running priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</para>
+            /// <para>The execution priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -327,11 +327,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The rerun configuration of the task. Valid values:</para>
+            /// <para>The configuration that specifies whether the task can be rerun. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AllDenied: reruns are not allowed regardless of whether the task fails or succeeds.</description></item>
-            /// <item><description>AllAllowed: reruns are allowed regardless of whether the task fails or succeeds.</description></item>
-            /// <item><description>FailureAllowed: reruns are allowed only when the task fails.</description></item>
+            /// <item><description>AllDenied: The task cannot be rerun regardless of whether it fails or succeeds.</description></item>
+            /// <item><description>AllAllowed: The task can be rerun regardless of whether it fails or succeeds.</description></item>
+            /// <item><description>FailureAllowed: The task can be rerun only if it fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RerunMode { get; set; }
 
             /// <summary>
-            /// <para>The current run number. The value starts from 1 by default.</para>
+            /// <para>The current number of runs. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetTaskInstanceResponseBodyTaskInstanceRuntime Runtime { get; set; }
             public class GetTaskInstanceResponseBodyTaskInstanceRuntime : TeaModel {
                 /// <summary>
-                /// <para>The machine on which the task runs.</para>
+                /// <para>The machine on which the task is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai.1.2</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Gateway { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the run.</para>
+                /// <para>The unique ID of the execution process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T3_123</para>
@@ -381,14 +381,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The resource group information associated with the instance.</para>
+            /// <para>The information about the resource group associated with the instance.</para>
             /// </summary>
             [NameInMap("RuntimeResource")]
             [Validation(Required=false)]
             public GetTaskInstanceResponseBodyTaskInstanceRuntimeResource RuntimeResource { get; set; }
             public class GetTaskInstanceResponseBodyTaskInstanceRuntimeResource : TeaModel {
                 /// <summary>
-                /// <para>The compute unit (CU) consumption configured for the task.</para>
+                /// <para>The compute unit (CU) consumption configured for task execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.25</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cu { get; set; }
 
                 /// <summary>
-                /// <para>The image ID configured for the task.</para>
+                /// <para>The ID of the image configured for task execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxx</para>
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the schedule resource group configured for the task.</para>
+                /// <para>The identifier of the scheduling resource group configured for task execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -420,14 +420,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The running script information.</para>
+            /// <para>The information about the execution script.</para>
             /// </summary>
             [NameInMap("Script")]
             [Validation(Required=false)]
             public GetTaskInstanceResponseBodyTaskInstanceScript Script { get; set; }
             public class GetTaskInstanceResponseBodyTaskInstanceScript : TeaModel {
                 /// <summary>
-                /// <para>The script content.</para>
+                /// <para>The content of the script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>echo &quot;helloWorld&quot;</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The start time of the run.</para>
+            /// <para>The start time. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -459,17 +459,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? StartedTime { get; set; }
 
             /// <summary>
-            /// <para>The instance running status. Valid values:</para>
+            /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NotRun: Not run.</description></item>
             /// <item><description>Running: Running.</description></item>
-            /// <item><description>WaitTime: Waiting for the TriggerTime to arrive.</description></item>
+            /// <item><description>WaitTime: Waiting for the trigger time.</description></item>
             /// <item><description>CheckingCondition: Checking branch conditions.</description></item>
             /// <item><description>WaitResource: Waiting for resources.</description></item>
             /// <item><description>Failure: Execution failed.</description></item>
             /// <item><description>Success: Execution succeeded.</description></item>
             /// <item><description>Checking: Submitted for data quality check.</description></item>
-            /// <item><description>WaitTrigger: Waiting for an external trigger. Trigger-based nodes enter this status after the waiting time elapses.</description></item>
+            /// <item><description>WaitTrigger: Waiting for an external trigger. Triggered nodes change to this status after the waiting time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -480,14 +480,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of node tags.</para>
+            /// <para>The list of task tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetTaskInstanceResponseBodyTaskInstanceTags> Tags { get; set; }
             public class GetTaskInstanceResponseBodyTaskInstanceTags : TeaModel {
                 /// <summary>
-                /// <para>The label key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The label value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the corresponding task.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the corresponding task.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL node</para>
@@ -529,7 +529,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The type of the corresponding task.</para>
+            /// <para>The type of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ODPS_SQL</para>
@@ -539,8 +539,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for task execution. Unit: seconds.</para>
-            /// <para>Note: The scheduling system rounds the configured value to whole hours.</para>
+            /// <para>The timeout period for task execution, in seconds.</para>
+            /// <para>Note: The scheduling system rounds the configured value to the nearest hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -550,18 +550,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The running mode when triggered. This parameter takes effect when TriggerType is set to Scheduler. Valid values:</para>
+            /// <para>The run mode upon trigger. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: a normal scheduled task that is scheduled on a regular basis.</description></item>
-            /// <item><description>Manual: a manual task that is not scheduled on a regular basis.</description></item>
-            /// <item><description>Pause: a paused task that is scheduled on a regular basis but is set to failed when scheduling starts.</description></item>
-            /// <item><description>Skip: a dry-run task that is scheduled on a regular basis but is set to succeeded when scheduling starts.</description></item>
-            /// <item><description>SkipUnchoose: a task that is not selected in a temporary workflow. This value exists only in temporary workflows. The task is set to succeeded when scheduling starts.</description></item>
-            /// <item><description>SkipCycle: a weekly or monthly task whose running cycle has not arrived. The task is scheduled on a regular basis but is set to succeeded when scheduling starts.</description></item>
-            /// <item><description>ConditionUnchoose: a downstream node that is not selected by an upstream branch (IF) node. The task directly becomes a dry run.</description></item>
-            /// <item><description>RealtimeDeprecated: an expired periodic instance generated in real time. The task is set to succeeded.</description></item>
-            /// <item><description>PauseCalendar: the instance is paused because a calendar is referenced.</description></item>
-            /// <item><description>SkipCalendar: the instance is a dry run because a calendar is referenced.</description></item>
+            /// <item><description>Normal: The task is a normal scheduled task and is scheduled on a daily basis.</description></item>
+            /// <item><description>Manual: The task is a manual task and is not scheduled on a daily basis.</description></item>
+            /// <item><description>Pause: The task is paused. It is scheduled on a daily basis, but is directly set to failed when the scheduling is triggered.</description></item>
+            /// <item><description>Skip: The task performs a dry run. It is scheduled on a daily basis, but is directly set to successful when the scheduling is triggered.</description></item>
+            /// <item><description>SkipUnchoose: The task is an unselected task in a temporary workflow. It exists only in temporary workflows and is directly set to successful when the scheduling is triggered.</description></item>
+            /// <item><description>SkipCycle: The task is a weekly or monthly task that has not reached its execution cycle. It is scheduled on a daily basis, but is directly set to successful when the scheduling is triggered.</description></item>
+            /// <item><description>ConditionUnchoose: The downstream node is not selected by an upstream branch (IF) node. The task is directly set to a dry run.</description></item>
+            /// <item><description>RealtimeDeprecated: The task is an expired periodic instance generated in real time. It is directly set to successful.</description></item>
+            /// <item><description>PauseCalendar: The instance is paused due to a referenced calendar.</description></item>
+            /// <item><description>SkipCalendar: The instance performs a dry run due to a referenced calendar.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string TriggerRecurrence { get; set; }
 
             /// <summary>
-            /// <para>The scheduled trigger time.</para>
+            /// <para>The scheduled trigger time. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -584,8 +584,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The trigger type. You can obtain the trigger type from the Trigger.Type response parameter of the GetTask operation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: triggered by a scheduling cycle.</description></item>
-            /// <item><description>Manual: manually triggered.</description></item>
+            /// <item><description>Scheduler: The task is triggered by a scheduling cycle.</description></item>
+            /// <item><description>Manual: The task is triggered manually.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The unified workflow instance ID. All task instances within the same business date under a single trigger share the same value for this field.</para>
+            /// <para>The unified workflow instance ID. The value of this field is the same for all task instances within a specific business date under a single trigger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? UnifiedWorkflowInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance entered the waiting-for-resource state.</para>
+            /// <para>The time when the instance starts waiting for resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -616,7 +616,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? WaitingResourceTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance entered the waiting-for-scheduled-time state.</para>
+            /// <para>The time when the instance starts waiting for the scheduled trigger. The value is a 13-digit UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
@@ -648,12 +648,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the workflow instance to which the task instance belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SmokeTest: test.</description></item>
-            /// <item><description>SupplementData: data backfill.</description></item>
-            /// <item><description>Manual: manual task.</description></item>
-            /// <item><description>ManualWorkflow: manual workflow.</description></item>
-            /// <item><description>Normal: periodic scheduling.</description></item>
-            /// <item><description>ManualFlow: manually executed business flow.</description></item>
+            /// <item><description>SmokeTest: The instance is a smoke test.</description></item>
+            /// <item><description>SupplementData: The instance is for data backfill.</description></item>
+            /// <item><description>Manual: The instance is a manual task.</description></item>
+            /// <item><description>ManualWorkflow: The instance is a manual workflow.</description></item>
+            /// <item><description>Normal: The instance uses periodic scheduling.</description></item>
+            /// <item><description>ManualFlow: The instance is a manually executed business flow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the created Agent.</para>
+        /// <para>The details of the created agent.</para>
         /// </summary>
         [NameInMap("Agent")]
         [Validation(Required=false)]
         public CreateAgentResponseBodyAgent Agent { get; set; }
         public class CreateAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>The creation time, in millisecond-precision UNIX timestamp.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in millisecond-precision UNIX timestamp.</para>
+            /// <para>The last modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The Agent name.</para>
+            /// <para>The name of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent</para>

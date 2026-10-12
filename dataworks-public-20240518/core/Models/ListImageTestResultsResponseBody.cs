@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The operation time, represented as a 64-bit timestamp.</para>
+                /// <para>The operation time, which is a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The publish stage of the image.</para>
+                /// <para>The image publishing stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UNPUBLISHED</para>

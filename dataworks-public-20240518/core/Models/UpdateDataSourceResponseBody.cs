@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102E8E24-0387-531D-8A75-1C0AE7DD03E5</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the data source has been modified:</para>
+        /// <para>Indicates whether the data source was updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes</para>
-        /// </description></item>
-        /// <item><description><para>false: no</para>
-        /// </description></item>
+        /// <item><description>true: yes.</description></item>
+        /// <item><description>false: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

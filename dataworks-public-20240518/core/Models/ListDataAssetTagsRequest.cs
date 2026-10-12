@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataAssetTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the tag. Valid values:</para>
+        /// <para>The tag type.</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal</para>
-        /// </description></item>
-        /// <item><description><para>System</para>
-        /// </description></item>
+        /// <item><description>Normal</description></item>
+        /// <item><description>System</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

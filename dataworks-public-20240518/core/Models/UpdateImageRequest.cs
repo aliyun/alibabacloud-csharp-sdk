@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The image visibility. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: visible to all users.</description></item>
-        /// <item><description>Private: visible only to the creator.</description></item>
+        /// <item><description>Public: Visible to all users.</description></item>
+        /// <item><description>Private: Visible only to the creator.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</para>
+        /// <para>The ID of the VPC associated with the ACR instance. This parameter is required when you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-xxx</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AcrAssociatedVpcId { get; set; }
 
         /// <summary>
-        /// <para>The Container Registry (ACR) instance ID. This parameter is required when referencing an ACR image.</para>
+        /// <para>The ID of the Container Registry (ACR) instance. This parameter is required when you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acr_instance_id</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateImageRequestBuildConfigPackageInstallationScripts> PackageInstallationScripts { get; set; }
             public class UpdateImageRequestBuildConfigPackageInstallationScripts : TeaModel {
                 /// <summary>
-                /// <para>The script content. If the content consists of package names, separate them with commas (,).</para>
+                /// <para>The script content. If the content specifies package names, separate them with commas.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>requests</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The image URI. This parameter is required when referencing an ACR image.</para>
+        /// <para>The image URI. This parameter is required when you reference an ACR image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</para>
+        /// <para>The image namespace. If you reference an official DataWorks image, set this parameter to DataWorks Default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namespace_name</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The provider image ID. This parameter is required when referencing a DataWorks official image.</para>
+        /// <para>The ID of the image provided by the provider. This parameter is required when you reference an official DataWorks image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System_shell_20251201</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProviderImageId { get; set; }
 
         /// <summary>
-        /// <para>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</para>
+        /// <para>The image repository name. If you reference an official DataWorks image, set this parameter to DataWorks Default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo_name</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Module { get; set; }
 
             /// <summary>
-            /// <para>The list of node types supported by the image.</para>
+            /// <para>The list of task types supported by the image.</para>
             /// </summary>
             [NameInMap("TaskTypes")]
             [Validation(Required=false)]

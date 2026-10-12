@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopWorkflowInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the batch operation, which is in the MAP structure. The workflow instance ID serves as a key, and the result serves as a value.</para>
+        /// <para>The result information of the batch operation. The structure is a map, where the key is the workflow instance ID and the value is the result information.</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

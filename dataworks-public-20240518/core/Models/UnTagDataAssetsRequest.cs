@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UnTagDataAssetsRequest : TeaModel {
         /// <summary>
-        /// <para>The data asset IDs.</para>
+        /// <para>The unique IDs of the data assets.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DataAssetIds")]
@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> DataAssetIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</para>
+        /// <para>The type of the data asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Data table (ACS::DataWorks::Table)</description></item>
+        /// <item><description>Scheduled task (ACS::DataWorks::Task)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DataAssetType { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
+        /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Dev: development environment</para>
         /// </description></item>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to remove.</para>
+        /// <para>The tags to disassociate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]

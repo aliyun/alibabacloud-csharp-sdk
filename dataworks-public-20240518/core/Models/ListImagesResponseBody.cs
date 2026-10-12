@@ -10,26 +10,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paginated list.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListImagesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListImagesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of image details.</para>
+            /// <para>The list of retrieved image details.</para>
             /// </summary>
             [NameInMap("ImageList")]
             [Validation(Required=false)]
             public List<ListImagesResponseBodyPagingInfoImageList> ImageList { get; set; }
             public class ListImagesResponseBodyPagingInfoImageList : TeaModel {
                 /// <summary>
-                /// <para>The accessibility:</para>
+                /// <para>The accessibility of the image. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Public: Visible to all members.</para>
-                /// </description></item>
-                /// <item><description><para>Private: Visible only to the creator.</para>
-                /// </description></item>
+                /// <item><description>Public: The image is visible to all users.</description></item>
+                /// <item><description>Private: The image is visible only to the creator.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Accessibility { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID associated with the ACR instance.</para>
+                /// <para>The ID of the VPC associated with the ACR instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxx</para>
@@ -87,14 +85,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string BuildType { get; set; }
 
                     /// <summary>
-                    /// <para>The list of pre-installation scripts.</para>
+                    /// <para>The list of pre-installation execution scripts.</para>
                     /// </summary>
                     [NameInMap("PackageInstallationScripts")]
                     [Validation(Required=false)]
                     public List<ListImagesResponseBodyPagingInfoImageListBuildConfigPackageInstallationScripts> PackageInstallationScripts { get; set; }
                     public class ListImagesResponseBodyPagingInfoImageListBuildConfigPackageInstallationScripts : TeaModel {
                         /// <summary>
-                        /// <para>The script content. If the content specifies package names, separate them with commas (,).</para>
+                        /// <para>The script content. If the content consists of installation package names, separate the names with commas (,).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>requests</para>
@@ -118,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time, represented as a 64-bit timestamp.</para>
+                /// <para>The creation time. This value is a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
@@ -148,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether synchronization with MaxCompute is enabled.</para>
+                /// <para>Indicates whether MaxCompute synchronization is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -208,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time, represented as a 64-bit timestamp.</para>
+                /// <para>The last modification time. This value is a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
@@ -248,7 +246,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the image is an official image.</para>
+                /// <para>Specifies whether the image is an official image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -258,7 +256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Official { get; set; }
 
                 /// <summary>
-                /// <para>The image ID assigned by the provider.</para>
+                /// <para>The image ID of the image provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acr_image_id</para>
@@ -268,12 +266,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ProviderImageId { get; set; }
 
                 /// <summary>
-                /// <para>The image provider type:</para>
+                /// <para>The image reference data type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>ACR: ACR image repository.</para>
-                /// </description></item>
-                /// <item><description><para>DataWorks: DataWorks official image.</para>
-                /// </description></item>
+                /// <item><description>ACR: ACR image repository.</description></item>
+                /// <item><description>DataWorks: DataWorks official image.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -284,34 +280,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ProviderType { get; set; }
 
                 /// <summary>
-                /// <para>The publish stage:</para>
+                /// <para>The publishing status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Untest: Not tested.</para>
-                /// </description></item>
-                /// <item><description><para>Testing: Being tested.</para>
-                /// </description></item>
-                /// <item><description><para>TestFailed: Test failed.</para>
-                /// </description></item>
-                /// <item><description><para>Unpublished: Not published.</para>
-                /// </description></item>
-                /// <item><description><para>Publishing: Being published.</para>
-                /// </description></item>
-                /// <item><description><para>Published: Published.</para>
-                /// </description></item>
-                /// <item><description><para>PublishFailed: Publish failed.</para>
-                /// </description></item>
-                /// <item><description><para>Building: Being built.</para>
-                /// </description></item>
-                /// <item><description><para>BuildSuccess: Build succeeded.</para>
-                /// </description></item>
-                /// <item><description><para>BuildFailed: Build failed.</para>
-                /// </description></item>
-                /// <item><description><para>Accelerating: Being accelerated.</para>
-                /// </description></item>
-                /// <item><description><para>AccelerateSuccess: Acceleration succeeded.</para>
-                /// </description></item>
-                /// <item><description><para>AccelerateFailed: Acceleration failed.</para>
-                /// </description></item>
+                /// <item><description>Untest: Not tested.</description></item>
+                /// <item><description>Testing: Testing.</description></item>
+                /// <item><description>TestFailed: Test failed.</description></item>
+                /// <item><description>Unpublished: Unpublished.</description></item>
+                /// <item><description>Publishing: Publishing.</description></item>
+                /// <item><description>Published: Published.</description></item>
+                /// <item><description>PublishFailed: Publish failed.</description></item>
+                /// <item><description>Building: Building.</description></item>
+                /// <item><description>BuildSuccess: Build succeeded.</description></item>
+                /// <item><description>BuildFailed: Build failed.</description></item>
+                /// <item><description>Accelerating: Accelerating.</description></item>
+                /// <item><description>AccelerateSuccess: Acceleration succeeded.</description></item>
+                /// <item><description>AccelerateFailed: Acceleration failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -342,16 +325,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Size { get; set; }
 
                 /// <summary>
-                /// <para>The image status:</para>
+                /// <para>The image status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Disabled: The image is disabled.</para>
-                /// </description></item>
-                /// <item><description><para>Expired: The image has expired.</para>
-                /// </description></item>
-                /// <item><description><para>Available: The image is available.</para>
-                /// </description></item>
-                /// <item><description><para>ReadOnly: The image is read-only.</para>
-                /// </description></item>
+                /// <item><description>Disabled: The image is disabled.</description></item>
+                /// <item><description>Expired: The image has expired.</description></item>
+                /// <item><description>Available: The image is available.</description></item>
+                /// <item><description>ReadOnly: The image is read-only.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -369,9 +348,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListImagesResponseBodyPagingInfoImageListSupported Supported { get; set; }
                 public class ListImagesResponseBodyPagingInfoImageListSupported : TeaModel {
                     /// <summary>
-                    /// <para>The supported module:</para>
+                    /// <para>The supported module. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: Scheduling.</description></item>
+                    /// <item><description>Scheduler: the scheduling module.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -413,7 +392,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -423,7 +402,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -435,7 +414,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -445,7 +424,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

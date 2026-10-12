@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The skill details.</para>
         /// </summary>
         [NameInMap("Skill")]
         [Validation(Required=false)]
         public CreateSkillResponseBodySkill Skill { get; set; }
         public class CreateSkillResponseBodySkill : TeaModel {
             /// <summary>
-            /// <para>The SKILL.md body content.</para>
+            /// <para>The content of the SKILL.md file.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -41,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Body { get; set; }
 
             /// <summary>
-            /// <para>The creator ID.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -51,17 +49,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The Skill description.</para>
+            /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Data analytics skill.</para>
+            /// <para>Data analytics skill</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in millisecond-level UNIX timestamp.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in millisecond-level UNIX timestamp.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the Skill.</para>
+            /// <para>The ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifierId { get; set; }
 
             /// <summary>
-            /// <para>The Skill name.</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-skill</para>
@@ -120,14 +118,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public CreateSkillResponseBodySkillVisibilityScope VisibilityScope { get; set; }
             public class CreateSkillResponseBodySkillVisibilityScope : TeaModel {
                 /// <summary>
-                /// <para>The list of visible project IDs.</para>
+                /// <para>The IDs of the visible projects.</para>
                 /// </summary>
                 [NameInMap("ProjectIds")]
                 [Validation(Required=false)]
                 public List<string> ProjectIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of visible user IDs. This parameter takes effect only when Visibility is set to <c>USER</c>.</para>
+                /// <para>The IDs of the visible users. This field is returned only when Visibility is set to USER.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]

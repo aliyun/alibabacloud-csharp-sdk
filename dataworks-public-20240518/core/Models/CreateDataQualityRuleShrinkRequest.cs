@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CheckingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the rule. The maximum length is 500 characters.</para>
+        /// <para>The description of the rule. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a odps _sql task</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the data quality rule.</para>
+        /// <para>Specifies whether the quality rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The list of issue handlers for the data quality rule check.</para>
+        /// <para>The list of handlers for quality rule check issues.</para>
         /// </summary>
         [NameInMap("ErrorHandlers")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The severity of the rule for the business (corresponding to the strong/weak rule on the page). Valid values:</para>
+        /// <para>The severity level of the rule for business operations, which corresponds to strong and weak rules on the page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TargetShrink { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the rule template that the rule references.</para>
+        /// <para>The unique identifier of the rule template referenced by the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM:table:table_count:fixed</para>

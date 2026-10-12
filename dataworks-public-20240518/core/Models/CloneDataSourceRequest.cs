@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CloneDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the destination data source. The name can contain letters, digits, and underscores, and cannot start with a digit or underscore. The name can be up to 60 characters in length.</para>
+        /// <para>The name of the target data source. The name can contain letters, digits, and underscores (_), and cannot start with a digit or an underscore. The name can be up to 60 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CloneDataSourceName { get; set; }
 
         /// <summary>
-        /// <para>The data source ID. This is the unique identifier of the data source.</para>
+        /// <para>The ID of the data source, which is the unique identifier of the data source. You can call the ListDataSources operation to query existing data sources and their unique IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

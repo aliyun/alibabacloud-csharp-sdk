@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of child Agents that can be called by this Agent.</para>
+        /// <para>The list of child agents that can be called by this agent.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CallableAgentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the Agent.</para>
+        /// <para>The description of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Data analytics assistant</para>
@@ -32,17 +32,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the Agent.</para>
+        /// <para>The display name of the agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyAssistant</para>
+        /// <para>My Assistant</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The extended metadata (key-value pairs).</para>
+        /// <para>The extended metadata in key-value pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ModelShrink { get; set; }
 
         /// <summary>
-        /// <para>The Agent name, which must be unique within the current account.</para>
+        /// <para>The name of the agent. The name must be unique within the current account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You are a data analytics assistant.</para>
+        /// <para>You are a data analytics assistant</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The visibility level.<br>
         /// <c>TENANT</c>: Visible within the account.<br>
-        /// <c>PROJECT</c>: Visible to a specified project.<br>
+        /// <c>PROJECT</c>: Visible to specified projects.<br>
         /// <c>USER</c>: Visible to specified users.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is determined by the Visibility parameter.</para>
+        /// <para>The visibility scope. The corresponding field is used based on the visibility level.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

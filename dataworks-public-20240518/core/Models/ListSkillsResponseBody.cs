@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListSkillsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListSkillsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The maximum number of results returned in this response.</para>
+            /// <para>The maximum number of entries returned in this request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page of results. This parameter is null or empty if all results have been returned.</para>
+            /// <para>The token for the next page. An empty value indicates that the last page has been reached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The list of Skills.</para>
+            /// <para>The list of skills.</para>
             /// </summary>
             [NameInMap("Skills")]
             [Validation(Required=false)]
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para><b>The Skill description.</b></para>
+                /// <para><b>The skill description.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Data analysis skill</para>
+                /// <para>Data analytics skill</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -65,6 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
+                /// <para>The format is a 13-digit number, such as <c>1780555634000</c>.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para><b>The modifier ID.</b></para>
+                /// <para><b>The ID of the last modifier.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifierId { get; set; }
 
                 /// <summary>
-                /// <para><b>The Skill name.</b></para>
+                /// <para><b>The skill name.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-skill</para>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of results that match the query.</para>
+            /// <para>The total number of matching entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

@@ -10,15 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMcpServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The registered MCP Server.</para>
+        /// <para>The registered MCP server.</para>
         /// </summary>
         [NameInMap("McpServer")]
         [Validation(Required=false)]
         public CreateMcpServerResponseBodyMcpServer McpServer { get; set; }
         public class CreateMcpServerResponseBodyMcpServer : TeaModel {
             /// <summary>
-            /// <para>The time when the MCP Server was created.</para>
-            /// <para>The value is a 13-digit number, such as <c>1780555634000</c>.</para>
+            /// <para>The creation time. The value is a 13-digit number, such as <c>1780555634000</c>.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP Server.</para>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-mcp-server</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateSkillShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The <b>downloadable URL (HTTP/HTTPS) of the bundle.zip file</b>. This parameter is mutually exclusive with SkillMdOverride.</para>
+        /// <para>The <b>download URL of the bundle.zip file</b> (HTTP or HTTPS). This parameter and SkillMdOverride are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string BundleUrl { get; set; }
 
         /// <summary>
-        /// <para>The <b>Skill description</b>.</para>
+        /// <para>The <b>skill description</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Data analytics skill.</para>
+        /// <para>Data analytics skill</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The extension metadata in key-value pairs.</para>
+        /// <para>The extended metadata in key-value pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;appId&quot;:&quot;APP_CWJMV36CT9SAFW1QEHX7&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ExtraShrink { get; set; }
 
         /// <summary>
-        /// <para>The <b>Skill name</b>, which must be unique within the current account.</para>
+        /// <para>The <b>skill name</b>. The name must be unique within the current account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The SKILL.md body content. This parameter is mutually exclusive with BundleUrl. If no bundle is provided, use this field to create a lightweight Skill that contains only a SKILL.md file.</para>
+        /// <para>The content of the SKILL.md file. This parameter and BundleUrl are mutually exclusive. If you do not provide a bundle, use this parameter to create a lightweight skill that contains only the SKILL.md file.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -66,19 +66,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The <b>version note</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Initial version.</para>
+        /// <para>Initial version</para>
         /// </summary>
         [NameInMap("VersionNote")]
         [Validation(Required=false)]
         public string VersionNote { get; set; }
 
         /// <summary>
-        /// <para>The <b>visibility level</b>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>TENANT: Visible within the account.</description></item>
-        /// <item><description>PROJECT: Visible to specified projects.</description></item>
-        /// <item><description>USER: Visible to specified users.</description></item>
-        /// </list>
+        /// <para>The <b>visibility level</b>. Valid values: TENANT (visible to the entire tenant), PROJECT (visible to specific projects), and USER (visible to specific users).</para>
         /// 
         /// <b>Example:</b>
         /// <para>TENANT</para>
@@ -88,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is determined by the Visibility parameter.</para>
+        /// <para>The visibility scope. Specify the corresponding field based on the value of Visibility.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

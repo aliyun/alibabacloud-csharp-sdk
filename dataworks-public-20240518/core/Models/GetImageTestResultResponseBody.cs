@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetImageTestResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The operation time, represented as a 64-bit timestamp.</para>
+            /// <para>The operation time. The value is a 64-bit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1727055811000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? OperateTime { get; set; }
 
             /// <summary>
-            /// <para>The process ID.</para>
+            /// <para>The ID of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>
@@ -77,19 +77,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The image publish status. Valid values:</para>
+            /// <para>The publishing status of the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Untest: Not tested.</description></item>
-            /// <item><description>Testing: Testing in progress.</description></item>
+            /// <item><description>Testing: Testing.</description></item>
             /// <item><description>TestFailed: Test failed.</description></item>
-            /// <item><description>Unpublished: Not published.</description></item>
-            /// <item><description>Publishing: Publishing in progress.</description></item>
+            /// <item><description>Unpublished: Unpublished.</description></item>
+            /// <item><description>Publishing: Publishing.</description></item>
             /// <item><description>Published: Published.</description></item>
-            /// <item><description>PublishFailed: Publish failed.</description></item>
-            /// <item><description>Building: Building in progress.</description></item>
+            /// <item><description>PublishFailed: Publishing failed.</description></item>
+            /// <item><description>Building: Building.</description></item>
             /// <item><description>BuildSuccess: Build succeeded.</description></item>
             /// <item><description>BuildFailed: Build failed.</description></item>
-            /// <item><description>Accelerating: Acceleration in progress.</description></item>
+            /// <item><description>Accelerating: Accelerating.</description></item>
             /// <item><description>AccelerateSuccess: Acceleration succeeded.</description></item>
             /// <item><description>AccelerateFailed: Acceleration failed.</description></item>
             /// </list>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PublishStage { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_****</para>
@@ -112,12 +112,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The test process status. Valid values:</para>
+            /// <para>The status of the test process. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>running: Running.</description></item>
             /// <item><description>completed: Completed.</description></item>
             /// <item><description>failed: Failed.</description></item>
-            /// <item><description>cancelled: Cancelled.</description></item>
+            /// <item><description>cancelled: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

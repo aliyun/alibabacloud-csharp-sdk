@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ReplyAgentSessionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The JSON-RPC correlation ID for this reply request. The response returns this value as-is. This is different from PermissionRequestId.</para>
+        /// <para>The JSON-RPC correlation ID for the current reply request. It is returned as-is in the response and is different from PermissionRequestId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC protocol version. Fixed value: 2.0.</para>
+        /// <para>The JSON-RPC protocol version. Fixed to 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>

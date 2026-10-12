@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetBusinessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the business process.</para>
+        /// <para>The details of the business flow.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBusinessResponseBodyData Data { get; set; }
         public class GetBusinessResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the business process.</para>
+            /// <para>The ID of the business flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000001</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? BusinessId { get; set; }
 
             /// <summary>
-            /// <para>The name of the business process. The name must be unique within the same workspace.</para>
+            /// <para>The name of the business flow. The name must be unique within the same workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The first business process</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string BusinessName { get; set; }
 
             /// <summary>
-            /// <para>The description of the business process.</para>
+            /// <para>The description of the business flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is my first business process.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud user ID of the business process owner.</para>
+            /// <para>The Alibaba Cloud user ID of the business flow owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DataWorks workspace to which the business process belongs.</para>
+            /// <para>The ID of the DataWorks workspace to which the business flow belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The functional module to which the business process belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (manual business process).</para>
+            /// <para>The functional module to which the business flow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manual business flow).</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

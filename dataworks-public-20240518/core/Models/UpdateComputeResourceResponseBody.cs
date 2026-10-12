@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateComputeResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the computing resource was modified successfully:</para>
+        /// <para>Specifies whether the compute resource is updated:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes</para>
-        /// </description></item>
-        /// <item><description><para>false: No</para>
-        /// </description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

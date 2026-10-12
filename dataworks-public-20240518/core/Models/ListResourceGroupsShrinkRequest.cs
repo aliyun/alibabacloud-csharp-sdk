@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourceGroupsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AliyunResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of Alibaba Cloud tags.</para>
+        /// <para>The Alibaba Cloud tags.</para>
         /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
         public string AliyunResourceTagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource group. Fuzzy search is supported.</para>
+        /// <para>The name of the resource group for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the resource group. Valid values include:</para>
+        /// <para>The billing method of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PrePaid</c>: subscription.</para>
-        /// </description></item>
-        /// <item><description><para><c>PostPaid</c>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>PrePaid: Subscription.</description></item>
+        /// <item><description>PostPaid: Pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The ID of the workspace to which the resource group belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -83,33 +81,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The types of the resource groups to query. <b>If this parameter is not specified, general-purpose resource groups are queried by default.</b></para>
+        /// <para>The types of the resource groups to query. <b>If this parameter is left empty, general-purpose resource groups are queried by default.</b></para>
         /// </summary>
         [NameInMap("ResourceGroupTypes")]
         [Validation(Required=false)]
         public string ResourceGroupTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The sorting criterion for the results. The format is <c>FieldName SortOrder</c>. <c>SortOrder</c> can be <c>Asc</c> (ascending) or <c>Desc</c> (descending). If you do not specify <c>SortOrder</c>, the default is <c>Asc</c>. The following fields are supported:</para>
+        /// <para>The fields by which to sort the results. You can sort the results by fields such as scheduled time and start time. The format is \&quot;Sort field+Sort order (Desc/Asc)\&quot;. Asc can be omitted. Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Id</c>: Resource group ID</para>
-        /// </description></item>
-        /// <item><description><para><c>Name</c>: Resource group name</para>
-        /// </description></item>
-        /// <item><description><para><c>Remark</c>: Resource group remarks</para>
-        /// </description></item>
-        /// <item><description><para><c>Type</c>: Resource group type</para>
-        /// </description></item>
-        /// <item><description><para><c>Status</c>: Resource group status</para>
-        /// </description></item>
-        /// <item><description><para><c>Spec</c>: Resource group specifications</para>
-        /// </description></item>
-        /// <item><description><para><c>CreateUser</c>: The user who created the resource group</para>
-        /// </description></item>
-        /// <item><description><para><c>CreateTime</c>: The time when the resource group was created</para>
-        /// </description></item>
+        /// <item><description>Id (Desc/Asc): The ID of the resource group.</description></item>
+        /// <item><description>Name (Desc/Asc): The name of the resource group.</description></item>
+        /// <item><description>Remark (Desc/Asc): The description of the resource group.</description></item>
+        /// <item><description>Type (Desc/Asc): The type of the resource group.</description></item>
+        /// <item><description>Status (Desc/Asc): The status of the resource group.</description></item>
+        /// <item><description>Spec (Desc/Asc): The specifications of the resource group.</description></item>
+        /// <item><description>CreateUser (Desc/Asc): The creator of the resource group.</description></item>
+        /// <item><description>CreateTime (Desc/Asc): The time when the resource group was created.</description></item>
         /// </list>
-        /// <para>Default value: <c>CreateTime Asc</c></para>
+        /// <para>Default value: CreateTime Asc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime Asc</para>
