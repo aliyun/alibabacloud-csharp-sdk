@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeEventsListRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-28 18:00:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. You can specify one or more instance IDs.</para>
+        /// <para>The list of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-uf6ce0r08lr7xn****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-01 18:00:00</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListCustomAgentToolsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCustomAgentToolsResponseBodyData> Data { get; set; }
         public class ListCustomAgentToolsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The description in English.</para>
+            /// <para>The English description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Queries RDS instances.</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string En { get; set; }
 
             /// <summary>
-            /// <para>The description in Japanese.</para>
+            /// <para>The Japanese description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>RDS インスタンスの一覧を照会します。</para>
+            /// <para>RDS インスタンスの一覧を照会します</para>
             /// </summary>
             [NameInMap("Ja")]
             [Validation(Required=false)]
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The description in Traditional Chinese.</para>
+            /// <para>The Traditional Chinese description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查詢 RDS 實例清單。</para>
+            /// <para>查詢 RDS 實例清單</para>
             /// </summary>
             [NameInMap("Tc")]
             [Validation(Required=false)]
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The description in Simplified Chinese.</para>
+            /// <para>The Chinese description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查询RDS实例列表。</para>
+            /// <para>查询RDS实例列表</para>
             /// </summary>
             [NameInMap("Zh")]
             [Validation(Required=false)]

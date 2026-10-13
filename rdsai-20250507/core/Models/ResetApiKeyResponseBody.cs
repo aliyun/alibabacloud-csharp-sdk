@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ResetApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ResetApiKeyResponseBodyData Data { get; set; }
         public class ResetApiKeyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The new system API key.</para>
+            /// <para>The system API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-rds-*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The model invocation URL.</para>
+            /// <para>The URL for model invocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string BaseUrl { get; set; }
 
             /// <summary>
-            /// <para>A list of custom API keys.</para>
+            /// <para>The list of custom API keys.</para>
             /// </summary>
             [NameInMap("CustomKeyList")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API key.</para>
+                /// <para>The API key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

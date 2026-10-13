@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The supported languages. Valid values:</para>
+        /// <para>Specifies whether to obtain a temporary download URL for the specified version. Default value: false.</para>
+        /// </summary>
+        [NameInMap("Download")]
+        [Validation(Required=false)]
+        public bool? Download { get; set; }
+
+        /// <summary>
+        /// <para>The supported language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh-CN: Simplified Chinese</description></item>
         /// <item><description>zh-TW: Traditional Chinese</description></item>
@@ -26,7 +33,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the Skill.</para>
+        /// <para>The file path within the package, such as SKILL.md. The body is in File.text, and the full Markdown is in SkillMarkdown.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SKILL.md</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
+
+        /// <summary>
+        /// <para>The unique identifier of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +52,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("SkillId")]
         [Validation(Required=false)]
         public string SkillId { get; set; }
+
+        /// <summary>
+        /// <para>The version UUID (Versions[].Id), not a version number such as 1.0.0. If omitted, the currently active version is read.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000000-0000-4000-8000-000000000002</para>
+        /// </summary>
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
         /// <summary>
         /// <para>The ContextDB workspace ID.</para>

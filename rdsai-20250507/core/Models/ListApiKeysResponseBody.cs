@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public ListApiKeysResponseBodyData Data { get; set; }
         public class ListApiKeysResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL for model invocation.</para>
+            /// <para>The URL for model calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The quota limit ratio.</para>
+                /// <para>The quota ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota limit method. Valid values:</para>
+                /// <para>The quota type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>fixed</b>: Fixed value.</description></item>
                 /// <item><description><b>ratio</b>: Percentage.</description></item>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
-                /// <para>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</para>
+                /// <para>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public int? ThresholdPercent { get; set; }
 
                 /// <summary>
-                /// <para>The quota limit of the current key.</para>
+                /// <para>The quota of the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SystemApiKey { get; set; }
 
             /// <summary>
-            /// <para>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</para>
+            /// <para>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

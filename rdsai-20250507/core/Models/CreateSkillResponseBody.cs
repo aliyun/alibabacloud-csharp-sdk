@@ -10,6 +10,26 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateSkillResponseBody : TeaModel {
         /// <summary>
+        /// <para>The publish action for this release.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CREATE_SKILL</para>
+        /// </summary>
+        [NameInMap("Action")]
+        [Validation(Required=false)]
+        public string Action { get; set; }
+
+        /// <summary>
+        /// <para>The content digest of the Skill package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</para>
+        /// </summary>
+        [NameInMap("BundleHash")]
+        [Validation(Required=false)]
+        public string BundleHash { get; set; }
+
+        /// <summary>
         /// <para>The Skill catalog revision number.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +134,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The Skill creation time.</para>
+            /// <para>The creation time of the Skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-15T10:00:00Z</para>
@@ -134,7 +154,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The Skill display name.</para>
+            /// <para>The display name of the Skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example Skill</para>
@@ -194,7 +214,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Slug { get; set; }
 
             /// <summary>
-            /// <para>The Skill update time.</para>
+            /// <para>The update time of the Skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-15T10:00:00Z</para>
@@ -204,6 +224,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string UpdatedAt { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The ID of the created Skill.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>skill-example</para>
+        /// </summary>
+        [NameInMap("SkillId")]
+        [Validation(Required=false)]
+        public string SkillId { get; set; }
 
         /// <summary>
         /// <para>The Skill type.</para>
@@ -250,7 +280,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? CredentialRequired { get; set; }
 
             /// <summary>
-            /// <para>The Skill version ID.</para>
+            /// <para>The ID of the Skill version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>version-example</para>
@@ -260,7 +290,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The Skill package size, in bytes.</para>
+            /// <para>The size of the Skill package, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -270,7 +300,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? PackageSize { get; set; }
 
             /// <summary>
-            /// <para>The revocation reason of the Skill version.</para>
+            /// <para>The reason for revoking the Skill version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Replaced by a newer version</para>
@@ -300,7 +330,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Sha256 { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent Skill.</para>
+            /// <para>The ID of the Skill to which this version belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>skill-example</para>
@@ -320,7 +350,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The Skill version number.</para>
+            /// <para>The version number of the Skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -330,6 +360,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Version { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The ID of the created Skill version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>version-example</para>
+        /// </summary>
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
     }
 

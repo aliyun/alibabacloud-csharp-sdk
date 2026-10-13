@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ResetApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The API key.</para>
+        /// <para>Api Key</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-rds-*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

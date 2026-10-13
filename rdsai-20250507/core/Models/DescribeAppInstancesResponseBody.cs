@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeAppInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeAppInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-supabase</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application type. The only supported value is <b>supabase</b>, which represents <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
+            /// <para>The application type. Currently, only <b>supabase</b> is supported, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>supabase</para>
@@ -36,23 +36,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
-            /// <summary>
-            /// <para>The components of the instance.</para>
-            /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<DescribeAppInstancesResponseBodyInstancesComponents> Components { get; set; }
             public class DescribeAppInstancesResponseBodyInstancesComponents : TeaModel {
-                /// <summary>
-                /// <para>The component status.</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The component type.</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -60,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The DB instance ID of the connected ApsaraDB RDS for PostgreSQL instance.</para>
+            /// <para>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-2ze49qv594vi****</para>
@@ -80,7 +71,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The minor version of the AI application.</para>
+            /// <para>The minor version of the AI application instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20241231</para>
@@ -90,7 +81,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application instance.</para>
+            /// <para>The instance ID of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ra-supabase-8moov5lxba****</para>
@@ -100,7 +91,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public connection string.</para>
+            /// <para>The public endpoint of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.152. XXX.XXX:8000</para>
@@ -130,7 +121,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The VSwitch ID.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2zeaepb8k4ku05ov2****</para>
@@ -140,7 +131,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC connection string.</para>
+            /// <para>The internal endpoint of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XXX.XXX:8000</para>
@@ -152,7 +143,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>This parameter is reserved for future use.</para>
+        /// <para>A reserved parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

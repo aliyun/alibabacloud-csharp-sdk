@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     /// <para>The result message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Instance running status is normal</para>
+                    /// <para>The instance is running normally</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
@@ -195,12 +195,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <summary>
             /// <para>The Markdown text.</para>
             /// <list type="bullet">
-            /// <item><description>If the InstanceId parameter is not specified: the reports for all instances under this inspection report are returned, but the MarkdownText field is empty (&quot;&quot;).</description></item>
-            /// <item><description>If the InstanceId parameter is specified: the report for the specified instance is returned, and the MarkdownText field contains the specific content.</description></item>
+            /// <item><description>If the InstanceId parameter is not specified, the reports for all instances in the inspection report are returned, but the MarkdownText field is empty (&quot;&quot;).</description></item>
+            /// <item><description>If the InstanceId parameter is specified, the report for the specified instance is returned, and the MarkdownText field contains the detailed content.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <h1>RDS Instance Inspection Report\n\n<b>Instance ID</b>: <c>rm-2zep6e5u6l2yu****</c>\n\n<b>Engine Type</b>: MySQL\n\n<b>Region</b>: cn-beijing\n\n<b>Time Range (UTC)</b>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; This inspection includes <b>60</b> check items, of which 1 warning, 57 normal, and 2 failed to retrieve data.……</h1>
+            /// <h1>RDS Instance Inspection Report\n\n<b>Instance ID</b>: <c>rm-2zep6e5u6l2yu****</c>\n\n<b>Engine Type</b>: MySQL\n\n<b>Region</b>: cn-beijing\n\n<b>Time Range (UTC)</b>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; This inspection includes <b>60</b> checks, of which 1 warning, 57 normal, and 2 failed to retrieve data..</h1>
             /// </summary>
             [NameInMap("MarkdownText")]
             [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The Markdown text.</para>
         /// 
         /// <b>Example:</b>
-        /// <h1>RDS Batch Inspection Summary Report\n\n&gt; This batch inspection checked <b>1</b> instance; found <b>1</b> instance with warnings (1 warning item in total)……</h1>
+        /// <h1>RDS Batch Inspection Summary Report\n\n&gt; This batch inspection checked <b>1</b> instance; <b>1</b> instance was found with warnings (1 warning in total)..</h1>
         /// </summary>
         [NameInMap("MarkdownText")]
         [Validation(Required=false)]

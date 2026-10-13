@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMOUsageDetailExportRequest : TeaModel {
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

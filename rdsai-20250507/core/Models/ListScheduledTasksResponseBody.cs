@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The inspection description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Automatically inspect production RDS instances at 2 AM every day</para>
+            /// <para>Automatically inspect production ApsaraDB RDS instances at 2:00 AM every day</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>InspectionTest</para>
+            /// <para>Inspection test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

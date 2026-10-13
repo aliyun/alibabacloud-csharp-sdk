@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of custom agents.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? EnableTools { get; set; }
 
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>AgentId。</para>
             /// 
             /// <b>Example:</b>
             /// <para>d1b7d639-f34e-44c7-8231-987da14d****</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom agent.</para>
+            /// <para>The name of the dedicated agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>日志分析Agent</para>
+            /// <para>Log Analysis Agent</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The system prompt.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>我是您用来查询实例列表的专属Agent。</para>
+            /// <para>I am your dedicated agent for querying instance lists</para>
             /// </summary>
             [NameInMap("SystemPrompt")]
             [Validation(Required=false)]
             public string SystemPrompt { get; set; }
 
             /// <summary>
-            /// <para>A list of tools.</para>
+            /// <para>The tool information.</para>
             /// </summary>
             [NameInMap("Tools")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -115,37 +115,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>A list of skills.</para>
-        /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
         public List<ListCustomAgentResponseBodySkills> Skills { get; set; }
         public class ListCustomAgentResponseBodySkills : TeaModel {
-            /// <summary>
-            /// <para>The description of the skill.</para>
-            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <para>The skill ID.</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
-            /// <summary>
-            /// <para>The name of the skill.</para>
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <para>The type of the skill.</para>
-            /// </summary>
             [NameInMap("SkillType")]
             [Validation(Required=false)]
             public string SkillType { get; set; }
@@ -153,7 +138,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries that match the query. This parameter is not returned by default.</para>
+        /// <para>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

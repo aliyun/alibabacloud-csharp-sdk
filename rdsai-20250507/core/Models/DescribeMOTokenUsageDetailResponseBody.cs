@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions. This parameter is optional and may not be returned by default.</para>
+        /// <para>The total number of records that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

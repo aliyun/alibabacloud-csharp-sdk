@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteContextDatabaseMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the member was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-28T17:59:55Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<DeleteContextDatabaseMemberResponseBodyKeys> Keys { get; set; }
         public class DeleteContextDatabaseMemberResponseBodyKeys : TeaModel {
             /// <summary>
-            /// <para>The creation time. This field is empty.</para>
+            /// <para>The time when the API key was created. This field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The API key suffix. This field is empty.</para>
+            /// <para>The suffix of the API key. This field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? KeyId { get; set; }
 
             /// <summary>
-            /// <para>The API key prefix. This field is empty.</para>
+            /// <para>The prefix of the API key. This field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(null)</para>

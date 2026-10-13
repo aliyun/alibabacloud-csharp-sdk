@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The list of endpoint information of the database instance.</para>
+        /// <para>The list of endpoint information for the database instance.</para>
         /// </summary>
         [NameInMap("DBInstanceEndpoints")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The list of endpoint information of the AI application instance.</para>
+        /// <para>The list of endpoint information for the AI application instance.</para>
         /// </summary>
         [NameInMap("InstanceEndpoints")]
         [Validation(Required=false)]

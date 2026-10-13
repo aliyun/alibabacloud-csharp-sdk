@@ -48,6 +48,482 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adds an exclusion item to an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds a job exclusion item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public AddContextDatabaseSyncJobExclusionResponse AddContextDatabaseSyncJobExclusionWithOptions(AddContextDatabaseSyncJobExclusionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentId))
+            {
+                query["DocumentId"] = request.DocumentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddContextDatabaseSyncJobExclusion",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddContextDatabaseSyncJobExclusionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an exclusion item to an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds a job exclusion item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public async Task<AddContextDatabaseSyncJobExclusionResponse> AddContextDatabaseSyncJobExclusionWithOptionsAsync(AddContextDatabaseSyncJobExclusionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentId))
+            {
+                query["DocumentId"] = request.DocumentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddContextDatabaseSyncJobExclusion",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddContextDatabaseSyncJobExclusionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an exclusion item to an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds a job exclusion item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public AddContextDatabaseSyncJobExclusionResponse AddContextDatabaseSyncJobExclusion(AddContextDatabaseSyncJobExclusionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddContextDatabaseSyncJobExclusionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an exclusion item to an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds a job exclusion item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public async Task<AddContextDatabaseSyncJobExclusionResponse> AddContextDatabaseSyncJobExclusionAsync(AddContextDatabaseSyncJobExclusionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddContextDatabaseSyncJobExclusionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an in-progress discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncDiscoveryResponse
+        /// </returns>
+        public CancelContextDatabaseSyncDiscoveryResponse CancelContextDatabaseSyncDiscoveryWithOptions(CancelContextDatabaseSyncDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelContextDatabaseSyncDiscovery",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelContextDatabaseSyncDiscoveryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an in-progress discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncDiscoveryResponse
+        /// </returns>
+        public async Task<CancelContextDatabaseSyncDiscoveryResponse> CancelContextDatabaseSyncDiscoveryWithOptionsAsync(CancelContextDatabaseSyncDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelContextDatabaseSyncDiscovery",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelContextDatabaseSyncDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an in-progress discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncDiscoveryResponse
+        /// </returns>
+        public CancelContextDatabaseSyncDiscoveryResponse CancelContextDatabaseSyncDiscovery(CancelContextDatabaseSyncDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelContextDatabaseSyncDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an in-progress discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncDiscoveryResponse
+        /// </returns>
+        public async Task<CancelContextDatabaseSyncDiscoveryResponse> CancelContextDatabaseSyncDiscoveryAsync(CancelContextDatabaseSyncDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelContextDatabaseSyncDiscoveryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncRunResponse
+        /// </returns>
+        public CancelContextDatabaseSyncRunResponse CancelContextDatabaseSyncRunWithOptions(CancelContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelContextDatabaseSyncRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<CancelContextDatabaseSyncRunResponse> CancelContextDatabaseSyncRunWithOptionsAsync(CancelContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelContextDatabaseSyncRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncRunResponse
+        /// </returns>
+        public CancelContextDatabaseSyncRunResponse CancelContextDatabaseSyncRun(CancelContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelContextDatabaseSyncRunWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<CancelContextDatabaseSyncRunResponse> CancelContextDatabaseSyncRunAsync(CancelContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelContextDatabaseSyncRunWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sends a conversation message.</para>
         /// </summary>
         /// 
@@ -564,16 +1040,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an RDS Supabase instance.</para>
+        /// <para>Creates an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
-        /// <para>RDS PostgreSQL  </para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</para>
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -690,16 +1167,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an RDS Supabase instance.</para>
+        /// <para>Creates an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
-        /// <para>RDS PostgreSQL  </para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</para>
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -816,16 +1294,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an RDS Supabase instance.</para>
+        /// <para>Creates an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
-        /// <para>RDS PostgreSQL  </para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</para>
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -844,16 +1323,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an RDS Supabase instance.</para>
+        /// <para>Creates an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
-        /// <para>RDS PostgreSQL  </para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</para>
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -1033,7 +1513,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
+        /// <para>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1096,7 +1576,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
+        /// <para>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1159,7 +1639,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
+        /// <para>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1182,7 +1662,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
+        /// <para>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1200,12 +1680,592 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
+        /// <para>Creates a synchronization connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public CreateContextDatabaseSyncConnectionResponse CreateContextDatabaseSyncConnectionWithOptions(CreateContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthKind))
+            {
+                query["AuthKind"] = request.AuthKind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a synchronization connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncConnectionResponse> CreateContextDatabaseSyncConnectionWithOptionsAsync(CreateContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthKind))
+            {
+                query["AuthKind"] = request.AuthKind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a synchronization connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public CreateContextDatabaseSyncConnectionResponse CreateContextDatabaseSyncConnection(CreateContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseSyncConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a synchronization connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncConnectionResponse> CreateContextDatabaseSyncConnectionAsync(CreateContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseSyncConnectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+        /// On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncJobResponse
+        /// </returns>
+        public CreateContextDatabaseSyncJobResponse CreateContextDatabaseSyncJobWithOptions(CreateContextDatabaseSyncJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateContextDatabaseSyncJobShrinkRequest request = new CreateContextDatabaseSyncJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseId))
+            {
+                query["TargetKnowledgeBaseId"] = request.TargetKnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseName))
+            {
+                query["TargetKnowledgeBaseName"] = request.TargetKnowledgeBaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+        /// On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncJobResponse> CreateContextDatabaseSyncJobWithOptionsAsync(CreateContextDatabaseSyncJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateContextDatabaseSyncJobShrinkRequest request = new CreateContextDatabaseSyncJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseId))
+            {
+                query["TargetKnowledgeBaseId"] = request.TargetKnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseName))
+            {
+                query["TargetKnowledgeBaseName"] = request.TargetKnowledgeBaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+        /// On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncJobResponse
+        /// </returns>
+        public CreateContextDatabaseSyncJobResponse CreateContextDatabaseSyncJob(CreateContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseSyncJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+        /// On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncJobResponse> CreateContextDatabaseSyncJobAsync(CreateContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseSyncJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+        /// On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public CreateContextDatabaseSyncSourceResponse CreateContextDatabaseSyncSourceWithOptions(CreateContextDatabaseSyncSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateContextDatabaseSyncSourceShrinkRequest request = new CreateContextDatabaseSyncSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
+            {
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfigShrink))
+            {
+                query["SourceConfig"] = request.SourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+        /// On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncSourceResponse> CreateContextDatabaseSyncSourceWithOptionsAsync(CreateContextDatabaseSyncSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateContextDatabaseSyncSourceShrinkRequest request = new CreateContextDatabaseSyncSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
+            {
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfigShrink))
+            {
+                query["SourceConfig"] = request.SourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseSyncSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+        /// On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public CreateContextDatabaseSyncSourceResponse CreateContextDatabaseSyncSource(CreateContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseSyncSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+        /// On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseSyncSourceResponse> CreateContextDatabaseSyncSourceAsync(CreateContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseSyncSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1251,12 +2311,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
+        /// <para>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1302,12 +2362,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
+        /// <para>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1325,12 +2385,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
+        /// <para>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1704,13 +2764,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// <para>Triggers an asynchronous export task for MO usage details in CSV format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1772,13 +2832,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// <para>Triggers an asynchronous export task for MO usage details in CSV format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1840,13 +2900,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// <para>Triggers an asynchronous export task for MO usage details in CSV format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1864,13 +2924,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// <para>Triggers an asynchronous export task for MO usage details in CSV format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2123,9 +3183,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2220,9 +3280,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2317,9 +3377,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2346,9 +3406,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2368,7 +3428,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user-defined Skill.</para>
+        /// <para>Creates a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2411,6 +3471,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateNote))
+            {
+                query["UpdateNote"] = request.UpdateNote;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
             {
                 query["UploadId"] = request.UploadId;
@@ -2444,7 +3508,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user-defined Skill.</para>
+        /// <para>Creates a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2487,6 +3551,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateNote))
+            {
+                query["UpdateNote"] = request.UpdateNote;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
             {
                 query["UploadId"] = request.UploadId;
@@ -2520,7 +3588,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user-defined Skill.</para>
+        /// <para>Creates a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2538,7 +3606,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user-defined Skill.</para>
+        /// <para>Creates a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2719,7 +3787,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <remarks>
         /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2785,7 +3853,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <remarks>
         /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2851,7 +3919,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <remarks>
         /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2881,7 +3949,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <remarks>
         /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2900,12 +3968,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ContextDB member.</para>
+        /// <para>Deletes a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a member (hard delete, not recoverable).</para>
+        /// <para>Deletes a member. This is a hard delete and cannot be undone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2951,12 +4019,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ContextDB member.</para>
+        /// <para>Deletes a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a member (hard delete, not recoverable).</para>
+        /// <para>Deletes a member. This is a hard delete and cannot be undone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3002,12 +4070,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ContextDB member.</para>
+        /// <para>Deletes a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a member (hard delete, not recoverable).</para>
+        /// <para>Deletes a member. This is a hard delete and cannot be undone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3025,12 +4093,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ContextDB member.</para>
+        /// <para>Deletes a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a member (hard delete, not recoverable).</para>
+        /// <para>Deletes a member. This is a hard delete and cannot be undone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3048,12 +4116,480 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncConnectionResponse DeleteContextDatabaseSyncConnectionWithOptions(DeleteContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncConnectionResponse> DeleteContextDatabaseSyncConnectionWithOptionsAsync(DeleteContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncConnectionResponse DeleteContextDatabaseSyncConnection(DeleteContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContextDatabaseSyncConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncConnectionResponse> DeleteContextDatabaseSyncConnectionAsync(DeleteContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContextDatabaseSyncConnectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncJobResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncJobResponse DeleteContextDatabaseSyncJobWithOptions(DeleteContextDatabaseSyncJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncJobResponse> DeleteContextDatabaseSyncJobWithOptionsAsync(DeleteContextDatabaseSyncJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncJobResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncJobResponse DeleteContextDatabaseSyncJob(DeleteContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContextDatabaseSyncJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncJobResponse> DeleteContextDatabaseSyncJobAsync(DeleteContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContextDatabaseSyncJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncSourceResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncSourceResponse DeleteContextDatabaseSyncSourceWithOptions(DeleteContextDatabaseSyncSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncSourceResponse> DeleteContextDatabaseSyncSourceWithOptionsAsync(DeleteContextDatabaseSyncSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseSyncSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncSourceResponse
+        /// </returns>
+        public DeleteContextDatabaseSyncSourceResponse DeleteContextDatabaseSyncSource(DeleteContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContextDatabaseSyncSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseSyncSourceResponse> DeleteContextDatabaseSyncSourceAsync(DeleteContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContextDatabaseSyncSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3100,7 +4636,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3147,7 +4683,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3170,7 +4706,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3313,7 +4849,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3371,7 +4907,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3429,7 +4965,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3455,7 +4991,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3892,12 +5428,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves a list of RDS AI application instances.</para>
+        /// <para>Queries a list of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3958,12 +5494,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves a list of RDS AI application instances.</para>
+        /// <para>Queries a list of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4024,12 +5560,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves a list of RDS AI application instances.</para>
+        /// <para>Queries a list of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4050,12 +5586,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves a list of RDS AI application instances.</para>
+        /// <para>Queries a list of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4244,7 +5780,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the list of events.</para>
+        /// <para>Queries a list of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4306,7 +5842,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the list of events.</para>
+        /// <para>Queries a list of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4368,7 +5904,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the list of events.</para>
+        /// <para>Queries a list of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4386,7 +5922,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the list of events.</para>
+        /// <para>Queries a list of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4740,12 +6276,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4802,12 +6338,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4864,12 +6400,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4890,12 +6426,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -5624,13 +7160,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// <para>Queries the token usage summary for a model operator instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5692,13 +7228,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// <para>Queries the token usage summary for a model operator instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5760,13 +7296,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// <para>Queries the token usage summary for a model operator instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5784,13 +7320,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// <para>Queries the token usage summary for a model operator instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5808,13 +7344,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// <para>Queries the status or download link of an asynchronous CSV export task for MO usage details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5856,13 +7392,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// <para>Queries the status or download link of an asynchronous CSV export task for MO usage details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5904,13 +7440,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// <para>Queries the status or download link of an asynchronous CSV export task for MO usage details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5928,13 +7464,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// <para>Queries the status or download link of an asynchronous CSV export task for MO usage details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5952,7 +7488,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6004,7 +7540,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6056,7 +7592,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6080,7 +7616,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6104,7 +7640,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6178,7 +7714,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6252,7 +7788,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6276,7 +7812,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6300,7 +7836,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6378,7 +7914,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6456,7 +7992,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6482,7 +8018,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6508,13 +8044,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6556,13 +8092,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6604,13 +8140,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6628,13 +8164,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6652,14 +8188,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6714,14 +8250,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6776,14 +8312,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6802,14 +8338,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
+        /// <para>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6835,7 +8371,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <para>During the public preview, the sandbox and Edge Routine features are free of charge.</para>
         /// <h3>Before you begin</h3>
-        /// <para>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
+        /// <para>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6904,7 +8440,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <para>During the public preview, the sandbox and Edge Routine features are free of charge.</para>
         /// <h3>Before you begin</h3>
-        /// <para>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
+        /// <para>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6973,7 +8509,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <para>During the public preview, the sandbox and Edge Routine features are free of charge.</para>
         /// <h3>Before you begin</h3>
-        /// <para>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
+        /// <para>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6998,7 +8534,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <para>During the public preview, the sandbox and Edge Routine features are free of charge.</para>
         /// <h3>Before you begin</h3>
-        /// <para>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
+        /// <para>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7016,13 +8552,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAvailableLLMModels</para>
+        /// <para>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7072,13 +8608,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAvailableLLMModels</para>
+        /// <para>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7128,13 +8664,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAvailableLLMModels</para>
+        /// <para>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7152,13 +8688,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAvailableLLMModels</para>
+        /// <para>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7176,7 +8712,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话可选模型</para>
+        /// <para>Retrieves the available models for a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7210,7 +8746,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话可选模型</para>
+        /// <para>Retrieves the available models for a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7244,7 +8780,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话可选模型</para>
+        /// <para>Retrieves the available models for a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7262,7 +8798,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话可选模型</para>
+        /// <para>Retrieves the available models for a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7276,6 +8812,1338 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetChatModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a datasource configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public GetContextDatabaseSyncConnectionResponse GetContextDatabaseSyncConnectionWithOptions(GetContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a datasource configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncConnectionResponse> GetContextDatabaseSyncConnectionWithOptionsAsync(GetContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a datasource configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public GetContextDatabaseSyncConnectionResponse GetContextDatabaseSyncConnection(GetContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a datasource configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncConnectionResponse> GetContextDatabaseSyncConnectionAsync(GetContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncConnectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization scope of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the authorization scope of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionAuthorizationResponse
+        /// </returns>
+        public GetContextDatabaseSyncConnectionAuthorizationResponse GetContextDatabaseSyncConnectionAuthorizationWithOptions(GetContextDatabaseSyncConnectionAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncConnectionAuthorization",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncConnectionAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization scope of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the authorization scope of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionAuthorizationResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncConnectionAuthorizationResponse> GetContextDatabaseSyncConnectionAuthorizationWithOptionsAsync(GetContextDatabaseSyncConnectionAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncConnectionAuthorization",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncConnectionAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization scope of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the authorization scope of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionAuthorizationResponse
+        /// </returns>
+        public GetContextDatabaseSyncConnectionAuthorizationResponse GetContextDatabaseSyncConnectionAuthorization(GetContextDatabaseSyncConnectionAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncConnectionAuthorizationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization scope of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the authorization scope of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncConnectionAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncConnectionAuthorizationResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncConnectionAuthorizationResponse> GetContextDatabaseSyncConnectionAuthorizationAsync(GetContextDatabaseSyncConnectionAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncConnectionAuthorizationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncDiscoveryTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncDiscoveryTaskResponse
+        /// </returns>
+        public GetContextDatabaseSyncDiscoveryTaskResponse GetContextDatabaseSyncDiscoveryTaskWithOptions(GetContextDatabaseSyncDiscoveryTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncDiscoveryTask",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncDiscoveryTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncDiscoveryTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncDiscoveryTaskResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncDiscoveryTaskResponse> GetContextDatabaseSyncDiscoveryTaskWithOptionsAsync(GetContextDatabaseSyncDiscoveryTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncDiscoveryTask",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncDiscoveryTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncDiscoveryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncDiscoveryTaskResponse
+        /// </returns>
+        public GetContextDatabaseSyncDiscoveryTaskResponse GetContextDatabaseSyncDiscoveryTask(GetContextDatabaseSyncDiscoveryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncDiscoveryTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status of a discovery task by task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncDiscoveryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncDiscoveryTaskResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncDiscoveryTaskResponse> GetContextDatabaseSyncDiscoveryTaskAsync(GetContextDatabaseSyncDiscoveryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncDiscoveryTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobResponse GetContextDatabaseSyncJobWithOptions(GetContextDatabaseSyncJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobResponse> GetContextDatabaseSyncJobWithOptionsAsync(GetContextDatabaseSyncJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobResponse GetContextDatabaseSyncJob(GetContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobResponse> GetContextDatabaseSyncJobAsync(GetContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an import task can be started.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether a job can be started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobReadinessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobReadinessResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobReadinessResponse GetContextDatabaseSyncJobReadinessWithOptions(GetContextDatabaseSyncJobReadinessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJobReadiness",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobReadinessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an import task can be started.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether a job can be started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobReadinessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobReadinessResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobReadinessResponse> GetContextDatabaseSyncJobReadinessWithOptionsAsync(GetContextDatabaseSyncJobReadinessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJobReadiness",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobReadinessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an import task can be started.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether a job can be started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobReadinessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobReadinessResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobReadinessResponse GetContextDatabaseSyncJobReadiness(GetContextDatabaseSyncJobReadinessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncJobReadinessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an import task can be started.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether a job can be started.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobReadinessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobReadinessResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobReadinessResponse> GetContextDatabaseSyncJobReadinessAsync(GetContextDatabaseSyncJobReadinessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncJobReadinessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling configuration of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the scheduling configuration of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobScheduleResponse GetContextDatabaseSyncJobScheduleWithOptions(GetContextDatabaseSyncJobScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJobSchedule",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobScheduleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling configuration of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the scheduling configuration of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobScheduleResponse> GetContextDatabaseSyncJobScheduleWithOptionsAsync(GetContextDatabaseSyncJobScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncJobSchedule",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncJobScheduleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling configuration of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the scheduling configuration of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public GetContextDatabaseSyncJobScheduleResponse GetContextDatabaseSyncJobSchedule(GetContextDatabaseSyncJobScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncJobScheduleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling configuration of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the scheduling configuration of a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncJobScheduleResponse> GetContextDatabaseSyncJobScheduleAsync(GetContextDatabaseSyncJobScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncJobScheduleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncRunResponse
+        /// </returns>
+        public GetContextDatabaseSyncRunResponse GetContextDatabaseSyncRunWithOptions(GetContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncRunResponse> GetContextDatabaseSyncRunWithOptionsAsync(GetContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncRunResponse
+        /// </returns>
+        public GetContextDatabaseSyncRunResponse GetContextDatabaseSyncRun(GetContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncRunWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncRunResponse> GetContextDatabaseSyncRunAsync(GetContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncRunWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceResponse
+        /// </returns>
+        public GetContextDatabaseSyncSourceResponse GetContextDatabaseSyncSourceWithOptions(GetContextDatabaseSyncSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncSourceResponse> GetContextDatabaseSyncSourceWithOptionsAsync(GetContextDatabaseSyncSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceResponse
+        /// </returns>
+        public GetContextDatabaseSyncSourceResponse GetContextDatabaseSyncSource(GetContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncSourceResponse> GetContextDatabaseSyncSourceAsync(GetContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current node selection in the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the current node selection of the source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public GetContextDatabaseSyncSourceSelectionResponse GetContextDatabaseSyncSourceSelectionWithOptions(GetContextDatabaseSyncSourceSelectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncSourceSelection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncSourceSelectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current node selection in the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the current node selection of the source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncSourceSelectionResponse> GetContextDatabaseSyncSourceSelectionWithOptionsAsync(GetContextDatabaseSyncSourceSelectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseSyncSourceSelection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseSyncSourceSelectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current node selection in the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the current node selection of the source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public GetContextDatabaseSyncSourceSelectionResponse GetContextDatabaseSyncSourceSelection(GetContextDatabaseSyncSourceSelectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseSyncSourceSelectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current node selection in the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the current node selection of the source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public async Task<GetContextDatabaseSyncSourceSelectionResponse> GetContextDatabaseSyncSourceSelectionAsync(GetContextDatabaseSyncSourceSelectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseSyncSourceSelectionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7432,7 +10300,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified custom agent.</para>
+        /// <para>Queries a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7474,7 +10342,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified custom agent.</para>
+        /// <para>Queries a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7516,7 +10384,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified custom agent.</para>
+        /// <para>Queries a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7534,7 +10402,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified custom agent.</para>
+        /// <para>Queries a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7840,7 +10708,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves order information for the RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Retrieves order information for RDS AI Assistant Ultimate Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7888,7 +10756,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves order information for the RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Retrieves order information for RDS AI Assistant Ultimate Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7936,7 +10804,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves order information for the RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Retrieves order information for RDS AI Assistant Ultimate Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7960,7 +10828,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves order information for the RDS AI Assistant Ultimate Edition.</para>
+        /// <para>Retrieves order information for RDS AI Assistant Ultimate Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8272,7 +11140,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
+        /// <para>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8289,13 +11157,25 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
             {
                 query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -8322,7 +11202,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
+        /// <para>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8339,13 +11219,25 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
             {
                 query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -8372,7 +11264,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
+        /// <para>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8390,7 +11282,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
+        /// <para>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8884,12 +11776,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the members of a context database.</para>
+        /// <para>Lists context database members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8939,12 +11831,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the members of a context database.</para>
+        /// <para>Lists context database members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8994,12 +11886,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the members of a context database.</para>
+        /// <para>Lists context database members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9017,12 +11909,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the members of a context database.</para>
+        /// <para>Lists context database members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9036,6 +11928,1610 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListContextDatabaseMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the datasource configurations in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncConnectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncConnectionsResponse
+        /// </returns>
+        public ListContextDatabaseSyncConnectionsResponse ListContextDatabaseSyncConnectionsWithOptions(ListContextDatabaseSyncConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncConnections",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncConnectionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the datasource configurations in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncConnectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncConnectionsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncConnectionsResponse> ListContextDatabaseSyncConnectionsWithOptionsAsync(ListContextDatabaseSyncConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncConnections",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncConnectionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the datasource configurations in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncConnectionsResponse
+        /// </returns>
+        public ListContextDatabaseSyncConnectionsResponse ListContextDatabaseSyncConnections(ListContextDatabaseSyncConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncConnectionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the datasource configurations in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncConnectionsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncConnectionsResponse> ListContextDatabaseSyncConnectionsAsync(ListContextDatabaseSyncConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncConnectionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the documents associated with an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobDocumentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobDocumentsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobDocumentsResponse ListContextDatabaseSyncJobDocumentsWithOptions(ListContextDatabaseSyncJobDocumentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobDocuments",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobDocumentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the documents associated with an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobDocumentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobDocumentsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobDocumentsResponse> ListContextDatabaseSyncJobDocumentsWithOptionsAsync(ListContextDatabaseSyncJobDocumentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobDocuments",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobDocumentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the documents associated with an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobDocumentsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobDocumentsResponse ListContextDatabaseSyncJobDocuments(ListContextDatabaseSyncJobDocumentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncJobDocumentsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the documents associated with an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobDocumentsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobDocumentsResponse> ListContextDatabaseSyncJobDocumentsAsync(ListContextDatabaseSyncJobDocumentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncJobDocumentsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the exclusions of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation uses pagination by default. Page and PageSize are optional parameters.
+        /// The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobExclusionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobExclusionsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobExclusionsResponse ListContextDatabaseSyncJobExclusionsWithOptions(ListContextDatabaseSyncJobExclusionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobExclusions",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobExclusionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the exclusions of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation uses pagination by default. Page and PageSize are optional parameters.
+        /// The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobExclusionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobExclusionsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobExclusionsResponse> ListContextDatabaseSyncJobExclusionsWithOptionsAsync(ListContextDatabaseSyncJobExclusionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobExclusions",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobExclusionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the exclusions of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation uses pagination by default. Page and PageSize are optional parameters.
+        /// The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobExclusionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobExclusionsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobExclusionsResponse ListContextDatabaseSyncJobExclusions(ListContextDatabaseSyncJobExclusionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncJobExclusionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the exclusions of an import task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation uses pagination by default. Page and PageSize are optional parameters.
+        /// The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobExclusionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobExclusionsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobExclusionsResponse> ListContextDatabaseSyncJobExclusionsAsync(ListContextDatabaseSyncJobExclusionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncJobExclusionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists import tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobsResponse ListContextDatabaseSyncJobsWithOptions(ListContextDatabaseSyncJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobs",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists import tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobsResponse> ListContextDatabaseSyncJobsWithOptionsAsync(ListContextDatabaseSyncJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncJobs",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists import tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobsResponse
+        /// </returns>
+        public ListContextDatabaseSyncJobsResponse ListContextDatabaseSyncJobs(ListContextDatabaseSyncJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists import tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+        /// The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncJobsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncJobsResponse> ListContextDatabaseSyncJobsAsync(ListContextDatabaseSyncJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists available synchronization plugins.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncPluginsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncPluginsResponse
+        /// </returns>
+        public ListContextDatabaseSyncPluginsResponse ListContextDatabaseSyncPluginsWithOptions(ListContextDatabaseSyncPluginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncPlugins",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncPluginsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists available synchronization plugins.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncPluginsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncPluginsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncPluginsResponse> ListContextDatabaseSyncPluginsWithOptionsAsync(ListContextDatabaseSyncPluginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncPlugins",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncPluginsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists available synchronization plugins.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncPluginsResponse
+        /// </returns>
+        public ListContextDatabaseSyncPluginsResponse ListContextDatabaseSyncPlugins(ListContextDatabaseSyncPluginsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncPluginsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists available synchronization plugins.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncPluginsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncPluginsResponse> ListContextDatabaseSyncPluginsAsync(ListContextDatabaseSyncPluginsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncPluginsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunItemsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunItemsResponse ListContextDatabaseSyncRunItemsWithOptions(ListContextDatabaseSyncRunItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRunItems",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunItemsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunItemsResponse> ListContextDatabaseSyncRunItemsWithOptionsAsync(ListContextDatabaseSyncRunItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRunItems",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunItemsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunItemsResponse ListContextDatabaseSyncRunItems(ListContextDatabaseSyncRunItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncRunItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+        /// The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunItemsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunItemsResponse> ListContextDatabaseSyncRunItemsAsync(ListContextDatabaseSyncRunItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncRunItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出 Run 日志</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+        /// 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunLogsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunLogsResponse ListContextDatabaseSyncRunLogsWithOptions(ListContextDatabaseSyncRunLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRunLogs",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出 Run 日志</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+        /// 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunLogsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunLogsResponse> ListContextDatabaseSyncRunLogsWithOptionsAsync(ListContextDatabaseSyncRunLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRunLogs",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出 Run 日志</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+        /// 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunLogsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunLogsResponse ListContextDatabaseSyncRunLogs(ListContextDatabaseSyncRunLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncRunLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出 Run 日志</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+        /// 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunLogsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunLogsResponse> ListContextDatabaseSyncRunLogsAsync(ListContextDatabaseSyncRunLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncRunLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+        /// The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunsResponse ListContextDatabaseSyncRunsWithOptions(ListContextDatabaseSyncRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRuns",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+        /// The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunsResponse> ListContextDatabaseSyncRunsWithOptionsAsync(ListContextDatabaseSyncRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncRuns",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+        /// The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunsResponse
+        /// </returns>
+        public ListContextDatabaseSyncRunsResponse ListContextDatabaseSyncRuns(ListContextDatabaseSyncRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncRunsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+        /// The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncRunsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncRunsResponse> ListContextDatabaseSyncRunsAsync(ListContextDatabaseSyncRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncRunsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the discovered tree nodes for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourceTreeNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourceTreeNodesResponse
+        /// </returns>
+        public ListContextDatabaseSyncSourceTreeNodesResponse ListContextDatabaseSyncSourceTreeNodesWithOptions(ListContextDatabaseSyncSourceTreeNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncSourceTreeNodes",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncSourceTreeNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the discovered tree nodes for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourceTreeNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourceTreeNodesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncSourceTreeNodesResponse> ListContextDatabaseSyncSourceTreeNodesWithOptionsAsync(ListContextDatabaseSyncSourceTreeNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncSourceTreeNodes",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncSourceTreeNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the discovered tree nodes for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourceTreeNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourceTreeNodesResponse
+        /// </returns>
+        public ListContextDatabaseSyncSourceTreeNodesResponse ListContextDatabaseSyncSourceTreeNodes(ListContextDatabaseSyncSourceTreeNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncSourceTreeNodesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the discovered tree nodes for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourceTreeNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourceTreeNodesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncSourceTreeNodesResponse> ListContextDatabaseSyncSourceTreeNodesAsync(ListContextDatabaseSyncSourceTreeNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncSourceTreeNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the data selection scopes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourcesResponse
+        /// </returns>
+        public ListContextDatabaseSyncSourcesResponse ListContextDatabaseSyncSourcesWithOptions(ListContextDatabaseSyncSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncSources",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncSourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the data selection scopes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourcesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncSourcesResponse> ListContextDatabaseSyncSourcesWithOptionsAsync(ListContextDatabaseSyncSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseSyncSources",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseSyncSourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the data selection scopes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourcesResponse
+        /// </returns>
+        public ListContextDatabaseSyncSourcesResponse ListContextDatabaseSyncSources(ListContextDatabaseSyncSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseSyncSourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the data selection scopes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseSyncSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseSyncSourcesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseSyncSourcesResponse> ListContextDatabaseSyncSourcesAsync(ListContextDatabaseSyncSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseSyncSourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9204,7 +13700,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists your custom agents.</para>
+        /// <para>Queries the list of dedicated agents created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9250,7 +13746,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists your custom agents.</para>
+        /// <para>Queries the list of dedicated agents created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9296,7 +13792,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists your custom agents.</para>
+        /// <para>Queries the list of dedicated agents created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9314,7 +13810,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists your custom agents.</para>
+        /// <para>Queries the list of dedicated agents created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9332,7 +13828,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom agent tools of the user.</para>
+        /// <para>Queries the list of Agent tools for a user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -9362,7 +13858,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom agent tools of the user.</para>
+        /// <para>Queries the list of Agent tools for a user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -9392,7 +13888,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom agent tools of the user.</para>
+        /// <para>Queries the list of Agent tools for a user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9406,7 +13902,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom agent tools of the user.</para>
+        /// <para>Queries the list of Agent tools for a user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9420,13 +13916,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLLMTokenUsage</para>
+        /// <para>Retrieves the AI gateway token usage for an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9484,13 +13980,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLLMTokenUsage</para>
+        /// <para>Retrieves the AI gateway token usage for an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9548,13 +14044,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLLMTokenUsage</para>
+        /// <para>Retrieves the AI gateway token usage for an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9572,13 +14068,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLLMTokenUsage</para>
+        /// <para>Retrieves the AI gateway token usage for an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
-        /// <para>RDS SUPABASE</para>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS Supabase.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9761,6 +14257,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -9814,6 +14326,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -10436,12 +14964,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -10510,12 +15038,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -10584,12 +15112,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -10610,12 +15138,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -11976,13 +16504,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12028,13 +16556,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12080,13 +16608,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12104,13 +16632,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</para>
+        /// <para>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12124,6 +16652,170 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWhitelistIpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an exclusion item for an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an exclusion item for a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public RemoveContextDatabaseSyncJobExclusionResponse RemoveContextDatabaseSyncJobExclusionWithOptions(RemoveContextDatabaseSyncJobExclusionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentId))
+            {
+                query["DocumentId"] = request.DocumentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveContextDatabaseSyncJobExclusion",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveContextDatabaseSyncJobExclusionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an exclusion item for an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an exclusion item for a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public async Task<RemoveContextDatabaseSyncJobExclusionResponse> RemoveContextDatabaseSyncJobExclusionWithOptionsAsync(RemoveContextDatabaseSyncJobExclusionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentId))
+            {
+                query["DocumentId"] = request.DocumentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveContextDatabaseSyncJobExclusion",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveContextDatabaseSyncJobExclusionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an exclusion item for an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an exclusion item for a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public RemoveContextDatabaseSyncJobExclusionResponse RemoveContextDatabaseSyncJobExclusion(RemoveContextDatabaseSyncJobExclusionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveContextDatabaseSyncJobExclusionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an exclusion item for an import job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an exclusion item for a job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveContextDatabaseSyncJobExclusionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveContextDatabaseSyncJobExclusionResponse
+        /// </returns>
+        public async Task<RemoveContextDatabaseSyncJobExclusionResponse> RemoveContextDatabaseSyncJobExclusionAsync(RemoveContextDatabaseSyncJobExclusionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveContextDatabaseSyncJobExclusionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12304,13 +16996,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an API key.</para>
+        /// <para>Resets the API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12356,13 +17048,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an API key.</para>
+        /// <para>Resets the API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12408,13 +17100,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an API key.</para>
+        /// <para>Resets the API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12432,13 +17124,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an API key.</para>
+        /// <para>Resets the API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12456,7 +17148,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</para>
+        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12510,7 +17202,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</para>
+        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12564,7 +17256,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</para>
+        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12590,7 +17282,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</para>
+        /// <para>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12616,7 +17308,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Resets the logon password and database access password of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12626,7 +17318,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be modified.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12685,7 +17377,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Resets the logon password and database access password of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12695,7 +17387,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be modified.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12754,7 +17446,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Resets the logon password and database access password of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12764,7 +17456,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be modified.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12783,7 +17475,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Resets the logon password and database access password of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12793,7 +17485,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be modified.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12980,7 +17672,163 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a context database API key.</para>
+        /// <para>基于快照重试失败明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryFailedContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryFailedContextDatabaseSyncRunResponse
+        /// </returns>
+        public RetryFailedContextDatabaseSyncRunResponse RetryFailedContextDatabaseSyncRunWithOptions(RetryFailedContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryFailedContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryFailedContextDatabaseSyncRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于快照重试失败明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryFailedContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryFailedContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<RetryFailedContextDatabaseSyncRunResponse> RetryFailedContextDatabaseSyncRunWithOptionsAsync(RetryFailedContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryFailedContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryFailedContextDatabaseSyncRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于快照重试失败明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryFailedContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryFailedContextDatabaseSyncRunResponse
+        /// </returns>
+        public RetryFailedContextDatabaseSyncRunResponse RetryFailedContextDatabaseSyncRun(RetryFailedContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryFailedContextDatabaseSyncRunWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于快照重试失败明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryFailedContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryFailedContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<RetryFailedContextDatabaseSyncRunResponse> RetryFailedContextDatabaseSyncRunAsync(RetryFailedContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryFailedContextDatabaseSyncRunWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes an API key for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13035,7 +17883,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a context database API key.</para>
+        /// <para>Revokes an API key for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13090,7 +17938,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a context database API key.</para>
+        /// <para>Revokes an API key for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13113,7 +17961,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a context database API key.</para>
+        /// <para>Revokes an API key for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13132,6 +17980,326 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeContextDatabaseApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually triggers a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncRunResponse
+        /// </returns>
+        public StartContextDatabaseSyncRunResponse StartContextDatabaseSyncRunWithOptions(StartContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartContextDatabaseSyncRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually triggers a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncRunRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<StartContextDatabaseSyncRunResponse> StartContextDatabaseSyncRunWithOptionsAsync(StartContextDatabaseSyncRunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartContextDatabaseSyncRun",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartContextDatabaseSyncRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually triggers a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncRunResponse
+        /// </returns>
+        public StartContextDatabaseSyncRunResponse StartContextDatabaseSyncRun(StartContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartContextDatabaseSyncRunWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually triggers a run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncRunResponse
+        /// </returns>
+        public async Task<StartContextDatabaseSyncRunResponse> StartContextDatabaseSyncRunAsync(StartContextDatabaseSyncRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartContextDatabaseSyncRunWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a snapshot discovery task for data selection scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncSourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncSourceDiscoveryResponse
+        /// </returns>
+        public StartContextDatabaseSyncSourceDiscoveryResponse StartContextDatabaseSyncSourceDiscoveryWithOptions(StartContextDatabaseSyncSourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartContextDatabaseSyncSourceDiscovery",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartContextDatabaseSyncSourceDiscoveryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a snapshot discovery task for data selection scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncSourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncSourceDiscoveryResponse
+        /// </returns>
+        public async Task<StartContextDatabaseSyncSourceDiscoveryResponse> StartContextDatabaseSyncSourceDiscoveryWithOptionsAsync(StartContextDatabaseSyncSourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartContextDatabaseSyncSourceDiscovery",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartContextDatabaseSyncSourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a snapshot discovery task for data selection scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncSourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncSourceDiscoveryResponse
+        /// </returns>
+        public StartContextDatabaseSyncSourceDiscoveryResponse StartContextDatabaseSyncSourceDiscovery(StartContextDatabaseSyncSourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartContextDatabaseSyncSourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a snapshot discovery task for data selection scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartContextDatabaseSyncSourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartContextDatabaseSyncSourceDiscoveryResponse
+        /// </returns>
+        public async Task<StartContextDatabaseSyncSourceDiscoveryResponse> StartContextDatabaseSyncSourceDiscoveryAsync(StartContextDatabaseSyncSourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartContextDatabaseSyncSourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13311,7 +18479,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -13373,7 +18541,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -13435,7 +18603,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -13461,7 +18629,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -13480,13 +18648,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the API KEY Quota</para>
+        /// <para>Modifies the quota of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13538,13 +18706,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the API KEY Quota</para>
+        /// <para>Modifies the quota of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13596,13 +18764,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the API KEY Quota</para>
+        /// <para>Modifies the quota of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13620,13 +18788,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the API KEY Quota</para>
+        /// <para>Modifies the quota of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13644,7 +18812,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the display metadata of a ContextDB API key.</para>
+        /// <para>Updates the API key of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13707,7 +18875,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the display metadata of a ContextDB API key.</para>
+        /// <para>Updates the API key of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13770,7 +18938,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the display metadata of a ContextDB API key.</para>
+        /// <para>Updates the API key of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13793,7 +18961,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the display metadata of a ContextDB API key.</para>
+        /// <para>Updates the API key of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13980,6 +19148,1122 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新连接元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncConnectionResponse UpdateContextDatabaseSyncConnectionWithOptions(UpdateContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新连接元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncConnectionResponse> UpdateContextDatabaseSyncConnectionWithOptionsAsync(UpdateContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新连接元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncConnectionResponse UpdateContextDatabaseSyncConnection(UpdateContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新连接元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncConnectionResponse> UpdateContextDatabaseSyncConnectionAsync(UpdateContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncConnectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>单独轮换连接凭据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncConnectionCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionCredentialResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncConnectionCredentialResponse UpdateContextDatabaseSyncConnectionCredentialWithOptions(UpdateContextDatabaseSyncConnectionCredentialRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncConnectionCredentialShrinkRequest request = new UpdateContextDatabaseSyncConnectionCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Credentials))
+            {
+                request.CredentialsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Credentials, "Credentials", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialsShrink))
+            {
+                query["Credentials"] = request.CredentialsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncConnectionCredential",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncConnectionCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>单独轮换连接凭据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncConnectionCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionCredentialResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncConnectionCredentialResponse> UpdateContextDatabaseSyncConnectionCredentialWithOptionsAsync(UpdateContextDatabaseSyncConnectionCredentialRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncConnectionCredentialShrinkRequest request = new UpdateContextDatabaseSyncConnectionCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Credentials))
+            {
+                request.CredentialsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Credentials, "Credentials", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialsShrink))
+            {
+                query["Credentials"] = request.CredentialsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncConnectionCredential",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncConnectionCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>单独轮换连接凭据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionCredentialResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncConnectionCredentialResponse UpdateContextDatabaseSyncConnectionCredential(UpdateContextDatabaseSyncConnectionCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncConnectionCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>单独轮换连接凭据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncConnectionCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncConnectionCredentialResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncConnectionCredentialResponse> UpdateContextDatabaseSyncConnectionCredentialAsync(UpdateContextDatabaseSyncConnectionCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncConnectionCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncJobResponse UpdateContextDatabaseSyncJobWithOptions(UpdateContextDatabaseSyncJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncJobShrinkRequest request = new UpdateContextDatabaseSyncJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseId))
+            {
+                query["TargetKnowledgeBaseId"] = request.TargetKnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseName))
+            {
+                query["TargetKnowledgeBaseName"] = request.TargetKnowledgeBaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncJobResponse> UpdateContextDatabaseSyncJobWithOptionsAsync(UpdateContextDatabaseSyncJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncJobShrinkRequest request = new UpdateContextDatabaseSyncJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseId))
+            {
+                query["TargetKnowledgeBaseId"] = request.TargetKnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetKnowledgeBaseName))
+            {
+                query["TargetKnowledgeBaseName"] = request.TargetKnowledgeBaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncJob",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncJobResponse UpdateContextDatabaseSyncJob(UpdateContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncJobResponse> UpdateContextDatabaseSyncJobAsync(UpdateContextDatabaseSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 调度配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncJobScheduleResponse UpdateContextDatabaseSyncJobScheduleWithOptions(UpdateContextDatabaseSyncJobScheduleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncJobScheduleShrinkRequest request = new UpdateContextDatabaseSyncJobScheduleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DailyTimes))
+            {
+                request.DailyTimesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DailyTimes, "DailyTimes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DailyTimesShrink))
+            {
+                query["DailyTimes"] = request.DailyTimesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MissedPolicy))
+            {
+                query["MissedPolicy"] = request.MissedPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncJobSchedule",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncJobScheduleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 调度配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncJobScheduleResponse> UpdateContextDatabaseSyncJobScheduleWithOptionsAsync(UpdateContextDatabaseSyncJobScheduleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncJobScheduleShrinkRequest request = new UpdateContextDatabaseSyncJobScheduleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DailyTimes))
+            {
+                request.DailyTimesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DailyTimes, "DailyTimes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DailyTimesShrink))
+            {
+                query["DailyTimes"] = request.DailyTimesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MissedPolicy))
+            {
+                query["MissedPolicy"] = request.MissedPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncJobSchedule",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncJobScheduleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 调度配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncJobScheduleResponse UpdateContextDatabaseSyncJobSchedule(UpdateContextDatabaseSyncJobScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncJobScheduleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Job 调度配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncJobScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncJobScheduleResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncJobScheduleResponse> UpdateContextDatabaseSyncJobScheduleAsync(UpdateContextDatabaseSyncJobScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncJobScheduleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the metadata of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncSourceResponse UpdateContextDatabaseSyncSourceWithOptions(UpdateContextDatabaseSyncSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncSourceShrinkRequest request = new UpdateContextDatabaseSyncSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
+            {
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfigShrink))
+            {
+                query["SourceConfig"] = request.SourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the metadata of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncSourceResponse> UpdateContextDatabaseSyncSourceWithOptionsAsync(UpdateContextDatabaseSyncSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncSourceShrinkRequest request = new UpdateContextDatabaseSyncSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
+            {
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfigShrink))
+            {
+                query["SourceConfig"] = request.SourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncSource",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the metadata of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncSourceResponse UpdateContextDatabaseSyncSource(UpdateContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the metadata of a data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncSourceResponse> UpdateContextDatabaseSyncSourceAsync(UpdateContextDatabaseSyncSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the explicit node selection for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncSourceSelectionResponse UpdateContextDatabaseSyncSourceSelectionWithOptions(UpdateContextDatabaseSyncSourceSelectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncSourceSelectionShrinkRequest request = new UpdateContextDatabaseSyncSourceSelectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedNodeKeys))
+            {
+                request.SelectedNodeKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedNodeKeys, "SelectedNodeKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedNodeKeysShrink))
+            {
+                query["SelectedNodeKeys"] = request.SelectedNodeKeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionPolicy))
+            {
+                query["SelectionPolicy"] = request.SelectionPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncSourceSelection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncSourceSelectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the explicit node selection for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncSourceSelectionResponse> UpdateContextDatabaseSyncSourceSelectionWithOptionsAsync(UpdateContextDatabaseSyncSourceSelectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateContextDatabaseSyncSourceSelectionShrinkRequest request = new UpdateContextDatabaseSyncSourceSelectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedNodeKeys))
+            {
+                request.SelectedNodeKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedNodeKeys, "SelectedNodeKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedNodeKeysShrink))
+            {
+                query["SelectedNodeKeys"] = request.SelectedNodeKeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionPolicy))
+            {
+                query["SelectionPolicy"] = request.SelectionPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseSyncSourceSelection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseSyncSourceSelectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the explicit node selection for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public UpdateContextDatabaseSyncSourceSelectionResponse UpdateContextDatabaseSyncSourceSelection(UpdateContextDatabaseSyncSourceSelectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseSyncSourceSelectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the explicit node selection for the data selection scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseSyncSourceSelectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseSyncSourceSelectionResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseSyncSourceSelectionResponse> UpdateContextDatabaseSyncSourceSelectionAsync(UpdateContextDatabaseSyncSourceSelectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseSyncSourceSelectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a ContextDB workspace.</para>
         /// </summary>
         /// 
@@ -14128,7 +20412,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom agent.</para>
+        /// <para>Updates a Custom Agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14200,7 +20484,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom agent.</para>
+        /// <para>Updates a Custom Agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14272,7 +20556,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom agent.</para>
+        /// <para>Updates a Custom Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14290,7 +20574,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom agent.</para>
+        /// <para>Updates a Custom Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14308,13 +20592,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the alert threshold percentage for API keys.</para>
+        /// <para>Updates the alert threshold percentage for an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14366,13 +20650,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the alert threshold percentage for API keys.</para>
+        /// <para>Updates the alert threshold percentage for an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14424,13 +20708,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the alert threshold percentage for API keys.</para>
+        /// <para>Updates the alert threshold percentage for an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14448,13 +20732,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the alert threshold percentage for API keys.</para>
+        /// <para>Updates the alert threshold percentage for an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14472,7 +20756,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified skill.</para>
+        /// <para>Updates the information of a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14519,6 +20803,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["SkillId"] = request.SkillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateNote))
+            {
+                query["UpdateNote"] = request.UpdateNote;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                query["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadToken))
+            {
+                query["UploadToken"] = request.UploadToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14540,7 +20840,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified skill.</para>
+        /// <para>Updates the information of a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14587,6 +20887,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["SkillId"] = request.SkillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateNote))
+            {
+                query["UpdateNote"] = request.UpdateNote;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                query["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadToken))
+            {
+                query["UploadToken"] = request.UploadToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14608,7 +20924,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified skill.</para>
+        /// <para>Updates the information of a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14626,7 +20942,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified skill.</para>
+        /// <para>Updates the information of a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14640,6 +20956,162 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSkillWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates datasource credentials and authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the connection credentials and authorization.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public VerifyContextDatabaseSyncConnectionResponse VerifyContextDatabaseSyncConnectionWithOptions(VerifyContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyContextDatabaseSyncConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates datasource credentials and authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the connection credentials and authorization.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<VerifyContextDatabaseSyncConnectionResponse> VerifyContextDatabaseSyncConnectionWithOptionsAsync(VerifyContextDatabaseSyncConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                query["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyContextDatabaseSyncConnection",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyContextDatabaseSyncConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates datasource credentials and authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the connection credentials and authorization.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public VerifyContextDatabaseSyncConnectionResponse VerifyContextDatabaseSyncConnection(VerifyContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyContextDatabaseSyncConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates datasource credentials and authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the connection credentials and authorization.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyContextDatabaseSyncConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyContextDatabaseSyncConnectionResponse
+        /// </returns>
+        public async Task<VerifyContextDatabaseSyncConnectionResponse> VerifyContextDatabaseSyncConnectionAsync(VerifyContextDatabaseSyncConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyContextDatabaseSyncConnectionWithOptionsAsync(request, runtime);
         }
 
     }

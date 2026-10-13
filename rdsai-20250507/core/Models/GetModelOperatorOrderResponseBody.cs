@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

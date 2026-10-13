@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which prevents repeated submissions of requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <item><description><b>AWS_ACCESS_KEY_ID</b>: the AccessKey ID for OSS.</description></item>
             /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: the AccessKey Secret for OSS.</description></item>
             /// <item><description><b>GLOBAL_S3_BUCKET</b>: the bucket name of OSS.</description></item>
-            /// <item><description><b>TENANT_ID</b>: the OSS directory name. You do not need to create it in advance.</description></item>
+            /// <item><description><b>TENANT_ID</b>: the OSS directory name. You do not need to create it.</description></item>
             /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: the endpoint of OSS.</description></item>
             /// <item><description><b>REGION</b>: the region of OSS.</description></item>
             /// </list>

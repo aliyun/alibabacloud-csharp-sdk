@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of API keys.</para>
+        /// <para>The list of API keys.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<UpdateApiKeyQuotaRequestKeys> Keys { get; set; }
         public class UpdateApiKeyQuotaRequestKeys : TeaModel {
             /// <summary>
-            /// <para>The API key.</para>
+            /// <para>API KEY</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-rds-xxx</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? DailyTokenQuota { get; set; }
 
             /// <summary>
-            /// <para>The limit rate. This parameter is required when <c>LimitType</c> is set to <c>ratio</c>.</para>
+            /// <para>The throttling ratio. This parameter is required when type is set to ratio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2</para>
@@ -55,14 +55,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public double? LimitRate { get; set; }
 
             /// <summary>
-            /// <para>The limit type. Valid values:</para>
+            /// <para>The quota type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ratio</c>: Allocates the quota proportionally.</para>
-            /// </description></item>
-            /// <item><description><para><c>fixed</c>: Allocates a fixed quota.</para>
-            /// </description></item>
-            /// <item><description><para><c>auto</c>: Allocates the quota automatically.</para>
-            /// </description></item>
+            /// <item><description>ratio: by ratio.</description></item>
+            /// <item><description>fixed: by fixed value.</description></item>
+            /// <item><description>auto: automatic allocation of EPS resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string LimitType { get; set; }
 
             /// <summary>
-            /// <para>The token quota. This parameter is required when <c>LimitType</c> is set to <c>fixed</c>.</para>
+            /// <para>The fixed throttling value. This parameter is required when type is set to fixed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>

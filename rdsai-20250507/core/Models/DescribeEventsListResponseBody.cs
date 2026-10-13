@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeEventsListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The count for each event code.</para>
+        /// <para>The total number of events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OtherException:3,MysqlIOException:1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EventCodeCounts { get; set; }
 
         /// <summary>
-        /// <para>A list of events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EventStatus { get; set; }
 
             /// <summary>
-            /// <para>A list of event times.</para>
+            /// <para>The list of event times.</para>
             /// </summary>
             [NameInMap("EventTimeList")]
             [Validation(Required=false)]
             public List<string> EventTimeList { get; set; }
 
             /// <summary>
-            /// <para>The instance description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试实例</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
@@ -83,9 +83,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string RecoveryTime { get; set; }
 
-            /// <summary>
-            /// <para>The region ID.</para>
-            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -93,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -133,7 +130,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

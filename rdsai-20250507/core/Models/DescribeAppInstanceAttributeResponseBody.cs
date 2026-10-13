@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the RDS PostgreSQL database instance that the AI application is connected to.</para>
+        /// <para>The instance ID of the RDS PostgreSQL database instance connected to the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EipStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance class of the AI application.</para>
+        /// <para>The instance type of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string LoginToken { get; set; }
 
         /// <summary>
-        /// <para>The minor version details of each component of the RDS AI application instance.</para>
+        /// <para>The minor versions of individual components of the RDS AI application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string NatCreatedBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The NAT gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1l82hw87m2y77ci1hie</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string NatStatus { get; set; }
 
         /// <summary>
-        /// <para>The public connection string of the AI application.</para>
+        /// <para>The public endpoint of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.152. XXX.XXX:8000</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RetentionHours { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SqlExtendMoInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -269,14 +269,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string UploadKey { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// </summary>
         [NameInMap("UploadKeyList")]
         [Validation(Required=false)]
         public List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> UploadKeyList { get; set; }
         public class DescribeAppInstanceAttributeResponseBodyUploadKeyList : TeaModel {
             /// <summary>
-            /// <para>Reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? IsSystemKey { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? SlsStorageBytes { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The internal connection string of the AI application.</para>
+        /// <para>The internal endpoint of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.XXX.XXX:8000</para>

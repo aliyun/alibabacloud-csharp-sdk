@@ -22,16 +22,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <summary>
         /// <para>The inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DAILY: every day</description></item>
-        /// <item><description>Monday: Monday</description></item>
-        /// <item><description>Tuesday: Tuesday</description></item>
-        /// <item><description>Wednesday: Wednesday</description></item>
-        /// <item><description>Thursday: Thursday</description></item>
-        /// <item><description>Friday: Friday</description></item>
-        /// <item><description>Saturday: Saturday</description></item>
-        /// <item><description>Sunday: Sunday</description></item>
+        /// <item><description>DAILY: every day.</description></item>
+        /// <item><description>Monday: Monday.</description></item>
+        /// <item><description>Tuesday: Tuesday.</description></item>
+        /// <item><description>Wednesday: Wednesday.</description></item>
+        /// <item><description>Thursday: Thursday.</description></item>
+        /// <item><description>Friday: Friday.</description></item>
+        /// <item><description>Saturday: Saturday.</description></item>
+        /// <item><description>Sunday: Sunday.</description></item>
         /// </list>
-        /// <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the system uses DAILY as the inspection frequency.</h3>
+        /// <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the backend uses DAILY as the inspection frequency.</h3>
         /// 
         /// <b>Example:</b>
         /// <para>Monday</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The time range for the inspection. Default value: 24 (the last 24 hours). Valid values: 1 to 168 (up to 7 days).</para>
+        /// <para>The time range for the inspection. Default value: the last 24 hours. Valid values: 1 to 168 (up to 7 days).</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

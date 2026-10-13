@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The idempotency parameter.</para>
+        /// <para>The idempotence parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetScheduledReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no end time filter is applied.</para>
+        /// <para>The end time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no end time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-25T02:02:00Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The start time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no start time filter is applied.</para>
+        /// <para>The start time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no start time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-25T01:02:00Z</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeWhitelistIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeWhitelistIpsResponseBodyData Data { get; set; }
         public class DescribeWhitelistIpsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The domain name.</para>
+            /// <para>The domain name address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.test123.com">www.test123.com</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The list of IP addresses and CIDR blocks on the whitelist.</para>
+            /// <para>The list of IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1,192.168.1.0/24</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

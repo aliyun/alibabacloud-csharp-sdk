@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <summary>
         /// <para>The workspace status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: running normally.</description></item>
+        /// <item><description>Active: running as expected.</description></item>
         /// <item><description>Locked: locked due to overdue payment or expiration.</description></item>
         /// </list>
         /// 

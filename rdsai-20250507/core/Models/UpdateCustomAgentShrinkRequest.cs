@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The name of the dedicated agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>QueryInstanceListAgent</para>
+        /// <para>Query Instance List Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>I am your dedicated agent for querying instance lists</para>
+        /// <para>I am your dedicated Agent for querying instance lists</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]

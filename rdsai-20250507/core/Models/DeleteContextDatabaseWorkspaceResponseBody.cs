@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteContextDatabaseWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the workspace was created, in ISO-8601 format.</para>
+        /// <para>The time when the workspace was created, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-28T17:59:55Z</para>

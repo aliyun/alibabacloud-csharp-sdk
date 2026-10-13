@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetCustomAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom agent.</para>
+        /// <para>The ID of the dedicated agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ebe44453-3b41-4c74-94d1-01d088d7****</para>

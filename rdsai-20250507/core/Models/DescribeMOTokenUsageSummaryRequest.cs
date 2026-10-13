@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMOTokenUsageSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The API key used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-rds-*****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The end time of the instance. Format: YYYY-MM-DD. The interval between EndTime and StartTime cannot exceed 31 days.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-04-30</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The model called.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-flash</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Model { get; set; }
 
         /// <summary>
+        /// <para>The start time of the instance. Format: YYYY-MM-DD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-04-21</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The query type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>

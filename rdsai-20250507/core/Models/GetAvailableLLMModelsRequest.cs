@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetAvailableLLMModelsRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only printable ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

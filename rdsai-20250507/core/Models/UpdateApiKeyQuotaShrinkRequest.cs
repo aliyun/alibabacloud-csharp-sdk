@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of API keys.</para>
+        /// <para>The list of API keys.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]

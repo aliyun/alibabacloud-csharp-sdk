@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateMOUsageDetailExportResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateMOUsageDetailExportResponseBodyData Data { get; set; }
         public class CreateMOUsageDetailExportResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The completion time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-03-15T21:18:45Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CompletedAt { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-03-15T21:14:45Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>The download URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>http://***</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>picture owner error</para>
             /// </summary>
@@ -46,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>下载 URL 失效时间（UTC ISO8601）</para>
+            /// <para>The expiration time in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-07T21:14:45Z</para>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
+            /// <para>The file size in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>403</para>
             /// </summary>
@@ -63,11 +76,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
+            /// <summary>
+            /// <para>The query filter conditions.</para>
+            /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
             public CreateMOUsageDetailExportResponseBodyDataFilters Filters { get; set; }
             public class CreateMOUsageDetailExportResponseBodyDataFilters : TeaModel {
                 /// <summary>
+                /// <para>The API key to use.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sk-***</para>
                 /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
+                /// <para>The inspection end time in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-10T02:02:20Z</para>
                 /// </summary>
@@ -84,6 +104,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The instance name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rds_copilot**_public_cn-******</para>
                 /// </summary>
@@ -92,6 +114,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The model to call.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwen-flash</para>
                 /// </summary>
@@ -100,6 +124,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Model { get; set; }
 
                 /// <summary>
+                /// <para>The inspection start time in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-05T16:00:00Z</para>
                 /// </summary>
@@ -110,6 +136,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
+            /// <para>The target conversion format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>csv</para>
             /// </summary>
@@ -118,6 +146,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Format { get; set; }
 
             /// <summary>
+            /// <para>The OssKey passed when calling the operation. (This field is deprecated)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ddd6*****2a76</para>
             /// </summary>
@@ -126,6 +156,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string OssKey { get; set; }
 
             /// <summary>
+            /// <para>The total number of data rows.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -134,7 +166,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? RowCount { get; set; }
 
             /// <summary>
-            /// <para>pending / processing / completed / failed / expired</para>
+            /// <para>The module status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pending / processing / completed / failed / expired</para>
@@ -146,6 +178,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -154,6 +188,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
         /// </summary>
@@ -162,6 +198,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The request result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

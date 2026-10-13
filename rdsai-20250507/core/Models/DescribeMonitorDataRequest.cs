@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The metric to query.</para>
+        /// <para>The metric to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>pv</para>
         /// </description></item>

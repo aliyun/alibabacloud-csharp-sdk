@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>A reserved parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

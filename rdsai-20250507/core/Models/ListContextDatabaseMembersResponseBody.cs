@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyPrefix { get; set; }
 
                 /// <summary>
-                /// <para>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have never been used.</para>
+                /// <para>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have not been used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-15T08:30:00Z</para>

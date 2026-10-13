@@ -41,12 +41,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberName { get; set; }
 
         /// <summary>
-        /// <para>The member role. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>owner</description></item>
-        /// <item><description>admin</description></item>
-        /// <item><description>member</description></item>
-        /// </list>
+        /// <para>The member role. Valid values: owner, admin, and member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

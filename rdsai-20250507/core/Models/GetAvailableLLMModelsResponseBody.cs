@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetAvailableLLMModelsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The models.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;glm-5&quot;,&quot;deepseek-v3.2&quot;]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<string> Models { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
         /// </summary>

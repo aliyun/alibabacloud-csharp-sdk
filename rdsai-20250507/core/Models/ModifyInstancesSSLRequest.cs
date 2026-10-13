@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CAType { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs of AI applications. A maximum of 10 instance IDs are supported.</para>
+        /// <para>The list of instance IDs of AI applications. A maximum of 10 instance IDs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

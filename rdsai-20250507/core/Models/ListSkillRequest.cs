@@ -46,6 +46,46 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The search parameter for skill name or description. This filter is not currently enabled in the ContextDB management console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example</para>
+        /// </summary>
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
+        /// <summary>
+        /// <para>The ContextDB query scope. Valid values: all (default), private, and system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>all</para>
+        /// </summary>
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
+        /// <summary>
+        /// <para>The sort parameter for skills. This sorting is not currently enabled in the ContextDB management console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>updated_at_desc</para>
+        /// </summary>
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
+
+        /// <summary>
+        /// <para>The filter parameter for skill source. This filter is not currently enabled in the ContextDB management console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SYSTEM</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
         /// <para>The ContextDB workspace ID.</para>
         /// 
         /// <b>Example:</b>

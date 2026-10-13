@@ -17,7 +17,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ListSkillResponseBodyData> Data { get; set; }
         public class ListSkillResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the currently active version.</para>
+            /// <para>The currently active skill version information.</para>
+            /// </summary>
+            [NameInMap("ActiveVersion")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> ActiveVersion { get; set; }
+
+            /// <summary>
+            /// <para>The currently active version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>version-example</para>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the skill.</para>
+            /// <para>The skill display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example Skill</para>
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The visibility scope of the skill.</para>
+            /// <para>The skill visibility scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SkillType { get; set; }
 
             /// <summary>
-            /// <para>The stable identifier of the skill.</para>
+            /// <para>The skill stable identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example-skill</para>
@@ -162,6 +169,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("UpdatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
+            /// <summary>
+            /// <para>The skill visibility for the current user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PRIVATE</para>
+            /// </summary>
+            [NameInMap("Visibility")]
+            [Validation(Required=false)]
+            public string Visibility { get; set; }
 
         }
 
@@ -186,7 +203,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique request identifier.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>

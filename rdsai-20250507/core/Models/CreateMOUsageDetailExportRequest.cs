@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateMOUsageDetailExportRequest : TeaModel {
         /// <summary>
+        /// <para>The API key to use.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-rds-*****</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>结束时间，UTC 0 时区 ISO8601 字符串，格式 yyyy-MM-ddTHH:mm:ssZ；与 StartTime 跨度不超过 30 天</para>
+        /// <para>The inspection end time in the YYYY-MM-DDTHH:mm:ssZ format. The time range between StartTime and EndTime cannot exceed 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +42,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The model to call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-flash</para>
         /// </summary>
@@ -47,7 +52,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>起始时间，UTC 0 时区 ISO8601 字符串，格式 yyyy-MM-ddTHH:mm:ssZ</para>
+        /// <para>The inspection start time in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +63,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The view type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>

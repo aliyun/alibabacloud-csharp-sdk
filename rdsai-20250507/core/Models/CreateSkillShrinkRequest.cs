@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DbtypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The Skill description. The description can be up to 1000 characters in length.</para>
+        /// <para>The skill description. The description can be up to 1000 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL query optimization skill</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Skill name. The name can contain only lowercase letters, digits, and hyphens.</para>
+        /// <para>The skill name. The name can contain only lowercase letters, digits, and hyphens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>query-optimization</para>
@@ -47,7 +47,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Skill upload session ID.</para>
+        /// <para>The ContextDB skill version update note. Provide this value when confirming storage after validation passes. The note can be up to 1000 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Initial release</para>
+        /// </summary>
+        [NameInMap("UpdateNote")]
+        [Validation(Required=false)]
+        public string UpdateNote { get; set; }
+
+        /// <summary>
+        /// <para>The skill upload session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>upload-example</para>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string UploadId { get; set; }
 
         /// <summary>
-        /// <para>The Skill upload session token.</para>
+        /// <para>The skill upload session token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-example</para>

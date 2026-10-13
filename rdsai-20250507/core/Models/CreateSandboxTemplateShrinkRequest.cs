@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateSandboxTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</para>
+        /// <para>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultCpu { get; set; }
 
         /// <summary>
-        /// <para>The memory size for sandboxes created by using this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
+        /// <para>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1Gi</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Scheduled task deleted successfully</para>
+        /// <para>The scheduled task is deleted</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

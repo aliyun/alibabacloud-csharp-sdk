@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</para>
+        /// <para>The token that determines the start point of the query. Set this parameter to empty to start the query from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</para>

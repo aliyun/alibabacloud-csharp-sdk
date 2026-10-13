@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public List<DescribeModelOperatorResponseBodyDataDailyUsage> DailyUsage { get; set; }
             public class DescribeModelOperatorResponseBodyDataDailyUsage : TeaModel {
                 /// <summary>
-                /// <para>The date (accurate to the day).</para>
+                /// <para>The date, accurate to the day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-31</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The usage of each key (including deleted keys).</para>
+            /// <para>The usage of each key, including deleted keys.</para>
             /// </summary>
             [NameInMap("KeyUsageList")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public List<DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage> DailyUsage { get; set; }
                 public class DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage : TeaModel {
                     /// <summary>
-                    /// <para>The date (accurate to the day).</para>
+                    /// <para>The date, accurate to the day.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-31</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total quota for the current cycle (such as the monthly total).</para>
+            /// <para>The total quota for the current cycle, such as the monthly quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200000000</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The used quota for the current cycle (such as the monthly usage).</para>
+            /// <para>The used quota for the current cycle, such as the monthly usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000000</para>

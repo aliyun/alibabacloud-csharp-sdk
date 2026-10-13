@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// <para>The returned value.</para>
+                /// <para>The return value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

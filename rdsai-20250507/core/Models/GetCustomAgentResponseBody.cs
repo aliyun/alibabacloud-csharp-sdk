@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the custom agent was created.</para>
+        /// <para>The time when the dedicated agent was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-04T02:25:43Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom agent.</para>
+        /// <para>The backup set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17053</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom agent.</para>
+        /// <para>The name of the dedicated agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查询实例列表Agent</para>
+        /// <para>Query Instance List Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -82,24 +82,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The system prompt for the agent.</para>
+        /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我是您用来查询实例列表的专属Agent</para>
+        /// <para>I am your dedicated agent for querying instance lists</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>A list of tools enabled for the agent.</para>
+        /// <para>The tool details.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]
         public List<string> Tools { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom agent was last updated.</para>
+        /// <para>The time when the dedicated agent was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-27 16:02:28</para>

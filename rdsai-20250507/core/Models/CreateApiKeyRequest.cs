@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The API key name.</para>
+        /// <para>The name of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-*****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public double? LimitRate { get; set; }
 
         /// <summary>
-        /// <para>The quota allocation method. Valid values:</para>
+        /// <para>The quota type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ratio: by percentage.</description></item>
         /// <item><description>fixed: by fixed value.</description></item>

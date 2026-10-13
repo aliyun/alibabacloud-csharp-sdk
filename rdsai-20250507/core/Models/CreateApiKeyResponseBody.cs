@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? DailyTokenQuota { get; set; }
 
                 /// <summary>
-                /// <para>The API key name.</para>
+                /// <para>The name of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota allocation method. Valid values:</para>
+                /// <para>The quota type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>fixed</b>: By fixed value.</para>
                 /// </description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

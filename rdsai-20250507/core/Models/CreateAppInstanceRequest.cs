@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</para>
-        /// <remarks>
-        /// <para>: Only newly purchased empty RDS for PostgreSQL instances are supported. The major engine version must be PostgreSQL 17 and the minor version must be 20250630 or later.</para>
-        /// </remarks>
+        /// <para>The name of the AI application to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-supabase</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The application type. Currently, only <b>supabase</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supabase</para>
@@ -33,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>The name of the new AI application.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to prevent duplicate requests from being submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -43,14 +40,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>List of modules</para>
+        /// <para>The list of components.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateAppInstanceRequestComponents> Components { get; set; }
         public class CreateAppInstanceRequestComponents : TeaModel {
             /// <summary>
-            /// <para>Module type</para>
+            /// <para>The component type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>supabase</para>
@@ -62,7 +59,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The database instance configuration.</para>
         /// </summary>
         [NameInMap("DBInstanceConfig")]
         [Validation(Required=false)]
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DBInstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the database instance.</para>
+            /// <para>The instance storage capacity of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -89,7 +86,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public int? DBInstanceStorage { get; set; }
 
             /// <summary>
-            /// <para>The payment type of the database instance.</para>
+            /// <para>The billing method of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Postpaid</para>
@@ -101,7 +98,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The instance type. Only <b>rdsai.supabase.basic</b> is supported.</para>
+        /// <para>The instance ID of the RDS PostgreSQL database instance to which the AI application connects.</para>
+        /// <para><notice>Only <b>newly purchased empty RDS PostgreSQL instances</b> are supported. The major engine version must be <b>17</b>, and the minor engine version must be <b>20250630 or later</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>
@@ -111,7 +109,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard user name.</para>
+        /// <para>The password for the Supabase Dashboard.</para>
+        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_Password</para>
@@ -121,8 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The password used to access the RDS database.</para>
-        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</para>
+        /// <para>The username for the Supabase Dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supabase</para>
@@ -132,6 +130,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DashboardUsername { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_database_01</para>
         /// </summary>
@@ -140,7 +140,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The password for accessing the RDS database.</para>
+        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_Password</para>
@@ -150,10 +151,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DatabasePassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable public endpoint.</para>
+        /// <para>Specifies whether to restore from existing PostgreSQL data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: restores from existing data.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): does not restore from existing data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? InitializeWithExistingData { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The instance type. Currently, only <b>rdsai.supabase.basic</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -174,7 +177,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the RDS for PostgreSQL instance.</para>
+        /// <para>Specifies whether to enable the public network connection endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true (default): Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -184,8 +193,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? PublicEndpointEnabled { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard password.</para>
-        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</para>
+        /// <para>Specifies whether to enable the Internet NAT gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the Internet NAT gateway.</description></item>
+        /// <item><description><b>false</b> (default): does not enable the Internet NAT gateway.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Notice: If an Internet NAT gateway is already enabled for the vSwitch specified by the <b>VSwitchId</b> parameter settings, set this parameter to <b>false</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -195,14 +210,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? PublicNetworkAccessEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Internet NAT gateway. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: enable the Internet NAT gateway.</description></item>
-        /// <item><description><b>false</b> (default): disable the Internet NAT gateway.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If an Internet NAT gateway is enabled for the vSwitch that you specify for VSwitchId, select false for this parameter.</para>
-        /// </remarks>
+        /// <para>Reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -212,7 +220,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? RAGEnabled { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>CreateAppInstance</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -222,7 +230,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The application type. Only <b>supabase</b> is supported.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-9dp2hkpm22gxscfgy****</para>

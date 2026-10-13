@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultCpu { get; set; }
 
         /// <summary>
-        /// <para>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
+        /// <para>The memory size of sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1Gi</para>

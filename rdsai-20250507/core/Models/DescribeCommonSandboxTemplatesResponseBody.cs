@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</para>
+        /// <para>The token that determines the start point of the query. Set this parameter to empty to start the query from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<DescribeCommonSandboxTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeCommonSandboxTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// <para>The default number of CPUs for sandboxes created by using this template.</para>
+            /// <para>The default number of CPUs for a sandbox created by using this template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DefaultCpu { get; set; }
 
             /// <summary>
-            /// <para>The default memory size for sandboxes created by using this template. The unit ends with Gi.</para>
+            /// <para>The default memory size for a sandbox created by using this template. The unit ends with Gi.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1Gi</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? DefaultReplicas { get; set; }
 
             /// <summary>
-            /// <para>The description of the sandbox template.</para>
+            /// <para>The sandbox template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Execute user-provided Python code in the sandbox environment. Runs any Python script the user provides and returns the output.</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the sandbox template.</para>
+            /// <para>The sandbox template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desktop</para>
