@@ -10131,12 +10131,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10198,12 +10198,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10265,12 +10265,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10288,12 +10288,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// <para>Lists the accuracy test configuration items that meet the specified conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11623,7 +11623,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
+        /// <para>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11701,7 +11701,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
+        /// <para>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11779,7 +11779,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
+        /// <para>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11797,7 +11797,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of collaborative workspaces under the primary account.</para>
+        /// <para>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">

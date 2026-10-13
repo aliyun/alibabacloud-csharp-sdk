@@ -10,49 +10,71 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class AgenticTableIndex : TeaModel {
         /// <summary>
-        /// <para>An array of column names included in the index.</para>
+        /// <para>The list of fields included in the index. Fields with a specified prefix length include a length expression, such as name(10).</para>
         /// </summary>
         [NameInMap("ColumnNames")]
         [Validation(Required=false)]
         public List<string> ColumnNames { get; set; }
 
         /// <summary>
-        /// <para>An optional, user-defined description for the index.</para>
+        /// <para>The index description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Index on user_id</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The unique name of the index within the table.</para>
+        /// <para>The index name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>idx_user_id</para>
         /// </summary>
         [NameInMap("IndexName")]
         [Validation(Required=false)]
         public string IndexName { get; set; }
 
         /// <summary>
-        /// <para>The type of the index, such as PRIMARY, UNIQUE, or NORMAL.</para>
+        /// <para>The index type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Primary</b>: primary key index</description></item>
+        /// <item><description><b>Unique</b>: unique index</description></item>
+        /// <item><description><b>Normal</b>: normal index</description></item>
+        /// <item><description><b>FullText</b>: full-text index</description></item>
+        /// <item><description><b>Spatial</b>: spatial index</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
 
         /// <summary>
-        /// <para>Specifies if the index is the primary key. A table can have only one primary key.</para>
+        /// <para>Specifies whether the index is a primary key index.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Primary")]
         [Validation(Required=false)]
         public bool? Primary { get; set; }
 
         /// <summary>
-        /// <para>An array of physical column names from the database. Use this parameter when the names in ColumnNames are aliases or logical names.</para>
+        /// <para>The list of actual field names referenced by the index, with prefix length expressions removed from ColumnNames.</para>
         /// </summary>
         [NameInMap("RealColumnNames")]
         [Validation(Required=false)]
         public List<string> RealColumnNames { get; set; }
 
         /// <summary>
-        /// <para>Specifies if the index enforces a unique constraint, requiring all its values to be unique across rows.</para>
+        /// <para>Specifies whether the index is a unique index.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Unique")]
         [Validation(Required=false)]

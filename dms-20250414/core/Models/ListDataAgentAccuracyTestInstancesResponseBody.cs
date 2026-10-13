@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentAccuracyTestInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The ID of the test dataset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ds-sdg***jkh</para>
+            /// </summary>
+            [NameInMap("DatasetId")]
+            [Validation(Required=false)]
+            public string DatasetId { get; set; }
+
+            /// <summary>
             /// <para>The data source.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +65,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Datasource")]
             [Validation(Required=false)]
             public string Datasource { get; set; }
+
+            /// <summary>
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
 
             /// <summary>
             /// <para>The ID of the test set file.</para>
@@ -77,7 +97,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-30T07:31:09.000+00:00</para>
@@ -120,14 +140,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The custom agent name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AgentTestName</para>
+            /// <para>Agent test name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether sessions are displayed after analysis. This feature is not supported.</para>
+            /// <para>Specifies whether the session is displayed after analysis. This feature is currently not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,7 +157,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string NeedDelete { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8wfig6l33n4f4xxxxxxxxxx</para>
@@ -169,7 +189,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page. You can use this parameter together with NextToken to implement paging.</para>
+        /// <para>The maximum number of results to return per request. You can use this parameter with NextToken to paginate results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -179,7 +199,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zCXS*****</para>
@@ -219,7 +239,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -229,7 +249,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The operation timestamp.</para>
+        /// <para>The timestamp of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768270172</para>

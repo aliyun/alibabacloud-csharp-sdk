@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The sort field name.</para>
+        /// <para>The name of the field to sort by.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The starting page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The workspace type.</para>
+        /// <para>The workspace type to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The time when the workspace was created. The value is a timestamp in milliseconds.</para>
+                /// <para>The creation time of the workspace. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765960516000</para>
@@ -54,6 +54,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
+                /// <para>The number of custom agents in the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8</para>
+                /// </summary>
+                [NameInMap("CustomAgentCount")]
+                [Validation(Required=false)]
+                public int? CustomAgentCount { get; set; }
+
+                /// <summary>
                 /// <para>The description of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The time when the workspace was last modified. The value is a timestamp in milliseconds.</para>
+                /// <para>The last modification time of the workspace. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765961516000</para>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user\&quot;s role in the workspace.</para>
+                /// <para>The role name of the user in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -124,7 +134,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public int? TotalSessionCount { get; set; }
 
                 /// <summary>
-                /// <para>The workspace type.</para>
+                /// <para>The type of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>personal</para>
@@ -134,7 +144,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20923*****7291</para>
@@ -258,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
