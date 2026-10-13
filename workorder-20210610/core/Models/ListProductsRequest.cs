@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         /// <para>The language that you use, supporting English, Chinese, and Japanese. Valid values: en, zh, and jp, which indicate English, Chinese, and Japanese, respectively.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

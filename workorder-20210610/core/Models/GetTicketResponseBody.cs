@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class GetTicketResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the access denied error. If the request is authorized, an empty string is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;AuthAction\&quot;:\&quot;ram:GetTicket\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The return code of the request result.</para>
+        /// <para>The status code returned by the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -24,14 +30,14 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned after the call succeeds.</para>
+        /// <para>The business data returned upon a successful API call.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTicketResponseBodyData Data { get; set; }
         public class GetTicketResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the ticket issue category.</para>
+            /// <para>The ID of the ticket category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7161</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The uid of the ticket creator.</para>
+            /// <para>The user ID of the ticket creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1168025</para>
@@ -61,7 +67,17 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             public string CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The description of the ticket. Only pure text format is supported.</para>
+            /// <para>The name of the ticket creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;creator_name_xxx&quot;</para>
+            /// </summary>
+            [NameInMap("CreatorName")]
+            [Validation(Required=false)]
+            public string CreatorName { get; set; }
+
+            /// <summary>
+            /// <para>The description of the ticket issue. Only plain text format is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Why ECS renewal failed?</para>
@@ -71,24 +87,28 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Urgency enumeration value, 1 for general problem, 2 for urgent problem</para>
+            /// <para>The severity level of the ticket. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Normal issue.</description></item>
+            /// <item><description>2: Urgent issue.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Severity")]
             [Validation(Required=false)]
             public GetTicketResponseBodyDataSeverity Severity { get; set; }
             public class GetTicketResponseBodyDataSeverity : TeaModel {
                 /// <summary>
-                /// <para>Enumeration Text</para>
+                /// <para>The display text of the severity level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Common</para>
+                /// <para>General issue</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>Enumeration</para>
+                /// <para>The value of the severity level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -100,14 +120,22 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             }
 
             /// <summary>
-            /// <para>The status of the ticket. The reference values are as follows 1, &quot;assigned&quot;, &quot;Pending Response&quot;, 2, &quot;handling&quot;, &quot;handling&quot;, 3, &quot;wait_feedback&quot;, &quot;Pending feedback&quot;, 4: &quot;feedback&quot;, &quot;Feedback&quot;, 5, &quot;wait_confirm&quot;, &quot;To be confirmed&quot;, 6, &quot;confirmed&quot;, &quot;Completed&quot;</para>
+            /// <para>The status of the ticket. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: assigned (Pending response). </description></item>
+            /// <item><description>2: dealing (Processing).</description></item>
+            /// <item><description>3: wait_feedback (Pending feedback).</description></item>
+            /// <item><description>4: feedback (Feedback provided).</description></item>
+            /// <item><description>5: wait_confirm (Pending confirmation).</description></item>
+            /// <item><description>6: confirmed (Completed).</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public GetTicketResponseBodyDataStatus Status { get; set; }
             public class GetTicketResponseBodyDataStatus : TeaModel {
                 /// <summary>
-                /// <para>Status Enumeration Text</para>
+                /// <para>The display text of the status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Completed</para>
@@ -117,7 +145,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>State enumeration value</para>
+                /// <para>The value of the status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -129,7 +157,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             }
 
             /// <summary>
-            /// <para>Work Order Number</para>
+            /// <para>The ticket ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0005PYGCW</para>
@@ -142,7 +170,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             /// <para>The title of the ticket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Why ECS renewal failed?</para>
+            /// <para>Why did ECS renewal fail?</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -151,7 +179,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         }
 
         /// <summary>
-        /// <para>The error message. If success is set to false, the message is returned.</para>
+        /// <para>The error message. This parameter is returned when Success is set to false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -161,7 +189,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Page number of the paging query parameter</para>
+        /// <para>The page number of the paging query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -171,7 +199,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a pagination query parameter.</para>
+        /// <para>The number of entries per page for the paging query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -181,7 +209,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C499BB0F-630D-5BE6-B3EA-5FCD95B85503</para>
@@ -191,7 +219,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates that the call is normal.</para>
+        /// <para>Indicates whether the API call was successful. A value of true indicates that the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -201,7 +229,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of query results, that is, the total number of my ticket records.</para>
+        /// <para>The total number of queried results, which is the total number of ticket records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>108</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class CloseTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Work Order Number</para>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string TicketId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account. You can view your UID in the profile picture in the upper-right corner of the DMS console.</para>
+        /// <para>The user UID. You can find your UID by clicking the profile picture in the upper-right corner of the DMS console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1139477549527134</para>

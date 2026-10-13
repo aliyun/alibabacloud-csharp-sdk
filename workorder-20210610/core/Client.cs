@@ -527,6 +527,23 @@ namespace AlibabaCloud.SDK.Workorder20210610
         /// <para>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Attachment upload</para>
+        /// <list type="bullet">
+        /// <item><description>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+        /// After you obtain the temporary upload URL, you can upload the file as follows:</description></item>
+        /// </list>
+        /// </remarks>
+        /// <details>
+        /// <summary>
+        /// Sample
+        /// </summary>
+        /// curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+        /// </details>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAttachmentUploadUrlRequest
         /// </param>
@@ -568,6 +585,23 @@ namespace AlibabaCloud.SDK.Workorder20210610
         /// <summary>
         /// <para>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Attachment upload</para>
+        /// <list type="bullet">
+        /// <item><description>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+        /// After you obtain the temporary upload URL, you can upload the file as follows:</description></item>
+        /// </list>
+        /// </remarks>
+        /// <details>
+        /// <summary>
+        /// Sample
+        /// </summary>
+        /// curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+        /// </details>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAttachmentUploadUrlRequest
@@ -611,6 +645,23 @@ namespace AlibabaCloud.SDK.Workorder20210610
         /// <para>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Attachment upload</para>
+        /// <list type="bullet">
+        /// <item><description>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+        /// After you obtain the temporary upload URL, you can upload the file as follows:</description></item>
+        /// </list>
+        /// </remarks>
+        /// <details>
+        /// <summary>
+        /// Sample
+        /// </summary>
+        /// curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+        /// </details>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAttachmentUploadUrlRequest
         /// </param>
@@ -629,6 +680,23 @@ namespace AlibabaCloud.SDK.Workorder20210610
         /// <para>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Attachment upload</para>
+        /// <list type="bullet">
+        /// <item><description>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+        /// After you obtain the temporary upload URL, you can upload the file as follows:</description></item>
+        /// </list>
+        /// </remarks>
+        /// <details>
+        /// <summary>
+        /// Sample
+        /// </summary>
+        /// curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+        /// </details>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAttachmentUploadUrlRequest
         /// </param>
@@ -642,9 +710,11 @@ namespace AlibabaCloud.SDK.Workorder20210610
             return await GetAttachmentUploadUrlWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GetMqConsumerTagRequest
-        /// </param>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -670,9 +740,11 @@ namespace AlibabaCloud.SDK.Workorder20210610
             return TeaModel.ToObject<GetMqConsumerTagResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// GetMqConsumerTagRequest
-        /// </param>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -698,6 +770,11 @@ namespace AlibabaCloud.SDK.Workorder20210610
             return TeaModel.ToObject<GetMqConsumerTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMqConsumerTagResponse
         /// </returns>
@@ -707,6 +784,11 @@ namespace AlibabaCloud.SDK.Workorder20210610
             return GetMqConsumerTagWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMqConsumerTagResponse
         /// </returns>
@@ -718,7 +800,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query tickets.</para>
+        /// <para>Queries a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -764,7 +846,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query tickets.</para>
+        /// <para>Queries a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -810,7 +892,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query tickets.</para>
+        /// <para>Queries a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -828,7 +910,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query tickets.</para>
+        /// <para>Queries a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1114,7 +1196,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ticket communication records.</para>
+        /// <para>Retrieves the communication records for a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1160,7 +1242,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ticket communication records.</para>
+        /// <para>Retrieves the communication records for a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1206,7 +1288,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ticket communication records.</para>
+        /// <para>Retrieves the communication records for a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1224,7 +1306,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ticket communication records.</para>
+        /// <para>Retrieves the communication records for a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1242,7 +1324,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the list of my tickets.</para>
+        /// <para>Retrieves a list of your tickets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1324,7 +1406,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the list of my tickets.</para>
+        /// <para>Retrieves a list of your tickets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1406,7 +1488,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the list of my tickets.</para>
+        /// <para>Retrieves a list of your tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1424,7 +1506,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the list of my tickets.</para>
+        /// <para>Retrieves a list of your tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1442,7 +1524,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reopens a ticket</para>
+        /// <para>Reopens a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1492,7 +1574,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reopens a ticket</para>
+        /// <para>Reopens a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1542,7 +1624,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reopens a ticket</para>
+        /// <para>Reopens a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1560,7 +1642,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reopens a ticket</para>
+        /// <para>Reopens a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1578,7 +1660,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</para>
+        /// <para>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1644,7 +1726,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</para>
+        /// <para>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1710,7 +1792,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</para>
+        /// <para>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1728,7 +1810,7 @@ namespace AlibabaCloud.SDK.Workorder20210610
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</para>
+        /// <para>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</para>
         /// </summary>
         /// 
         /// <param name="request">

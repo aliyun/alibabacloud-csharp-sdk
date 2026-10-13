@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class ReopenTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Reply content of rework order</para>
+        /// <para>The content of the reply to reopen the ticket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs backup fails</para>
+        /// <para>The issue has not been resolved yet.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Work Order Number</para>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string TicketId { get; set; }
 
         /// <summary>
-        /// <para>UID</para>
+        /// <para>The UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1013872004421947</para>

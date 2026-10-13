@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         /// <para>The error message. If success is set to false, the message is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>Invalid input parameter</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

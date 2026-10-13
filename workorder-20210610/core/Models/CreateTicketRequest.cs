@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class CreateTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the problem category. You can obtain the returned value from the ListCategories operation by using the CategoryId parameter.</para>
+        /// <para>The ID of the issue category. Obtain this ID from the ListCategories operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7161</para>
+        /// <para>53812</para>
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>Submit the Alibaba Cloud UID of the account, which is required for the MPK virtual market scene.</para>
+        /// <para>The Alibaba Cloud UID of the account that submits the ticket. This parameter is required for Marketplace reseller scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1289427240739141</para>
@@ -31,52 +31,52 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The description of the ticket. Only pure text format is supported.</para>
+        /// <para>The description of the issue in the ticket. Only plain text is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Why ECS backup failed?</para>
+        /// <para>ECS backup failed</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para><a href="mailto:sdahkjdshga@qq.com">sdahkjdshga@qq.com</a></para>
+        /// <para>The contact email address for the ticket.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:163@163.com">163@163.com</a></para>
+        /// <para><a href="mailto:sdahkjdshga@qq.com">sdahkjdshga@qq.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</para>
+        /// <para>A list of attachment names. Use the ObjectKey value returned by the GetAttachmentUploadUrl operation.</para>
         /// </summary>
         [NameInMap("FileNameList")]
         [Validation(Required=false)]
         public List<string> FileNameList { get; set; }
 
         /// <summary>
-        /// <para>Sensitive information</para>
+        /// <para>Sensitive information.</para>
         /// </summary>
         [NameInMap("SecretInfo")]
         [Validation(Required=false)]
         public CreateTicketRequestSecretInfo SecretInfo { get; set; }
         public class CreateTicketRequestSecretInfo : TeaModel {
             /// <summary>
-            /// <para>Sensitive information-text content</para>
+            /// <para>The text of the sensitive information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ID:330102xxxxxx</para>
+            /// <para>ID card: 3310xxxx</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Sensitive Information-Attachment Name List</para>
+            /// <para>A list of attachment names for the sensitive information.</para>
             /// </summary>
             [NameInMap("FileNameList")]
             [Validation(Required=false)]
@@ -85,12 +85,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         }
 
         /// <summary>
-        /// <para>Enumeration value, 1 for general problem, 2 for urgent problem</para>
-        /// <para>Enumeration values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: regular.</description></item>
-        /// <item><description>2: emergency.</description></item>
-        /// </list>
+        /// <para>An enumeration value. A value of 1 indicates a normal issue. A value of 2 indicates an urgent issue.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +99,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         /// <para>The title of the ticket.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Why ECS backup failed?</para>
+        /// <para>ECS backup failed</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

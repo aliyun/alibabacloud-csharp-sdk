@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class ListTicketNotesRequest : TeaModel {
         /// <summary>
-        /// <para>Work Order Number</para>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string TicketId { get; set; }
 
         /// <summary>
-        /// <para>UID</para>
+        /// <para>The UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1936753548534516</para>

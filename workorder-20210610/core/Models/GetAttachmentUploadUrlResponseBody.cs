@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             /// <para>Query the signed URL of an OSS object</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
-            /// /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</para>
+            /// <para><a href="https://workorder.oss-cn-beijing.aliyuncs.com">https://workorder.oss-cn-beijing.aliyuncs.com</a>
+            /// /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI**************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</para>
             /// </summary>
             [NameInMap("GetSignedUrl")]
             [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
             /// <para>The signed URL used to upload the object to OSS.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
-            /// /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</para>
+            /// <para><a href="https://workorder.oss-cn-beijing.aliyuncs.com">https://workorder.oss-cn-beijing.aliyuncs.com</a>
+            /// /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI***************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</para>
             /// </summary>
             [NameInMap("PutSignedUrl")]
             [Validation(Required=false)]

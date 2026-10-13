@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class ReplyTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Content of the ticket reply</para>
+        /// <para>The content of the reply to the ticket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Why ECS backup failed?</para>
+        /// <para>OK, the renewal was successful on my end.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Encryption status</para>
+        /// <para>Specifies whether to encrypt the content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public bool? Encrypt { get; set; }
 
         /// <summary>
-        /// <para>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</para>
+        /// <para>A list of attachment names. This is the ObjectKey field returned by the GetAttachmentUploadUrl operation.</para>
         /// </summary>
         [NameInMap("FileNameList")]
         [Validation(Required=false)]
         public List<string> FileNameList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ticket.</para>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
         public string TicketId { get; set; }
 
         /// <summary>
-        /// <para>Alibaba Cloud UID</para>
+        /// <para>The Alibaba Cloud account ID (UID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1289427240739141</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class GetTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Work Order Number</para>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
