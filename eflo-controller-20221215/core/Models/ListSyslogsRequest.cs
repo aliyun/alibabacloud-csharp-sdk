@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListSyslogsRequest : TeaModel {
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Specify a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string FromTime { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. To retrieve the next page of results, include the token in the next request.</para>
+        /// <para>The token for the next page. Include this token when you retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>392e8b4a03ed171433cc39f5b464ec9d</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort the results by time in descending order.</para>
+        /// <para>Specifies whether to query logs in reverse chronological order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNodeGroupDriftedNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100.</para>
+        /// <para>The maximum number of entries per page in a paging query. Valid values: 1 to 500. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID. Call ListClusters to obtain the ClusterId, pass the ClusterId to ListNodeGroups, and obtain the value from the NodeGroupId response parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

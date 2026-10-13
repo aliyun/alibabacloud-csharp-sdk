@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of nodes to refresh in this task.</para>
+            /// <para>The total number of nodes to be refreshed by the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

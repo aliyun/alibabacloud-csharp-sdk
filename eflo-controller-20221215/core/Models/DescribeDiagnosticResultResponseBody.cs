@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the device was created. The time is in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-15T10:17:56</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic task ID.</para>
+        /// <para>The diagnostic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>diag-i155363241720059671316</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagnosticState { get; set; }
 
         /// <summary>
-        /// <para>The type of the diagnostic task.</para>
+        /// <para>The diagnostic type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CheckByAiJobLogs</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagnosticType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance exception. The time format with time zone based on the ISO8601 standard. The format is yyyy-MM-ddTHH:mm:ss +0800.</para>
+        /// <para>The time when the node exception ended. The time is in ISO 8601 format with a time zone, in the yyyy-MM-ddTHH:mm:ss+0800 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-11T10:00:30</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The node IDs.</para>
+        /// <para>The list of node IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]

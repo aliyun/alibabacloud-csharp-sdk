@@ -23,21 +23,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IgnoreFailedNodeTasks")]
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The combined IP allocation policy. Each policy can use only one policy type, and multiple policies can be combined.</para>
+        /// <para>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
         public string IpAllocationPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The node groups.</para>
+        /// <para>The node group.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]

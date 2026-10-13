@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNodeGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node groups.</para>
+        /// <para>The cluster group information.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-27T13:16:31.599</para>
@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <para>Indicates whether file storage mounting is supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("FileSystemMountEnabled")]
             [Validation(Required=false)]
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The instance type.</para>
+            /// <para>The machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga1n</para>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The time is in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-22T00:03:05.114</para>
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable gpu virtualization or not</para>
+            /// <para>Indicates whether GPU virtualization splitting is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The NextToken for the next page. Include this return value when requesting the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>
@@ -166,7 +169,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>887FA855-89F4-5DB3-B305-C5879EC480E6</para>

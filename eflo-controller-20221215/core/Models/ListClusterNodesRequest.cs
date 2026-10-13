@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. The default value is 20.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for pagination. To retrieve the next page of results, set this parameter to the NextToken value returned from the previous call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The operating states for filtering nodes.</para>
+        /// <para>The list of node states.</para>
         /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags for filtering nodes.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListClusterNodesRequestTags> Tags { get; set; }
         public class ListClusterNodesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The key of the node tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_key</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The value of the node tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_value</para>

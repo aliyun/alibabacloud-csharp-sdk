@@ -21,10 +21,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
-        /// <para>• If this parameter is not set or is set to a value less than 20, the default value is 20.</para>
-        /// <para>• If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not set or is set to a value less than 20, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the query. Set this parameter to the NextToken value returned from a previous call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>

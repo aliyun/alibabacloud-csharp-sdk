@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeInvocationsRequest : TeaModel {
         /// <summary>
-        /// <para>The encoding mode of the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
+        /// <para>The encoding method for the CommandContent and Output fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PlainText: Returns the original command content and output.</para>
-        /// </description></item>
-        /// <item><description><para>Base64 (default): Returns the Base64-encoded command content and output.</para>
-        /// </description></item>
+        /// <item><description>PlainText: Returns the original command content and output.</description></item>
+        /// <item><description>Base64 (default): Returns the Base64-encoded command content and output.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the command output in the response.</para>
+        /// <para>Specifies whether to return the command output in the results.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Returns the output. You must specify the <c>InvokeId</c> or <c>NodeId</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>false (default): Does not return the output.</para>
-        /// </description></item>
+        /// <item><description>true: Returns the output. In this case, specify at least the InvokeId or InstanceId parameter.</description></item>
+        /// <item><description>false (default): Does not return the output.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IncludeOutput { get; set; }
 
         /// <summary>
-        /// <para>The ID of the command execution.</para>
+        /// <para>The command execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>

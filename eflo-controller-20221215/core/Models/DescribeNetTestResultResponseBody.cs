@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the communication library test. This parameter is returned when the network test type is a communication library test.</para>
+        /// <para>The communication library test configuration. This field is required when the traffic test type is communication library test.</para>
         /// </summary>
         [NameInMap("CommTest")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GPUNum { get; set; }
 
             /// <summary>
-            /// <para>The hosts for the test.</para>
+            /// <para>The resource ID.</para>
             /// </summary>
             [NameInMap("Hosts")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The type of the communication library test. Valid values: Alibaba Cloud Collective Communication Library (ACCL) and NVIDIA Collective Communication Library (NCCL).</para>
+            /// <para>The communication library test category. Valid values: ACCL and NCCL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACCL</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The time when the diagnostic task was created.</para>
+        /// <para>The time when the diagnostic task was created. The time is in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-15T10:25:42+08:00</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the delay test. This parameter is returned when the network test type is a delay test.</para>
+        /// <para>The latency test configuration. This field is required when the network test type is latency test.</para>
         /// </summary>
         [NameInMap("DelayTest")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<DescribeNetTestResultResponseBodyDelayTestHosts> Hosts { get; set; }
             public class DescribeNetTestResultResponseBodyDelayTestHosts : TeaModel {
                 /// <summary>
-                /// <para>The bonded port of the NIC.</para>
+                /// <para>The NIC bond interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>125.210.225.48</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The time when the diagnostic task was completed.</para>
+        /// <para>The time when the diagnostic task was completed. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16T02:04Z</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string FinishedTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the network test.</para>
+        /// <para>The network test type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DelayTest</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the diagnostic result. The value is a JSON string.</para>
+        /// <para>The details of the diagnostic result. The value is returned as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -228,12 +228,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <summary>
         /// <para>The status of the diagnostic task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>InProgress: The task is in progress.</para>
-        /// </description></item>
-        /// <item><description><para>Finished: The task is complete.</para>
-        /// </description></item>
-        /// <item><description><para>Failed: The task failed.</para>
-        /// </description></item>
+        /// <item><description>InProgress: The diagnostic task is in progress.</description></item>
+        /// <item><description>Finished: The diagnostic task is complete.</description></item>
+        /// <item><description>Failed: The diagnostic task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -244,7 +241,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the test task. This ID uniquely identifies the network test task.</para>
+        /// <para>The ID of the test task. This is the unique identifier of the network test task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>af35ce53-7c35-4277-834a-fbf49c316a96</para>
@@ -254,21 +251,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string TestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the traffic test. This parameter is returned when the network test type is a traffic test.</para>
+        /// <para>If TrafficModel is set to Fullmesh, this field is empty.</para>
         /// </summary>
         [NameInMap("TrafficTest")]
         [Validation(Required=false)]
         public DescribeNetTestResultResponseBodyTrafficTest TrafficTest { get; set; }
         public class DescribeNetTestResultResponseBodyTrafficTest : TeaModel {
             /// <summary>
-            /// <para>The client nodes.</para>
+            /// <para>The resource IDs.</para>
             /// </summary>
             [NameInMap("Clients")]
             [Validation(Required=false)]
             public List<DescribeNetTestResultResponseBodyTrafficTestClients> Clients { get; set; }
             public class DescribeNetTestResultResponseBodyTrafficTestClients : TeaModel {
                 /// <summary>
-                /// <para>The bonded port of the network interface card (NIC).</para>
+                /// <para>The NIC bond interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -278,7 +275,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1</para>
@@ -310,7 +307,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The runtime of the flow task in seconds.</para>
+            /// <para>The duration of the workflow task. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -320,7 +317,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether GPUDirect RDMA (GDR) is enabled. This parameter is returned only if the protocol is RDMA. Valid values: True and False. If the protocol is TCP, this field is empty.</para>
+            /// <para>If Protocol is set to RDMA, specify True or False. If Protocol is set to TCP, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -330,7 +327,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GDR { get; set; }
 
             /// <summary>
-            /// <para>The network protocol. Valid values: Remote Direct Memory Access (RDMA) and Transmission Control Protocol (TCP).</para>
+            /// <para>The network protocol. Valid values: RDMA and TCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -340,7 +337,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>If the protocol is TCP, this is the number of concurrent connections for the test. If the protocol is RDMA, this is the Queue Pair (QP) value.</para>
+            /// <para>If Protocol is set to TCP, specify the number of test Concurrent Connections. If Protocol is set to RDMA, specify the QP value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -357,7 +354,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<DescribeNetTestResultResponseBodyTrafficTestServers> Servers { get; set; }
             public class DescribeNetTestResultResponseBodyTrafficTestServers : TeaModel {
                 /// <summary>
-                /// <para>The bonded port of the NIC.</para>
+                /// <para>The NIC bond interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -367,7 +364,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.121.110.190</para>

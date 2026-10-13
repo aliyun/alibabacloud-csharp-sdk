@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token returned for the next query.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-02T11:27:07</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the machine.</para>
+            /// <para>The expiration time of the machine. The time is in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-03T00:00:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The cluster number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DeleteNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

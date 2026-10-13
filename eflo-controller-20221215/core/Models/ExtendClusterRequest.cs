@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IgnoreFailedNodeTasks")]
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The combined IP allocation policy. Each policy can use only one policy type, and multiple policies can be combined.</para>
+        /// <para>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
@@ -193,14 +193,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The node groups.</para>
+        /// <para>The node group.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0</para>
+            /// <para>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -244,14 +244,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<ExtendClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
             public class ExtendClusterRequestNodeGroupsHyperNodes : TeaModel {
                 /// <summary>
-                /// <para>The list of cloud disk information.</para>
+                /// <para>The list of disk information.</para>
                 /// </summary>
                 [NameInMap("DataDisk")]
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestNodeGroupsHyperNodesDataDisk> DataDisk { get; set; }
                 public class ExtendClusterRequestNodeGroupsHyperNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable burst (I/O burst).</para>
+                    /// <para>Specifies whether to enable burst (performance burst).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     /// <summary>
                     /// <para>The cloud disk type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>cloud_essd: ESSD.</description></item>
+                    /// <item><description>cloud_essd: Enterprise SSD (ESSD) cloud disk.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -284,10 +284,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? DeleteWithNode { get; set; }
 
                     /// <summary>
-                    /// <para>The performance level (PL) when an ESSD is used as a system cloud disk. Valid values:</para>
+                    /// <para>The performance level (PL) of the ESSD cloud disk used as a system cloud disk. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per disk.</description></item>
-                    /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per disk.</description></item>
+                    /// <item><description>PL0: A maximum of 10,000 random read/write IOPS per disk.</description></item>
+                    /// <item><description>PL1: A maximum of 50,000 random read/write IOPS per disk.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string PerformanceLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The provisioned performance (read/write IOPS) of a single ESSD AutoPL cloud disk.</para>
+                    /// <para>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9600</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public long? ProvisionedIops { get; set; }
 
                     /// <summary>
-                    /// <para>The cloud disk size. Unit: GiB.</para>
+                    /// <para>The disk size. Unit: GiB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The node list.</para>
+            /// <para>The list of nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public List<ExtendClusterRequestNodeGroupsNodesDataDisk> DataDisk { get; set; }
                 public class ExtendClusterRequestNodeGroupsNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable burst (I/O burst).</para>
+                    /// <para>Specifies whether to enable burst (performance burst).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? DeleteWithNode { get; set; }
 
                     /// <summary>
-                    /// <para>The performance metric of the data cloud disk.</para>
+                    /// <para>The performance parameter of the data cloud disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PL0</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public long? ProvisionedIops { get; set; }
 
                     /// <summary>
-                    /// <para>The cloud disk size.</para>
+                    /// <para>The disk size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string SavingsPlanId { get; set; }
 
             /// <summary>
-            /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
+            /// <para>The custom executable shell script. The script must be in Base64 encoding. The maximum size of the raw data is 16 KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>

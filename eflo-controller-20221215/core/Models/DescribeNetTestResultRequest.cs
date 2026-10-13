@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNetTestResultRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the test task.</para>
+        /// <para>The test task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dr-uf6i0tv2refv8wz*****</para>

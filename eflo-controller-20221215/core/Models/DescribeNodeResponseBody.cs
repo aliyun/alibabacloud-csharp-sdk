@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-30T03:35:53Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<DescribeNodeResponseBodyDisks> Disks { get; set; }
         public class DescribeNodeResponseBodyDisks : TeaModel {
             /// <summary>
-            /// <para>The disk type. Valid values:</para>
+            /// <para>The disk category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_essd: ESSD cloud disk.</description></item>
             /// </list>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the cloud disk when an ESSD cloud disk is created as a system disk. Valid values:</para>
+            /// <para>The performance level (PL) of the ESSD cloud disk when it is used as the system cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,8 +96,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <summary>
             /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system disk.</description></item>
-            /// <item><description>data: data disk.</description></item>
+            /// <item><description>system: system cloud disk.</description></item>
+            /// <item><description>data: data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-23T16:00:00Z</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether file system mounting is supported.</para>
+        /// <para>Indicates whether file storage mounting is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The hyper node ID.</para>
+        /// <para>The HyperNode ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string BondName { get; set; }
 
             /// <summary>
-            /// <para>The machine IP address.</para>
+            /// <para>The IP address of the machine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.254.235.44</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string SavingsPlanId { get; set; }
 
         /// <summary>
-        /// <para>The unique machine identifier.</para>
+        /// <para>The unique identifier of the machine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag42ckf4jx</para>

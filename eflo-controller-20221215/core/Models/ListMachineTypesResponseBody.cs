@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the machine types.</para>
+        /// <para>The details of the machine types.</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? BondNum { get; set; }
 
             /// <summary>
-            /// <para>CPU information.</para>
+            /// <para>The CPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x Intel Icelake 8369B 32C CPU</para>
@@ -36,11 +36,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string CpuInfo { get; set; }
 
+            /// <summary>
+            /// <para>The structured CPU specifications.</para>
+            /// </summary>
             [NameInMap("CpuInfoDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesCpuInfoDetail CpuInfoDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesCpuInfoDetail : TeaModel {
                 /// <summary>
+                /// <para>The CPU architecture.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>x86_64</para>
                 /// </summary>
@@ -49,6 +54,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CpuArch { get; set; }
 
                 /// <summary>
+                /// <para>The number of CPU sockets.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -57,6 +64,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? CpuSockets { get; set; }
 
                 /// <summary>
+                /// <para>The number of vCPU cores.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>192</para>
                 /// </summary>
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Disk information.</para>
+            /// <para>The disk information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 480GB SATA SSD</para>
@@ -76,11 +85,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string DiskInfo { get; set; }
 
+            /// <summary>
+            /// <para>The disk information.</para>
+            /// </summary>
             [NameInMap("DiskInfoDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesDiskInfoDetail DiskInfoDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesDiskInfoDetail : TeaModel {
                 /// <summary>
+                /// <para>The number of disks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -89,6 +103,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? LocalDiskCount { get; set; }
 
                 /// <summary>
+                /// <para>The capacity per disk, in TB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3.84</para>
                 /// </summary>
@@ -97,6 +113,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public float? LocalDiskSizeInTB { get; set; }
 
                 /// <summary>
+                /// <para>The disk type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NVMe SSD</para>
                 /// </summary>
@@ -106,11 +124,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            /// <summary>
+            /// <para>The frontend network information.</para>
+            /// </summary>
             [NameInMap("FrontendNetworkDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesFrontendNetworkDetail FrontendNetworkDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesFrontendNetworkDetail : TeaModel {
                 /// <summary>
+                /// <para>The frontend network type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
                 /// </summary>
@@ -119,6 +142,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string FrontendNetworkType { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether jumbo frames are supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -129,7 +154,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>GPU information.</para>
+            /// <para>The GPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8x NVIDIA SXM4 80GB A100 GPU</para>
@@ -138,11 +163,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string GpuInfo { get; set; }
 
+            /// <summary>
+            /// <para>The GPU information.</para>
+            /// </summary>
             [NameInMap("GpuInfoDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesGpuInfoDetail GpuInfoDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesGpuInfoDetail : TeaModel {
                 /// <summary>
+                /// <para>The number of GPUs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
                 /// </summary>
@@ -151,6 +181,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? GpuCount { get; set; }
 
                 /// <summary>
+                /// <para>The GPU memory per card, in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>144</para>
                 /// </summary>
@@ -159,6 +191,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? GpuMemoryInGB { get; set; }
 
                 /// <summary>
+                /// <para>The GPU name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>M890P-144G</para>
                 /// </summary>
@@ -167,6 +201,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string GpuName { get; set; }
 
                 /// <summary>
+                /// <para>The GPU vendor.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>T-HEAD</para>
                 /// </summary>
@@ -175,6 +211,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string GpuVendor { get; set; }
 
                 /// <summary>
+                /// <para>The total GPU memory, in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>9216</para>
                 /// </summary>
@@ -185,7 +223,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Memory information.</para>
+            /// <para>The memory information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32x 64GB DDR4 3200 Memory</para>
@@ -194,11 +232,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string MemoryInfo { get; set; }
 
+            /// <summary>
+            /// <para>The memory information.</para>
+            /// </summary>
             [NameInMap("MemoryInfoDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesMemoryInfoDetail MemoryInfoDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesMemoryInfoDetail : TeaModel {
                 /// <summary>
+                /// <para>The memory size, in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
                 /// </summary>
@@ -219,7 +262,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Network information.</para>
+            /// <para>The network information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 100Gbps DP NIC</para>
@@ -238,11 +281,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeCount { get; set; }
 
+            /// <summary>
+            /// <para>The RDMA information.</para>
+            /// </summary>
             [NameInMap("RdmaInfoDetail")]
             [Validation(Required=false)]
             public ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail RdmaInfoDetail { get; set; }
             public class ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail : TeaModel {
                 /// <summary>
+                /// <para>The bandwidth per backend RDMA NIC, in Gbps.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>400</para>
                 /// </summary>
@@ -251,12 +299,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? BackendRdmaNicBwInGbps { get; set; }
 
                 /// <summary>
+                /// <para>The number of backend RDMA NICs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
                 [NameInMap("BackendRdmaNicCount")]
                 [Validation(Required=false)]
                 public int? BackendRdmaNicCount { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether backend RDMA is supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The current machine type supports backend RDMA.</description></item>
+                /// <item><description>false: The current machine type does not support backend RDMA.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("BackendRdmaSupported")]
+                [Validation(Required=false)]
+                public bool? BackendRdmaSupported { get; set; }
 
             }
 
@@ -271,7 +335,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? TotalCpuCore { get; set; }
 
             /// <summary>
-            /// <para>The type of the machine type.</para>
+            /// <para>The machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -283,7 +347,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The token to request the next page of results. Include this token in your next request to retrieve the next page.</para>
+        /// <para>The next token for pagination. Include this value in the request to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>

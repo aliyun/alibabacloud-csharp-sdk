@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Cluster Name</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pjlab-lingjun</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>Creation time of the diagnostic task.</para>
+            /// <para>The time when the diagnostic task was created. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-15T02:01:12Z</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Diagnostic content. For example, in network diagnostics, there are static configuration checks, dynamic operation checks, and other diagnostic contents.</para>
+            /// <para>The diagnostic content. For example, in the network diagnostic type, the diagnostic content includes static configuration checks and dynamic runtime checks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test diagnosis information</para>
+            /// <para>Test diagnostic information</para>
             /// </summary>
             [NameInMap("DiagContent")]
             [Validation(Required=false)]
             public string DiagContent { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis ID</para>
+            /// <para>The diagnostic ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiagId { get; set; }
 
             /// <summary>
-            /// <para>Diagnostic result, either success or failure.</para>
+            /// <para>The diagnostic result, which indicates success or failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiagResult { get; set; }
 
             /// <summary>
-            /// <para>Completion time of the diagnostic task.</para>
+            /// <para>The time when the diagnostic task was completed. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16T02:04Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>Server name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proxy-rps.mos.csvw.com</para>
@@ -107,12 +107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ServerName { get; set; }
 
             /// <summary>
-            /// <para>Status of the diagnostic task. Possible values:</para>
-            /// <list type="bullet">
-            /// <item><description>InProgress: Diagnosing.</description></item>
-            /// <item><description>Finished: Diagnosis completed.</description></item>
-            /// <item><description>Failed: Diagnosis failed.</description></item>
-            /// </list>
+            /// <para>The governance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>succeed</para>
@@ -124,11 +119,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum value is 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is set or the set value is less than 20, the default value is 20.</description></item>
-        /// <item><description>If the set value is greater than 100, the default value is 100.</description></item>
+        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +136,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>NextToken for the next page. Include this value when requesting the next page.</para>
+        /// <para>The NextToken for the next page. Include this value when you request the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120****</para>

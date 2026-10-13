@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the node was created.</para>
+            /// <para>The creation time. The time is in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-06T10:11:41.569</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the machine.</para>
+            /// <para>The machine expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-22T23:59:59Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The status of the hypernode.</para>
+            /// <para>The hyper node status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The status of the hypernode.</para>
+            /// <para>The hyper node status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -161,10 +161,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. The maximum value is 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
-        /// <para>• If you do not set this parameter or you set a value less than 20, the default value is 20.</para>
-        /// <para>• If you set a value greater than 100, the default value is 100.</para>
+        /// <para>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
+        /// <para>•If this parameter is set to a value greater than 100, the default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>

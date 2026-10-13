@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListSyslogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The object that contains the paginated list of logs.</para>
+        /// <para>The paginated list of log objects.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>A standard field in Linux syslog.</para>
+            /// <para>The Linux syslog standard field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kern</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The content of the syslog.</para>
+            /// <para>The syslog content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bond4: failed to get link speed/duplex for eth8</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>A standard field in Linux syslog.</para>
+            /// <para>The Linux syslog standard field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>warning</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>A standard field in Linux syslog.</para>
+            /// <para>The Linux syslog standard field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kernel</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Syslogtag { get; set; }
 
             /// <summary>
-            /// <para>Tag: Hostname.</para>
+            /// <para>The tag for the hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>damo-m53kr8kd-0008</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TagHostname { get; set; }
 
             /// <summary>
-            /// <para>Tag: Package ID.</para>
+            /// <para>The tag for the pack ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>D990314D3C25D7E8-1080</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TagPackId { get; set; }
 
             /// <summary>
-            /// <para>Tag: Path.</para>
+            /// <para>The tag for the path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/var/log/kern</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TagPath { get; set; }
 
             /// <summary>
-            /// <para>Tag: Receive time.</para>
+            /// <para>The tag for the receive time. Specify a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687363348</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TagReceiveTime { get; set; }
 
             /// <summary>
-            /// <para>Tag: User-defined ID.</para>
+            /// <para>The tag for the user-defined ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application_b</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TagUserDefinedId { get; set; }
 
             /// <summary>
-            /// <para>The time in UNIX format.</para>
+            /// <para>The time in UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687363346</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The topic. Valid values are \<c>logserver\\</c> and \<c>log2sls\\</c>. Note: Both are syslog servers. \<c>logserver\\</c> collects data over TCP. \<c>log2sls\\</c> collects data over UDP.</para>
+            /// <para>The topic, which is logserver or log2sls. Both are syslog servers. logserver collects logs over TCP, and log2sls collects logs over UDP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logserver</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The \<c>NextToken\\</c> for the next page. To retrieve the next page of results, include this return value in the next request.</para>
+        /// <para>The NextToken for the next page. Include this value in the request to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</para>

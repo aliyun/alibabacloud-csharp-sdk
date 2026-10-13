@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNodeGroupDriftedNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page for a single query.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call. An empty value indicates that no more pages are available.</para>
+        /// <para>The pagination token returned by this call. An empty value indicates that no more pages exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a6b93229825ac667104463b56790c91</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<ListNodeGroupDriftedNodesResponseBodyNodes> Nodes { get; set; }
         public class ListNodeGroupDriftedNodesResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node-001</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ActualValue { get; set; }
 
                 /// <summary>
-                /// <para>The minimum action required to apply the TargetValue: Refresh / Reboot / Reimage. For more information, refer to the MaxDisruptiveAction parameter description in the RefreshNodeGroupNodes operation.</para>
+                /// <para>The minimum action required to apply the TargetValue: Refresh, Reboot, or Reimage. For more information, refer to the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Refresh</para>

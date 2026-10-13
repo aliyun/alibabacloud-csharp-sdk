@@ -19,27 +19,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"},
-                {"cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"},
-                {"ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"},
-                {"cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"},
-                {"ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"},
-                {"cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"},
-                {"ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"},
-                {"cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"},
-                {"eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"},
-                {"me-east-1", "eflo-controller.me-east-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -188,12 +167,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node group of a node.</para>
+        /// <para>Modifies the node group of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -251,12 +230,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node group of a node.</para>
+        /// <para>Modifies the node group of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -314,12 +293,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node group of a node.</para>
+        /// <para>Modifies the node group of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -337,12 +316,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node group of a node.</para>
+        /// <para>Modifies the node group of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2544,12 +2523,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Queries the details of a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified cluster.</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2591,12 +2570,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Queries the details of a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified cluster.</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2638,12 +2617,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Queries the details of a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified cluster.</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2661,12 +2640,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Queries the details of a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified cluster.</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2686,11 +2665,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <summary>
         /// <para>Queries the results of a diagnostic task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
@@ -2734,11 +2708,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Queries the results of a diagnostic task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
         /// </param>
@@ -2781,11 +2750,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Queries the results of a diagnostic task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
         /// </param>
@@ -2804,11 +2768,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Queries the results of a diagnostic task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
         /// </param>
@@ -2824,12 +2783,152 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hyper node.</para>
+        /// <para>Queries the details of a fault report after a user submits one.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified hyper node.</para>
+        /// <para>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFaultReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaultReportResponse
+        /// </returns>
+        public DescribeFaultReportResponse DescribeFaultReportWithOptions(DescribeFaultReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                body["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFaultReport",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFaultReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a fault report after a user submits one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFaultReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaultReportResponse
+        /// </returns>
+        public async Task<DescribeFaultReportResponse> DescribeFaultReportWithOptionsAsync(DescribeFaultReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                body["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFaultReport",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFaultReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a fault report after a user submits one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFaultReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaultReportResponse
+        /// </returns>
+        public DescribeFaultReportResponse DescribeFaultReport(DescribeFaultReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFaultReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a fault report after a user submits one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFaultReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaultReportResponse
+        /// </returns>
+        public async Task<DescribeFaultReportResponse> DescribeFaultReportAsync(DescribeFaultReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFaultReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a hypernode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a hypernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2871,12 +2970,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2918,12 +3017,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2941,12 +3040,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a specified hyper node.</para>
+        /// <para>Queries the details of a hypernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2964,7 +3063,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
+        /// <para>Queries the execution list and status of O&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3018,7 +3117,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
+        /// <para>Queries the execution list and status of O&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3072,7 +3171,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
+        /// <para>Queries the execution list and status of O&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3090,7 +3189,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
+        /// <para>Queries the execution list and status of O&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3108,7 +3207,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a network test.</para>
+        /// <para>Queries network test results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3150,7 +3249,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a network test.</para>
+        /// <para>Queries network test results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3192,7 +3291,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a network test.</para>
+        /// <para>Queries network test results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3210,7 +3309,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a network test.</para>
+        /// <para>Queries network test results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3228,12 +3327,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of nodes.</para>
+        /// <para>Queries a list of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of a hyper node.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3275,12 +3374,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of nodes.</para>
+        /// <para>Queries a list of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of a hyper node.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3322,12 +3421,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of nodes.</para>
+        /// <para>Queries a list of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of a hyper node.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3345,12 +3444,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of nodes.</para>
+        /// <para>Queries a list of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of a hyper node.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3368,12 +3467,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a node group.</para>
+        /// <para>Queries node groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of a node group.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3415,12 +3514,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a node group.</para>
+        /// <para>Queries node groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of a node group.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3462,12 +3561,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a node group.</para>
+        /// <para>Queries node groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of a node group.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3485,12 +3584,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a node group.</para>
+        /// <para>Queries node groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of a node group.</para>
+        /// <para>Queries the details of a supernode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3513,11 +3612,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results contain the following information:</para>
+        /// <para>The returned results include the following:</para>
         /// <list type="bullet">
-        /// <item><description>The processing status of each node with configuration drift</description></item>
-        /// <item><description>The processing result, status, and reason for each node</description></item>
-        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// <item><description>The processing status of each node with configuration drift.</description></item>
+        /// <item><description>The processing result, status, and reason for each node.</description></item>
+        /// <item><description>The refreshed and skipped properties for each node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3583,11 +3682,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results contain the following information:</para>
+        /// <para>The returned results include the following:</para>
         /// <list type="bullet">
-        /// <item><description>The processing status of each node with configuration drift</description></item>
-        /// <item><description>The processing result, status, and reason for each node</description></item>
-        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// <item><description>The processing status of each node with configuration drift.</description></item>
+        /// <item><description>The processing result, status, and reason for each node.</description></item>
+        /// <item><description>The refreshed and skipped properties for each node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3653,11 +3752,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results contain the following information:</para>
+        /// <para>The returned results include the following:</para>
         /// <list type="bullet">
-        /// <item><description>The processing status of each node with configuration drift</description></item>
-        /// <item><description>The processing result, status, and reason for each node</description></item>
-        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// <item><description>The processing status of each node with configuration drift.</description></item>
+        /// <item><description>The processing result, status, and reason for each node.</description></item>
+        /// <item><description>The refreshed and skipped properties for each node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3681,11 +3780,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results contain the following information:</para>
+        /// <para>The returned results include the following:</para>
         /// <list type="bullet">
-        /// <item><description>The processing status of each node with configuration drift</description></item>
-        /// <item><description>The processing result, status, and reason for each node</description></item>
-        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// <item><description>The processing status of each node with configuration drift.</description></item>
+        /// <item><description>The processing result, status, and reason for each node.</description></item>
+        /// <item><description>The refreshed and skipped properties for each node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3704,7 +3803,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the constraints for a node type.</para>
+        /// <para>Queries the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3746,7 +3845,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the constraints for a node type.</para>
+        /// <para>Queries the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3788,7 +3887,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the constraints for a node type.</para>
+        /// <para>Queries the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3806,7 +3905,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the constraints for a node type.</para>
+        /// <para>Queries the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3944,7 +4043,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the list and status of files sent by O&amp;M Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3990,7 +4089,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the list and status of files sent by O&amp;M Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4036,7 +4135,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the list and status of files sent by O&amp;M Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4054,7 +4153,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the list and status of files sent by O&amp;M Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4072,7 +4171,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a task.</para>
+        /// <para>Queries the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4114,7 +4213,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a task.</para>
+        /// <para>Queries the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4156,7 +4255,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a task.</para>
+        /// <para>Queries the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4174,7 +4273,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a task.</para>
+        /// <para>Queries the details of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4640,7 +4739,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
+        /// <para>Queries the host group list under a cluster and the host list under each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4704,7 +4803,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
+        /// <para>Queries the host group list under a cluster and the host list under each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4768,7 +4867,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
+        /// <para>Queries the host group list under a cluster and the host list under each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4786,7 +4885,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
+        /// <para>Queries the host group list under a cluster and the host list under each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4804,7 +4903,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nodes in a cluster.</para>
+        /// <para>Queries the list of nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4872,7 +4971,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nodes in a cluster.</para>
+        /// <para>Queries the list of nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4940,7 +5039,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nodes in a cluster.</para>
+        /// <para>Queries the list of nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4958,7 +5057,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nodes in a cluster.</para>
+        /// <para>Queries the list of nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4976,7 +5075,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
+        /// <para>Queries a list of cluster instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5032,7 +5131,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
+        /// <para>Queries a list of cluster instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5088,7 +5187,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
+        /// <para>Queries a list of cluster instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5106,7 +5205,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
+        /// <para>Queries a list of cluster instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5124,13 +5223,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Diagnostic Tasks</para>
+        /// <para>Queries a list of diagnostic tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -5183,13 +5277,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Diagnostic Tasks</para>
+        /// <para>Queries a list of diagnostic tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -5242,13 +5331,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Diagnostic Tasks</para>
+        /// <para>Queries a list of diagnostic tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -5265,13 +5349,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Diagnostic Tasks</para>
+        /// <para>Queries a list of diagnostic tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -5288,7 +5367,183 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the active physical servers in the rack.</para>
+        /// <para>Queries the list of historical fault reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListFaultReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFaultReportsResponse
+        /// </returns>
+        public ListFaultReportsResponse ListFaultReportsWithOptions(ListFaultReportsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFaultReportsShrinkRequest request = new ListFaultReportsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "Nodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                body["Nodes"] = request.NodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFaultReports",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFaultReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of historical fault reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListFaultReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFaultReportsResponse
+        /// </returns>
+        public async Task<ListFaultReportsResponse> ListFaultReportsWithOptionsAsync(ListFaultReportsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFaultReportsShrinkRequest request = new ListFaultReportsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "Nodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                body["Nodes"] = request.NodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFaultReports",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFaultReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of historical fault reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFaultReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFaultReportsResponse
+        /// </returns>
+        public ListFaultReportsResponse ListFaultReports(ListFaultReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFaultReportsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of historical fault reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFaultReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFaultReportsResponse
+        /// </returns>
+        public async Task<ListFaultReportsResponse> ListFaultReportsAsync(ListFaultReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFaultReportsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available rack physical machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5354,7 +5609,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the active physical servers in the rack.</para>
+        /// <para>Queries the list of available rack physical machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5420,7 +5675,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the active physical servers in the rack.</para>
+        /// <para>Queries the list of available rack physical machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5438,7 +5693,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the active physical servers in the rack.</para>
+        /// <para>Queries the list of available rack physical machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5456,7 +5711,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all unused nodes.</para>
+        /// <para>Queries the list of unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5524,7 +5779,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all unused nodes.</para>
+        /// <para>Queries the list of unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5592,7 +5847,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all unused nodes.</para>
+        /// <para>Queries the list of unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5610,7 +5865,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all unused nodes.</para>
+        /// <para>Queries the list of unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5628,12 +5883,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Machines</para>
+        /// <para>Queries a list of machines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of hypernodes.</para>
+        /// <para>Queries the details of hyper nodes.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5735,12 +5990,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Machines</para>
+        /// <para>Queries a list of machines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of hypernodes.</para>
+        /// <para>Queries the details of hyper nodes.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5842,12 +6097,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Machines</para>
+        /// <para>Queries a list of machines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of hypernodes.</para>
+        /// <para>Queries the details of hyper nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5865,12 +6120,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Machines</para>
+        /// <para>Queries a list of machines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of hypernodes.</para>
+        /// <para>Queries the details of hyper nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6156,7 +6411,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available machine types.</para>
+        /// <para>Queries the list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6198,7 +6453,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available machine types.</para>
+        /// <para>Queries the list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6240,7 +6495,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available machine types.</para>
+        /// <para>Queries the list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6258,7 +6513,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available machine types.</para>
+        /// <para>Queries the list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6276,7 +6531,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network test results.</para>
+        /// <para>Queries the list of network tests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6330,7 +6585,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network test results.</para>
+        /// <para>Queries the list of network tests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6384,7 +6639,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network test results.</para>
+        /// <para>Queries the list of network tests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6402,7 +6657,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network test results.</para>
+        /// <para>Queries the list of network tests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6425,7 +6680,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6490,7 +6745,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6555,7 +6810,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6578,7 +6833,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6596,7 +6851,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
+        /// <para>Queries the list of node group configuration refresh tasks by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6665,7 +6920,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
+        /// <para>Queries the list of node group configuration refresh tasks by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6734,7 +6989,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
+        /// <para>Queries the list of node group configuration refresh tasks by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6757,7 +7012,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
+        /// <para>Queries the list of node group configuration refresh tasks by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6780,7 +7035,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Node Group Information Under the Cluster</para>
+        /// <para>Queries node group information in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6834,7 +7089,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Node Group Information Under the Cluster</para>
+        /// <para>Queries node group information in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6888,7 +7143,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Node Group Information Under the Cluster</para>
+        /// <para>Queries node group information in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6906,7 +7161,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Node Group Information Under the Cluster</para>
+        /// <para>Queries node group information in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7668,15 +7923,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7735,15 +7990,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7802,15 +8057,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7831,15 +8086,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -8012,6 +8267,162 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReimageNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a fault for an abnormal node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReportNodeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportNodeStatusResponse
+        /// </returns>
+        public ReportNodeStatusResponse ReportNodeStatusWithOptions(ReportNodeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosisType))
+            {
+                body["DiagnosisType"] = request.DiagnosisType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReportNodeStatus",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReportNodeStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a fault for an abnormal node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReportNodeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportNodeStatusResponse
+        /// </returns>
+        public async Task<ReportNodeStatusResponse> ReportNodeStatusWithOptionsAsync(ReportNodeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosisType))
+            {
+                body["DiagnosisType"] = request.DiagnosisType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReportNodeStatus",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReportNodeStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a fault for an abnormal node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReportNodeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportNodeStatusResponse
+        /// </returns>
+        public ReportNodeStatusResponse ReportNodeStatus(ReportNodeStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReportNodeStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a fault for an abnormal node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReportNodeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReportNodeStatusResponse
+        /// </returns>
+        public async Task<ReportNodeStatusResponse> ReportNodeStatusAsync(ReportNodeStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReportNodeStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8964,6 +9375,146 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopInvocationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopNodeDiagnosticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodeDiagnosticResponse
+        /// </returns>
+        public StopNodeDiagnosticResponse StopNodeDiagnosticWithOptions(StopNodeDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                body["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopNodeDiagnostic",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopNodeDiagnosticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopNodeDiagnosticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodeDiagnosticResponse
+        /// </returns>
+        public async Task<StopNodeDiagnosticResponse> StopNodeDiagnosticWithOptionsAsync(StopNodeDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                body["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopNodeDiagnostic",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopNodeDiagnosticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopNodeDiagnosticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodeDiagnosticResponse
+        /// </returns>
+        public StopNodeDiagnosticResponse StopNodeDiagnostic(StopNodeDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopNodeDiagnosticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopNodeDiagnosticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodeDiagnosticResponse
+        /// </returns>
+        public async Task<StopNodeDiagnosticResponse> StopNodeDiagnosticAsync(StopNodeDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopNodeDiagnosticWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

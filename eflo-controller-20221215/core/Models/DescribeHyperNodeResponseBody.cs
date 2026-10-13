@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The time when the hyper node was created.</para>
+        /// <para>The creation time. The time is in ISO 8601 format. The Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-30T02:00:00.852Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The expiration time. The time is in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2125-06-24T16:52:44.318000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hyper node.</para>
+        /// <para>The hypernode ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the node group.</para>
+        /// <para>The node group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lisan-nodegroup</para>
@@ -134,12 +134,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<DescribeHyperNodeResponseBodyNodesDisks> Disks { get; set; }
             public class DescribeHyperNodeResponseBodyNodesDisks : TeaModel {
                 /// <summary>
-                /// <para>The packet classification. Valid values:</para>
+                /// <para>The packet category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>DOWNLINK_PACKET</b>: downlink packet</para>
-                /// </description></item>
-                /// <item><description><para><b>UPLINK_PACKET</b>: uplink packet</para>
-                /// </description></item>
+                /// <item><description><b>DOWNLINK_PACKET</b>: downlink packet.</description></item>
+                /// <item><description><b>UPLINK_PACKET</b>: uplink packet.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,12 +158,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// <para>When you create an enhanced SSD (ESSD) to use as a system disk, set the performance level of the disk. Valid values:</para>
+                /// <para>The performance level (PL) of the cloud disk when an ESSD is created as the system cloud disk. Settings:</para>
                 /// <list type="bullet">
-                /// <item><description><para>PL0: A maximum of 10,000 random read/write input/output operations per second (IOPS) per disk.</para>
-                /// </description></item>
-                /// <item><description><para>PL1: A maximum of 50,000 random read/write IOPS per disk.</para>
-                /// </description></item>
+                /// <item><description>PL0: A maximum of 10,000 random read/write IOPS per standard SSD.</description></item>
+                /// <item><description>PL1: A maximum of 50,000 random read/write IOPS per standard SSD.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,10 +184,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <summary>
                 /// <para>The disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>system: system disk.</para>
-                /// </description></item>
-                /// <item><description><para>data: data disk.</para>
-                /// </description></item>
+                /// <item><description>system: system cloud disk.</description></item>
+                /// <item><description>data: data cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -241,7 +235,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public DescribeHyperNodeResponseBodyNodesNetworks Networks { get; set; }
             public class DescribeHyperNodeResponseBodyNodesNetworks : TeaModel {
                 /// <summary>
-                /// <para>The name of the network interface on the machine.</para>
+                /// <para>The bond interface name of the machine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond0</para>
@@ -251,7 +245,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string BondName { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the machine in the virtual private cloud (VPC).</para>
+                /// <para>The IP address of the machine in the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.22.2</para>
@@ -273,7 +267,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The state of the node.</para>
+            /// <para>The node status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -285,7 +279,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The state.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InProgress</para>
@@ -310,7 +304,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The state of the hyper node.</para>
+        /// <para>The hypernode status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Using</para>
@@ -342,7 +336,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The state of the node.</para>
+        /// <para>The node status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operating</para>

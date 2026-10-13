@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Eflo-YJ-Test-Cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster.</para>
+        /// <para>The cluster type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckEdgePro</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ComponentId { get; set; }
 
             /// <summary>
-            /// <para>The type of the component.</para>
+            /// <para>The component type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACKEdge</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ComputingIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created.</para>
+        /// <para>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-08T07:05:11Z</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The zone of the cluster.</para>
+        /// <para>The cluster number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public DescribeClusterResponseBodyNetworks Networks { get; set; }
         public class DescribeClusterResponseBodyNetworks : TeaModel {
             /// <summary>
-            /// <para>The ID of the virtual private datacenter (VPD).</para>
+            /// <para>The cluster CIDR block ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpd-iqd7xunc</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string OpenEniJumboFrame { get; set; }
 
         /// <summary>
-        /// <para>The state of the cluster.</para>
+        /// <para>The cluster status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was last updated.</para>
+        /// <para>The update time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-23T06:36:17.000Z</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-0jlkqysom5dmcviymep3f</para>

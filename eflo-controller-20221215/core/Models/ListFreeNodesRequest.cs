@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. The default value is 20.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set it to the NextToken value returned from the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of unused nodes to be returned.</para>
+        /// <para>The type of unused nodes to return.</para>
         /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]

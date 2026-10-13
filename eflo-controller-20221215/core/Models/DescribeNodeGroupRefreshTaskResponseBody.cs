@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. An empty value of NextToken indicates that no more results exist.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7ed93fda-5e7f-436a-ae5a-bd8e6b04e36b</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-3525</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the refresh task.</para>
+        /// <para>The refresh task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-159136551662516768776</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<DescribeNodeGroupRefreshTaskResponseBodyNodes> Nodes { get; set; }
         public class DescribeNodeGroupRefreshTaskResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>The action level actually executed on the node. If multiple properties are refreshed on the node, the highest required action level is used. Valid values:</para>
+            /// <para>The action level actually performed on the node. If multiple properties are refreshed on the node, the highest required action level is used. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Refresh: in-place refresh.</description></item>
             /// <item><description>Reboot: restart.</description></item>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node-001</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The list of property drifts for the node, including both executed and skipped properties.</para>
+            /// <para>The property drift list for the node, including both executed and skipped properties.</para>
             /// </summary>
             [NameInMap("PropertyDrifts")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ActualValue { get; set; }
 
                 /// <summary>
-                /// <para>The minimum action required to apply the target value: Refresh / Reboot / Reimage. For more information, see the MaxDisruptiveAction parameter description in the RefreshNodeGroupNodes operation.</para>
+                /// <para>The minimum action required to apply the target value: Refresh, Reboot, or Reimage. For more information, see the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Refresh</para>

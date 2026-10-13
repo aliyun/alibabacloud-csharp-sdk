@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListHyperNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -67,10 +67,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
-        /// <para>Default values:</para>
-        /// <para>• If you do not specify this parameter or you specify a value that is less than 20, the default value is 20.</para>
-        /// <para>• If you specify a value that is greater than 100, the default value is 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
+        /// <para>Default value:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned from a previous call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a6b93229825ac667104463b56790c91</para>
@@ -100,14 +104,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>The state of the node. If you do not specify this parameter, nodes in all states are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</para>
+        /// <para>The node status. If this parameter is not specified, all statuses are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</para>
         /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
         public List<string> OperatingStates { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwfm33rlt6zi</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

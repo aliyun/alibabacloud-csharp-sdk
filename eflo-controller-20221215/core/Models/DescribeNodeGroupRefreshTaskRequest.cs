@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNodeGroupRefreshTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100. For more information about paging, set this parameter together with NextToken.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100. For more information about paging, see the NextToken parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the refresh task.</para>
+        /// <para>The ID of the node group configuration refresh task. After you call RefreshNodeGroupNodes to trigger a node group configuration refresh, obtain this value from the NodeGroupRefreshTaskId response parameter. Before you call this operation, the node group must contain nodes with configuration drift.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupRefreshTaskId { get; set; }
 
         /// <summary>
-        /// <para>The node refresh statuses to filter by. Valid values:</para>
+        /// <para>The node refresh statuses to filter by:</para>
         /// <list type="bullet">
         /// <item><description>Pending: the node is waiting to be refreshed.</description></item>
         /// <item><description>InProgress: the node is being refreshed.</description></item>

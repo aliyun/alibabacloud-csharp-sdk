@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
