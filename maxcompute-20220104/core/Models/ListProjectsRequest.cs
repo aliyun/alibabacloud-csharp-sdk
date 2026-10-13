@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to list the built-in <b>SYSTEM_CATALOG</b> project. This project provides information such as project metadata and usage history. For more information, see the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a> feature.</para>
+        /// <para>Specifies whether to list the built-in <b>SYSTEM_CATALOG</b> project. This project provides information such as project metadata and usage history. For more information, see the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a> feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

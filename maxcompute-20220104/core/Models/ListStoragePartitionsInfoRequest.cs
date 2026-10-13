@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The schema to which the table belongs.</para>
+        /// <para>The name of the schema.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schema</para>

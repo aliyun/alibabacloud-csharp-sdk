@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                 /// <summary>
                 /// <para>The default compute quota.
-                /// This is used to allocate compute resources. If no compute quota is specified, jobs initiated in the project consume resources from the default quota. For more information about how to use compute resources, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/use-of-computing-resources">Use of computing resources</a>
-                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use of computing resources</a>.</para>
+                /// This is used to allocate compute resources. If no compute quota is specified, jobs initiated in the project consume resources from the default quota. For more information about how to use compute resources, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use of computing resources</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/use-of-computing-resources">Use of computing resources</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>os_PayAsYouGoQuota</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The project name.</para>
+                /// <para>The project names.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_project</para>
@@ -210,8 +210,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                         /// <summary>
                         /// <para>Specifies whether to enable data encryption for the project. For more information about data encryption, see 
-                        /// &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>
-                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</para>
+                        /// &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>
+                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -240,8 +240,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public ListProjectsResponseBodyDataProjectsPropertiesExternalProjectProperties ExternalProjectProperties { get; set; }
                     public class ListProjectsResponseBodyDataProjectsPropertiesExternalProjectProperties : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether the project is an external project of &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a>
-                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a>.</para>
+                        /// <para>Specifies whether the project is an external project of &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a>
+                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -317,8 +317,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Timezone { get; set; }
 
                     /// <summary>
-                    /// <para>The EPS resource group of the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/overview-of-dts">data transfer service</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">data transfer service</a> bound to the project.</para>
+                    /// <para>The EPS resource group of the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">data transfer service</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/overview-of-dts">data transfer service</a> bound to the project.</para>
                     /// <list type="bullet">
                     /// <item><description><para>Default (shared EPS resource group for the data transfer service): The project is not allowed to use the subscription EPS resource group for the data transfer service. Regardless of the default EPS resource group setting, data transfer tasks submitted by default in this project automatically use the Default EPS resource group.</para>
                     /// </description></item>
@@ -340,8 +340,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     /// <item><description><b>2</b>: MaxCompute V2.0 data type edition</description></item>
                     /// <item><description><b>hive</b>: Hive-compatible data type edition</description></item>
                     /// </list>
-                    /// <para>For more information about the differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/data-type-editions">Data type editions</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</para>
+                    /// <para>For more information about the differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/data-type-editions">Data type editions</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -399,8 +399,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public ListProjectsResponseBodyDataProjectsSecurityProperties SecurityProperties { get; set; }
                 public class ListProjectsResponseBodyDataProjectsSecurityProperties : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/download-control">download control</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature. By default, this feature is disabled.</para>
+                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/download-control">download control</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">download control</a> feature. By default, this feature is disabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -410,8 +410,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? EnableDownloadPrivilege { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">label-based access control</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature. By default, this feature is disabled.</para>
+                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature. By default, this feature is disabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -441,8 +441,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? ObjectCreatorHasGrantPermission { get; set; }
 
                     /// <summary>
-                    /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> properties.</para>
+                    /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> properties.</para>
                     /// </summary>
                     [NameInMap("projectProtection")]
                     [Validation(Required=false)]
@@ -478,8 +478,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string ExceptionPolicy { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether to enable the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
-                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> for the project to prohibit or allow data stream out of the project. The default enabling status is disabled.</para>
+                        /// <para>Specifies whether to enable the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
+                        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> for the project to prohibit or allow data stream out of the project. The default enabling status is disabled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -491,8 +491,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature. By default, this feature is enabled.</para>
+                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature. By default, this feature is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -502,8 +502,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? UsingAcl { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a>
-                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature. By default, this feature is enabled.</para>
+                    /// <para>Specifies whether to use the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature. By default, this feature is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -532,8 +532,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                 /// <summary>
                 /// <para>Specifies whether to support schema-based storage.
-                /// MaxCompute supports schemas, which are located under projects and used to classify objects such as tables, resources, and UDFs. A project can contain multiple schemas. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>
-                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</para>
+                /// MaxCompute supports schemas, which are located under projects and used to classify objects such as tables, resources, and UDFs. A project can contain multiple schemas. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

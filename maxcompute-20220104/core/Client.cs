@@ -3366,6 +3366,212 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</description></item>
+        /// <item><description>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</description></item>
+        /// <item><description>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</description></item>
+        /// </ol>
+        /// <h2>File and usage instructions</h2>
+        /// <list type="bullet">
+        /// <item><description>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</description></item>
+        /// <item><description>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</description></item>
+        /// <item><description>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</description></item>
+        /// <item><description>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</description></item>
+        /// <item><description>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetLogviewDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLogviewDownloadUrlResponse
+        /// </returns>
+        public GetLogviewDownloadUrlResponse GetLogviewDownloadUrlWithOptions(string project, string instance, GetLogviewDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVpcEndpoint))
+            {
+                query["useVpcEndpoint"] = request.UseVpcEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogviewDownloadUrl",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/logview/project/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(project) + "/instance/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instance) + "/downloadUrl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogviewDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</description></item>
+        /// <item><description>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</description></item>
+        /// <item><description>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</description></item>
+        /// </ol>
+        /// <h2>File and usage instructions</h2>
+        /// <list type="bullet">
+        /// <item><description>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</description></item>
+        /// <item><description>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</description></item>
+        /// <item><description>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</description></item>
+        /// <item><description>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</description></item>
+        /// <item><description>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetLogviewDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLogviewDownloadUrlResponse
+        /// </returns>
+        public async Task<GetLogviewDownloadUrlResponse> GetLogviewDownloadUrlWithOptionsAsync(string project, string instance, GetLogviewDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVpcEndpoint))
+            {
+                query["useVpcEndpoint"] = request.UseVpcEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogviewDownloadUrl",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/logview/project/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(project) + "/instance/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instance) + "/downloadUrl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogviewDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</description></item>
+        /// <item><description>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</description></item>
+        /// <item><description>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</description></item>
+        /// </ol>
+        /// <h2>File and usage instructions</h2>
+        /// <list type="bullet">
+        /// <item><description>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</description></item>
+        /// <item><description>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</description></item>
+        /// <item><description>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</description></item>
+        /// <item><description>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</description></item>
+        /// <item><description>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetLogviewDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLogviewDownloadUrlResponse
+        /// </returns>
+        public GetLogviewDownloadUrlResponse GetLogviewDownloadUrl(string project, string instance, GetLogviewDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLogviewDownloadUrlWithOptions(project, instance, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</description></item>
+        /// <item><description>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</description></item>
+        /// <item><description>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</description></item>
+        /// </ol>
+        /// <h2>File and usage instructions</h2>
+        /// <list type="bullet">
+        /// <item><description>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</description></item>
+        /// <item><description>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</description></item>
+        /// <item><description>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</description></item>
+        /// <item><description>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</description></item>
+        /// <item><description>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetLogviewDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLogviewDownloadUrlResponse
+        /// </returns>
+        public async Task<GetLogviewDownloadUrlResponse> GetLogviewDownloadUrlAsync(string project, string instance, GetLogviewDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLogviewDownloadUrlWithOptionsAsync(project, instance, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a single asynchronous task in MMA.</para>
         /// </summary>
         /// 
@@ -10302,7 +10508,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MaxCompute projects.</para>
+        /// <para>Lists MaxCompute projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10392,7 +10598,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MaxCompute projects.</para>
+        /// <para>Lists MaxCompute projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10482,7 +10688,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MaxCompute projects.</para>
+        /// <para>Lists MaxCompute projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10501,7 +10707,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MaxCompute projects.</para>
+        /// <para>Lists MaxCompute projects</para>
         /// </summary>
         /// 
         /// <param name="request">
