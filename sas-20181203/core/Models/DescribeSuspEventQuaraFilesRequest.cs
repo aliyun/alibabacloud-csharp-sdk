@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventQuaraFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the file list to view.</para>
+        /// <para>The page number of the file list to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The source identifier of the request. Set the value to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server group where the quarantined file is located.</para>
+        /// <para>The ID of the server group to which the quarantined file belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11472451</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupingId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to return on each page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string QuaraTag { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>59.82.XX.XX</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the quarantined files to query. Valid values:  </para>
+        /// <para>The status of the quarantined files that you want to query. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>quaraFailed</b>: Quarantine failed.</description></item>
         /// <item><description><b>quaraDone</b>: Quarantine succeeded.</description></item>
-        /// <item><description><b>quaraing</b>: Quarantine in progress.</description></item>
-        /// <item><description><b>rollbackFailed</b>: Quarantine rollback failed.</description></item>
-        /// <item><description><b>rollbackDone</b>: Quarantine rollback succeeded.</description></item>
-        /// <item><description><b>rollbacking</b>: Quarantine rollback in progress.</description></item>
+        /// <item><description><b>quaraing</b>: Quarantining.</description></item>
+        /// <item><description><b>rollbackFailed</b>: Restore failed.</description></item>
+        /// <item><description><b>rollbackDone</b>: Restore succeeded.</description></item>
+        /// <item><description><b>rollbacking</b>: Restoring.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

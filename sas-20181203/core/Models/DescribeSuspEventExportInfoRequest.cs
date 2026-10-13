@@ -12,8 +12,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the export task.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to query the ID.</para>
+        /// <para>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to export events and obtain this ID.</para>
         /// </remarks>
+        /// <para>This parameter is required. If it is not provided, the API returns an HTTP 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

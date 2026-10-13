@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectClientEventRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the alert event.</para>
+        /// <para>The unique ID of the alert event. This parameter is required. If it is not provided, the API returns an HTTP 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>131231</para>

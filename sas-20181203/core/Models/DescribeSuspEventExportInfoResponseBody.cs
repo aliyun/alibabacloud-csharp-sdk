@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventExportInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The handling status for the exception. Valid values:</para>
+        /// <para>The processing status of anomalous events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>exporting</b>: in progress</description></item>
-        /// <item><description><b>success</b>: successful</description></item>
-        /// <item><description><b>failed</b>: failed</description></item>
-        /// <item><description><b>pending</b>: pending</description></item>
+        /// <item><description><b>exporting</b>: Processing.</description></item>
+        /// <item><description><b>success</b>: Succeeded.</description></item>
+        /// <item><description><b>failed</b>: Failed.</description></item>
+        /// <item><description><b>pending</b>: Pending.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The time when the export task was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-20T15:18Z</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The time when the export task was modified.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-20T15:18Z</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The ID of the export task.</para>
+        /// <para>The ID of the export task for anomalous events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Id { get; set; }
 
         /// <summary>
-        /// <para>The URL at which you can download the exported Excel file.</para>
+        /// <para>The download URL of the exported Excel file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=yourAccessKeyID&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=xxxxxxxxxxxxxxxxxx</a></para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Link { get; set; }
 
         /// <summary>
-        /// <para>The progress percentage of the export task.</para>
+        /// <para>The export progress of anomalous events, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Progress { get; set; }
 
         /// <summary>
-        /// <para>The exported parameters of exceptions.</para>
+        /// <para>The export parameters for anomalous events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id,eventSubType,eventDetail,level,status,ip,instanceName,desc,lastTime,operateTime,note</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of exceptions exported.</para>
+        /// <para>The total number of anomalous events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The type of the export task. The value is fixed as suspiciousEvent.</para>
+        /// <para>The type of the export task. The value is fixed to suspiciousEvent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>suspiciousEvent</para>

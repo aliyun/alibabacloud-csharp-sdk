@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyServerlessAuthToMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The application query conditions.</para>
+        /// <para>The query conditions for applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>**7ad7e3a</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SERVERLESS</b>: Serverless asset.</description></item>
+        /// <item><description><b>SERVERLESS</b>: Serverless assets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disable automatic binding.</description></item>
-        /// <item><description><b>1</b>: Enable automatic binding.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to bind all assets. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Bind all assets.</description></item>
-        /// <item><description><b>false</b>: Do not bind all assets.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of application IDs to bind.</para>
         /// <remarks>
-        /// <para>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
+        /// <para>You can obtain the application IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("BindAppList")]
@@ -71,11 +71,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindAppList { get; set; }
 
         /// <summary>
-        /// <para>The Asset Type for the operation. Valid values:</para>
+        /// <para>The Asset Type to operate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>INSTANCE</b>: Instance.</description></item>
         /// <item><description><b>APP</b>: Application.</description></item>
         /// </list>
+        /// <para>This parameter is required when you manage Serverless asset authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APP</para>
@@ -92,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindUuidList { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -102,9 +103,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</para>
+        /// <para>Specifies the conditions for searching assets. The value must be in JSON format and is case-sensitive.</para>
         /// <remarks>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by using conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,17 +116,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. true: performs only a check without executing the actual operation. false: performs the actual operation. Default value: false.</para>
+        /// <para>Specifies whether to only precheck the request. A value of true indicates that only the request is prechecked and no actual operation is performed. A value of false indicates that the request is executed. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship among multiple search conditions. Valid values:</para>
+        /// <para>Specifies the logical relationship among multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: Multiple conditions are evaluated using a logical OR.</description></item>
-        /// <item><description><b>AND</b>: Multiple conditions are evaluated using a logical AND.</description></item>
+        /// <item><description><b>OR</b>: The conditions have an OR relationship.</description></item>
+        /// <item><description><b>AND</b>: The conditions have an AND relationship.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The NTM version code for pre-binding.</para>
+        /// <para>The NTM version code used for pre-binding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>level2</para>
@@ -152,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After pre-binding is enabled, the corresponding number of authorization licenses are automatically bound to the specified servers after the purchase is completed.</para>
+        /// <para>After you enable pre-binding, the system automatically binds the corresponding version of authorizations to the specified server after the purchase is completed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -163,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PreBind { get; set; }
 
         /// <summary>
-        /// <para>The pre-binding order ID.</para>
+        /// <para>The ID of the pre-binding order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>233016**0482</para>
@@ -173,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PreBindOrderId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the resource directory.</para>
+        /// <para>The UID of the associated resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -185,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of application IDs to unbind.</para>
         /// <remarks>
-        /// <para>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
+        /// <para>You can obtain the application IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnBindAppList")]

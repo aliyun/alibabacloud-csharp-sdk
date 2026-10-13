@@ -130,6 +130,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The trial version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TrialVersion")]
             [Validation(Required=false)]

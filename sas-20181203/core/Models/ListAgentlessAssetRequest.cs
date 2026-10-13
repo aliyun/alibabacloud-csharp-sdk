@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessAssetRequest : TeaModel {
         /// <summary>
-        /// <para>The page number in a paged query.</para>
+        /// <para>The page number of the current page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of asset instance IDs to query.</para>
+        /// <para>The IDs of the asset instances to query.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -93,11 +93,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanRegionId { get; set; }
 
         /// <summary>
-        /// <para>The object type of the detection target. Valid values:</para>
+        /// <para>The object type to scan. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>3</b>: user snapshot</para>
         /// </description></item>
-        /// <item><description><para><b>4</b>: user-defined image</para>
+        /// <item><description><para><b>4</b>: custom image</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddPrivateRegistryRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name of the image repository.</para>
+        /// <para>The domain name of the registry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to <b>quay</b>. Valid values:</para>
+        /// <para>The additional parameters for the image registry. This parameter is required when you use <b>quay</b>. The parameters include:</para>
         /// <list type="bullet">
-        /// <item><description><b>namespace</b></description></item>
-        /// <item><description><b>authToken</b></description></item>
+        /// <item><description><b>namespace</b>: The namespace.</description></item>
+        /// <item><description><b>authToken</b>: The authorization token.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Internet</description></item>
-        /// <item><description><b>2</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>1</b>: Internet.</description></item>
+        /// <item><description><b>2</b>: VPC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? NetType { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to log on to the image repository.</para>
+        /// <para>The password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The type of the protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: HTTP</description></item>
-        /// <item><description><b>2</b>: HTTPS</description></item>
+        /// <item><description><b>1</b>: HTTP.</description></item>
+        /// <item><description><b>2</b>: HTTPS.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +86,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the image repository.</para>
+        /// <para>The IP address of the registry.</para>
+        /// <para>Enter a valid IPv4 address that can be used to connect to the image registry. To specify a domain name for the image registry, use the DomainName parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListImageRegistryRegion~~">ListImageRegistryRegion</a> operation to query the IDs of supported regions.</para>
+        /// <para>You can call the <a href="~~ListImageRegistryRegion~~">ListImageRegistryRegion</a> operation to query the supported region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -111,10 +112,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the private image repository. Valid values:</para>
+        /// <para>The type of the private image registry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>harbor</b></description></item>
-        /// <item><description><b>quay</b></description></item>
+        /// <item><description><b>harbor</b>: Harbor environment.</description></item>
+        /// <item><description><b>quay</b>: Quay environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -126,10 +127,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryType { get; set; }
 
         /// <summary>
-        /// <para>The version of the image repository. Valid values:</para>
+        /// <para>The version of the image registry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>V1</b></description></item>
-        /// <item><description><b>V2</b></description></item>
+        /// <item><description><b>V1</b>: Version 1.0.</description></item>
+        /// <item><description><b>V2</b>: Version 2.0.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -141,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of images that are scanned per hour.</para>
+        /// <para>The number of images scanned per hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -151,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TransPerHour { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to log on to the image repository.</para>
+        /// <para>The username of the image registry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The instance ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9hs3e5*******908kd</para>

@@ -31,10 +31,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AnalyzeResult { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Normal system process</para>
+            /// </summary>
             [NameInMap("ExplanationEn")]
             [Validation(Required=false)]
             public string ExplanationEn { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>正常系统进程</para>
+            /// </summary>
             [NameInMap("ExplanationZh")]
             [Validation(Required=false)]
             public string ExplanationZh { get; set; }

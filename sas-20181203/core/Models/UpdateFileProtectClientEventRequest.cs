@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<int?> AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the end time.</para>
+        /// <para>The end time. The value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1650470399999</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? NewStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation.</para>
+        /// <para>The type of the current operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READ</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProcPath { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The remark. This parameter is required when SelectAll is set to true. If this parameter is not provided, the service returns HTTP 500 with the error code -100.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public List<string> Remark { get; set; }
 
         /// <summary>
-        /// <para>The rule name.</para>
+        /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tetsRule</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to select all.</para>
+        /// <para>Specifies whether to select all events.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? SelectAll { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649260800000</para>

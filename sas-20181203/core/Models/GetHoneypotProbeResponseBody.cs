@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotProbeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to identify the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the probe.</para>
+        /// <para>The probe data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHoneypotProbeResponseBodyData Data { get; set; }
         public class GetHoneypotProbeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether address resolution protocol (ARP) is enabled for the check type.</para>
+            /// <para>The ARP check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Arp { get; set; }
 
             /// <summary>
-            /// <para>An array consisting of the IP addresses that can be monitored.</para>
+            /// <para>The list of listenable IP addresses.</para>
             /// </summary>
             [NameInMap("CanListenIpList")]
             [Validation(Required=false)]
             public List<string> CanListenIpList { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks of the probe deployed in a virtual private cloud (VPC).</para>
+            /// <para>The list of CIDR blocks covered by the VPC probe.</para>
             /// </summary>
             [NameInMap("CidrList")]
             [Validation(Required=false)]
             public List<string> CidrList { get; set; }
 
             /// <summary>
-            /// <para>The information about the management node.</para>
+            /// <para>The management node.</para>
             /// </summary>
             [NameInMap("ControlNode")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EcsInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the management node.</para>
+                /// <para>The management node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>37a15ff1-3475-4897-aa6c-f7fd9122****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the management node.</para>
+                /// <para>The management node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>online-honeypot</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The CPU utilization.</para>
+            /// <para>The CPU usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.51</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public double? CpuLoad { get; set; }
 
             /// <summary>
-            /// <para>The time when the probe was deployed.</para>
+            /// <para>The deployment time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669363825000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? DeployTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the probe.</para>
+            /// <para>The probe name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-probe</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ports that the honeypot monitors.</para>
+            /// <para>The list of honeypot listening port scanning services.</para>
             /// </summary>
             [NameInMap("HoneyPotProbeScanPort")]
             [Validation(Required=false)]
             public GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort HoneyPotProbeScanPort { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort : TeaModel {
                 /// <summary>
-                /// <para>The unique ID of the service that is monitored.</para>
+                /// <para>The unique ID of the listening service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15389</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The ports that are monitored.</para>
+                /// <para>The listening ports.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Ports { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the probe.</para>
+                /// <para>The unique ID of the probe.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a46f5162-c70d-4e26-8ddf-7435feca****</para>
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ProbeId { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses that are monitored.</para>
+                /// <para>The list of listening IP addresses.</para>
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
                 public List<string> ServiceIpList { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring status. Valid values:</para>
+                /// <para>The status of the listening service. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: abnormal</description></item>
-                /// <item><description><b>3</b>: normal</description></item>
+                /// <item><description><b>1</b>: Service exception.</description></item>
+                /// <item><description><b>3</b>: Normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The honeypots that are bound to the probe.</para>
+            /// <para>The list of honeypot services bound to the probe.</para>
             /// </summary>
             [NameInMap("HoneypotProbeBindList")]
             [Validation(Required=false)]
             public List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindList> HoneypotProbeBindList { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneypotProbeBindList : TeaModel {
                 /// <summary>
-                /// <para>The unique ID of the honeypot that is bound to the probe.</para>
+                /// <para>The unique ID of the bound service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>45378f64-d7b4-4a53-9c48-4303eb4b****</para>
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string BindId { get; set; }
 
                 /// <summary>
-                /// <para>The ports that are bound to the probe.</para>
+                /// <para>The list of bound ports.</para>
                 /// </summary>
                 [NameInMap("BindPortList")]
                 [Validation(Required=false)]
                 public List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList> BindPortList { get; set; }
                 public class GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the port is bound.</para>
+                    /// <para>Specifies whether the port is bound.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public bool? BindPort { get; set; }
 
                     /// <summary>
-                    /// <para>The end port on which the probe monitors.</para>
+                    /// <para>The ending listening port of the probe.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? EndPort { get; set; }
 
                     /// <summary>
-                    /// <para>The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.</para>
+                    /// <para>The bound service port error.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>portmap failed</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Err { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the port is a fixed port.</para>
+                    /// <para>Specifies whether the port is fixed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public bool? Fixed { get; set; }
 
                     /// <summary>
-                    /// <para>The unique ID of the port binding record.</para>
+                    /// <para>The unique ID of the bound port record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2512</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.</para>
+                    /// <para>The error details of the bound service port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>listen 22 tcp4 failed</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Msg { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the protocol.</para>
+                    /// <para>The protocol type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tcp</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Proto { get; set; }
 
                     /// <summary>
-                    /// <para>The start port on which the probe monitors.</para>
+                    /// <para>The starting listening port of the probe.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>22</para>
@@ -287,10 +287,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? StartPort { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the port of the honeypot that is bound to the probe. Valid values:</para>
+                    /// <para>The status of the bound service port. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>1</b>: abnormal</description></item>
-                    /// <item><description><b>3</b>: normal</description></item>
+                    /// <item><description><b>1</b>: Service exception.</description></item>
+                    /// <item><description><b>3</b>: Normal.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -323,17 +323,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string HoneypotId { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses that are monitored.</para>
+                /// <para>The list of listening IP addresses.</para>
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
                 public List<string> ServiceIpList { get; set; }
 
                 /// <summary>
-                /// <para>The status of the honeypot that is bound to the probe. Valid values:</para>
+                /// <para>The status of the bound honeypot service. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: abnormal</description></item>
-                /// <item><description><b>3</b>: normal</description></item>
+                /// <item><description><b>1</b>: Service exception.</description></item>
+                /// <item><description><b>3</b>: Normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The IP address of the server on which the probe is deployed.</para>
+            /// <para>The local address bound to the probe.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33.53.XX.XX</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HostIp { get; set; }
 
             /// <summary>
-            /// <para>An array consisting of the IP addresses that can be monitored.</para>
+            /// <para>The list of listenable IP addresses.</para>
             /// </summary>
             [NameInMap("ListenIpList")]
             [Validation(Required=false)]
@@ -373,10 +373,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public double? MemoryLoad { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the server on which the probe is deployed. Valid values:</para>
+            /// <para>The operating system type of the probe instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>windows</description></item>
-            /// <item><description>linux</description></item>
+            /// <item><description>windows: Windows.</description></item>
+            /// <item><description>linux: Linux.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether ping is enabled for the check type.</para>
+            /// <para>The ping check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Ping { get; set; }
 
             /// <summary>
-            /// <para>The ID of the probe.</para>
+            /// <para>The probe ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40f6501d-45ec-4bf0-b813-0072ceb4****</para>
@@ -407,10 +407,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeId { get; set; }
 
             /// <summary>
-            /// <para>The type of the probe. Valid values:</para>
+            /// <para>The probe type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>host_probe</b>: host probe</description></item>
-            /// <item><description><b>vpc_black_hole_probe</b>: virtual private cloud (VPC) probe</description></item>
+            /// <item><description><b>host_probe</b>: Host probe.</description></item>
+            /// <item><description><b>vpc_black_hole_probe</b>: VPC blackhole probe.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeType { get; set; }
 
             /// <summary>
-            /// <para>The version of the probe.</para>
+            /// <para>The probe version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18060096</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeVersion { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the proxy server.</para>
+            /// <para>The proxy IP address deployed in the IDC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.108.XX.XX</para>
@@ -441,18 +441,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProxyIp { get; set; }
 
             /// <summary>
-            /// <para>The status of the probe. Valid values:</para>
+            /// <para>The probe status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>installed</b>: installed</description></item>
-            /// <item><description><b>install_failed</b>: installation failed</description></item>
-            /// <item><description><b>online</b>: online</description></item>
-            /// <item><description><b>offline</b>: offline</description></item>
-            /// <item><description><b>unnormal</b>: abnormal</description></item>
-            /// <item><description><b>unprobe</b>: unauthorized</description></item>
-            /// <item><description><b>uninstalling</b>: being uninstalled</description></item>
-            /// <item><description><b>uninstalled</b>: uninstalled</description></item>
-            /// <item><description><b>uninstall_failed</b>: uninstallation failed</description></item>
-            /// <item><description><b>not_exist</b>: not installed</description></item>
+            /// <item><description><b>installed</b>: Installed successfully.</description></item>
+            /// <item><description><b>install_failed</b>: Installation failed.</description></item>
+            /// <item><description><b>online</b>: Normal.</description></item>
+            /// <item><description><b>offline</b>: Offline.</description></item>
+            /// <item><description><b>unnormal</b>: Service exception.</description></item>
+            /// <item><description><b>unprobe</b>: Unauthorized.</description></item>
+            /// <item><description><b>uninstalling</b>: Uninstalling.</description></item>
+            /// <item><description><b>uninstalled</b>: Uninstalled successfully.</description></item>
+            /// <item><description><b>uninstall_failed</b>: Uninstallation failed.</description></item>
+            /// <item><description><b>not_exist</b>: Not installed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset on which the host probe is deployed.</para>
+            /// <para>The UUID of the asset instance where the host probe is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC in which the probe is deployed.</para>
+            /// <para>The ID of the VPC-connected instance where the VPC probe is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2vchkxmf2j9yjt3x2****</para>
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned by the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6550E0E6-FD6C-5F39-AB5E-35B30DCA97B5</para>
@@ -515,10 +515,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The API call is successful.</description></item>
+        /// <item><description><b>false</b>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -19,10 +19,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The alert notification level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: no alert</description></item>
-            /// <item><description>1: reminder</description></item>
-            /// <item><description>2: suspicious</description></item>
-            /// <item><description>3: high-risk.</description></item>
+            /// <item><description><para>0: No alert.</para>
+            /// </description></item>
+            /// <item><description><para>1: Reminder.</para>
+            /// </description></item>
+            /// <item><description><para>2: Suspicious.</para>
+            /// </description></item>
+            /// <item><description><para>3: High-risk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The file path.</para>
+            /// <para>The path of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/local</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The process permissions.</para>
+            /// <para>The permissions of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rwxr-xr-x</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was handled.</para>
+            /// <para>The time when the event was handled. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? HandleTime { get; set; }
 
             /// <summary>
-            /// <para>The event ID.</para>
+            /// <para>The ID of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3454</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz92q7m5hsbgfhdss***</para>
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The time when the event most recently occurred.</para>
+            /// <para>The time when the event last occurred. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -153,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The operating system type.</para>
+            /// <para>The type of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The process path.</para>
+            /// <para>The path of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/bin/bash33</para>
@@ -193,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The action of the blocking rule.</para>
+            /// <para>The action of the interception rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>block</para>
@@ -203,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-000</para>
@@ -213,11 +217,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The event status. Valid values:</para>
+            /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled </description></item>
-            /// <item><description>1: handled</description></item>
-            /// <item><description>2: whitelisted.</description></item>
+            /// <item><description>0: Unhandled. </description></item>
+            /// <item><description>1: Handled.</description></item>
+            /// <item><description>2: Whitelisted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

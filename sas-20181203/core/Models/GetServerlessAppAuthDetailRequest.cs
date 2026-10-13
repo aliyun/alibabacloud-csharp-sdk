@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetServerlessAppAuthDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The SAE application ID. You can call <a href="~~ListMachineApps~~">ListMachineApps</a> to obtain the ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with the error code missingParams.</para>
+        /// <para>The ID of the Serverless App Engine (SAE) application. You can obtain the ID by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation. This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code missingParams.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3de9f2ac-f***769226df</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the application.</para>
+        /// <para>The region ID of the application. This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code missingParams.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

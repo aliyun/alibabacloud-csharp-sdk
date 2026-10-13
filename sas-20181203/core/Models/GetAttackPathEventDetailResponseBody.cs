@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the cloud service asset instance.</para>
+                /// <para>The ID of the region where the cloud service asset instance resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive asset flag. Valid values:</para>
+                /// <para>Specifies whether the asset is a sensitive asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Not a sensitive asset.</description></item>
-                /// <item><description><b>1</b>: A sensitive asset.</description></item>
+                /// <item><description><b>0</b>: The asset is not sensitive.</description></item>
+                /// <item><description><b>1</b>: The asset is sensitive.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetAttackPathEventDetailResponseBodyAttackPathEventPathEventEdgeList> PathEventEdgeList { get; set; }
             public class GetAttackPathEventDetailResponseBodyAttackPathEventPathEventEdgeList : TeaModel {
                 /// <summary>
-                /// <para>The edge ID.</para>
+                /// <para>The ID of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? EdgeId { get; set; }
 
                 /// <summary>
-                /// <para>The edge type.</para>
+                /// <para>The type of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>role_trust_user</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList> PathEventNodeList { get; set; }
             public class GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList : TeaModel {
                 /// <summary>
-                /// <para>The AI asset flag. Valid values:</para>
+                /// <para>Indicates whether the asset is an AI asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Not an AI asset.</description></item>
-                /// <item><description><b>1</b>: An AI asset.</description></item>
+                /// <item><description><b>0</b>: The asset is not an AI asset.</description></item>
+                /// <item><description><b>1</b>: The asset is an AI asset.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ElementType { get; set; }
 
                 /// <summary>
-                /// <para>The node details.</para>
+                /// <para>The details of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;assetId&quot;:0}</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeDetail { get; set; }
 
                 /// <summary>
-                /// <para>The node name.</para>
+                /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hypermatch_uploader</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The node type.</para>
+                /// <para>The type of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The node UUID.</para>
+                /// <para>The UUID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>52d59cca9d1768bab5fe081317637990</para>
@@ -270,10 +270,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeUuid { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive asset flag. Valid values:</para>
+                /// <para>Specifies whether the asset is a sensitive asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Not a sensitive asset.</description></item>
-                /// <item><description><b>1</b>: A sensitive asset.</description></item>
+                /// <item><description><b>0</b>: The asset is not sensitive.</description></item>
+                /// <item><description><b>1</b>: The asset is sensitive.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,16 +285,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>The generation status of the attack path interpretation result.</para>
+            /// </summary>
             [NameInMap("PathInterpretationStatus")]
             [Validation(Required=false)]
             public string PathInterpretationStatus { get; set; }
 
+            /// <summary>
+            /// <para>The URL of the attack path interpretation result.</para>
+            /// </summary>
             [NameInMap("PathInterpretationUrl")]
             [Validation(Required=false)]
             public string PathInterpretationUrl { get; set; }
 
             /// <summary>
-            /// <para>The path name.</para>
+            /// <para>The name of the path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs_get_credential_by_create_login_profile</para>
@@ -314,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathNameDesc { get; set; }
 
             /// <summary>
-            /// <para>The path type.</para>
+            /// <para>The type of the path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role_escalation</para>
@@ -381,7 +387,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -391,7 +397,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the cloud service asset instance.</para>
+                /// <para>The ID of the region where the cloud service asset instance resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -401,10 +407,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive asset flag. Valid values:</para>
+                /// <para>Specifies whether the asset is a sensitive asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Not a sensitive asset.</description></item>
-                /// <item><description><b>1</b>: A sensitive asset.</description></item>
+                /// <item><description><b>0</b>: The asset is not sensitive.</description></item>
+                /// <item><description><b>1</b>: The asset is sensitive.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -429,7 +435,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. This is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7BC55C8F-226E-5AF5-9A2C-2EC43864****</para>

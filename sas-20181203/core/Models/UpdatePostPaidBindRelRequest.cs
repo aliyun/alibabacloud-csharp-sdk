@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePostPaidBindRelRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically bind newly added assets. Valid values:</para>
+        /// <para>Specifies whether to enable automatic binding for newly added assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The edition to automatically bind when new assets are added. Valid values:</para>
+        /// <para>The edition to automatically bind to newly added assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>5</b>: Advanced Edition</description></item>
+        /// <item><description><b>5</b>: Premium Edition</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
         /// <item><description><b>7</b>: Ultimate Edition</description></item>
         /// </list>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? BindAll { get; set; }
 
             /// <summary>
-            /// <para>The free quota type.</para>
+            /// <para>The type of free quota used for the binding operation.</para>
             /// </summary>
             [NameInMap("FreeType")]
             [Validation(Required=false)]
             public string FreeType { get; set; }
 
             /// <summary>
-            /// <para>The list of UUIDs of the specified servers.</para>
+            /// <para>The UUIDs of the specified servers.</para>
             /// </summary>
             [NameInMap("UuidList")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition </description></item>
             /// <item><description><b>3</b>: Enterprise Edition</description></item>
-            /// <item><description><b>5</b>: Advanced Edition</description></item>
+            /// <item><description><b>5</b>: Premium Edition</description></item>
             /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
             /// <item><description><b>7</b>: Ultimate Edition</description></item>
             /// </list>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -105,24 +105,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</para>
+        /// <para>Specifies whether to perform a dry run for the request. A value of true indicates that only a dry run is performed and no actual operation is executed. A value of false indicates that the request is normally executed. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The abbreviated name of the cloud service. Valid values:</para>
+        /// <para>The abbreviation of the cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sas</b>: Security Center.</description></item>
+        /// <item><description><b>sas</b>: Security Center</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sas</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to force an edition upgrade.</para>
+        /// <para>Specifies whether to forcibly upgrade the edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

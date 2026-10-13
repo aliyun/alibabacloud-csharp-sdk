@@ -23,7 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The container ID.</para>
+        /// <para>The container IDs.</para>
+        /// <para>This parameter is required. A scan task cannot be created if no container ID is provided.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c927cf190e886696db53cda0efb57145394ccf0bf9f525353fa5c22a26e4****</para>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerIds { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

@@ -2529,8 +2529,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a self-managed image repository.</para>
+        /// <para>Connects to a self-managed image registry.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPrivateRegistryRequest
@@ -2619,8 +2624,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a self-managed image repository.</para>
+        /// <para>Connects to a self-managed image registry.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPrivateRegistryRequest
@@ -2709,8 +2719,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a self-managed image repository.</para>
+        /// <para>Connects to a self-managed image registry.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPrivateRegistryRequest
@@ -2727,8 +2742,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a self-managed image repository.</para>
+        /// <para>Connects to a self-managed image registry.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddPrivateRegistryRequest
@@ -9497,6 +9517,230 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates deep analysis for a malicious file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+        /// [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+        /// [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</para>
+        /// <list type="bullet">
+        /// <item><description>accepted: The request is accepted.</description></item>
+        /// <item><description>authorized: The purchase verification for the source is passed.</description></item>
+        /// <item><description>alertResolved: The file hash is parsed from the alert or input parameters.</description></item>
+        /// <item><description>fileReady: The file download link is ready.</description></item>
+        /// <item><description>dispatched: The file is delivered to the detection engine, including the requestId.</description></item>
+        /// <item><description>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</description></item>
+        /// <item><description>done: The current analysis process is completed.</description></item>
+        /// <item><description>error: A processing exception occurs, including the error code and message.
+        /// The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileDeepAnalyzeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileDeepAnalyzeResponse
+        /// </returns>
+        public CreateFileDeepAnalyzeResponse CreateFileDeepAnalyzeWithOptions(CreateFileDeepAnalyzeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                query["Context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hash))
+            {
+                query["Hash"] = request.Hash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDeepAnalyze",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDeepAnalyzeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates deep analysis for a malicious file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+        /// [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+        /// [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</para>
+        /// <list type="bullet">
+        /// <item><description>accepted: The request is accepted.</description></item>
+        /// <item><description>authorized: The purchase verification for the source is passed.</description></item>
+        /// <item><description>alertResolved: The file hash is parsed from the alert or input parameters.</description></item>
+        /// <item><description>fileReady: The file download link is ready.</description></item>
+        /// <item><description>dispatched: The file is delivered to the detection engine, including the requestId.</description></item>
+        /// <item><description>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</description></item>
+        /// <item><description>done: The current analysis process is completed.</description></item>
+        /// <item><description>error: A processing exception occurs, including the error code and message.
+        /// The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileDeepAnalyzeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileDeepAnalyzeResponse
+        /// </returns>
+        public async Task<CreateFileDeepAnalyzeResponse> CreateFileDeepAnalyzeWithOptionsAsync(CreateFileDeepAnalyzeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                query["Context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hash))
+            {
+                query["Hash"] = request.Hash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDeepAnalyze",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDeepAnalyzeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates deep analysis for a malicious file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+        /// [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+        /// [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</para>
+        /// <list type="bullet">
+        /// <item><description>accepted: The request is accepted.</description></item>
+        /// <item><description>authorized: The purchase verification for the source is passed.</description></item>
+        /// <item><description>alertResolved: The file hash is parsed from the alert or input parameters.</description></item>
+        /// <item><description>fileReady: The file download link is ready.</description></item>
+        /// <item><description>dispatched: The file is delivered to the detection engine, including the requestId.</description></item>
+        /// <item><description>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</description></item>
+        /// <item><description>done: The current analysis process is completed.</description></item>
+        /// <item><description>error: A processing exception occurs, including the error code and message.
+        /// The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileDeepAnalyzeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileDeepAnalyzeResponse
+        /// </returns>
+        public CreateFileDeepAnalyzeResponse CreateFileDeepAnalyze(CreateFileDeepAnalyzeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFileDeepAnalyzeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates deep analysis for a malicious file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+        /// [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+        /// [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</para>
+        /// <list type="bullet">
+        /// <item><description>accepted: The request is accepted.</description></item>
+        /// <item><description>authorized: The purchase verification for the source is passed.</description></item>
+        /// <item><description>alertResolved: The file hash is parsed from the alert or input parameters.</description></item>
+        /// <item><description>fileReady: The file download link is ready.</description></item>
+        /// <item><description>dispatched: The file is delivered to the detection engine, including the requestId.</description></item>
+        /// <item><description>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</description></item>
+        /// <item><description>done: The current analysis process is completed.</description></item>
+        /// <item><description>error: A processing exception occurs, including the error code and message.
+        /// The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileDeepAnalyzeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileDeepAnalyzeResponse
+        /// </returns>
+        public async Task<CreateFileDeepAnalyzeResponse> CreateFileDeepAnalyzeAsync(CreateFileDeepAnalyzeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFileDeepAnalyzeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Pushes a file to the cloud for detection.</para>
         /// </summary>
         /// 
@@ -15089,12 +15333,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in the task center.</para>
+        /// <para>Creates a task under My Policies in Task Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</para>
+        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15152,12 +15396,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in the task center.</para>
+        /// <para>Creates a task under My Policies in Task Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</para>
+        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15215,12 +15459,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in the task center.</para>
+        /// <para>Creates a task under My Policies in Task Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</para>
+        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15238,12 +15482,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task under My Policies in the task center.</para>
+        /// <para>Creates a task under My Policies in Task Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</para>
+        /// <para>Only the Enterprise and Ultimate editions of Security Center support this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31185,12 +31429,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
+        /// <para>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
+        /// <para>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31280,12 +31524,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
+        /// <para>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
+        /// <para>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31375,12 +31619,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
+        /// <para>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
+        /// <para>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31398,12 +31642,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</para>
+        /// <para>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</para>
+        /// <para>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32693,7 +32937,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
+        /// <para>Queries the status information of Kubernetes cluster scanners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32743,7 +32987,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
+        /// <para>Queries the status information of Kubernetes cluster scanners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32793,7 +33037,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
+        /// <para>Queries the status information of Kubernetes cluster scanners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32811,7 +33055,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanner status information of a Kubernetes cluster.</para>
+        /// <para>Queries the status information of Kubernetes cluster scanners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60889,7 +61133,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an export task of exceptions.</para>
+        /// <para>Queries the export information of security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60931,7 +61175,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an export task of exceptions.</para>
+        /// <para>Queries the export information of security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60973,7 +61217,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an export task of exceptions.</para>
+        /// <para>Queries the export information of security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60991,7 +61235,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an export task of exceptions.</para>
+        /// <para>Queries the export information of security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61009,7 +61253,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quarantined files in the file quarantine box by paging.</para>
+        /// <para>Performs a paged query of quarantined files in the file quarantine box by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61079,7 +61323,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quarantined files in the file quarantine box by paging.</para>
+        /// <para>Performs a paged query of quarantined files in the file quarantine box by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61149,7 +61393,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quarantined files in the file quarantine box by paging.</para>
+        /// <para>Performs a paged query of quarantined files in the file quarantine box by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61167,7 +61411,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quarantined files in the file quarantine box by paging.</para>
+        /// <para>Performs a paged query of quarantined files in the file quarantine box by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61321,7 +61565,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of security alert events that have not been aggregated.</para>
+        /// <para>Queries a list of unaggregated security alert events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -61515,7 +61759,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of security alert events that have not been aggregated.</para>
+        /// <para>Queries a list of unaggregated security alert events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -61709,7 +61953,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of security alert events that have not been aggregated.</para>
+        /// <para>Queries a list of unaggregated security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61727,7 +61971,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of security alert events that have not been aggregated.</para>
+        /// <para>Queries a list of unaggregated security alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80849,7 +81093,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a file protection event.</para>
+        /// <para>Retrieves file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80887,7 +81131,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a file protection event.</para>
+        /// <para>Retrieves file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80925,7 +81169,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a file protection event.</para>
+        /// <para>Retrieves file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80943,7 +81187,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a file protection event.</para>
+        /// <para>Retrieves file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82561,7 +82805,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</para>
+        /// <para>Queries the monitoring data of cloud honeypot management nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82631,7 +82875,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</para>
+        /// <para>Queries the monitoring data of cloud honeypot management nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82701,7 +82945,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</para>
+        /// <para>Queries the monitoring data of cloud honeypot management nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82719,7 +82963,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</para>
+        /// <para>Queries the monitoring data of cloud honeypot management nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82865,8 +83109,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified probe.</para>
+        /// <para>Queries the details of a specified honeypot probe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoneypotProbeRequest
@@ -82911,8 +83160,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified probe.</para>
+        /// <para>Queries the details of a specified honeypot probe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoneypotProbeRequest
@@ -82957,8 +83211,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified probe.</para>
+        /// <para>Queries the details of a specified honeypot probe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoneypotProbeRequest
@@ -82975,8 +83234,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified probe.</para>
+        /// <para>Queries the details of a specified honeypot probe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoneypotProbeRequest
@@ -83617,7 +83881,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the valid value ranges for instance authorization.</para>
+        /// <para>Retrieves the valid value ranges for instance authorizations.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -83647,7 +83911,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the valid value ranges for instance authorization.</para>
+        /// <para>Retrieves the valid value ranges for instance authorizations.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -83677,7 +83941,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the valid value ranges for instance authorization.</para>
+        /// <para>Retrieves the valid value ranges for instance authorizations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -83691,7 +83955,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the valid value ranges for instance authorization.</para>
+        /// <para>Retrieves the valid value ranges for instance authorizations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -92249,12 +92513,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries agentless detection assets.</para>
+        /// <para>Queries agentless scan assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of assets for agentless detection.</para>
+        /// <para>Queries the list of assets for agentless scanning.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -92328,12 +92592,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries agentless detection assets.</para>
+        /// <para>Queries agentless scan assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of assets for agentless detection.</para>
+        /// <para>Queries the list of assets for agentless scanning.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -92407,12 +92671,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries agentless detection assets.</para>
+        /// <para>Queries agentless scan assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of assets for agentless detection.</para>
+        /// <para>Queries the list of assets for agentless scanning.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -92430,12 +92694,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries agentless detection assets.</para>
+        /// <para>Queries agentless scan assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of assets for agentless detection.</para>
+        /// <para>Queries the list of assets for agentless scanning.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -97397,7 +97661,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the asset list of cloud products.</para>
+        /// <para>Retrieves the list of cloud product assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97471,7 +97735,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the asset list of cloud products.</para>
+        /// <para>Retrieves the list of cloud product assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97545,7 +97809,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the asset list of cloud products.</para>
+        /// <para>Retrieves the list of cloud product assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -97563,7 +97827,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the asset list of cloud products.</para>
+        /// <para>Retrieves the list of cloud product assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117329,7 +117593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables pay-as-you-go billing for a specified feature.</para>
+        /// <para>Enables or disables the pay-as-you-go billing method for specified features.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -117409,7 +117673,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables pay-as-you-go billing for a specified feature.</para>
+        /// <para>Enables or disables the pay-as-you-go billing method for specified features.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -117489,7 +117753,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables pay-as-you-go billing for a specified feature.</para>
+        /// <para>Enables or disables the pay-as-you-go billing method for specified features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117507,7 +117771,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables pay-as-you-go billing for a specified feature.</para>
+        /// <para>Enables or disables the pay-as-you-go billing method for specified features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -118729,7 +118993,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages Serverless asset authorization.</para>
+        /// <para>Manages Serverless asset authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -118835,7 +119099,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages Serverless asset authorization.</para>
+        /// <para>Manages Serverless asset authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -118941,7 +119205,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages Serverless asset authorization.</para>
+        /// <para>Manages Serverless asset authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -118959,7 +119223,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages Serverless asset authorization.</para>
+        /// <para>Manages Serverless asset authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -134469,7 +134733,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of a file protection event.</para>
+        /// <para>Updates the status of file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -134579,7 +134843,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of a file protection event.</para>
+        /// <para>Updates the status of file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -134689,7 +134953,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of a file protection event.</para>
+        /// <para>Updates the status of file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -134707,7 +134971,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of a file protection event.</para>
+        /// <para>Updates the status of file tamper-proofing events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138129,7 +138393,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138195,7 +138459,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138261,7 +138525,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138279,7 +138543,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</para>
+        /// <para>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</para>
         /// </summary>
         /// 
         /// <param name="request">

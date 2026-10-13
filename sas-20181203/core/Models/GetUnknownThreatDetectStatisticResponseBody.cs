@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public class GetUnknownThreatDetectStatisticResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of servers that have blocking events.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("BlockEventMachineCount")]
             [Validation(Required=false)]

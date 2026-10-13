@@ -104,18 +104,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;Count&quot;:0,&quot;Used&quot;:0,&quot;Assigned&quot;:0}</para>
+            /// </summary>
             [NameInMap("CspmInstanceCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity CspmInstanceCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Assigned")]
                 [Validation(Required=false)]
                 public long? Assigned { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Used")]
                 [Validation(Required=false)]
                 public long? Used { get; set; }
@@ -737,14 +753,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;Count&quot;:0,&quot;Used&quot;:0}</para>
+            /// </summary>
             [NameInMap("CspmInstanceCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity CspmInstanceCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Used")]
                 [Validation(Required=false)]
                 public long? Used { get; set; }

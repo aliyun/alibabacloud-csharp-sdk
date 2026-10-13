@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSoarStrategyTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The policy name. Set the value to: Automated Batch Vulnerability Fix Policy.</para>
+        /// <para>The Policy Name. Set the value to Automated Batch Vulnerability Fix Policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>漏洞自动化批量修复策略</para>
+        /// <para>Automated Batch Vulnerability Fix Policy</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
@@ -46,25 +46,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTaskName { get; set; }
 
         /// <summary>
-        /// <para>The parameter information of the policy. The value is a string in JSONArray format. The following items are included:</para>
-        /// <para>Vulnerability configuration item. Valid values:</para>
+        /// <para>The parameter settings of the policy. The value is a character string in JSON array format. Details:</para>
+        /// <para>Vulnerability configuration item. Values:</para>
         /// <list type="bullet">
         /// <item><description>name: vluList</description></item>
         /// <item><description>associationProperty: sasAllVul</description></item>
-        /// <item><description>value: the basic information of the vulnerability.</description></item>
+        /// <item><description>value: the basic information about the vulnerability</description></item>
         /// </list>
-        /// <para>Snapshot configuration item. Valid values:</para>
+        /// <para>Snapshot configuration item. Values:</para>
         /// <list type="bullet">
         /// <item><description>name: snapshotConfig</description></item>
         /// <item><description>associationProperty: snapshotConfig</description></item>
-        /// <item><description>value: the storage time information.</description></item>
+        /// <item><description>value: the storage duration information</description></item>
         /// </list>
-        /// <para>Notification configuration. Valid values:</para>
+        /// <para>Notification configuration:</para>
         /// <list type="bullet">
         /// <item><description>name: notifyConfig</description></item>
         /// <item><description>associationProperty: notifyConfig</description></item>
-        /// <item><description>value: the configuration information of email or DingTalk notifications.</description></item>
+        /// <item><description>value: the configuration information about email or DingTalk</description></item>
         /// </list>
+        /// <para>The vulList child configuration item is required, and the JSON array must contain an entry whose name is vulList. The snapshotConfig and notifyConfig child configuration items are optional.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTaskParams { get; set; }
 
         /// <summary>
-        /// <para>The planned execution timestamp of the policy task. Unit: milliseconds.</para>
+        /// <para>The scheduled execution timestamp of the policy task. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1586739841000</para>

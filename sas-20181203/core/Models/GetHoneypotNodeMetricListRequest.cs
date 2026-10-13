@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotNodeMetricListRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Valid values:</para>
+        /// <para>The end time. Supported formats:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC</description></item>
-        /// <item><description>Date format: YYYY-MM-DDThh:mm:ssZ</description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Formatted time: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The expression that is used to compute the query results in real time.</para>
+        /// <para>The expression used to perform real-time calculations on the query results.</para>
         /// <remarks>
-        /// <para> Only the groupby expression is supported. This expression is similar to the GROUP BY statement that applies to databases.</para>
+        /// <para>Currently, only groupby (similar to the GROUP BY clause in databases) is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Express { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to return on each page for paging in a paged query.</para>
         /// <remarks>
-        /// <para> The maximum value of the Length parameter in a request is 1440.</para>
+        /// <para>The maximum value of Length for a single request is 1440.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The metric that is used to monitor the cloud service.</para>
+        /// <para>The name of the monitoring metric for the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu_total</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cloud service. Format: acs_cloud service name.</para>
+        /// <para>The data namespace of the cloud service. Naming convention: acs_ServiceName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -70,7 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The management node ID.</para>
+        /// <para>The ID of the management node.</para>
+        /// <para>This parameter is required. If you do not specify this parameter, the API returns an IllegalParam error (HTTP 400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc427e14-f257-4670-9d2b-d83bbbe7****</para>
@@ -90,11 +91,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The following formats are supported:</para>
+        /// <para>The start time. Supported formats:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC</description></item>
-        /// <item><description>Date format: YYYY-MM-DDThh:mm:ssZ</description></item>
-        /// <item><description>The interval between the start time and the end time is less than or equal to 31 days.</description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Formatted time: YYYY-MM-DDThh:mm:ssZ.</description></item>
+        /// <item><description>The interval between StartTime and EndTime must be less than or equal to 31 days.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -16,10 +16,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectEventResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectEventResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>检测结果为正常进程</para>
+            /// </summary>
             [NameInMap("AnalyzeDesc")]
             [Validation(Required=false)]
             public string AnalyzeDesc { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>white</para>
+            /// </summary>
             [NameInMap("AnalyzeResult")]
             [Validation(Required=false)]
             public string AnalyzeResult { get; set; }
@@ -64,6 +72,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>确认处理</para>
+            /// </summary>
             [NameInMap("HandleRemark")]
             [Validation(Required=false)]
             public string HandleRemark { get; set; }

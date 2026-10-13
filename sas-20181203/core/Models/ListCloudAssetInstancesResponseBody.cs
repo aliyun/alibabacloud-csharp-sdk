@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of detailed information about cloud assets.</para>
+        /// <para>The list of cloud asset details.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the cloud asset has security alerts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: The asset has security alerts.</description></item>
-            /// <item><description><b>NO</b>: The asset has no security alerts.</description></item>
+            /// <item><description><b>YES</b>: The cloud asset has security alerts.</description></item>
+            /// <item><description><b>NO</b>: The cloud asset does not have security alerts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,19 +31,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmStatus { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the cloud product. The asset type-subtype mapping. Valid values:</para>
+            /// <para>The subtype of the cloud product, which corresponds to the asset type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: ECS</para>
+            /// <item><description><para><b>0</b>: ECS server </para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: instance</description></item>
             /// <item><description><b>1</b>: cloud disk (storage)</description></item>
             /// <item><description><b>2</b>: security group</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>1</b>: load balancing</para>
+            /// <item><description><para><b>1</b>: Server Load Balancer (SLB)</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Classic Load Balancer</description></item>
-            /// <item><description><b>1</b>: Application Load Balancer</description></item>
+            /// <item><description><b>0</b>: Server Load Balancer (SLB)</description></item>
+            /// <item><description><b>1</b>: Application Load Balancer (ALB)</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>3</b>: ApsaraDB RDS</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>0</b>: instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>5</b>: Tair (Redis® OSS-Compatible)</para>
+            /// <item><description><para><b>5</b>: ApsaraDB for Tair (Redis-compatible)</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: instance</description></item>
             /// </list>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>2</b>: Personal Edition</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>8</b>: Container Service for Kubernetes</para>
+            /// <item><description><para><b>8</b>: Container Service for Kubernetes (ACK)</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: cluster</description></item>
             /// </list>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>0</b>: NAT gateway</description></item>
             /// <item><description><b>1</b>: EIP</description></item>
             /// <item><description><b>2</b>: VPN</description></item>
-            /// <item><description><b>3</b>: FLOW_LOG</description></item>
+            /// <item><description><b>3</b>: flow log</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>11</b>: ActionTrail</para>
@@ -105,22 +105,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>0</b>: instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>17</b>: Web Application Firewall</para>
+            /// <item><description><para><b>17</b>: Web Application Firewall (WAF)</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: domain name</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>18</b>: Object Storage Service</para>
+            /// <item><description><para><b>18</b>: OSS</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: bucket</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>19</b>: cloud-native relational database PolarDB</para>
+            /// <item><description><para><b>19</b>: PolarDB</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: cluster</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>20</b>: ApsaraDB RDS for PostgreSQL</para>
+            /// <item><description><para><b>20</b>: ApsaraDB for PostgreSQL</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: instance</description></item>
             /// </list>
@@ -135,14 +135,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>0</b>: file system</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>23</b>: Data Security Center</para>
+            /// <item><description><para><b>23</b>: Data Security Center (DSC)</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>24</b>: Elastic IP Address</para>
+            /// <item><description><para><b>24</b>: EIP</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: anycast elastic IP address</description></item>
+            /// <item><description><b>0</b>: Anycast EIP</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>25</b>: EIAM</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>The subtype name of the cloud asset.</para>
+            /// <para>The name of the cloud asset subtype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECURITY_GROUP</para>
@@ -182,28 +182,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Elastic Compute Service (ECS)</description></item>
-            /// <item><description><b>1</b>: load balancing</description></item>
+            /// <item><description><b>0</b>: ECS server</description></item>
+            /// <item><description><b>1</b>: Server Load Balancer (SLB)</description></item>
             /// <item><description><b>3</b>: ApsaraDB RDS</description></item>
             /// <item><description><b>4</b>: ApsaraDB for MongoDB</description></item>
-            /// <item><description><b>5</b>: Tair (Redis® OSS-Compatible)</description></item>
+            /// <item><description><b>5</b>: ApsaraDB for Tair (Redis-compatible)</description></item>
             /// <item><description><b>6</b>: Container Registry</description></item>
-            /// <item><description><b>8</b>: Container Service for Kubernetes</description></item>
+            /// <item><description><b>8</b>: Container Service for Kubernetes (ACK)</description></item>
             /// <item><description><b>9</b>: Virtual Private Cloud (VPC)</description></item>
             /// <item><description><b>11</b>: ActionTrail</description></item>
-            /// <item><description><b>12</b>: CDN</description></item>
-            /// <item><description><b>13</b>: SSL Certificates Service (formerly Digital Certificate Management Service)</description></item>
+            /// <item><description><b>12</b>: Content Delivery Network (CDN)</description></item>
+            /// <item><description><b>13</b>: SSL Certificates Service</description></item>
             /// <item><description><b>14</b>: Yunxiao</description></item>
             /// <item><description><b>16</b>: Anti-DDoS</description></item>
-            /// <item><description><b>17</b>: Web Application Firewall</description></item>
-            /// <item><description><b>18</b>: Object Storage Service</description></item>
-            /// <item><description><b>19</b>: cloud-native relational database PolarDB</description></item>
-            /// <item><description><b>20</b>: ApsaraDB RDS for PostgreSQL</description></item>
+            /// <item><description><b>17</b>: Web Application Firewall (WAF)</description></item>
+            /// <item><description><b>18</b>: Object Storage Service (OSS)</description></item>
+            /// <item><description><b>19</b>: PolarDB</description></item>
+            /// <item><description><b>20</b>: ApsaraDB for PostgreSQL</description></item>
             /// <item><description><b>21</b>: Microservices Engine (MSE)</description></item>
             /// <item><description><b>22</b>: Apsara File Storage NAS</description></item>
-            /// <item><description><b>23</b>: Data Security Center</description></item>
-            /// <item><description><b>24</b>: Elastic IP Address</description></item>
-            /// <item><description><b>25</b>: EIAM</description></item>
+            /// <item><description><b>23</b>: Data Security Center (DSC)</description></item>
+            /// <item><description><b>24</b>: Elastic IP Address (EIP)</description></item>
+            /// <item><description><b>25</b>: Elastic Identity and Access Management (EIAM)</description></item>
             /// <item><description><b>26</b>: PolarDB-X</description></item>
             /// <item><description><b>27</b>: Elasticsearch</description></item>
             /// </list>
@@ -227,6 +227,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The UUID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>
             [NameInMap("AssetUuid")]
             [Validation(Required=false)]
@@ -285,8 +288,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the cloud asset has security risks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: The asset has security risks.</description></item>
-            /// <item><description><b>NO</b>: The asset has no security risks.</description></item>
+            /// <item><description><b>YES</b>: The cloud asset has security risks.</description></item>
+            /// <item><description><b>NO</b>: The cloud asset does not have security risks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -297,7 +300,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Security Posture Management (CSPM) sale identifier.</para>
+            /// <para>The CSPM sales identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -307,7 +310,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SaleCspm { get; set; }
 
             /// <summary>
-            /// <para>The sale type.</para>
+            /// <para>The sales type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -337,9 +340,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-            /// <item><description><b>1</b>: off-cloud asset</description></item>
+            /// <item><description><b>1</b>: non-Alibaba Cloud asset</description></item>
             /// <item><description><b>2</b>: IDC asset</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: other cloud assets</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset</description></item>
             /// <item><description><b>8</b>: lightweight asset</description></item>
             /// </list>
             /// 
@@ -380,7 +383,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListCloudAssetInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class ListCloudAssetInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of data entries displayed on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -390,7 +393,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The current page number in a paged query.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -400,7 +403,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -422,7 +425,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID. This is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot and locate issues.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>028CF634-5268-5660-9575-48C9ED6BF880</para>
@@ -432,10 +435,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

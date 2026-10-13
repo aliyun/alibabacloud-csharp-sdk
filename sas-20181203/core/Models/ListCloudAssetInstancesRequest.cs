@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The data list to query by keyword.</para>
+        /// <para>The data list queried based on keywords.</para>
         /// </summary>
         [NameInMap("CloudAssetQueryData")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The query operator. Only INCLUDE is supported.</para>
+            /// <para>The query operator. Currently, only INCLUDE is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INCLUDE</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The asset list of cloud asset instances.</para>
+        /// <para>The list of cloud assets.</para>
         /// </summary>
         [NameInMap("CloudAssetTypes")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The subtype of the cloud product.</para>
             /// <remarks>
-            /// <para>For more information, see the AssetSubType field in <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a>.</para>
+            /// <para>For more information, refer to the AssetSubType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the cloud asset.</para>
             /// <remarks>
-            /// <para>For more information, see the AssetType field in <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a>.</para>
+            /// <para>For more information, refer to the AssetType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,12 +72,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>The server vendor. Valid values:</para>
+            /// <para>The asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-            /// <item><description><b>1</b>: off-cloud asset</description></item>
+            /// <item><description><b>1</b>: non-Alibaba Cloud asset</description></item>
             /// <item><description><b>2</b>: IDC asset</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: other cloud assets</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset</description></item>
             /// <item><description><b>8</b>: lightweight asset</description></item>
             /// </list>
             /// 
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The search criteria for assets. This parameter is in JSON format and contains the following fields:</para>
+        /// <para>Specifies the conditions for searching assets. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: The search field.</description></item>
-        /// <item><description><b>value</b>: The value of the search field.</description></item>
-        /// <item><description><b>logicalExp</b>: The logical relationship between multiple search field values. Valid values:<list type="bullet">
-        /// <item><description><b>OR</b>: Multiple search field values are evaluated using an OR relationship.</description></item>
-        /// <item><description><b>AND</b>: Multiple search field values are evaluated using an AND relationship.<remarks>
-        /// <para>You can call <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> to query the supported search criteria.</para>
+        /// <item><description><b>name</b>: the search field.</description></item>
+        /// <item><description><b>value</b>: the value of the search field.</description></item>
+        /// <item><description><b>logicalExp</b>: the logical relationship among multiple search field values. Valid values:<list type="bullet">
+        /// <item><description><b>OR</b>: specifies an <b>OR</b> logical relationship among multiple search field values.</description></item>
+        /// <item><description><b>AND</b>: specifies an <b>AND</b> logical relationship among multiple search field values.<remarks>
+        /// <para>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paged query.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return sale-related data. Valid values:</para>
+        /// <para>Specifies whether to return sales-related data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Returns sale-related data.</description></item>
-        /// <item><description><b>false</b>: Does not return sale-related data.</description></item>
+        /// <item><description><b>true</b>: returns sales-related data.</description></item>
+        /// <item><description><b>false</b>: does not return sales-related data.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("IsSaleData")]
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsSaleData { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship between multiple search criteria. Valid values:</para>
+        /// <para>Specifies the logical relationship among multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: Multiple search criteria are evaluated using an OR relationship.</description></item>
-        /// <item><description><b>AND</b>: Multiple search criteria are evaluated using an AND relationship.</description></item>
+        /// <item><description><b>OR</b>: specifies an <b>OR</b> logical relationship among multiple search conditions.</description></item>
+        /// <item><description><b>AND</b>: specifies an <b>AND</b> logical relationship among multiple search conditions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows per page. Maximum value: 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -168,9 +168,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the main account of the resource folder member accounts.</para>
+        /// <para>The ID of the Alibaba Cloud account for the member account in the resource directory.</para>
         /// <remarks>
-        /// <para>Call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
