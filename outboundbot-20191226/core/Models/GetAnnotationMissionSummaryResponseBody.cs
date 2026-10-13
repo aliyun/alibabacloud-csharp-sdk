@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AnnotationMissionId { get; set; }
 
             /// <summary>
-            /// <para>The statistics of speech annotation.</para>
+            /// <para>The speech annotate statistics information.</para>
             /// </summary>
             [NameInMap("AsrSummaryInfo")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AddCustomizationDataCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of times hotwords were added.</para>
+                /// <para>The number of times hot words were added.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AddVocabularyDataCount { get; set; }
 
                 /// <summary>
-                /// <para>Data is invalid.</para>
+                /// <para>The number of invalid data entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationInvalid { get; set; }
 
                 /// <summary>
-                /// <para>The character accuracy rate. Unit: 0.01%.</para>
+                /// <para>The character accuracy rate, in units of 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? CharacterCorrectRate { get; set; }
 
                 /// <summary>
-                /// <para>The character error rate. Unit: 0.01%.</para>
+                /// <para>The character error rate, in units of 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? ChatTotalCount { get; set; }
 
                 /// <summary>
-                /// <para>Not annotated.</para>
+                /// <para>The number of unannotated entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? NoAnnotation { get; set; }
 
                 /// <summary>
-                /// <para>The sentence error rate. Unit: 0.01%.</para>
+                /// <para>The sentence error rate, in units of 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SentenceErrorRate { get; set; }
 
                 /// <summary>
-                /// <para>The word error rate. Unit: 0.01%. This parameter is typically used for English.</para>
+                /// <para>The word error rate, in units of 0.01%. Generally used for English.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>The statistics of semantic tagging.</para>
+            /// <para>The semantics annotate statistics information.</para>
             /// </summary>
             [NameInMap("IntentSummaryInfo")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationCorrectCount { get; set; }
 
                 /// <summary>
-                /// <para>Invalid data</para>
+                /// <para>The number of invalid data entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? IntentionNotCoveredCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of detection errors.</para>
+                /// <para>The number of recognition errors.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? MatchErrorCount { get; set; }
 
                 /// <summary>
-                /// <para>Not annotated.</para>
+                /// <para>The number of unannotated entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? NoAnnotation { get; set; }
 
                 /// <summary>
-                /// <para>The number of translations that were not recognized.</para>
+                /// <para>The number of unrecognized translation attempts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>The additional information. If the request is successful, success is returned. If the request fails, an error code is returned.</para>
+            /// <para>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are not authorized to perform this action. CDR:View privileges are required.</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call was successful. A value of true indicates a successful call. A value of false indicates a failed call.</para>
+            /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The custom tags and their quantities.</para>
+            /// <para>The custom tags and their counts.</para>
             /// </summary>
             [NameInMap("TagSummaryInfo")]
             [Validation(Required=false)]
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? Count { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the tag.</para>
+                    /// <para>The tag name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>知晓率1_复制</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. If the request is successful, success is returned. If the request fails, an error code is returned.</para>
+        /// <para>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this action. CDR:View privileges are required.</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates a successful call. A value of false indicates a failed call.</para>
+        /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

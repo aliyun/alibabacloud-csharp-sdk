@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public QueryJobsWithResultResponseBodyJobs Jobs { get; set; }
         public class QueryJobsWithResultResponseBodyJobs : TeaModel {
             /// <summary>
-            /// <para>The job list.</para>
+            /// <para>The list of jobs.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -54,25 +54,25 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The reason for job failure.</para>
+                /// <para>The reason for the job failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
-                /// <item><description>Unknown (unknown error)</description></item>
-                /// <item><description>NoAnswer (no answer)</description></item>
-                /// <item><description>InvalidStrategy (invalid strategy, incorrect strategy configuration)</description></item>
-                /// <item><description>TimeUp (timeout detected during scheduling)</description></item>
-                /// <item><description>NoStrategy (strategy is empty or not found)</description></item>
-                /// <item><description>CallFailed (call failed)</description></item>
-                /// <item><description>PerDayCallCountLimit (daily call count limit per number)</description></item>
-                /// <item><description>ContactBlockList (blocked from outbound calls)</description></item>
-                /// <item><description>EmptyNumber (nonexistent number, no further outbound calls)</description></item>
-                /// <item><description>JobPerDayCallCountLimit (daily call count limit per number)</description></item>
-                /// <item><description>VerificationCancelled (pre-call verification failed, call cancelled)</description></item>
-                /// <item><description>ContactSuspended (call suspended)</description></item>
-                /// <item><description>InArrears (overdue payment)</description></item>
-                /// <item><description>OutOfService (out of service)</description></item>
-                /// <item><description>NoneRepeatableJobMaxAttemptCountLimit (maximum attempt count for the task, takes effect when RepeatBy (@see) is None)</description></item>
+                /// <item><description>Unknown (Unknown error)</description></item>
+                /// <item><description>NoAnswer (No answer)</description></item>
+                /// <item><description>InvalidStrategy (Invalid strategy, incorrect strategy configuration)</description></item>
+                /// <item><description>TimeUp (Timeout during scheduling)</description></item>
+                /// <item><description>NoStrategy (Strategy is empty or not found)</description></item>
+                /// <item><description>CallFailed (Call failed)</description></item>
+                /// <item><description>PerDayCallCountLimit (Daily call count limit for the phone number)</description></item>
+                /// <item><description>ContactBlockList (Outbound call blocklist)</description></item>
+                /// <item><description>EmptyNumber (Nonexistent number, no outbound calls)</description></item>
+                /// <item><description>JobPerDayCallCountLimit (Daily call count limit for the phone number)</description></item>
+                /// <item><description>VerificationCancelled (Canceled due to pre-call verification failure)</description></item>
+                /// <item><description>ContactSuspended (Call suspended)</description></item>
+                /// <item><description>InArrears (Overdue payment)</description></item>
+                /// <item><description>OutOfService (Service suspended)</description></item>
+                /// <item><description>NoneRepeatableJobMaxAttemptCountLimit (Maximum attempt count for the job, effective when RepeatBy is None)</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("JobFailureReason")]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string CallDurationDisplay { get; set; }
 
                     /// <summary>
-                    /// <para>The call time.</para>
+                    /// <para>The call time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1615363297000</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public QueryJobsWithResultResponseBodyJobsListLatestTaskContact Contact { get; set; }
                     public class QueryJobsWithResultResponseBodyJobsListLatestTaskContact : TeaModel {
                         /// <summary>
-                        /// <para>The honorific for the contact. If not specified, the value defaults to the same as the name.</para>
+                        /// <para>The honorific of the contact. If this field is not specified, the default value is the same as the name. This is a custom field passed in JSON format when you call the API operation to execute the outbound call task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Mr. Zhang</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Honorific { get; set; }
 
                         /// <summary>
-                        /// <para>The contact ID, which is a unique identifier generated by the system when the outbound call list is uploaded.</para>
+                        /// <para>The contact ID. A unique identifier generated by the system when the outbound call list is uploaded.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>63860deb-6218-45df-b1e0-76f2b166e790</para>
@@ -154,10 +154,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string JobUuid { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the contact, such as John Smith.</para>
+                        /// <para>The name of the contact, such as Zhang San.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>John Smith</para>
+                        /// <para>Zhang San</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -174,10 +174,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string PhoneNumber { get; set; }
 
                         /// <summary>
-                        /// <para>The phone number specified by the callee for communication. If this number is provided, the system calls this number.</para>
-                        /// <remarks>
-                        /// <para>This is a custom value passed in JSON format when calling the API operation to execute an outbound task.</para>
-                        /// </remarks>
+                        /// <para>The phone number specified by the callee during the conversation. If this field is specified, the system calls this number. This is a custom field passed in JSON format when you call the API operation to execute the outbound call task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>134123****</para>
@@ -187,7 +184,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string PreferredPhoneNumber { get; set; }
 
                         /// <summary>
-                        /// <para>The contact ID uploaded by the customer. This ID must be provided by the business side to avoid duplicate name issues.</para>
+                        /// <para>The custom contact ID uploaded by the customer. This ID must be provided by the business side to avoid duplicate names.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>C01</para>
@@ -197,10 +194,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string ReferenceId { get; set; }
 
                         /// <summary>
-                        /// <para>The role of the contact in this outbound call task. If not specified, no role distinction is made. For example, in collection tasks, contact roles can include borrower, co-borrower, and guarantor.</para>
-                        /// <remarks>
-                        /// <para>Custom-defined by the user. When using the API, pass this value in JSON format.</para>
-                        /// </remarks>
+                        /// <para>The role of the contact in the outbound call business. If this field is not specified, roles are not distinguished. For example, in debt collection, contact roles can be borrower, co-borrower, or guarantor. This is a custom field passed in JSON format when you call the API operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Borrower</para>
@@ -210,7 +204,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Role { get; set; }
 
                         /// <summary>
-                        /// <para>The round number.</para>
+                        /// <para>The conversation round.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>151</para>
@@ -220,10 +214,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public int? Round { get; set; }
 
                         /// <summary>
-                        /// <para>The state of the contact, such as Available, WrongNumber, or DoesNotExist.</para>
-                        /// <remarks>
-                        /// <para>Custom-defined by the user. Pass this value in JSON format when calling the API operation to execute an outbound task.</para>
-                        /// </remarks>
+                        /// <para>The status of the contact, such as Available, WrongNumber, or DoesNotExist. This is a custom field passed in JSON format when you call the API operation to execute the outbound call task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Available</para>
@@ -264,24 +255,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>The label names to be collected.</para>
+                    /// <para>The names of the tags to be collected.</para>
                     /// </summary>
                     [NameInMap("Extras")]
                     [Validation(Required=false)]
                     public List<QueryJobsWithResultResponseBodyJobsListLatestTaskExtras> Extras { get; set; }
                     public class QueryJobsWithResultResponseBodyJobsListLatestTaskExtras : TeaModel {
                         /// <summary>
-                        /// <para>The label key.</para>
+                        /// <para>The tag key.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Whether connected</para>
+                        /// <para>Is connected</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The label value.</para>
+                        /// <para>The tag value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Yes</para>
@@ -303,7 +294,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string HangUpDirection { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the call was answered.</para>
+                    /// <para>Indicates whether the call is answered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -323,7 +314,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? HasHangUpByRejection { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the playback was completed when the call was hung up.</para>
+                    /// <para>Indicates whether the playback is completed when the call is hung up.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -333,7 +324,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? HasLastPlaybackCompleted { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the call has reached the end of the flow.</para>
+                    /// <para>Specifies whether the flow is completed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -353,37 +344,37 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The call status name.</para>
+                    /// <para>The name of the call status.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Not dialed-Exceeded daily limit</para>
+                    /// <para>Not dialed - Exceeded daily limit</para>
                     /// </summary>
                     [NameInMap("StatusName")]
                     [Validation(Required=false)]
                     public string StatusName { get; set; }
 
                     /// <summary>
-                    /// <para>The label hit information (returned by the legacy canvas).</para>
+                    /// <para>The tag hit information. This field is returned for the legacy canvas.</para>
                     /// </summary>
                     [NameInMap("TagHits")]
                     [Validation(Required=false)]
                     public List<QueryJobsWithResultResponseBodyJobsListLatestTaskTagHits> TagHits { get; set; }
                     public class QueryJobsWithResultResponseBodyJobsListLatestTaskTagHits : TeaModel {
                         /// <summary>
-                        /// <para>The label group to which the label belongs.</para>
+                        /// <para>The tag group to which the tag belongs.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>动物</para>
+                        /// <para>Animal</para>
                         /// </summary>
                         [NameInMap("TagGroup")]
                         [Validation(Required=false)]
                         public string TagGroup { get; set; }
 
                         /// <summary>
-                        /// <para>The label name.</para>
+                        /// <para>The tag name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>猫幼年期,猫幼年期</para>
+                        /// <para>Kitten,Kitten</para>
                         /// </summary>
                         [NameInMap("TagName")]
                         [Validation(Required=false)]
@@ -401,6 +392,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     [Validation(Required=false)]
                     public string TaskEndReason { get; set; }
 
+                    /// <summary>
+                    /// <para>The name of the voice used in the call.</para>
+                    /// </summary>
                     [NameInMap("VoiceName")]
                     [Validation(Required=false)]
                     public string VoiceName { get; set; }
@@ -408,7 +402,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The job status.</para>
+                /// <para>The job status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Scheduling(0, &quot;Scheduling&quot;)</description></item>
+                /// <item><description>Executing(1, &quot;Executing&quot;)</description></item>
+                /// <item><description>Succeeded(2, &quot;Completed - Reached&quot;)</description></item>
+                /// <item><description>Paused(3, &quot;Paused&quot;)</description></item>
+                /// <item><description>Failed(4, &quot;Completed - Not reached&quot;)</description></item>
+                /// <item><description>Cancelled(5, &quot;Canceled - Manual intervention&quot;)</description></item>
+                /// <item><description>Drafted(6, &quot;Draft&quot;)</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -418,10 +421,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The job status name.</para>
+                /// <para>The name of the job status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Ended-Reached</para>
+                /// <para>Completed - Reached</para>
                 /// </summary>
                 [NameInMap("StatusName")]
                 [Validation(Required=false)]
@@ -472,24 +475,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The label information that can be used as filter conditions.</para>
+        /// <para>The tag information that can be used as filter conditions. This field displays all tags with enumeration values in the task group.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<QueryJobsWithResultResponseBodyLabels> Labels { get; set; }
         public class QueryJobsWithResultResponseBodyLabels : TeaModel {
             /// <summary>
-            /// <para>The label name.</para>
+            /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Satisfied or not</para>
+            /// <para>Is satisfied</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of label values.</para>
+            /// <para>The list of tag values.</para>
             /// </summary>
             [NameInMap("ValueList")]
             [Validation(Required=false)]
@@ -498,7 +501,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The prompt message returned by the operation.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -518,7 +521,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -528,7 +531,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The label names to be collected.</para>
+        /// <para>The names of the tags to be collected.</para>
         /// </summary>
         [NameInMap("VariableNames")]
         [Validation(Required=false)]

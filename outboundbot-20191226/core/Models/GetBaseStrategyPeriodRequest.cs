@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetBaseStrategyPeriodRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
-        /// <para>Strategy level. Default value is 2.</para>
+        /// <para>The policy level. Default value: 2. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: System</para>
-        /// </description></item>
-        /// <item><description><para>1: Tenant</para>
-        /// </description></item>
-        /// <item><description><para>2: Instance</para>
-        /// </description></item>
+        /// <item><description>0: System.</description></item>
+        /// <item><description>1: Tenant.</description></item>
+        /// <item><description>2: Instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

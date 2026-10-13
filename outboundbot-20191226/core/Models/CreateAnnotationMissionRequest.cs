@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The agent ID.</para>
         /// <remarks>
-        /// <para>You can obtain this ID from the \<c>DescribeInstance\\</c> operation.</para>
+        /// <para>You can obtain this value from the DescribeInstance operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The workspace key.</para>
+        /// <para>The business space key.</para>
         /// <remarks>
-        /// <para>You can obtain this key from the \<c>DescribeInstance\\</c> operation.</para>
+        /// <para>You can obtain this value from the DescribeInstance operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The data type of the annotation task.</para>
         /// <list type="bullet">
-        /// <item><description>1: Outbound call</description></item>
+        /// <item><description>1: outbound call</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? AnnotationMissionDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of annotation data sources.</para>
+        /// <para>The annotation data source list.</para>
         /// <remarks>
-        /// <para>This parameter has the same function as \<c>AnnotationMissionDebugDataSourceListJsonString\\</c>. You can specify either of them.</para>
+        /// <para>This parameter has the same function as AnnotationMissionDebugDataSourceListJsonString. Specify either one of them.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AnnotationMissionDebugDataSourceList")]
@@ -59,15 +59,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<int?> AnnotationMissionDebugDataSourceList { get; set; }
 
         /// <summary>
-        /// <para>The JSON string for the test data.</para>
+        /// <para>The debug data in JSON format.</para>
         /// <remarks>
-        /// <para>This parameter has the same function as \<c>AnnotationMissionDebugDataSourceList\\</c>. You can specify either of them. The format is \<c>[1]\\</c>, \<c>[2]\\</c>, or \<c>[1,2]\\</c>. You can specify multiple filter conditions in the array. The enumeration values are as follows:</para>
+        /// <para>This parameter has the same function as AnnotationMissionDebugDataSourceList. Specify either one of them. The format is [1], [2], or [1,2]. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>1: Outbound call task</para>
-        /// </description></item>
-        /// <item><description><para>2: Test task</para>
-        /// </description></item>
+        /// <item><description>1: outbound call task</description></item>
+        /// <item><description>2: test task</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,16 +79,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <para>The name of the annotation task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>询问卖车-标注任务-20230506-112934</para>
+        /// <para>CarSaleInquiry-AnnotationTask-20230506-112934</para>
         /// </summary>
         [NameInMap("AnnotationMissionName")]
         [Validation(Required=false)]
         public string AnnotationMissionName { get; set; }
 
         /// <summary>
-        /// <para>The bot ID.</para>
+        /// <para>The robot ID.</para>
         /// <remarks>
-        /// <para>You can obtain this ID from the \<c>DescribeScript\\</c> operation.</para>
+        /// <para>You can obtain this value from the DescribeScript operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,7 +99,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ChatbotId { get; set; }
 
         /// <summary>
-        /// <para>The end time for filtering calls.</para>
+        /// <para>The end time for the call time filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1682956800000</para>
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? ConversationTimeEndFilter { get; set; }
 
         /// <summary>
-        /// <para>The start time for filtering calls.</para>
+        /// <para>The start time for the call time filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683302400000</para>
@@ -121,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? ConversationTimeStartFilter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude call records that have been annotated in other tasks. If you do not specify this parameter, the default value is \<c>false\\</c>.</para>
+        /// <para>Specifies whether to exclude call records that have been annotated by other tasks. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -131,14 +129,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? ExcludeOtherSession { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the business process ended normally.</para>
+        /// <para>Specifies whether the business ended normally.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when \<c>SessionEndReasonFilterList\\</c> is not specified.</para>
+        /// <para>This parameter takes effect only when SessionEndReasonFilterList is not specified.</para>
         /// <list type="bullet">
-        /// <item><description><para>\<c>true\\</c>: The call record is normal.</para>
-        /// </description></item>
-        /// <item><description><para>\<c>false\\</c>: The call did not end normally.</para>
-        /// </description></item>
+        /// <item><description>true: normal call records</description></item>
+        /// <item><description>false: abnormal call records</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -160,9 +156,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The custom sampling amount.</para>
+        /// <para>The custom sampling quantity.</para>
         /// <remarks>
-        /// <para>This parameter is required and takes effect only when \<c>SamplingType\\</c> is set to 3. Otherwise, the task fails to be created.</para>
+        /// <para>This parameter takes effect only when SamplingType is set to 3. This parameter is required in that case. Otherwise, the creation fails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -173,9 +169,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? SamplingCount { get; set; }
 
         /// <summary>
-        /// <para>The sampling percentage.</para>
+        /// <para>The sampling ratio.</para>
         /// <remarks>
-        /// <para>This parameter is required and takes effect only when \<c>SamplingType\\</c> is set to 2. Otherwise, the task fails to be created.</para>
+        /// <para>This parameter takes effect only when SamplingType is set to 2. This parameter is required in that case. Otherwise, the creation fails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -188,12 +184,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The sampling type.</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Full data</para>
-        /// </description></item>
-        /// <item><description><para>2: Percentage</para>
-        /// </description></item>
-        /// <item><description><para>3: Custom amount</para>
-        /// </description></item>
+        /// <item><description>1: full</description></item>
+        /// <item><description>2: percentage</description></item>
+        /// <item><description>3: custom quantity</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,7 +197,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? SamplingType { get; set; }
 
         /// <summary>
-        /// <para>The outbound scenario ID.</para>
+        /// <para>The outbound call scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6236f21e-2e04-4dad-a47b-ae77e6a48325</para>
@@ -214,9 +207,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for call completion statuses.</para>
+        /// <para>The call result status filter conditions.</para>
         /// <remarks>
-        /// <para>This parameter has the same function as \<c>SessionEndReasonFilterListJsonString\\</c>. You can specify either of them.</para>
+        /// <para>This parameter has the same function as SessionEndReasonFilterListJsonString. Specify either one of them.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SessionEndReasonFilterList")]
@@ -224,34 +217,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<int?> SessionEndReasonFilterList { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for call completion statuses.</para>
+        /// <para>The call result status filter conditions.</para>
         /// <remarks>
-        /// <para>This parameter has the same function as \<c>SessionEndReasonFilterList\\</c>. You can specify either of them. The format is \<c>[1]\\</c> or \<c>[1,2]\\</c>. You can specify multiple filter conditions in the array. The enumeration values for the filter conditions are as follows.</para>
+        /// <para>This parameter has the same function as SessionEndReasonFilterList. Specify either one of them. The format is [1], [1,2], etc. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</para>
         /// </remarks>
-        /// <para><b>Enumeration values for filtering call records</b></para>
+        /// <para><b>Call record filter enum values</b></para>
         /// <list type="bullet">
-        /// <item><description><para>1: The call ended normally.</para>
-        /// </description></item>
-        /// <item><description><para>2: The bot hung up after a recognition failure.</para>
-        /// </description></item>
-        /// <item><description><para>3: The call was hung up due to a silence timeout.</para>
-        /// </description></item>
-        /// <item><description><para>4: The user hung up after a recognition failure.</para>
-        /// </description></item>
-        /// <item><description><para>5: The user hung up for no reason.</para>
-        /// </description></item>
-        /// <item><description><para>6: The call was transferred to a manual agent after an intent was hit.</para>
-        /// </description></item>
-        /// <item><description><para>7: The call was transferred to a manual agent after a recognition failure.</para>
-        /// </description></item>
-        /// <item><description><para>8: No interaction from the user.</para>
-        /// </description></item>
-        /// <item><description><para>9: The call was interrupted by a system exception.</para>
-        /// </description></item>
-        /// <item><description><para>10: The call was transferred to an IVR after an intent was hit.</para>
-        /// </description></item>
-        /// <item><description><para>11: The call was transferred to an IVR after a recognition failure.</para>
-        /// </description></item>
+        /// <item><description>1: normal completion</description></item>
+        /// <item><description>2: robot hung up after recognition rejection</description></item>
+        /// <item><description>3: hung up due to silence timeout</description></item>
+        /// <item><description>4: user hung up after recognition rejection</description></item>
+        /// <item><description>5: user hung up without reason</description></item>
+        /// <item><description>6: transferred to agent by intent match</description></item>
+        /// <item><description>7: transferred to agent by recognition rejection</description></item>
+        /// <item><description>8: no interaction on user side</description></item>
+        /// <item><description>9: system exception interruption</description></item>
+        /// <item><description>10: transferred to IVR by intent match</description></item>
+        /// <item><description>11: transferred to IVR by recognition rejection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

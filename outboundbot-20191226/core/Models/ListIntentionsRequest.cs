@@ -11,15 +11,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
     public class ListIntentionsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: This parameter is required. Select a value based on the scenario.</para>
         /// </remarks>
-        /// <para>This parameter is required. Select based on the scenario.</para>
-        /// <para>Annotation data source.</para>
+        /// <para>The annotation data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Outbound Call</para>
-        /// </description></item>
-        /// <item><description><para>2: Navigation</para>
-        /// </description></item>
+        /// <item><description>1: outbound call</description></item>
+        /// <item><description>2: navigation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,9 +27,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? AnnotationMissionDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>Bot ID</para>
+        /// <para>The robot ID.</para>
         /// <remarks>
-        /// <para>Get this from the DescribeScript API. The corresponding parameter is ChatbotId.</para>
+        /// <para>You can obtain this value from the DescribeScript operation, which corresponds to the ChatbotId parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,12 +40,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string BotId { get; set; }
 
         /// <summary>
-        /// <para>Environment</para>
+        /// <para>The environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Private Cloud</para>
-        /// </description></item>
-        /// <item><description><para>2: Public Cloud</para>
-        /// </description></item>
+        /// <item><description>1: private cloud</description></item>
+        /// <item><description>2: public cloud</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? Environment { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e5035654-1745-484a-8c5b-165f7c7bcd79</para>
@@ -69,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Intent ID</para>
+        /// <para>The intent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10717802</para>
@@ -79,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? IntentId { get; set; }
 
         /// <summary>
-        /// <para>Page Number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>Number.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -99,7 +94,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Scenario ID</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</para>
@@ -109,13 +104,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>Intent Name</para>
+        /// <para>The intent name.</para>
         /// <remarks>
-        /// <para>Use this for fuzzy queries based on keywords.</para>
+        /// <para>Supports fuzzy match by keyword as a filter condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>知道</para>
+        /// <para>know</para>
         /// </summary>
         [NameInMap("UserNick")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token to start the next query</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Deprecated</para>
+        /// <para>Deprecated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. The value range of n is [1, 50].</para>
+        /// <para>The list of resource IDs. Valid values of n: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ResourceId.1=b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>Resource type</para>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The value range of n is [1, 20].</para>
+            /// <para>The tag key. Valid values of n: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag.1.Key=key1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The value range of n is [1, 20].</para>
+            /// <para>The tag value. Valid values of n: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag.1.Value=value1</para>

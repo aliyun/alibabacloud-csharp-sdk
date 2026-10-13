@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of service instances.</para>
+        /// <para>The list of outbound robot instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578469042851</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The description of the Outbound Bot service instance.</para>
+            /// <para>The description of the outbound robot instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一个实例</para>
+            /// <para>This is an instance</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The service instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Outbound Bot service instance.</para>
+            /// <para>The name of the outbound robot instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>回访</para>
+            /// <para>Follow-up</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance is a system preset instance.</para>
+            /// <para>Indicates whether the instance is a system-preset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

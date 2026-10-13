@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The script list.</para>
+        /// <para>The list of scripts.</para>
         /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]
         public ListScriptsResponseBodyScripts Scripts { get; set; }
         public class ListScriptsResponseBodyScripts : TeaModel {
             /// <summary>
-            /// <para>The script array.</para>
+            /// <para>The array of scripts.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListScriptsResponseBodyScriptsList> List { get; set; }
             public class ListScriptsResponseBodyScriptsList : TeaModel {
                 /// <summary>
-                /// <para>The access key of the robot business workspace.</para>
+                /// <para>The access key of the robot workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>14791f5f226b4878b3d9b676a0291234</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string AgentKey { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the robot business workspace is a large model workspace.</para>
+                /// <para>Indicates whether the robot workspace is a large model workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -83,12 +83,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public bool? AgentLlm { get; set; }
 
+                /// <summary>
+                /// <para>The chatbot ID.</para>
+                /// </summary>
                 [NameInMap("ChatBotId")]
                 [Validation(Required=false)]
                 public string ChatBotId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1578965079000</para>
@@ -108,7 +111,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string DebugStatus { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the emotion recognition feature is enabled. This parameter is set to false for all large model scenarios.</para>
+                /// <para>Indicates whether the emotion recognition configuration is enabled. This value is always false for large models.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Industry { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the debug version is in draft state.</para>
+                /// <para>Indicates whether the debug version is in the draft state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? IsPreset { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the long pause detection feature is enabled. This parameter is set to false for all large model scenarios.</para>
+                /// <para>Indicates whether the long pause configuration is enabled. This value is always false for large models.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? LongWaitEnable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the filler phrase feature is enabled.</para>
+                /// <para>Indicates whether the filler word configuration is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? MiniPlaybackEnable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the graceful barge-in feature is enabled. This parameter is set to false for all large model scenarios.</para>
+                /// <para>Indicates whether the graceful barge-in configuration is enabled. This value is always false for large models.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -188,7 +191,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? NewBargeInEnable { get; set; }
 
                 /// <summary>
-                /// <para>The robot access type. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Managed.</para>
+                /// <para>The robot access type. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Managed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Empty or Managed</para>
@@ -198,7 +201,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string NluAccessType { get; set; }
 
                 /// <summary>
-                /// <para>The robot engine. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Prompts.</para>
+                /// <para>The robot engine. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Prompts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Empty or Prompts</para>
@@ -208,7 +211,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string NluEngine { get; set; }
 
                 /// <summary>
-                /// <para>The function computing service mode configuration.</para>
+                /// <para>The Function Compute service mode configuration.</para>
                 /// </summary>
                 [NameInMap("NluProfile")]
                 [Validation(Required=false)]
@@ -225,7 +228,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string FcFunction { get; set; }
 
                     /// <summary>
-                    /// <para>The function service trigger URL.</para>
+                    /// <para>The function service trigger.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></para>
@@ -235,7 +238,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string FcHttpTriggerUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The function service region.</para>
+                    /// <para>The region of the function service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -247,10 +250,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The reason for review rejection.</para>
+                /// <para>The reason for rejection.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Non-compliant script language</para>
+                /// <para>Non-compliant script wording</para>
                 /// </summary>
                 [NameInMap("RejectReason")]
                 [Validation(Required=false)]
@@ -260,7 +263,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The scenario.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Telemarketing</para>
+                /// <para>Telesales</para>
                 /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
@@ -270,7 +273,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The script description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Telemarketing script</para>
+                /// <para>Telesales script</para>
                 /// </summary>
                 [NameInMap("ScriptDescription")]
                 [Validation(Required=false)]
@@ -290,7 +293,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The script name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Telemarketing script</para>
+                /// <para>Telesales script</para>
                 /// </summary>
                 [NameInMap("ScriptName")]
                 [Validation(Required=false)]
@@ -307,7 +310,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1578965079000</para>
@@ -317,7 +320,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The robot business workspace ID.</para>
+                /// <para>The robot workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1160195</para>

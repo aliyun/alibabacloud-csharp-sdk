@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The business instance information.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DescribeInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578469042851</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The creator ID.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>435986</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The description of the business instance.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这个是第一个实例</para>
+            /// <para>This is the first instance</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The business instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the business instance.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一个实例</para>
+            /// <para>First instance</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maximum concurrency of the instance.</para>
+            /// <para>The maximum number of concurrent conversations for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? MaxConcurrentConversation { get; set; }
 
             /// <summary>
-            /// <para>The name of the business instance owner.</para>
+            /// <para>The name of the instance owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

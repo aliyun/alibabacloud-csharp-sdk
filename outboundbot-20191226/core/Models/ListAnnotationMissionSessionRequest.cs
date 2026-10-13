@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAnnotationMissionSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The annotation mission ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8434a4b0-41fc-41b1-aa75-bbd1f2ab0c8d</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AnnotationMissionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chat instance for the annotation task.</para>
+        /// <para>The annotation mission chat instance ID.</para>
         /// <remarks>
-        /// <para>Obtain this ID by calling the SaveAnnotationMissionSessionList operation.</para>
+        /// <para>Obtained by calling the SaveAnnotationMissionSessionList operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,16 +35,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The environment.</para>
         /// <remarks>
-        /// <para>The default value is 2.</para>
+        /// <para>Default value: 2.</para>
         /// </remarks>
-        /// <para><b>Enumeration values</b></para>
+        /// <para><b>Valid values:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>0: NONE</para>
-        /// </description></item>
-        /// <item><description><para>1: Private cloud</para>
-        /// </description></item>
-        /// <item><description><para>2: Public cloud</para>
-        /// </description></item>
+        /// <item><description>0: NONE.</description></item>
+        /// <item><description>1: Private cloud.</description></item>
+        /// <item><description>2: Public cloud.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,22 +52,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? Environment { get; set; }
 
         /// <summary>
-        /// <para>The list of statuses to include.</para>
+        /// <para>The list of included statuses.</para>
         /// <remarks>
-        /// <para>The format is [1]. Fill the array with specific enumeration values.</para>
+        /// <para>The format is [1]. Specify the actual enum values in the array.</para>
         /// </remarks>
-        /// <para><b>Enumeration values</b></para>
+        /// <para><b>Valid values:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>1: Correctly detected</para>
-        /// </description></item>
-        /// <item><description><para>2: Incorrectly detected</para>
-        /// </description></item>
-        /// <item><description><para>8: Invalid data</para>
-        /// </description></item>
-        /// <item><description><para>4: Uncovered intent</para>
-        /// </description></item>
-        /// <item><description><para>16: Transcription error</para>
-        /// </description></item>
+        /// <item><description>1: Correct recognition.</description></item>
+        /// <item><description>2: Incorrect recognition.</description></item>
+        /// <item><description>8: Invalid data.</description></item>
+        /// <item><description>4: Uncovered intent.</description></item>
+        /// <item><description>16: Transcription misrecognition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of records to display on each page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

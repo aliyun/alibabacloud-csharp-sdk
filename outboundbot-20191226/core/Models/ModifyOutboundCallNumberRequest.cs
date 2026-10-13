@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? RateLimitCount { get; set; }
 
         /// <summary>
-        /// <para>The rate limit period. Unit: seconds.</para>
+        /// <para>The rate limit period, in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

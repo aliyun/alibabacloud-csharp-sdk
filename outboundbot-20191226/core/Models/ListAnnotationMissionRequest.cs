@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAnnotationMissionRequest : TeaModel {
         /// <summary>
-        /// <para>Annotation mission ID</para>
+        /// <para>The ID of the annotation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0943abcb-bd7d-4ace-8cf7-97d39d4dd0b9</para>
@@ -20,34 +20,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AnnotationMissionId { get; set; }
 
         /// <summary>
-        /// <para>Annotation mission name</para>
+        /// <para>The name of the annotation task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>全景服务场景-标注任务-20230316-103253</para>
+        /// <para>Panorama service scenario - Annotation task - 20230316-103253</para>
         /// </summary>
         [NameInMap("AnnotationMissionName")]
         [Validation(Required=false)]
         public string AnnotationMissionName { get; set; }
 
         /// <summary>
-        /// <para>Annotation status filter. Deprecated.</para>
+        /// <para>The annotation status filter. This parameter is deprecated.</para>
         /// </summary>
         [NameInMap("AnnotationStatusListFilter")]
         [Validation(Required=false)]
         public List<int?> AnnotationStatusListFilter { get; set; }
 
         /// <summary>
-        /// <para>Annotation status filter</para>
+        /// <para>The annotation status filter.</para>
         /// <remarks>
-        /// <para>Format: [1]. You can specify multiple values. Valid values:</para>
+        /// <para>The format is [1]. You can select multiple filter conditions. The valid values are as follows:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>1: In progress</para>
-        /// </description></item>
-        /// <item><description><para>2: Completed</para>
-        /// </description></item>
-        /// <item><description><para>3: Closed</para>
-        /// </description></item>
+        /// <item><description>1: In progress.</description></item>
+        /// <item><description>2: Completed.</description></item>
+        /// <item><description>3: Closed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AnnotationStatusListStringFilter { get; set; }
 
         /// <summary>
-        /// <para>End time of the annotation mission creation filter</para>
+        /// <para>The end time for the annotation task creation filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1673280000000</para>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? CreateTimeEndFilter { get; set; }
 
         /// <summary>
-        /// <para>Start time of the annotation mission creation filter</para>
+        /// <para>The start time for the annotation task creation filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1661961600000</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? CreateTimeStartFilter { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>191ef468-75a2-4004-9441-a5c31bf5cd9d</para>
@@ -88,7 +85,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +95,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

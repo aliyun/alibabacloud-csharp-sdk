@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveAnnotationMissionTagInfoListRequest : TeaModel {
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// <remarks>
-        /// <para>This parameter has the same function as AnnotationMissionTagInfoListJsonString. Specify either this parameter or AnnotationMissionTagInfoListJsonString.</para>
+        /// <para>This parameter is the same as the AnnotationMissionTagInfoListJsonString parameter. Specify either one.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AnnotationMissionTagInfoList")]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The tag description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>标签描述</para>
+            /// <para>Tag description</para>
             /// </summary>
             [NameInMap("AnnotationMissionTagInfoDescription")]
             [Validation(Required=false)]
@@ -43,16 +43,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>标签</para>
+            /// <para>Tag</para>
             /// </summary>
             [NameInMap("AnnotationMissionTagInfoName")]
             [Validation(Required=false)]
             public string AnnotationMissionTagInfoName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to delete the tag.</para>
+            /// <para>Specifies whether to delete the tag.</para>
             /// <remarks>
-            /// <para>Set this parameter to true to delete the tag. Set it to false to add the tag.</para>
+            /// <para>Set this parameter to true to delete the tag, or false to add the tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -85,13 +85,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The JSON-formatted data of the tags.</para>
+        /// <para>The tag JSON data.</para>
         /// <remarks>
-        /// <para>The parameters in the JSON string are the same as those in AnnotationMissionTagInfoList. Specify either this parameter or AnnotationMissionTagInfoList.</para>
+        /// <para>The parameters in the JSON are the same as those in the AnnotationMissionTagInfoList parameter. Specify either this parameter or AnnotationMissionTagInfoList.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;测试数据1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;测试&quot;}]</para>
+        /// <para>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;TestData1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;Test&quot;}]</para>
         /// </summary>
         [NameInMap("AnnotationMissionTagInfoListJsonString")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to restore the default tag values.</para>
+        /// <para>Specifies whether to restore the default tag values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scenarios.</para>
+        /// <para>The list of scenarios.</para>
         /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]
         public QueryScriptsByStatusResponseBodyScripts Scripts { get; set; }
         public class QueryScriptsByStatusResponseBodyScripts : TeaModel {
             /// <summary>
-            /// <para>The list of scenarios.</para>
+            /// <para>The list of scenario details.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The industry.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>通用</para>
+                /// <para>General</para>
                 /// </summary>
                 [NameInMap("Industry")]
                 [Validation(Required=false)]
                 public string Industry { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the debug version is a draft.</para>
+                /// <para>Indicates whether the debug version is in the draft state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? IsDebugDrafted { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the version is a draft.</para>
+                /// <para>Indicates whether the version is in the draft state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The scenario.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>电销</para>
+                /// <para>Telemarketing</para>
                 /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The script description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>销售话术</para>
+                /// <para>Sales script</para>
                 /// </summary>
                 [NameInMap("ScriptDescription")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The scenario name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>销售话术</para>
+                /// <para>Sales script</para>
                 /// </summary>
                 [NameInMap("ScriptName")]
                 [Validation(Required=false)]
@@ -166,28 +166,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <summary>
                 /// <para>The status of the application version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>DRAFTED</b>: The script is a draft.</para>
-                /// </description></item>
-                /// <item><description><para><b>INITIALIZE_IN_PROGRESS</b>: The script is being initialized.</para>
-                /// </description></item>
-                /// <item><description><para><b>PUBLISHED</b>: The script is published.</para>
-                /// </description></item>
-                /// <item><description><para><b>PUBLISH_IN_PROGRESS</b>: The script is being published.</para>
-                /// </description></item>
-                /// <item><description><para><b>ROLLBACK_IN_PROGRESS</b>: The script is being rolled back.</para>
-                /// </description></item>
-                /// <item><description><para><b>EXAMINE_IN_PROGRESS</b>: The script is pending approval.</para>
-                /// </description></item>
-                /// <item><description><para><b>PUBLISHED_AND_EXAMINE_IN_PROGRESS</b>: The script is published and pending approval.</para>
-                /// </description></item>
-                /// <item><description><para><b>PUBLISH_FAILED</b>: The script failed to be published.</para>
-                /// </description></item>
-                /// <item><description><para><b>ROLLBACK_FAILED</b>: The script failed to be rolled back.</para>
-                /// </description></item>
-                /// <item><description><para><b>IMPORT_IN_PROGRESS</b>: The script is being imported.</para>
-                /// </description></item>
-                /// <item><description><para><b>IMPORT_FAILED</b>: The script failed to be imported.</para>
-                /// </description></item>
+                /// <item><description><b>DRAFTED</b>: Draft.</description></item>
+                /// <item><description><b>INITIALIZE_IN_PROGRESS</b>: Initializing.</description></item>
+                /// <item><description><b>PUBLISHED</b>: Published.</description></item>
+                /// <item><description><b>PUBLISH_IN_PROGRESS</b>: Publishing.</description></item>
+                /// <item><description><b>ROLLBACK_IN_PROGRESS</b>: Rolling back.</description></item>
+                /// <item><description><b>EXAMINE_IN_PROGRESS</b>: Pending review.</description></item>
+                /// <item><description><b>PUBLISHED_AND_EXAMINE_IN_PROGRESS</b>: Published and pending review.</description></item>
+                /// <item><description><b>PUBLISH_FAILED</b>: Publish failed.</description></item>
+                /// <item><description><b>ROLLBACK_FAILED</b>: Rollback failed.</description></item>
+                /// <item><description><b>IMPORT_IN_PROGRESS</b>: Importing.</description></item>
+                /// <item><description><b>IMPORT_FAILED</b>: Import failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -198,7 +187,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the script was last updated.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1579055782000</para>
@@ -220,7 +209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -230,7 +219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>

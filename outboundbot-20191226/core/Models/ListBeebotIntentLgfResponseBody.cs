@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<ListBeebotIntentLgfResponseBodyLgfs> Lgfs { get; set; }
         public class ListBeebotIntentLgfResponseBodyLgfs : TeaModel {
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 10:54:18.+0800</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the utterance template.</para>
+            /// <para>The utterance template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5666117</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? LgfId { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last modified.</para>
+            /// <para>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 10:54:18.+0800</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The content of the utterance template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>我是一个问法模版</para>
+            /// <para>I am an utterance template</para>
             /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The message returned by the API.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateAnnotationMissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public CreateAnnotationMissionResponseBodyData Data { get; set; }
         public class CreateAnnotationMissionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Additional information. If the request is successful, \<c>success\\</c> is returned. If the request fails, a specific error code is returned.</para>
+            /// <para>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
+            /// <para>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. If the request is successful, \<c>success\\</c> is returned. If the request fails, a specific error code is returned.</para>
+        /// <para>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
+        /// <para>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. \<c>true\\</c>: The call was successful. \<c>false\\</c>: The call failed.</para>
+        /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

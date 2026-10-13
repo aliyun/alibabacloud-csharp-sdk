@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of job IDs. A maximum of 99 child items are allowed.</para>
+        /// <para>The list of job IDs. Note: A maximum of 99 job IDs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -37,23 +37,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public QueryJobsResponseBodyJobs Jobs { get; set; }
         public class QueryJobsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// <para>The list of jobs.</para>
+            /// <para>The job array.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryJobsResponseBodyJobsList> List { get; set; }
             public class QueryJobsResponseBodyJobsList : TeaModel {
                 /// <summary>
-                /// <para>The list of calling numbers.</para>
+                /// <para>The calling number list.</para>
                 /// </summary>
                 [NameInMap("CallingNumbers")]
                 [Validation(Required=false)]
                 public List<string> CallingNumbers { get; set; }
 
                 /// <summary>
-                /// <para>The contact information. This parameter has been deprecated.</para>
+                /// <para><b>[Deprecated]</b> The contact information.</para>
                 /// <remarks>
-                /// <para>You can retrieve this information by calling the DescribeJob operation.</para>
+                /// <para>You can obtain this information by calling the DescribeJob operation.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Contacts")]
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     /// <para>The contact name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("ContactName")]
                     [Validation(Required=false)]
                     public string ContactName { get; set; }
 
                     /// <summary>
-                    /// <para>The honorific title.</para>
+                    /// <para>The honorific.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张先生</para>
+                    /// <para>Mr. Zhang</para>
                     /// </summary>
                     [NameInMap("Honorific")]
                     [Validation(Required=false)]
@@ -151,9 +151,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The business data. Displays tag collection results for large language model scenarios.</para>
+                /// <para>The business data, which displays the tag collection status in large model scenarios.</para>
                 /// <remarks>
-                /// <para>Keys equal to TenantId or ServiceId are system parameters.</para>
+                /// <para>If the key is TenantId or ServiceId, it is a system parameter.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Extras")]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<QueryJobsResponseBodyJobsListExtras> Extras { get; set; }
                 public class QueryJobsResponseBodyJobsListExtras : TeaModel {
                     /// <summary>
-                    /// <para>The business data key.</para>
+                    /// <para>The key of the business data.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>djrq</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The business data value.</para>
+                    /// <para>The value of the business data.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2019-08-21 09:49:59.0</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The failure reason. Valid values:</para>
+                /// <para>The reason for the failure. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Unknown: Unknown error.  </description></item>
                 /// <item><description>NoAnswer: No answer.</description></item>
@@ -191,14 +191,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <item><description>TimeUp: Timeout detected during scheduling.</description></item>
                 /// <item><description>NoStrategy: The strategy is empty or not found.</description></item>
                 /// <item><description>CallFailed: Call failed.</description></item>
-                /// <item><description>PerDayCallCountLimit: Daily call count limit for the number reached.</description></item>
-                /// <item><description>ContactBlockList: The number is on the blocked list.</description></item>
-                /// <item><description>EmptyNumber: Nonexistent number. No further outbound calls.</description></item>
-                /// <item><description>JobPerDayCallCountLimit: Daily call count limit for the number reached.</description></item>
-                /// <item><description>VerificationCancelled: Pre-call verification failed. The call was cancelled.</description></item>
+                /// <item><description>PerDayCallCountLimit: The daily call count limit for the number is reached.</description></item>
+                /// <item><description>ContactBlockList: The number is on the outbound call blacklist.</description></item>
+                /// <item><description>EmptyNumber: The number is a nonexistent number and will not be called.</description></item>
+                /// <item><description>JobPerDayCallCountLimit: The daily call count limit for the number is reached.</description></item>
+                /// <item><description>VerificationCancelled: Cancelled due to failed pre-call verification.</description></item>
                 /// <item><description>ContactSuspended: Call suspended.</description></item>
                 /// <item><description>InArrears: Overdue payment.</description></item>
-                /// <item><description>OutOfService: Out of service.</description></item>
+                /// <item><description>OutOfService: Service suspended.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ReferenceId { get; set; }
 
                 /// <summary>
-                /// <para>The scenario ID. This is a legacy parameter and has been deprecated.</para>
+                /// <para><b>[Deprecated]</b> The scenario ID. This is a legacy parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ade80092-03d9-4f4d-ad4f-ab8a247d3150</para>
@@ -261,13 +261,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <summary>
                 /// <para>The job status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduling(0): Scheduling.</description></item>
-                /// <item><description>Executing(1): Executing.</description></item>
-                /// <item><description>Succeeded(2): Completed - Reached.</description></item>
-                /// <item><description>Paused(3): Paused.</description></item>
-                /// <item><description>Failed(4): Completed - Not reached.</description></item>
-                /// <item><description>Cancelled(5): Cancelled - Manual intervention.</description></item>
-                /// <item><description>Drafted(6): Draft.</description></item>
+                /// <item><description>Scheduling(0, &quot;Scheduling&quot;)</description></item>
+                /// <item><description>Executing(1, &quot;Executing&quot;)</description></item>
+                /// <item><description>Succeeded(2, &quot;Finished - Reached&quot;)</description></item>
+                /// <item><description>Paused(3, &quot;Paused&quot;)</description></item>
+                /// <item><description>Failed(4, &quot;Finished - Not reached&quot;)</description></item>
+                /// <item><description>Cancelled(5, &quot;Cancelled - Manual intervention&quot;)</description></item>
+                /// <item><description>Drafted(6, &quot;Draft&quot;)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string StrategyId { get; set; }
 
                 /// <summary>
-                /// <para>The conversation summary. This is a legacy field and is no longer in use. Deprecated.</para>
+                /// <para><b>[Deprecated]</b> The conversation summary. This is a legacy field and is no longer used.</para>
                 /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The tag hit information in small model scenarios.</para>
+                /// <para>The matched tag information in small model scenarios.</para>
                 /// </summary>
                 [NameInMap("TagHits")]
                 [Validation(Required=false)]
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     /// <para>The tag group name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>意向收集</para>
+                    /// <para>Intent collection</para>
                     /// </summary>
                     [NameInMap("TagGroup")]
                     [Validation(Required=false)]
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     /// <para>The tag name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>有意向</para>
+                    /// <para>Interested</para>
                     /// </summary>
                     [NameInMap("TagName")]
                     [Validation(Required=false)]
@@ -406,9 +406,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The call list. This parameter has been deprecated.</para>
+                /// <para><b>[Deprecated]</b> The call list.</para>
                 /// <remarks>
-                /// <para>You can retrieve this information by calling the searchTask operation.</para>
+                /// <para>You can obtain this information by calling the searchTask operation.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Tasks")]
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<QueryJobsResponseBodyJobsListTasks> Tasks { get; set; }
                 public class QueryJobsResponseBodyJobsListTasks : TeaModel {
                     /// <summary>
-                    /// <para>The actual outbound call time.</para>
+                    /// <para>The actual outbound call time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1579068424883</para>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public long? ActualTime { get; set; }
 
                     /// <summary>
-                    /// <para>The summary. This is a legacy field and is no longer in use.</para>
+                    /// <para><b>[Deprecated]</b> The summary. This is a legacy field and is no longer used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Brief { get; set; }
 
                     /// <summary>
-                    /// <para>SIP call ID。</para>
+                    /// <para>The SIP call ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1528189846043</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string CallingNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The chatbot ID.</para>
+                    /// <para>The robot ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1234</para>
@@ -496,17 +496,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         /// <para>The contact name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>张三</para>
+                        /// <para>Zhang San</para>
                         /// </summary>
                         [NameInMap("ContactName")]
                         [Validation(Required=false)]
                         public string ContactName { get; set; }
 
                         /// <summary>
-                        /// <para>The honorific title.</para>
+                        /// <para>The honorific.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>张先生</para>
+                        /// <para>Mr. Zhang</para>
                         /// </summary>
                         [NameInMap("Honorific")]
                         [Validation(Required=false)]
@@ -523,7 +523,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string JobId { get; set; }
 
                         /// <summary>
-                        /// <para>The contact phone number.</para>
+                        /// <para>The phone number of the contact.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>135****8888</para>
@@ -587,7 +587,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string JobId { get; set; }
 
                     /// <summary>
-                    /// <para>The planned outbound call time.</para>
+                    /// <para>The planned outbound call time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1579068424883</para>
@@ -607,74 +607,41 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ScenarioId { get; set; }
 
                     /// <summary>
-                    /// <para>The task status. Note: The Succeeded status has been subdivided into specific reason types. The Succeeded:1 (Connected) status is no longer returned. Instead, the specific sub-reason type is returned. Valid values:</para>
+                    /// <para>The task status. Note: The Succeeded status is subdivided into specific reasons. The Succeeded: 1 (Connected) status is no longer returned. Instead, specific subdivided reason types are returned. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Executing: 0 (Dialing).</para>
-                    /// </description></item>
-                    /// <item><description><para>Succeeded: 1 (Connected).</para>
-                    /// </description></item>
-                    /// <item><description><para>NoAnswer: 2 (Not connected - No answer).</para>
-                    /// </description></item>
-                    /// <item><description><para>NotExist: 3 (Not connected - Nonexistent number).</para>
-                    /// </description></item>
-                    /// <item><description><para>Busy: 4 (Not connected - Busy).</para>
-                    /// </description></item>
-                    /// <item><description><para>Cancelled: 5 (Not dialed - Task stopped).</para>
-                    /// </description></item>
-                    /// <item><description><para>Failed: 6 (Failed).</para>
-                    /// </description></item>
-                    /// <item><description><para>NotConnected: 7 (Not connected - Unreachable).</para>
-                    /// </description></item>
-                    /// <item><description><para>PoweredOff: 8 (Not connected - Powered off).</para>
-                    /// </description></item>
-                    /// <item><description><para>OutOfService: 9 (Not connected - Called party out of service).</para>
-                    /// </description></item>
-                    /// <item><description><para>InArrears: 10 (Not connected - Called party has overdue payment).</para>
-                    /// </description></item>
-                    /// <item><description><para>EmptyNumber: 11 (Not dialed - Nonexistent number).</para>
-                    /// </description></item>
-                    /// <item><description><para>PerDayCallCountLimit: 12 (Not dialed - Daily limit exceeded).</para>
-                    /// </description></item>
-                    /// <item><description><para>ContactBlockList: 13 (Not dialed - Blocked list).</para>
-                    /// </description></item>
-                    /// <item><description><para>CallerNotRegistered: 14 (Not dialed - Caller number not registered).</para>
-                    /// </description></item>
-                    /// <item><description><para>Terminated: 15 (Not dialed - Terminated).</para>
-                    /// </description></item>
-                    /// <item><description><para>VerificationCancelled: 16 (Not dialed - Pre-call verification failed).</para>
-                    /// </description></item>
-                    /// <item><description><para>OutOfServiceNoCall: 17 (Not dialed - Called party out of service).</para>
-                    /// </description></item>
-                    /// <item><description><para>InArrearsNoCall: 18 (Not dialed - Called party has overdue payment).</para>
-                    /// </description></item>
-                    /// <item><description><para>CallingNumberNotExist: 19 (Not dialed - Caller number does not exist).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededFinish: 20 (Connected - Completed normally).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected - Robot hung up after no recognition).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededChatbotHangUpAfterSilence: 22 (Connected - Silence timeout hang-up).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededClientHangUpAfterNoAnswer: 23 (Connected - User hung up after no recognition).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededClientHangUp: 24 (Connected - User hung up without reason).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededTransferByIntent: 25 (Connected - Transferred to agent by intent).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededTransferAfterNoAnswer: 26 (Connected - Transferred to agent after no recognition).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededInoInterAction: 27 (Connected - No interaction from user side).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededError: 28 (Connected - System exception interruption).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptVoiceAssistant: 29 (Connected - Special intercept - Voice assistant).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected - Special intercept - Extension number transfer).</para>
-                    /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected - Special intercept - Custom intercept).</para>
-                    /// </description></item>
-                    /// <item><description><para>HighRiskSipCode: 32 (Not dialed - High risk).</para>
-                    /// </description></item>
+                    /// <item><description>Executing: 0 (Calling).</description></item>
+                    /// <item><description>Succeeded: 1 (Connected).</description></item>
+                    /// <item><description>NoAnswer: 2 (Not connected - No answer).</description></item>
+                    /// <item><description>NotExist: 3 (Not connected - Nonexistent number).</description></item>
+                    /// <item><description>Busy: 4 (Not connected - Busy).</description></item>
+                    /// <item><description>Cancelled: 5 (Not called - Task stopped).</description></item>
+                    /// <item><description>Failed: 6 (Failed).</description></item>
+                    /// <item><description>NotConnected: 7 (Not connected - Unreachable).</description></item>
+                    /// <item><description>PoweredOff: 8 (Not connected - Powered off).</description></item>
+                    /// <item><description>OutOfService: 9 (Not connected - Callee service suspended).</description></item>
+                    /// <item><description>InArrears: 10 (Not connected - Callee overdue payment).</description></item>
+                    /// <item><description>EmptyNumber: 11 (Not called - Nonexistent number, no outbound call).</description></item>
+                    /// <item><description>PerDayCallCountLimit: 12 (Not called - Daily limit exceeded).</description></item>
+                    /// <item><description>ContactBlockList: 13 (Not called - Blacklisted).</description></item>
+                    /// <item><description>CallerNotRegistered: 14 (Not called - Caller number not registered).</description></item>
+                    /// <item><description>Terminated: 15 (Not called - Terminated).</description></item>
+                    /// <item><description>VerificationCancelled: 16 (Not called - Cancelled due to failed pre-call verification).</description></item>
+                    /// <item><description>OutOfServiceNoCall: 17 (Not called - Callee service suspended, no outbound call).</description></item>
+                    /// <item><description>InArrearsNoCall: 18 (Not called - Callee overdue payment, no outbound call).</description></item>
+                    /// <item><description>CallingNumberNotExist: 19 (Not called - Caller number does not exist).</description></item>
+                    /// <item><description>SucceededFinish: 20 (Connected - Normally finished).</description></item>
+                    /// <item><description>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected - Robot hung up after rejection).</description></item>
+                    /// <item><description>SucceededChatbotHangUpAfterSilence: 22 (Connected - Hung up due to silence timeout).</description></item>
+                    /// <item><description>SucceededClientHangUpAfterNoAnswer: 23 (Connected - User hung up after rejection).</description></item>
+                    /// <item><description>SucceededClientHangUp: 24 (Connected - User hung up without reason).</description></item>
+                    /// <item><description>SucceededTransferByIntent: 25 (Connected - Transferred to agent due to intent match).</description></item>
+                    /// <item><description>SucceededTransferAfterNoAnswer: 26 (Connected - Transferred to agent after rejection).</description></item>
+                    /// <item><description>SucceededInoInterAction: 27 (Connected - No interaction from the user side).</description></item>
+                    /// <item><description>SucceededError: 28 (Connected - Interrupted due to system exception).</description></item>
+                    /// <item><description>SucceededSpecialInterceptVoiceAssistant: 29 (Connected - Special interception - Voice assistant).</description></item>
+                    /// <item><description>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected - Special interception - Extension number transfer).</description></item>
+                    /// <item><description>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected - Special interception - Custom interception).</description></item>
+                    /// <item><description>HighRiskSipCode: 32 (Not called - High risk, no outbound call).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -719,7 +686,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -751,7 +718,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

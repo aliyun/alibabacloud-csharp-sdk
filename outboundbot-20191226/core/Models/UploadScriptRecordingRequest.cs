@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class UploadScriptRecordingRequest : TeaModel {
         /// <summary>
-        /// <para>Text content of the recording file</para>
+        /// <para>The text content of the recording file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>您好</para>
+        /// <para>Hello</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>File key in OSS</para>
+        /// <para>The key of the file in OSS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>File name</para>
+        /// <para>The file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Script ID</para>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

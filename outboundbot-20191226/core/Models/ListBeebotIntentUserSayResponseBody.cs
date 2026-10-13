@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string BeebotRequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the API.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the API call.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries displayed per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<ListBeebotIntentUserSayResponseBodyUserSays> UserSays { get; set; }
         public class ListBeebotIntentUserSayResponseBodyUserSays : TeaModel {
             /// <summary>
-            /// <para>The content of the utterance.</para>
+            /// <para>The utterance content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>你知道xxxx么？</para>
+            /// <para>Do you know xxxx?</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the utterance was created.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 14:16:05.+0800</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>The time when the utterance was last modified.</para>
+            /// <para>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 14:16:05.+0800</para>

@@ -10,26 +10,25 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyJobGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The calling numbers for the job group.</para>
+        /// <para>The caller number.</para>
         /// </summary>
         [NameInMap("CallingNumber")]
         [Validation(Required=false)]
         public List<string> CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>The description of the job group.</para>
+        /// <para>The job description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修改后的作业组</para>
+        /// <para>Modified job group</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The flash SMS configuration, specified as a JSON string. This may include settings for third-party flash SMS services.</para>
-        /// <para><c>templateId</c>: The flash SMS template ID.<br>
-        /// <c>configId</c>: The flash SMS configuration ID.<br></para>
+        /// <para>The configuration parameters for flash message push in JSON format, including the configuration information of third-party flash messages.</para>
+        /// <para>templateId: the flash message template ID.<br>configId: the flash message configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;templateId&quot;:&quot;10471&quot;,&quot;configId&quot;:&quot;8037f524-6ff2-4dbe-bb28-f59234ea7a64&quot;}</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The job group ID.</para>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,12 +60,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the job group. Valid values:</para>
+        /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Draft</c>: The job group is in a draft state.</para>
-        /// </description></item>
-        /// <item><description><para><c>Paused</c>: The job group is paused.</para>
-        /// </description></item>
+        /// <item><description>Draft: draft.</description></item>
+        /// <item><description>Paused: paused.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +74,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupStatus { get; set; }
 
         /// <summary>
-        /// <para>The guaranteed minimum number of concurrent calls for the job group. The sum of this value for all job groups with the same priority cannot exceed the instance\&quot;s total concurrency. If you set this parameter to <c>0</c>, the system dynamically allocates available lines from a shared pool.</para>
+        /// <para>The guaranteed concurrency.
+        /// When a job starts, a minimum of N concurrent calls are guaranteed.
+        /// The sum of guaranteed concurrency values for jobs of the same priority cannot exceed the instance concurrency.
+        /// If the guaranteed concurrency is set to 0, the system intelligently allocates idle concurrency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,23 +87,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? MinConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The name of the job group.</para>
+        /// <para>The job name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修改后的作业组</para>
+        /// <para>Modified job group</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job group. Valid values:</para>
+        /// <para>The job group priority. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Urgent</b>: An urgent job.</para>
-        /// </description></item>
-        /// <item><description><para><b>Daily</b>: A routine job.</para>
-        /// </description></item>
+        /// <item><description><b>Urgent</b>: urgent job.</description></item>
+        /// <item><description><b>Daily</b>: daily job.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,14 +112,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The recall calling numbers.</para>
+        /// <para>The list of caller numbers for recall.</para>
         /// </summary>
         [NameInMap("RecallCallingNumber")]
         [Validation(Required=false)]
         public List<string> RecallCallingNumber { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that defines the recall strategy.</para>
+        /// <para>The JSON string of the recall strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;emptyNumberIgnore&quot;:false,&quot;inArrearsIgnore&quot;:false,&quot;outOfServiceIgnore&quot;:false}</para>
@@ -141,9 +139,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? RingingDuration { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID. (This is a legacy parameter. Use <c>ScriptId</c> instead.)</para>
+        /// <para>The scenario ID. This is a legacy parameter. Use ScriptId instead.</para>
         /// <remarks>
-        /// <para>You can pass any value for this legacy parameter, but we recommend using the same value as <c>ScriptId</c> for consistency.</para>
+        /// <para>This parameter is a legacy parameter. You can pass any value. Keep it consistent with the ScriptId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -154,7 +152,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the script for the scenario.</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5a3940ce-a12f-4222-9f0f-605a9b89ea7c</para>
@@ -164,28 +162,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that defines the execution strategy for the job group.</para>
+        /// <para>The job execution strategy.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>id</c>: The ID of the job group strategy. You can obtain this ID from the <c>StrategyId</c> parameter returned by the <c>DescribeJobGroup</c> operation.</para>
-        /// </description></item>
-        /// <item><description><para><c>repeatBy</c>: The frequency of the job. Valid values: <c>Once</c> (does not repeat), <c>Day</c> (repeats daily), <c>Week</c> (repeats weekly), and <c>Month</c> (repeats monthly).</para>
-        /// </description></item>
-        /// <item><description><para><c>startTime</c>: The start time of the strategy.</para>
-        /// </description></item>
-        /// <item><description><para><c>endTime</c>: The end time of the strategy.</para>
-        /// </description></item>
-        /// <item><description><para><c>workingTime</c>: The time windows for making outbound calls.</para>
-        /// </description></item>
-        /// <item><description><para><c>maxAttemptsPerDay</c>: The maximum number of call attempts per day for a number in this job group.</para>
-        /// </description></item>
-        /// <item><description><para><c>minAttemptInterval</c>: The minimum interval, in minutes, between call retries to the same number.</para>
-        /// </description></item>
-        /// <item><description><para><c>routingStrategy</c>: The number routing strategy. Valid values: <c>None</c> (not specified), <c>LocalFirst</c> (prioritizes numbers in the same city), and <c>LocalProvinceFirst</c> (prioritizes numbers in the same province).</para>
-        /// </description></item>
-        /// <item><description><para><c>repeatDays</c>: The specific days to run the job, based on the <c>repeatBy</c> value. If <c>repeatBy</c> is <c>Week</c>, <c>0</c> indicates Sunday, and <c>1</c> through <c>6</c> indicate Monday through Saturday. If <c>repeatBy</c> is <c>Month</c>, valid values are <c>1</c> through <c>31</c>. If a month does not have the specified day (for example, day 30 in February), the job does not run on that day.</para>
-        /// </description></item>
-        /// <item><description><para><c>repeatable</c>: Whether the job is recurring. Valid values are <c>true</c> and <c>false</c>.</para>
-        /// </description></item>
+        /// <item><description>id: the job group strategy ID. You can obtain it from the StrategyId response parameter of the DescribeJobGroup operation.</description></item>
+        /// <item><description>repeatBy: the recurrence type. Valid values: Once (no recurrence), Day (daily), Week (weekly), and Month (monthly).</description></item>
+        /// <item><description>startTime: the start time of the strategy.</description></item>
+        /// <item><description>endTime: the end time of the strategy.</description></item>
+        /// <item><description>workingTime: the time period during which outbound calls are allowed.</description></item>
+        /// <item><description>maxAttemptsPerDay: the maximum number of call attempts per day for a phone number under this job.</description></item>
+        /// <item><description>minAttemptInterval: the retry interval for a phone number, in minutes.</description></item>
+        /// <item><description>routingStrategy: the phone number strategy. Valid values: None (not specified), LocalFirst (local numbers first), and LocalProvinceFirst (local province numbers first).</description></item>
+        /// <item><description>repeatDays: the execution days corresponding to the recurrence type. If RepeatBy is Week, 0 indicates Sunday, and 1 to 6 indicate Monday to Saturday. If RepeatBy is Month, 1 to 31 indicate the 1st to the 31st day of the month. If a month does not have the specified day, the job is not executed in that month. For example, if the 30th is selected, the job is not executed in February.</description></item>
+        /// <item><description>repeatable: specifies whether to enable recurring jobs. Valid values: true and false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class RecordFailureRequest : TeaModel {
         /// <summary>
-        /// <para>Call start time</para>
+        /// <para>The start time of the call. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? ActualTime { get; set; }
 
         /// <summary>
-        /// <para>Call ID</para>
+        /// <para>The call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>Called number</para>
+        /// <para>The called number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>Calling number</para>
+        /// <para>The calling number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,14 +54,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>Failure reason.</para>
+        /// <para>The cause of the failure. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Nonexistent number (NotExists)</para>
-        /// </description></item>
-        /// <item><description><para>Busy (Busy)</para>
-        /// </description></item>
-        /// <item><description><para>No answer (NotAnswered)</para>
-        /// </description></item>
+        /// <item><description>NotExists: nonexistent number.</description></item>
+        /// <item><description>Busy: busy.</description></item>
+        /// <item><description>NotAnswered: not answered.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,14 +70,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string DispositionCode { get; set; }
 
         /// <summary>
-        /// <para>Error code when the outbound call fails.</para>
+        /// <para>The error codes that occur when the outbound call fails. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Nonexistent number (NotExists)</para>
-        /// </description></item>
-        /// <item><description><para>Busy (Busy)</para>
-        /// </description></item>
-        /// <item><description><para>No answer (NotAnswered)</para>
-        /// </description></item>
+        /// <item><description>NotExists: nonexistent number.</description></item>
+        /// <item><description>Busy: busy.</description></item>
+        /// <item><description>NotAnswered: not answered.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +85,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ExceptionCodes { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Task ID</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

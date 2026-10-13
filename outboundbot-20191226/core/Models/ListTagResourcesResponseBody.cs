@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API</para>
+        /// <para>The status code of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message of the API</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token to start the next query</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Resources</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>Resource ID</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>Resource type</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Tag key</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>Tag value</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

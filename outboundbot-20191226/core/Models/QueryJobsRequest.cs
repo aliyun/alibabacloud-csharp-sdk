@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class QueryJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition for the contact name.</para>
+        /// <para>The contact name for filtering.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the end time. Default value: 0, which indicates the current time.</para>
+        /// <para>The end time for filtering. Default value: 0, which indicates the current time. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1579077794665</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the contact phone number.</para>
+        /// <para>The contact phone number for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135****8888</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID. This is a legacy parameter and has been deprecated.</para>
+        /// <para>The scenario ID. <b>[Deprecated]</b> Legacy parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b0f35dd1-0337-402e-9c4f-3a6c2426950a</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the start time. Default value: 0, which indicates the start of the current day.</para>
+        /// <para>The start time for filtering. Default value: 0, which indicates 00:00 today. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1579068424883</para>
@@ -103,7 +103,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query by start time, end time, or job creation time. Valid values: start, end, job_create.</para>
+        /// <para>The time basis for filtering. This parameter specifies the filtering criterion rather than a specific date or time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>start: Filters by start time.</description></item>
+        /// <item><description>end: Filters by end time.</description></item>
+        /// <item><description>job_create: Filters by job creation time.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>start</para>

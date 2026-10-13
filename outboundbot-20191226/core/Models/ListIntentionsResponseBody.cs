@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListIntentionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>API Status Code</para>
+        /// <para>The status code of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned Data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListIntentionsResponseBodyData Data { get; set; }
         public class ListIntentionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Bot ID</para>
+            /// <para>The robot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbot-cn-n7QmzrUnNe</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string BotId { get; set; }
 
             /// <summary>
-            /// <para>Intent List</para>
+            /// <para>The list of intents.</para>
             /// </summary>
             [NameInMap("IntentList")]
             [Validation(Required=false)]
             public List<ListIntentionsResponseBodyDataIntentList> IntentList { get; set; }
             public class ListIntentionsResponseBodyDataIntentList : TeaModel {
                 /// <summary>
-                /// <para>Intent Alias</para>
+                /// <para>The intent alias.</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public List<string> Alias { get; set; }
 
                 /// <summary>
-                /// <para>Bot ID (Deprecated)</para>
+                /// <para>The robot ID. [Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>chatbot-cn-n7QmzrUnNe</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? BotId { get; set; }
 
                 /// <summary>
-                /// <para>Bot Name</para>
+                /// <para>The robot name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string BotName { get; set; }
 
                 /// <summary>
-                /// <para>Conversation Flow ID</para>
+                /// <para>The dialog flow ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50099</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string DialogId { get; set; }
 
                 /// <summary>
-                /// <para>Intent ID</para>
+                /// <para>The intent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10717802</para>
@@ -91,12 +91,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Language</para>
+                /// <para>The language.</para>
                 /// <list type="bullet">
-                /// <item><description><para>English (en-us)</para>
-                /// </description></item>
-                /// <item><description><para>Chinese (zh-cn)</para>
-                /// </description></item>
+                /// <item><description>English: en-us</description></item>
+                /// <item><description>Chinese: zh-cn</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,31 +105,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>Intent Name</para>
+                /// <para>The intent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>知道了</para>
+                /// <para>Got it</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>LGF Intent Expression</para>
+                /// <para>The LGF intent utterance expressions.</para>
                 /// </summary>
                 [NameInMap("RuleCheck")]
                 [Validation(Required=false)]
                 public List<ListIntentionsResponseBodyDataIntentListRuleCheck> RuleCheck { get; set; }
                 public class ListIntentionsResponseBodyDataIntentListRuleCheck : TeaModel {
                     /// <summary>
-                    /// <para>Error Message</para>
+                    /// <para>The error message.</para>
                     /// </summary>
                     [NameInMap("Error")]
                     [Validation(Required=false)]
                     public List<string> Error { get; set; }
 
                     /// <summary>
-                    /// <para>Is Strict Match</para>
+                    /// <para>Indicates whether strict matching is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -141,17 +139,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? Strict { get; set; }
 
                     /// <summary>
-                    /// <para>Expression Value</para>
+                    /// <para>The expression value.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>知道</para>
+                    /// <para>know</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>Warning Message</para>
+                    /// <para>The warning message.</para>
                     /// </summary>
                     [NameInMap("Warning")]
                     [Validation(Required=false)]
@@ -160,16 +158,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Intent Slot Information</para>
+                /// <para>The intent slot information.</para>
                 /// </summary>
                 [NameInMap("Slot")]
                 [Validation(Required=false)]
                 public List<ListIntentionsResponseBodyDataIntentListSlot> Slot { get; set; }
                 public class ListIntentionsResponseBodyDataIntentListSlot : TeaModel {
                     /// <summary>
-                    /// <para>The follow-up question function.</para>
+                    /// <para>The clarification functions.</para>
                     /// <remarks>
-                    /// <para>Notice: This parameter is invalid.</para>
+                    /// <para>Notice: 无效内容</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("FeedbackFunctions")]
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public List<ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctions> FeedbackFunctions { get; set; }
                     public class ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctions : TeaModel {
                         /// <summary>
-                        /// <para>Alibaba Cloud Function Name</para>
+                        /// <para>The Alibaba Cloud function name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -187,7 +185,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AliyunFunction { get; set; }
 
                         /// <summary>
-                        /// <para>Alibaba Cloud Service</para>
+                        /// <para>The Alibaba Cloud service.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -197,7 +195,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AliyunService { get; set; }
 
                         /// <summary>
-                        /// <para>API Status Code</para>
+                        /// <para>The status code of the operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>OK</para>
@@ -207,7 +205,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Code { get; set; }
 
                         /// <summary>
-                        /// <para>Follow-up Question Description</para>
+                        /// <para>The clarification description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>GA setup for HPC cn4-HPC-EndUserServer-GlobalAccelerator</para>
@@ -217,7 +215,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Endpoint</para>
+                        /// <para>The endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-hangzhou.log.aliyuncs.com</para>
@@ -227,7 +225,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string EndPoint { get; set; }
 
                         /// <summary>
-                        /// <para>Follow-up Question Function</para>
+                        /// <para>The clarification function.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>count</para>
@@ -237,7 +235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Function { get; set; }
 
                         /// <summary>
-                        /// <para>Function Name</para>
+                        /// <para>The function name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>方欣云呼系统每日拨测_2024年11月</para>
@@ -247,19 +245,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>Parameters</para>
+                        /// <para>The parameters.</para>
                         /// </summary>
                         [NameInMap("Params")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> Params { get; set; }
 
                         /// <summary>
-                        /// <para>Feature Switch. Values:</para>
+                        /// <para>The feature switch. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>on</b>: Enabled</para>
-                        /// </description></item>
-                        /// <item><description><para><b>off</b>: Disabled</para>
-                        /// </description></item>
+                        /// <item><description><b>on</b>: Enabled.</description></item>
+                        /// <item><description><b>off</b>: Disabled.</description></item>
                         /// </list>
                         /// </summary>
                         [NameInMap("Switch")]
@@ -267,7 +263,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public List<ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctionsSwitch> Switch { get; set; }
                         public class ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctionsSwitch : TeaModel {
                             /// <summary>
-                            /// <para>Condition ID</para>
+                            /// <para>The condition ID.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>b9932604-08ae-4525-bbe5-c8cce3066070</para>
@@ -277,7 +273,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                             public string Id { get; set; }
 
                             /// <summary>
-                            /// <para>Follow-up Question Label</para>
+                            /// <para>The clarification prompt label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>SQL_SUB_QUERY</para>
@@ -287,7 +283,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                             public string Label { get; set; }
 
                             /// <summary>
-                            /// <para>Condition Name</para>
+                            /// <para>The condition name.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>测试0609_20241021_101018_复制_复制_复制</para>
@@ -297,7 +293,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// <para>Type</para>
+                            /// <para>The type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>PASSKEY</para>
@@ -307,7 +303,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>Condition Value</para>
+                            /// <para>The condition value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>BASE_VALIDATE_FILTER_SWITCH</para>
@@ -319,7 +315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         }
 
                         /// <summary>
-                        /// <para>Follow-up Question Type</para>
+                        /// <para>The clarification type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cluster</para>
@@ -331,9 +327,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>Feedback Type</para>
+                    /// <para>The feedback type.</para>
                     /// <remarks>
-                    /// <para>Notice: Invalid content</para>
+                    /// <para>Notice: 无效内容</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -344,7 +340,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string FeedbackType { get; set; }
 
                     /// <summary>
-                    /// <para>Slot Unique Identifier</para>
+                    /// <para>The unique identifier of the slot.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9ec31b50-32b8-11eb-9478-19d2d885afdb</para>
@@ -354,12 +350,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>Is Array:</para>
+                    /// <para>Indicates whether the slot is an array. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>true: Yes</para>
-                    /// </description></item>
-                    /// <item><description><para>false: No</para>
-                    /// </description></item>
+                    /// <item><description>true: Yes.</description></item>
+                    /// <item><description>false: No.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -370,9 +364,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? IsArray { get; set; }
 
                     /// <summary>
-                    /// <para>Is Encrypted</para>
+                    /// <para>Indicates whether the slot is encrypted.</para>
                     /// <remarks>
-                    /// <para>Notice: Invalid content</para>
+                    /// <para>Notice: 无效内容</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -383,9 +377,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? IsEncrypt { get; set; }
 
                     /// <summary>
-                    /// <para>Is Interactive</para>
+                    /// <para>Indicates whether the slot is interactive.</para>
                     /// <remarks>
-                    /// <para>Notice: Invalid content</para>
+                    /// <para>Notice: 无效内容</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -396,12 +390,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? IsInteractive { get; set; }
 
                     /// <summary>
-                    /// <para>Is Required Slot:</para>
+                    /// <para>Indicates whether the slot is required. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>true: Yes</para>
-                    /// </description></item>
-                    /// <item><description><para>false: No</para>
-                    /// </description></item>
+                    /// <item><description>true: Yes.</description></item>
+                    /// <item><description>false: No.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -412,7 +404,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? IsNecessary { get; set; }
 
                     /// <summary>
-                    /// <para>Slot Lifecycle</para>
+                    /// <para>The slot life span.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -422,31 +414,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? LifeSpan { get; set; }
 
                     /// <summary>
-                    /// <para>Slot Name</para>
+                    /// <para>The slot name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>知道</para>
+                    /// <para>know</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Slot Follow-up Question</para>
+                    /// <para>The slot clarification prompts.</para>
                     /// </summary>
                     [NameInMap("Question")]
                     [Validation(Required=false)]
                     public List<string> Question { get; set; }
 
                     /// <summary>
-                    /// <para>Slot Tagging Labels</para>
+                    /// <para>The slot tagging labels.</para>
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
                     public List<ListIntentionsResponseBodyDataIntentListSlotTags> Tags { get; set; }
                     public class ListIntentionsResponseBodyDataIntentListSlotTags : TeaModel {
                         /// <summary>
-                        /// <para>User Say Unique Identifier for the Label</para>
+                        /// <para>The unique identifier of the intent utterance corresponding to the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>17448458</para>
@@ -456,10 +448,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string UserSayId { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the tag is the result of tagging an intent expression.</para>
+                        /// <para>The tagging result of the intent utterance corresponding to the label.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>你知道xxxx？</para>
+                        /// <para>Do you know xxxx?</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -468,7 +460,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>Slot Tagging Result</para>
+                    /// <para>The slot tagging result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>@知道</para>
@@ -480,7 +472,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Table ID</para>
+                /// <para>The table ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>43258</para>
@@ -490,16 +482,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? TableId { get; set; }
 
                 /// <summary>
-                /// <para>Intent Type:</para>
+                /// <para>The intent type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Normal intent;</para>
-                /// </description></item>
-                /// <item><description><para>1: UNKNOWN;</para>
-                /// </description></item>
-                /// <item><description><para>2: TableQA intent;</para>
-                /// </description></item>
-                /// <item><description><para>3: Generated from standard intent</para>
-                /// </description></item>
+                /// <item><description>0: normal intent. </description></item>
+                /// <item><description>1: UNKNOWN. </description></item>
+                /// <item><description>2: TableQA intent. </description></item>
+                /// <item><description>3: generated from a standard intent.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -510,16 +498,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? Type { get; set; }
 
                 /// <summary>
-                /// <para>User Say List</para>
+                /// <para>The list of user utterances.</para>
                 /// </summary>
                 [NameInMap("UserSay")]
                 [Validation(Required=false)]
                 public List<ListIntentionsResponseBodyDataIntentListUserSay> UserSay { get; set; }
                 public class ListIntentionsResponseBodyDataIntentListUserSay : TeaModel {
                     /// <summary>
-                    /// <para>Source ID</para>
+                    /// <para>The source ID.</para>
                     /// <remarks>
-                    /// <para>Notice: Invalid content</para>
+                    /// <para>Notice: 无效内容</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -530,7 +518,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string FromId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the user utterance.</para>
+                    /// <para>The utterance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>17448458</para>
@@ -540,7 +528,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>Is Strict Match</para>
+                    /// <para>Indicates whether strict matching is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -550,14 +538,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public bool? Strict { get; set; }
 
                     /// <summary>
-                    /// <para>User Say List</para>
+                    /// <para>The list of user utterances.</para>
                     /// </summary>
                     [NameInMap("UserSayData")]
                     [Validation(Required=false)]
                     public List<ListIntentionsResponseBodyDataIntentListUserSayUserSayData> UserSayData { get; set; }
                     public class ListIntentionsResponseBodyDataIntentListUserSayUserSayData : TeaModel {
                         /// <summary>
-                        /// <para>Slot Unique Identifier</para>
+                        /// <para>The unique identifier of the slot.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>9ec31b50-32b8-11eb-9478-19d2d885afdb</para>
@@ -567,10 +555,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string SlotId { get; set; }
 
                         /// <summary>
-                        /// <para>Expression</para>
+                        /// <para>The utterance text.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>知道</para>
+                        /// <para>know</para>
                         /// </summary>
                         [NameInMap("Text")]
                         [Validation(Required=false)]
@@ -583,7 +571,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>API Message</para>
+            /// <para>The message returned by the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -593,7 +581,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Indicates whether the request was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -605,7 +593,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP Status Code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -615,7 +603,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API Message</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -625,7 +613,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -635,7 +623,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Is Success</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public GetContactBlockListResponseBodyContactBlocklistList ContactBlocklistList { get; set; }
         public class GetContactBlockListResponseBodyContactBlocklistList : TeaModel {
             /// <summary>
-            /// <para>The array data.</para>
+            /// <para>The data array.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public List<GetContactBlockListResponseBodyContactBlocklistListList> List { get; set; }
             public class GetContactBlockListResponseBodyContactBlocklistListList : TeaModel {
                 /// <summary>
-                /// <para>The unique business key of the outbound call blocklist entry.</para>
+                /// <para>The unique business key of the outbound call blocklist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ContactBlockListId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640077685465</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>

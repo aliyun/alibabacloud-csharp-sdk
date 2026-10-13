@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>金融</para>
+            /// <para>Finance</para>
             /// </summary>
             [NameInMap("Industry")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The scene.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>电销</para>
+            /// <para>Telemarketing</para>
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The script description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>销售话术</para>
+            /// <para>Sales script</para>
             /// </summary>
             [NameInMap("ScriptDescription")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The script name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>销售话术</para>
+            /// <para>Sales script</para>
             /// </summary>
             [NameInMap("ScriptName")]
             [Validation(Required=false)]

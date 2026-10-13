@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteAgentProfilesRequest : TeaModel {
         /// <summary>
-        /// <para>Collection of agent profile IDs</para>
+        /// <para>The collection of agent configuration IDs.</para>
         /// </summary>
         [NameInMap("AgentProfileIds")]
         [Validation(Required=false)]
         public List<string> AgentProfileIds { get; set; }
 
         /// <summary>
-        /// <para>app_ip (system field, optional)</para>
+        /// <para>The app_ip (system field, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>

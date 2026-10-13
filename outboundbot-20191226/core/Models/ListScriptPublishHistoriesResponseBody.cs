@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,24 +50,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The script publishing histories.</para>
+        /// <para>The publish history list.</para>
         /// </summary>
         [NameInMap("ScriptPublishHistories")]
         [Validation(Required=false)]
         public ListScriptPublishHistoriesResponseBodyScriptPublishHistories ScriptPublishHistories { get; set; }
         public class ListScriptPublishHistoriesResponseBodyScriptPublishHistories : TeaModel {
             /// <summary>
-            /// <para>The data list.</para>
+            /// <para>The data array.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList> List { get; set; }
             public class ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList : TeaModel {
                 /// <summary>
-                /// <para>The description of this published version.</para>
+                /// <para>The publish description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>第一次发布</para>
+                /// <para>First release</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The publish time.</para>
+                /// <para>The publish time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1578965079000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? PublishTime { get; set; }
 
                 /// <summary>
-                /// <para>The script ID.</para>
+                /// <para>The scenario ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29420f65-8f1f-4009-b2f8-f4f7b5d59090</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

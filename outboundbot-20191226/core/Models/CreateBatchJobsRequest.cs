@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateBatchJobsRequest : TeaModel {
         /// <summary>
-        /// <para>Description of the batch job.</para>
+        /// <para>The description of the batch job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("BatchJobDescription")]
         [Validation(Required=false)]
         public string BatchJobDescription { get; set; }
 
         /// <summary>
-        /// <para>Name of the batch job.</para>
+        /// <para>The name of the batch job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>第一个作业组</para>
+        /// <para>First job group</para>
         /// </summary>
         [NameInMap("BatchJobName")]
         [Validation(Required=false)]
         public string BatchJobName { get; set; }
 
         /// <summary>
-        /// <para>List of caller numbers.</para>
+        /// <para>The list of calling numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;95187&quot;]</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Path to the Excel file that contains the batch job data.</para>
+        /// <para>The URL to download the Excel file for the batch job.</para>
         /// <remarks>
-        /// <para>Get this value from the Folder parameter in the response of the GetJobDataUploadParams operation.</para>
+        /// <para>You can obtain this parameter from the Folder response parameter of the GetJobDataUploadParams operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobFilePath { get; set; }
 
         /// <summary>
-        /// <para>ID of the scenario.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c6a668d1-3145-4048-9101-cb3678bb8884</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>ID of the script.</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</para>
@@ -85,17 +85,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>JSON string that defines the job execution policy. Required.</para>
+        /// <para>The JSON string of the job execution strategy. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;策略名字&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</para>
+        /// <para>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;Strategy name&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</para>
         /// </summary>
         [NameInMap("StrategyJson")]
         [Validation(Required=false)]
         public string StrategyJson { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the job is submitted. Set to false to submit the job. Set to true to save it as a draft.</para>
+        /// <para>Specifies whether the job is submitted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The job is saved as a draft.</description></item>
+        /// <item><description>false: The job is submitted.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

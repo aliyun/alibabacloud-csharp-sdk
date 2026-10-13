@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The task information.</para>
+        /// <para>The job information.</para>
         /// </summary>
         [NameInMap("JobGroup")]
         [Validation(Required=false)]
         public CreateJobGroupResponseBodyJobGroup JobGroup { get; set; }
         public class CreateJobGroupResponseBodyJobGroup : TeaModel {
             /// <summary>
-            /// <para>The list of calling numbers.</para>
+            /// <para>The list of caller numbers.</para>
             /// </summary>
             [NameInMap("CallingNumbers")]
             [Validation(Required=false)]
             public List<string> CallingNumbers { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578550074361</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <summary>
             /// <para>The export progress.</para>
             /// <remarks>
-            /// <para>This field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated in the current parameter.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ExportProgress")]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public CreateJobGroupResponseBodyJobGroupExportProgress ExportProgress { get; set; }
             public class CreateJobGroupResponseBodyJobGroupExportProgress : TeaModel {
                 /// <summary>
-                /// <para>The file URL. [Deprecated]</para>
+                /// <para><b>[Deprecated]</b> The file URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https://***.oss-cn-shanghai.aliyuncs.com/sample</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FileHttpUrl { get; set; }
 
                 /// <summary>
-                /// <para>The progress. [Deprecated]</para>
+                /// <para><b>[Deprecated]</b> The progress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// <para>The task export status. [Deprecated]</para>
+                /// <para><b>[Deprecated]</b> The job export status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>
@@ -96,10 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>The ID of the background asynchronous parsing operation for the uploaded task file.</para>
-            /// <remarks>
-            /// <para>No value is returned if this field is empty.</para>
-            /// </remarks>
+            /// <para>The ID of the background asynchronous parsing operation corresponding to the uploaded job file. If no value exists, this parameter is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>744ff448-2b4c-40d4-94ca-51f246905b0f</para>
@@ -109,10 +106,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobDataParsingTaskId { get; set; }
 
             /// <summary>
-            /// <para>The OSS path of the task file.</para>
-            /// <remarks>
-            /// <para>No value is returned if this field is empty.</para>
-            /// </remarks>
+            /// <para>The OSS path of the job file. If no value exists, this parameter is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPLOADED/JOB/b3865dc3-40fa-4afd-9fe4-dc7cda305a24/229eac13-379d-4abe-96e0-8cf026b56c0b_template (1).xlsx</para>
@@ -122,17 +116,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobFilePath { get; set; }
 
             /// <summary>
-            /// <para>The task description.</para>
+            /// <para>The description of the job.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一个的作业组</para>
+            /// <para>First job group</para>
             /// </summary>
             [NameInMap("JobGroupDescription")]
             [Validation(Required=false)]
             public string JobGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c62e6789-28a8-41db-941e-171a01d3b3b9</para>
@@ -142,17 +136,22 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobGroupId { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The job name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一个作业组</para>
+            /// <para>First job group</para>
             /// </summary>
             [NameInMap("JobGroupName")]
             [Validation(Required=false)]
             public string JobGroupName { get; set; }
 
             /// <summary>
-            /// <para>The guaranteed concurrency value. When the task starts, a minimum of N concurrent calls are guaranteed. The sum of guaranteed concurrency values for tasks with the same priority cannot exceed the instance concurrency. If the guaranteed concurrency value is set to 0, the system intelligently allocates idle concurrency.</para>
+            /// <para>The guaranteed concurrency.</para>
+            /// <list type="bullet">
+            /// <item><description>When the job starts, a minimum of N concurrent calls are guaranteed.</description></item>
+            /// <item><description>The sum of guaranteed concurrency for jobs of the same priority cannot exceed the instance concurrency.</description></item>
+            /// <item><description>If the guaranteed concurrency is set to 0, the system intelligently allocates idle concurrency.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -162,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? MinConcurrency { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1628425608429</para>
@@ -172,10 +171,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The job group priority. Valid values:</para>
+            /// <para>The priority of the job group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Urgent</b>: urgent task.</description></item>
-            /// <item><description><b>Daily</b>: daily task.</description></item>
+            /// <item><description><b>Urgent</b>: urgent job.</description></item>
+            /// <item><description><b>Daily</b>: daily job.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +185,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The list of redial calling numbers.</para>
+            /// <para>The list of caller numbers for redialing.</para>
             /// </summary>
             [NameInMap("RecallCallingNumbers")]
             [Validation(Required=false)]
@@ -200,7 +199,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public CreateJobGroupResponseBodyJobGroupRecallStrategy RecallStrategy { get; set; }
             public class CreateJobGroupResponseBodyJobGroupRecallStrategy : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether nonexistent numbers are excluded from redialing.</para>
+                /// <para>Indicates whether nonexistent numbers are skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -210,7 +209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? EmptyNumberIgnore { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether numbers with overdue payments are excluded from redialing.</para>
+                /// <para>Indicates whether numbers with overdue payments are skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -220,7 +219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? InArrearsIgnore { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether out-of-service numbers are excluded from redialing.</para>
+                /// <para>Indicates whether suspended numbers are skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -252,17 +251,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScenarioId { get; set; }
 
             /// <summary>
-            /// <para>The dialog flow scenario name.</para>
+            /// <para>The script scenario name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>话术</para>
+            /// <para>Script</para>
             /// </summary>
             [NameInMap("ScriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// <para>The dialog flow scenario version.</para>
+            /// <para>The script scenario version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1628425608429</para>
@@ -272,7 +271,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptVersion { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduling</para>
@@ -282,7 +281,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task scheduling strategy.</para>
+            /// <para>The job scheduling strategy.</para>
             /// </summary>
             [NameInMap("Strategy")]
             [Validation(Required=false)]
@@ -299,7 +298,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Customized { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2209702074000</para>
@@ -309,7 +308,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The follow-up action after the execution cycle ends. This field is no longer in use.</para>
+                /// <para>The follow-up processing method after the execution cycle ends. This field is no longer used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CONTINUE</para>
@@ -319,7 +318,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FollowUpStrategy { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is a template.</para>
+                /// <para>Indicates whether the strategy is a template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -329,7 +328,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? IsTemplate { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of daily call attempts when calls in the task are not connected.</para>
+                /// <para>The maximum number of call attempts per day when the call is not answered in the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -339,7 +338,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? MaxAttemptsPerDay { get; set; }
 
                 /// <summary>
-                /// <para>The interval between call attempts.</para>
+                /// <para>The call interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -349,7 +348,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? MinAttemptInterval { get; set; }
 
                 /// <summary>
-                /// <para>The repeat execution mode. Valid values: once (no repeat), day (repeat daily), week (repeat weekly), and month (repeat monthly).</para>
+                /// <para>The repetition method. Valid values: once (no repetition), day (daily repetition), week (weekly repetition), and month (monthly repetition).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Once</para>
@@ -359,10 +358,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string RepeatBy { get; set; }
 
                 /// <summary>
-                /// <para>The repeat execution days.</para>
+                /// <para>The execution days for repetition.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>RepeatBy</b> is set to <b>Week</b>, 0 indicates Sunday and 1-6 indicate Monday through Saturday.</description></item>
-                /// <item><description>If <b>RepeatBy</b> is set to <b>Month</b>, 1-31 indicate the 1st through 31st day. The task is not executed in months that do not have the specified day. For example, if the 30th is selected, the task is not executed in February.</description></item>
+                /// <item><description>If the repetition cycle <b>RepeatBy</b> is <b>Week</b>, 0 represents Sunday, and 1 to 6 represent Monday to Saturday.</description></item>
+                /// <item><description>If the repetition cycle <b>RepeatBy</b> is <b>Month</b>, 1 to 31 represent the 1st to the 31st day. Months without the specified date are not executed. For example, if the 30th is selected, the job is not executed in February.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("RepeatDays")]
@@ -373,8 +372,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The number strategy. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>None: no special rules.</description></item>
-                /// <item><description>LocalFirst: local city numbers preferred.</description></item>
-                /// <item><description>LocalProvinceFirst: local province numbers preferred.</description></item>
+                /// <item><description>LocalFirst: local numbers first.</description></item>
+                /// <item><description>LocalProvinceFirst: local province numbers first.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -385,7 +384,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string RoutingStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1578550074000</para>
@@ -398,7 +397,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The strategy description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>催收策略</para>
+                /// <para>Collection strategy</para>
                 /// </summary>
                 [NameInMap("StrategyDescription")]
                 [Validation(Required=false)]
@@ -418,7 +417,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The strategy name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>催收策略</para>
+                /// <para>Collection strategy</para>
                 /// </summary>
                 [NameInMap("StrategyName")]
                 [Validation(Required=false)]
@@ -435,14 +434,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The strategy execution time window.</para>
+                /// <para>The execution time window of the strategy.</para>
                 /// </summary>
                 [NameInMap("WorkingTime")]
                 [Validation(Required=false)]
                 public List<CreateJobGroupResponseBodyJobGroupStrategyWorkingTime> WorkingTime { get; set; }
                 public class CreateJobGroupResponseBodyJobGroupStrategyWorkingTime : TeaModel {
                     /// <summary>
-                    /// <para>The window start time.</para>
+                    /// <para>The start time of the window. Format: HH:mm:ss.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>09:00:00</para>
@@ -452,7 +451,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string BeginTime { get; set; }
 
                     /// <summary>
-                    /// <para>The window end time.</para>
+                    /// <para>The end time of the window. Format: HH:mm:ss.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12:00:00</para>
@@ -468,7 +467,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -488,7 +487,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

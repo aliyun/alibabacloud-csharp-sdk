@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAllTenantBindNumberBindingResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,25 +20,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListAllTenantBindNumberBindingResponseBodyData Data { get; set; }
         public class ListAllTenantBindNumberBindingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Array.</para>
+            /// <para>The list.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListAllTenantBindNumberBindingResponseBodyDataList> List { get; set; }
             public class ListAllTenantBindNumberBindingResponseBodyDataList : TeaModel {
+                /// <summary>
+                /// <para>The billing method of the number.</para>
+                /// </summary>
                 [NameInMap("BillingType")]
                 [Validation(Required=false)]
                 public string BillingType { get; set; }
 
                 /// <summary>
-                /// <para>Binding ID.</para>
+                /// <para>The binding ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>b5bfb844-ce85-4779-bc8f-161fba46aa07</para>
@@ -48,14 +51,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string BindingId { get; set; }
 
                 /// <summary>
-                /// <para>List of instance names.</para>
+                /// <para>The list of instance names.</para>
                 /// </summary>
                 [NameInMap("InstanceNameList")]
                 [Validation(Required=false)]
                 public List<string> InstanceNameList { get; set; }
 
                 /// <summary>
-                /// <para>Phone number.</para>
+                /// <para>The number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15005059355</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Number { get; set; }
 
                 /// <summary>
-                /// <para>Policy.</para>
+                /// <para>The policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;rateLimitPeriod\&quot;:\&quot;1\&quot;,\&quot;rateLimitCount\&quot;:\&quot;1\&quot;}</para>
@@ -75,10 +78,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string SerializedParams { get; set; }
 
                 /// <summary>
-                /// <para>Trunk name.</para>
+                /// <para>The trunk name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>小码-公共</para>
+                /// <para>Xiaoma-Public</para>
                 /// </summary>
                 [NameInMap("TrunkName")]
                 [Validation(Required=false)]
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4BEAB4B-C810-5386-B72A-1A35FF1E6B15</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

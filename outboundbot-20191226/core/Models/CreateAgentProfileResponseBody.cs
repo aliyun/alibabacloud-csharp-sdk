@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateAgentProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAgentProfileResponseBodyData Data { get; set; }
         public class CreateAgentProfileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Agent profile ID</para>
+            /// <para>The agent profile ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d31794e2a51f47d2901b4094d88311d7</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentProfileId { get; set; }
 
             /// <summary>
-            /// <para>Agent profile template ID</para>
+            /// <para>The agent profile template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-survey</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentProfileTemplateId { get; set; }
 
             /// <summary>
-            /// <para>Agent type</para>
+            /// <para>agent type</para>
             /// 
             /// <b>Example:</b>
             /// <para>“”</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentType { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1739333534000</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一个智能体。</para>
+            /// <para>This is an agent</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1e16c663-0339-4064-9d57-07f772e78f21</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instruction configuration</para>
+            /// <para>The instruction configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             ///     &quot;type&quot;: &quot;CollectNumber&quot;,
             ///     &quot;instructions&quot;: [{
             ///         &quot;code&quot;: &quot;DTMF0&quot;,
-            ///         &quot;name&quot;: &quot;收号测试&quot;,
+            ///         &quot;name&quot;: &quot;Number collection test&quot;,
             ///         &quot;collectVoice&quot;: true,
             ///         &quot;terminator&quot;: &quot;#&quot;
             ///     }]
@@ -113,13 +113,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstructionJson { get; set; }
 
             /// <summary>
-            /// <para>Label description</para>
+            /// <para>The label descriptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{
-            ///     &quot;name&quot;: &quot;是否满意&quot;,
-            ///     &quot;description&quot;: &quot;对介绍的游戏内容是否感兴趣&quot;,
-            ///     &quot;valueList&quot;: &quot;[\&quot;有兴趣\&quot;,\&quot;没兴趣\&quot;]&quot;
+            ///     &quot;name&quot;: &quot;Satisfaction&quot;,
+            ///     &quot;description&quot;: &quot;Whether you are interested in the introduced game content&quot;,
+            ///     &quot;valueList&quot;: &quot;[\&quot;Interested\&quot;,\&quot;Not interested\&quot;]&quot;
             /// }]</para>
             /// </summary>
             [NameInMap("LabelsJson")]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string LabelsJson { get; set; }
 
             /// <summary>
-            /// <para>Model ID</para>
+            /// <para>The model ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model_001</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>Model configuration</para>
+            /// <para>The model configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -147,31 +147,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModelConfig { get; set; }
 
             /// <summary>
-            /// <para>Prompt (professional mode)</para>
+            /// <para>The prompt in professional mode.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\n名称：安妮 \n身份：游戏推广员\n背景：通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。\n技能：作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。\n约束条件：你需要记住你是安妮，来自于热门游戏客服团队，专注于通过电话向玩家宣传最新福利活动。\n作为主动联系玩家的客服，需要根据玩家是否想了解活动的意图来选择是否介绍。\n保持通话的专业性，同时语言平易近人，确保玩家轻松理解活动内容。\n明确活动的起止时间，确保玩家不会混淆。\n强调活动的重点奖励和参与方式，提升玩家的参与兴趣。</para>
+            /// <para>\nName: Annie \nIdentity: Game Promoter\nBackground: Promote the latest welfare events to players over the phone, ensuring that every player can keep up with the information in a timely manner and enjoy the game.\nSkills: As a game customer service representative, recommend limited-time game welfare events to users, emphasize the event highlights, and inform them of the participation process.\nConstraints: You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest welfare events to players over the phone.\nAs a customer service representative who proactively contacts players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call, while keeping the language approachable to ensure that players can easily understand the event content.\nClarify the start and end times of the event to ensure that players do not get confused.\nEmphasize the key rewards and participation methods of the event to increase players\&quot; interest in participating</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
 
             /// <summary>
-            /// <para>Agent configuration</para>
+            /// <para>The agent configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///     &quot;name&quot;: &quot;安妮&quot;,
-            ///     &quot;gender&quot;: &quot;女&quot;,
+            ///     &quot;name&quot;: &quot;Annie&quot;,
+            ///     &quot;gender&quot;: &quot;Female&quot;,
             ///     &quot;age&quot;: 20,
-            ///     &quot;role&quot;: &quot;游戏推广员&quot;,
-            ///     &quot;communicationStyle&quot;: [&quot;亲切&quot;, &quot;口语化&quot;, &quot;活泼&quot;],
-            ///     &quot;goals&quot;: &quot;通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。&quot;,
-            ///     &quot;background&quot;: &quot;福利介绍\n从${开始时间}开始，直至${结束时间}结束，为期一周的时间里，我们精心准备了\&quot;限时寻宝\&quot;福利活动。只要您在这段时间内每日登录游戏，即可领取登录礼包，内含珍稀材料、能量药剂和限定外观奖励\n\n福利亮点\n本次活动的亮点在于，累积登录达到5天的玩家，将额外获得一份\&quot;神秘宝箱\&quot;，开启宝箱获得稀有宠物，将为您的战斗增添强大助力！千万别错过这次增强实力的绝佳机会。\n\n参与方式\n登录游戏后，在活动面板中找到\&quot;限时寻宝\&quot;，点击即可领取对应的奖励。记得每天上线，奖励不等人哦！&quot;,
-            ///     &quot;skills&quot;: &quot;作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。&quot;,
-            ///     &quot;workflow&quot;: &quot;1.亲切问候与自我介绍\n- 开场白：“尊敬的冒险者，您好！我是安妮，来自游戏客服团队。今天有幸与您连线，是想分享一项即将启动的独家福利活动，绝对会让您的探险之旅更加精彩纷呈！”\n- 确认玩家想了解活动后，再进行福利活动的介绍\n2.福利活动介绍\n3.强调福利亮点\n4.说明参与方式与提醒\n5.鼓励分享与反馈\n- 互动号召：“如果您觉得这个活动不错，不妨和您的公会伙伴或者游戏朋友分享这个好消息。同时，我们也非常欢迎您在活动结束后，通过游戏内置的反馈系统告诉我们您的体验感受和建议。”\n技能6: 礼貌结束通话\n- 结束语：“好了，尊敬的冒险者，以上就是这次活动的主要内容。希望您能在活动中满载而归，祝您在旅程中所向披靡！如果还有任何疑问，欢迎随时联系我们客服团队。感谢您的接听，期待再次为您服务，再见！”&quot;,
-            ///     &quot;constraint&quot;: &quot;你需要记住你是安妮，来自于热门游戏客服团队，专注于通过电话向玩家宣传最新福利活动。\n作为主动联系玩家的客服，需要根据玩家是否想了解活动的意图来选择是否介绍。\n保持通话的专业性，同时语言平易近人，确保玩家轻松理解活动内容。\n明确活动的起止时间，确保玩家不会混淆。\n强调活动的重点奖励和参与方式，提升玩家的参与兴趣。\n鼓励玩家间的互动和反馈，以促进游戏社区的活跃度。\n结束通话时保持礼貌，给玩家留下良好印象。\n用户询问的问题与目标或流程无关时， 请礼貌拒绝，并引导到目标问题上。\n对于不知道的问题，请不要胡乱回复，需要礼貌回复“不清楚”，并引导到目标问题上。&quot;,
-            ///     &quot;openingPrompt&quot;: &quot;尊敬的冒险者，您好！我是安妮，来自游戏客服团队。今天有幸与您连线，是想分享一项即将启动的独家福利活动，绝对会让您的探险之旅更加精彩纷呈！&quot;,
+            ///     &quot;role&quot;: &quot;Game Promoter&quot;,
+            ///     &quot;communicationStyle&quot;: [&quot;Friendly&quot;, &quot;Conversational&quot;, &quot;Lively&quot;],
+            ///     &quot;goals&quot;: &quot;Promote the latest welfare events to players over the phone, ensuring that every player can keep up with the information in a timely manner and enjoy the game.&quot;,
+            ///     &quot;background&quot;: &quot;Event Introduction\nFrom ${Start Time} to ${End Time}, we have carefully prepared the \&quot;Limited-Time Treasure Hunt\&quot; welfare event for a week. As long as you log in to the game every day during this period, you can claim a login gift pack containing rare materials, energy potions, and limited-edition appearance rewards.\n\nEvent Highlights\nThe highlight of this event is that players who log in for 5 cumulative days will receive an extra \&quot;Mystery Chest\&quot;. Opening the chest to get a rare pet will add a powerful boost to your battles! Don\&quot;t miss this great opportunity to enhance your strength.\n\nHow to Participate\nAfter logging into the game, find \&quot;Limited-Time Treasure Hunt\&quot; in the event panel and click to claim the corresponding rewards. Remember to log in every day, the rewards won\&quot;t wait!&quot;,
+            ///     &quot;skills&quot;: &quot;As a game customer service representative, recommend limited-time game welfare events to users, emphasize the event highlights, and inform them of the participation process.&quot;,
+            ///     &quot;workflow&quot;: &quot;1. Friendly greeting and self-introduction\n- Opening: \&quot;Hello, respected adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive welfare event that is about to launch, which will definitely make your adventure more exciting!\&quot;\n- Introduce the welfare event only after confirming that the player wants to learn about it.\n2. Welfare event introduction\n3. Emphasize event highlights\n4. Explain how to participate and remind\n5. Encourage sharing and feedback\n- Call to action: \&quot;If you think this event is good, feel free to share the good news with your guild partners or game friends. At the same time, we also highly welcome you to tell us your experience and suggestions through the built-in feedback system of the game after the event ends.\&quot;\nSkill 6: Politely end the call\n- Closing: \&quot;Well, respected adventurer, the above is the main content of this event. I hope you can return with a full load from the event, and I wish you invincible in your journey! If you have any questions, feel free to contact our customer service team. Thank you for answering, look forward to serving you again, goodbye!\&quot;&quot;,
+            ///     &quot;constraint&quot;: &quot;You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest welfare events to players over the phone.\nAs a customer service representative who proactively contacts players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call, while keeping the language approachable to ensure that players can easily understand the event content.\nClarify the start and end times of the event to ensure that players do not get confused.\nEmphasize the key rewards and participation methods of the event to increase players\&quot; interest in participating.\nEncourage interaction and feedback among players to promote the activity of the game community.\nMaintain politeness when ending the call to leave a good impression on the player.\nWhen the user asks questions that are irrelevant to the goal or process, politely refuse and guide them back to the target question.\nFor questions you do not know, do not reply randomly. You need to politely reply \&quot;I am not sure\&quot; and guide them back to the target question.&quot;,
+            ///     &quot;openingPrompt&quot;: &quot;Hello, respected adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive welfare event that is about to launch, which will definitely make your adventure more exciting!&quot;,
             ///     &quot;output&quot;: &quot;&quot;,
             ///     &quot;aiHangupOutput&quot;: &quot;&quot;,
             ///     &quot;aiSilenceTimeoutOutput&quot;: &quot;&quot;
@@ -182,17 +182,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string PromptJson { get; set; }
 
             /// <summary>
-            /// <para>Scenario</para>
+            /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>场景</para>
+            /// <para>Scenario</para>
             /// </summary>
             [NameInMap("Scenario")]
             [Validation(Required=false)]
             public string Scenario { get; set; }
 
             /// <summary>
-            /// <para>Scenario ID</para>
+            /// <para>The scenario ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d13ad2d3-3fe6-4352-b38b-bd6559047de8</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is a system template</para>
+            /// <para>Indicates whether the template is a system template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? System { get; set; }
 
             /// <summary>
-            /// <para>Last update time</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1737077564000</para>
@@ -222,15 +222,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Variable configuration</para>
+            /// <para>The variable configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{
-            ///     &quot;name&quot;: &quot;开始时间&quot;,
-            ///     &quot;description&quot;: &quot;开始时间&quot;
+            ///     &quot;name&quot;: &quot;Start Time&quot;,
+            ///     &quot;description&quot;: &quot;Start time&quot;
             /// }, {
-            ///     &quot;name&quot;: &quot;结束时间&quot;,
-            ///     &quot;description&quot;: &quot;结束时间&quot;
+            ///     &quot;name&quot;: &quot;End Time&quot;,
+            ///     &quot;description&quot;: &quot;End time&quot;
             /// }]</para>
             /// </summary>
             [NameInMap("VariablesJson")]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

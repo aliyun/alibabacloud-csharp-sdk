@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return task scenario information.</para>
+        /// <para>Specifies whether to return the task scenario information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>表示客户的真实姓名</para>
+            /// <para>The real name of the customer</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The display name of the variable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>姓名</para>
+            /// <para>Name</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? NeedVoiceSliceRecording { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to swap left and right audio channels. Default value: false (not swapped).</para>
+        /// <para>Specifies whether to swap the left and right audio channels. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

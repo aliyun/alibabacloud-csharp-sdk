@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The intent alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>嗯明白了</para>
+            /// <para>Okay, understood</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The time when the intent was created.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 16:03:15.+0800</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateUserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the account that created the intent.</para>
+            /// <para>The name of the user who created the intent.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></para>
@@ -99,18 +99,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <summary>
             /// <para>The intent name.</para>
             /// <remarks>
-            /// <para>This is the intent code. It uniquely identifies the intent.</para>
+            /// <para>The intent code, which is a unique identifier.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>知道了</para>
+            /// <para>Understood</para>
             /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
             public string IntentName { get; set; }
 
             /// <summary>
-            /// <para>The time when the intent was last modified.</para>
+            /// <para>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 16:03:15.+0800</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>Modify User ID</para>
+            /// <para>The ID of the user who modified the intent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1252504</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyUserId { get; set; }
 
             /// <summary>
-            /// <para>Modify the account name.</para>
+            /// <para>The name of the user who modified the intent.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The message returned by the operation.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public ModifyInstanceResponseBodyInstance Instance { get; set; }
         public class ModifyInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578469042851</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The instance description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是第一个实例</para>
+            /// <para>This is the first instance</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一个实例</para>
+            /// <para>First instance</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

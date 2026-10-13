@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The intent name.</para>
         /// <remarks>
-        /// <para>This is the intent code. It uniquely identifies the intent.</para>
+        /// <para>The intent code, which is a unique identifier.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>知道了</para>
+        /// <para>Understood</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string IntentId { get; set; }
 
         /// <summary>
-        /// <para>The utterance template.</para>
+        /// <para>The utterance template for the intent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我是一个问法模版</para>
+        /// <para>I am an utterance template</para>
         /// </summary>
         [NameInMap("LgfText")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

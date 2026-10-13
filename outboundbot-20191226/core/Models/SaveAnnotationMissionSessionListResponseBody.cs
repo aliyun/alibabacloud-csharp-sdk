@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveAnnotationMissionSessionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SaveAnnotationMissionSessionListResponseBodyData Data { get; set; }
         public class SaveAnnotationMissionSessionListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The message returned for the operation.</para>
+            /// <para>The message returned by the API operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
+            /// <para>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The list of messages.</para>
+            /// <para>The message list.</para>
             /// </summary>
             [NameInMap("MessageList")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest SaveAnnotationMissionSessionListRequest { get; set; }
             public class SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest : TeaModel {
                 /// <summary>
-                /// <para>The content of the script for the approval requests</para>
+                /// <para>The script content of the approval application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[]</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</para>
+        /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
+        /// <para>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -105,7 +105,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that owns the instance.</para>
+        /// <para>The ID of the account to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1971226538081821</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeScriptResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status code</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API message</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Deprecated</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>none</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string NlsConfig { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Script details</para>
+        /// <para>The script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public DescribeScriptResponseBodyScript Script { get; set; }
         public class DescribeScriptResponseBodyScript : TeaModel {
             /// <summary>
-            /// <para>Robot workspace access key</para>
+            /// <para>The access key of the chatbot workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1218333</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? AgentId { get; set; }
 
             /// <summary>
-            /// <para>Robot workspace access key</para>
+            /// <para>The access key of the chatbot workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14791f5f226b4878b3d9b676a0291234</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentKey { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the robot workspace uses a Large Language Model (LLM)</para>
+            /// <para>Indicates whether the chatbot workspace is a large language model (LLM) workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? AgentLlm { get; set; }
 
             /// <summary>
-            /// <para>ASR configuration</para>
+            /// <para>The automatic speech recognition (ASR) configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -120,17 +120,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AsrConfig { get; set; }
 
             /// <summary>
-            /// <para>Call configuration</para>
+            /// <para>The call configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;感谢您的接听，祝您生活愉快，再见!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;您说的这个问题我不能回答您，您可以尝试询问其他问题。&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</para>
+            /// <para>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;Thank you for taking the call. Have a great day. Goodbye!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;I cannot answer this question. Please try asking something else.&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</para>
             /// </summary>
             [NameInMap("ChatConfig")]
             [Validation(Required=false)]
             public string ChatConfig { get; set; }
 
             /// <summary>
-            /// <para>Chatbot ID</para>
+            /// <para>The chatbot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d31794e2a51f47d2901b4094d88311d7</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ChatbotId { get; set; }
 
             /// <summary>
-            /// <para>Status of the debug script</para>
+            /// <para>The debug status of the script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DRAFTED</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string DebugStatus { get; set; }
 
             /// <summary>
-            /// <para>Enables emotion detection</para>
+            /// <para>Specifies whether the emotion recognition feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? EmotionEnable { get; set; }
 
             /// <summary>
-            /// <para>Industry</para>
+            /// <para>The industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>金融</para>
+            /// <para>Finance</para>
             /// </summary>
             [NameInMap("Industry")]
             [Validation(Required=false)]
             public string Industry { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the debug version is in draft status</para>
+            /// <para>Indicates whether the debug version is in the draft state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? IsDebugDrafted { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the script is in draft status</para>
+            /// <para>Indicates whether the script is in the draft state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -189,12 +189,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public bool? IsDrafted { get; set; }
 
+            /// <summary>
+            /// <para>The custom label configuration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;labels\&quot;:[{\&quot;description\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;Availability\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Available\\\&quot;,\\\&quot;Unavailable\\\&quot;]\&quot;}]}</para>
+            /// </summary>
             [NameInMap("LabelConfig")]
             [Validation(Required=false)]
             public string LabelConfig { get; set; }
 
             /// <summary>
-            /// <para>Enables intelligent sentence break</para>
+            /// <para>Specifies whether the intelligent sentence segmentation feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -204,7 +210,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? LongWaitEnable { get; set; }
 
             /// <summary>
-            /// <para>Enables tone continuity</para>
+            /// <para>Specifies whether the mini playback feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? MiniPlaybackEnable { get; set; }
 
             /// <summary>
-            /// <para>Enables graceful barge-in</para>
+            /// <para>Specifies whether the graceful barge-in feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -224,12 +230,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? NewBargeInEnable { get; set; }
 
             /// <summary>
-            /// <para>NLU engine (applies only to LLM scenarios)</para>
+            /// <para>The natural language understanding (NLU) engine. This parameter applies only to large language model (LLM) scenarios. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Prompts — Text entry mode</para>
-            /// </description></item>
-            /// <item><description><para>SSE_FUNCTION — Function Compute service mode</para>
-            /// </description></item>
+            /// <item><description>Prompts: text input mode. </description></item>
+            /// <item><description>SSE_FUNCTION: Function Compute service mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,14 +244,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string NluEngine { get; set; }
 
             /// <summary>
-            /// <para>Function Compute service mode configuration</para>
+            /// <para>The configuration of the Function Compute service mode.</para>
             /// </summary>
             [NameInMap("NluProfile")]
             [Validation(Required=false)]
             public DescribeScriptResponseBodyScriptNluProfile NluProfile { get; set; }
             public class DescribeScriptResponseBodyScriptNluProfile : TeaModel {
                 /// <summary>
-                /// <para>Function service name</para>
+                /// <para>The function service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sanfang_test</para>
@@ -257,7 +261,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FcFunction { get; set; }
 
                 /// <summary>
-                /// <para>Function service trigger URL</para>
+                /// <para>The HTTP trigger URL of the function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></para>
@@ -267,7 +271,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FcHttpTriggerUrl { get; set; }
 
                 /// <summary>
-                /// <para>Function service region</para>
+                /// <para>The region of the function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -276,6 +280,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string FcRegion { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether Chatbot prompts are supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Supported.</description></item>
+                /// <item><description>false: Not supported.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("SupportBeebotPrompts")]
                 [Validation(Required=false)]
                 public bool? SupportBeebotPrompts { get; set; }
@@ -283,27 +294,27 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Scenario</para>
+            /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>催收</para>
+            /// <para>Collection</para>
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>Script description</para>
+            /// <para>The description of the script.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>催收话术</para>
+            /// <para>Collection script</para>
             /// </summary>
             [NameInMap("ScriptDescription")]
             [Validation(Required=false)]
             public string ScriptDescription { get; set; }
 
             /// <summary>
-            /// <para>Script ID</para>
+            /// <para>The script ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>810b5872-57f0-4b27-80ab-7b3f4d8a6374</para>
@@ -313,17 +324,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>Script name</para>
+            /// <para>The name of the script.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>催收话术</para>
+            /// <para>Collection script</para>
             /// </summary>
             [NameInMap("ScriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// <para>Script status</para>
+            /// <para>The status of the script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DRAFTED</para>
@@ -333,7 +344,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>TTS configuration for the script</para>
+            /// <para>The text-to-speech (TTS) configuration of the script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -341,6 +352,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             ///     &quot;engine&quot;: &quot;ali&quot;,
             ///     &quot;engineXunfei&quot;: &quot;&quot;,
             ///     &quot;globalInterruptible&quot;: true,
+            ///         &quot;closingStatementInterruptible&quot;: false, &quot;openingPromptInterruptible&quot;: false,
             ///     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
             ///     &quot;pitchRate&quot;: &quot;0&quot;,
             ///     &quot;speechRate&quot;: &quot;0&quot;,
@@ -353,7 +365,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string TtsConfig { get; set; }
 
             /// <summary>
-            /// <para>Time when the script was last updated</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578881227000</para>
@@ -365,7 +377,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

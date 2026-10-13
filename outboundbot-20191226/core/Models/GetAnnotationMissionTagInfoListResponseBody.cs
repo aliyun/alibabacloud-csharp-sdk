@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAnnotationMissionTagInfoListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,31 +20,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAnnotationMissionTagInfoListResponseBodyData Data { get; set; }
         public class GetAnnotationMissionTagInfoListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Tag list</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("AnnotationMissionTagInfoList")]
             [Validation(Required=false)]
             public List<GetAnnotationMissionTagInfoListResponseBodyDataAnnotationMissionTagInfoList> AnnotationMissionTagInfoList { get; set; }
             public class GetAnnotationMissionTagInfoListResponseBodyDataAnnotationMissionTagInfoList : TeaModel {
                 /// <summary>
-                /// <para>Tag description</para>
+                /// <para>The tag description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用户投诉</para>
+                /// <para>User complaint</para>
                 /// </summary>
                 [NameInMap("AnnotationMissionTagInfoDescription")]
                 [Validation(Required=false)]
                 public string AnnotationMissionTagInfoDescription { get; set; }
 
                 /// <summary>
-                /// <para>Tag ID</para>
+                /// <para>The tag ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e1ee87ea-ebad-4079-aebb-1c56a4ef0c06</para>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string AnnotationMissionTagInfoId { get; set; }
 
                 /// <summary>
-                /// <para>Tag name</para>
+                /// <para>The tag name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用户投诉</para>
+                /// <para>User complaint</para>
                 /// </summary>
                 [NameInMap("AnnotationMissionTagInfoName")]
                 [Validation(Required=false)]
                 public string AnnotationMissionTagInfoName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the tag is deleted. A value of true indicates that the tag is deleted.</para>
+                /// <para>Indicates whether the tag is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? Delete { get; set; }
 
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3c3b8d1d-deff-48d9-9318-addc80ae5b1e</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Tenant ID</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DING_ORG_dingbd9daecdb7aaed3bffe93478753d9884</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Response message</para>
+            /// <para>The message returned by the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call succeeded. A value of true indicates success. A value of false indicates failure.</para>
+            /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

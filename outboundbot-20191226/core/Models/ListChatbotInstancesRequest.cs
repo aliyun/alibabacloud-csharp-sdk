@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListChatbotInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Workspace access key for the chatbot.</para>
+        /// <para>The access key of the chatbot workspace.</para>
         /// <remarks>
-        /// <para>Get this key by calling ListChatbotAgents. If you omit this parameter, the API returns instances from all workspaces.</para>
+        /// <para>You can obtain the value by calling the ListChatbotAgents operation. If you leave this parameter empty, chatbots in all workspaces are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <remarks>
-        /// <para>The value must be less than or equal to 50.</para>
+        /// <para>The value of this parameter must be less than or equal to 50.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

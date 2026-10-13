@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListDownloadTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Download task list</para>
+        /// <para>The list of download tasks.</para>
         /// </summary>
         [NameInMap("DownloadTasks")]
         [Validation(Required=false)]
         public ListDownloadTasksResponseBodyDownloadTasks DownloadTasks { get; set; }
         public class ListDownloadTasksResponseBodyDownloadTasks : TeaModel {
             /// <summary>
-            /// <para>Download task array</para>
+            /// <para>The array of download tasks.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListDownloadTasksResponseBodyDownloadTasksList> List { get; set; }
             public class ListDownloadTasksResponseBodyDownloadTasksList : TeaModel {
                 /// <summary>
-                /// <para>Download task file list</para>
+                /// <para>The list of files for the download task.</para>
                 /// </summary>
                 [NameInMap("DownloadTaskFiles")]
                 [Validation(Required=false)]
                 public List<ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles> DownloadTaskFiles { get; set; }
                 public class ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles : TeaModel {
                     /// <summary>
-                    /// <para>File ID</para>
+                    /// <para>The file ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>01f8d11abdb9406996c0c46e7*******</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string FileId { get; set; }
 
                     /// <summary>
-                    /// <para>Completion progress [Deprecated]</para>
+                    /// <para><b>[Deprecated]</b> The completion progress.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -61,20 +61,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? Progress { get; set; }
 
                     /// <summary>
-                    /// <para>File status</para>
+                    /// <para>The file status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Pending: Pending</para>
-                    /// </description></item>
-                    /// <item><description><para>InProgress: In progress</para>
-                    /// </description></item>
-                    /// <item><description><para>Finished: Completed</para>
-                    /// </description></item>
-                    /// <item><description><para>Failed: Failed</para>
-                    /// </description></item>
-                    /// <item><description><para>Expired: Expired</para>
-                    /// </description></item>
-                    /// <item><description><para>Cancelled: Canceled</para>
-                    /// </description></item>
+                    /// <item><description>Pending: Pending.</description></item>
+                    /// <item><description>InProgress: In progress.</description></item>
+                    /// <item><description>Finished: Finished.</description></item>
+                    /// <item><description>Failed: Failed.</description></item>
+                    /// <item><description>Expired: Expired.</description></item>
+                    /// <item><description>Cancelled: Cancelled.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -85,10 +79,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>Title</para>
+                    /// <para>The title.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>GUI-TEST-新建风险</para>
+                    /// <para>GUI-TEST-Create risk</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -97,7 +91,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1646792941</para>
@@ -107,20 +101,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>Export status.</para>
+                /// <para>The export status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pending: Pending</para>
-                /// </description></item>
-                /// <item><description><para>InProgress: In progress</para>
-                /// </description></item>
-                /// <item><description><para>Finished: Completed</para>
-                /// </description></item>
-                /// <item><description><para>Failed: Failed</para>
-                /// </description></item>
-                /// <item><description><para>Expired: Expired</para>
-                /// </description></item>
-                /// <item><description><para>Cancelled: Canceled</para>
-                /// </description></item>
+                /// <item><description>Pending: Pending.</description></item>
+                /// <item><description>InProgress: In progress.</description></item>
+                /// <item><description>Finished: Finished.</description></item>
+                /// <item><description>Failed: Failed.</description></item>
+                /// <item><description>Expired: Expired.</description></item>
+                /// <item><description>Cancelled: Cancelled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Task ID</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6b0e547e-501c-480a-812f-d27e28e74f9a</para>
@@ -141,10 +129,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>Title</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>GUI-TEST-新建风险</para>
+                /// <para>GUI-TEST-Create risk</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -153,7 +141,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -163,7 +151,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Count</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -173,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total count</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -185,7 +173,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -195,7 +183,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API message</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -205,7 +193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>904CFA7B-8AD9-50FF-9B3E-404B20B9EE31</para>
@@ -215,7 +203,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

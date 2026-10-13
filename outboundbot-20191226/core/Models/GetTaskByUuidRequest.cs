@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetTaskByUuidRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Task ID</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>Include conversation details</para>
+        /// <para>Specifies whether to include conversation information.</para>
         /// <remarks>
-        /// <para>The default value is false.</para>
+        /// <para>Default value: false.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

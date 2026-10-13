@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The contact list.</para>
+        /// <para>The contact whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public GetContactWhiteListResponseBodyContactWhitelistList ContactWhitelistList { get; set; }
         public class GetContactWhiteListResponseBodyContactWhitelistList : TeaModel {
             /// <summary>
-            /// <para>The contact list.</para>
+            /// <para>The contact whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ContactWhiteListId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640174411848</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John Smith</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The API response message.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

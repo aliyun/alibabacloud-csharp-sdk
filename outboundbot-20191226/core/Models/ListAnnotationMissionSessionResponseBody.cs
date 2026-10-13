@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAnnotationMissionSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API call.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AnnotationMissionId { get; set; }
 
             /// <summary>
-            /// <para>The list of sessions.</para>
+            /// <para>The session list.</para>
             /// </summary>
             [NameInMap("AnnotationMissionSessionList")]
             [Validation(Required=false)]
             public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionList> AnnotationMissionSessionList { get; set; }
             public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionList : TeaModel {
                 /// <summary>
-                /// <para>The list of chats.</para>
+                /// <para>The chat list.</para>
                 /// </summary>
                 [NameInMap("AnnotationMissionChatList")]
                 [Validation(Required=false)]
                 public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatList> AnnotationMissionChatList { get; set; }
                 public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatList : TeaModel {
                     /// <summary>
-                    /// <para>The result of manual ASR annotation, used to calculate character accuracy.</para>
+                    /// <para>The manual ASR annotation text result, which is used to calculate the character accuracy rate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[]</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string AnnotationAsrResult { get; set; }
 
                     /// <summary>
-                    /// <para>The table of language model annotation information for the annotation task chat.</para>
+                    /// <para>The language model annotation information list for the chat annotation task.</para>
                     /// </summary>
                     [NameInMap("AnnotationMissionChatCustomizationDataInfoList")]
                     [Validation(Required=false)]
                     public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList> AnnotationMissionChatCustomizationDataInfoList { get; set; }
                     public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList : TeaModel {
                         /// <summary>
-                        /// <para>The ID.</para>
+                        /// <para>ID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionChatCustomizationDataInfoId { get; set; }
 
                         /// <summary>
-                        /// <para>The chat ID.</para>
+                        /// <para>ChatID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -108,17 +108,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionSessionId { get; set; }
 
                         /// <summary>
-                        /// <para>The text of the voice annotation.</para>
+                        /// <para>The speech annotation text.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>抱歉哈，可能给您造成困扰了，这边先不打扰您，祝您生活愉快，再见</para>
+                        /// <para>I apologize for any inconvenience caused. I will not bother you anymore. Have a nice day and goodbye</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
                         public string Content { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the data is created.</para>
+                        /// <para>Indicates whether the item is created.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public bool? Create { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the information was created.</para>
+                        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1682216045619</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         /// <para>The description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>默认数据</para>
+                        /// <para>Default data</para>
                         /// </summary>
                         [NameInMap("CustomizationDataDescription")]
                         [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         /// <para>The name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>默认数据</para>
+                        /// <para>Default data</para>
                         /// </summary>
                         [NameInMap("CustomizationDataName")]
                         [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public int? CustomizationDataWeight { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the data is deleted.</para>
+                        /// <para>Indicates whether the item is deleted.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the information was last modified.</para>
+                        /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1679552585384</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>The chat ID.</para>
+                    /// <para>chat id</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>40669e52-c1c8-487f-9593-29749086bdc9</para>
@@ -220,14 +220,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string AnnotationMissionChatId { get; set; }
 
                     /// <summary>
-                    /// <para>The list of chat intents.</para>
+                    /// <para>The chat intent list.</para>
                     /// </summary>
                     [NameInMap("AnnotationMissionChatIntentUserSayInfoList")]
                     [Validation(Required=false)]
                     public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList> AnnotationMissionChatIntentUserSayInfoList { get; set; }
                     public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList : TeaModel {
                         /// <summary>
-                        /// <para>The chat ID.</para>
+                        /// <para>ChatID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>77343553-cbc2-4487-a35c-869f1e86c573</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionChatId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID.</para>
+                        /// <para>ID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionSessionId { get; set; }
 
                         /// <summary>
-                        /// <para>The bot ID.</para>
+                        /// <para>The robot ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>77343553-cbc2-4487-a35c-869f1e86c573</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string BotId { get; set; }
 
                         /// <summary>
-                        /// <para>The modified query.</para>
+                        /// <para>The modified question.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[]</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Content { get; set; }
 
                         /// <summary>
-                        /// <para>Created.</para>
+                        /// <para>Indicates whether the item is created.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public bool? Create { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the intent was created.</para>
+                        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1682216045619</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public long? CreateTime { get; set; }
 
                         /// <summary>
-                        /// <para>Deleted</para>
+                        /// <para>Indicates whether the item is deleted.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public long? IntentId { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the intent was last modified.</para>
+                        /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1682216045619</para>
@@ -359,14 +359,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of mappings between chat annotation information and attached tags.</para>
+                    /// <para>The list of tag mappings bound to the annotation chat.</para>
                     /// </summary>
                     [NameInMap("AnnotationMissionChatTagInfoList")]
                     [Validation(Required=false)]
                     public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList> AnnotationMissionChatTagInfoList { get; set; }
                     public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList : TeaModel {
                         /// <summary>
-                        /// <para>The chat ID.</para>
+                        /// <para>ChatID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionChatId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the chat tag information for the comment.</para>
+                        /// <para>The ID of the annotation chat tag.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionSessionId { get; set; }
 
                         /// <summary>
-                        /// <para>The tag ID.</para>
+                        /// <para>TagID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -416,17 +416,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionTagInfoId { get; set; }
 
                         /// <summary>
-                        /// <para>The tag name.</para>
+                        /// <para>The name of the tag.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>标签</para>
+                        /// <para>Tag</para>
                         /// </summary>
                         [NameInMap("AnnotationMissionTagInfoName")]
                         [Validation(Required=false)]
                         public string AnnotationMissionTagInfoName { get; set; }
 
                         /// <summary>
-                        /// <para>Create</para>
+                        /// <para>Indicates whether the item is created.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public bool? Create { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the tag was created.</para>
+                        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1686797050000</para>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public long? CreateTime { get; set; }
 
                         /// <summary>
-                        /// <para>Delete.</para>
+                        /// <para>Indicates whether the item is deleted.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the tag was last modified.</para>
+                        /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1679019660000</para>
@@ -478,14 +478,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>The table of hotword annotation information for the annotation task chat.</para>
+                    /// <para>The hot word annotation information list for the chat annotation task.</para>
                     /// </summary>
                     [NameInMap("AnnotationMissionChatVocabularyInfoList")]
                     [Validation(Required=false)]
                     public List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList> AnnotationMissionChatVocabularyInfoList { get; set; }
                     public class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList : TeaModel {
                         /// <summary>
-                        /// <para>The chat ID.</para>
+                        /// <para>ChatID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>77343553-cbc2-4487-a35c-869f1e86c573</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionChatId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID.</para>
+                        /// <para>ID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string AnnotationMissionSessionId { get; set; }
 
                         /// <summary>
-                        /// <para>Created</para>
+                        /// <para>Indicates whether the item is created.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public bool? Create { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the resource was created.</para>
+                        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1675218421941</para>
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public long? CreateTime { get; set; }
 
                         /// <summary>
-                        /// <para>Deleted</para>
+                        /// <para>Indicates whether the item is deleted.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -565,7 +565,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the hotword was last modified.</para>
+                        /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1676272557653</para>
@@ -575,7 +575,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public long? ModifiedTime { get; set; }
 
                         /// <summary>
-                        /// <para>The content of the hotword annotation.</para>
+                        /// <para>The hot word annotation content.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[]</para>
@@ -588,14 +588,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         /// <para>The description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>描述</para>
+                        /// <para>Description</para>
                         /// </summary>
                         [NameInMap("VocabularyDescription")]
                         [Validation(Required=false)]
                         public string VocabularyDescription { get; set; }
 
                         /// <summary>
-                        /// <para>The hotword ID.</para>
+                        /// <para>The hot word ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>77343553-cbc2-4487-a35c-869f1e86c573</para>
@@ -605,17 +605,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string VocabularyId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the vocabulary.</para>
+                        /// <para>The vocabulary name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>名称</para>
+                        /// <para>Name</para>
                         /// </summary>
                         [NameInMap("VocabularyName")]
                         [Validation(Required=false)]
                         public string VocabularyName { get; set; }
 
                         /// <summary>
-                        /// <para>The weight of the hotword. The value ranges from -6 to 5.</para>
+                        /// <para>The hot word weight. Valid values: -6 to 5.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -627,7 +627,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>The task ID.</para>
+                    /// <para>The annotation mission ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>03f56192-fa8a-40dc-9558-39b357f0618f</para>
@@ -647,16 +647,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string AnnotationMissionSessionId { get; set; }
 
                     /// <summary>
-                    /// <para>The annotation status of the chat.</para>
+                    /// <para>The chat annotation status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: UNDO</para>
-                    /// </description></item>
-                    /// <item><description><para>1: DOING</para>
-                    /// </description></item>
-                    /// <item><description><para>2: DONE</para>
-                    /// </description></item>
-                    /// <item><description><para>3: CLOSED</para>
-                    /// </description></item>
+                    /// <item><description>0: Pending (UNDO).</description></item>
+                    /// <item><description>1: In progress (DOING).</description></item>
+                    /// <item><description>2: Completed (DONE).</description></item>
+                    /// <item><description>3: Canceled (CLOSED).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -667,7 +663,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? AnnotationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The content of the bot\&quot;s reply.</para>
+                    /// <para>The reply content of the robot.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;Answer\&quot;: u\&quot;\u53c2\u8003\u6587\u6863\uff1a<a href="https://help.aliyun.com/document_detail/215402.html%5C%5C">https://help.aliyun.com/document_detail/215402.html\\</a>&quot;, \&quot;QuestionId\&quot;: 371159, \&quot;Uuid\&quot;: \&quot;ac14000116781568127896224d0044\&quot;}</para>
@@ -677,16 +673,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Answer { get; set; }
 
                     /// <summary>
-                    /// <para>The status of Automatic Speech Recognition (ASR) annotation.</para>
+                    /// <para>The ASR annotation status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: UNDO</para>
-                    /// </description></item>
-                    /// <item><description><para>1: DOING</para>
-                    /// </description></item>
-                    /// <item><description><para>2: DONE</para>
-                    /// </description></item>
-                    /// <item><description><para>3: CLOSED</para>
-                    /// </description></item>
+                    /// <item><description>0: Pending (UNDO).</description></item>
+                    /// <item><description>1: In progress (DOING).</description></item>
+                    /// <item><description>2: Completed (DONE).</description></item>
+                    /// <item><description>3: Canceled (CLOSED).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -697,7 +689,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? AsrAnnotationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the chat was created.</para>
+                    /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1682216045619</para>
@@ -717,16 +709,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The status of semantic tagging.</para>
+                    /// <para>The semantic annotation status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: UNDO</para>
-                    /// </description></item>
-                    /// <item><description><para>1: DOING</para>
-                    /// </description></item>
-                    /// <item><description><para>2: DONE</para>
-                    /// </description></item>
-                    /// <item><description><para>3: CLOSED</para>
-                    /// </description></item>
+                    /// <item><description>0: Pending (UNDO).</description></item>
+                    /// <item><description>1: In progress (DOING).</description></item>
+                    /// <item><description>2: Completed (DONE).</description></item>
+                    /// <item><description>3: Canceled (CLOSED).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -737,7 +725,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? IntentAnnotationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the chat was last modified.</para>
+                    /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1571649300000</para>
@@ -747,7 +735,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public long? ModifiedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the chat was triggered.</para>
+                    /// <para>The trigger time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1682390676403</para>
@@ -757,7 +745,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public long? OccurTime { get; set; }
 
                     /// <summary>
-                    /// <para>The ASR result.</para>
+                    /// <para>The ASR recognition result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[]</para>
@@ -777,7 +765,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string SequenceId { get; set; }
 
                     /// <summary>
-                    /// <para>The annotation action. 1: Correct. 20: Matching error, not optimized. 21: Matching error, optimized. 3: Uncovered. 4: Invalid.</para>
+                    /// <para>The annotation action. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: Correct.</description></item>
+                    /// <item><description>20: Matching error, not optimized.</description></item>
+                    /// <item><description>21: Matching error, optimized.</description></item>
+                    /// <item><description>3: Not covered.</description></item>
+                    /// <item><description>4: Invalid.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -787,16 +782,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? SubStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The status of tag annotation.</para>
+                    /// <para>The tag annotation status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: UNDO</para>
-                    /// </description></item>
-                    /// <item><description><para>1: DOING</para>
-                    /// </description></item>
-                    /// <item><description><para>2: DONE</para>
-                    /// </description></item>
-                    /// <item><description><para>3: CLOSED</para>
-                    /// </description></item>
+                    /// <item><description>0: Pending (UNDO).</description></item>
+                    /// <item><description>1: In progress (DOING).</description></item>
+                    /// <item><description>2: Completed (DONE).</description></item>
+                    /// <item><description>3: Canceled (CLOSED).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -807,12 +798,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? TagAnnotationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates a transcription error.</para>
+                    /// <para>Indicates whether a transcription error occurred. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>0: No</para>
-                    /// </description></item>
-                    /// <item><description><para>1: Yes</para>
-                    /// </description></item>
+                    /// <item><description>0: No.</description></item>
+                    /// <item><description>1: Yes.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -825,7 +814,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>The task ID.</para>
+                /// <para>The annotation mission ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64ba5ac9-a4e1-4333-b03c-9d4a588c9f6c</para>
@@ -845,16 +834,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string AnnotationMissionSessionId { get; set; }
 
                 /// <summary>
-                /// <para>The annotation status.</para>
+                /// <para>The annotation status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: UNDO</para>
-                /// </description></item>
-                /// <item><description><para>1: DOING</para>
-                /// </description></item>
-                /// <item><description><para>2: DONE</para>
-                /// </description></item>
-                /// <item><description><para>3: CLOSED</para>
-                /// </description></item>
+                /// <item><description>0: Pending (UNDO).</description></item>
+                /// <item><description>1: In progress (DOING).</description></item>
+                /// <item><description>2: Completed (DONE).</description></item>
+                /// <item><description>3: Canceled (CLOSED).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -865,7 +850,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the session was created.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1691117009000</para>
@@ -875,7 +860,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Debug conversation</para>
+                /// <para>The debug conversation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -895,7 +880,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The task group ID.</para>
+                /// <para>The job group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2f642da1-b00b-4dd6-ac7d-dcbeefd13ff3</para>
@@ -915,7 +900,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the session was last modified.</para>
+                /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677987898384</para>
@@ -935,7 +920,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task in the outbound call system, or the ID of the conversation in the navigation system.</para>
+                /// <para>The session ID. This is the task ID for outbound robots and the conversation ID for voice navigator robots.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40669e52-c1c8-487f-9593-29749086bdc9</para>
@@ -957,7 +942,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Additional information. If the call is successful, \<c>success\\</c> is returned. If the call fails, a specific error code is returned.</para>
+            /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bp.java.nopowerContact</para>
@@ -967,7 +952,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call was successful. \<c>true\\</c> indicates success. \<c>false\\</c> indicates failure.</para>
+            /// <para>Indicates whether the call is successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The call is successful.</description></item>
+            /// <item><description>false: The call fails.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -977,7 +966,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -999,7 +988,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. If the call is successful, \<c>success\\</c> is returned. If the call fails, a specific error code is returned.</para>
+        /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bp.java.nopowerContact</para>
@@ -1019,7 +1008,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of \<c>true\\</c> indicates success. A value of \<c>false\\</c> indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

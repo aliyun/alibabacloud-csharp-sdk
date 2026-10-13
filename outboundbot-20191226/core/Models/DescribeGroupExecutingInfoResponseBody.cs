@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeGroupExecutingInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status code</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Execution information</para>
+        /// <para>The execution information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo ExecutingInfo { get; set; }
         public class DescribeGroupExecutingInfoResponseBodyExecutingInfo : TeaModel {
             /// <summary>
-            /// <para>Average talk time</para>
+            /// <para>The average call duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>258</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? AvgTalkTime { get; set; }
 
             /// <summary>
-            /// <para>Number of failed calls</para>
+            /// <para>The number of failed calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? CallFailedNum { get; set; }
 
             /// <summary>
-            /// <para>Number of outbound calls</para>
+            /// <para>The number of outbound calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? CallNum { get; set; }
 
             /// <summary>
-            /// <para>Deprecated</para>
+            /// <para><b>[Deprecated]</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>Call duration distribution</para>
+            /// <para>The distribution of call durations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;max&quot;:&quot;40&quot;,&quot;1&quot;:&quot;1&quot;,&quot;total&quot;:&quot;40&quot;,&quot;min&quot;:&quot;40&quot;}</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string DurationDistribution { get; set; }
 
             /// <summary>
-            /// <para>End time</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640087774563</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Number of completed executions</para>
+            /// <para>The number of completed jobs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? FinishedNum { get; set; }
 
             /// <summary>
-            /// <para>Number of calls hung up by customers</para>
+            /// <para>The number of customer-initiated hang-ups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? HangUpByClientNum { get; set; }
 
             /// <summary>
-            /// <para>Execution progress</para>
+            /// <para>The execution progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress JobsProgress { get; set; }
             public class DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress : TeaModel {
                 /// <summary>
-                /// <para>Number of canceled tasks</para>
+                /// <para>The number of canceled jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? CancelledNum { get; set; }
 
                 /// <summary>
-                /// <para>Number of executing jobs</para>
+                /// <para>The number of executing jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? ExecutingNum { get; set; }
 
                 /// <summary>
-                /// <para>Number of failed tasks</para>
+                /// <para>The number of failed jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? FailedNum { get; set; }
 
                 /// <summary>
-                /// <para>Number of paused tasks</para>
+                /// <para>The number of paused jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? PausedNum { get; set; }
 
                 /// <summary>
-                /// <para>Number of tasks being scheduled</para>
+                /// <para>The number of jobs being scheduled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SchedulingNum { get; set; }
 
                 /// <summary>
-                /// <para>Total number of completed tasks</para>
+                /// <para>The total number of completed jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? TotalCompletedNum { get; set; }
 
                 /// <summary>
-                /// <para>Total number of jobs</para>
+                /// <para>The total number of jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? TotalJobs { get; set; }
 
                 /// <summary>
-                /// <para>Number of unanswered calls</para>
+                /// <para>The total number of unanswered calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Number of calls with no interaction</para>
+            /// <para>The number of calls with no interaction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? NoInteractionNum { get; set; }
 
             /// <summary>
-            /// <para>Start time</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640087774563</para>
@@ -222,16 +222,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>Distribution of conversation rounds</para>
+            /// <para>The distribution of talk turns.</para>
             /// <list type="bullet">
-            /// <item><description><para>total: total number of conversation rounds involved</para>
-            /// </description></item>
-            /// <item><description><para>number: specific round number</para>
-            /// </description></item>
+            /// <item><description>total: The total number of talk turns involved.</description></item>
+            /// <item><description>Number: The corresponding turn count.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;1&quot;} means 5 conversation rounds were involved, and 1 call had 5 user turns.</description></item>
+            /// <item><description>Example: {&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;1&quot;} indicates that the total number of talk turns involved is 5, and there is 1 call with 5 user turns.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -243,7 +241,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string TalkTurnsDistribution { get; set; }
 
             /// <summary>
-            /// <para>Intent recognition</para>
+            /// <para>The number of intent recognitions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -253,7 +251,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? TransferByIntentNum { get; set; }
 
             /// <summary>
-            /// <para>No answer</para>
+            /// <para>The number of unanswered calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -265,7 +263,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>Task group ID</para>
+        /// <para>The job group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</para>
@@ -275,7 +273,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -285,7 +283,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c46001bc-3ead-4bfd-9a69-4b5b66a4a3f4</para>
@@ -295,7 +293,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>API message</para>
+        /// <para>The API response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -305,7 +303,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -315,7 +313,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

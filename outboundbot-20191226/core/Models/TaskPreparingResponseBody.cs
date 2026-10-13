@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succes</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e4e2a770-b97b-465a-80d8-06dca008c503</para>

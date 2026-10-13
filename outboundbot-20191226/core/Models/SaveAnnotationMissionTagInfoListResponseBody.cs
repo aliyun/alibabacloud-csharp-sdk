@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveAnnotationMissionTagInfoListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API call.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SaveAnnotationMissionTagInfoListResponseBodyData Data { get; set; }
         public class SaveAnnotationMissionTagInfoListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of successful operations.</para>
+            /// <para>The number of successfully executed operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? ExecCount { get; set; }
 
             /// <summary>
-            /// <para>The message returned for the API call.</para>
+            /// <para>The API response message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu，flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the API call.</para>
+        /// <para>The API response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu,flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</para>
@@ -89,7 +89,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

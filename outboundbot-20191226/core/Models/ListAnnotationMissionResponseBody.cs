@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAnnotationMissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListAnnotationMissionResponseBodyData Data { get; set; }
         public class ListAnnotationMissionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Annotation mission list</para>
+            /// <para>The list of annotation tasks.</para>
             /// </summary>
             [NameInMap("AnnotationMissionList")]
             [Validation(Required=false)]
             public List<ListAnnotationMissionResponseBodyDataAnnotationMissionList> AnnotationMissionList { get; set; }
             public class ListAnnotationMissionResponseBodyDataAnnotationMissionList : TeaModel {
                 /// <summary>
-                /// <para>Annotation data source type. 1: Outbound call. 2: Navigation.</para>
+                /// <para>The data source of the annotation task. Valid values: 1: Outbound call. 2: Navigation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationMissionDataSourceType { get; set; }
 
                 /// <summary>
-                /// <para>Annotation debug data source list</para>
+                /// <para>The list of debug data sources for the annotation task.</para>
                 /// <remarks>
-                /// <para>The response includes an extra 0. Valid responses are [0,1], [0,2], or [0,1,2].</para>
+                /// <para>Note: An additional 0 is included in the response. The return values are [0,1], [0,2], or [0,1,2].</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AnnotationMissionDebugDataSourceList")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<int?> AnnotationMissionDebugDataSourceList { get; set; }
 
                 /// <summary>
-                /// <para>Mission ID</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ddce607f-f537-4ebd-9914-cf45671defb9</para>
@@ -64,24 +64,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string AnnotationMissionId { get; set; }
 
                 /// <summary>
-                /// <para>Mission name</para>
+                /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>体验场景--移车-标注任务-20230220-141347</para>
+                /// <para>Experience scenario - Move vehicle - Annotation task - 20230220-141347</para>
                 /// </summary>
                 [NameInMap("AnnotationMissionName")]
                 [Validation(Required=false)]
                 public string AnnotationMissionName { get; set; }
 
                 /// <summary>
-                /// <para>Annotation status</para>
+                /// <para>The annotation status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: In progress</para>
-                /// </description></item>
-                /// <item><description><para>2: Completed</para>
-                /// </description></item>
-                /// <item><description><para>3: Closed</para>
-                /// </description></item>
+                /// <item><description>1: In progress.</description></item>
+                /// <item><description>2: Completed.</description></item>
+                /// <item><description>3: Closed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,7 +89,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationStatus { get; set; }
 
                 /// <summary>
-                /// <para>End time of the conversation time query condition for the annotation mission</para>
+                /// <para>The end time of the conversation time query condition for the annotation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1684511999000</para>
@@ -102,7 +99,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? ConversationTimeEndFilter { get; set; }
 
                 /// <summary>
-                /// <para>Start time of the conversation time query condition for the annotation mission</para>
+                /// <para>The start time of the conversation time query condition for the annotation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683216000000</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? ConversationTimeStartFilter { get; set; }
 
                 /// <summary>
-                /// <para>Creation time</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1676170339515</para>
@@ -122,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to exclude call records already annotated in other missions</para>
+                /// <para>Indicates whether to exclude call records that have been annotated in other tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -132,7 +129,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public bool? ExcludeOtherMissionSession { get; set; }
 
                 /// <summary>
-                /// <para>Completion time of the annotation mission</para>
+                /// <para>The completion time of the annotation task. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683443903785</para>
@@ -142,7 +139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32be9d94-1346-4c4a-a4d0-ccd379f87013</para>
@@ -152,7 +149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Maximum sampling count limit</para>
+                /// <para>The maximum limit for the sampling count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -162,17 +159,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SamplingCount { get; set; }
 
                 /// <summary>
-                /// <para>Sampling description</para>
+                /// <para>The sampling description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>标注</para>
+                /// <para>Annotation</para>
                 /// </summary>
                 [NameInMap("SamplingDescription")]
                 [Validation(Required=false)]
                 public string SamplingDescription { get; set; }
 
                 /// <summary>
-                /// <para>Sampling rate</para>
+                /// <para>The sampling rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -182,7 +179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SamplingRate { get; set; }
 
                 /// <summary>
-                /// <para>Sampling type</para>
+                /// <para>The sampling type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -192,30 +189,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SamplingType { get; set; }
 
                 /// <summary>
-                /// <para>List of session end reason types used when creating the mission</para>
+                /// <para>The list of call end reasons used to create the task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: Normal completion</para>
-                /// </description></item>
-                /// <item><description><para>2: Bot hangup after rejection</para>
-                /// </description></item>
-                /// <item><description><para>3: Hangup due to silence timeout</para>
-                /// </description></item>
-                /// <item><description><para>4: User hangup after rejection</para>
-                /// </description></item>
-                /// <item><description><para>5: User hangup without reason</para>
-                /// </description></item>
-                /// <item><description><para>6: Transfer to agent after intent match</para>
-                /// </description></item>
-                /// <item><description><para>7: Transfer to agent after rejection</para>
-                /// </description></item>
-                /// <item><description><para>8: No interaction from user side</para>
-                /// </description></item>
-                /// <item><description><para>9: System exception interruption</para>
-                /// </description></item>
-                /// <item><description><para>10: Transfer to IVR after intent match</para>
-                /// </description></item>
-                /// <item><description><para>11: Transfer to IVR after rejection</para>
-                /// </description></item>
+                /// <item><description>1: Normal completion.</description></item>
+                /// <item><description>2: Hang up by the robot after unrecognized input.</description></item>
+                /// <item><description>3: Hang up due to silence timeout.</description></item>
+                /// <item><description>4: Hang up by the user after unrecognized input.</description></item>
+                /// <item><description>5: Hang up by the user without a reason.</description></item>
+                /// <item><description>6: Transfer to a human agent due to intent match.</description></item>
+                /// <item><description>7: Transfer to a human agent after unrecognized input.</description></item>
+                /// <item><description>8: No interaction on the user side.</description></item>
+                /// <item><description>9: Interruption due to a system exception.</description></item>
+                /// <item><description>10: Transfer to IVR due to intent match.</description></item>
+                /// <item><description>11: Transfer to IVR after unrecognized input.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("SessionEndReasonFilterList")]
@@ -223,7 +209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<int?> SessionEndReasonFilterList { get; set; }
 
                 /// <summary>
-                /// <para>Number of completed sessions in the annotation mission</para>
+                /// <para>The number of completed sessions in the annotation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -233,7 +219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SessionFinishCount { get; set; }
 
                 /// <summary>
-                /// <para>Total number of sessions in the annotation mission</para>
+                /// <para>The total number of sessions in the annotation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -245,7 +231,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Additional information. Returns success for normal requests. Returns a specific error code for abnormal requests.</para>
+            /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</para>
@@ -255,7 +241,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -265,7 +251,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? PageIndex { get; set; }
 
             /// <summary>
-            /// <para>Number of entries per page</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -275,7 +261,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call succeeded. true: succeeded. false: failed.</para>
+            /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -285,7 +271,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>Total count</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -295,7 +281,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -307,7 +293,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -317,7 +303,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. Returns success for normal requests. Returns a specific error code for abnormal requests.</para>
+        /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</para>
@@ -327,7 +313,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -337,7 +323,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded. true: succeeded. false: failed.</para>
+        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

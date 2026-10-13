@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAgentProfileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent configuration.</para>
+        /// <para>The agent profile ID.</para>
         /// <remarks>
-        /// <para>The agent configuration ID for a created scenario is available in the ChatbotId parameter returned by the DescribeScript operation.</para>
+        /// <para>You can obtain the agent profile ID of a created scenario from the ChatbotId response parameter of DescribeScript.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AgentProfileId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the application. This is a system field and is optional.</para>
+        /// <para>The app IP address. This is a system field and is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>

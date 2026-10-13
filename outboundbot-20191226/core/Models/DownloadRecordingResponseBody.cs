@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DownloadRecordingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interface status code.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,18 +20,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the file.</para>
+        /// <para>The download URL.</para>
         /// </summary>
         [NameInMap("DownloadParams")]
         [Validation(Required=false)]
         public DownloadRecordingResponseBodyDownloadParams DownloadParams { get; set; }
         public class DownloadRecordingResponseBodyDownloadParams : TeaModel {
+            /// <summary>
+            /// <para>The signed download URL for the early media recording file.</para>
+            /// </summary>
             [NameInMap("EarlyMediaSignatureUrl")]
             [Validation(Required=false)]
             public string EarlyMediaSignatureUrl { get; set; }
 
             /// <summary>
-            /// <para>The recording file name, which is typically a UUID.</para>
+            /// <para>The name of the recording file, which is typically a UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>281eb174-3865-41c1-9274-7b6813edadab.wav</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>A URL that points to the recording file. Use HTTP to download the file.</para>
+            /// <para>The URL used to download the recording file over HTTP.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string SignatureUrl { get; set; }
 
             /// <summary>
-            /// <para>The list of segmented recordings, including file names and file URLs.</para>
+            /// <para>The list of segmented recordings, including the file names and file URLs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;fileName&quot;:&quot;10a17c447415424c99491884abe27d8a-1.wav&quot;,&quot;filePath&quot;:&quot;<a href="https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&OSSAccessKeyId=LTA*********kr8M9&Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D%22%7D%5D">https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&amp;OSSAccessKeyId=LTA*********kr8M9&amp;Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D&quot;}]</a></para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The interface prompt message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAnnotationMissionTagInfoListRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system returns the default tags for the tenant.</para>
+        /// <para>If this parameter is not specified, the default tags of the tenant are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

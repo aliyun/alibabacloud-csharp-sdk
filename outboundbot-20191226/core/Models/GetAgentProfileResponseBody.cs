@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public GetAgentProfileResponseBodyData Data { get; set; }
         public class GetAgentProfileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the agent configuration.</para>
+            /// <para>The agent profile ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d31794e2a51f47d2901b4094d88311d7</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentProfileId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the agent configuration template.</para>
+            /// <para>The agent profile template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-survey</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AgentProfileTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The agent type.</para>
+            /// <para>agent type</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ApiPluginJson { get; set; }
 
             /// <summary>
-            /// <para>The time when the configuration was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741338619000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一个大模型机器人</para>
+            /// <para>This is a large language model chatbot</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstructionJson { get; set; }
 
             /// <summary>
-            /// <para>The description of the labels.</para>
+            /// <para>The label descriptions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;name\&quot;:\&quot;是否送达\&quot;,\&quot;description\&quot;:\&quot;购买的家电是否已经送达\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;是\\\&quot;,\\\&quot;否\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;预约上门时间\&quot;,\&quot;description\&quot;:\&quot;收集客户期望的上门安装时间\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
+            /// <para>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;On-site Appointment Time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
             /// </summary>
             [NameInMap("LabelsJson")]
             [Validation(Required=false)]
@@ -137,18 +137,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModelConfig { get; set; }
 
             /// <summary>
-            /// <para>The Natural Language Understanding (NLU) configuration. The parameters are described as follows:</para>
+            /// <para>The NLU configuration. Parameter settings:</para>
             /// <list type="bullet">
-            /// <item><description><para>chatbotInstanceId: The instance ID of the ChatMe LLM agent.</para>
-            /// </description></item>
-            /// <item><description><para>faqCategoryIds: The IDs of the attached FAQ categories.</para>
-            /// </description></item>
-            /// <item><description><para>llmAgentId: The ID of the ChatMe LLM workspace.</para>
-            /// </description></item>
-            /// <item><description><para>llmAgentKey: The key of the ChatMe LLM workspace.</para>
-            /// </description></item>
-            /// <item><description><para>llmAgentInstanceId: The instance ID of the ChatMe LLM workspace.</para>
-            /// </description></item>
+            /// <item><description>chatbotInstanceId: the instance ID of the Chatbot large language model.</description></item>
+            /// <item><description>faqCategoryIds: the IDs of the attached FAQ categories.</description></item>
+            /// <item><description>llmAgentId: the workspace ID of the Chatbot large language model.</description></item>
+            /// <item><description>llmAgentKey: the workspace key of the Chatbot large language model.</description></item>
+            /// <item><description>llmAgentInstanceId: the workspace instance ID of the Chatbot large language model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +154,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string NluConfigJson { get; set; }
 
             /// <summary>
-            /// <para>The prompt for the professional pattern.</para>
+            /// <para>The prompt in professional mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -172,7 +167,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The agent configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;name&quot;:&quot;小x&quot;,&quot;gender&quot;:&quot;男&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;游戏推广员&quot;,&quot;communicationStyle&quot;:[&quot;亲切&quot;],&quot;goals&quot;:&quot;你好&quot;,&quot;background&quot;:&quot;不是很好&quot;,&quot;openingPrompt&quot;:&quot;你好，我是xxx&quot;}</para>
+            /// <para>{&quot;name&quot;:&quot;Xiao X&quot;,&quot;gender&quot;:&quot;Male&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;Game Promoter&quot;,&quot;communicationStyle&quot;:[&quot;Friendly&quot;],&quot;goals&quot;:&quot;Hello&quot;,&quot;background&quot;:&quot;Not very good&quot;,&quot;openingPrompt&quot;:&quot;Hello, I am XXX&quot;}</para>
             /// </summary>
             [NameInMap("PromptJson")]
             [Validation(Required=false)]
@@ -182,7 +177,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试场景</para>
+            /// <para>Test scenario</para>
             /// </summary>
             [NameInMap("Scenario")]
             [Validation(Required=false)]
@@ -209,7 +204,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? System { get; set; }
 
             /// <summary>
-            /// <para>The time when the configuration was last modified.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741338619000</para>
@@ -222,7 +217,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The variable configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;客户姓名\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;客户性别\&quot;}]</para>
+            /// <para>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;Customer name\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;Customer gender\&quot;}]</para>
             /// </summary>
             [NameInMap("VariablesJson")]
             [Validation(Required=false)]
@@ -261,7 +256,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

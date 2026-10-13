@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Chatbot list details</para>
+        /// <para>The list of chatbots.</para>
         /// </summary>
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
             /// <summary>
-            /// <para>Profile picture URL.</para>
+            /// <para>The URL of the avatar.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8">https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-18T02:36:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e874fcf0-d2f4-4e62-9377-b6f35fe55210</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Chatbot description.</para>
+            /// <para>The description of the chatbot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是直播的描述</para>
+            /// <para>This is the description for the live stream</para>
             /// </summary>
             [NameInMap("Introduction")]
             [Validation(Required=false)]
             public string Introduction { get; set; }
 
             /// <summary>
-            /// <para>Language used by the chatbot, such as zh-cn or en-us.</para>
+            /// <para>The language of the chatbot service, such as zh-cn and en-us.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-cn</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string LanguageCode { get; set; }
 
             /// <summary>
-            /// <para>Chatbot name.</para>
+            /// <para>The name of the chatbot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>智能回访2</para>
+            /// <para>Smart Callback 2</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Time zone of the chatbot. See Common Time Zone Codes.</para>
+            /// <para>The time zone of the chatbot. For more information, see Public - Time Zone Codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

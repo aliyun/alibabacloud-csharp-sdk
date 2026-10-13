@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListJobGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to retrieve the query results asynchronously.</para>
+        /// <para>Specifies whether to asynchronously obtain the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? AsyncQuery { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the query, based on the creation time of the job group. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time to filter job groups by creation time. Use a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1579965079000</para>
@@ -41,24 +41,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by job status. To specify multiple statuses, separate them with commas. The statuses are combined with a logical OR. Valid values:</para>
+        /// <para>The filter condition. Filters by job status. You can specify multiple statuses separated by commas. The logical OR operator is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Draft</b>: The job group is a draft.</para>
-        /// </description></item>
-        /// <item><description><para><b>Scheduling</b>: The job group is being scheduled.</para>
-        /// </description></item>
-        /// <item><description><para><b>Executing</b>: The job group is executing.</para>
-        /// </description></item>
-        /// <item><description><para><b>Completed</b>: The job group has completed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Paused</b>: The job group is paused.</para>
-        /// </description></item>
-        /// <item><description><para><b>Failed</b>: The job group has failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Cancelled</b>: The job group is canceled.</para>
-        /// </description></item>
-        /// <item><description><para><b>Initializing</b>: The job group is initializing.</para>
-        /// </description></item>
+        /// <item><description><b>Draft</b>: Draft.</description></item>
+        /// <item><description><b>Scheduling</b>: Scheduling.</description></item>
+        /// <item><description><b>Executing</b>: Executing.</description></item>
+        /// <item><description><b>Completed</b>: Completed.</description></item>
+        /// <item><description><b>Paused</b>: Paused.</description></item>
+        /// <item><description><b>Failed</b>: Failed.</description></item>
+        /// <item><description><b>Cancelled</b>: Cancelled.</description></item>
+        /// <item><description><b>Initializing</b>: Initializing.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +61,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupStatusFilter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only job groups with minimum concurrency enabled.</para>
+        /// <para>Specifies whether to query tasks with a valid minimum concurrency guarantee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -90,7 +82,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,17 +93,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search text.</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>面试</para>
+        /// <para>Interview</para>
         /// </summary>
         [NameInMap("SearchText")]
         [Validation(Required=false)]
         public string SearchText { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range for the query, based on the creation time of the job group. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time to filter job groups by creation time. Use a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1578965079000</para>

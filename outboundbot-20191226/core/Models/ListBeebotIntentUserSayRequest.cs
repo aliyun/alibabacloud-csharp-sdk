@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListBeebotIntentUserSayRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword in the user utterance.</para>
+        /// <para>The keyword in the utterance content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>知道</para>
+        /// <para>know</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to display on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

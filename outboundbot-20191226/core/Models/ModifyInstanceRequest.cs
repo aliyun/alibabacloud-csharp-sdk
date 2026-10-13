@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>A list of calling numbers.</para>
+        /// <para>The list of caller numbers.</para>
         /// <remarks>
-        /// <para>This parameter is optional.</para>
+        /// <para>By default, this parameter is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是新的实例</para>
+        /// <para>This is a new instance</para>
         /// </summary>
         [NameInMap("InstanceDescription")]
         [Validation(Required=false)]
         public string InstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Outbound Bot instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>新实例</para>
+        /// <para>New instance</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
