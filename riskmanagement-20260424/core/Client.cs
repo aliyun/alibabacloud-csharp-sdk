@@ -1539,6 +1539,126 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Immediately ends a penetration test.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndPenetrationTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndPenetrationTestResponse
+        /// </returns>
+        public EndPenetrationTestResponse EndPenetrationTestWithOptions(EndPenetrationTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndPenetrationTest",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndPenetrationTestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately ends a penetration test.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndPenetrationTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndPenetrationTestResponse
+        /// </returns>
+        public async Task<EndPenetrationTestResponse> EndPenetrationTestWithOptionsAsync(EndPenetrationTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndPenetrationTest",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndPenetrationTestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately ends a penetration test.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndPenetrationTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndPenetrationTestResponse
+        /// </returns>
+        public EndPenetrationTestResponse EndPenetrationTest(EndPenetrationTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EndPenetrationTestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately ends a penetration test.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndPenetrationTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndPenetrationTestResponse
+        /// </returns>
+        public async Task<EndPenetrationTestResponse> EndPenetrationTestAsync(EndPenetrationTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EndPenetrationTestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 
@@ -4291,6 +4411,254 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestDetailResponse
+        /// </returns>
+        public QueryPenetrationTestDetailResponse QueryPenetrationTestDetailWithOptions(QueryPenetrationTestDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPenetrationTestDetail",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPenetrationTestDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestDetailResponse
+        /// </returns>
+        public async Task<QueryPenetrationTestDetailResponse> QueryPenetrationTestDetailWithOptionsAsync(QueryPenetrationTestDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPenetrationTestDetail",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPenetrationTestDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestDetailResponse
+        /// </returns>
+        public QueryPenetrationTestDetailResponse QueryPenetrationTestDetail(QueryPenetrationTestDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryPenetrationTestDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestDetailResponse
+        /// </returns>
+        public async Task<QueryPenetrationTestDetailResponse> QueryPenetrationTestDetailAsync(QueryPenetrationTestDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryPenetrationTestDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询渗透测试申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestListResponse
+        /// </returns>
+        public QueryPenetrationTestListResponse QueryPenetrationTestListWithOptions(QueryPenetrationTestListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPenetrationTestList",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPenetrationTestListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询渗透测试申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestListResponse
+        /// </returns>
+        public async Task<QueryPenetrationTestListResponse> QueryPenetrationTestListWithOptionsAsync(QueryPenetrationTestListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPenetrationTestList",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPenetrationTestListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询渗透测试申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestListResponse
+        /// </returns>
+        public QueryPenetrationTestListResponse QueryPenetrationTestList(QueryPenetrationTestListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryPenetrationTestListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询渗透测试申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPenetrationTestListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPenetrationTestListResponse
+        /// </returns>
+        public async Task<QueryPenetrationTestListResponse> QueryPenetrationTestListAsync(QueryPenetrationTestListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryPenetrationTestListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries cloud resource control events.</para>
         /// </summary>
         /// 
@@ -5199,6 +5567,198 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitApplyRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPenetrationTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPenetrationTestResponse
+        /// </returns>
+        public SubmitPenetrationTestResponse SubmitPenetrationTestWithOptions(SubmitPenetrationTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetList))
+            {
+                query["AssetList"] = request.AssetList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsThirdpartyTest))
+            {
+                query["IsThirdpartyTest"] = request.IsThirdpartyTest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestContent))
+            {
+                query["TestContent"] = request.TestContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestEndDate))
+            {
+                query["TestEndDate"] = request.TestEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSourceIps))
+            {
+                query["TestSourceIps"] = request.TestSourceIps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestStartDate))
+            {
+                query["TestStartDate"] = request.TestStartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSteps))
+            {
+                query["TestSteps"] = request.TestSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyEmail))
+            {
+                query["ThirdpartyEmail"] = request.ThirdpartyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyMobile))
+            {
+                query["ThirdpartyMobile"] = request.ThirdpartyMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyTester))
+            {
+                query["ThirdpartyTester"] = request.ThirdpartyTester;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitPenetrationTest",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitPenetrationTestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPenetrationTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPenetrationTestResponse
+        /// </returns>
+        public async Task<SubmitPenetrationTestResponse> SubmitPenetrationTestWithOptionsAsync(SubmitPenetrationTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetList))
+            {
+                query["AssetList"] = request.AssetList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsThirdpartyTest))
+            {
+                query["IsThirdpartyTest"] = request.IsThirdpartyTest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestContent))
+            {
+                query["TestContent"] = request.TestContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestEndDate))
+            {
+                query["TestEndDate"] = request.TestEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSourceIps))
+            {
+                query["TestSourceIps"] = request.TestSourceIps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestStartDate))
+            {
+                query["TestStartDate"] = request.TestStartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSteps))
+            {
+                query["TestSteps"] = request.TestSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyEmail))
+            {
+                query["ThirdpartyEmail"] = request.ThirdpartyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyMobile))
+            {
+                query["ThirdpartyMobile"] = request.ThirdpartyMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyTester))
+            {
+                query["ThirdpartyTester"] = request.ThirdpartyTester;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitPenetrationTest",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitPenetrationTestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPenetrationTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPenetrationTestResponse
+        /// </returns>
+        public SubmitPenetrationTestResponse SubmitPenetrationTest(SubmitPenetrationTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitPenetrationTestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a penetration test application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPenetrationTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPenetrationTestResponse
+        /// </returns>
+        public async Task<SubmitPenetrationTestResponse> SubmitPenetrationTestAsync(SubmitPenetrationTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitPenetrationTestWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
