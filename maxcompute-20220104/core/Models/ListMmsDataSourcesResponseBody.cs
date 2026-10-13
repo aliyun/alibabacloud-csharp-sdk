@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListMmsDataSourcesResponseBodyDataObjectList> ObjectList { get; set; }
             public class ListMmsDataSourcesResponseBodyDataObjectList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the agent for the data source instance is online.</para>
+                /// <para>Specifies whether the data source instance or the associated agent is started.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? AgentIsOnline { get; set; }
 
                 /// <summary>
-                /// <para>A list of data source configurations.</para>
+                /// <para>The configurations related to the data source.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     /// <para>The description of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Range partition table migration method</para>
+                    /// <para>Migration method for range-partitioned tables</para>
                     /// </summary>
                     [NameInMap("desc")]
                     [Validation(Required=false)]
                     public string Desc { get; set; }
 
                     /// <summary>
-                    /// <para>A list of valid values for the configuration.</para>
+                    /// <para>The enumerated values of the configuration.</para>
                     /// </summary>
                     [NameInMap("enums")]
                     [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Group { get; set; }
 
                     /// <summary>
-                    /// <para>The unique key for the configuration.</para>
+                    /// <para>The English identifier of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>bigquery.range.partition.migrate.type</para>
@@ -78,17 +78,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration name.</para>
+                    /// <para>The name of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Range partition table migration method</para>
+                    /// <para>Migration method for range-partitioned tables</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>A placeholder for the configuration value.</para>
+                    /// <para>The sample value of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cluster or Partition</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string PlaceHolder { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the configuration is required.</para>
+                    /// <para>Specifies whether the configuration is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? Required { get; set; }
 
                     /// <summary>
-                    /// <para>The required file extension (for example, <c>.keytab</c>) when <c>type</c> is <c>file</c>.</para>
+                    /// <para>The specific file type when the type is file, such as .keytab.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>.keytab</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string SubType { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration type.</para>
+                    /// <para>The type of the configuration. Valid values: boolean, int, map, string, password, and file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration value.</para>
+                    /// <para>The value of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Partition</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The time the data source was created.</para>
+                /// <para>The time when the data source was created. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 09:29:58</para>
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DstProject { get; set; }
 
                 /// <summary>
-                /// <para>A list of destination MaxCompute projects.</para>
+                /// <para>The list of destination MaxCompute projects.</para>
                 /// </summary>
                 [NameInMap("dstProjects")]
                 [Validation(Required=false)]
                 public List<string> DstProjects { get; set; }
 
                 /// <summary>
-                /// <para>The reason the data source instance failed to start or stop. This parameter is returned only if the <c>status</c> is <c>START_FAILED</c> or <c>STOP_FAILED</c>.</para>
+                /// <para>The reason why the data source instance failed to start or stop when the status is START_FAILED or STOP_FAILED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>unexpected exception</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ErrMsg { get; set; }
 
                 /// <summary>
-                /// <para>The data source ID.</para>
+                /// <para>The ID of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000015</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The last metadata synchronization time.</para>
+                /// <para>The time when the metadata was last synchronized. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 15:44:17</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string LastUpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The data source name.</para>
+                /// <para>The name of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The network connection, specified in the <c>VpcId:RegionId</c> format.</para>
+                /// <para>The MaxCompute network connectivity ID. Format: &quot;MaxCompute network connectivity ID&quot;:region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-2zebqp6uojhdla46677tl:cn-beijing</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of partitions currently being migrated.</para>
+                /// <para>The number of partitions being migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2332</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionsDoingNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of successfully migrated partitions.</para>
+                /// <para>The number of partitions that have been migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionsDoneNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of partitions that failed to migrate.</para>
+                /// <para>The number of partitions that failed to be migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2323</para>
@@ -276,6 +276,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <para>The cause of the metadata update task failure.</para>
+                /// </summary>
                 [NameInMap("scanErrMsg")]
                 [Validation(Required=false)]
                 public string ScanErrMsg { get; set; }
@@ -290,12 +293,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public long? ScanId { get; set; }
 
+                /// <summary>
+                /// <para>The status of the metadata update task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>DOING: The task is running.</description></item>
+                /// <item><description>DONE: The task succeeded.</description></item>
+                /// <item><description>FAILED: The task failed.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("scanStatus")]
                 [Validation(Required=false)]
                 public string ScanStatus { get; set; }
 
                 /// <summary>
-                /// <para>The data source status.</para>
+                /// <para>The status of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STARTED</para>
@@ -315,7 +326,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TableNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of tables currently being migrated.</para>
+                /// <para>The number of tables being migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -325,7 +336,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesDoingNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of successfully migrated tables.</para>
+                /// <para>The number of tables that have been migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2323</para>
@@ -335,7 +346,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesDoneNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of tables that failed to migrate.</para>
+                /// <para>The number of tables that failed to be migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -345,7 +356,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesFailedNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of partially migrated tables.</para>
+                /// <para>The number of tables that have been partially migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -355,7 +366,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesPartDoneNum { get; set; }
 
                 /// <summary>
-                /// <para>The data source type.</para>
+                /// <para>The type of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BIGQUERY</para>
@@ -387,7 +398,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of data sources.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobInfosRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort in ascending or descending order.</para>
+        /// <para>Specifies whether to sort the results in ascending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The job instance IDs.</para>
+        /// <para>The job instance Id.</para>
         /// </summary>
         [NameInMap("instanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The job owners.</para>
+        /// <para>The list of job owners.</para>
         /// </summary>
         [NameInMap("jobOwnerList")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string QuotaNickname { get; set; }
 
         /// <summary>
-        /// <para>The intelligent diagnosis labels.</para>
+        /// <para>The intelligent diagnostics tags.</para>
         /// </summary>
         [NameInMap("sceneTagList")]
         [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> SignatureList { get; set; }
 
         /// <summary>
-        /// <para>The fields used for multi-column sorting.</para>
+        /// <para>The multi-column sort fields.</para>
         /// </summary>
         [NameInMap("sortByList")]
         [Validation(Required=false)]
         public List<string> SortByList { get; set; }
 
         /// <summary>
-        /// <para>The sort orders for multi-column sorting.</para>
+        /// <para>The multi-column sort orders.</para>
         /// </summary>
         [NameInMap("sortOrderList")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> TypeList { get; set; }
 
         /// <summary>
-        /// <para>The column used for sorting.</para>
+        /// <para>The sort column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cuUsage</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

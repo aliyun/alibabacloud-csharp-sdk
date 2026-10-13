@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDbsRequest : TeaModel {
         /// <summary>
-        /// <para>Data source name</para>
+        /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Sorting conditions</para>
+        /// <para>The sorting conditions.</para>
         /// </summary>
         [NameInMap("sorter")]
         [Validation(Required=false)]
         public ListMmsDbsRequestSorter Sorter { get; set; }
         public class ListMmsDbsRequestSorter : TeaModel {
             /// <summary>
-            /// <para>Number of data rows in the database</para>
+            /// <para>The number of data rows in the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desc</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NumRows { get; set; }
 
             /// <summary>
-            /// <para>Size of data in the database</para>
+            /// <para>The size of data in the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asc</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Size { get; set; }
 
             /// <summary>
-            /// <para>Update time</para>
+            /// <para>The update time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:17</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>Data source status</para>
+        /// <para>The status of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STARTED</para>

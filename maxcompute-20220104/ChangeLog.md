@@ -1,3 +1,6 @@
+2026-10-13 Version: 5.1.4
+- Generated csharp 2022-01-04 for MaxCompute.
+
 2026-09-20 Version: 5.1.3
 - Update API GetProject: add response parameters Body.data.securityProperties.enableNamespacePrivilege.
 

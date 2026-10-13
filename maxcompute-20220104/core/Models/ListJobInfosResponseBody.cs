@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? CuUsage { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job finished running.</para>
+                /// <para>The end time of the execution. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ExtNodeName { get; set; }
 
                 /// <summary>
-                /// <para>The person responsible for the execution.</para>
+                /// <para>The person in charge of the execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>duty_2</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The role session name of the entity that submitted the job through role assumption.</para>
+                /// <para>The role assumption used to commit the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyunservicerole</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string RoleSessionName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job started running.</para>
+                /// <para>The start time of the job execution. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1672112113</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RunningAtTime { get; set; }
 
                 /// <summary>
-                /// <para>The running time.</para>
+                /// <para>The execution duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>800</para>
@@ -254,14 +254,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RunningTime { get; set; }
 
                 /// <summary>
-                /// <para>The intelligent diagnostics results.</para>
+                /// <para>The intelligent diagnosis results.</para>
                 /// </summary>
                 [NameInMap("sceneResults")]
                 [Validation(Required=false)]
                 public List<ListJobInfosResponseBodyDataJobInfoListSceneResults> SceneResults { get; set; }
                 public class ListJobInfosResponseBodyDataJobInfoListSceneResults : TeaModel {
                     /// <summary>
-                    /// <para>The details of the intelligent diagnostics result.</para>
+                    /// <para>The details of the intelligent diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This job uses annual and monthly computing resources. It may be that the job is waiting for resources due to the large amount of overall job running data, many resources requested, and low job priority. Please go to Resource Consumption to view the specific situation. You can also go to Cost Optimization to see if you need to adjust resource configuration.</para>
@@ -271,14 +271,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The node information about data skew or data bloat. This parameter is returned only when the diagnostics scenario is data skew or data bloat.</para>
+                    /// <para>The node information for data skew and data bloat. This parameter is returned only when the diagnosis scenario is data skew or data bloat.</para>
                     /// </summary>
                     [NameInMap("params")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> Params { get; set; }
 
                     /// <summary>
-                    /// <para>The scenario of the intelligent diagnostics result.</para>
+                    /// <para>The scenario of the intelligent diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LackResource</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Scene { get; set; }
 
                     /// <summary>
-                    /// <para>The tag of the intelligent diagnostics result.</para>
+                    /// <para>The tag of the intelligent diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SubscriptionLackResource</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string SceneTag { get; set; }
 
                     /// <summary>
-                    /// <para>The summary of the intelligent diagnostics result.</para>
+                    /// <para>The summary of the intelligent diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Insufficient computing resources available for the job. Click to view details.</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Summary { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the intelligent diagnostics result.</para>
+                    /// <para>The type of the intelligent diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>warning</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string StatusSnapshot { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job was submitted.</para>
+                /// <para>The submission time of the job. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1672112013</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The total running duration.</para>
+                /// <para>The total execution duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>900</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? TotalTime { get; set; }
 
                 /// <summary>
-                /// <para>The waiting time.</para>
+                /// <para>The waiting time. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. If the value is not empty and is not 200, the request failed.</para>
+        /// <para>Indicates whether the request is successful. If the value is not null and is not 200, the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

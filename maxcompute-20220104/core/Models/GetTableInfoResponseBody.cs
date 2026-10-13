@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetTableInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTableInfoResponseBodyData Data { get; set; }
         public class GetTableInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the materialized view is automatically refreshed. This response parameter is returned when type is set to materializedView.</para>
+            /// <para>Indicates whether automatic refresh of the materialized view is enabled. This parameter is returned only when the type is materialized view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? AutoRefreshEnabled { get; set; }
 
             /// <summary>
-            /// <para>The clustering attribute. This response parameter is returned when the table is a clustered table.</para>
+            /// <para>The clustering properties. This parameter is returned only when the table type is clustered table.</para>
             /// </summary>
             [NameInMap("clusterInfo")]
             [Validation(Required=false)]
             public GetTableInfoResponseBodyDataClusterInfo ClusterInfo { get; set; }
             public class GetTableInfoResponseBodyDataClusterInfo : TeaModel {
                 /// <summary>
-                /// <para>Optional. The number of buckets in the clustered table. The value 0 indicates that the number of buckets dynamically changes when a job is running.</para>
+                /// <para>The number of buckets in the clustered table. This is an optional field. A value of 0 indicates that the number of buckets is dynamically determined during job execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -44,15 +44,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? BucketNum { get; set; }
 
                 /// <summary>
-                /// <para>The cluster keys.</para>
+                /// <para>The cluster key.</para>
                 /// </summary>
                 [NameInMap("clusterCols")]
                 [Validation(Required=false)]
                 public List<string> ClusterCols { get; set; }
 
                 /// <summary>
-                /// <para>The clustering type of the table. MaxCompute supports <a href="https://www.alibabacloud.com/help/maxcompute/use-cases/hash-clustering">hash clustering</a> and</para>
-                /// <para><a href="https://www.alibabacloud.com/help/maxcompute/use-cases/range-clustering">range clustering</a>.</para>
+                /// <para>The clustering type of the table. MaxCompute currently supports &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/use-cases/hash-clustering">Hash Clustering</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/use-cases/hash-clustering">Hash Clustering</a> and
+                /// &lt;props=&quot;china&quot;&gt; <a href="https://www.alibabacloud.com/help/en/maxcompute/use-cases/hash-clustering">Range Clustering</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/use-cases/range-clustering">Range Clustering</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hash</para>
@@ -62,14 +64,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
-                /// <para>The condition by which the results are sorted.</para>
+                /// <para>The sort columns.</para>
                 /// </summary>
                 [NameInMap("sortCols")]
                 [Validation(Required=false)]
                 public List<GetTableInfoResponseBodyDataClusterInfoSortCols> SortCols { get; set; }
                 public class GetTableInfoResponseBodyDataClusterInfoSortCols : TeaModel {
                     /// <summary>
-                    /// <para>The name of the sorting field.</para>
+                    /// <para>The name of the sort column.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>col_2</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The sorting order.</para>
+                    /// <para>The sort order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DESC</para>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The comments of the table.</para>
+            /// <para>The table comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sale_detail</para>
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>DDL statement to create a table.</para>
+            /// <para>The DDL statement used to create the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>create table if not exists sale_detail( shop_name STRING, customer_id STRING, total_price DOUBLE) partitioned by (sale_date STRING, region STRING);</para>
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string CreateTableDDL { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in ISO 8601 format and in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-17T07:07:47Z</para>
@@ -133,7 +135,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The number of file of the table.</para>
+            /// <para>The number of files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -143,7 +145,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? FileNum { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the table is an external table. This response parameter is returned when type is set to external.</para>
+            /// <para>Indicates whether the table is an external table. This parameter is returned only when the type is table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? IsExternalTable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data of the materialized view is invalid due to changes in the data of the source table. This response parameter is returned when type is set to materializedView.</para>
+            /// <para>Indicates whether the data in the materialized view is invalid due to changes in the source table data. This parameter is returned only when the type is materialized view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -163,7 +165,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? IsOutdated { get; set; }
 
             /// <summary>
-            /// <para>The time when data of the table or view was last accessed.</para>
+            /// <para>The time when the data of the table or view was last accessed. This parameter is returned only when the table is a non-partitioned table.</para>
+            /// <remarks>
+            /// <para>This data has been gradually collected since July 2023. If the table has not been accessed after the upgrade, or if it is accessed through ALGO jobs or Hologres direct read, the last_access_time cannot be collected.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T02:05:56Z</para>
@@ -173,7 +178,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? LastAccessTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the data definition language (DDL) statement of the table or view was last modified.</para>
+            /// <para>The time when the DDL statement of the table or view was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T02:05:56Z</para>
@@ -183,7 +188,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? LastDDLTime { get; set; }
 
             /// <summary>
-            /// <para>The time when data of the table or view was last modified.</para>
+            /// <para>The time when the data of the table or view was last modified. The time is in ISO 8601 format and in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T02:05:56Z</para>
@@ -193,7 +198,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? LastModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle. Unit: days.</para>
+            /// <para>The lifecycle in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -203,7 +208,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Lifecycle { get; set; }
 
             /// <summary>
-            /// <para>The path of the external table. This response parameter is returned when type is set to external.</para>
+            /// <para>The external table location. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://oss-cn-hangzhou-internal.aliyuncs.com/oss-mc-test/Demo1/</para>
@@ -213,7 +218,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the table or view is a <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a>.</para>
+            /// <para>Indicates whether the table is a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">materialized view</a>
+            /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialized view</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -233,14 +239,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The field information.</para>
+            /// <para>The column information.</para>
             /// </summary>
             [NameInMap("nativeColumns")]
             [Validation(Required=false)]
             public List<GetTableInfoResponseBodyDataNativeColumns> NativeColumns { get; set; }
             public class GetTableInfoResponseBodyDataNativeColumns : TeaModel {
                 /// <summary>
-                /// <para>The column comments.</para>
+                /// <para>The column comment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Store name</para>
@@ -250,7 +256,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The sensitivity-level label of the column. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
+                /// <para>The sensitivity level label of the column. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -270,7 +277,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The column type.</para>
+                /// <para>The data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -282,7 +289,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the role AliyunODPSDefaultRole in Resource Access Management (RAM). This response parameter is returned when type is set to external.</para>
+            /// <para>The ARN of AliyunODPSDefaultRole in RAM. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::xxxxx:role/aliyunodpsdefaultrole</para>
@@ -292,7 +299,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string OdpsPropertiesRolearn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the table header is ignored. This response parameter is returned when type is set to external.</para>
+            /// <para>Indicates whether to ignore the header. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -302,7 +309,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? OdpsSqlTextOptionFlushHeader { get; set; }
 
             /// <summary>
-            /// <para>The first N rows that were ignored in the table header. This response parameter is returned when type is set to external.</para>
+            /// <para>The number of header lines to ignore. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -312,7 +319,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? OdpsTextOptionHeaderLinesCount { get; set; }
 
             /// <summary>
-            /// <para>The account information of the table or view owner.</para>
+            /// <para>The account information of the owner of the table or view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN$odps****@aliyunid.com</para>
@@ -322,24 +329,25 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The information about partition key columns. This response parameter is returned only for partitioned tables.</para>
+            /// <para>The partition column information. This parameter is returned only for partitioned tables.</para>
             /// </summary>
             [NameInMap("partitionColumns")]
             [Validation(Required=false)]
             public List<GetTableInfoResponseBodyDataPartitionColumns> PartitionColumns { get; set; }
             public class GetTableInfoResponseBodyDataPartitionColumns : TeaModel {
                 /// <summary>
-                /// <para>The comments of the partition key column.</para>
+                /// <para>The partition column comment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sales date</para>
+                /// <para>Sale date</para>
                 /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The sensitivity-level label of the column. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
+                /// <para>The sensitivity level label of the column. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -359,7 +367,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The partition column type.</para>
+                /// <para>The data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -371,7 +379,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The physical size of the table.</para>
+            /// <para>The physical size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2763</para>
@@ -391,7 +399,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query rewrite operation can be performed by using the materialized view. This response parameter is returned when type is set to materializedView.</para>
+            /// <para>Indicates whether query rewrite through the materialized view is allowed. This parameter is returned only when the type is materialized view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -401,7 +409,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? RewriteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the schema to which the table or the view belongs.</para>
+            /// <para>The name of the schema to which the table or view belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -411,7 +419,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Schema { get; set; }
 
             /// <summary>
-            /// <para>The data size of the non-partitioned table. If the table is a partitioned table, the system does not calculate the data size of the table. In this case, the value of this parameter is NULL. The PARTITIONS view includes the data size of each partition in a partitioned table. Unit: bytes.</para>
+            /// <para>The data size of the table. If the table is a non-partitioned table, the value is the data size of the table. If the table is a partitioned table, the system does not calculate the data size of the table, and the value is NULL. The PARTITIONS view contains the data size of each partition in the partitioned table. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5372</para>
@@ -421,7 +429,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The storage handler of the external table. This response parameter is returned when type is set to external.</para>
+            /// <para>The external table parser. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aliyun.odps.CsvStorageHandler</para>
@@ -431,7 +439,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string StorageHandler { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity-level label of the table. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
+            /// <para>The sensitivity level label of the table. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+            /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -441,7 +450,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string TableLabel { get; set; }
 
             /// <summary>
-            /// <para>The name of the Tablestore table to be accessed. This response parameter is returned when type is set to external.</para>
+            /// <para>The name of the Tablestore table to be accessed. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ots_tpch_orders</para>
@@ -451,7 +460,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string TablesotreTableName { get; set; }
 
             /// <summary>
-            /// <para>The columns of the Tablestore table to be accessed, including the primary key column and attribute column. This response parameter is returned when type is set to external.</para>
+            /// <para>The columns of the Tablestore table to be accessed by MaxCompute, including the primary key columns and attribute columns. This parameter is returned only when the type is external table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>o_orderkey,o_orderdate,o_custkey,o_orderstatus,o_totalprice</para>
@@ -463,14 +472,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <summary>
             /// <para>The type of the table or view. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>internal</b>: internal table</para>
-            /// </description></item>
-            /// <item><description><para><b>external</b>: external table</para>
-            /// </description></item>
-            /// <item><description><para><b>view</b>: view</para>
-            /// </description></item>
-            /// <item><description><para><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></para>
-            /// </description></item>
+            /// <item><description><b>internal</b>: Internal table.</description></item>
+            /// <item><description><b>external</b>: External table.</description></item>
+            /// <item><description><b>view</b>: View.</description></item>
+            /// <item><description><b>materializedView</b>: &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">Materialized view</a>
+            /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">Materialized view</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -481,7 +487,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The statement that generates the view. This response parameter is returned when type is set to view.</para>
+            /// <para>The statement used to create the view. This parameter is returned only when the type is view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select shop_name, sum(total_price) from sale_detail group by shop_name</para>

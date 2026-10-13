@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListMmsTimerLogsResponseBodyDataObjectList> ObjectList { get; set; }
             public class ListMmsTimerLogsResponseBodyDataObjectList : TeaModel {
                 /// <summary>
-                /// <para>The logged action for the migration job created by the scheduled task.</para>
+                /// <para>The action log of the migration job created by the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>start job</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the log entry.</para>
+                /// <para>The time when the log was created. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 15:44:17</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the asynchronous task for the migration job created by the scheduled task.</para>
+                /// <para>The ID of the asynchronous task created by the scheduled task to create a migration job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1003476</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>A detailed message about the action.</para>
+                /// <para>The log information of the migration job created by the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>start job success</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data source.</para>
+                /// <para>The data source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200018</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

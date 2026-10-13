@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. If pagination is not used, all data sources are returned.</para>
+        /// <para>The page number. If this parameter is not specified, all records are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. If pagination is not used, all data sources are returned.</para>
+        /// <para>The number of entries to return on each page. If this parameter is not specified, all records are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

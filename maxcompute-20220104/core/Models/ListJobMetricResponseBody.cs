@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListJobMetricResponseBodyData Data { get; set; }
         public class ListJobMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The category of the metrics.</para>
+            /// <para>The metric type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job</para>
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Metric details.</para>
+            /// <para>The metric details.</para>
             /// </summary>
             [NameInMap("metrics")]
             [Validation(Required=false)]
             public List<ListJobMetricResponseBodyDataMetrics> Metrics { get; set; }
             public class ListJobMetricResponseBodyDataMetrics : TeaModel {
                 /// <summary>
-                /// <para>Metric related information.</para>
+                /// <para>The metric-related information.</para>
                 /// </summary>
                 [NameInMap("metric")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metric { get; set; }
 
                 /// <summary>
-                /// <para>Metric values information.</para>
+                /// <para>The metric value information.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The name of observation metric.</para>
+            /// <para>The metric name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>num</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The monitoring statistical period.Unit:Second(s).</para>
+            /// <para>The monitoring statistical period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -92,18 +92,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>1xx: Informational response - Request received, processing continues.</para>
-        /// </description></item>
-        /// <item><description><para>2xx: Success - The request has been successfully received, understood, and accepted by the server.</para>
-        /// </description></item>
-        /// <item><description><para>3xx: Redirection - Further action must be taken to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para>5xx: Server error - The server failed to fulfill an apparently valid request.</para>
-        /// </description></item>
+        /// <item><description>1xx: Informational response. The request was received and is being processed.</description></item>
+        /// <item><description>2xx: Success. The request action was successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection. The request was redirected, and further action is required to complete it.</description></item>
+        /// <item><description>4xx: Client error. The request contains invalid parameters, bad syntax, or cannot be fulfilled due to specific request conditions.</description></item>
+        /// <item><description>5xx: Server error. The server failed to fulfill the request due to other reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

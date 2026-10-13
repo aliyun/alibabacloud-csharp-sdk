@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsTimersRequest : TeaModel {
         /// <summary>
-        /// <para>The timer name.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcTableName { get; set; }
 
         /// <summary>
-        /// <para>Filters timers by their stopped state.</para>
+        /// <para>Specifies whether the job is stopped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class KillJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The request body parameters.</para>
+        /// <para>The list of jobs to terminate. The instanceId is obtained from the job instance ID returned by ListJobInfos, and the projectName is obtained from the project name returned by ListProjects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant.</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>478403690625249</para>

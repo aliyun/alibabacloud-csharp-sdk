@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListStorageProjectsInfoResponseBodyData Data { get; set; }
         public class ListStorageProjectsInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The statistics collection date.</para>
+            /// <para>The statistical date. The format is YYYYMMDD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20241205</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListStorageProjectsInfoResponseBodyDataStorageProjectInfoList> StorageProjectInfoList { get; set; }
             public class ListStorageProjectsInfoResponseBodyDataStorageProjectInfoList : TeaModel {
                 /// <summary>
-                /// <para>The statistics collection date. The date is accurate to the day. The date must be in the <c>YYYYMMdd</c> format.</para>
+                /// <para>The statistical date. Data is collected on a daily basis. Specify the date in the YYYYMMDD format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20250528</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Date { get; set; }
 
                 /// <summary>
-                /// <para>The Long Term storage usage.</para>
+                /// <para>The long-term storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? LongTermStorage { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the Long Term storage usage.</para>
+                /// <para>The unit of the long-term storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string LongTermStorageUnit { get; set; }
 
                 /// <summary>
-                /// <para>The IA storage class usage.</para>
+                /// <para>The low-frequency storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? LowFreqStorage { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the IA storage class usage.</para>
+                /// <para>The unit of the low-frequency storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The year-over-year change rate of the total storage usage in the last {$recentDays} days.</para>
+                /// <para>The rate of change in the total storage usage compared with {$recentDays} days ago.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.011872406445069006</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string RecycleBinStorageUnit { get; set; }
 
                 /// <summary>
-                /// <para>The Standard storage usage.</para>
+                /// <para>The standard storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? StandardStorage { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the Standard storage usage.</para>
+                /// <para>The unit of the standard storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -230,16 +230,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>1xx: an informational response. The request has been received and is being processed.</para>
-        /// </description></item>
-        /// <item><description><para>2xx: a success response. The request has been successfully received, understood, and accepted by the server.</para>
-        /// </description></item>
-        /// <item><description><para>3xx: a redirection response. The request is redirected. You must take further action to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para>4xx: a client error. The request contains invalid request parameters or syntax, or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para>5xx: a server error. The server fails to fulfill the request for other reasons.</para>
-        /// </description></item>
+        /// <item><description>1xx: Informational. The request was received and is being processed.</description></item>
+        /// <item><description>2xx: Success. The action requested by the client was successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection. The request was redirected, and further action is required to complete it.</description></item>
+        /// <item><description>4xx: Client error. The request contains bad syntax, invalid parameters, or cannot be fulfilled.</description></item>
+        /// <item><description>5xx: Server error. The server failed to fulfill the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

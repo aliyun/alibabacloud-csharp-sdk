@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the marker after which the returned list begins.</para>
+        /// <para>Specifies the marker after which results are returned in alphabetical order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

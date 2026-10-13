@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListResourcesResponseBodyData Data { get; set; }
         public class ListResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates the marker after which the returned list begins.</para>
+            /// <para>Specifies the marker after which results are returned in alphabetical order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZmN0X21vbnRoX3Rhb2Jhb19pbmRleCE=</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Marker { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of results to return per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListResourcesResponseBodyDataResources> Resources { get; set; }
             public class ListResourcesResponseBodyDataResources : TeaModel {
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The comment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Filr type resource</para>
+                /// <para>file type resource</para>
                 /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The Base64-encoded 128-bit MD5 hash value of the HTTP request body.</para>
+                /// <para>The Base64-encoded 128-bit MD5 hash of the HTTP request body.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MACiECZtnLiNkNS1v5****=1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ContentMD5 { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was created.</para>
+                /// <para>The creation time in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-29T03:34:09Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was modified.</para>
+                /// <para>The last modification time in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-18T06:15:05Z</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? LastModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The user who updated the resource.</para>
+                /// <para>The user who last updated the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></para>
@@ -145,43 +145,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                 /// <summary>
                 /// <para>The resource type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>file</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>py</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>jar</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>volumefile</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>table</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file</para>
@@ -195,7 +158,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3b4ae16685836687916212e7850</para>

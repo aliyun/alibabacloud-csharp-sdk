@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobSnapshotInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListJobSnapshotInfosResponseBodyDataJobInfoList> JobInfoList { get; set; }
             public class ListJobSnapshotInfosResponseBodyDataJobInfoList : TeaModel {
                 /// <summary>
-                /// <para>The amount of CPU cores requested by the job at the snapshot time.</para>
+                /// <para>The requested CPU resources of the job at the snapshot time. Unit: Core.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? CpuRequest { get; set; }
 
                 /// <summary>
-                /// <para>The CPU usage of the job at the snapshot time. Unit: cores.</para>
+                /// <para>The CPU usage of the job at the snapshot time. Unit: Core.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? CpuUsage { get; set; }
 
                 /// <summary>
-                /// <para>The CPU fulfillment ratio of the job at the snapshot time. This is calculated by dividing the CPU usage by the CPU request.</para>
+                /// <para>The CPU fulfillment rate of the job at the snapshot time, which is calculated as CPU usage divided by requested CPU resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? CpuUsageToRequestRatio { get; set; }
 
                 /// <summary>
-                /// <para>The upstream node ID.</para>
+                /// <para>The upstream node IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>76358164</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string JobOwner { get; set; }
 
                 /// <summary>
-                /// <para>The job type.</para>
+                /// <para>The job types.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SQL</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string JobType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not used.</para>
+                /// <para>Ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MaxCpuPct { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not used.</para>
+                /// <para>Ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MaxMemoryPct { get; set; }
 
                 /// <summary>
-                /// <para>The amount of memory requested by the job at the snapshot time, in MB.</para>
+                /// <para>The requested memory resources of the job at the snapshot time. Unit: MB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>409600</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? MemoryUsage { get; set; }
 
                 /// <summary>
-                /// <para>The memory fulfillment ratio of the job at the snapshot time. This is calculated by dividing the memory usage by the memory request.</para>
+                /// <para>The memory fulfillment rate of the job at the snapshot time, which is calculated as memory usage divided by requested memory resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MemoryUsageToRequestRatio { get; set; }
 
                 /// <summary>
-                /// <para>The CPU usage percentage of a subscription job at the snapshot time. This value is calculated by dividing the CPU usage by the sum of the reserved CPU guarantee and the elastic reserved CPU. This parameter is not available for pay-as-you-go jobs.</para>
+                /// <para>The CPU usage ratio of a subscription job at the snapshot time, which is calculated as CPU usage divided by the sum of reserved CPU and elastic reserved CPU. This parameter is not returned for pay-as-you-go jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MinCpuPct { get; set; }
 
                 /// <summary>
-                /// <para>The memory usage percentage of a subscription job at the observation time. This value is calculated by dividing the memory usage by the sum of the reserved memory guarantee and the elastic reserved memory. This parameter is not available for pay-as-you-go jobs.</para>
+                /// <para>The memory usage ratio of a subscription job at the observation time, which is calculated as memory usage divided by the sum of reserved memory and elastic reserved memory. This parameter is not returned for pay-as-you-go jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MinMemoryPct { get; set; }
 
                 /// <summary>
-                /// <para>The job priority.</para>
+                /// <para>The job priorities.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The project name.</para>
+                /// <para>The project names.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>projectA</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The nickname of the computing quota that the job uses.</para>
+                /// <para>The nickname of the compute quota used by the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>quota_A</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The time when the job started running.</para>
                 /// <remarks>
-                /// <para>The time when the job acquired its first computing resource.</para>
+                /// <para>The time when the job obtained the first compute resource. The value is a UNIX timestamp in seconds.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RunningAtTime { get; set; }
 
                 /// <summary>
-                /// <para>The runtime duration, in seconds. This is the duration from when the job started running to the snapshot time. If the job has not started, this parameter is empty.</para>
+                /// <para>The running duration, which is the time from when the job started running to the snapshot time. If the job has not started running, this parameter is empty. Unit: s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>43</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RunningTime { get; set; }
 
                 /// <summary>
-                /// <para>The signature of the SQL job.</para>
+                /// <para>The SQL job signatures.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>signatureabc</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Signature { get; set; }
 
                 /// <summary>
-                /// <para>The snapshot time.</para>
+                /// <para>The snapshot time. The value is a UNIX timestamp, Unit: s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1736821848</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The job status.</para>
                 /// <remarks>
-                /// <para>The status of a snapshot job can only be \<c>running\\</c>.</para>
+                /// <para>The status of a job in a snapshot is always running.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job was submitted.</para>
+                /// <para>The time when the job was submitted. The value is a UNIX timestamp, Unit: s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1736821785</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The total duration, in seconds. This is the duration from when the job was submitted to the snapshot time.</para>
+                /// <para>The total duration, which is the time from when the job was submitted to the snapshot time. Unit: s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>63</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? TotalTime { get; set; }
 
                 /// <summary>
-                /// <para>The waiting duration, in seconds. This is the duration from when the job was submitted to when it started running. If the job has not started, this is the duration from the submission time to the snapshot time.</para>
+                /// <para>The waiting duration, which is the time from when the job was submitted to when it started running. If the job has not started running, the value is the time from when the job was submitted to the snapshot time. Unit: s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Exception information</para>
+        /// <para>Error message</para>
         /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
@@ -390,16 +390,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>1xx: Informational - The request has been received and the process is continuing.</para>
-        /// </description></item>
-        /// <item><description><para>2xx: Success - The request was successfully received, understood, and accepted.</para>
-        /// </description></item>
-        /// <item><description><para>3xx: Redirection - Further action must be taken to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para>4xx: Client Error - The request contains bad syntax or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para>5xx: Server Error - The server failed to fulfill an apparently valid request.</para>
-        /// </description></item>
+        /// <item><description>1xx: Informational. The request was received and is being processed.</description></item>
+        /// <item><description>2xx: Success. The request was successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection. The request was redirected, and further action is required to complete it.</description></item>
+        /// <item><description>4xx: Client error. The request contains invalid parameters, bad syntax, or specific request conditions cannot be met.</description></item>
+        /// <item><description>5xx: Server error. The server failed to fulfill the request due to other reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

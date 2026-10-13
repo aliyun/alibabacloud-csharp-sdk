@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListMmsTasksResponseBodyDataObjectList> ObjectList { get; set; }
             public class ListMmsTasksResponseBodyDataObjectList : TeaModel {
                 /// <summary>
-                /// <para>The time when the task was created.</para>
+                /// <para>The task creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-25 04:21:01</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DstTableName { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the task.</para>
+                /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-25 07:21:01</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries that have been performed.</para>
+                /// <para>The number of retries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SrcDbName { get; set; }
 
                 /// <summary>
-                /// <para>The source schema name in a three-level namespace.</para>
+                /// <para>The source schema name. This is the schema in the three-level namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SrcTableName { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the task.</para>
+                /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-25 06:21:01</para>

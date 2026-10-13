@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The statistics collection date. The date is accurate to the day. The date must be in the <c>YYYYMMdd</c> format.</para>
+        /// <para>The statistical date, in the YYYYMMdd format. Data is collected on a daily basis.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +31,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The column to sort by. Valid values:</para>
+        /// <para>The sort column. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>totalStorage</para>
-        /// </description></item>
-        /// <item><description><para>longTermStorage</para>
-        /// </description></item>
-        /// <item><description><para>lowFreqStorage</para>
-        /// </description></item>
-        /// <item><description><para>standardStorage</para>
-        /// </description></item>
-        /// <item><description><para>recycleBinStorage</para>
-        /// </description></item>
+        /// <item><description>totalStorage</description></item>
+        /// <item><description>longTermStorage</description></item>
+        /// <item><description>lowFreqStorage</description></item>
+        /// <item><description>standardStorage</description></item>
+        /// <item><description>recycleBinStorage</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +78,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ProjectPrefix { get; set; }
 
         /// <summary>
-        /// <para>The number of days for year-over-year comparison.</para>
+        /// <para>The number of days used for comparison.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. You can log on to the MaxCompute console and choose <b>Tenant Property</b> in the navigation pane on the left to view the tenant ID.</para>
+        /// <para>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <b>Tenant Management</b> &gt; <b>Tenant Properties</b> in the left-side navigation pane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28074710977****</para>

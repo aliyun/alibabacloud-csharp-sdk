@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobMetricRequest : TeaModel {
         /// <summary>
-        /// <para>Grouping basis.</para>
+        /// <para>The grouping basis.</para>
         /// <remarks>
-        /// <para>Available values: project, quota, type, status. Meanings:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>project: Group and aggregate by project;</para>
-        /// </description></item>
-        /// <item><description><para>quota: Group and aggregate by quota;</para>
-        /// </description></item>
-        /// <item><description><para>type: Group and aggregate by job type;</para>
-        /// </description></item>
-        /// <item><description><para>status: Group and aggregate by job status.</para>
-        /// </description></item>
+        /// <item><description>project: grouping and aggregation by project</description></item>
+        /// <item><description>quota: grouping and aggregation by quota</description></item>
+        /// <item><description>type: grouping and aggregation by job type</description></item>
+        /// <item><description>status: grouping and aggregation by job status</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -33,7 +29,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The name of observation metric.</para>
+        /// <para>The metric information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>num</para>
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The monitoring statistical period.Unit:Second(s).</para>
+        /// <para>The monitoring statistical period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -53,21 +49,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>The name of MaxCompute projects (for filtering).</para>
+        /// <para>The list of MaxCompute project names used for filtering.</para>
         /// </summary>
         [NameInMap("project")]
         [Validation(Required=false)]
         public List<string> Project { get; set; }
 
         /// <summary>
-        /// <para>The nickname of computing Quota nickname used by the job (for filtering).</para>
+        /// <para>The list of compute quota nicknames used for filtering.</para>
         /// </summary>
         [NameInMap("quota")]
         [Validation(Required=false)]
         public List<string> Quota { get; set; }
 
         /// <summary>
-        /// <para>The type of observation metric.</para>
+        /// <para>The metric type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>total</para>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The end time for the observation interval.</para>
+        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for the observation interval.</para>
+        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

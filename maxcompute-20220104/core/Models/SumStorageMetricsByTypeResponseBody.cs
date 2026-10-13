@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class SumStorageMetricsByTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<SumStorageMetricsByTypeResponseBodyData> Data { get; set; }
         public class SumStorageMetricsByTypeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of daily storage usage metrics.</para>
+            /// <para>The list of daily storage usage statistics.</para>
             /// </summary>
             [NameInMap("dailyStorageMetrics")]
             [Validation(Required=false)]
             public List<SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics> DailyStorageMetrics { get; set; }
             public class SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics : TeaModel {
                 /// <summary>
-                /// <para>The date of the metric, in <c>yyyyMMdd</c> format.</para>
+                /// <para>The statistics date. Format: yyyyMMdd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20260410</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DateTime { get; set; }
 
                 /// <summary>
-                /// <para>The percentage of total daily storage that this storage type accounts for.</para>
+                /// <para>The storage usage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -46,18 +46,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The storage type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Storage</c>: standard storage.</para>
-                /// </description></item>
-                /// <item><description><para><c>LowFreqStorage</c>: infrequent access storage.</para>
-                /// </description></item>
-                /// <item><description><para><c>ColdStorage</c>: archive storage.</para>
-                /// </description></item>
-                /// <item><description><para><c>$sum</c>: total storage.</para>
-                /// </description></item>
-                /// <item><description><para><c>RecycleBinStorage</c>: recycle bin storage.</para>
-                /// </description></item>
-                /// <item><description><para><c>DRStorage</c>: multi-AZ storage.</para>
-                /// </description></item>
+                /// <item><description>Storage: standard storage.</description></item>
+                /// <item><description>LowFreqStorage: infrequent access storage.</description></item>
+                /// <item><description>ColdStorage: long-term storage.</description></item>
+                /// <item><description>$sum: total storage.</description></item>
+                /// <item><description>RecycleBinStorage: backup storage.</description></item>
+                /// <item><description>DRStorage: multi-AZ storage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -78,7 +72,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// <para>The storage usage for this day.</para>
+                /// <para>The storage usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -92,18 +86,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <summary>
             /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Storage</c>: standard storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>LowFreqStorage</c>: infrequent access storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>ColdStorage</c>: archive storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>$sum</c>: total storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>RecycleBinStorage</c>: recycle bin storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>DRStorage</c>: multi-AZ storage.</para>
-            /// </description></item>
+            /// <item><description>Storage: standard storage.</description></item>
+            /// <item><description>LowFreqStorage: infrequent access storage.</description></item>
+            /// <item><description>ColdStorage: long-term storage.</description></item>
+            /// <item><description>$sum: total storage.</description></item>
+            /// <item><description>RecycleBinStorage: backup storage.</description></item>
+            /// <item><description>DRStorage: multi-AZ storage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,16 +126,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>1xx</c>: Informational response - The request has been received and is being processed.</para>
-        /// </description></item>
-        /// <item><description><para><c>2xx</c>: Success - The request was successfully received, understood, and accepted.</para>
-        /// </description></item>
-        /// <item><description><para><c>3xx</c>: Redirection - Further action is needed to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para><c>4xx</c>: Client error - The request contains invalid syntax or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para><c>5xx</c>: Server error - The server failed to fulfill a valid request.</para>
-        /// </description></item>
+        /// <item><description>1xx: Informational response. The request has been received and is being processed.</description></item>
+        /// <item><description>2xx: Success. The request has been successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection. The request is redirected. Further action is required to complete the request.</description></item>
+        /// <item><description>4xx: Client error. The request contains invalid parameters, bad syntax, or specific request conditions cannot be fulfilled.</description></item>
+        /// <item><description>5xx: Server error. The server cannot fulfill the request due to other reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class SumStorageMetricsByTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Required. The query end time, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The end time of the statistical period. This parameter is required. Unit: milliseconds (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1718590596556</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>An array of project names.</para>
+        /// <para>The instance name.</para>
         /// </summary>
         [NameInMap("projectNames")]
         [Validation(Required=false)]
         public List<string> ProjectNames { get; set; }
 
         /// <summary>
-        /// <para>Required. The query start time, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The start time of the statistical period. This parameter is required. Unit: milliseconds (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1715393576201</para>
@@ -37,7 +37,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? StartDate { get; set; }
 
         /// <summary>
-        /// <para>The dimension for aggregating statistics. Valid values: <c>PROJECT</c> (by project) and <c>STORAGE_TYPE</c> (by storage type).</para>
+        /// <para>The statistics type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROJECT: instance.</description></item>
+        /// <item><description>STORAGE_TYPE: storage type.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PROJECT</para>

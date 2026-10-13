@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsTimerRequest : TeaModel {
         /// <summary>
-        /// <para>A map of source column names to target column names.</para>
+        /// <para>The mapping between source and destination column names in the {source column name: destination column name} format.</para>
         /// </summary>
         [NameInMap("columnMapping")]
         [Validation(Required=false)]
         public Dictionary<string, string> ColumnMapping { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to migrate table data.</para>
+        /// <para>Specifies whether to migrate the table data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? EnableSchemaMigration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable data verification. If set to <c>true</c>, the system runs a <c>SELECT COUNT(*)</c> query on both the source and target tables and compares the row counts.</para>
+        /// <para>Specifies whether to enable verification. Currently, the verification method executes SELECT COUNT on the source and destination to compare the number of rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,28 +57,28 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Other configuration settings.</para>
+        /// <para>Other configuration information.</para>
         /// </summary>
         [NameInMap("others")]
         [Validation(Required=false)]
         public Dictionary<string, object> Others { get; set; }
 
         /// <summary>
-        /// <para>A map of table names to their corresponding partition filter expressions.</para>
+        /// <para>The partition filter expression. Configure the partition filter expression for the specified table.</para>
         /// </summary>
         [NameInMap("partitionFilters")]
         [Validation(Required=false)]
         public Dictionary<string, string> PartitionFilters { get; set; }
 
         /// <summary>
-        /// <para>A list of IDs for the table partitions to migrate. This parameter takes effect only when the <c>type</c> parameter is set to <c>Partitions</c>.</para>
+        /// <para>The list of partition IDs for the tables to be migrated. Specify this parameter when type is set to Partitions.</para>
         /// </summary>
         [NameInMap("partitions")]
         [Validation(Required=false)]
         public List<long?> Partitions { get; set; }
 
         /// <summary>
-        /// <para>The schedule type for the task.</para>
+        /// <para>The schedule type of the scheduled task. Valid values: Daily (runs daily) and Hourly (runs hourly).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ScheduleType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000014</para>
@@ -108,35 +108,35 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcDbName { get; set; }
 
         /// <summary>
-        /// <para>A blacklist of tables to exclude from the migration. This parameter takes effect only when the <c>type</c> parameter is set to <c>Database</c>.</para>
+        /// <para>The list of tables to exclude from migration. Specify this parameter when type is set to Database.</para>
         /// </summary>
         [NameInMap("tableBlackList")]
         [Validation(Required=false)]
         public List<string> TableBlackList { get; set; }
 
         /// <summary>
-        /// <para>A map of source table names to target table names.</para>
+        /// <para>The mapping between the source table name and the destination table name.</para>
         /// </summary>
         [NameInMap("tableMapping")]
         [Validation(Required=false)]
         public Dictionary<string, string> TableMapping { get; set; }
 
         /// <summary>
-        /// <para>A whitelist of tables to migrate. This parameter takes effect only when the <c>type</c> parameter is set to <c>Database</c>. If omitted, all tables in the source database are migrated.</para>
+        /// <para>The list of tables to migrate. Specify this parameter when type is set to Database. If this parameter is not specified, all tables in the corresponding database are migrated.</para>
         /// </summary>
         [NameInMap("tableWhiteList")]
         [Validation(Required=false)]
         public List<string> TableWhiteList { get; set; }
 
         /// <summary>
-        /// <para>A list of table names to migrate. This parameter takes effect only when the <c>type</c> parameter is set to <c>Tables</c>.</para>
+        /// <para>The list of names of the tables to be migrated. Specify this parameter when type is set to Tables.</para>
         /// </summary>
         [NameInMap("tables")]
         [Validation(Required=false)]
         public List<string> Tables { get; set; }
 
         /// <summary>
-        /// <para>The time to run the scheduled task. If <c>scheduleType</c> is set to <c>Daily</c>, the value is the time in <c>HH:MM</c> format. If <c>scheduleType</c> is set to <c>Hourly</c>, the value is the minute of the hour (<c>MM</c>).</para>
+        /// <para>The schedule time of the scheduled task. When scheduleType is set to Daily, the value is in the HH:MM format. When scheduleType is set to Hourly, the value is in the MM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12:00</para>

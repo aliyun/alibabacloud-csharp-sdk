@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListMmsTimersResponseBodyData Data { get; set; }
         public class ListMmsTimersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of timers.</para>
+            /// <para>The log information.</para>
             /// </summary>
             [NameInMap("objectList")]
             [Validation(Required=false)]
             public List<ListMmsTimersResponseBodyDataObjectList> ObjectList { get; set; }
             public class ListMmsTimersResponseBodyDataObjectList : TeaModel {
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 09:29:58</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? DbId { get; set; }
 
                 /// <summary>
-                /// <para>The timer ID.</para>
+                /// <para>The scheduled task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The timer name.</para>
+                /// <para>The scheduled task name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>migrate_db_1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The schedule type.</para>
+                /// <para>The schedule type of the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Daily</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SrcDbName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the timer is stopped.</para>
+                /// <para>Indicates whether the task is stopped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

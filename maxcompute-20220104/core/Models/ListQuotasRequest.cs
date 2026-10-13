@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string BillingType { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</para>
+        /// <para>The marker after which the results are returned in alphabetical order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of items to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The cost allocation tags that are used to filter quotas. You can create cost allocation tags in the Tag service.</para>
+        /// <para>The billing tags used to filter quota objects. Billing tags are created by users for cloud products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</para>

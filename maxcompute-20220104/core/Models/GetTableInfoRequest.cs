@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetTableInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the schema to which the table or view belongs.</para>
+        /// <para>The name of the schema to which the table or view to be queried belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -20,16 +20,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The type of the table or view that you want to view. Valid values:</para>
+        /// <para>The type of the table or view to be queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>internal</b>: internal table</para>
-        /// </description></item>
-        /// <item><description><para><b>external</b>: external table</para>
-        /// </description></item>
-        /// <item><description><para><b>view</b>: view</para>
-        /// </description></item>
-        /// <item><description><para><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></para>
-        /// </description></item>
+        /// <item><description><b>internal</b>: Internal table.</description></item>
+        /// <item><description><b>external</b>: External table.</description></item>
+        /// <item><description><b>view</b>: View.</description></item>
+        /// <item><description><b>materializedView</b>: &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">Materialized view</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">Materialized view</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

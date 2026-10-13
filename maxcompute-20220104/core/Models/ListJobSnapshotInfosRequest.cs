@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The upstream node ID.</para>
+        /// <para>The upstream node IDs.</para>
         /// </summary>
         [NameInMap("extNodeIdList")]
         [Validation(Required=false)]
         public List<string> ExtNodeIdList { get; set; }
 
         /// <summary>
-        /// <para>The start UNIX timestamp.</para>
+        /// <para>The start timestamp.</para>
         /// <remarks>
-        /// <para>This parameter is invalid. The end timestamp is the point in time for the snapshot that you want to view.</para>
+        /// <para>This parameter is invalid. The end timestamp specifies the snapshot time to query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,35 +40,35 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The job instance ID.</para>
+        /// <para>The job instance Id.</para>
         /// </summary>
         [NameInMap("instanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The job owner.</para>
+        /// <para>The list of job owners.</para>
         /// </summary>
         [NameInMap("jobOwnerList")]
         [Validation(Required=false)]
         public List<string> JobOwnerList { get; set; }
 
         /// <summary>
-        /// <para>The job priority.</para>
+        /// <para>The job priorities.</para>
         /// </summary>
         [NameInMap("priorityList")]
         [Validation(Required=false)]
         public List<long?> PriorityList { get; set; }
 
         /// <summary>
-        /// <para>The project name.</para>
+        /// <para>The project names.</para>
         /// </summary>
         [NameInMap("projectList")]
         [Validation(Required=false)]
         public List<string> ProjectList { get; set; }
 
         /// <summary>
-        /// <para>The nickname of the computing quota that the job uses.</para>
+        /// <para>The nickname of the compute quota used by the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota_A</para>
@@ -78,35 +78,35 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string QuotaNickname { get; set; }
 
         /// <summary>
-        /// <para>The signature of the SQL job.</para>
+        /// <para>The SQL job signatures.</para>
         /// </summary>
         [NameInMap("signatureList")]
         [Validation(Required=false)]
         public List<string> SignatureList { get; set; }
 
         /// <summary>
-        /// <para>The fields for multi-column sorting.</para>
+        /// <para>The multi-column sort fields.</para>
         /// </summary>
         [NameInMap("sortByList")]
         [Validation(Required=false)]
         public List<string> SortByList { get; set; }
 
         /// <summary>
-        /// <para>The sort orders for multi-column sorting.</para>
+        /// <para>The multi-column sort orders.</para>
         /// </summary>
         [NameInMap("sortOrderList")]
         [Validation(Required=false)]
         public List<string> SortOrderList { get; set; }
 
         /// <summary>
-        /// <para>The job status.</para>
+        /// <para>The job statuses.</para>
         /// </summary>
         [NameInMap("statusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The end UNIX timestamp.</para>
+        /// <para>The end timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,45 +117,30 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? To { get; set; }
 
         /// <summary>
-        /// <para>The job type.</para>
+        /// <para>The job types.</para>
         /// </summary>
         [NameInMap("typeList")]
         [Validation(Required=false)]
         public List<string> TypeList { get; set; }
 
         /// <summary>
-        /// <para>The column to sort by. Valid values:</para>
+        /// <para>The sort column. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>submittedAtTime</para>
-        /// </description></item>
-        /// <item><description><para>waitingTime</para>
-        /// </description></item>
-        /// <item><description><para>runningAtTime</para>
-        /// </description></item>
-        /// <item><description><para>runningTime</para>
-        /// </description></item>
-        /// <item><description><para>snapshotTime</para>
-        /// </description></item>
-        /// <item><description><para>totalTime</para>
-        /// </description></item>
-        /// <item><description><para>cpuUsage</para>
-        /// </description></item>
-        /// <item><description><para>memoryUsage</para>
-        /// </description></item>
-        /// <item><description><para>minCpuPct</para>
-        /// </description></item>
-        /// <item><description><para>minMemoryPct</para>
-        /// </description></item>
-        /// <item><description><para>priority</para>
-        /// </description></item>
-        /// <item><description><para>cpuRequest</para>
-        /// </description></item>
-        /// <item><description><para>memoryRequest</para>
-        /// </description></item>
-        /// <item><description><para>cpuUsageToRequestRatio</para>
-        /// </description></item>
-        /// <item><description><para>memoryUsageToRequestRatio</para>
-        /// </description></item>
+        /// <item><description>submittedAtTime</description></item>
+        /// <item><description>waitingTime</description></item>
+        /// <item><description>runningAtTime</description></item>
+        /// <item><description>runningTime</description></item>
+        /// <item><description>snapshotTime</description></item>
+        /// <item><description>totalTime</description></item>
+        /// <item><description>cpuUsage </description></item>
+        /// <item><description>memoryUsage</description></item>
+        /// <item><description>minCpuPct</description></item>
+        /// <item><description>minMemoryPct</description></item>
+        /// <item><description>priority</description></item>
+        /// <item><description>cpuRequest</description></item>
+        /// <item><description>memoryRequest</description></item>
+        /// <item><description>cpuUsageToRequestRatio</description></item>
+        /// <item><description>memoryUsageToRequestRatio</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +161,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size, which is the maximum number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -196,7 +181,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To view the tenant ID, log on to the MaxCompute console. In the navigation pane on the left, choose Tenant Management &gt; Tenant Properties.</para>
+        /// <para>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing Tenant Management &gt; Tenant Properties in the left-side navigation pane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>478403690625249</para>

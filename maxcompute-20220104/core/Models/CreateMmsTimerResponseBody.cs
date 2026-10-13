@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsTimerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateMmsTimerResponseBodyData Data { get; set; }
         public class CreateMmsTimerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the timer.</para>
+            /// <para>timer id</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0be3e0b716671885050924814e3623</para>

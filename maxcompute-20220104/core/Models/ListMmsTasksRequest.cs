@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListMmsTasksRequestSorter Sorter { get; set; }
         public class ListMmsTasksRequestSorter : TeaModel {
             /// <summary>
-            /// <para>Sorts results by the start time.</para>
+            /// <para>Sorts the results by start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desc</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>Sorts results by status.</para>
+            /// <para>Sorts the results by status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asc</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The partition value. Use this parameter to filter migration tasks that migrated a specific partition value.</para>
+        /// <para>The partition value. Filters migration tasks that migrated a specific partition value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p1=1/p2=abc</para>

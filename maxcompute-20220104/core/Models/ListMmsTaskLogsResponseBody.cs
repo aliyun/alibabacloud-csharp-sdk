@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsTaskLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of logs.</para>
+        /// <para>The list of logs.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was created.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000015</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? SourceId { get; set; }
 
             /// <summary>
-            /// <para>The migration task status.</para>
+            /// <para>The status of the migration task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DATA_DOING</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The migration task ID.</para>
+            /// <para>The ID of the migration task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4023</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The date for which to retrieve statistics. The date must be in <c>YYYYMMdd</c> format.</para>
+        /// <para>The statistical date at the day level. Specify the time parameter in the YYYYMMdd format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The column to sort by.</para>
+        /// <para>The sort column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>totalFrequency</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The partition name. This parameter supports fuzzy matching.</para>
+        /// <para>The partition name for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20241201</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The schema that contains the table.</para>
+        /// <para>The schema to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schema</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. You can find this ID in the MaxCompute console by navigating to <b>Tenant Management</b> &gt; <b>Tenant Properties</b>.</para>
+        /// <para>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <b>Tenant Management</b> &gt; <b>Tenant Properties</b> in the left-side navigation pane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40713753659****</para>

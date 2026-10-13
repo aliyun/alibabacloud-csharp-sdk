@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListPackagesResponseBodyData Data { get; set; }
         public class ListPackagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The packages that were created.</para>
+            /// <para>The list of created packages.</para>
             /// </summary>
             [NameInMap("createdPackages")]
             [Validation(Required=false)]
             public List<ListPackagesResponseBodyDataCreatedPackages> CreatedPackages { get; set; }
             public class ListPackagesResponseBodyDataCreatedPackages : TeaModel {
                 /// <summary>
-                /// <para>The time when the package was created.</para>
+                /// <para>The creation time. The format is ISO 8601 and the time zone is UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-02T02:30:34Z</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The packages that were installed.</para>
+            /// <para>The list of installed packages.</para>
             /// </summary>
             [NameInMap("installedPackages")]
             [Validation(Required=false)]
             public List<ListPackagesResponseBodyDataInstalledPackages> InstalledPackages { get; set; }
             public class ListPackagesResponseBodyDataInstalledPackages : TeaModel {
                 /// <summary>
-                /// <para>The time when the package was installed.</para>
+                /// <para>The installation time. The format is ISO 8601 and the time zone is UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-02T02:30:34Z</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</para>
+                /// <para>The project to which the package belongs. This parameter is required if the package is installed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>projectB</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SourceProject { get; set; }
 
                 /// <summary>
-                /// <para>The status of the package.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OK</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3b4aa16677927210252786e4cb6</para>
