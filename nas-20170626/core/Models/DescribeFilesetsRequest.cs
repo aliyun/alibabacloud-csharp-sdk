@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</para>
         /// <remarks>
-        /// <para>This operation supports only CPFS file systems (with ID prefixes cpfs-* or bmcpfs-*). General-purpose NAS and Extreme NAS file systems are not supported.</para>
+        /// <para>This operation supports only CPFS file systems (with the ID prefix cpfs-\* or bmcpfs-\*). General-purpose NAS and Extreme NAS file systems are not supported.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The value of the filter key. Wildcards are not supported for this parameter.</para>
             /// <list type="bullet">
             /// <item><description>If Key is set to FsetIds, Value is set to a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
-            /// <item><description>If Key is set to FileSystemPath, Value is set to the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</description></item>
-            /// <item><description>If Key is set to Description, Value is set to the description or a partial description of the fileset.</description></item>
-            /// <item><description>If Key is set to QuotaExists, Value is set to true or false. If this parameter is left empty, all filesets are returned.</description></item>
+            /// <item><description>If Key is set to FileSystemPath, Value is set to the full path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</description></item>
+            /// <item><description>If Key is set to Description, Value is set to the full description or a partial description of the fileset.</description></item>
+            /// <item><description>If Key is set to QuotaExists, Value is set to true or false. If you leave this parameter empty, all filesets are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate a new request to retrieve the content after the truncation point.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to start a new request to retrieve the results after the truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyFilesetRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</para>
+        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</para>
+        /// <para>The release protection property of the instance. Specifies whether the instance can be released by using the console or the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>true: enables release protection.</description></item>
-        /// <item><description>false: disables release protection.</description></item>
+        /// <item><description>true: Enables release protection for the instance.</description></item>
+        /// <item><description>false: Disables release protection for the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter can protect filesets only against manual releases, but not against automatic releases.</para>
+        /// <para>This property only restricts manual release operations and does not take effect on system-initiated release operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The fileset description.</para>
+        /// <para>The description of the fileset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -54,12 +54,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
-        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset is modified and no fees incurred.</para>
+        /// <para>Specifies whether to perform a dry run for this modification request.</para>
+        /// <para>A dry run checks parameter validity and inventory without actually modifying the instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and Apsara File Storage NAS (NAS) inventory data. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the specified fileset is modified.</description></item>
+        /// <item><description>true: Sends a dry run request without modifying the instance. The check items include whether required parameters are specified, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,10 +70,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The fileset ID.</para>
+        /// <para>Fileset ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

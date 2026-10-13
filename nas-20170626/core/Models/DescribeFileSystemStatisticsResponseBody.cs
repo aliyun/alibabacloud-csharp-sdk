@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the file system statistics information list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of file system statistics information entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of file system entries.</para>
+        /// <para>The total number of file system statistics information entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

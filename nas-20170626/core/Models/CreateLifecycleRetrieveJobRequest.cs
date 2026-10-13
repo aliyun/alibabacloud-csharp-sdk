@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The list of directories or file paths to retrieve. You can specify up to 10 paths.</para>
+        /// <para>The list of directories or file paths to retrieve. A maximum of 10 paths are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

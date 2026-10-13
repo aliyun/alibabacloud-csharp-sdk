@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
@@ -108,11 +108,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EnableABE { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the OpLock feature is enabled.</para>
-            /// <para>Valid values:</para>
+            /// <para>Specifies whether to enable the OpLock feature.
+            /// Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Not enabled.<remarks>
+            /// <item><description>false: Disabled.<remarks>
             /// <para>Only file systems of the SMB Protocol Type are supported.</para>
             /// </remarks>
             /// </description></item>

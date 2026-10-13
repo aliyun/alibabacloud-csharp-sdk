@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class DescribeLifecyclePoliciesResponseBodyLifecyclePolicies : TeaModel {
             /// <summary>
             /// <para>The time when the lifecycle management policy was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The threshold of the rule.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
+                /// <item><description>If Attribute is set to Atime, this value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The storage type. Valid values:</para>
+            /// <para>The storage tiering type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>InfrequentAccess: IA storage class.</description></item>
             /// <item><description>Archive: Archive storage class.</description></item>

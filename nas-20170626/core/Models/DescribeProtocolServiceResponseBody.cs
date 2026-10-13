@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeProtocolServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The marker used to retrieve the remaining protocol services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aBcdeg==</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about protocol service list.</para>
+        /// <para>The list of protocol service information.</para>
         /// </summary>
         [NameInMap("ProtocolServices")]
         [Validation(Required=false)]
         public List<DescribeProtocolServiceResponseBodyProtocolServices> ProtocolServices { get; set; }
         public class DescribeProtocolServiceResponseBodyProtocolServices : TeaModel {
             /// <summary>
-            /// <para>The time when the protocol service was created. The time is displayed in UTC.</para>
+            /// <para>The time when the protocol service was created, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-12T07:28:38Z</para>
@@ -42,18 +42,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <list type="bullet">
             /// <item><description>The description must be 2 to 128 characters in length.</description></item>
             /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-            /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+            /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>此协议服务的描述</para>
+            /// <para>Description of this protocol service</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpfs-099394bd928c****</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The base throughput of the protocol service. Unit: MB/s.</para>
+            /// <para>The base throughput of the protocol node. Unit: MB/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? InstanceBaseThroughput { get; set; }
 
             /// <summary>
-            /// <para>The burst throughput of the protocol service. Unit: MB/s.</para>
+            /// <para>The burst throughput of the protocol node. Unit: MB/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? InstanceBurstThroughput { get; set; }
 
             /// <summary>
-            /// <para>The memory cache size of the protocol service. Unit: GiB.</para>
+            /// <para>The memory cache size of the protocol node. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? InstanceRAM { get; set; }
 
             /// <summary>
-            /// <para>The time when the protocol service was modified. The time is displayed in UTC.</para>
+            /// <para>The time when the protocol service was last modified, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-12T07:28:38Z</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of CPFS directories and filesets exported in the protocol service.</para>
+            /// <para>The total number of CPFS directories and filesets exported in this protocol service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? MountTargetCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protocol service.</para>
+            /// <para>The protocol service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ptc-197ed6a00f2b****</para>
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ProtocolServiceId { get; set; }
 
             /// <summary>
-            /// <para>The specification of the protocol service.</para>
+            /// <para>The specification of the protocol service cluster.</para>
             /// <list type="bullet">
-            /// <item><description>Valid value: General.</description></item>
-            /// <item><description>Default value: General.</description></item>
+            /// <item><description>Valid values: General</description></item>
+            /// <item><description>Default value: General</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The protocol type supported by the protocol service.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NFS: The protocol service supports access over the Network File System (NFS) protocol.</description></item>
+            /// <item><description>NFS: The protocol service supports NFS protocol access.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <list type="bullet">
             /// <item><description>Creating: The protocol service is being created.</description></item>
             /// <item><description>Starting: The protocol service is being started.</description></item>
-            /// <item><description>Running: The protocol service is running.</description></item>
+            /// <item><description>Running: The protocol service is available.</description></item>
             /// <item><description>Updating: The protocol service is being updated.</description></item>
             /// <item><description>Deleting: The protocol service is being deleted.</description></item>
             /// <item><description>Stopping: The protocol service is being stopped.</description></item>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The VSW ID associated with the protocol service.</para>
+            /// <para>The vSwitch ID associated with the protocol service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-123xxx</para>

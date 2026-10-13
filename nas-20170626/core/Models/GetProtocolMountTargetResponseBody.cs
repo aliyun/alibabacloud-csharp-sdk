@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetProtocolMountTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</para>
         /// 
         /// <b>Example:</b>
         /// <para>M18xMA==</para>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The protocol type of the file system.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NFS: NFS protocol</description></item>
-            /// <item><description>SMB: SMB protocol</description></item>
-            /// <item><description>cpfs: the protocol type supported by CPFS file systems</description></item>
+            /// <item><description>NFS: NFS protocol.</description></item>
+            /// <item><description>SMB: SMB protocol.</description></item>
+            /// <item><description>cpfs: the protocol type supported by the CPFS file system.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID of the protocol service export.</para>
+            /// <para>The VPC ID of the protocol service export.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1h5mxoqfuo3xurf****</para>

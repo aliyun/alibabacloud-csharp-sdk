@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class ListDirectoriesAndFilesResponseBodyEntries : TeaModel {
             /// <summary>
             /// <para>The query time.</para>
-            /// <para>The time follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>The value follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-01T10:08:08Z</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The time when the metadata was modified.</para>
-            /// <para>The time follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>The value follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:10Z</para>
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the directory contains archive storage class files.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to Directory.</para>
+            /// <para>Indicates whether the directory contains archive storage files.</para>
+            /// <para>This parameter is returned and meaningful only when Type is Directory.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The directory contains archive storage class files.</description></item>
-            /// <item><description>false: The directory does not contain archive storage class files.</description></item>
+            /// <item><description>true: The directory contains archive storage files.</description></item>
+            /// <item><description>false: The directory does not contain archive storage files.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>Indicates whether the directory contains IA storage class files.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to Directory.</para>
+            /// <para>This parameter is returned and meaningful only when Type is Directory.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The directory contains IA storage class files.</description></item>
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The time when the file was modified.</para>
-            /// <para>The time follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>The value follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -146,9 +146,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The time when the most recent data retrieval task was run.</para>
-            /// <para>The time follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>The time when the most recent data retrieval task was executed.</para>
+            /// <para>The value follows the ISO 8601 standard and is returned in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The size of the file.</para>
             /// <para>Unit: bytes.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The storage class type of the returned file.</para>
-            /// <para>This parameter is returned and meaningful only when Type is set to File.</para>
+            /// <para>This parameter is returned and meaningful only when Type is File.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>InfrequentAccess: IA storage class.</description></item>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</para>
+        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

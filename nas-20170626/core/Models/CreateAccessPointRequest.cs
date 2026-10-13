@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Specifies whether to enable the RAM policy.
         /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enabled.</description></item>
-        /// <item><description>false (default): not enabled.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false (default): Not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</para>
+        /// <para>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant authorization for the corresponding access permissions to the accounts and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</para>
         /// </remarks>
         /// <remarks>
         /// <para>For Agentic file systems, this parameter must be set to true.</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The POSIX permission. Default value: &quot;0755&quot;. Limit: The value must be a four-digit octal number that starts with 0.</para>
+        /// <para>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</para>
         /// <para>This parameter takes effect after you specify the OwnerUserId and OwnerGroupId parameters.</para>
         /// <remarks>
         /// <para>Not supported for Agentic file systems.</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The list of access point tags.</para>
+        /// <para>The access point tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AgenticSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the access point was created. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-28T06:32:14Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTimeUtc { get; set; }
 
             /// <summary>
-            /// <para>The access point domain name.</para>
+            /// <para>The domain name of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was last modified. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the access point was last modified. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-24T02:10:23Z</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public ListAccessPointsResponseBodyAccessPointsPosixUser PosixUser { get; set; }
             public class ListAccessPointsResponseBodyAccessPointsPosixUser : TeaModel {
                 /// <summary>
-                /// <para>The POSIX group ID.</para>
+                /// <para>The POSIX user group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? PosixGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The secondary group ID.</para>
+                /// <para>The secondary user group ID.</para>
                 /// </summary>
                 [NameInMap("PosixSecondaryGroupIds")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public ListAccessPointsResponseBodyAccessPointsRootPathPermission RootPathPermission { get; set; }
             public class ListAccessPointsResponseBodyAccessPointsRootPathPermission : TeaModel {
                 /// <summary>
-                /// <para>The owner group ID.</para>
+                /// <para>The file group ID of the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? OwnerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The owner user ID.</para>
+                /// <para>The user ID of the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -241,10 +241,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The current access point status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: Available.</description></item>
-            /// <item><description>Inactive: Unavailable.</description></item>
-            /// <item><description>Pending: Being created.</description></item>
-            /// <item><description>Deleting: Being deleted.</description></item>
+            /// <item><description>Active: The access point is available.</description></item>
+            /// <item><description>Inactive: The access point is unavailable.</description></item>
+            /// <item><description>Pending: The access point is being created.</description></item>
+            /// <item><description>Deleting: The access point is being deleted.</description></item>
             /// </list>
             /// <remarks>
             /// <para>You can mount a file system only when the status is Active.</para>

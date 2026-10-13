@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class ListRecycledDirectoriesAndFilesRequest : TeaModel {
         /// <summary>
         /// <para>The FileId of the directory to query.</para>
-        /// <para>This field is the NFS inode number. When the recycle bin is empty, you can call this operation with FileId=2 (root directory inode) to verify the reachability of the operation or query the recycle bin content under the root directory. Other valid FileId values can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation.</para>
+        /// <para>This field is the NFS inode number. When the recycle bin is empty, you can call this operation with FileId=2 (root directory inode) to verify the reachability of the operation or query the recycle bin content under the root directory. You can obtain other valid FileId values by calling the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The maximum throughput of the file system.</para>
         /// <para>Unit: MB/s.</para>
-        /// <para>For available specification values, refer to the actual specifications on the purchase page.</para>
+        /// <para>For available specification values, see the actual specifications on the buy page.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></para>
+        /// <para><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go buy page</a></para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></para>
+        /// <para><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go buy page</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>
@@ -28,17 +28,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The capacity of the file system. Unit: GiB.
         /// This parameter is required and takes effect only when FileSystemType is set to extreme, cpfs, or cpfsse.</para>
-        /// <para>For available values, refer to the actual specifications on the purchase page:</para>
+        /// <para>For available values, see the actual specifications on the buy page:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=nas_extreme_post#/buy">Extreme NAS pay-as-you-go purchase page</a></description></item>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=nas_extreme_post#/buy">Extreme NAS pay-as-you-go buy page</a></description></item>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go buy page</a></description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS pay-as-you-go purchase page</a></para>
+        /// <item><description><para><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS pay-as-you-go buy page</a></para>
         /// </description></item>
-        /// <item><description><para><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></para>
+        /// <item><description><para><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go buy page</a></para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The billing method.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo (default): Pay-as-you-go.</description></item>
-        /// <item><description>Subscription: Subscription.</description></item>
+        /// <item><description>PayAsYouGo (default): pay-as-you-go.</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:  </para>
         /// <list type="bullet">
         /// <item><description>true: Sends a dry run request without creating the instance. The check items include required parameters, request format, service limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.  </description></item>
-        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is created.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is directly created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The subscription duration.</para>
         /// <para>Unit: months. This parameter is required and takes effect only when ChargeType is set to Subscription.</para>
-        /// <para>If a subscription instance is not renewed before the instance expires, the instance is automatically released upon expiration. For more information about renewal, see the renewal documentation.</para>
+        /// <para>If a subscription instance is not renewed upon instance expiration, the instance expires and is automatically released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to encrypt the file system.</para>
-        /// <para>Uses keys managed by Key Management Service (KMS) to encrypt data stored on the file system. Decryption is not required when you read or write encrypted data.</para>
+        /// <para>Uses keys managed by Key Management Service (KMS) to encrypt data stored on the file system. Encrypted data does not need decryption when it is read or written.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0 (default): Not encrypted.</description></item>
@@ -132,8 +132,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Extreme NAS: Custom Key (KMS) is supported in all regions except China East 1 Finance.</description></item>
-        /// <item><description>General-purpose NAS: Custom Key (KMS) is supported in all regions.</description></item>
+        /// <item><description>Extreme NAS: The Custom Key (KMS) feature is supported in all regions except China East 1 Alibaba Finance Cloud.</description></item>
+        /// <item><description>General-purpose NAS: The Custom Key (KMS) feature is supported in all regions.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>standard (default): General-purpose NAS.</description></item>
         /// <item><description>extreme: Extreme NAS.</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant).</description></item>
-        /// <item><description>cpfsse: CPFS SE (zone-redundant).</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) with locally redundant storage (LRS).</description></item>
+        /// <item><description>cpfsse: CPFS SE with zone-redundant storage (ZRS).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The list of zone-redundant vSwitch IDs.
-        /// If RedundancyType is set to ZRS, this parameter is required. You must specify three vSwitch IDs from three different zones.</para>
+        /// If RedundancyType is set to ZRS, this parameter is required. You must specify three vSwitch IDs, each from a different zone.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The snapshot ID.</para>
-        /// <para>This parameter is supported only for Extreme NAS file systems with the advanced storage type.</para>
+        /// <para>This parameter is supported only for Extreme NAS file systems with the Advanced storage type.</para>
         /// <remarks>
         /// <para>A file system created from a snapshot has the same version as the source file system of the snapshot. For example, if the source file system version is 1 and you want to create a version 2 file system, first create file system A from the snapshot, then create file system B that meets the version 2 configuration, copy the data from file system A to file system B, and migrate your workloads to file system B after the copy is complete.</para>
         /// </remarks>
@@ -336,11 +336,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The zone ID.</para>
         /// <para>A zone is a physical area with independent power grids and networks within a region.</para>
-        /// <para>If FileSystemType is set to standard, this parameter is optional. By default, an active zone that meets the conditional ProtocolType and StorageType configurations is randomly selected.</para>
+        /// <para>If FileSystemType is set to standard, this parameter is optional. By default, a conditional active zone is randomly selected based on the values of ProtocolType and StorageType.</para>
         /// <para>If FileSystemType is set to extreme or cpfs, this parameter is required.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>File systems and Elastic Computing Service (ECS) servers in different zones within the same region can communicate with each other.</description></item>
+        /// <item><description>File systems and Elastic Computing Service (ECS) server instances in different zones of the same region can communicate with each other.</description></item>
         /// <item><description>Place the file system and the Elastic Computing Service (ECS) server in the same zone to avoid cross-zone latency.</description></item>
         /// </list>
         /// </remarks>

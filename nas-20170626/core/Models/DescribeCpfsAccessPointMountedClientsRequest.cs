@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results on each page. Valid values: 1 to 100.
+        /// <para>The number of entries per page. Valid values: 1 to 100.
         /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>

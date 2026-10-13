@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAutoSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// <para>Every response returns a unique request ID regardless of whether the request is successful.</para>
+        /// <para>The request ID. A request ID is returned regardless of whether the API call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

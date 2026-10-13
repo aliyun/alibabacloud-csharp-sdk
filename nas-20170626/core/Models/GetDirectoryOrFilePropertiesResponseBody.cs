@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The time when the file was queried.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-01T10:08:08Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The time when the metadata was modified.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:10Z</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>Indicates whether the directory contains Archive storage class files.</para>
-            /// <para>This parameter is returned only when Type is Directory.</para>
+            /// <para>This parameter is returned only when Type is set to Directory.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The directory contains Archive storage class files.</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>Indicates whether the directory contains IA storage class files.</para>
-            /// <para>This parameter is returned only when Type is Directory.</para>
+            /// <para>This parameter is returned only when Type is set to Directory.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The directory contains IA storage class files.</description></item>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The time when the file was modified.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? OfflineUnchangedDuration { get; set; }
 
             /// <summary>
-            /// <para>The time when the most recent data retrieval task was executed.</para>
+            /// <para>The time when the most recent data retrieval task was run.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The size of the file.</para>
             /// <para>Unit: bytes.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The storage type of the returned file.</para>
-            /// <para>This parameter is returned only when Type is File.</para>
+            /// <para>This parameter is returned only when Type is set to File.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Standard: General-purpose NAS storage.</description></item>

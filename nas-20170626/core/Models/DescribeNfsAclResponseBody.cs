@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeNfsAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the ACL feature.</para>
+        /// <para>The ACL information.</para>
         /// </summary>
         [NameInMap("Acl")]
         [Validation(Required=false)]
         public DescribeNfsAclResponseBodyAcl Acl { get; set; }
         public class DescribeNfsAclResponseBodyAcl : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the NFS ACL feature is enabled.</para>
+            /// <para>Indicates whether the NFS ACL feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The NFS ACL feature is enabled.</description></item>
-            /// <item><description>false: The NFS ACL feature is disabled.</description></item>
+            /// <item><description><para>true: The NFS ACL feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: The NFS ACL feature is not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

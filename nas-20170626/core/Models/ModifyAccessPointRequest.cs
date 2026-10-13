@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class ModifyAccessPointRequest : TeaModel {
         /// <summary>
         /// <para>The permission group name.</para>
-        /// <para>This parameter is required when the file system is a General-purpose NAS file system.</para>
+        /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
         /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</para>
         /// <remarks>
         /// <para>Agentic file systems do not support this parameter.</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>false (default): Not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</para>
+        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must perform authorization to grant the corresponding access permissions to the accounts and then mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</para>
         /// </remarks>
         /// <remarks>
         /// <para>Agentic file systems do not support this parameter.</para>

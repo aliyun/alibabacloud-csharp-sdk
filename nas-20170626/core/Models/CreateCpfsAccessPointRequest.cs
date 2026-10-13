@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

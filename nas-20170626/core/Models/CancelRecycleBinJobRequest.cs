@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelRecycleBinJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The ID of the task that you want to cancel.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412172.html">ListRecycleBinJobs</a> operation to query the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

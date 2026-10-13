@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Sends a check request without actually canceling the task. The check items include whether required parameters are specified, the request format, and the task state. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): Sends a normal request and directly cancels the task after the check passes.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the task is canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS General-purpose: Must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: Must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

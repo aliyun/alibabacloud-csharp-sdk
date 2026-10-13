@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of CPFS access point tags.</para>
+            /// <para>The list of tags for the CPFS access point.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

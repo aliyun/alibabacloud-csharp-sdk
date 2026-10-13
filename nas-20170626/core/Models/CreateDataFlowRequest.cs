@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateDataFlowRequest : TeaModel {
         /// <summary>
-        /// <para>The auto-refresh interval. CPFS General-purpose checks the directory for data updates at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</para>
+        /// <para>The auto-refresh interval. General-purpose CPFS checks the directory for data updates at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</para>
         /// <para>Valid values: 10 to 525600. Default value: 10.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the file system type is CPFS General-purpose.</para>
+        /// <para>This parameter takes effect only when the file system type is General-purpose CPFS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? AutoRefreshInterval { get; set; }
 
         /// <summary>
-        /// <para>The auto-refresh policy. Specifies the policy for importing data updates from the source storage to CPFS General-purpose after the source data is updated.</para>
+        /// <para>The auto-refresh policy. Specifies the policy for importing data updates from the source storage to General-purpose CPFS after the source data is updated.</para>
         /// <list type="bullet">
-        /// <item><description>None (default): Data updates from the source are not automatically imported to CPFS General-purpose. You can import data updates from the source through data flow tasks.</description></item>
-        /// <item><description>ImportChanged: Data updates from the source are automatically imported to CPFS General-purpose.<remarks>
-        /// <para>This parameter takes effect only when the file system type is CPFS General-purpose.</para>
+        /// <item><description>None (default): Data updates from the source are not automatically imported to General-purpose CPFS. You can use data flow tasks to import data updates from the source.</description></item>
+        /// <item><description>ImportChanged: Data updates from the source are automatically imported to General-purpose CPFS.<remarks>
+        /// <para>This parameter takes effect only when the file system type is General-purpose CPFS.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The collection of auto-refresh configurations.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the file system type is CPFS General-purpose.</para>
+        /// <para>This parameter takes effect only when the file system type is General-purpose CPFS.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<CreateDataFlowRequestAutoRefreshs> AutoRefreshs { get; set; }
         public class CreateDataFlowRequestAutoRefreshs : TeaModel {
             /// <summary>
-            /// <para>The auto-refresh directory. CPFS General-purpose registers data modification events from the source storage and checks whether the source data in this directory has been updated. Updated data is automatically imported.</para>
-            /// <para>The default value is empty, which means that data updates in the source storage are not automatically imported to CPFS General-purpose. You must manually create a task to import updates.</para>
+            /// <para>The auto-refresh directory. General-purpose CPFS registers data modification events from the source storage, checks whether the source data in this directory has been updated, and automatically imports the updated data.</para>
+            /// <para>The default value is empty, which means that data updates in the source storage are not automatically imported to General-purpose CPFS. You must manually create a task to import updates.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>The length must be 2 to 1024 characters.</description></item>
             /// <item><description>UTF-8 encoding is used.</description></item>
             /// <item><description>Must start and end with a forward slash (/).</description></item>
-            /// <item><description>The directory must be an existing directory on the CPFS General-purpose file system and must be located within the Fileset directory of the data flow.</description></item>
+            /// <item><description>The directory must be an existing directory on the General-purpose CPFS file system and must be located within the Fileset directory of the data flow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
         /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The value of RequestId may be different for each API request.</para>
@@ -108,11 +108,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run for this request.</para>
-        /// <para>A dry run checks parameter validity and resource availability without actually creating the instance or incurring charges.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating the instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a dry run request without creating the instance. The check items include whether required parameters are specified, the request format, business limitations, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but the DataFlowId is empty.</description></item>
-        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is created.</description></item>
+        /// <item><description>true: performs a dry run without creating the instance. The system checks whether the required parameters are specified, whether the request format is valid, whether service limits are met, and whether the specified NAS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the HTTP status code 200 is returned, but the DataFlowId is empty.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the check succeeds, the instance is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS General-purpose: Must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose CPFS: must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: Must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The Fileset ID.</para>
         /// <remarks>
-        /// <para>This parameter is required when the file system type is CPFS General-purpose.</para>
+        /// <para>This parameter is required when the file system type is General-purpose CPFS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description><para>storage type: Only oss is supported.</para>
         /// </description></item>
-        /// <item><description><para>account id: Optional. The UID of the account that owns the source storage. This parameter is required when you use cross-account OSS.</para>
+        /// <item><description><para>account id: Optional. The UID of the account to which the source storage belongs. This parameter is required when you use cross-account OSS.</para>
         /// </description></item>
         /// <item><description><para>path: The name of the OSS bucket. Limits:</para>
         /// <list type="bullet">
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The OSS bucket must be an existing bucket in the same region.</description></item>
+        /// <item><description>The OSS bucket must be an existing bucket in the current region.</description></item>
         /// <item><description>The account id parameter is supported only by CPFS for Lingjun 2.6.0 or later.</description></item>
         /// </list>
         /// </remarks>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// <remarks>
         /// <para>The transfer bandwidth of the data flow must be less than the I/O bandwidth of the file system.
-        /// This parameter is required when the file system type is CPFS General-purpose.</para>
+        /// This parameter is required when the file system type is General-purpose CPFS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

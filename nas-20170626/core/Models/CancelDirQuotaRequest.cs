@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>Uid: user ID</description></item>
         /// <item><description>Gid: user group ID</description></item>
-        /// <item><description>AllUsers: all users.</description></item>
+        /// <item><description>AllUsers: all users</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

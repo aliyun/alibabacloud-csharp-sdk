@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The portable account ID.
-        /// Limit: The value is a 16-character string that supports digits and lowercase letters.</para>
+        /// Limit: The value is a 16-character string that contains digits and lowercase letters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>378cc7630f26****</para>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>Specifies whether to share directory permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not share directory permissions.</description></item>
-        /// <item><description>true: shares directory permissions.<remarks>
+        /// <item><description>false (default): Directory permissions are not shared.</description></item>
+        /// <item><description>true: Directory permissions are shared.<remarks>
         /// <list type="bullet">
         /// <item><description>This parameter takes effect only when Type is set to Directory and Owner is not empty.</description></item>
         /// <item><description>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</description></item>

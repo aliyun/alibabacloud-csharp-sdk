@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? ReservedDays { get; set; }
 
             /// <summary>
-            /// <para>The storage usage of Infrequent Access (IA) data in the recycle bin. Unit: bytes.</para>
+            /// <para>The storage usage of IA storage class data in the recycle bin. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

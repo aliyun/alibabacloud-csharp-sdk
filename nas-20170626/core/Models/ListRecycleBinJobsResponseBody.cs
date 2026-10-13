@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The FileId of the file or directory associated with the task.</para>
+            /// <para>The file ID of the file or directory associated with the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04***08</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8C****C54</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The execution progress of the task.</para>
+            /// <para>The progress of the task.</para>
             /// <para>Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

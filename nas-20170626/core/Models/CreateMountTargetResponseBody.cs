@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public CreateMountTargetResponseBodyMountTargetExtra MountTargetExtra { get; set; }
         public class CreateMountTargetResponseBodyMountTargetExtra : TeaModel {
             /// <summary>
-            /// <para>The dual-stack mount target that supports both IPv4 and IPv6.</para>
+            /// <para>The IPv4 and IPv6 dual-stack mount target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>

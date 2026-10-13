@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetFilesetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for Lingjun file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +27,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The fileset ID.</para>
+        /// <para>The Fileset ID.</para>
         /// <remarks>
-        /// <para> This parameter is required for CPFS file systems.</para>
+        /// <para>This parameter is required if the file system type is CPFS.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

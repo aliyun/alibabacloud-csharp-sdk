@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyLDAPConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The LDAP entry.</para>
+        /// <para>The distinguished name (DN) of the entry to bind to the LDAP directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn=alibaba,dc=com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string BindDN { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SearchBase { get; set; }
 
         /// <summary>
-        /// <para>The LDAP service address.</para>
+        /// <para>The LDAP server address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

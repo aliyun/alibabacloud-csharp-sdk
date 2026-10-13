@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The collection of file system IDs.</para>
         /// <remarks>
-        /// <para> The maximum number of elements in the set must be less than or equal to 20.</para>
+        /// <para>The maximum number of elements in the collection must be less than or equal to 20.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Filesystems")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FilesystemsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the file system resides.</para>
+        /// <para>The region ID of the file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

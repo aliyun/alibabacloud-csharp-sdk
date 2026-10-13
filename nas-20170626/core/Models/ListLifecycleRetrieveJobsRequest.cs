@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
-        /// <item><description>Archive: Archive storage.<remarks>
+        /// <item><description>Archive: Archive storage class.<remarks>
         /// <para>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</para>
         /// </remarks>
         /// </description></item>

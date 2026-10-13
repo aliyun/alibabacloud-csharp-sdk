@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The read and write permissions of the authorized object on the file system.</para>
+        /// <para>The read and write permissions on the file system granted to the authorized object.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RDWR (default): read and write.</description></item>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The authorization of the system user of the authorized object on the file system.</para>
+        /// <para>The authorization for the system user of the authorized object to access the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>no_squash: allows access to the file system as the root user.</description></item>
         /// <item><description>root_squash: maps the root user to the nobody user when the root user accesses the file system.</description></item>
         /// <item><description>all_squash: maps all users to the nobody user regardless of the user identity used to access the file system.</description></item>
         /// </list>
-        /// <para>The nobody user is a default user in Linux. This user can access only public content on the server and has low privileges and high security.</para>
+        /// <para>The nobody user is the default user in Linux. This user can access only public content on the server and has low privileges and high security.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all_squash</para>

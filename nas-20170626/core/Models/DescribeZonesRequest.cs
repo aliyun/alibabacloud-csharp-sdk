@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the file system.</para>
-        /// <para>Valid value:</para>
+        /// <para>The file system type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
+        /// <item><description>standard (default): General-purpose NAS.</description></item>
         /// <item><description>extreme: Extreme NAS file system.</description></item>
-        /// <item><description>cpfs: CPFS file system.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to query zones.</para>
-        /// <para>You can call the DescribeRegions operation to query the latest region list.</para>
+        /// <para>The ID of the region where the zones reside.</para>
+        /// <para>You can call DescribeRegions to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

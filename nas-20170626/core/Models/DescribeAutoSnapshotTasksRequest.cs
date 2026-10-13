@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The type of the file system.</para>
-        /// <para>Valid values: extreme (Extreme NAS file system)</para>
+        /// <para>Valid values: extreme (Extreme NAS file system).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The page number of the automatic snapshot task list.</para>
-        /// <para>Start value (default value): 1</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

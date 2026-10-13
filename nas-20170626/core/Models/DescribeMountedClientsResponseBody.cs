@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the client list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of IP addresses returned per page.</para>
+        /// <para>The number of client IP addresses on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of IP addresses.</para>
+        /// <para>The total number of client IP addresses returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

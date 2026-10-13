@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the file system that you want to delete.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <c>cpfs-</c>, for example, cpfs-00cb6fa094ca\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>Extreme NAS: The ID must start with <c>extreme-</c>, such as extreme-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>, such as cpfs-00cb6fa094ca\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

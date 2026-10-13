@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? AutoRefreshInterval { get; set; }
 
         /// <summary>
-        /// <para>The automatic update policy. This policy specifies how data updates from the source are imported to CPFS after the source data is updated. Valid values:</para>
+        /// <para>The automatic update policy. After data is updated on the source, this policy determines how the updated data is imported to CPFS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None: Data updates from the source are not automatically imported to CPFS. You can import source data updates by using a dataflow task.</description></item>
-        /// <item><description>ImportChanged: Data updates from the source are automatically imported to CPFS.</description></item>
+        /// <item><description>None: Updated data on the source is not automatically imported to CPFS. You can import the updated data by using a dataflow task.</description></item>
+        /// <item><description>ImportChanged: Updated data on the source is automatically imported to CPFS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoRefreshPolicy { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</para>
+        /// <para>Ensures the idempotency of the request. Generate a unique value from your client to ensure that the value is unique across different requests.</para>
         /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a dry run request without creating an instance. The check items include whether required parameters are specified, the request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
-        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is directly created.</description></item>
+        /// <item><description>true: Sends a dry run request without creating an instance. The check items include required parameters, request format, service limits, and NAS resource availability. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowSubTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system. Only CPFS for Lingjun file systems are supported. The ID must start with <c>bmcpfs-</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter keys for querying data flow streaming tasks.</para>
+        /// <para>The filter keys used to query streaming tasks of a data flow.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter key. Wildcards are not supported.</para>
+            /// <para>The value of the filter key. This parameter does not support wildcards.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
-            /// <item><description>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <c>task-29ee8e890f45****</c> or <c>task-29ee8e890f45****,task-38ae8e890f45****</c>.</description></item>
-            /// <item><description>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <c>subTaskId-370kyfmyknxcyzw****</c> or <c>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</c>.</description></item>
-            /// <item><description>If Key is set to Status, Value is set to the status of the data flow task, including EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</description></item>
-            /// <item><description>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1,023 characters.</description></item>
-            /// <item><description>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1,023 characters.</description></item>
+            /// <item><description>If Key is set to DataFlowIds, Value is set to a data flow ID or a part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
+            /// <item><description>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or a part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <c>task-29ee8e890f45****</c> or <c>task-29ee8e890f45****,task-38ae8e890f45****</c>.</description></item>
+            /// <item><description>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or a part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <c>subTaskId-370kyfmyknxcyzw****</c> or <c>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</c>.</description></item>
+            /// <item><description>If Key is set to Status, Value is set to the status of the data flow task. Valid values: EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</description></item>
+            /// <item><description>If Key is set to SrcFilePath, Value is set to the source file path. The path can be up to 1,023 characters in length.</description></item>
+            /// <item><description>If Key is set to DstFilePath, Value is set to the destination file path. The path can be up to 1,023 characters in length.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,13 +70,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results per query.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values: 20 to 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 20.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>Valid values: 20 to 100.</para>
+        /// <para>Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</para>
+        /// <para>The token that is used to retrieve the next page of results when the returned results are truncated. You can use NextToken to initiate another request to retrieve the results after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iWk0AQAAAAAvY2FzZS8=</para>

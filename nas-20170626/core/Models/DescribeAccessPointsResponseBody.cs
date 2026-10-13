@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeAccessPointsResponseBodyAccessPoints> AccessPoints { get; set; }
         public class DescribeAccessPointsResponseBodyAccessPoints : TeaModel {
             /// <summary>
-            /// <para>The access point ARN.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The access point domain name.</para>
+            /// <para>The domain name of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPath { get; set; }
 
             /// <summary>
-            /// <para>The root directory permission.</para>
+            /// <para>The root directory permissions.</para>
             /// </summary>
             [NameInMap("RootPathPermission")]
             [Validation(Required=false)]
@@ -211,13 +211,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The current access point status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: available.</description></item>
-            /// <item><description>Inactive: unavailable.</description></item>
+            /// <item><description>Active: active.</description></item>
+            /// <item><description>Inactive: inactive.</description></item>
             /// <item><description>Pending: being created.</description></item>
             /// <item><description>Deleting: being deleted.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can mount the file system only when the status is Active.</para>
+            /// <para>You can mount a file system only when the status is Active.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

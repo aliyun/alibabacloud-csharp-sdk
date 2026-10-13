@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter information.</para>
+        /// <para>The filter key information.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]

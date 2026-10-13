@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeProtocolMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique among different requests.</para>
-        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotency of the request. Generate a value from your client to ensure that the value is unique among different requests.</para>
+        /// <para>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken value. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,11 +92,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query.</para>
+        /// <para>The maximum number of results to return in each query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values: 10 to 100.</para>
+        /// <item><description><para>Valid values: 10 to 100</para>
         /// </description></item>
-        /// <item><description><para>Default value: 20.</para>
+        /// <item><description><para>Default value: 20</para>
         /// </description></item>
         /// </list>
         /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to initiate the next request when the response is truncated. You can use this token to retrieve the remaining results from where the truncation occurred.</para>
+        /// <para>The token that is used for the next query. If not all results are returned in a query, a value is returned for the NextToken parameter. You can use this token in the next request to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aBcdg==</para>

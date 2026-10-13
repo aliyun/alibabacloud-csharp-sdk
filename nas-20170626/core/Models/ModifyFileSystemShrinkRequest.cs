@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeStoragePackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of storage plans to return on each page.</para>
+        /// <para>The number of storage plans on each page during a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the time to return is in UTC.</para>
+        /// <para>Specifies whether the returned time is in UTC format.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): returns UTC time.</description></item>
-        /// <item><description>false: returns UNIX timestamp.</description></item>
+        /// <item><description>true (default): The returned time is in UTC format.</description></item>
+        /// <item><description>false: A UNIX timestamp is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

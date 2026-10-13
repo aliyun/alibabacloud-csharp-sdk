@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The description of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>此协议服务导出目录的描述。</para>
+            /// <para>Description of this protocol service export directory</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FsetId { get; set; }
 
             /// <summary>
-            /// <para>The exported directory of the protocol service.</para>
+            /// <para>The export directory of the protocol service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/path/</para>

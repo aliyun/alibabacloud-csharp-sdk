@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the snapshot.</para>
+        /// <para>The snapshot description.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 256 characters in length.</description></item>
         /// <item><description>The description cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>This parameter is empty by default.</description></item>
+        /// <item><description>Default value: empty.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the advanced Extreme NAS file system. The value must start with <c>extreme-</c>, for example, <c>extreme-01dd****</c>.</para>
+        /// <para>The ID of the Advanced Extreme NAS file system. The value must start with <c>extreme-</c>, such as <c>extreme-01dd****</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Unit: days.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</description></item>
-        /// <item><description>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</description></item>
+        /// <item><description>-1 (default): The snapshot is permanently retained and is automatically deleted when the snapshot quota is reached.</description></item>
+        /// <item><description>1 to 65536: The snapshot is retained for the specified number of days. The snapshot is subject to automatic release after the retention period expires.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The snapshot name.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.</description></item>
+        /// <item><description>The name must be 2 to 128 characters in length and can contain letters and digits. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
+        /// <item><description>The name cannot start with auto to avoid conflicts with automatic snapshot names.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

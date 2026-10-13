@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
         /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and does not incur fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a dry run request without modifying the instance. The check items include required parameters, request format, service limits, and File Storage NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
+        /// <item><description>true: Sends a dry run request without modifying the instance. The check items include required parameters, request format, business limits, and File Storage NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
         /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly modified.</description></item>
         /// </list>
         /// 

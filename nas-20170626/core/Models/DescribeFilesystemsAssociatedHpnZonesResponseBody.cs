@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFilesystemsAssociatedHpnZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of HpnZones associated with the file system.</para>
+        /// <para>The list of HpnZones associated with the file systems.</para>
         /// </summary>
         [NameInMap("Filesystems")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98696EF0-1607-4E9D-B01D-F20930B6****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class UpdateRecycleBinAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the files in the recycle bin. Unit: days.</para>
+        /// <para>The retention period of files in the recycle bin. Unit: days.</para>
         /// <para>Valid values: 1 to 180.</para>
         /// <para>Default value: 3.</para>
         /// <para>This parameter is required.</para>

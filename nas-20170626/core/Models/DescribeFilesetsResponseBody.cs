@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS: The ID starts with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// <item><description><para>CPFS: The ID starts with <c>cpfs-</c>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID starts with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID starts with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate a new request to retrieve the content after the truncation point.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to start a new request to retrieve the results after the truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

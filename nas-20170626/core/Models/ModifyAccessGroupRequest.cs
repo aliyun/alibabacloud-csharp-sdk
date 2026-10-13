@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 3 to 64 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</description></item>
+        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The permission group description.</para>
+        /// <para>The description of the permission group.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>By default, the description is the same as the permission group name. The description must be 2 to 128 characters in length.</description></item>
         /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

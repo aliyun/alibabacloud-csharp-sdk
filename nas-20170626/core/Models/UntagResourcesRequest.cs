@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the file system.</para>
-        /// <para>This parameter is valid only if the TagKey.N parameter is not specified.</para>
+        /// <para>Specifies whether to unbind all tags from the file system.</para>
+        /// <para>This parameter takes effect only when TagKey.N is empty.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.</description></item>
-        /// <item><description>false (default): No tags are removed from the file system and a success message is returned.</description></item>
+        /// <item><description>true: Unbinds all tags from the file system. If the file system has no tags, no operation is performed and a success response is returned.</description></item>
+        /// <item><description>false (default): Does not perform the operation and directly returns a success response.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. Valid values of N: 1 to 50.</para>
+        /// <para>The list of resource IDs.</para>
+        /// <para>The ID of the resource. Valid values of N: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +39,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Set the value to filesystem.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>filesystem: file system.</description></item>
+        /// <item><description>accesspoint: access point.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys of the resources. Valid values of N: 1 to 20.</para>
+        /// <para>The list of tag keys of the resource. You can specify up to 20 tag keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nastest</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycleBinJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rb-15<b><b>ed-r-1625</b></b>2441</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The current page number for paging.</para>
         /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 

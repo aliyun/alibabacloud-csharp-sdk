@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the last access time of the file.</description></item>
+            /// <item><description>Atime: the access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The data retrieval rules. You can configure up to one rule.</para>
+        /// <para>The data retrieval rules. A maximum of one rule can be configured.</para>
         /// <remarks>
         /// <para>Only CPFS for Lingjun file systems are supported.</para>
         /// </remarks>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <list type="bullet">
             /// <item><description>RetrieveType<list type="bullet">
             /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</description></item>
-            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</description></item>
+            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The data transit rules. You can configure up to one rule.</para>
+        /// <para>The data transit rules. A maximum of one rule can be configured.</para>
         /// <remarks>
         /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the last access time of the file.</description></item>
+            /// <item><description>Atime: the access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

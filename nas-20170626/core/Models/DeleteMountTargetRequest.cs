@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>Cloud Parallel File Storage (CPFS): must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the mount target.</para>
+        /// <para>The mount target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

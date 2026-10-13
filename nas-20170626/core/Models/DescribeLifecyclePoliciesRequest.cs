@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle policy name. Naming rules:</para>
-        /// <para>The name must be 3 to 64 characters in length, must start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
+        /// <para>The lifecycle policy name. The naming rules are as follows:</para>
+        /// <para>The name must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
-        /// <para>Optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</para>
+        /// <para>This parameter is optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Valid values:</para>
+        /// <para>The storage tiering type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
         /// <item><description>Archive: Archive storage class.<remarks>

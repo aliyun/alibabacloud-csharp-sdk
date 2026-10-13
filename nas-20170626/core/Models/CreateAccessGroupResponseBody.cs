@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
+        /// <para>The permission group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-test</para>

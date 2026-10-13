@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle policy ID.</para>
+        /// <para>The ID of the lifecycle management policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

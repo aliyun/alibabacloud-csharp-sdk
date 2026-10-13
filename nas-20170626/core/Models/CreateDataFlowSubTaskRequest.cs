@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run for this request.</para>
-        /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating the instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Sends a check request without creating the data flow. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but DataFlowSubTaskId is empty.</description></item>

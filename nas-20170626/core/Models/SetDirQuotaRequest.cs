@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The absolute path of the directory in the file system.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set a quota only for a directory that has been created in the NAS file system. The directory path for the quota is the absolute path in the NAS file system, not the local path on a compute node (for example, an ECS instance or container).</description></item>
+        /// <item><description>You can set a quota only for a directory that already exists in the NAS file system. The directory path for the quota is the absolute path in the NAS file system, not the local path on a compute node (such as an ECS instance or container).</description></item>
         /// <item><description>Directories whose path names contain Chinese characters are not supported.</description></item>
         /// </list>
         /// </remarks>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Accounting: statistical quota. Only tracks usage.</description></item>
-        /// <item><description>Enforcement: restrictive quota. When usage exceeds the limit, operations such as creating files or directories and appending data fail.</description></item>
+        /// <item><description>Enforcement: enforcement quota. When usage exceeds the limit, operations such as creating files or directories and appending data fail.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The user type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Uid: user ID</description></item>
-        /// <item><description>Gid: user group ID</description></item>
-        /// <item><description>AllUsers: all users</description></item>
+        /// <item><description>Uid: user ID.</description></item>
+        /// <item><description>Gid: user group ID.</description></item>
+        /// <item><description>AllUsers: all users.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

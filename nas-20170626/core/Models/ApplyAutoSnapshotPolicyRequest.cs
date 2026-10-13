@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The IDs of the Advanced Extreme NAS file systems.</para>
-        /// <para>You can specify up to 100 file system IDs in a single request. Separate multiple file system IDs with commas (,).</para>
+        /// <para>You can specify up to 100 file system IDs in a single request. To apply the automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

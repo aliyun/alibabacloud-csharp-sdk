@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLifecyclePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The file data expiration and deletion rules. You can configure up to one rule.</para>
+        /// <para>The data expiration and deletion rules. You can configure up to one rule.</para>
         /// </summary>
         [NameInMap("DeleteRules")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule attribute.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the last access time of the file.</description></item>
+            /// <item><description>Atime: the access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The management rule associated with the lifecycle management policy. Only General-purpose NAS is supported.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<remarks>
+        /// <item><description>DEFAULT_ATIME_14: files not accessed in the last 14 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_30: files not accessed in the last 30 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_60: files not accessed in the last 60 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_90: files not accessed in the last 90 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_180: files not accessed in the last 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<remarks>
         /// <list type="bullet">
         /// <item><description>If an IA storage class policy has already been configured for the directory, the archive policy duration must be longer than the IA storage class policy duration.</description></item>
         /// <item><description>Only General-purpose NAS supports this parameter.</description></item>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The file data retrieval rules. You can configure up to one rule.</para>
+        /// <para>The data retrieval rules. You can configure up to one rule.</para>
         /// <remarks>
         /// <para>Only CPFS for Lingjun file systems are supported.</para>
         /// </remarks>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The storage tiering type.</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
-        /// <item><description>Archive: Archive storage class.</description></item>
+        /// <item><description>Archive: Archive storage.</description></item>
         /// </list>
         /// <remarks>
         /// <para>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The file data transit rules. You can configure up to one rule.</para>
+        /// <para>The data transit rules. You can configure up to one rule.</para>
         /// <remarks>
         /// <para>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule attribute.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the last access time of the file.</description></item>
+            /// <item><description>Atime: the access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

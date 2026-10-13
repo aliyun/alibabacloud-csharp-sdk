@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeProtocolServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>Ensures the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,23 +23,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description or a part of the description of the protocol service.</para>
+        /// <para>The description of the protocol service or a part of the description used for matching.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
         /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>此协议服务的描述</para>
+        /// <para>Description of this protocol service</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The maximum number of results to return for each request.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100.</description></item>
         /// <item><description>Minimum value: 10.</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token used to initiate the next request if the response of the current request is truncated. You can use this token to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aBcdg==</para>
@@ -75,10 +75,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protocol service.</para>
+        /// <para>The protocol service IDs.</para>
         /// <list type="bullet">
-        /// <item><description>Format: CSV.</description></item>
-        /// <item><description>Limit: You can specify a maximum of 10 protocol service IDs.</description></item>
+        /// <item><description><para>Format: CSV</para>
+        /// </description></item>
+        /// <item><description><para>Limit: You can specify up to 10 protocol service IDs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,13 +91,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ProtocolServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the protocol service.</para>
-        /// <para>Format: CSV.</para>
+        /// <para>The status of the protocol service used for matching.</para>
+        /// <para>Format: CSV</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Creating: The protocol service is being created.</description></item>
         /// <item><description>Starting: The protocol service is being started.</description></item>
-        /// <item><description>Running: The protocol service is running.</description></item>
+        /// <item><description>Running: The protocol service is available.</description></item>
         /// <item><description>Updating: The protocol service is being updated.</description></item>
         /// <item><description>Deleting: The protocol service is being deleted.</description></item>
         /// <item><description>Stopping: The protocol service is being stopped.</description></item>

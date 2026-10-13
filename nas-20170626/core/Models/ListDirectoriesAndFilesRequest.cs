@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>false (default): No. Both directories and files can be queried.</description></item>
         /// <item><description>true: Yes. Only directories are queried.<remarks>
-        /// <para>When StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</para>
+        /// <para>If StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</para>
+        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
         /// <item><description>Archive: Archive storage class.</description></item>
         /// <item><description>All: queries data of all storage classes.<remarks>
-        /// <para>When StorageType is set to All, you must set DirectoryOnly to true.</para>
+        /// <para>If StorageType is set to All, you must set DirectoryOnly to true.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

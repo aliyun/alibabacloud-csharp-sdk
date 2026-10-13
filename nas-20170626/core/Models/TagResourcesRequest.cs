@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The resource IDs. Valid values of N: 1 to 50.</para>
+        /// <para>The resource IDs. Valid values of array length: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to filesystem.</para>
+        /// <para>The resource type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>filesystem: file system.</description></item>
+        /// <item><description>accesspoint: access point.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The details about the tags.</para>
+        /// <para>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -40,14 +45,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource.</para>
+            /// <para>The tag key.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>The tag key cannot be left empty.</description></item>
-            /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag key must be 1 to 128 characters in length.</description></item>
-            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
-            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>Cannot be empty or an empty string. </description></item>
+            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -59,13 +63,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource.</para>
+            /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag value must be 1 to 128 characters in length.</description></item>
-            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
-            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

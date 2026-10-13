@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
+        /// <para>The permission group name.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 3 to 64 characters in length.</description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The type of the permission group. Set the value to <b>Vpc</b>, which indicates VPC.</para>
+        /// <para>The type of the permission group. Set the value to <b>Vpc</b>, which indicates a virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the file system.</para>
+        /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>standard (default): General-purpose NAS.</description></item>

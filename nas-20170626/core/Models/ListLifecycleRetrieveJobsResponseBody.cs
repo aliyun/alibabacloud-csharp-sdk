@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The number of files that are successfully retrieved by the data retrieval task.</para>
+            /// <para>The number of files successfully retrieved by the data retrieval task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The storage class. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>InfrequentAccess: IA storage class.</description></item>
-            /// <item><description>Archive: Archive storage.</description></item>
+            /// <item><description>Archive: Archive storage class.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

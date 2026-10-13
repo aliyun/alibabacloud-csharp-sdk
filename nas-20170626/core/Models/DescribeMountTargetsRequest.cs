@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsRequest : TeaModel {
         /// <summary>
-        /// <para>The IPv4 and IPv6 dual-stack mount target.</para>
+        /// <para>The dual-stack (IPv4 and IPv6) mount target domain.</para>
         /// <remarks>
-        /// <para>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</para>
+        /// <para>IPv6 is currently supported only in the Chinese mainland regions for Extreme NAS file systems.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </description></item>
         /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Cloud Parallel File Storage (CPFS): must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

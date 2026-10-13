@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The export directory ID of the protocol service. <b>Required</b>.</para>
         /// <para><b>How to obtain</b>:</para>
         /// <list type="bullet">
-        /// <item><description>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId from the response.</description></item>
-        /// <item><description>Or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the list of export directories and obtain the ExportId from the response.</description></item>
+        /// <item><description>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> operation to create an export directory and obtain the ExportId from the response.</description></item>
+        /// <item><description>Or call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> operation to query the list of export directories and obtain the ExportId from the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query.</para>
+        /// <para>The number of results returned per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</para>
         /// 
         /// <b>Example:</b>
         /// <para>M18xMA==</para>

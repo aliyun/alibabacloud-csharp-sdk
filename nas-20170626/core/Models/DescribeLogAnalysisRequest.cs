@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>standard: General-purpose NAS</description></item>
         /// <item><description>extreme: Extreme NAS</description></item>
-        /// <item><description>all (default): all types.</description></item>
+        /// <item><description>all (default): all types</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems on each page in a paging query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of file systems on each page during a paged query.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

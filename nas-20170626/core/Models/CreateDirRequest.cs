@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateDirRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner group for the directory. Valid values: 0 to 4294967295.</para>
+        /// <para>The user group ID of the directory owner. Valid values: 0 to 4294967295.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner ID for the directory. Valid values: 0 to 4294967295.</para>
+        /// <para>The user ID of the directory owner. Valid values: 0 to 4294967295.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.</para>
+        /// <para>The POSIX permissions to apply to the root directory path. The value is a valid octal number, such as 0755.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>Specifies whether to create a multi-level directory. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): If no multi-level directory exists, directories are created level by level.</description></item>
-        /// <item><description>false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.</description></item>
+        /// <item><description>true (default): If the multi-level directory does not exist, the system creates the directories level by level.</description></item>
+        /// <item><description>false: Only the last-level directory is created. If the parent directory does not exist, an error message is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The directory name.</para>
         /// <list type="bullet">
-        /// <item><description>The directory must start with a forward slash (/).</description></item>
-        /// <item><description>The directory can contain digits and letters.</description></item>
-        /// <item><description>The directory can contain underscores (_), hyphens (-), and periods (.).</description></item>
-        /// <item><description>The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.</description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description>The name must start with a forward slash (/).</description></item>
+        /// <item><description>The name can contain digits and uppercase and lowercase letters.</description></item>
+        /// <item><description>The name can contain underscores (_), hyphens (-), or periods (.).</description></item>
+        /// <item><description>The path cannot contain symbolic links, such as the current directory (.), the parent directory (..), or other symbolic links.<remarks>
         /// <list type="bullet">
-        /// <item><description>If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.</description></item>
-        /// <item><description>If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.</description></item>
+        /// <item><description>If the root directory does not exist, configure the automatic creation information. The system automatically creates the specified root directory based on the settings.</description></item>
+        /// <item><description>If the root directory already exists, you do not need to configure the automatic creation information. If you configure the information, the automatic creation settings are ignored.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

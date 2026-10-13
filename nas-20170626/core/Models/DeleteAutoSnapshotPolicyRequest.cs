@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DeleteAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the automatic snapshot policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/126583.html">DescribeAutoSnapshotPolicies</a> operation to view available automatic snapshot policies.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/126583.html">DescribeAutoSnapshotPolicies</a> to query available automatic snapshot policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

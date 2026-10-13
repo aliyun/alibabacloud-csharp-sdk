@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The mount target status.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: active</description></item>
-        /// <item><description>Inactive: inactive</description></item>
+        /// <item><description>Active: Active.</description></item>
+        /// <item><description>Inactive: Inactive.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only General-purpose NAS supports changing the mount target status.</para>
+        /// <para>Currently, only General-purpose NAS supports changing the mount target status.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

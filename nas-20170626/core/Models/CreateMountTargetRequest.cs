@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateMountTargetRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required if the file system is a General-purpose NAS or Extreme NAS file system.</para>
+        /// <para>This parameter is required if the file system is a General-purpose NAS file system or an Extreme NAS file system.</para>
         /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to check for existing mount targets. Only CPFS file systems are supported.</para>
-        /// <para>A dry run checks parameter validity and inventory without actually creating a mount target or incurring fees.</para>
+        /// <para>A dry run checks the validity of parameters and inventory without actually creating a mount target or incurring fees.</para>
         /// <list type="bullet">
         /// <item><description>true: sends a dry run request without creating a mount target. The check items include required parameters, request format, business limits, and CPFS inventory. If the check fails, the corresponding error is returned. If the check passes, <c>200 HttpCode</c> is returned, but <c>MountTargetDomain</c> is empty.</description></item>
-        /// <item><description>false (default): sends a normal request. After the check passes, a mount target is created.</description></item>
+        /// <item><description>false (default): sends a normal request and creates a mount target after the check passes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>false (default): does not create an IPv6 mount target.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>IPv6 is supported only by Extreme NAS file systems in all regions in the Chinese mainland. The file system must have IPv6 enabled.</para>
+        /// <para>Currently, only Extreme NAS file systems in regions in the Chinese mainland support IPv6. The file system must have IPv6 enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>, such as extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, such as extreme-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Cloud Parallel File System (CPFS): must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The vSwitch ID.</para>
-        /// <para>This parameter is required and valid only when the network type is VPC.
+        /// <para>This parameter is required and valid when the network type is VPC.
         /// For example:
         /// If NetworkType is set to VPC, VSwitchId is required.</para>
         /// 
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The VPC ID.</para>
-        /// <para>This parameter is required and valid only when the network type is VPC.
+        /// <para>This parameter is required and valid when the network type is VPC.
         /// For example:
         /// If NetworkType is set to VPC, VpcId is required.</para>
         /// 

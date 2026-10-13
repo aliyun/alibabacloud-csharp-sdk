@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>all: all types.</description></item>
         /// <item><description>standard (default): General-purpose NAS.</description></item>
         /// <item><description>extreme: Extreme NAS.</description></item>
-        /// <item><description>cpfs: CPFS.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
