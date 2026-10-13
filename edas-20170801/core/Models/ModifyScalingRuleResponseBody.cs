@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ModifyScalingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB36E997-FE54-476C-8C0D-********</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListPublishedServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D6FC-4307-4583-BA6F-215F3857E****</para>

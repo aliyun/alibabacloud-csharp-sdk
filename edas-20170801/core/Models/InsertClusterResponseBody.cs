@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cluster that was created.</para>
+        /// <para>The created cluster entity.</para>
         /// </summary>
         [NameInMap("Cluster")]
         [Validation(Required=false)]
         public InsertClusterResponseBodyCluster Cluster { get; set; }
         public class InsertClusterResponseBodyCluster : TeaModel {
             /// <summary>
-            /// <para>The ID of cluster.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8705ad13-5d86-47fc-b68f-257b59ed****</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             /// <summary>
             /// <para>The type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: ECS cluster</description></item>
-            /// <item><description>3: self-managed Kubernetes cluster in EDAS</description></item>
-            /// <item><description>5: Kubernetes cluster</description></item>
+            /// <item><description>2: ECS cluster.</description></item>
+            /// <item><description>3: EDAS built-in Kubernetes cluster.</description></item>
+            /// <item><description>5: Kubernetes cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The provider of the IaaS resources that are used in the cluster.</para>
+            /// <para>The provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN</para>
@@ -62,10 +62,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string IaasProvider { get; set; }
 
             /// <summary>
-            /// <para>The network type of the cluster. Valid values:</para>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: classic network</description></item>
-            /// <item><description>2\. VPC</description></item>
+            /// <item><description><para>1: Classic network.</para>
+            /// </description></item>
+            /// <item><description><para>2: VPC.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,11 +78,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? NetworkMode { get; set; }
 
             /// <summary>
-            /// <para><b>This parameter is deprecated.</b> The CPU overcommit ratio supported by the Docker cluster. Valid values:</para>
+            /// <para><b>[Deprecated]</b> The CPU overselling ratio for Docker clusters. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: 1:2, which means that resources are overcommitted by 1:2.</description></item>
-            /// <item><description>4: 1:4, which means that resources are overcommitted by 1:4.</description></item>
-            /// <item><description>8: 1:8, which means that resources are overcommitted by 1:8.</description></item>
+            /// <item><description><para>2: 1:2 ratio.</para>
+            /// </description></item>
+            /// <item><description><para>4: 1:4 ratio.</para>
+            /// </description></item>
+            /// <item><description><para>8: 1:8 ratio.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +96,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? OversoldFactor { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the cluster resides.</para>
+            /// <para>The region ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -133,7 +138,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b197-40ab-9155-****</para>

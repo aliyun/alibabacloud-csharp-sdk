@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cluster.</para>
+        /// <para>The cluster information.</para>
         /// </summary>
         [NameInMap("Cluster")]
         [Validation(Required=false)]
         public GetClusterResponseBodyCluster Cluster { get; set; }
         public class GetClusterResponseBodyCluster : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5439271a-015b-433d-befb-d76d****</para>
@@ -27,18 +27,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The import status of the cluster. Valid values:</para>
+            /// <para>The cluster import status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: The cluster is imported.</para>
-            /// </description></item>
-            /// <item><description><para>2: The cluster fails to be imported.</para>
-            /// </description></item>
-            /// <item><description><para>3: The cluster is being imported.</para>
-            /// </description></item>
-            /// <item><description><para>4: The cluster is deleted.</para>
-            /// </description></item>
-            /// <item><description><para>0: The cluster is not imported.</para>
-            /// </description></item>
+            /// <item><description>1: Imported.</description></item>
+            /// <item><description>2: Import failed.</description></item>
+            /// <item><description>3: Importing.</description></item>
+            /// <item><description>4: Cluster deleted.</description></item>
+            /// <item><description>0: Not imported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +44,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? ClusterImportStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClusterTest</para>
@@ -59,20 +54,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: regular Docker cluster</para>
-            /// </description></item>
-            /// <item><description><para>1: Swarm cluster</para>
-            /// </description></item>
-            /// <item><description><para>2: Elastic Compute Service (ECS) cluster</para>
-            /// </description></item>
-            /// <item><description><para>3: self-managed Kubernetes cluster in EDAS</para>
-            /// </description></item>
-            /// <item><description><para>4: cluster in which Pandora automatically registers applications</para>
-            /// </description></item>
-            /// <item><description><para>5: ACK cluster</para>
-            /// </description></item>
+            /// <item><description>0: Common Docker cluster.</description></item>
+            /// <item><description>1: Swarm cluster.</description></item>
+            /// <item><description>2: ECS cluster.</description></item>
+            /// <item><description>3: EDAS self-managed Kubernetes cluster.</description></item>
+            /// <item><description>4: Pandora auto-registered application cluster.</description></item>
+            /// <item><description>5: Container Service Kubernetes cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +92,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? CpuUsed { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the cluster was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1570708232145</para>
@@ -113,7 +102,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Container Service for Kubernetes (ACK) cluster.</para>
+            /// <para>The Container Service cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c2ce62869f4d4466b920312315f05****</para>
@@ -123,7 +112,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string CsClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the cluster.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -133,7 +122,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The provider of Infrastructure as a Service (IaaS) resources used in the cluster.</para>
+            /// <para>The IaaS resource provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN</para>
@@ -143,7 +132,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string IaasProvider { get; set; }
 
             /// <summary>
-            /// <para>The total size of memory. Unit: MB.</para>
+            /// <para>The total memory. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -153,7 +142,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? Mem { get; set; }
 
             /// <summary>
-            /// <para>The size of used memory. Unit: MB.</para>
+            /// <para>The amount of used memory. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -163,12 +152,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? MemUsed { get; set; }
 
             /// <summary>
-            /// <para>The network type of the cluster. Valid values:</para>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: classic network</para>
-            /// </description></item>
-            /// <item><description><para>2: virtual private cloud (VPC)</para>
-            /// </description></item>
+            /// <item><description>1: Classic network.</description></item>
+            /// <item><description>2: VPC.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -189,16 +176,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? NodeNum { get; set; }
 
             /// <summary>
-            /// <para>The overcommit ratio supported by a Docker cluster. Valid values:</para>
+            /// <para>The CPU overselling ratio for Docker clusters. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: 1:1, which means that resources are not overcommitted.</para>
-            /// </description></item>
-            /// <item><description><para>2: 1:2, which means that resources are overcommitted by 1:2.</para>
-            /// </description></item>
-            /// <item><description><para>4: 1:4, which means that resources are overcommitted by 1:4.</para>
-            /// </description></item>
-            /// <item><description><para>8: 1:8, which means that resources are overcommitted by 1:8.</para>
-            /// </description></item>
+            /// <item><description>1: 1:1 ratio. No overselling.</description></item>
+            /// <item><description>2: 1:2 overselling ratio.</description></item>
+            /// <item><description>4: 1:4 overselling ratio.</description></item>
+            /// <item><description>8: 1:8 overselling ratio.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +192,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public int? OversoldFactor { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the cluster resides.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -219,7 +202,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the Kubernetes cluster. Valid values: ManagedKubernetes, Ask, and ExternalKubernetes. ManagedKubernetes refers to the ACK cluster. Ask refers to the Serverless Kubernetes (ASK) cluster. ExternalKubernetes refers to the external cluster.</para>
+            /// <para>The subtype of the Kubernetes cluster. ManagedKubernetes indicates an ACK cluster, Ask indicates an ASK cluster, and ExternalKubernetes indicates an external cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ManagedKubernetes</para>
@@ -229,7 +212,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string SubClusterType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the cluster was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1570708232145</para>
@@ -239,7 +222,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxxxz1mlwpb****</para>
@@ -251,7 +234,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -261,7 +244,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information that is returned.</para>
+        /// <para>The detailed message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -271,7 +254,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d76db491</para>

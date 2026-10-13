@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListConsumedServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

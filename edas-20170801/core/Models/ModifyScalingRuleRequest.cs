@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ModifyScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Set the value to true if scale-outs are allowed.</para>
+        /// <para>Must be set to true if auto scaling is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? AcceptEULA { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance group to which the application is deployed.</para>
+        /// <para>The deployment group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,12 +42,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The relationship among the conditions that trigger a scale-in.</para>
+        /// <para>The trigger condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OR: one of the conditions</para>
-        /// </description></item>
-        /// <item><description><para>AND: all conditions</para>
-        /// </description></item>
+        /// <item><description>OR: Any condition.</description></item>
+        /// <item><description>AND: All conditions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string InCondition { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization that triggers a scale-in.</para>
+        /// <para>The trigger metric: CPU utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InCpu { get; set; }
 
         /// <summary>
-        /// <para>The duration in which the metric threshold is exceeded. Unit: minutes.</para>
+        /// <para>The duration, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -78,12 +76,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow scale-ins.</para>
+        /// <para>Specifies whether to include the scale-in rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: allows scale-ins.</para>
-        /// </description></item>
-        /// <item><description><para>false: does not allow scale-ins.</para>
-        /// </description></item>
+        /// <item><description>true: Included.</description></item>
+        /// <item><description>false: Not included.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? InEnable { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances that must be retained in each group when a scale-in is performed.</para>
+        /// <para>The minimum number of instances to retain when the group scales in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InInstanceNum { get; set; }
 
         /// <summary>
-        /// <para>The system load that triggers a scale-in.</para>
+        /// <para>The trigger metric: system load.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InLoad { get; set; }
 
         /// <summary>
-        /// <para>The minimum service latency that triggers a scale-in. The lower limit is 0. Unit: milliseconds.</para>
+        /// <para>The trigger metric: service latency. Unit: milliseconds. Minimum value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InRT { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that are removed during each scale-in.</para>
+        /// <para>The number of instances to scale in at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -134,7 +130,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? InStep { get; set; }
 
         /// <summary>
-        /// <para>The key pair that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</para>
+        /// <para>The name of the logon key pair for the instance. This parameter is valid only when the existing instance rule is used for auto scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;tdy218&quot;</para>
@@ -144,12 +140,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The multi-zone scaling policy. Valid values:</para>
+        /// <para>The multi-zone scaling policy for auto scaling. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PRIORITY: The vSwitch that is first selected has the highest priority.</para>
-        /// </description></item>
-        /// <item><description><para>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</para>
-        /// </description></item>
+        /// <item><description>PRIORITY: Priority policy.</description></item>
+        /// <item><description>BALANCE: Balanced distribution policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,7 +154,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string MultiAzPolicy { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization that triggers a scale-out.</para>
+        /// <para>The trigger metric: CPU utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -170,12 +164,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutCPU { get; set; }
 
         /// <summary>
-        /// <para>The relationship among the conditions that trigger a scale-out.</para>
+        /// <para>The trigger condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OR: one of the conditions</para>
-        /// </description></item>
-        /// <item><description><para>AND: all conditions</para>
-        /// </description></item>
+        /// <item><description>OR: Any condition.</description></item>
+        /// <item><description>AND: All conditions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,7 +178,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string OutCondition { get; set; }
 
         /// <summary>
-        /// <para>The duration in which the metric threshold is exceeded. Unit: minutes.</para>
+        /// <para>The duration, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -196,7 +188,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow scale-outs.</para>
+        /// <para>Specifies whether to include the scale-out rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -206,7 +198,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public bool? OutEnable { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of instances in each group when a scale-out is performed.</para>
+        /// <para>The maximum number of instances when the group scales out.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -216,7 +208,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutInstanceNum { get; set; }
 
         /// <summary>
-        /// <para>The system load that triggers a scale-out.</para>
+        /// <para>The trigger metric: system load.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -226,7 +218,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutLoad { get; set; }
 
         /// <summary>
-        /// <para>The minimum service latency that triggers a scale-out. The lower limit is 0. Unit: milliseconds.</para>
+        /// <para>The trigger metric: service latency. Unit: milliseconds. Minimum value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -236,7 +228,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutRT { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that are added during each scale-out.</para>
+        /// <para>The number of instances to scale out at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -246,7 +238,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OutStep { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</para>
+        /// <para>The logon password of the instance. This parameter is valid only when the existing instance rule is used for auto scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;Pwd*****&quot;</para>
@@ -256,14 +248,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The source of the instance to be added during a scale-out. Valid values:</para>
+        /// <para>The source of instances for scale-out. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NEW: elastic resources</para>
-        /// </description></item>
-        /// <item><description><para>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</para>
-        /// </description></item>
+        /// <item><description>NEW: Elastic resources.</description></item>
+        /// <item><description>AVAILABLE: Existing resources. To prioritize existing resources, use AVAILABLE_FIRST.</description></item>
         /// </list>
-        /// <para>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</para>
+        /// <para>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify auto scaling parameters. Auto scaling includes two modes: launch template and existing instance rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;AVAILABLE&quot;</para>
@@ -273,12 +263,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ResourceFrom { get; set; }
 
         /// <summary>
-        /// <para>The instance handling mode during a scale-in. Valid values:</para>
+        /// <para>The reclamation mode for scale-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>release: When a scale-in is performed, instances that are no longer used are released.</para>
-        /// </description></item>
-        /// <item><description><para>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</para>
-        /// </description></item>
+        /// <item><description>release: Release mode.</description></item>
+        /// <item><description>recycle: Stop and reclaim mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -289,7 +277,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ScalingPolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. This parameter takes precedence over the TemplateInstanceId parameter.</para>
+        /// <para>The launch template ID for auto scaling. This parameter is valid only when OutEnable is set to true, and it has a higher priority than TemplateInstanceId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;lt-wz9hkhn8wp*****&quot;</para>
@@ -299,7 +287,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance whose specifications are used to create instances during a scale-out. This parameter is valid only when you set the OutEnable parameter to true.</para>
+        /// <para>The instance ID for the existing instance rule of auto scaling. This parameter is valid only when OutEnable is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;1&quot;</para>
@@ -309,7 +297,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string TemplateInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance whose specifications are used to create instances during a scale-out. This parameter takes effect only if you specify the TemplateInstanceId parameter.</para>
+        /// <para>The instance name for the existing instance rule of auto scaling. This parameter is valid only when TemplateInstanceId is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;tpl-tdy218&quot;</para>
@@ -319,7 +307,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string TemplateInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The version of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. To use the default template version, set this parameter to <c>-1</c>. Otherwise, set this parameter to the version that you want to use.</para>
+        /// <para>The launch template version for auto scaling. This parameter is valid only when OutEnable is set to true. Set this parameter to <c>-1</c> to use the default template version, or set it to a specific version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -329,7 +317,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? TemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the vSwitches that are associated with the VPC. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of vSwitch IDs in the VPC. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;vsw-bp1ldxs3d4fd*****&quot;</para>
@@ -339,7 +327,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) that is associated with the instances created based on a launch template or the specifications of an existing instance.</para>
+        /// <para>The VPC ID associated with the launch template or existing instance rule for auto scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;vpc-bp1j55oz3bg*****&quot;</para>

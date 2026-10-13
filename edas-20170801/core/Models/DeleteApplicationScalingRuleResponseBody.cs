@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteApplicationScalingRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }

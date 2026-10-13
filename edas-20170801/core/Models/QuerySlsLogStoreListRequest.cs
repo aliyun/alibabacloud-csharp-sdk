@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QuerySlsLogStoreListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from Page 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of data that is collected by Log Service. Valid values:</para>
+        /// <para>The Simple Log Service collection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>file: the file type</para>
-        /// </description></item>
-        /// <item><description><para>stdout: the standard output type</para>
-        /// </description></item>
+        /// <item><description>file: File.</description></item>
+        /// <item><description>stdout: Standard output.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -7447,7 +7447,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specific cluster.</para>
+        /// <para>Retrieves the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7493,7 +7493,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specific cluster.</para>
+        /// <para>Retrieves the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7539,7 +7539,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specific cluster.</para>
+        /// <para>Retrieves the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7558,7 +7558,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specific cluster.</para>
+        /// <para>Retrieves the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8555,6 +8555,152 @@ namespace AlibabaCloud.SDK.Edas20170801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetK8sServicesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of application import and export.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMigrateApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMigrateApplicationResponse
+        /// </returns>
+        public GetMigrateApplicationResponse GetMigrateApplicationWithOptions(GetMigrateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationId))
+            {
+                query["migrationId"] = request.MigrationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                query["migrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMigrateApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/migrateK8sApp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMigrateApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of application import and export.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMigrateApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMigrateApplicationResponse
+        /// </returns>
+        public async Task<GetMigrateApplicationResponse> GetMigrateApplicationWithOptionsAsync(GetMigrateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationId))
+            {
+                query["migrationId"] = request.MigrationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                query["migrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMigrateApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/migrateK8sApp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMigrateApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of application import and export.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMigrateApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMigrateApplicationResponse
+        /// </returns>
+        public GetMigrateApplicationResponse GetMigrateApplication(GetMigrateApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMigrateApplicationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of application import and export.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMigrateApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMigrateApplicationResponse
+        /// </returns>
+        public async Task<GetMigrateApplicationResponse> GetMigrateApplicationAsync(GetMigrateApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMigrateApplicationWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14143,7 +14289,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumed services.</para>
+        /// <para>Queries the consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14189,7 +14335,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumed services.</para>
+        /// <para>Queries the consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14235,7 +14381,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumed services.</para>
+        /// <para>Queries the consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14254,7 +14400,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumed services.</para>
+        /// <para>Queries the consumed services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17446,13 +17592,6 @@ namespace AlibabaCloud.SDK.Edas20170801
         /// <para>Migrates an application.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
-        /// </remarks>
-        /// </description>
-        /// 
         /// <param name="request">
         /// MigrateApplicationRequest
         /// </param>
@@ -17514,13 +17653,6 @@ namespace AlibabaCloud.SDK.Edas20170801
         /// <summary>
         /// <para>Migrates an application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// MigrateApplicationRequest
@@ -17584,13 +17716,6 @@ namespace AlibabaCloud.SDK.Edas20170801
         /// <para>Migrates an application.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
-        /// </remarks>
-        /// </description>
-        /// 
         /// <param name="request">
         /// MigrateApplicationRequest
         /// </param>
@@ -17609,13 +17734,6 @@ namespace AlibabaCloud.SDK.Edas20170801
         /// <summary>
         /// <para>Migrates an application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// MigrateApplicationRequest
@@ -17823,7 +17941,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling rule for an application.</para>
+        /// <para>Modifies the auto scaling rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17985,7 +18103,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling rule for an application.</para>
+        /// <para>Modifies the auto scaling rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18147,7 +18265,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling rule for an application.</para>
+        /// <para>Modifies the auto scaling rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18166,7 +18284,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling rule for an application.</para>
+        /// <para>Modifies the auto scaling rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18807,7 +18925,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// <para>Queries the Simple Log Service configuration details of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18865,7 +18983,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// <para>Queries the Simple Log Service configuration details of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18923,7 +19041,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// <para>Queries the Simple Log Service configuration details of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18942,7 +19060,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// <para>Queries the Simple Log Service configuration details of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">

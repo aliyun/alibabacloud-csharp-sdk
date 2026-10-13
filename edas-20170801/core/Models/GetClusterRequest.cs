@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster in Enterprise Distributed Application Service (EDAS). You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</para>
+        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a> operation to obtain the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

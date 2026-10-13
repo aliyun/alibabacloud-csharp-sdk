@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class MigrateApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs.</para>
+        /// <para>appIds</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;b72c0ed4-a69f-4872-b4c6-def5555bfd3e,a72c0ed4-a69f-4872-b4c6-def5555bfd3e&quot;</para>
         /// </summary>
         [NameInMap("appIds")]
         [Validation(Required=false)]
-        public List<string> AppIds { get; set; }
+        public string AppIds { get; set; }
 
         /// <summary>
         /// <para>The operation command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>export: Export.</description></item>
-        /// <item><description>import: Import.</description></item>
+        /// <item><description>export: export</description></item>
+        /// <item><description>import: import</description></item>
+        /// <item><description>clone: clone</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The raw data for the application to be imported, which is sourced from the JSON file of the exported application.</para>
+        /// <para>The row data of the imported application, which is sourced from the JSON file of the exported application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;job_id&quot;:&quot;b72c0ed4-a69f-4872-b4c6-def5555bfd3e&quot;,&quot;app_info&quot;:&quot;xxxx&quot;</para>

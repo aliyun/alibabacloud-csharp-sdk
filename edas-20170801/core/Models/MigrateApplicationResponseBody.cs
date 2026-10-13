@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class MigrateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         /// <summary>
         /// <para>The type of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2: Elastic Compute Service (ECS) cluster</description></item>
-        /// <item><description>3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</description></item>
-        /// <item><description>5: Kubernetes cluster</description></item>
+        /// <item><description>2: ECS cluster.</description></item>
+        /// <item><description>3: EDAS built-in Kubernetes cluster.</description></item>
+        /// <item><description>5: Kubernetes cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The provider of Infrastructure as a Service (IaaS) resources that are used in the cluster.</para>
-        /// <para>When you use Alibaba Cloud, set the value to <c>ALIYUN</c>. The value is case-sensitive.</para>
+        /// <para>The IaaS resource provider.</para>
+        /// <para><note>When you select Alibaba Cloud, you must use uppercase Pinyin, such as <c>ALIYUN</c>.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string IaasProvider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom namespace. The ID is in the <c>physical region ID:custom namespace identifier</c> format. Example: <c>cn-hangzhou:test</c>.</para>
+        /// <para>The region ID of the custom namespace. Format: <c>physical region:custom namespace identifier</c>, such as <c>cn-hangzhou:test</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:td****</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string LogicalRegionId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the cluster. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: classic network</description></item>
-        /// <item><description>2: virtual private cloud (VPC)</description></item>
+        /// <item><description>1: Classic network.</description></item>
+        /// <item><description>2: VPC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,11 +73,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? NetworkMode { get; set; }
 
         /// <summary>
-        /// <para><b>This parameter is deprecated.</b> The CPU overcommit ratio supported by a Docker cluster. Valid values:</para>
+        /// <para><b>[Deprecated]</b> The CPU overselling ratio for Docker clusters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2: 1:2, which means that resources are overcommitted by 1:2.</description></item>
-        /// <item><description>4: 1:4, which means that resources are overcommitted by 1:4.</description></item>
-        /// <item><description>8: 1:8, which means that resources are overcommitted by 1:8.</description></item>
+        /// <item><description>2: 1:2 ratio.</description></item>
+        /// <item><description>4: 1:4 ratio.</description></item>
+        /// <item><description>8: 1:8 ratio.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? OversoldFactor { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC. This parameter is required if you set the NetworkMode parameter to 2.</para>
+        /// <para>The ID of the VPC. This parameter is required if the network type is set to VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zef6ob8mrlzv8x3q****</para>

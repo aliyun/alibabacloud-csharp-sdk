@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QuerySlsLogStoreListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d6834ee9-5045-*************</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of Log Service for the application.</para>
+        /// <para>The Simple Log Service configuration results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QuerySlsLogStoreListResponseBodyResult> Result { get; set; }
         public class QuerySlsLogStoreListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The type of the logging service.</para>
+            /// <para>The Simple Log Service type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SLS log service</para>
+            /// <para>Simple Log Service</para>
             /// </summary>
             [NameInMap("ConsumerSide")]
             [Validation(Required=false)]
             public string ConsumerSide { get; set; }
 
             /// <summary>
-            /// <para>The time when the logging service was created.</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-18 22:08:46</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the logging service.</para>
+            /// <para>The Simple Log Service link.</para>
             /// </summary>
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
 
             /// <summary>
-            /// <para>The name of the Logstore.</para>
+            /// <para>The Logstore name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>thisisatestlogstore</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the project.</para>
+            /// <para>The project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-c846f28edbd1d4c6aa9d78c0e********</para>
@@ -94,12 +94,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The source of logs. Valid values:</para>
+            /// <para>The log source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Standard output: stdout.log</para>
-            /// </description></item>
-            /// <item><description><para>File log: the directory that stores logs</para>
-            /// </description></item>
+            /// <item><description>Standard output: stdout.log.</description></item>
+            /// <item><description>File log: the collection path.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of log sources configured for the application.</para>
+        /// <para>The total number of Simple Log Service configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
