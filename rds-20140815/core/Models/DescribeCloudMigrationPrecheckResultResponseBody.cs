@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationPrecheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the assessment report.</para>
+        /// <para>The list of pre-check reports for one-click cloud migration.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeCloudMigrationPrecheckResultResponseBodyItems> Items { get; set; }
         public class DescribeCloudMigrationPrecheckResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The content of the assessment report.</para>
+            /// <para>The content of the pre-check report for cloud migration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceAccount { get; set; }
 
             /// <summary>
-            /// <para>The environment in which the self-managed PostgreSQL instance runs.</para>
+            /// <para>The type of the self-managed PostgreSQL database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>idcOnVpc</b>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</description></item>
-            /// <item><description><b>ecsOnVpc</b>: The self-managed PostgreSQL instance resides on an ECS instance.</description></item>
+            /// <item><description><b>idcOnVpc</b>: a self-managed PostgreSQL database in an on-premises data center that is connected to a VPC.</description></item>
+            /// <item><description><b>ecsOnVpc</b>: a self-managed PostgreSQL database on an Alibaba Cloud ECS instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceCategory { get; set; }
 
             /// <summary>
-            /// <para>The private IP address that is used to connect to the self-managed PostgreSQL instance.</para>
+            /// <para>The internal IP address of the self-managed PostgreSQL database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.2.XX.XX</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourcePassword { get; set; }
 
             /// <summary>
-            /// <para>The port number that is used to connect to the self-managed PostgreSQL instance.</para>
+            /// <para>The port of the self-managed PostgreSQL database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5432</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. The return value of this parameter is empty.</para>
+            /// <para>A reserved parameter. The query result is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetEip { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance ID of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-bp102g323jd4****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>440420798</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lxbv6rtxno8</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of queried entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

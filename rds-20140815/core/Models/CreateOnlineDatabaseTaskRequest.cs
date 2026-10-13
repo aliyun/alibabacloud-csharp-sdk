@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateOnlineDatabaseTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The consistency check method after the database is open. Valid values:</para>
+        /// <para>The consistency check method used after the database is opened. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SyncExecuteDBCheck</b>: synchronous database check.</description></item>
-        /// <item><description><b>AsyncExecuteDBCheck</b>: asynchronous database check.</description></item>
+        /// <item><description><b>SyncExecuteDBCheck</b>: Executes the database check synchronously.</description></item>
+        /// <item><description><b>AsyncExecuteDBCheck</b>: Executes the database check asynchronously.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Compatible with SQL Server 2008 R2.</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CheckDBMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The migration task ID.</para>
+        /// <para>Specifies whether to retain the database-level and table-level Change Data Capture (CDC) settings and the data in change tables. Regardless of the value of this parameter, CDC jobs are not rebuilt.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("KeepCDC")]
+        [Validation(Required=false)]
+        public bool? KeepCDC { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the migration task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

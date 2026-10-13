@@ -1,3 +1,8 @@
+2026-10-13 Version: 15.9.3
+- Update API CreateMigrateTask: add request parameters KeepCDC.
+- Update API CreateOnlineDatabaseTask: add request parameters KeepCDC.
+
+
 2026-10-08 Version: 16.0.0
 - Support API AddRCInstancesToDeploymentSet.
 - Support API RemoveRCInstancesFromDeploymentSet.

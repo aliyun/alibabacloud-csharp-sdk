@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateRCNodePoolShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of RDS Custom instances to create. This parameter is applicable only to batch creation of RDS Custom instances.</para>
+        /// <para>Specifies the number of RDS Custom instances to create. This parameter is applicable only when you create multiple RDS Custom instances at a time.</para>
         /// <para>Valid values: <b>1</b> to <b>5</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment.
-        /// Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: Only an order is generated. No payment is made.</description></item>
+        /// <item><description><b>false</b>: Only an order is generated and no payment is made.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is true. If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>Default value: <b>true</b>. If the balance of your payment method is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,15 +38,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter is valid only when you create subscription instances. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. This parameter is valid only when you create a subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you purchase on a monthly basis, the auto-renewal epoch is 1 month.</description></item>
-        /// <item><description>If you purchase on a yearly basis, the auto-renewal epoch is 1 year.</description></item>
+        /// <item><description>If the subscription duration is one month, the auto-renewal cycle is 1 month.</description></item>
+        /// <item><description>If the subscription duration is one year, the auto-renewal cycle is 1 year.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -59,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RDS Custom container cluster.</para>
+        /// <para>The RDS Custom container cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,10 +79,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow the instance to join an ACK cluster. If this parameter settings is set to <b>1</b>, the created instance can be added to an ACK cluster for efficient container application management.</para>
+        /// <para>Specifies whether the instance is allowed to join an ACK cluster. When this parameter is set to <b>1</b>, the created instance can be added to an ACK cluster for efficient management of containerized applications.</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Yes.</description></item>
-        /// <item><description><b>0</b> (default): No.</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
+        /// <item><description><b>0</b> (default): no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CreateMode { get; set; }
 
         /// <summary>
-        /// <para>The list of data cloud disks.</para>
+        /// <para>The data cloud disks.</para>
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>The instance description. The description must be 2 to 256 characters in length and can contain letters and Chinese characters. The description cannot start with http:// or https://.</para>
+        /// <para>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -121,10 +120,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run before creating the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available stock.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, the instance is created.</description></item>
+        /// <item><description><b>true</b>: A dry run is performed and no instance is created. The system checks the request parameters, request format, service limits, and available resources.</description></item>
+        /// <item><description><b>false</b> (default): A normal request is sent and the instance is created if the request passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The image ID used by the instance.</para>
+        /// <para>The image ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-dsvjzw2ii8n4fvr6de</para>
@@ -179,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For the instance types supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</para>
+        /// <para>The instance type. For the instance types supported by RDS Custom, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -190,7 +189,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -200,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -210,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -220,7 +219,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair. Only a single name is supported.</para>
+        /// <para>The key pair name. Only one key pair name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dell5502</para>
@@ -230,7 +229,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The name of the node pool.</para>
+        /// <para>The node pool name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testNodePool</para>
@@ -240,7 +239,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodePoolName { get; set; }
 
         /// <summary>
-        /// <para>The password of the root account of the instance.</para>
+        /// <para>The password of the root account for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -260,10 +259,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration for the subscription billable methods. Valid values:</para>
+        /// <para>The time unit of the subscription billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b> (default)</description></item>
+        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b> (default): month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -295,7 +294,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -305,7 +304,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// <para>The security group ID. You can specify an existing security group ID. If the security group does not exist, automatic creation of a security group is performed.</para>
+        /// <para>The security group ID. You can specify an existing security group ID. If the specified security group does not exist, a security group is automatically created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-m5e9abdu1rtxa12b****</para>
@@ -315,7 +314,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -325,7 +324,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>The supported scenario. This parameter is required when <b>createMode</b> is set to <b>1</b>. Currently, only <b>edge</b> is supported.</para>
+        /// <para>The supported scenario. This parameter is required when the <b>createMode</b> parameter is set to <b>1</b>. Only <b>edge</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>edge</para>
@@ -335,21 +334,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SupportCase { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk specifications.</para>
+        /// <para>The system cloud disk.</para>
         /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateRCNodePoolShrinkRequestTag> Tag { get; set; }
         public class CreateRCNodePoolShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can create up to N tag keys at a time. Valid values of N: <b>1 to 20</b>. The tag key cannot be an empty string.</para>
+            /// <para>The tag key. You can create up to N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey1</para>
@@ -371,7 +370,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>Reserved parameter. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -383,7 +382,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</para>
+        /// <para>The vSwitch must be in the same zone as the RDS instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -397,7 +396,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The zone ID of the instance.</para>
         /// <remarks>
-        /// <para>If you specify the VSwitchId parameter, the ZoneId parameter must match the zone of the specified vSwitch. You can also leave this parameter empty, and the system automatically selects the zone of the specified vSwitch.</para>
+        /// <para>If you specify the VSwitchId parameter, the ZoneId parameter must be set to the zone where the vSwitch resides. You can also leave the ZoneId parameter empty, and the system automatically selects the zone where the specified vSwitch resides.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The backup task ID.</para>
+        /// <para>The ID of the backup task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>476****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The backup task status. Valid values:</para>
+        /// <para>The status of the backup task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>NoStart</b>: not started</description></item>
         /// <item><description><b>Progressing</b>: in progress</description></item>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupJobStatus { get; set; }
 
         /// <summary>
-        /// <para>The backup mode. Valid values:</para>
+        /// <para>The backup pattern. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Automated</b>: automatic backup</description></item>
         /// <item><description><b>Manual</b>: manual backup</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

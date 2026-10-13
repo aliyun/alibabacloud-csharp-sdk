@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDasInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic storage expansion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><b>Enable</b>: Enables automatic storage expansion.</description></item>
+        /// <item><description><b>Disable</b>: Disables automatic storage expansion.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The threshold in percentage of remaining storage space that triggers automatic storage expansion. Valid values:</para>
+        /// <para>The threshold percentage that triggers automatic storage expansion. When the percentage of remaining storage space reaches the specified threshold, automatic storage expansion is triggered. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>10</b></description></item>
         /// <item><description><b>20</b></description></item>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StorageThreshold { get; set; }
 
         /// <summary>
-        /// <para>The upper limit of automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</para>
+        /// <para>The upper limit for automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>Upper limit for ESSDs: 32000 GB.</description></item>
-        /// <item><description>Upper limit for standard SSDs: 6000 GB.<remarks>
+        /// <item><description>Upper limit for ESSDs: 32,000 GB</description></item>
+        /// <item><description>Upper limit for standard SSDs: 6,000 GB<remarks>
         /// <para>This parameter is required when <b>StorageAutoScale</b> is set to <b>Enable</b>.</para>
         /// </remarks>
         /// </description></item>

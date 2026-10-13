@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBMiniEngineVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <remarks>
-        /// <para>For ApsaraDB RDS for PostgreSQL instances, if you specify an instance ID, only minor versions later than the current minor version of the instance are returned.</para>
+        /// <para>For an ApsaraDB RDS for PostgreSQL instance, if you specify the instance ID, the system queries only the minor engine versions that are later than the current minor engine version of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the ID.</para>
+        /// <para>The ID of the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-4n****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Set the value to <b>MySQL</b> or <b>PostgreSQL</b>.</para>
+        /// <para>The database engine. Valid values: <b>MySQL</b> and <b>PostgreSQL</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MySQL: <b>8.0</b>, <b>5.7</b>, <b>5.6</b>, <b>5.5</b></description></item>
-        /// <item><description>PostgreSQL: <b>17.0</b>, <b>16.0</b>, <b>15.0</b>, <b>14.0</b>, <b>13.0</b>, <b>12.0</b>, <b>11.0</b>, <b>10.0</b></description></item>
+        /// <item><description>MySQL: <b>8.0</b>, <b>5.7</b>, <b>5.6</b>, and <b>5.5</b>.</description></item>
+        /// <item><description>PostgreSQL: <b>17.0</b>, <b>16.0</b>, <b>15.0</b>, <b>14.0</b>, <b>13.0</b>, <b>12.0</b>, <b>11.0</b>, and <b>10.0</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version number. Specify this parameter to query the details of the specified minor version.</para>
+        /// <para>The minor engine version number of the instance. Specify this parameter to query the details of a specific minor engine version.</para>
         /// <remarks>
         /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL.</para>
         /// </remarks>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-        /// <item><description><b>HighAvailability</b>: high-availability series.</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
         /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
         /// </list>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,12 +103,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: Premium Local SSDs.</description></item>
+        /// <item><description><b>local_ssd</b>: premium local SSD.</description></item>
         /// <item><description><b>general_essd</b>: premium performance disk.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSDs.</description></item>
-        /// <item><description><b>cloud_essd</b>: PL1 ESSDs.</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSDs.</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSDs.</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

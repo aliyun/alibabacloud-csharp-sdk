@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The address of the primary database host. IP addresses and domain names are supported.</para>
+        /// <para>The host address of the primary database. Both IP addresses and domain names are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MasterHost { get; set; }
 
         /// <summary>
-        /// <para>The password of the primary database, which is used to authenticate the replication user. The password must be Base64-encoded in advance.</para>
+        /// <para>The password of the primary database used to authenticate the replication user. The password must be Base64-encoded in advance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MasterPassword { get; set; }
 
         /// <summary>
-        /// <para>The port number of the primary database. The default port is 3306 for MySQL.</para>
+        /// <para>The port number of the primary database. Typically, the port is 3306 for MySQL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MasterPort { get; set; }
 
         /// <summary>
-        /// <para>The username of the primary database, which is used to establish the replication connection.</para>
+        /// <para>The username of the primary database used to establish a replication connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

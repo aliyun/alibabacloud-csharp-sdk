@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: An order is generated but payment is not automatically made.<remarks>
-        /// <para>If your payment method balance is insufficient, set the parameter AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: generates an order without deducting fees.<remarks>
+        /// <para>If your account balance is insufficient, you can set the AutoPay parameter to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Coupons are automatically used.</description></item>
-        /// <item><description><b>false</b>: Coupons are not used.</description></item>
+        /// <item><description><b>true</b>: automatically uses coupons. This is the default value.</description></item>
+        /// <item><description><b>false</b>: does not automatically use coupons.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you use coupons and then perform a downgrade, the amount deducted by coupons is not refunded.</para>
+        /// <para>If you use a coupon and then downgrade the instance type, the amount deducted by the voucher is not refunded.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,13 +48,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The type of the Upgrade/Downgrade. Valid values:</para>
+        /// <para>The instance upgrade or downgrade type. Valid values:</para>
         /// <remarks>
-        /// <para>This parameter does not need to be uploaded. The system can automatically determine whether the change is an upgrade or a downgrade. If you upload this parameter, follow the rules below.</para>
+        /// <para>You do not need to specify this parameter. The system automatically determines whether to upgrade or downgrade the instance type. If you want to specify it, follow these rules:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>Up</b> (default): Upgrades the instance type. Make sure that your account payment method balance is sufficient.</description></item>
-        /// <item><description><b>Down</b>: Downgrades the instance type. Set Direction to down when the instance type specified by InstanceType is lower than the current instance type.</description></item>
+        /// <item><description><b>Up</b> (default): upgrades the instance type. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>Down</b>: downgrades the instance type. When the instance type specified in InstanceType is lower than the current instance type, set Direction to Down.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck on the instance creation operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</description></item>
-        /// <item><description><b>false</b> (default): Sends the request. If the request passes the check, the instance is created.</description></item>
+        /// <item><description><b>true</b>: performs a precheck without creating an instance. Check items include request parameters, request format, service limits, and inventory.</description></item>
+        /// <item><description><b>false</b>: sends a normal request and directly creates the instance after the request passes the precheck. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type. For information about the instance types supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</para>
+        /// <para>The destination instance type. For more information about the instance types supported by RDS Target instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Target instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.i8.large.2cm</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The restart time of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>RebootWhenFinished</b> is set to <b>false</b> and the instance status is <b>Running</b>, you <b>must</b> set a restart time within 48 hours.</description></item>
-        /// <item><description>The time follows the ISO 8601 standard in UTC+0. Format: <c>yyyy-MM-ddTHH:mmZ</c>.</description></item>
+        /// <item><description>If <b>RebootWhenFinished</b> is set to <b>false</b> and the instance is in the <b>Running</b> state, you <b>must</b> specify a restart time within 48 hours.</description></item>
+        /// <item><description>Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,13 +123,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RebootTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately restart the instance after the specification change is complete. Valid values:</para>
+        /// <para>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): The instance is restarted immediately.</description></item>
-        /// <item><description><b>false</b>: The instance is not restarted.</description></item>
+        /// <item><description><b>true</b>: restarts the instance immediately. This is the default value.</description></item>
+        /// <item><description><b>false</b>: does not restart the instance immediately.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the instance is in the <b>Stopped</b> state, the instance remains in the Stopped state and is not restarted even if you set <c>RebootWhenFinished=true</c>.</para>
+        /// <para>If the instance is in the <b>Stopped</b> state, it remains in the Stopped state and is not restarted even if you set RebootWhenFinished to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

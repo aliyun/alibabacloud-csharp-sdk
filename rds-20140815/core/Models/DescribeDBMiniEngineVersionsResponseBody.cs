@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems> MinorVersionItems { get; set; }
         public class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems : TeaModel {
             /// <summary>
-            /// <para>The community minor version that corresponds to the minor engine version.</para>
+            /// <para>The community minor engine version that corresponds to the minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7.38</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CommunityMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The database engine that corresponds to the minor version.</para>
+            /// <para>The database engine that corresponds to the minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The database engine version that corresponds to the minor version.</para>
+            /// <para>The database engine version that corresponds to the minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the minor engine version.</para>
+            /// <para>The expiration date of the minor engine version. The date is in the YYYYMMDD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20231213</para>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The expiration status of the minor engine version. Valid values:</para>
+            /// <para>The expiration status of the minor Milvus version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>vaild</b>: Milvus version is valid.</description></item>
-            /// <item><description><b>expired</b>: Milvus version has expired.</description></item>
+            /// <item><description><b>vaild</b>: The minor Milvus version is valid.</description></item>
+            /// <item><description><b>expired</b>: The minor Milvus version has expired.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the offline status is Offline, Milvus version has been taken offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, Milvus version has exceeded its lifecycle. If the offline status is Online and the expiration status is vaild, Milvus version is still within its lifecycle.</para>
+            /// <para>If the offline status is Offline, the minor Milvus version is offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, the minor Milvus version has reached its end of life. If the offline status is Online and the expiration status is vaild, the minor Milvus version is still within its lifecycle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? IsHotfixVersion { get; set; }
 
             /// <summary>
-            /// <para>The version number of the minor engine version.</para>
+            /// <para>The minor engine version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds_20220731</para>
@@ -114,10 +114,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The instance edition that corresponds to the minor version. Valid values:</para>
+            /// <para>The instance edition that corresponds to the minor engine version. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-            /// <item><description><b>HighAvailability</b>: high-availability series.</description></item>
+            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
             /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
             /// </list>
             /// 
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The URL of the release notes for the minor version.</para>
+            /// <para>The URL of the release notes for the minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -141,8 +141,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The release type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>LTS</b>: Long-term support version.</description></item>
-            /// <item><description><b>BETA</b>: Preview version.</description></item>
+            /// <item><description><b>LTS</b>: Long-term support (LTS) version.</description></item>
+            /// <item><description><b>BETA</b>: Beta version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,13 +153,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The offline status of the minor engine version. Valid values:</para>
+            /// <para>The offline status of the minor Milvus version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Offline</b>: Milvus version has been taken offline.</description></item>
-            /// <item><description><b>Online</b>: Milvus version is online.</description></item>
+            /// <item><description><b>Offline</b>: The minor Milvus version is offline.</description></item>
+            /// <item><description><b>Online</b>: The minor Milvus version is online.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the offline status is Offline, Milvus version has been taken offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, Milvus version has exceeded its lifecycle. If the offline status is Online and the expiration status is vaild, Milvus version is still within its lifecycle.</para>
+            /// <para>If the offline status is Offline, the minor Milvus version is offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, the minor Milvus version has reached its end of life. If the offline status is Online and the expiration status is vaild, the minor Milvus version is still within its lifecycle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -170,13 +170,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// <para>The tag that corresponds to the minor engine version. Valid values:</para>
+            /// <para>Instance tag that corresponds to the minor engine version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pgsql_docker_image</b>: general instance tag.</description></item>
-            /// <item><description><b>pgsql_babelfish_image</b>: Babelfish instance tag.</description></item>
+            /// <item><description><b>pgsql_docker_image</b>: Instance tag for general instances.</description></item>
+            /// <item><description><b>pgsql_babelfish_image</b>: Instance tag for Babelfish-enabled instances.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This value is returned only for <b>PostgreSQL</b>.</para>
+            /// <para>This parameter is returned only for <b>PostgreSQL</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumbers { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFB6083A-7699-489B-8278-C0CB4793A96E</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

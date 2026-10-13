@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMetaListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set used for the query. You can call DescribeBackups to query the backup set ID.</para>
+        /// <para>The ID of the backup set that is used to query data when the restore method is based on a backup set. You can call the DescribeBackups operation to query the ID.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>BackupSetID</b>.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupSetID { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to query. This parameter supports exact match and returns the specified database name and all tables in the database.</para>
+        /// <para>The name of the database to query. Exact match is used. The specific database name and all tables in the database are returned.</para>
         /// <remarks>
-        /// <para>If you leave this parameter empty, a list of all databases is returned.</para>
+        /// <para>If this parameter is left empty, a list of all databases is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: greater than <b>0</b> and up to the maximum value of Integer. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: any integer greater than <b>0</b> and less than or equal to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when it is specified together with <b>PageSize</b>.</para>
+        /// <para>This parameter takes effect only when it is used together with <b>PageSize</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The number of entries per page. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when it is specified together with <b>PageIndex</b>.</para>
+        /// <para>This parameter takes effect only when it is used together with <b>PageIndex</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to query. This parameter supports fuzzy match and returns only the matched database names without table names.</para>
+        /// <para>The name of the database to query. Fuzzy match is used. Only the matched database names are returned, and table names are not returned.</para>
         /// <remarks>
-        /// <para>For example, if you specify <c>test</c>, the databases <c>testdb1</c> and <c>testdb2</c> are matched. After you identify the target database, specify the exact database name by using the <b>GetDbName</b> parameter to query all tables in the database.</para>
+        /// <para>For example, if you specify <c>test</c>, <c>testdb1</c> and <c>testdb2</c> are matched. After you determine the name of the target database, you can specify the exact database name in the <b>GetDbName</b> parameter to view the information about all tables in the target database.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Pattern { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time used for the query. The value must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). You can call DescribeBackups to query available time points.</para>
+        /// <para>The point in time to which you want to restore data. The time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC. You can call the DescribeBackups operation to query the time.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>RestoreTime</b>.</para>
         /// </remarks>
@@ -131,10 +131,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The restoration method. Valid values:</para>
+        /// <para>The restore method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BackupSetID</b>: Restores data from a backup set. You must also specify the <b>BackupSetID</b> parameter.</description></item>
-        /// <item><description><b>RestoreTime</b>: Restores data to a point in time. You must also specify the <b>RestoreTime</b> parameter.</description></item>
+        /// <item><description><b>BackupSetID</b>: restores data from a backup set. If you set this parameter to BackupSetID, you must also specify the <b>BackupSetID</b> parameter.</description></item>
+        /// <item><description><b>RestoreTime</b>: restores data to a specific point in time. If you set this parameter to RestoreTime, you must also specify the <b>RestoreTime</b> parameter.</description></item>
         /// </list>
         /// <para>Default value: <b>BackupSetID</b>.</para>
         /// 

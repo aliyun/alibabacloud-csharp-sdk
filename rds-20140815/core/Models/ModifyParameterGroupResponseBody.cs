@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rpg-13ppdh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>857DC00B-7B85-4853-8B27-AD65EB618BC6</para>

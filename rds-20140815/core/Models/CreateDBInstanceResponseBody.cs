@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If you set the <b>Amount</b> parameter to a value greater than <b>1</b>, the number of instance IDs that corresponds to the value is returned, separated by commas.</para>
-        /// <para>For example, if <b>Amount</b> is set to <b>3</b>, three instance IDs are returned. Example:
-        /// <c>rm-uf6wjk5*****1，rm-uf6wjk5*****2，rm-uf6wjk5*****3</c></para>
+        /// <para>The instance ID. If you set the <b>Amount</b> parameter to a value greater than <b>1</b>, the response contains the specified number of instance IDs separated by commas.</para>
+        /// <para>For example, if you set the <b>Amount</b> parameter to <b>3</b>, the response contains three instance IDs. Example:
+        /// <c>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates that a dry run is performed before the instance is created.</para>
+        /// <para>Indicates whether a dry run was performed before the instance was created.</para>
         /// <list type="bullet">
-        /// <item><description>The return value is always <b>true</b>.</description></item>
+        /// <item><description>The value is fixed to <b>true</b>.</description></item>
         /// <item><description>If no dry run is performed, this parameter is not returned.</description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the dry run for instance creation passed. Valid values:</para>
+        /// <para>Indicates whether the dry run passed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The dry run passed.</description></item>
         /// <item><description><b>false</b>: The dry run failed.</description></item>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRunResult { get; set; }
 
         /// <summary>
-        /// <para>The message for the batch creation task.</para>
+        /// <para>The prompt message for the batch creation task.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the <b>Amount</b> parameter is greater than 1.</para>
+        /// <para>This parameter is returned only when the <b>Amount</b> parameter is set to a value greater than 1.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port number that corresponds to the internal endpoint of the instance.</para>
+        /// <para>The port number of the internal endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether tags are successfully bound to the instance. Valid values:</para>
+        /// <para>Indicates whether the instance was successfully tagged. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Tags are successfully bound.</description></item>
-        /// <item><description><b>false</b>: Tags failed to be bound.</description></item>
+        /// <item><description><b>true</b>: The instance was successfully tagged.</description></item>
+        /// <item><description><b>false</b>: The instance failed to be tagged.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If no tags are bound to the instance, this parameter is not returned.</para>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task ID of the batch creation task.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is returned only when the <b>Amount</b> parameter is greater than 1.</description></item>
-        /// <item><description>Querying tasks by <b>TaskId</b> is not supported at this time.</description></item>
+        /// <item><description>This parameter is returned only when the <b>Amount</b> parameter is set to a value greater than 1.</description></item>
+        /// <item><description>You cannot query the task by using the <b>TaskId</b> value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

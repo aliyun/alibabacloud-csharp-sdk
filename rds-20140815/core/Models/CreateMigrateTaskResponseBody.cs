@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the cloud migration task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: performs a restore operation by using a full backup file.</description></item>
+        /// <item><description><b>FULL</b>: restores data by using a full backup file.</description></item>
         /// <item><description><b>UPDF</b>: restores incremental data by using an incremental backup file or log file.</description></item>
         /// </list>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test02</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The migration task ID.</para>
+        /// <para>The ID of the migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>564563****</para>
